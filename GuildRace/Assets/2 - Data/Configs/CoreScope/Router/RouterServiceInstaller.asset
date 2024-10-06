@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f02382905862342853328699832a0c, type: 3}
+  m_Name: RouterServiceInstaller
+  m_EditorClassIdentifier: 
+  id: d7581b315608473c8aa6b79e7e597490
+  title: Router Service
+  enabled: 1
+  order: -1000
+  configRef:
+    m_AssetGUID: 3016e5e5d8cdc2b4e8a968ef2f95e836
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1

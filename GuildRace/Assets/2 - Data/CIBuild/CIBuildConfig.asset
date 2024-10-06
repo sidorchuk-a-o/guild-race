@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0273b88d7779344469b1599b03022b25, type: 3}
+  m_Name: CIBuildConfig
+  m_EditorClassIdentifier: 
+  customBuildPresets:
+  - {fileID: 11400000, guid: 0c2311a0004a33140b02c93bbb25b8dc, type: 2}
+  - {fileID: 11400000, guid: e35f1b75065fa7b48b0c21324684f512, type: 2}
+  defaultBuildPresets:
+  - {fileID: 11400000, guid: 544b47adade46ec42b690f6bd14a7368, type: 2}
+  - {fileID: 11400000, guid: b681520f6d27f6546980da25f6f74b9d, type: 2}
+  - {fileID: 11400000, guid: 86f88b9e731605e438ea0238f8097c53, type: 2}
+  - {fileID: 11400000, guid: 14bbe028a848a6e44999a7aaea018e80, type: 2}
+  buildOptionsType: AD.ContinuousIntegration.BuildOptions, AD.Core.Editor, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null

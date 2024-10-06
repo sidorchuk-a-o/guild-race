@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Debug Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Debug Assets
+  m_GUID: f9200957767743641b3987273de8d4a2
+  m_SerializeEntries:
+  - m_GUID: 7dbc36665bc0d684db9a4447e27a7a4b
+    m_Address: IngameDebugConsole/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d829dcfc225f56440a2b10d9ac318aea
+    m_Address: IngameDebugConsoleSpriteAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6caae32d463529478f2186f47c2e3fe
+    m_Address: IngameDebugConsole/Sprites/Unused
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 26a74ff78f0b7e7498417309e8305e4f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 912415e5aedc01e479dbdc6a3ee702e2, type: 2}
+    - {fileID: 11400000, guid: 009df92a8d78f884189f77b320f5030b, type: 2}

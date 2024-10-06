@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: DEFAULT/APP_NAME
+      TermType: 0
+      Description: 
+      Languages:
+      - Guild Race
+      - "\u0413\u0438\u043B\u044C\u0434\u0435\u0439\u0441\u043A\u0430\u044F \u0433\u043E\u043D\u043A\u0430"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/GOLD_CURRENCY_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0417\u043E\u043B\u043E\u0442\u043E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/GOLD_CURRENCY_DESC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u0442\u043E \u0437\u043E\u043B\u043E\u0442\u043E - \u043E\u043D\u043E
+        \u0437\u043E\u043B\u043E\u0442\u043E\u0435."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/CRYSTAL_CURRENCY_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041A\u0440\u0438\u0441\u0442\u0430\u043B\u043B \u0434\u0443\u0448\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/CRYSTAL_CURRENCY_DESC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0414\u0443\u0448\u0430 \u0447\u0443\u0434\u043E\u0432\u0438\u0449\u0430
+        \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/YAN_CURRENCY_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - YAN
+      - "\u042F\u041D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: STORE/TEST_CURRENCIES_PACKS_SHELF_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041F\u0430\u043A\u0438 \u0441 \u0432\u0430\u043B\u044E\u0442\u0430\u043C\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: DEFAULT/APP_NAME
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Russian
+      Code: ru
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
+    Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
+    Google_SpreadsheetName: I2Loc Guild Race Localization
+    Google_LastUpdatedVersion: 1728144093564
+    Google_Password: change_this
+    GoogleUpdateFrequency: 1
+    GoogleInEditorCheckFrequency: 1
+    GoogleUpdateSynchronization: 2
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
+    Spreadsheet_SortRows: 1

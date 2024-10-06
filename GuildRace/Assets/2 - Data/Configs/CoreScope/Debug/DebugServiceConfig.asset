@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5724accd3e91d764c8e5f2ac8f8a437e, type: 3}
+  m_Name: DebugServiceConfig
+  m_EditorClassIdentifier: 
+  activationType: 1
+  fallbackToManualAfterRelease: 1
+  enableInGameConsole: 1
+  inGameConsole:
+    m_AssetGUID: fb6dae07f19ca2946a06979db6b5c2fc
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  debugModeCanvas:
+    m_AssetGUID: f889a18e3cf09ae44a38de601063d83c
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

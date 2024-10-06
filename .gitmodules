@@ -1,0 +1,3 @@
+[submodule "GuildRace/Assets/_Submodules/GameCore"]
+	path = GuildRace/Assets/_Submodules/GameCore
+	url = git@gitlab.com:almans-draft/submodules/gamecore.git

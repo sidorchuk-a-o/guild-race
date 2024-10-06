@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ffd40d1e1800641b45a0bd60f4f5f7, type: 3}
+  m_Name: RouterServiceConfig
+  m_EditorClassIdentifier: 
+  routeGroups:
+  - {fileID: 11400000, guid: 708d4be007999b2428c1f1dbec15173d, type: 2}
+  - {fileID: 11400000, guid: 23e93292939633e4c9458ef2fdca9a39, type: 2}
+  loadingScreens:
+  - id: f8164f25fc6d477bb6bebf78af8935d1
+    title: StartApp
+    asset:
+      m_AssetGUID: b0b79125b5c9b4e439dd387c431ee922
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - id: cfe5ced23f9f45b59c553ba5437e2634
+    title: Loading
+    asset:
+      m_AssetGUID: 6636b5628701bb64ea53106b7ade4c7a
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  scenes:
+  - id: 3e7590c332d84ba0bb365225372f279e
+    title: Hub
+    asset:
+      m_AssetGUID: dbedac27232d02d4889633012795280d
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  routerLayers:
+  - id: 37907a48d71b406fb0dad3e7b3d60e42
+    title: Default
+    isRouteLayer: 1
+    hasAccessByKey: 0
+    layerAsset:
+      m_AssetGUID: ed2e123f05f88594081d2432adff5d28
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    canvasAsset:
+      m_AssetGUID: 8c249d8972c0fce4d99ea7f6884bf7eb
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    contentLifetime:
+      isOn: 1
+      value: 120
+  - id: c38b631c114048f2985caa6e0e90bc64
+    title: Dialogs
+    isRouteLayer: 1
+    hasAccessByKey: 0
+    layerAsset:
+      m_AssetGUID: 0b6145215e6a8ee438f53105a32dabbc
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    canvasAsset:
+      m_AssetGUID: b5e316c9893d706488e26d5a69c2954b
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    contentLifetime:
+      isOn: 1
+      value: 120
+  - id: f934348f96d942ad84d26678cbcd0594
+    title: LoadingScreens
+    isRouteLayer: 0
+    hasAccessByKey: 1
+    layerAsset:
+      m_AssetGUID: cc34d107bd381bf4a96ddd6b51650ddb
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    canvasAsset:
+      m_AssetGUID: e28e866020022474aa6e5569e1071bad
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    contentLifetime:
+      isOn: 1
+      value: 120
+  - id: 519cba7fe1594d369c11577befa78ae3
+    title: Narrative
+    isRouteLayer: 0
+    hasAccessByKey: 1
+    layerAsset:
+      m_AssetGUID: 12c45c16a330e7144885ee58364299a2
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    canvasAsset:
+      m_AssetGUID: 9d6acf35a3f20b8428ea3e8ef7cd3949
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    contentLifetime:
+      isOn: 1
+      value: 120
+  routerContainerAsset:
+    m_AssetGUID: 5a0444d8af829884b9f21a5547092437
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  exitRouteKey:
+    value: a796446a14f24a88acb822d7c10ce5ac
+  loadingLayerKey:
+    value: f934348f96d942ad84d26678cbcd0594

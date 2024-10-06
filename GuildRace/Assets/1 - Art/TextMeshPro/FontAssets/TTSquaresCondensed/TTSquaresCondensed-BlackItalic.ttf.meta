@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: fb9438e0c2263b34db1ef433851ca993
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - TT Squares Condensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 377ecb56d35567341bb911829840974e, type: 3}
+  - {fileID: 12800000, guid: e29f2289d39f755499502d449e9a71d5, type: 3}
+  - {fileID: 12800000, guid: f32cc69839f36934c95d22c7ec2215c0, type: 3}
+  - {fileID: 12800000, guid: e52f48e33223b3e44905c89b16f2d5c7, type: 3}
+  - {fileID: 12800000, guid: a370eeee500bfb9418c150f4eae6795a, type: 3}
+  - {fileID: 12800000, guid: 006d20b8892da4f429596b9ee98362ad, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

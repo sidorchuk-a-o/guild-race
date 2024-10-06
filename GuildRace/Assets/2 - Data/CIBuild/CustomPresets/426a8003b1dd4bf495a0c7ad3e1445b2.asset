@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6557891761046138378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9091228fa50fde549b12f8aca7866889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4276b7ca3d764dddbd37c170d8461bf2
+  title: Setup Splash Screen Settings
+  enableSplashScreen: 1
+  enableUnityLogo: 0
+--- !u!114 &-5785803508509684008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20da4b092ebc864b9b103aa2b80e196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 96c29c26e7e74b959422df9db191565b
+  title: Overrides / Restore Asset Import Overrides
+--- !u!114 &-5428916809766908398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70da1d6a9329e1458cd9eed50b67aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 628ea82f58074780a3efc054942ca32b
+  title: Build / SBP Build Content
+  bundleOptions: 32
+--- !u!114 &-1360293705116687730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4511251ca467542abef86cd54fba3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20a7d4769ea94cc4aea39887989f7a38
+  title: Build Player
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a690fbeb25041a3ac2bf62259a88b2c, type: 3}
+  m_Name: 426a8003b1dd4bf495a0c7ad3e1445b2
+  m_EditorClassIdentifier: 
+  id: 426a8003b1dd4bf495a0c7ad3e1445b2
+  title: web_debug
+  isDefault: 0
+  targetPlatform: 6
+  buildSteps:
+  - {fileID: 6612237508588584429}
+  - {fileID: -5428916809766908398}
+  - {fileID: 8164860962254544531}
+  - {fileID: 7955726413595353729}
+  - {fileID: -6557891761046138378}
+  - {fileID: 5042416502549561538}
+  - {fileID: -1360293705116687730}
+  - {fileID: -5785803508509684008}
+  - {fileID: 8435994611861546833}
+--- !u!114 &5042416502549561538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794317a351f74ba4cb92de2ea6d71f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: e5acb7b990ae43329c09b42692f313b4
+  title: Web GL / Setup Scripting Settings
+  compilerConfiguration: 2
+  codeGeneration: 1
+  wasmOptimization: 3
+  strippingLevel: 4
+  totalMemoty: 32
+  compressionFormat: 0
+  debugSymbolsMode: 2
+  exceptionSupport: 3
+--- !u!114 &6612237508588584429
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cffc477dbae2a14681a5f212413b1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 28365fbb04ee4bed9642419da9f385d3
+  title: Select Active Build Target
+--- !u!114 &7955726413595353729
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bfbea3e018ec429e25ea312a6c154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 23143e38a87346e5bb9e185c082d56a4
+  title: Overrides / Asset Import Overrides
+  textureCompression: 0
+  textureSize: 0
+--- !u!114 &8164860962254544531
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca65e7fc766fa44684fdbf32d9263af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3e1fd5c6496e4fad89431f0bcaa6e918
+  title: Setup Player Build Options
+  options: 4100
+  buildPath: Build/{name} {build} Debug
+--- !u!114 &8435994611861546833
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef4e88529ea8da4ea701a9806bcc6ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4eda6e98b6a94f6fb600434db5aebb75
+  title: Web GL / Restore Scripting Settings

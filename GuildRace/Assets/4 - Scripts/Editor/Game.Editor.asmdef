@@ -1,0 +1,28 @@
+{
+    "name": "Game.Editor",
+    "rootNamespace": "Game",
+    "references": [
+        "Game",
+        "AD.Core",
+        "AD.Core.Editor",
+        "AD.ToolsCollection",
+        "AD.ToolsCollection.Editor",
+        "I2Localization",
+        "Unity.ResourceManager",
+        "Unity.Addressables",
+        "Unity.Addressables.Editor",
+        "UniRx",
+        "UniTask"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

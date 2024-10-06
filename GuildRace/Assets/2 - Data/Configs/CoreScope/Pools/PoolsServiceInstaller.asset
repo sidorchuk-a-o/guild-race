@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b771f1bdb9dea42bac08df6a004277, type: 3}
+  m_Name: PoolsServiceInstaller
+  m_EditorClassIdentifier: 
+  id: 30176ff3f4774b359f7131b4580d0aa3
+  title: Pools Service
+  enabled: 1
+  order: -10000
+  configRef:
+    m_AssetGUID: 8a8fbf527dcb0a64f91d333e2e6a855b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1

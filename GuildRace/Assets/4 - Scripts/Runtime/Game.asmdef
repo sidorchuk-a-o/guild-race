@@ -1,0 +1,33 @@
+{
+    "name": "Game",
+    "rootNamespace": "Game",
+    "references": [
+        "AD.Core",
+        "AD.ToolsCollection",
+        "AD.YandexGame",
+        "PluginYourGame",
+        "VContainer",
+        "DOTween.Modules",
+        "EasySave3",
+        "OSA.Core",
+        "ACTk.Runtime",
+        "Unity.InputSystem",
+        "Unity.Addressables",
+        "Unity.TextMeshPro",
+        "Unity.ResourceManager",
+        "UniRx",
+        "UniTask",
+        "UniTask.Addressables",
+        "UniTask.TextMeshPro",
+        "UniTask.DOTween"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

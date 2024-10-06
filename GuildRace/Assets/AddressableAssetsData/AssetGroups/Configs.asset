@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Configs
+  m_EditorClassIdentifier: 
+  m_GroupName: Configs
+  m_GUID: 6566661a2c738bb4bbaa25f52cfd59f7
+  m_SerializeEntries:
+  - m_GUID: 3590b91b4603b465dbb4216d601bff33
+    m_Address: InputSystem/InputSystem.Actions
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 687107fef2baadf47891df578d0689b8
+    m_Address: Data/Configs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0b453062203f7f4781d8e093642a219
+    m_Address: Data/Configs/GameScope
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f70eecff7e71cbb4dbb9c7cab00a2fd7
+    m_Address: Data/Configs/CoreScope
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 26a74ff78f0b7e7498417309e8305e4f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bdb85b6126e60234ca75098e30a6a893, type: 2}
+    - {fileID: 11400000, guid: 247f28e5d9b3343458dbf0c81a05ae3a, type: 2}
