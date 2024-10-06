@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da5e506b225e5c40822b22e7d9482e3, type: 3}
-  m_Name: GameServiceInstaller
+  m_Script: {fileID: 11500000, guid: e2af0ccc331e6ff479b60cfaf6b9c812, type: 3}
+  m_Name: GuildServiceInstaller
   m_EditorClassIdentifier: 
-  id: 3b274f10b0b54682b7750b982ff98675
-  title: Game  Service
+  id: ea6d025a6961440484c5c99bf95b46f9
+  title: Guild  Service
   enabled: 1
-  order: 500
+  order: 0
   configRef:
-    m_AssetGUID: 
+    m_AssetGUID: 93e1c624195545849933d9a0eeaeb5ea
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1

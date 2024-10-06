@@ -1,6 +1,6 @@
 ﻿using AD.UI;
 
-namespace Game.Hub
+namespace Game
 {
     public class HubContainer : UIContainer
     {

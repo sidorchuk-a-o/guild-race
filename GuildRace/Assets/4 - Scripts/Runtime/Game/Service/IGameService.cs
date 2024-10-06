@@ -5,6 +5,5 @@ namespace Game
     public interface IGameService
     {
         UniTask StartGame();
-        UniTask StartHub(bool startApp);
     }
 }

@@ -14,5 +14,9 @@ namespace AD.Services.Router
         {
             public static readonly RouteKey main = new("d6f3669a9a564d27838e811fa8b61417");
         }
+        public static class Guild
+        {
+            public static readonly RouteKey create = new("dfd1c6090cfa4dd1bc63bf89d33b4041");
+        }
     }
 }
