@@ -1,5 +1,139 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7790192685069375206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: Priest
+  m_EditorClassIdentifier: 
+  id: 274fb1d5d37e4e45a845063e81594403
+  title: Priest
+  nameKey:
+    value: CHARACTERS/CLASS_1_TTL
+  specs:
+  - {fileID: 7198393799899164901}
+--- !u!114 &-7600222629343561412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f44ea2b65aa00e4088692e09152ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: d7d69ce42b174e5e8643309f81e563da
+  title: 
+  defaultNameKey:
+    value: GUILD/DEFAULT_RANK_4_TTL
+--- !u!114 &-6722420641676964884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f44ea2b65aa00e4088692e09152ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: c04b497e18364637bec0ab08ea3d14ce
+  title: 
+  defaultNameKey:
+    value: GUILD/DEFAULT_RANK_2_TTL
+--- !u!114 &-5064181589344827625
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f44ea2b65aa00e4088692e09152ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: e601b1fee3234d0f9d2d8047688c9855
+  title: 
+  defaultNameKey:
+    value: GUILD/DEFAULT_RANK_3_TTL
+--- !u!114 &-4733274706201629649
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: Wizard
+  m_EditorClassIdentifier: 
+  id: 02b71578fcbc466b919b19d5b02d9256
+  title: Wizard
+  nameKey:
+    value: CHARACTERS/CLASS_2_SPEC_0_TTL
+  roleId:
+    value: 10caf8849b764169aba557c7d1ec3c34
+--- !u!114 &-3786647268358885419
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: Demonologist
+  m_EditorClassIdentifier: 
+  id: a9d2f2fa7d0f427d8bd9194c3e46037c
+  title: Demonologist
+  nameKey:
+    value: CHARACTERS/CLASS_2_TTL
+  specs:
+  - {fileID: -4733274706201629649}
+--- !u!114 &-3730586026932445884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f44ea2b65aa00e4088692e09152ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 76755d83155c43ffbbdef95a6e469a22
+  title: 
+  defaultNameKey:
+    value: GUILD/DEFAULT_RANK_5_TTL
+--- !u!114 &-1063255563526852419
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
+  m_Name: Tank
+  m_EditorClassIdentifier: 
+  id: 42c4136f902e4bc3af5e751f35a7877a
+  title: Tank
+  nameKey:
+    value: CHARACTERS/ROLE_TANK_TTL
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,3 +146,166 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebdb024189e57c41a851d1b08283d79, type: 3}
   m_Name: GuildConfig
   m_EditorClassIdentifier: 
+  maxCharactersCount: 40
+  defaultGuildRanks:
+  - {fileID: 499257089889080854}
+  - {fileID: 5098217918887357756}
+  - {fileID: -6722420641676964884}
+  - {fileID: -5064181589344827625}
+  - {fileID: -7600222629343561412}
+  - {fileID: -3730586026932445884}
+  charactersModule:
+    maxEquipSlotCount: 6
+    classes:
+    - {fileID: 6246976285171924263}
+    - {fileID: -7790192685069375206}
+    - {fileID: -3786647268358885419}
+    roles:
+    - {fileID: -1063255563526852419}
+    - {fileID: 6298160343060774326}
+    - {fileID: 6798043786150933415}
+  recruitingModule:
+    minRequestCount: 5
+    maxRequestCount: 15
+    requestLifetime: 3600
+    minNextRequestTime: 15
+    maxNextRequestTime: 120
+    weightSelectedRole: 60
+    weightUnselectedRole: 30
+    defaultCharacters:
+    - id: eedcd1ecf942417c8e91e55656be6d8f
+      title: Tank
+      classId:
+        value: 1fe80399e3394fe69a50ad2936232914
+      specId:
+        value: 66b4019742a94df4a9e6ba4c6eae9d9f
+    - id: cfeb80e753464519ba320e590ef9a071
+      title: Healer
+      classId:
+        value: 274fb1d5d37e4e45a845063e81594403
+      specId:
+        value: e9f47044a7154c139111045b863eb78f
+    - id: 776b47317e974894b7cf657a6d59b1a9
+      title: Damage
+      classId:
+        value: a9d2f2fa7d0f427d8bd9194c3e46037c
+      specId:
+        value: 02b71578fcbc466b919b19d5b02d9256
+--- !u!114 &499257089889080854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f44ea2b65aa00e4088692e09152ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 37ab057a273c4125b61b1136551d1936
+  title: 
+  defaultNameKey:
+    value: GUILD/DEFAULT_RANK_0_TTL
+--- !u!114 &5098217918887357756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f44ea2b65aa00e4088692e09152ba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2f8ac35135d84774a66c8c2c7d117879
+  title: 
+  defaultNameKey:
+    value: GUILD/DEFAULT_RANK_1_TTL
+--- !u!114 &5272075455439435193
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: Protection
+  m_EditorClassIdentifier: 
+  id: 66b4019742a94df4a9e6ba4c6eae9d9f
+  title: Protection
+  nameKey:
+    value: CHARACTERS/CLASS_0_SPEC_0_TTL
+  roleId:
+    value: 42c4136f902e4bc3af5e751f35a7877a
+--- !u!114 &6246976285171924263
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  id: 1fe80399e3394fe69a50ad2936232914
+  title: Warrior
+  nameKey:
+    value: CHARACTERS/CLASS_0_TTL
+  specs:
+  - {fileID: 5272075455439435193}
+--- !u!114 &6298160343060774326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
+  m_Name: Healer
+  m_EditorClassIdentifier: 
+  id: a03305001e1c4eaf957945627f401dfb
+  title: Healer
+  nameKey:
+    value: CHARACTERS/ROLE_HEALER_TTL
+--- !u!114 &6798043786150933415
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
+  m_Name: Damage
+  m_EditorClassIdentifier: 
+  id: 10caf8849b764169aba557c7d1ec3c34
+  title: Damage
+  nameKey:
+    value: CHARACTERS/ROLE_DAMAGE_TTL
+--- !u!114 &7198393799899164901
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: Cleric
+  m_EditorClassIdentifier: 
+  id: e9f47044a7154c139111045b863eb78f
+  title: Cleric
+  nameKey:
+    value: CHARACTERS/CLASS_1_SPEC_0_TTL
+  roleId:
+    value: a03305001e1c4eaf957945627f401dfb
