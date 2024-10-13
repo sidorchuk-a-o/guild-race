@@ -11,5 +11,11 @@ namespace Game.Guild
 
         [SerializeField] private CharactersModuleData charactersModule = new();
         [SerializeField] private RecruitingModuleData recruitingModule = new();
+
+        public int MaxCharactersCount => maxCharactersCount;
+        public IReadOnlyList<GuildRankData> DefaultGuildRanks => defaultGuildRanks;
+
+        public CharactersModuleData CharactersModule => charactersModule;
+        public RecruitingModuleData RecruitingModule => recruitingModule;
     }
 }

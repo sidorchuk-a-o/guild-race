@@ -18,5 +18,15 @@ namespace Game.Guild
         [SerializeField] private float weightUnselectedRole = 30;
 
         [SerializeField] private List<DefaultCharacterData> defaultCharacters;
+
+        public int MinRequestCount => minRequestCount;
+        public int MaxRequestCount => maxRequestCount;
+        public float RequestLifetime => requestLifetime;
+        public float MinNextRequestTime => minNextRequestTime;
+        public float MaxNextRequestTime => maxNextRequestTime;
+        public float WeightSelectedRole => weightSelectedRole;
+        public float WeightUnselectedRole => weightUnselectedRole;
+
+        public IReadOnlyList<DefaultCharacterData> DefaultCharacters => defaultCharacters;
     }
 }

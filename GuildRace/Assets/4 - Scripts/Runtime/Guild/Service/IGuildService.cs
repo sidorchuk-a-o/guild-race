@@ -7,6 +7,12 @@ namespace Game.Guild
         bool GuildExists { get; }
         IReadOnlyReactiveProperty<string> Name { get; }
 
-        void CreateGuild(GuildEM guildEM);
+        ICharactersCollection Characters { get; }
+        IGuildRanksCollection GuildRanks { get; }
+
+        IRecruitingModule RecruitingModule { get; }
+
+        void CreateOrUpdateGuild(GuildEM guildEM);
+        int RemoveCharacter(string characterId);
     }
 }

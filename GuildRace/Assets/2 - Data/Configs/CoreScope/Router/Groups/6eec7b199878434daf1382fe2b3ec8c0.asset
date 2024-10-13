@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7570659539666722187
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Recruiting
+  m_EditorClassIdentifier: 
+  id: 213fcd3913be4f9092dc700d8020ebfc
+  title: Recruiting
+  path: Recruiting
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 774692a1760d4353b14574440a3697a9
+    title: default
+    asset:
+      m_AssetGUID: 0e714ed4b73bfcd428318510f0067def
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
 --- !u!114 &-1523697382088787619
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26,7 +53,9 @@ MonoBehaviour:
       m_SubObjectGUID: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
-  children: []
+  children:
+  - {fileID: 8981572059574349382}
+  - {fileID: -7570659539666722187}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,3 +72,30 @@ MonoBehaviour:
   title: Hub
   routes:
   - {fileID: -1523697382088787619}
+--- !u!114 &8981572059574349382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Roster
+  m_EditorClassIdentifier: 
+  id: 242d02a360db413fbc203ce58955890c
+  title: Roster
+  path: Roster
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: b3507c90d872403bbb64bbb2333f6ff2
+    title: default
+    asset:
+      m_AssetGUID: a118580b5c55a884e9b0c6a5be7472bb
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []

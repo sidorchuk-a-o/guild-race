@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebdb024189e57c41a851d1b08283d79, type: 3}
   m_Name: GuildConfig
   m_EditorClassIdentifier: 
-  maxCharactersCount: 40
+  maxCharactersCount: 30
   defaultGuildRanks:
   - {fileID: 499257089889080854}
   - {fileID: 5098217918887357756}
@@ -186,7 +186,13 @@ MonoBehaviour:
       specId:
         value: e9f47044a7154c139111045b863eb78f
     - id: 776b47317e974894b7cf657a6d59b1a9
-      title: Damage
+      title: Damage 1
+      classId:
+        value: a9d2f2fa7d0f427d8bd9194c3e46037c
+      specId:
+        value: 02b71578fcbc466b919b19d5b02d9256
+    - id: ea87b4ab1ac74f3680bb27670c15a520
+      title: Damage 2
       classId:
         value: a9d2f2fa7d0f427d8bd9194c3e46037c
       specId:

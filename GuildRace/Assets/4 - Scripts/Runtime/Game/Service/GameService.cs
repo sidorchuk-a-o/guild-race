@@ -24,8 +24,8 @@ namespace Game
         public async UniTask StartGame()
         {
             var pathKey = guildService.GuildExists
-                ? RouteKeys.Hub.main
-                : RouteKeys.Guild.create;
+                ? RouteKeys.Hub.roster
+                : RouteKeys.Guild.createGuild;
 
             await router.OpenScene(
                 sceneKey: SceneKeys.hub,

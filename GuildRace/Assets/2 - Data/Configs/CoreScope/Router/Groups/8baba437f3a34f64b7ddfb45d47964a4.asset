@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1683259186767106201
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: RemoveCharacter
+  m_EditorClassIdentifier: 
+  id: 7a9396a31d514a2aa9b366e4a8f10f27
+  title: RemoveCharacter
+  path: RemoveCharacter
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: 4bbae4fd7ed34d5ebaab9fe6c43924b9
+    title: default
+    asset:
+      m_AssetGUID: 2c796271d08e2904dbced1ee7c907a01
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
 --- !u!114 &-109294890465754463
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13,8 +40,8 @@ MonoBehaviour:
   m_Name: Create
   m_EditorClassIdentifier: 
   id: dfd1c6090cfa4dd1bc63bf89d33b4041
-  title: Create
-  path: Create
+  title: CreateGuild
+  path: CreateGuild
   layerKey:
     value: 37907a48d71b406fb0dad3e7b3d60e42
   components:
@@ -43,3 +70,4 @@ MonoBehaviour:
   title: Guild
   routes:
   - {fileID: -109294890465754463}
+  - {fileID: -1683259186767106201}

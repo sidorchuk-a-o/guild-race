@@ -16,6 +16,12 @@ namespace Game.Guild
 
         private GuildVMFactory guildVMF;
 
+        [Inject]
+        public void Inject(GuildVMFactory guildVMF)
+        {
+            this.guildVMF = guildVMF;
+        }
+
         private void Awake()
         {
             nameField.Value
@@ -25,12 +31,6 @@ namespace Game.Guild
             createButton.OnClick
                 .Subscribe(CreateCallback)
                 .AddTo(this);
-        }
-
-        [Inject]
-        public void Inject(GuildVMFactory guildVMF)
-        {
-            this.guildVMF = guildVMF;
         }
 
         private void NameValueChanged(string value)
@@ -45,10 +45,10 @@ namespace Game.Guild
                 Name = nameField.Value.Value
             };
 
-            guildVMF.CreateGuild(guildEM);
+            guildVMF.CreateOrUpdateGuild(guildEM);
 
             Router.Push(
-                pathKey: RouteKeys.Hub.main,
+                pathKey: RouteKeys.Hub.roster,
                 loadingKey: LoadingScreenKeys.loading,
                 parameters: RouteParams.FirstRoute);
         }

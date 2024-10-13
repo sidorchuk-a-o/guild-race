@@ -328,10 +328,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 5846359873049494670}
     m_Modifications:
     - target: {fileID: 2945719664448877518, guid: 711efecb4a4037c43aa217cc6ac4cfed, type: 3}
-      propertyPath: m_text
-      value: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2945719664448877518, guid: 711efecb4a4037c43aa217cc6ac4cfed, type: 3}
       propertyPath: m_fontSize
       value: 28
       objectReference: {fileID: 0}

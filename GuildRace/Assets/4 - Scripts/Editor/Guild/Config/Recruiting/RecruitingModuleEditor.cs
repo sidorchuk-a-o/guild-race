@@ -49,7 +49,10 @@ namespace Game.Guild
             root.CreateSpace();
 
             weightSelectedRoleField = root.CreateProperty();
-            weightSelectedRoleField.BindProperty("minNextRequestTime", GetData(data));
+            weightSelectedRoleField.BindProperty("weightSelectedRole", GetData(data));
+
+            weightUnselectedRoleField = root.CreateProperty();
+            weightUnselectedRoleField.BindProperty("weightUnselectedRole", GetData(data));
 
             root.CreateHeader("Default Characters");
 
