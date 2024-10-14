@@ -1,5 +1,6 @@
 ﻿using AD.Services;
 using AD.Services.Localization;
+using AD.Services.ProtectedTime;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using VContainer;
@@ -19,15 +20,20 @@ namespace Game.Guild
 
         public IRecruitingModule RecruitingModule => recruitingModule;
 
-        public GuildService(GuildConfig config, ILocalizationService localization, IObjectResolver resolver)
+        public GuildService(
+            GuildConfig config,
+            ILocalizationService localization,
+            ITimeService time,
+            IObjectResolver resolver)
         {
             state = new(config, localization, resolver);
-            recruitingModule = new();
+            recruitingModule = new(config, state, time);
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
+            recruitingModule.Init();
 
             return await Inited();
         }
@@ -42,6 +48,21 @@ namespace Game.Guild
         public int RemoveCharacter(string characterId)
         {
             return state.RemoveCharacter(characterId);
+        }
+
+        public int AcceptJoinRequest(string requestId)
+        {
+            return state.AcceptJoinRequest(requestId);
+        }
+
+        public int RemoveJoinRequest(string requestId)
+        {
+            return state.RemoveJoinRequest(requestId);
+        }
+
+        public void SetClassWeightState(ClassId classId, bool isEnabled)
+        {
+            state.RecruitingState.SetClassWeightState(classId, isEnabled);
         }
     }
 }

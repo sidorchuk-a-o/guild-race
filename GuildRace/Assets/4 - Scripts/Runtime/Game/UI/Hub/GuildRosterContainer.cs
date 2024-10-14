@@ -20,6 +20,7 @@ namespace Game
         [Header("Character")]
         [SerializeField] private CanvasGroup characterContainer;
         [SerializeField] private UIButton removeButton;
+        [Space]
         [SerializeField] private UIText nicknameText;
 
         private readonly CompositeDisp characterDisp = new();

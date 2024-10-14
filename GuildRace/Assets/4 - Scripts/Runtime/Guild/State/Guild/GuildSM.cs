@@ -11,6 +11,7 @@ namespace Game.Guild
         [ES3Serializable] private string name;
         [ES3Serializable] private CharactersSM characters;
         [ES3Serializable] private GuildRanksSM guildRanks;
+        [ES3Serializable] private RecruitingSM recruiting;
 
         public string Name
         {
@@ -28,6 +29,12 @@ namespace Game.Guild
         {
             get => guildRanks.GetValues();
             set => guildRanks = new(value);
+        }
+
+        public RecruitingSM Recruiting
+        {
+            get => recruiting;
+            set => recruiting = value;
         }
     }
 }

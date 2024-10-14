@@ -1,4 +1,6 @@
 ﻿using AD.Services.Router;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Game.Guild
 {
@@ -23,6 +25,18 @@ namespace Game.Guild
         public CharactersVM GetRoster()
         {
             return new CharactersVM(guildService.Characters, this);
+        }
+
+        public JoinRequestsVM GetJoinRequests()
+        {
+            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this);
+        }
+
+        public IReadOnlyList<ClassWeightVM> GetClassWeights()
+        {
+            return guildService.RecruitingModule.ClassWeights
+                .Select(x => new ClassWeightVM(x, this))
+                .ToList();
         }
 
         public RoleVM GetRole(RoleId roleId)
@@ -63,6 +77,21 @@ namespace Game.Guild
         public int RemoveCharacter(string characterId)
         {
             return guildService.RemoveCharacter(characterId);
+        }
+
+        public int AcceptJoinRequest(string requestId)
+        {
+            return guildService.AcceptJoinRequest(requestId);
+        }
+
+        public int RemoveJoinRequest(string requestId)
+        {
+            return guildService.RemoveJoinRequest(requestId);
+        }
+
+        public void SetClassWeightState(ClassId classId, bool isEnabled)
+        {
+            guildService.SetClassWeightState(classId, isEnabled);
         }
     }
 }

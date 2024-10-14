@@ -171,7 +171,7 @@ MonoBehaviour:
     minNextRequestTime: 15
     maxNextRequestTime: 120
     weightSelectedRole: 60
-    weightUnselectedRole: 30
+    weightUnselectedRole: 15
     defaultCharacters:
     - id: eedcd1ecf942417c8e91e55656be6d8f
       title: Tank

@@ -15,6 +15,8 @@ namespace Game.Guild
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
 
+        private readonly RecruitingState recruitingState;
+
         private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
@@ -26,10 +28,14 @@ namespace Game.Guild
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
 
+        public RecruitingState RecruitingState => recruitingState;
+
         public GuildState(GuildConfig config, ILocalizationService localization, IObjectResolver resolver)
             : base(config, resolver)
         {
             this.localization = localization;
+
+            recruitingState = new(config, this);
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
@@ -50,6 +56,20 @@ namespace Game.Guild
             return index;
         }
 
+        public int AcceptJoinRequest(string requestId)
+        {
+            var request = recruitingState.Requests.FirstOrDefault(x => x.Id == requestId);
+
+            characters.Add(request.Character);
+
+            return RemoveJoinRequest(request.Id);
+        }
+
+        public int RemoveJoinRequest(string requestId)
+        {
+            return recruitingState.RemoveRequest(requestId);
+        }
+
         // == Save ==
 
         protected override GuildSM CreateSave()
@@ -58,7 +78,8 @@ namespace Game.Guild
             {
                 Name = Name.Value,
                 Characters = Characters,
-                GuildRanks = GuildRanks
+                GuildRanks = GuildRanks,
+                Recruiting = RecruitingState.CreateSave()
             };
         }
 
@@ -67,8 +88,8 @@ namespace Game.Guild
             if (save == null)
             {
                 guildRanks.AddRange(CreateDefaultGuildRanks());
-                characters.AddRange(CreateDefaultCharacters());
 
+                recruitingState.ReadSave(null);
                 return;
             }
 
@@ -76,24 +97,8 @@ namespace Game.Guild
 
             guildRanks.AddRange(save.GuildRanks);
             characters.AddRange(save.Characters);
-        }
 
-        private IEnumerable<CharacterInfo> CreateDefaultCharacters()
-        {
-            var recruitRank = guildRanks.Last();
-
-            return config.RecruitingModule.DefaultCharacters.Select(x =>
-            {
-                var id = GuidUtils.Generate();
-                var nickname = $"Игрок ({id[..7]})";
-
-                var info = new CharacterInfo(id, nickname, x.ClassId);
-
-                info.SetGuildRank(recruitRank.Id);
-                info.SetSpecialization(x.SpecId);
-
-                return info;
-            });
+            recruitingState.ReadSave(save.Recruiting);
         }
 
         private IEnumerable<GuildRankInfo> CreateDefaultGuildRanks()

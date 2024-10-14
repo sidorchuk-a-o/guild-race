@@ -9,10 +9,10 @@ namespace Game.Guild
     {
         [SerializeField] private int minRequestCount = 5;
         [SerializeField] private int maxRequestCount = 15;
-        [SerializeField] private float requestLifetime = 3600;
 
-        [SerializeField] private float minNextRequestTime = 15;
-        [SerializeField] private float maxNextRequestTime = 120;
+        [SerializeField] private int requestLifetime = 60 * 60;
+        [SerializeField] private int minNextRequestTime = 15;
+        [SerializeField] private int maxNextRequestTime = 120;
 
         [SerializeField] private float weightSelectedRole = 60;
         [SerializeField] private float weightUnselectedRole = 30;
@@ -21,9 +21,11 @@ namespace Game.Guild
 
         public int MinRequestCount => minRequestCount;
         public int MaxRequestCount => maxRequestCount;
-        public float RequestLifetime => requestLifetime;
-        public float MinNextRequestTime => minNextRequestTime;
-        public float MaxNextRequestTime => maxNextRequestTime;
+
+        public int RequestLifetime => requestLifetime * 1000;
+        public int MinNextRequestTime => minNextRequestTime * 1000;
+        public int MaxNextRequestTime => maxNextRequestTime * 1000;
+
         public float WeightSelectedRole => weightSelectedRole;
         public float WeightUnselectedRole => weightUnselectedRole;
 
