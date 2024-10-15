@@ -29,6 +29,11 @@ namespace Game.Guild
             return new CharactersVM(guildService.Characters, this);
         }
 
+        public RecruitingVM GetRecruiting()
+        {
+            return new RecruitingVM(guildService.RecruitingModule, this);
+        }
+
         public JoinRequestsVM GetJoinRequests()
         {
             return new JoinRequestsVM(guildService.RecruitingModule.Requests, this);

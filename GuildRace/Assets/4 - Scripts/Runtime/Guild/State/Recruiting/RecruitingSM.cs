@@ -7,9 +7,16 @@ namespace Game.Guild
     [JsonObject(MemberSerialization.Fields)]
     public class RecruitingSM
     {
+        [ES3Serializable] private bool isEnabled;
         [ES3Serializable] private JoinRequestsSM requestsSM;
         [ES3Serializable] private long nextRequestTime;
         [ES3Serializable] private ClassWeightsSM classWeightsSM;
+
+        public bool IsEnabled
+        {
+            get => isEnabled;
+            set => isEnabled = value;
+        }
 
         public IEnumerable<JoinRequestInfo> Requests
         {

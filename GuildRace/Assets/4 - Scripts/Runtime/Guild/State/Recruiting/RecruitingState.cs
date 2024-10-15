@@ -11,8 +11,11 @@ namespace Game.Guild
         private readonly GuildState state;
         private readonly GuildConfig config;
 
+        private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
         private readonly List<ClassWeightInfo> classWeights = new();
+
+        public IReadOnlyReactiveProperty<bool> IsEnabled => isEnabled;
 
         public DateTime NextRequestTime { get; private set; }
         public IJoinRequestsCollection Requests => requests;
@@ -76,6 +79,18 @@ namespace Game.Guild
                 : config.RecruitingModule.WeightUnselectedRole;
         }
 
+        public void SwitchRecruitingState()
+        {
+            isEnabled.Value = !isEnabled.Value;
+
+            if (isEnabled.Value == false)
+            {
+                requests.Clear();
+            }
+
+            state.MarkAsDirty();
+        }
+
         public void SetClassWeightState(ClassId classId, bool isEnabled)
         {
             var weight = classWeights.FirstOrDefault(x => x.ClassId == classId);
@@ -91,6 +106,7 @@ namespace Game.Guild
         {
             return new RecruitingSM
             {
+                IsEnabled = IsEnabled.Value,
                 Requests = Requests,
                 NextRequestTime = NextRequestTime,
                 ClassWeights = classWeights
@@ -101,12 +117,14 @@ namespace Game.Guild
         {
             if (save == null)
             {
+                isEnabled.Value = true;
                 requests.AddRange(CreateDefaultRequests());
                 classWeights.AddRange(CreateDefaultClassWeights());
 
                 return;
             }
 
+            isEnabled.Value = save.IsEnabled;
             NextRequestTime = save.NextRequestTime;
 
             requests.AddRange(save.Requests);

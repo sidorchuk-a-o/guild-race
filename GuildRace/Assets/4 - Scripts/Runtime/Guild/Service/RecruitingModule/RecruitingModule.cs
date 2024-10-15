@@ -16,6 +16,8 @@ namespace Game.Guild
         private readonly GuildState state;
         private readonly ITimeService time;
 
+        public IReadOnlyReactiveProperty<bool> IsEnabled => state.RecruitingState.IsEnabled;
+
         public IJoinRequestsCollection Requests => state.RecruitingState.Requests;
         public IReadOnlyList<ClassWeightInfo> ClassWeights => state.RecruitingState.ClassWeights;
 
@@ -33,8 +35,18 @@ namespace Game.Guild
             time.OnTick.Subscribe(OnUpdate);
         }
 
+        public void SwitchRecruitingState()
+        {
+            state.RecruitingState.SwitchRecruitingState();
+        }
+
         private void OnUpdate(TimeTick tick)
         {
+            if (!IsEnabled.Value)
+            {
+                return;
+            }
+
             TryRemoveOldRequests();
 
             TryCreateNewRequests();

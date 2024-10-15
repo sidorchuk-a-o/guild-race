@@ -24,6 +24,9 @@ namespace Game
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
 
+        [Header("Settings")]
+        [SerializeField] private UIButton settingsButton;
+
         private readonly CompositeDisp requestDisp = new();
         private CancellationTokenSource requestToken;
 
@@ -34,6 +37,13 @@ namespace Game
         public void Inject(GuildVMFactory guildVMF)
         {
             joinRequestsVM = guildVMF.GetJoinRequests();
+        }
+
+        private void Awake()
+        {
+            settingsButton.OnClick
+                .Subscribe(SettingsButtonCallback)
+                .AddTo(this);
         }
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
@@ -56,6 +66,10 @@ namespace Game
 
             joinRequestsVM.ObserveRemove()
                 .Subscribe(RemoveRequestCallback)
+                .AddTo(disp);
+
+            joinRequestsVM.ObserveClear()
+                .Subscribe(ClearRequestsCallback)
                 .AddTo(disp);
 
             if (hasBack)
@@ -96,6 +110,14 @@ namespace Game
                     characterContainer.interactable = false;
                 }
             }
+        }
+
+        private void ClearRequestsCallback()
+        {
+            joinRequestVM = null;
+
+            characterContainer.alpha = 0;
+            characterContainer.interactable = false;
         }
 
         private void RequestSelectCallback(JoinRequestVM joinRequestVM)
@@ -148,6 +170,11 @@ namespace Game
             specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
 
             await characterContainer.DOFade(1, duration);
+        }
+
+        private void SettingsButtonCallback()
+        {
+            Router.Push(RouteKeys.Guild.recruitingSettings);
         }
     }
 }
