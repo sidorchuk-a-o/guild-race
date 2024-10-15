@@ -13,7 +13,7 @@ namespace Game
 {
     public class CharacterItem : VMScrollItem<CharacterVM>
     {
-        [Header("Player")]
+        [Header("Character")]
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Game.Guild
@@ -16,10 +17,10 @@ namespace Game.Guild
             set => requestsSM = new(value);
         }
 
-        public long NextRequestTime
+        public DateTime NextRequestTime
         {
-            get => nextRequestTime;
-            set => nextRequestTime = value;
+            get => new(nextRequestTime);
+            set => nextRequestTime = value.Ticks;
         }
 
         public IEnumerable<ClassWeightInfo> ClassWeights

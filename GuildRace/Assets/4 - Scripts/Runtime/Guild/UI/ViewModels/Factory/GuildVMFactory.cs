@@ -9,6 +9,8 @@ namespace Game.Guild
         private readonly GuildConfig guildConfig;
         private readonly IGuildService guildService;
 
+        public int MaxCharactersCount => guildConfig.MaxCharactersCount;
+
         public GuildVMFactory(GuildConfig guildConfig, IGuildService guildService)
         {
             this.guildConfig = guildConfig;
@@ -19,7 +21,7 @@ namespace Game.Guild
 
         public GuildVM GetGuild()
         {
-            return new GuildVM(guildService);
+            return new GuildVM(guildConfig, guildService);
         }
 
         public CharactersVM GetRoster()
@@ -84,9 +86,9 @@ namespace Game.Guild
             return guildService.AcceptJoinRequest(requestId);
         }
 
-        public int RemoveJoinRequest(string requestId)
+        public int DeclineJoinRequest(string requestId)
         {
-            return guildService.RemoveJoinRequest(requestId);
+            return guildService.DeclineJoinRequest(requestId);
         }
 
         public void SetClassWeightState(ClassId classId, bool isEnabled)

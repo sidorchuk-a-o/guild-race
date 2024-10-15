@@ -48,12 +48,12 @@ namespace Game.Guild
             var requests = recruitingState.Requests;
             var requestCount = requests.Count;
 
-            var currentTime = DateTime.Now.Ticks;
+            var currentTime = DateTime.Now;
 
             for (var i = requestCount - 1; i >= 0; i--)
             {
                 var request = requests[i];
-                var removeTime = request.CreatedTime + requestLifetime;
+                var removeTime = request.CreatedTime.AddSeconds(requestLifetime);
 
                 if (request.IsDefault || removeTime > currentTime)
                 {
@@ -76,17 +76,18 @@ namespace Game.Guild
                 return;
             }
 
-            var currentTime = DateTime.Now.Ticks;
+            var currentTime = DateTime.Now;
 
             if (recruitingState.NextRequestTime > currentTime)
             {
                 return;
             }
 
-            var requestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
+            var randomRequestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
+            var nextRequestTime = currentTime.AddSeconds(randomRequestTime);
 
             recruitingState.CreateRequest();
-            recruitingState.SetNextRequestTime(currentTime + requestTime);
+            recruitingState.SetNextRequestTime(nextRequestTime);
         }
 
         private int CalcMaxRequestCount()
@@ -97,7 +98,7 @@ namespace Game.Guild
             var minRequestCount = config.RecruitingModule.MinRequestCount;
             var maxRequestCount = config.RecruitingModule.MaxRequestCount;
 
-            var rosterRatio = rosterCount / maxRosterCount;
+            var rosterRatio = (float)rosterCount / maxRosterCount;
             var addRequestCount = Mathf.RoundToInt((maxRequestCount - minRequestCount) * rosterRatio);
 
             return minRequestCount + addRequestCount;

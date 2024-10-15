@@ -71,3 +71,59 @@ MonoBehaviour:
   routes:
   - {fileID: -109294890465754463}
   - {fileID: -1683259186767106201}
+  - {fileID: 6857439760189149016}
+  - {fileID: 375329681973270791}
+--- !u!114 &375329681973270791
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: DeclineJointRequest
+  m_EditorClassIdentifier: 
+  id: b610db7aafe4494e86002c1b7c38a10a
+  title: DeclineJointRequest
+  path: DeclineJointRequest
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: 9222d871aa4b4f34a4e7f041fd834faf
+    title: default
+    asset:
+      m_AssetGUID: 607e66a98c7b17042a763ed4e2538ba5
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &6857439760189149016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: AcceptJointRequest
+  m_EditorClassIdentifier: 
+  id: 5f5d0747d56b4d0f9aa1d75b73fee228
+  title: AcceptJointRequest
+  path: AcceptJointRequest
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: 37fe70ea4bb844e68830f30598d17ab1
+    title: default
+    asset:
+      m_AssetGUID: 6fdbb351758425b4ca092a044d323db5
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []

@@ -22,9 +22,9 @@ namespace Game.Guild
         public int MinRequestCount => minRequestCount;
         public int MaxRequestCount => maxRequestCount;
 
-        public int RequestLifetime => requestLifetime * 1000;
-        public int MinNextRequestTime => minNextRequestTime * 1000;
-        public int MaxNextRequestTime => maxNextRequestTime * 1000;
+        public int RequestLifetime => requestLifetime;
+        public int MinNextRequestTime => minNextRequestTime;
+        public int MaxNextRequestTime => maxNextRequestTime;
 
         public float WeightSelectedRole => weightSelectedRole;
         public float WeightUnselectedRole => weightUnselectedRole;

@@ -10,7 +10,7 @@ namespace Game.Guild
 
         public JoinRequestSM(JoinRequestInfo info)
         {
-            createdTime = info.CreatedTime;
+            createdTime = info.CreatedTime.Ticks;
             characterSM = new CharacterSM(info.Character);
         }
 
@@ -18,7 +18,7 @@ namespace Game.Guild
         {
             var character = characterSM.GetValue();
 
-            return new(character, createdTime);
+            return new(character, new(createdTime));
         }
     }
 }

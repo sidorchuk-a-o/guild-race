@@ -15,7 +15,7 @@ namespace Game.Guild
         void CreateOrUpdateGuild(GuildEM guildEM);
         int RemoveCharacter(string characterId);
         int AcceptJoinRequest(string requestId);
-        int RemoveJoinRequest(string requestId);
+        int DeclineJoinRequest(string requestId);
         void SetClassWeightState(ClassId classId, bool isEnabled);
     }
 }

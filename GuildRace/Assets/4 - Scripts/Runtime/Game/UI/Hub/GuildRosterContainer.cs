@@ -16,12 +16,17 @@ namespace Game
     {
         [Header("Characters")]
         [SerializeField] private CharactersScrollView charactersScroll;
+        [SerializeField] private UIText charactersCountText;
 
         [Header("Character")]
         [SerializeField] private CanvasGroup characterContainer;
         [SerializeField] private UIButton removeButton;
         [Space]
+        [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText nicknameText;
+        [SerializeField] private UIText classNameText;
+        [SerializeField] private UIText specNameText;
+        [SerializeField] private UIText guildRankText;
 
         private readonly CompositeDisp characterDisp = new();
         private CancellationTokenSource characterToken;
@@ -60,6 +65,10 @@ namespace Game
 
             charactersVM.AddTo(disp);
             charactersScroll.Init(charactersVM, forcedReset: hasReinit && !hasBack);
+
+            charactersVM.CountStr
+                .Subscribe(x => charactersCountText.SetTextParams(x))
+                .AddTo(disp);
 
             charactersScroll.OnSelect
                 .Subscribe(CharacterSelectCallback)
@@ -130,6 +139,19 @@ namespace Game
             }
 
             nicknameText.SetTextParams(characterVM.Nickname);
+            classNameText.SetTextParams(characterVM.ClassVM.NameKey);
+
+            characterVM.ItemsLevel
+                .Subscribe(x => itemsLevelText.SetTextParams(x))
+                .AddTo(disp);
+
+            characterVM.GuildRankName
+                .Subscribe(x => guildRankText.SetTextParams(x))
+                .AddTo(disp);
+
+            characterVM.SpecVM
+                .Subscribe(x => specNameText.SetTextParams(x.NameKey))
+                .AddTo(disp);
 
             await characterContainer.DOFade(1, duration);
         }

@@ -20,6 +20,8 @@ namespace AD.Services.Router
         {
             public static readonly RouteKey createGuild = new("dfd1c6090cfa4dd1bc63bf89d33b4041");
             public static readonly RouteKey removeCharacter = new("7a9396a31d514a2aa9b366e4a8f10f27");
+            public static readonly RouteKey acceptJointRequest = new("5f5d0747d56b4d0f9aa1d75b73fee228");
+            public static readonly RouteKey declineJointRequest = new("b610db7aafe4494e86002c1b7c38a10a");
         }
     }
 }

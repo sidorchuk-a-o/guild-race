@@ -55,7 +55,7 @@ namespace Game.Guild
             return state.AcceptJoinRequest(requestId);
         }
 
-        public int RemoveJoinRequest(string requestId)
+        public int DeclineJoinRequest(string requestId)
         {
             return state.RemoveJoinRequest(requestId);
         }

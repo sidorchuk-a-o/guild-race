@@ -14,7 +14,7 @@ namespace Game.Guild
         private readonly JoinRequestsCollection requests = new(null);
         private readonly List<ClassWeightInfo> classWeights = new();
 
-        public long NextRequestTime { get; private set; }
+        public DateTime NextRequestTime { get; private set; }
         public IJoinRequestsCollection Requests => requests;
         public IReadOnlyList<ClassWeightInfo> ClassWeights => classWeights;
 
@@ -24,7 +24,7 @@ namespace Game.Guild
             this.config = config;
         }
 
-        public void SetNextRequestTime(long value)
+        public void SetNextRequestTime(DateTime value)
         {
             NextRequestTime = value;
         }
@@ -45,7 +45,7 @@ namespace Game.Guild
             character.SetGuildRank(recruitRank.Id);
             character.SetSpecialization(specData.Id);
 
-            var createdTime = DateTime.Now.Ticks;
+            var createdTime = DateTime.Now;
             var request = new JoinRequestInfo(character, createdTime);
 
             requests.Add(request);
@@ -127,7 +127,7 @@ namespace Game.Guild
                 character.SetGuildRank(recruitRank.Id);
                 character.SetSpecialization(x.SpecId);
 
-                return new JoinRequestInfo(character, createdTime: -1);
+                return new JoinRequestInfo(character, createdTime: DateTime.MinValue);
             });
         }
 
