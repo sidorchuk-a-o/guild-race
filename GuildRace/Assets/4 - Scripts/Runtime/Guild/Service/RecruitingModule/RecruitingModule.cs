@@ -32,12 +32,63 @@ namespace Game.Guild
 
         public void Init()
         {
+            UpdateOffileRequests();
+
             time.OnTick.Subscribe(OnUpdate);
         }
 
         public void SwitchRecruitingState()
         {
             state.RecruitingState.SwitchRecruitingState();
+        }
+
+        private void UpdateOffileRequests()
+        {
+            if (!IsEnabled.Value)
+            {
+                return;
+            }
+
+            TryRemoveOldRequests();
+
+            // check next request time
+
+            var currentTime = DateTime.Now;
+            var recruitingState = state.RecruitingState;
+
+            if (recruitingState.NextRequestTime > currentTime)
+            {
+                return;
+            }
+
+            // new requests
+
+            var deltaTime = (int)(currentTime - recruitingState.NextRequestTime).TotalSeconds;
+            var midRequestTime = (data.MaxNextRequestTime - data.MinNextRequestTime) / 2f;
+            var possibleRequestCount = Mathf.RoundToInt(deltaTime / midRequestTime);
+
+            var requestCount = recruitingState.Requests.Count;
+            var maxRequestCount = Random.Range(requestCount, CalcMaxRequestCount());
+
+            var newRequestCount = Mathf.Min(maxRequestCount - requestCount, possibleRequestCount);
+
+            for (var i = 0; i < newRequestCount; i++)
+            {
+                var seconds = Random.Range(0, deltaTime);
+                var createTime = recruitingState.NextRequestTime.AddSeconds(seconds);
+
+                recruitingState.CreateRequest(createTime);
+            }
+
+            // next request time
+
+            if (newRequestCount > 0)
+            {
+                var randomRequestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
+                var nextRequestTime = currentTime.AddSeconds(randomRequestTime);
+
+                recruitingState.SetNextRequestTime(nextRequestTime);
+            }
         }
 
         private void OnUpdate(TimeTick tick)
@@ -55,7 +106,7 @@ namespace Game.Guild
         private void TryRemoveOldRequests()
         {
             var recruitingState = state.RecruitingState;
-            var requestLifetime = config.RecruitingModule.RequestLifetime;
+            var requestLifetime = data.RequestLifetime;
 
             var requests = recruitingState.Requests;
             var requestCount = requests.Count;
@@ -107,8 +158,8 @@ namespace Game.Guild
             var rosterCount = state.Characters.Count;
             var maxRosterCount = config.MaxCharactersCount;
 
-            var minRequestCount = config.RecruitingModule.MinRequestCount;
-            var maxRequestCount = config.RecruitingModule.MaxRequestCount;
+            var minRequestCount = data.MinRequestCount;
+            var maxRequestCount = data.MaxRequestCount;
 
             var rosterRatio = (float)rosterCount / maxRosterCount;
             var addRequestCount = Mathf.RoundToInt((maxRequestCount - minRequestCount) * rosterRatio);

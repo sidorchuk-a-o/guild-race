@@ -32,7 +32,7 @@ namespace Game.Guild
             NextRequestTime = value;
         }
 
-        public void CreateRequest()
+        public void CreateRequest(DateTime? createdTime = null)
         {
             var id = GuidUtils.Generate();
             var nickname = GetNickname(id);
@@ -52,8 +52,9 @@ namespace Game.Guild
             character.SetGuildRank(recruitRank.Id);
             character.SetSpecialization(specData.Id);
 
-            var createdTime = DateTime.Now;
-            var request = new JoinRequestInfo(character, createdTime);
+            createdTime ??= DateTime.Now;
+
+            var request = new JoinRequestInfo(character, createdTime.Value);
 
             requests.Add(request);
 
