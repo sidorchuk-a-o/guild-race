@@ -5,18 +5,18 @@ using System.Linq;
 namespace Game.Guild
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class ClassWeightsSM
+    public class ClassRoleSelectorsSM
     {
-        [ES3Serializable] private List<ClassWeightSM> values;
+        [ES3Serializable] private List<ClassRoleSelectorSM> values;
 
-        public ClassWeightsSM(IEnumerable<ClassWeightInfo> values)
+        public ClassRoleSelectorsSM(IEnumerable<ClassRoleSelectorInfo> values)
         {
             this.values = values
-                .Select(x => new ClassWeightSM(x))
+                .Select(x => new ClassRoleSelectorSM(x))
                 .ToList();
         }
 
-        public IEnumerable<ClassWeightInfo> GetValues()
+        public IEnumerable<ClassRoleSelectorInfo> GetValues()
         {
             return values.Select(x => x.GetValue());
         }

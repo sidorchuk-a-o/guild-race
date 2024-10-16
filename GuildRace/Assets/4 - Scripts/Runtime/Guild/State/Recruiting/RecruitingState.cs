@@ -13,13 +13,13 @@ namespace Game.Guild
 
         private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
-        private readonly List<ClassWeightInfo> classWeights = new();
+        private readonly List<ClassRoleSelectorInfo> classRoleSelectors = new();
 
         public IReadOnlyReactiveProperty<bool> IsEnabled => isEnabled;
 
         public DateTime NextRequestTime { get; private set; }
         public IJoinRequestsCollection Requests => requests;
-        public IReadOnlyList<ClassWeightInfo> ClassWeights => classWeights;
+        public IReadOnlyList<ClassRoleSelectorInfo> ClassRoleSelectors => classRoleSelectors;
 
         public RecruitingState(GuildConfig config, GuildState state)
         {
@@ -37,9 +37,13 @@ namespace Game.Guild
             var id = GuidUtils.Generate();
             var nickname = GetNickname(id);
 
-            var classId = classWeights.WeightedSelection(GetClassWeight).ClassId;
-            var classData = config.CharactersModule.GetClass(classId);
-            var specData = classData.Specs.RandomValue();
+            var roleId = classRoleSelectors
+                .WeightedSelection(GetClassRoleWeight)
+                .RoleId;
+
+            var (classData, specData) = config.CharactersModule
+                .GetSpecializations(roleId)
+                .RandomValue();
 
             var recruitRank = state.GuildRanks.Last();
 
@@ -72,9 +76,9 @@ namespace Game.Guild
             state.MarkAsDirty();
         }
 
-        private float GetClassWeight(ClassWeightInfo classWeight)
+        private float GetClassRoleWeight(ClassRoleSelectorInfo classRoleSelector)
         {
-            return classWeight.IsEnabled.Value
+            return classRoleSelector.IsEnabled.Value
                 ? config.RecruitingModule.WeightSelectedRole
                 : config.RecruitingModule.WeightUnselectedRole;
         }
@@ -91,9 +95,9 @@ namespace Game.Guild
             state.MarkAsDirty();
         }
 
-        public void SetClassWeightState(ClassId classId, bool isEnabled)
+        public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
         {
-            var weight = classWeights.FirstOrDefault(x => x.ClassId == classId);
+            var weight = classRoleSelectors.FirstOrDefault(x => x.RoleId == roleId);
 
             weight.SetActiveState(isEnabled);
 
@@ -109,7 +113,7 @@ namespace Game.Guild
                 IsEnabled = IsEnabled.Value,
                 Requests = Requests,
                 NextRequestTime = NextRequestTime,
-                ClassWeights = classWeights
+                ClassRoleSelectors = classRoleSelectors
             };
         }
 
@@ -119,7 +123,7 @@ namespace Game.Guild
             {
                 isEnabled.Value = true;
                 requests.AddRange(CreateDefaultRequests());
-                classWeights.AddRange(CreateDefaultClassWeights());
+                classRoleSelectors.AddRange(CreateDefaultClassRoleSelectors());
 
                 return;
             }
@@ -128,7 +132,7 @@ namespace Game.Guild
             NextRequestTime = save.NextRequestTime;
 
             requests.AddRange(save.Requests);
-            classWeights.AddRange(save.ClassWeights);
+            classRoleSelectors.AddRange(save.ClassRoleSelectors);
         }
 
         private IEnumerable<JoinRequestInfo> CreateDefaultRequests()
@@ -149,11 +153,11 @@ namespace Game.Guild
             });
         }
 
-        private IEnumerable<ClassWeightInfo> CreateDefaultClassWeights()
+        private IEnumerable<ClassRoleSelectorInfo> CreateDefaultClassRoleSelectors()
         {
-            return config.CharactersModule.Classes.Select(x =>
+            return config.CharactersModule.Roles.Select(x =>
             {
-                return new ClassWeightInfo(x.Id, isEnabled: true);
+                return new ClassRoleSelectorInfo(x.Id, isEnabled: true);
             });
         }
 

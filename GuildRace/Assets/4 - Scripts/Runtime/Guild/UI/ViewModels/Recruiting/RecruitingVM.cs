@@ -10,21 +10,21 @@ namespace Game.Guild
         private readonly IRecruitingModule module;
 
         public IReadOnlyReactiveProperty<bool> IsEnabled { get; }
-        public IReadOnlyList<ClassWeightVM> ClassWeightsVM { get; }
+        public IReadOnlyList<ClassRoleSelectorVM> ClassRoleSelectorsVM { get; }
 
         public RecruitingVM(IRecruitingModule module, GuildVMFactory guildVMF)
         {
             this.module = module;
 
             IsEnabled = module.IsEnabled;
-            ClassWeightsVM = guildVMF.GetClassWeights();
+            ClassRoleSelectorsVM = guildVMF.GetClassRoleSelectors();
         }
 
         protected override void InitSubscribes(CompositeDisp disp)
         {
-            foreach (var classWeightVM in ClassWeightsVM)
+            foreach (var classRoleSelectorVM in ClassRoleSelectorsVM)
             {
-                classWeightVM.AddTo(disp);
+                classRoleSelectorVM.AddTo(disp);
             }
         }
 

@@ -10,7 +10,7 @@ namespace Game.Guild
         [ES3Serializable] private bool isEnabled;
         [ES3Serializable] private JoinRequestsSM requestsSM;
         [ES3Serializable] private long nextRequestTime;
-        [ES3Serializable] private ClassWeightsSM classWeightsSM;
+        [ES3Serializable] private ClassRoleSelectorsSM classRoleSelectorSM;
 
         public bool IsEnabled
         {
@@ -30,10 +30,10 @@ namespace Game.Guild
             set => nextRequestTime = value.Ticks;
         }
 
-        public IEnumerable<ClassWeightInfo> ClassWeights
+        public IEnumerable<ClassRoleSelectorInfo> ClassRoleSelectors
         {
-            get => classWeightsSM.GetValues();
-            set => classWeightsSM = new(value);
+            get => classRoleSelectorSM.GetValues();
+            set => classRoleSelectorSM = new(value);
         }
     }
 }

@@ -2,16 +2,16 @@
 
 namespace Game.Guild
 {
-    public class ClassWeightInfo
+    public class ClassRoleSelectorInfo
     {
         private readonly ReactiveProperty<bool> isEnabled = new();
 
-        public ClassId ClassId { get; }
+        public RoleId RoleId { get; }
         public IReadOnlyReactiveProperty<bool> IsEnabled => isEnabled;
 
-        public ClassWeightInfo(ClassId classId, bool isEnabled)
+        public ClassRoleSelectorInfo(RoleId roleId, bool isEnabled)
         {
-            ClassId = classId;
+            RoleId = roleId;
 
             this.isEnabled.Value = isEnabled;
         }

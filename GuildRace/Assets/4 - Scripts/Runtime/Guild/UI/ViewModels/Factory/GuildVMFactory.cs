@@ -39,10 +39,10 @@ namespace Game.Guild
             return new JoinRequestsVM(guildService.RecruitingModule.Requests, this);
         }
 
-        public IReadOnlyList<ClassWeightVM> GetClassWeights()
+        public IReadOnlyList<ClassRoleSelectorVM> GetClassRoleSelectors()
         {
-            return guildService.RecruitingModule.ClassWeights
-                .Select(x => new ClassWeightVM(x, this))
+            return guildService.RecruitingModule.ClassRoleSelectors
+                .Select(x => new ClassRoleSelectorVM(x, this))
                 .ToList();
         }
 
@@ -96,9 +96,9 @@ namespace Game.Guild
             return guildService.DeclineJoinRequest(requestId);
         }
 
-        public void SetClassWeightState(ClassId classId, bool isEnabled)
+        public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
         {
-            guildService.SetClassWeightState(classId, isEnabled);
+            guildService.SetClassRoleSelectorState(roleId, isEnabled);
         }
     }
 }

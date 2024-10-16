@@ -19,7 +19,7 @@ namespace Game.Guild
         public IReadOnlyReactiveProperty<bool> IsEnabled => state.RecruitingState.IsEnabled;
 
         public IJoinRequestsCollection Requests => state.RecruitingState.Requests;
-        public IReadOnlyList<ClassWeightInfo> ClassWeights => state.RecruitingState.ClassWeights;
+        public IReadOnlyList<ClassRoleSelectorInfo> ClassRoleSelectors => state.RecruitingState.ClassRoleSelectors;
 
         public RecruitingModule(GuildConfig config, GuildState state, ITimeService time)
         {

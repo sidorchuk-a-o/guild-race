@@ -8,7 +8,7 @@ namespace Game.Guild
         IReadOnlyReactiveProperty<bool> IsEnabled { get; }
 
         IJoinRequestsCollection Requests { get; }
-        IReadOnlyList<ClassWeightInfo> ClassWeights { get; }
+        IReadOnlyList<ClassRoleSelectorInfo> ClassRoleSelectors { get; }
 
         void SwitchRecruitingState();
     }

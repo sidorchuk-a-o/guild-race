@@ -60,9 +60,9 @@ namespace Game.Guild
             return state.RemoveJoinRequest(requestId);
         }
 
-        public void SetClassWeightState(ClassId classId, bool isEnabled)
+        public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
         {
-            state.RecruitingState.SetClassWeightState(classId, isEnabled);
+            state.RecruitingState.SetClassRoleSelectorState(roleId, isEnabled);
         }
     }
 }
