@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 3b274f10b0b54682b7750b982ff98675
   title: Game  Service
   enabled: 1
-  order: 0
+  order: 500
   configRef:
     m_AssetGUID: 
     m_SubObjectName: 

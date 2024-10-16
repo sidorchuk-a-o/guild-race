@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6703802787634463511
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: RecruitingSettings
+  m_EditorClassIdentifier: 
+  id: d99256e407a84e348d6cecdce00bcdb1
+  title: RecruitingSettings
+  path: RecruitingSettings
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: b504f08147fe45a9bb8ec3ace5872ab9
+    title: default
+    asset:
+      m_AssetGUID: 27a8028fc4f930f45aefc9e8ad210076
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &-1683259186767106201
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: RemoveCharacter
+  m_EditorClassIdentifier: 
+  id: 7a9396a31d514a2aa9b366e4a8f10f27
+  title: RemoveCharacter
+  path: RemoveCharacter
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: 4bbae4fd7ed34d5ebaab9fe6c43924b9
+    title: default
+    asset:
+      m_AssetGUID: 2c796271d08e2904dbced1ee7c907a01
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &-109294890465754463
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Create
+  m_EditorClassIdentifier: 
+  id: dfd1c6090cfa4dd1bc63bf89d33b4041
+  title: CreateGuild
+  path: CreateGuild
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: cfbfb8f52a1040e290845be404d7ed99
+    title: default
+    asset:
+      m_AssetGUID: 073706f89e0fed24a9f0aa2734843072
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228f1e06845fdba4c93333761d4d91e0, type: 3}
+  m_Name: 8baba437f3a34f64b7ddfb45d47964a4
+  m_EditorClassIdentifier: 
+  id: 8baba437f3a34f64b7ddfb45d47964a4
+  title: Guild
+  routes:
+  - {fileID: -109294890465754463}
+  - {fileID: -1683259186767106201}
+  - {fileID: 6857439760189149016}
+  - {fileID: 375329681973270791}
+  - {fileID: -6703802787634463511}
+--- !u!114 &375329681973270791
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: DeclineJointRequest
+  m_EditorClassIdentifier: 
+  id: b610db7aafe4494e86002c1b7c38a10a
+  title: DeclineJointRequest
+  path: DeclineJointRequest
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: 9222d871aa4b4f34a4e7f041fd834faf
+    title: default
+    asset:
+      m_AssetGUID: 607e66a98c7b17042a763ed4e2538ba5
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &6857439760189149016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: AcceptJointRequest
+  m_EditorClassIdentifier: 
+  id: 5f5d0747d56b4d0f9aa1d75b73fee228
+  title: AcceptJointRequest
+  path: AcceptJointRequest
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: 37fe70ea4bb844e68830f30598d17ab1
+    title: default
+    asset:
+      m_AssetGUID: 6fdbb351758425b4ca092a044d323db5
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
