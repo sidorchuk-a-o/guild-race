@@ -4,12 +4,11 @@ using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
-using Game.Guild;
 using System.Threading;
 using UniRx;
 using UnityEngine;
 
-namespace Game
+namespace Game.Guild
 {
     public class CharacterItem : VMScrollItem<CharacterVM>
     {

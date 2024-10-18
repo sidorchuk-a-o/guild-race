@@ -1,8 +1,7 @@
 ﻿using AD.Services.Router;
-using Game.Guild;
 using UnityEngine;
 
-namespace Game
+namespace Game.Guild
 {
     public class JoinRequestsScrollView : VMScrollView<JoinRequestVM>
     {

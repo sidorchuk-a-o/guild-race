@@ -3,12 +3,11 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using Game.Components;
-using Game.Guild;
 using UniRx;
 using UnityEngine;
 using VContainer;
 
-namespace Game
+namespace Game.Guild
 {
     public class JoinRequestCounter : GameComponent<JoinRequestCounter>
     {

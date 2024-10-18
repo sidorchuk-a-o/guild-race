@@ -1,10 +1,9 @@
 ﻿using AD.ToolsCollection;
 using AD.UI;
-using Game.Guild;
 using UniRx;
 using UnityEngine;
 
-namespace Game
+namespace Game.Guild
 {
     public class ClassRoleSelector : MonoBehaviour
     {
