@@ -36,7 +36,7 @@ namespace Game.Items
             {
                 var groupKey = equipGroup.Title;
 
-                foreach (var equipType in equipGroup.Types)
+                foreach (var equipType in equipGroup.GetValue<List<EquipTypeData>>("types"))
                 {
                     var typeKey = $"{groupKey}/{equipType.Title}";
 

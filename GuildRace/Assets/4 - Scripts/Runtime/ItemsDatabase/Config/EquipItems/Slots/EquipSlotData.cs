@@ -6,7 +6,7 @@ namespace Game.Items
 {
     public class EquipSlotData : ScriptableEntity
     {
-        [SerializeField] public LocalizeKey nameKey;
+        [SerializeField] private LocalizeKey nameKey;
 
         public LocalizeKey NameKey => nameKey;
     }
