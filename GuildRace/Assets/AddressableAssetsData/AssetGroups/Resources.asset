@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d18d8300d606d946bb38311fd4c3135
+    m_Address: Art/Sprites/ItemDatabase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4d2c4fa53b59c4742b81db16493478cf
     m_Address: TextMeshPro/FontAssets
     m_ReadOnly: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5547bbefffd68c24ea91d70b5a5b77de, type: 3}
+  m_Name: ItemsDatabaseServiceInstaller
+  m_EditorClassIdentifier: 
+  id: aa03055de9274acfad0b7d37264f7955
+  title: Items  Database  Service
+  enabled: 1
+  order: 0
+  configRef:
+    m_AssetGUID: 8a957f8c2a0371e4bb3b9d52be73f43e
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
