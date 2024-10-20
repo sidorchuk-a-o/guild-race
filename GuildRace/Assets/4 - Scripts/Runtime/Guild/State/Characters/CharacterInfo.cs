@@ -8,7 +8,6 @@ namespace Game.Guild
         private readonly ReactiveProperty<GuildRankId> guildRankId = new();
         private readonly ReactiveProperty<SpecializationId> specId = new();
 
-        private readonly ReactiveProperty<int> itemsLevel = new();
         private readonly IEquipSlotsCollection equipSlots;
 
         public string Id { get; }
@@ -19,7 +18,7 @@ namespace Game.Guild
 
         public IReadOnlyReactiveProperty<GuildRankId> GuildRankId => guildRankId;
 
-        public IReadOnlyReactiveProperty<int> ItemsLevel => itemsLevel;
+        public IReadOnlyReactiveProperty<int> ItemsLevel => equipSlots.ItemsLevel;
         public IEquipSlotsCollection EquipSlots => equipSlots;
 
         public CharacterInfo(string id, string nickname, ClassId classId, IEquipSlotsCollection equipSlots)

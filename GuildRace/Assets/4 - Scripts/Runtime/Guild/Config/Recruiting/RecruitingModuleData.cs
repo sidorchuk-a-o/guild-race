@@ -17,6 +17,11 @@ namespace Game.Guild
         [SerializeField] private float weightSelectedRole = 60;
         [SerializeField] private float weightUnselectedRole = 30;
 
+        [SerializeField] private int minEquipLevel = 10;
+        [SerializeField] private List<int> characterGroupsWeights = new() { 15, 30, 60 };
+        [SerializeField] private EquipGeneratorPhaseData firstPhase = new();
+        [SerializeField] private EquipGeneratorPhaseData lastPhase = new();
+
         [SerializeField] private List<DefaultCharacterData> defaultCharacters;
 
         public int MinRequestCount => minRequestCount;
@@ -28,6 +33,11 @@ namespace Game.Guild
 
         public float WeightSelectedRole => weightSelectedRole;
         public float WeightUnselectedRole => weightUnselectedRole;
+
+        public int MinEquipLevel => minEquipLevel;
+        public IReadOnlyList<int> CharacterGroupsWeights => characterGroupsWeights;
+        public EquipGeneratorPhaseData FirstPhase => firstPhase;
+        public EquipGeneratorPhaseData LastPhase => lastPhase;
 
         public IReadOnlyList<DefaultCharacterData> DefaultCharacters => defaultCharacters;
     }

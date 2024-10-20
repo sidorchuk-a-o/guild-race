@@ -52,7 +52,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  level: 33
+  level: 10
   power: 33
   rarity:
     value: 2416bfd6f35648ebbad6fc32dc013b85
@@ -140,7 +140,7 @@ MonoBehaviour:
   type:
     value: 99b4b8fd043843a38b502a1922036b1c
   slot:
-    value: c927e50ac6804aa6a8c4f0930c025ae6
+    value: 78448ffd1dbc497b8d30364ca8aa6249
   sources: []
 --- !u!114 &-2993250187593631364
 MonoBehaviour:
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  level: 15
+  level: 10
   power: 30
   rarity:
     value: 2416bfd6f35648ebbad6fc32dc013b85

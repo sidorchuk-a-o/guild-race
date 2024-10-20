@@ -16,9 +16,7 @@ namespace Game.Guild
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
 
-        private readonly RecruitingState recruitingState;
-
-        private readonly IItemsDatabaseService itemsDatabase;
+        private readonly IItemsDatabaseService itemsService;
         private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
@@ -30,24 +28,32 @@ namespace Game.Guild
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
 
-        public RecruitingState RecruitingState => recruitingState;
-
         public GuildState(
             GuildConfig config,
-            IItemsDatabaseService itemsDatabase,
+            IItemsDatabaseService itemsService,
             ILocalizationService localization,
             IObjectResolver resolver)
             : base(config, resolver)
         {
-            this.itemsDatabase = itemsDatabase;
+            this.itemsService = itemsService;
             this.localization = localization;
-
-            recruitingState = new(config, this, itemsDatabase);
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
         {
             name.Value = guildEM.Name;
+
+            MarkAsDirty();
+        }
+
+        public void AddCharacter(CharacterInfo info)
+        {
+            if (characters.Contains(info))
+            {
+                return;
+            }
+
+            characters.Add(info);
 
             MarkAsDirty();
         }
@@ -63,20 +69,6 @@ namespace Game.Guild
             return index;
         }
 
-        public int AcceptJoinRequest(string requestId)
-        {
-            var request = recruitingState.Requests.FirstOrDefault(x => x.Id == requestId);
-
-            characters.Add(request.Character);
-
-            return RemoveJoinRequest(request.Id);
-        }
-
-        public int RemoveJoinRequest(string requestId)
-        {
-            return recruitingState.RemoveRequest(requestId);
-        }
-
         // == Save ==
 
         protected override GuildSM CreateSave()
@@ -84,11 +76,10 @@ namespace Game.Guild
             var guildSM = new GuildSM
             {
                 Name = Name.Value,
-                GuildRanks = GuildRanks,
-                Recruiting = RecruitingState.CreateSave()
+                GuildRanks = GuildRanks
             };
 
-            guildSM.SetCharacters(Characters, itemsDatabase);
+            guildSM.SetCharacters(Characters, itemsService);
 
             return guildSM;
         }
@@ -99,16 +90,13 @@ namespace Game.Guild
             {
                 guildRanks.AddRange(CreateDefaultGuildRanks());
 
-                recruitingState.ReadSave(null);
                 return;
             }
 
             name.Value = save.Name;
 
             guildRanks.AddRange(save.GuildRanks);
-            characters.AddRange(save.GetCharacters(itemsDatabase));
-
-            recruitingState.ReadSave(save.Recruiting);
+            characters.AddRange(save.GetCharacters(itemsService));
         }
 
         private IEnumerable<GuildRankInfo> CreateDefaultGuildRanks()

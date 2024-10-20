@@ -44,6 +44,9 @@ namespace Game
 
         private void Awake()
         {
+            characterContainer.alpha = 0;
+            characterContainer.interactable = false;
+
             settingsButton.OnClick
                 .Subscribe(SettingsButtonCallback)
                 .AddTo(this);

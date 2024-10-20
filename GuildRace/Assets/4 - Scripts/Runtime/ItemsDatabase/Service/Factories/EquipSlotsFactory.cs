@@ -5,12 +5,12 @@ namespace Game.Items
     public class EquipSlotsFactory
     {
         private readonly ItemsDatabaseConfig config;
-        private readonly IItemsDatabaseService database;
+        private readonly IItemsDatabaseService itemsService;
 
-        public EquipSlotsFactory(ItemsDatabaseConfig config, IItemsDatabaseService database)
+        public EquipSlotsFactory(ItemsDatabaseConfig config, IItemsDatabaseService itemsService)
         {
             this.config = config;
-            this.database = database;
+            this.itemsService = itemsService;
         }
 
         // == Slot ==
@@ -22,12 +22,12 @@ namespace Game.Items
 
         public EquipSlotSM CreateSave(EquipSlotInfo info)
         {
-            return new EquipSlotSM(info, database);
+            return new EquipSlotSM(info, itemsService);
         }
 
         public EquipSlotInfo ReadSave(EquipSlotSM save)
         {
-            return save.GetValue(database);
+            return save.GetValue(itemsService);
         }
 
         // == Slots ==
@@ -35,20 +35,26 @@ namespace Game.Items
         public IEquipSlotsCollection CreateDefaultSlots()
         {
             var slots = config.EquipsParams.Slots.Select(CreateInfo);
+            var slotsCollection = new EquipSlotsCollection(slots);
 
-            return new EquipSlotsCollection(slots);
+            slotsCollection.Init();
+
+            return slotsCollection;
         }
 
         public EquipSlotsSM CreateSave(IEquipSlotsCollection values)
         {
-            return new EquipSlotsSM(values, database);
+            return new EquipSlotsSM(values, itemsService);
         }
 
         public IEquipSlotsCollection ReadSave(EquipSlotsSM save)
         {
-            var slots = save.GetValues(database);
+            var slots = save.GetValues(itemsService);
+            var slotsCollection = new EquipSlotsCollection(slots);
 
-            return new EquipSlotsCollection(slots);
+            slotsCollection.Init();
+
+            return slotsCollection;
         }
     }
 }

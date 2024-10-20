@@ -22,14 +22,15 @@ namespace Game.Guild
         public IRecruitingModule RecruitingModule => recruitingModule;
 
         public GuildService(
-            GuildConfig config,
-            IItemsDatabaseService itemsDatabase,
+            GuildConfig guildConfig,
+            ItemsDatabaseConfig itemsConfig,
+            IItemsDatabaseService itemsService,
             ILocalizationService localization,
             ITimeService time,
             IObjectResolver resolver)
         {
-            state = new(config, itemsDatabase, localization, resolver);
-            recruitingModule = new(config, state, time);
+            state = new(guildConfig, itemsService, localization, resolver);
+            recruitingModule = new(state, guildConfig, itemsConfig, itemsService, time, resolver);
         }
 
         public override async UniTask<bool> Init()
@@ -44,6 +45,11 @@ namespace Game.Guild
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
         {
+            if (GuildExists == false)
+            {
+                recruitingModule.SwitchRecruitingState();
+            }
+
             state.CreateOrUpdateGuild(guildEM);
         }
 
@@ -54,17 +60,24 @@ namespace Game.Guild
 
         public int AcceptJoinRequest(string requestId)
         {
-            return state.AcceptJoinRequest(requestId);
+            var index = recruitingModule.AcceptJoinRequest(requestId, out var requestInfo);
+
+            if (index != -1)
+            {
+                state.AddCharacter(requestInfo.Character);
+            }
+
+            return index;
         }
 
         public int DeclineJoinRequest(string requestId)
         {
-            return state.RemoveJoinRequest(requestId);
+            return recruitingModule.RemoveRequest(requestId);
         }
 
         public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
         {
-            state.RecruitingState.SetClassRoleSelectorState(roleId, isEnabled);
+            recruitingModule.SetClassRoleSelectorState(roleId, isEnabled);
         }
     }
 }

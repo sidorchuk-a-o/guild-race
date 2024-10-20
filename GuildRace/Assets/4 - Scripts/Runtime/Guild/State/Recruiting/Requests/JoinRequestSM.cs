@@ -9,15 +9,15 @@ namespace Game.Guild
         [ES3Serializable] private long createdTime;
         [ES3Serializable] private CharacterSM characterSM;
 
-        public JoinRequestSM(JoinRequestInfo info, IItemsDatabaseService itemsDatabase)
+        public JoinRequestSM(JoinRequestInfo info, IItemsDatabaseService itemsService)
         {
             createdTime = info.CreatedTime.Ticks;
-            characterSM = new CharacterSM(info.Character, itemsDatabase);
+            characterSM = new CharacterSM(info.Character, itemsService);
         }
 
-        public JoinRequestInfo GetValue(IItemsDatabaseService itemsDatabase)
+        public JoinRequestInfo GetValue(IItemsDatabaseService itemsService)
         {
-            var character = characterSM.GetValue(itemsDatabase);
+            var character = characterSM.GetValue(itemsService);
 
             return new(character, new(createdTime));
         }

@@ -8,6 +8,8 @@ namespace Game.Guild
     [JsonObject(MemberSerialization.Fields)]
     public class RecruitingSM
     {
+        public const string key = "recruiting";
+
         [ES3Serializable] private bool isEnabled;
         [ES3Serializable] private JoinRequestsSM requestsSM;
         [ES3Serializable] private long nextRequestTime;
@@ -31,14 +33,14 @@ namespace Game.Guild
             set => classRoleSelectorSM = new(value);
         }
 
-        public void SetRequests(IEnumerable<JoinRequestInfo> value, IItemsDatabaseService itemsDatabase)
+        public void SetRequests(IEnumerable<JoinRequestInfo> value, IItemsDatabaseService itemsService)
         {
-            requestsSM = new(value, itemsDatabase);
+            requestsSM = new(value, itemsService);
         }
 
-        public IEnumerable<JoinRequestInfo> GetRequests(IItemsDatabaseService itemsDatabase)
+        public IEnumerable<JoinRequestInfo> GetRequests(IItemsDatabaseService itemsService)
         {
-            return requestsSM.GetValues(itemsDatabase);
+            return requestsSM.GetValues(itemsService);
         }
     }
 }

@@ -12,7 +12,6 @@ namespace Game.Guild
         [ES3Serializable] private string name;
         [ES3Serializable] private CharactersSM characters;
         [ES3Serializable] private GuildRanksSM guildRanks;
-        [ES3Serializable] private RecruitingSM recruiting;
 
         public string Name
         {
@@ -26,20 +25,14 @@ namespace Game.Guild
             set => guildRanks = new(value);
         }
 
-        public RecruitingSM Recruiting
+        public void SetCharacters(IEnumerable<CharacterInfo> value, IItemsDatabaseService itemsService)
         {
-            get => recruiting;
-            set => recruiting = value;
+            characters = new(value, itemsService);
         }
 
-        public void SetCharacters(IEnumerable<CharacterInfo> value, IItemsDatabaseService itemsDatabase)
+        public IEnumerable<CharacterInfo> GetCharacters(IItemsDatabaseService itemsService)
         {
-            characters = new(value, itemsDatabase);
-        }
-
-        public IEnumerable<CharacterInfo> GetCharacters(IItemsDatabaseService itemsDatabase)
-        {
-            return characters.GetValues(itemsDatabase);
+            return characters.GetValues(itemsService);
         }
     }
 }
