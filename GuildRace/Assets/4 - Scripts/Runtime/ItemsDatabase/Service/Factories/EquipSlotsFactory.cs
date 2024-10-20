@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace Game.Items
 {
@@ -33,19 +32,23 @@ namespace Game.Items
 
         // == Slots ==
 
-        public IEnumerable<EquipSlotInfo> CreateDefaultSlots()
+        public IEquipSlotsCollection CreateDefaultSlots()
         {
-            return config.EquipsParams.Slots.Select(CreateInfo);
+            var slots = config.EquipsParams.Slots.Select(CreateInfo);
+
+            return new EquipSlotsCollection(slots);
         }
 
-        public EquipSlotsSM CreateSave(IEnumerable<EquipSlotInfo> values)
+        public EquipSlotsSM CreateSave(IEquipSlotsCollection values)
         {
             return new EquipSlotsSM(values, database);
         }
 
-        public IEnumerable<EquipSlotInfo> ReadSave(EquipSlotsSM save)
+        public IEquipSlotsCollection ReadSave(EquipSlotsSM save)
         {
-            return save.GetValues(database);
+            var slots = save.GetValues(database);
+
+            return new EquipSlotsCollection(slots);
         }
     }
 }

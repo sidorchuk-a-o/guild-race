@@ -2,17 +2,19 @@
 {
     public class EquipItemInfo : ItemInfo
     {
-        private readonly EquipItemData data;
-
-        public int Level => data.Level;
-        public int Power => data.Power;
-        public Rarity Rarity => data.Rarity;
-        public EquipType Type => data.Type;
-        public EquipSlot Slot => data.Slot;
+        public int Level { get; }
+        public int Power { get; }
+        public Rarity Rarity { get; }
+        public EquipType Type { get; }
+        public EquipSlot Slot { get; }
 
         public EquipItemInfo(string id, EquipItemData data) : base(id, data)
         {
-            this.data = data;
+            Level = data.Level;
+            Power = data.Power;
+            Rarity = data.Rarity;
+            Type = data.Type;
+            Slot = data.Slot;
         }
     }
 }

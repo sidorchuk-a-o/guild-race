@@ -1,5 +1,6 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
+using Game.Items;
 using UniRx;
 
 namespace Game.Guild
@@ -17,14 +18,16 @@ namespace Game.Guild
         public string Nickname { get; }
 
         public ClassVM ClassVM { get; }
+
         public IReadOnlyReactiveProperty<SpecializationVM> SpecVM => specVM;
 
         public IReadOnlyReactiveProperty<string> GuildRankName => guildRankName;
         public IReadOnlyReactiveProperty<GuildRankVM> GuildRankVM => guildRankVM;
 
         public IReadOnlyReactiveProperty<int> ItemsLevel { get; }
+        public EquipSlotsVM EquiSlotsVM { get; }
 
-        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF)
+        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF, ItemsVMFactory itemsVMF)
         {
             this.info = info;
             this.guildVMF = guildVMF;
@@ -34,11 +37,13 @@ namespace Game.Guild
             ItemsLevel = info.ItemsLevel;
 
             ClassVM = guildVMF.GetClass(info.ClassId);
+            EquiSlotsVM = itemsVMF.CreateEquipSlots(info.EquipSlots);
         }
 
         protected override void InitSubscribes(CompositeDisp disp)
         {
             ClassVM.AddTo(disp);
+            EquiSlotsVM.AddTo(disp);
 
             info.SpecId
                 .Subscribe(SpecializationChangedCallback)

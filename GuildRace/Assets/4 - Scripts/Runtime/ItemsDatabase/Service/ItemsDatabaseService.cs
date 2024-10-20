@@ -1,6 +1,5 @@
 ﻿using AD.Services;
 using Cysharp.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Game.Items
 {
@@ -56,17 +55,17 @@ namespace Game.Items
 
         // == Equip SLots ==
 
-        public IEnumerable<EquipSlotInfo> CreateDefaultSlots()
+        public IEquipSlotsCollection CreateDefaultSlots()
         {
             return equipSlotsFactory.CreateDefaultSlots();
         }
 
-        public EquipSlotsSM CreateSlotsSave(IEnumerable<EquipSlotInfo> values)
+        public EquipSlotsSM CreateSlotsSave(IEquipSlotsCollection values)
         {
             return equipSlotsFactory.CreateSave(values);
         }
 
-        public IEnumerable<EquipSlotInfo> ReadSlotsSave(EquipSlotsSM save)
+        public IEquipSlotsCollection ReadSlotsSave(EquipSlotsSM save)
         {
             return equipSlotsFactory.ReadSave(save);
         }

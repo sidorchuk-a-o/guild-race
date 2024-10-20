@@ -4,18 +4,16 @@ namespace Game.Items
 {
     public abstract class ItemInfo
     {
-        private readonly ItemData data;
-
         public string Id { get; }
-        public string DataId => data.Id;
+        public string DataId { get; }
 
-        public AssetReference IconRef => data.IconRef;
+        public AssetReference IconRef { get; }
 
         public ItemInfo(string id, ItemData data)
         {
             Id = id;
-
-            this.data = data;
+            DataId = data.Id;
+            IconRef = data.IconRef;
         }
     }
 }

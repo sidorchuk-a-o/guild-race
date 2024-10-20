@@ -2,6 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.Save;
 using AD.ToolsCollection;
+using Game.Items;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -17,6 +18,7 @@ namespace Game.Guild
 
         private readonly RecruitingState recruitingState;
 
+        private readonly IItemsDatabaseService itemsDatabase;
         private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
@@ -30,12 +32,17 @@ namespace Game.Guild
 
         public RecruitingState RecruitingState => recruitingState;
 
-        public GuildState(GuildConfig config, ILocalizationService localization, IObjectResolver resolver)
+        public GuildState(
+            GuildConfig config,
+            IItemsDatabaseService itemsDatabase,
+            ILocalizationService localization,
+            IObjectResolver resolver)
             : base(config, resolver)
         {
+            this.itemsDatabase = itemsDatabase;
             this.localization = localization;
 
-            recruitingState = new(config, this);
+            recruitingState = new(config, this, itemsDatabase);
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
@@ -74,13 +81,16 @@ namespace Game.Guild
 
         protected override GuildSM CreateSave()
         {
-            return new GuildSM
+            var guildSM = new GuildSM
             {
                 Name = Name.Value,
-                Characters = Characters,
                 GuildRanks = GuildRanks,
                 Recruiting = RecruitingState.CreateSave()
             };
+
+            guildSM.SetCharacters(Characters, itemsDatabase);
+
+            return guildSM;
         }
 
         protected override void ReadSave(GuildSM save)
@@ -96,7 +106,7 @@ namespace Game.Guild
             name.Value = save.Name;
 
             guildRanks.AddRange(save.GuildRanks);
-            characters.AddRange(save.Characters);
+            characters.AddRange(save.GetCharacters(itemsDatabase));
 
             recruitingState.ReadSave(save.Recruiting);
         }

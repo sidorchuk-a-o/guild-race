@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Game.Items
+﻿namespace Game.Items
 {
     public interface IItemsDatabaseService
     {
@@ -12,8 +10,8 @@ namespace Game.Items
         EquipSlotSM CreateSlotSave(EquipSlotInfo info);
         EquipSlotInfo ReadSlotSave(EquipSlotSM save);
 
-        IEnumerable<EquipSlotInfo> CreateDefaultSlots();
-        EquipSlotsSM CreateSlotsSave(IEnumerable<EquipSlotInfo> values);
-        IEnumerable<EquipSlotInfo> ReadSlotsSave(EquipSlotsSM save);
+        IEquipSlotsCollection CreateDefaultSlots();
+        EquipSlotsSM CreateSlotsSave(IEquipSlotsCollection values);
+        IEquipSlotsCollection ReadSlotsSave(EquipSlotsSM save);
     }
 }

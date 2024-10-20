@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Items;
+using Newtonsoft.Json;
 
 namespace Game.Guild
 {
@@ -10,19 +11,22 @@ namespace Game.Guild
         [ES3Serializable] private string classId;
         [ES3Serializable] private string specId;
         [ES3Serializable] private string guildRankId;
+        [ES3Serializable] private EquipSlotsSM equipSlotsSM;
 
-        public CharacterSM(CharacterInfo info)
+        public CharacterSM(CharacterInfo info, IItemsDatabaseService itemsDatabase)
         {
             id = info.Id;
             nickname = info.Nickname;
             classId = info.ClassId;
             specId = info.SpecId.Value;
             guildRankId = info.GuildRankId.Value;
+            equipSlotsSM = itemsDatabase.CreateSlotsSave(info.EquipSlots);
         }
 
-        public CharacterInfo GetValue()
+        public CharacterInfo GetValue(IItemsDatabaseService itemsDatabase)
         {
-            var info = new CharacterInfo(id, nickname, classId);
+            var equipSlots = itemsDatabase.ReadSlotsSave(equipSlotsSM);
+            var info = new CharacterInfo(id, nickname, classId, equipSlots);
 
             info.SetGuildRank(guildRankId);
             info.SetSpecialization(specId);

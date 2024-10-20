@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Items;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -18,12 +19,6 @@ namespace Game.Guild
             set => isEnabled = value;
         }
 
-        public IEnumerable<JoinRequestInfo> Requests
-        {
-            get => requestsSM.GetValues();
-            set => requestsSM = new(value);
-        }
-
         public DateTime NextRequestTime
         {
             get => new(nextRequestTime);
@@ -34,6 +29,16 @@ namespace Game.Guild
         {
             get => classRoleSelectorSM.GetValues();
             set => classRoleSelectorSM = new(value);
+        }
+
+        public void SetRequests(IEnumerable<JoinRequestInfo> value, IItemsDatabaseService itemsDatabase)
+        {
+            requestsSM = new(value, itemsDatabase);
+        }
+
+        public IEnumerable<JoinRequestInfo> GetRequests(IItemsDatabaseService itemsDatabase)
+        {
+            return requestsSM.GetValues(itemsDatabase);
         }
     }
 }

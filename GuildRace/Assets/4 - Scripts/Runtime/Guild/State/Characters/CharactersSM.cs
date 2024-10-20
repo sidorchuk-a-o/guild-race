@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Items;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,16 +10,16 @@ namespace Game.Guild
     {
         [ES3Serializable] private List<CharacterSM> values;
 
-        public CharactersSM(IEnumerable<CharacterInfo> values)
+        public CharactersSM(IEnumerable<CharacterInfo> values, IItemsDatabaseService itemsDatabase)
         {
             this.values = values
-                .Select(x => new CharacterSM(x))
+                .Select(x => new CharacterSM(x, itemsDatabase))
                 .ToList();
         }
 
-        public IEnumerable<CharacterInfo> GetValues()
+        public IEnumerable<CharacterInfo> GetValues(IItemsDatabaseService itemsDatabase)
         {
-            return values.Select(x => x.GetValue());
+            return values.Select(x => x.GetValue(itemsDatabase));
         }
     }
 }

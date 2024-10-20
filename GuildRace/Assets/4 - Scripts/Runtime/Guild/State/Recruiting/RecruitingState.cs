@@ -1,4 +1,5 @@
 ﻿using AD.ToolsCollection;
+using Game.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,10 @@ namespace Game.Guild
 {
     public class RecruitingState
     {
-        private readonly GuildState state;
         private readonly GuildConfig config;
+
+        private readonly GuildState state;
+        private readonly IItemsDatabaseService itemsDatabase;
 
         private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
@@ -21,10 +24,11 @@ namespace Game.Guild
         public IJoinRequestsCollection Requests => requests;
         public IReadOnlyList<ClassRoleSelectorInfo> ClassRoleSelectors => classRoleSelectors;
 
-        public RecruitingState(GuildConfig config, GuildState state)
+        public RecruitingState(GuildConfig config, GuildState state, IItemsDatabaseService itemsDatabase)
         {
-            this.state = state;
             this.config = config;
+            this.state = state;
+            this.itemsDatabase = itemsDatabase;
         }
 
         public void SetNextRequestTime(DateTime value)
@@ -47,7 +51,8 @@ namespace Game.Guild
 
             var recruitRank = state.GuildRanks.Last();
 
-            var character = new CharacterInfo(id, nickname, classData.Id);
+            var equipSlots = itemsDatabase.CreateDefaultSlots();
+            var character = new CharacterInfo(id, nickname, classData.Id, equipSlots);
 
             character.SetGuildRank(recruitRank.Id);
             character.SetSpecialization(specData.Id);
@@ -109,13 +114,16 @@ namespace Game.Guild
 
         public RecruitingSM CreateSave()
         {
-            return new RecruitingSM
+            var recruitingSM = new RecruitingSM
             {
                 IsEnabled = IsEnabled.Value,
-                Requests = Requests,
                 NextRequestTime = NextRequestTime,
                 ClassRoleSelectors = classRoleSelectors
             };
+
+            recruitingSM.SetRequests(Requests, itemsDatabase);
+
+            return recruitingSM;
         }
 
         public void ReadSave(RecruitingSM save)
@@ -132,7 +140,7 @@ namespace Game.Guild
             isEnabled.Value = save.IsEnabled;
             NextRequestTime = save.NextRequestTime;
 
-            requests.AddRange(save.Requests);
+            requests.AddRange(save.GetRequests(itemsDatabase));
             classRoleSelectors.AddRange(save.ClassRoleSelectors);
         }
 
@@ -145,7 +153,8 @@ namespace Game.Guild
                 var id = GuidUtils.Generate();
                 var nickname = GetNickname(id);
 
-                var character = new CharacterInfo(id, nickname, x.ClassId);
+                var equipSlots = itemsDatabase.CreateDefaultSlots();
+                var character = new CharacterInfo(id, nickname, x.ClassId, equipSlots);
 
                 character.SetGuildRank(recruitRank.Id);
                 character.SetSpecialization(x.SpecId);

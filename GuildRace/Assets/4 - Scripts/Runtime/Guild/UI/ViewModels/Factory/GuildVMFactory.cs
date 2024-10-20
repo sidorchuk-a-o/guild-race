@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using Game.Items;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,13 +9,18 @@ namespace Game.Guild
     {
         private readonly GuildConfig guildConfig;
         private readonly IGuildService guildService;
+        private readonly ItemsVMFactory itemsVMF;
 
         public int MaxCharactersCount => guildConfig.MaxCharactersCount;
 
-        public GuildVMFactory(GuildConfig guildConfig, IGuildService guildService)
+        public GuildVMFactory(
+            GuildConfig guildConfig,
+            IGuildService guildService,
+            ItemsVMFactory itemsVMF)
         {
             this.guildConfig = guildConfig;
             this.guildService = guildService;
+            this.itemsVMF = itemsVMF;
         }
 
         // == View Models ==
@@ -26,7 +32,7 @@ namespace Game.Guild
 
         public CharactersVM GetRoster()
         {
-            return new CharactersVM(guildService.Characters, this);
+            return new CharactersVM(guildService.Characters, this, itemsVMF);
         }
 
         public RecruitingVM GetRecruiting()
@@ -36,7 +42,7 @@ namespace Game.Guild
 
         public JoinRequestsVM GetJoinRequests()
         {
-            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this);
+            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this, itemsVMF);
         }
 
         public IReadOnlyList<ClassRoleSelectorVM> GetClassRoleSelectors()

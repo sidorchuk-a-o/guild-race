@@ -2,6 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
 using Cysharp.Threading.Tasks;
+using Game.Items;
 using UniRx;
 using VContainer;
 
@@ -22,11 +23,12 @@ namespace Game.Guild
 
         public GuildService(
             GuildConfig config,
+            IItemsDatabaseService itemsDatabase,
             ILocalizationService localization,
             ITimeService time,
             IObjectResolver resolver)
         {
-            state = new(config, localization, resolver);
+            state = new(config, itemsDatabase, localization, resolver);
             recruitingModule = new(config, state, time);
         }
 

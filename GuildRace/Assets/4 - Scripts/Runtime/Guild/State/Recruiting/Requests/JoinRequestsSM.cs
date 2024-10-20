@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Items;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -10,16 +11,16 @@ namespace Game.Guild
     {
         [ES3Serializable] private List<JoinRequestSM> values;
 
-        public JoinRequestsSM(IEnumerable<JoinRequestInfo> values)
+        public JoinRequestsSM(IEnumerable<JoinRequestInfo> values, IItemsDatabaseService itemsDatabase)
         {
             this.values = values
-                .Select(x => new JoinRequestSM(x))
+                .Select(x => new JoinRequestSM(x, itemsDatabase))
                 .ToList();
         }
 
-        public IEnumerable<JoinRequestInfo> GetValues()
+        public IEnumerable<JoinRequestInfo> GetValues(IItemsDatabaseService itemsDatabase)
         {
-            return values.Select(x => x.GetValue());
+            return values.Select(x => x.GetValue(itemsDatabase));
         }
     }
 }

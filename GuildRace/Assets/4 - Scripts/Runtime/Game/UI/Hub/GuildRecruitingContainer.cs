@@ -4,6 +4,7 @@ using AD.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Guild;
+using Game.Items;
 using System.Threading;
 using UniRx;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace Game
         [SerializeField] private UIText nicknameText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
+        [Space]
+        [SerializeField] private EquipSlotsContainer equipSlotsContainer;
 
         [Header("Settings")]
         [SerializeField] private UIButton settingsButton;
@@ -168,6 +171,8 @@ namespace Game
             itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
             specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
+
+            equipSlotsContainer.Init(characterVM.EquiSlotsVM, requestDisp);
 
             await characterContainer.DOFade(1, duration);
         }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Items;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Game.Guild
@@ -19,12 +20,6 @@ namespace Game.Guild
             set => name = value;
         }
 
-        public IEnumerable<CharacterInfo> Characters
-        {
-            get => characters.GetValues();
-            set => characters = new(value);
-        }
-
         public IEnumerable<GuildRankInfo> GuildRanks
         {
             get => guildRanks.GetValues();
@@ -35,6 +30,16 @@ namespace Game.Guild
         {
             get => recruiting;
             set => recruiting = value;
+        }
+
+        public void SetCharacters(IEnumerable<CharacterInfo> value, IItemsDatabaseService itemsDatabase)
+        {
+            characters = new(value, itemsDatabase);
+        }
+
+        public IEnumerable<CharacterInfo> GetCharacters(IItemsDatabaseService itemsDatabase)
+        {
+            return characters.GetValues(itemsDatabase);
         }
     }
 }

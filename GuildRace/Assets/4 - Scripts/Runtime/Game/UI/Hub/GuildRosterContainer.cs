@@ -4,6 +4,7 @@ using AD.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Guild;
+using Game.Items;
 using System;
 using System.Threading;
 using UniRx;
@@ -27,6 +28,8 @@ namespace Game
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [SerializeField] private UIText guildRankText;
+        [Space]
+        [SerializeField] private EquipSlotsContainer equipSlotsContainer;
 
         private readonly CompositeDisp characterDisp = new();
         private CancellationTokenSource characterToken;
@@ -143,15 +146,17 @@ namespace Game
 
             characterVM.ItemsLevel
                 .Subscribe(x => itemsLevelText.SetTextParams(x))
-                .AddTo(disp);
+                .AddTo(characterDisp);
 
             characterVM.GuildRankName
                 .Subscribe(x => guildRankText.SetTextParams(x))
-                .AddTo(disp);
+                .AddTo(characterDisp);
 
             characterVM.SpecVM
                 .Subscribe(x => specNameText.SetTextParams(x.NameKey))
-                .AddTo(disp);
+                .AddTo(characterDisp);
+
+            equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);
 
             await characterContainer.DOFade(1, duration);
         }
