@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Game.Items
 {
-    public class ItemsDatabaseEditorState : EditorState<ItemsDatabaseEditorState>
+    public class ItemsEditorState : EditorState<ItemsEditorState>
     {
-        private ItemsDatabaseConfig config;
+        private ItemsConfig config;
         private ItemsEditorsFactory editorsFactory;
 
-        public static ItemsDatabaseConfig Config => FindAsset(ref instance.config);
+        public static ItemsConfig Config => FindAsset(ref instance.config);
 
         public static ItemsEditorsFactory EditorsFactory => instance.editorsFactory ??= new();
 

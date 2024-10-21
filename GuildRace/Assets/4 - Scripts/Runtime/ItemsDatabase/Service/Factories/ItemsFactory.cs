@@ -4,9 +4,9 @@ namespace Game.Items
 {
     public class ItemsFactory
     {
-        private readonly ItemsDatabaseConfig config;
+        private readonly ItemsConfig config;
 
-        public ItemsFactory(ItemsDatabaseConfig config)
+        public ItemsFactory(ItemsConfig config)
         {
             this.config = config;
         }

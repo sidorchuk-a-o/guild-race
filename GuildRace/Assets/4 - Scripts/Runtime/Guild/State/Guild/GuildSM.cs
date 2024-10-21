@@ -25,12 +25,12 @@ namespace Game.Guild
             set => guildRanks = new(value);
         }
 
-        public void SetCharacters(IEnumerable<CharacterInfo> value, IItemsDatabaseService itemsService)
+        public void SetCharacters(IEnumerable<CharacterInfo> value, IItemsService itemsService)
         {
             characters = new(value, itemsService);
         }
 
-        public IEnumerable<CharacterInfo> GetCharacters(IItemsDatabaseService itemsService)
+        public IEnumerable<CharacterInfo> GetCharacters(IItemsService itemsService)
         {
             return characters.GetValues(itemsService);
         }

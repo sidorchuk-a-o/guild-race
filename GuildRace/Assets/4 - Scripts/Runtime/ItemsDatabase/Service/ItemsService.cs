@@ -3,12 +3,12 @@ using Cysharp.Threading.Tasks;
 
 namespace Game.Items
 {
-    public class ItemsDatabaseService : Service, IItemsDatabaseService
+    public class ItemsService : Service, IItemsService
     {
         private readonly ItemsFactory itemsFactory;
         private readonly EquipSlotsFactory equipSlotsFactory;
 
-        public ItemsDatabaseService(ItemsDatabaseConfig config)
+        public ItemsService(ItemsConfig config)
         {
             itemsFactory = new(config);
             equipSlotsFactory = new(config, this);

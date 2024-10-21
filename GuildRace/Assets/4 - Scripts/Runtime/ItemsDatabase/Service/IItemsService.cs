@@ -1,6 +1,6 @@
 ﻿namespace Game.Items
 {
-    public interface IItemsDatabaseService
+    public interface IItemsService
     {
         ItemInfo CreateItemInfo(ItemData data);
         ItemSM CreateItemSave(ItemInfo info);

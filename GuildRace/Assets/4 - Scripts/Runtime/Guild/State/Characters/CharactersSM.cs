@@ -10,14 +10,14 @@ namespace Game.Guild
     {
         [ES3Serializable] private List<CharacterSM> values;
 
-        public CharactersSM(IEnumerable<CharacterInfo> values, IItemsDatabaseService itemsService)
+        public CharactersSM(IEnumerable<CharacterInfo> values, IItemsService itemsService)
         {
             this.values = values
                 .Select(x => new CharacterSM(x, itemsService))
                 .ToList();
         }
 
-        public IEnumerable<CharacterInfo> GetValues(IItemsDatabaseService itemsService)
+        public IEnumerable<CharacterInfo> GetValues(IItemsService itemsService)
         {
             return values.Select(x => x.GetValue(itemsService));
         }

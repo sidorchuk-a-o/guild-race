@@ -4,10 +4,10 @@ namespace Game.Items
 {
     public class EquipSlotsFactory
     {
-        private readonly ItemsDatabaseConfig config;
-        private readonly IItemsDatabaseService itemsService;
+        private readonly ItemsConfig config;
+        private readonly IItemsService itemsService;
 
-        public EquipSlotsFactory(ItemsDatabaseConfig config, IItemsDatabaseService itemsService)
+        public EquipSlotsFactory(ItemsConfig config, IItemsService itemsService)
         {
             this.config = config;
             this.itemsService = itemsService;

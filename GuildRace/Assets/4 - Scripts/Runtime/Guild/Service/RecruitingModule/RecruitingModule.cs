@@ -16,12 +16,12 @@ namespace Game.Guild
     {
         private readonly GuildConfig guildConfig;
         private readonly RecruitingModuleData data;
-        private readonly ItemsDatabaseConfig itemsConfig;
+        private readonly ItemsConfig itemsConfig;
 
         private readonly GuildState guildState;
         private readonly RecruitingState recruitingState;
 
-        private readonly IItemsDatabaseService itemsService;
+        private readonly IItemsService itemsService;
         private readonly ITimeService time;
 
         public IReadOnlyReactiveProperty<bool> IsEnabled => recruitingState.IsEnabled;
@@ -32,8 +32,8 @@ namespace Game.Guild
         public RecruitingModule(
             GuildState guildState,
             GuildConfig guildConfig,
-            ItemsDatabaseConfig itemsConfig,
-            IItemsDatabaseService itemsService,
+            ItemsConfig itemsConfig,
+            IItemsService itemsService,
             ITimeService time,
             IObjectResolver resolver)
         {

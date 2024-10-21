@@ -3,8 +3,8 @@ using UnityEditor;
 
 namespace Game.Items
 {
-    [ConfigEditor(typeof(ItemsDatabaseConfig))]
-    public class ItemsDatabaseConfigEditor : ConfigEditor
+    [ConfigEditor(typeof(ItemsConfig))]
+    public class ItemsConfigEditor : ConfigEditor
     {
         private EquipsParamsEditor equipsParamsEditor;
 
@@ -29,14 +29,14 @@ namespace Game.Items
         // == Menu ==
 
         [MenuItem("Game Services/Game/Items Database")]
-        public static ItemsDatabaseConfigEditor GoToEditor()
+        public static ItemsConfigEditor GoToEditor()
         {
-            return GoToEditor<ItemsDatabaseConfigEditor>(width: 1200, height: 900);
+            return GoToEditor<ItemsConfigEditor>(width: 1200, height: 900);
         }
 
-        public static ItemsDatabaseConfigEditor GoToEditor(ItemsDatabaseConfig config)
+        public static ItemsConfigEditor GoToEditor(ItemsConfig config)
         {
-            return GoToEditor<ItemsDatabaseConfigEditor>(config, width: 1200, height: 900);
+            return GoToEditor<ItemsConfigEditor>(config, width: 1200, height: 900);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Game.Guild
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
 
-        private readonly IItemsDatabaseService itemsService;
+        private readonly IItemsService itemsService;
         private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
@@ -30,7 +30,7 @@ namespace Game.Guild
 
         public GuildState(
             GuildConfig config,
-            IItemsDatabaseService itemsService,
+            IItemsService itemsService,
             ILocalizationService localization,
             IObjectResolver resolver)
             : base(config, resolver)

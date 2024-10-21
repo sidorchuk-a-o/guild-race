@@ -23,8 +23,8 @@ namespace Game.Guild
 
         public GuildService(
             GuildConfig guildConfig,
-            ItemsDatabaseConfig itemsConfig,
-            IItemsDatabaseService itemsService,
+            ItemsConfig itemsConfig,
+            IItemsService itemsService,
             ILocalizationService localization,
             ITimeService time,
             IObjectResolver resolver)

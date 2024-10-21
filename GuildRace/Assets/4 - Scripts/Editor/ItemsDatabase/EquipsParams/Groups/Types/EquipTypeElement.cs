@@ -8,7 +8,7 @@ namespace Game.Items
     {
         protected override Func<Collection<string>> GetCollection
         {
-            get => ItemsDatabaseEditorState.GetEquipTypesCollection;
+            get => ItemsEditorState.GetEquipTypesCollection;
         }
 
         protected override void CreateElementGUI(Element root)

@@ -7,6 +7,6 @@ namespace Game.Items
     /// </summary>
     public class RarityItem : EntityListItemElement
     {
-        protected override IEditorsFactory EditorsFactory => ItemsDatabaseEditorState.EditorsFactory;
+        protected override IEditorsFactory EditorsFactory => ItemsEditorState.EditorsFactory;
     }
 }

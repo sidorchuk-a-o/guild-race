@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Items
 {
-    public class ItemsDatabaseConfig : ScriptableConfig
+    public class ItemsConfig : ScriptableConfig
     {
         [SerializeField] private EquipsParams equipsParams = new();
 

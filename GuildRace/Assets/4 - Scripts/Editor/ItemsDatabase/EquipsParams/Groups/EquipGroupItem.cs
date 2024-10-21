@@ -7,7 +7,7 @@ namespace Game.Items
     /// </summary>
     public class EquipGroupItem : EntityListItemElement
     {
-        protected override IEditorsFactory EditorsFactory => ItemsDatabaseEditorState.EditorsFactory;
+        protected override IEditorsFactory EditorsFactory => ItemsEditorState.EditorsFactory;
 
         public override void BindData(SerializedData data)
         {

@@ -33,12 +33,12 @@ namespace Game.Guild
             set => classRoleSelectorSM = new(value);
         }
 
-        public void SetRequests(IEnumerable<JoinRequestInfo> value, IItemsDatabaseService itemsService)
+        public void SetRequests(IEnumerable<JoinRequestInfo> value, IItemsService itemsService)
         {
             requestsSM = new(value, itemsService);
         }
 
-        public IEnumerable<JoinRequestInfo> GetRequests(IItemsDatabaseService itemsService)
+        public IEnumerable<JoinRequestInfo> GetRequests(IItemsService itemsService)
         {
             return requestsSM.GetValues(itemsService);
         }

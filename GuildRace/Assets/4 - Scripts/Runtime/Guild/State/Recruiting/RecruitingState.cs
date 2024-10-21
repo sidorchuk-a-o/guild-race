@@ -12,7 +12,7 @@ namespace Game.Guild
     public class RecruitingState : State<RecruitingSM>
     {
         private readonly GuildConfig config;
-        private readonly IItemsDatabaseService itemsService;
+        private readonly IItemsService itemsService;
 
         private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
@@ -29,7 +29,7 @@ namespace Game.Guild
 
         public RecruitingState(
             GuildConfig config,
-            IItemsDatabaseService itemsService,
+            IItemsService itemsService,
             IObjectResolver resolver)
             : base(resolver)
         {

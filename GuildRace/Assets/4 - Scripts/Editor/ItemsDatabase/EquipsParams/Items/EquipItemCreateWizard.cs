@@ -34,13 +34,13 @@ namespace Game.Items
 
             root.CreateSpace();
 
-            rarityField = root.CreatePopup(ItemsDatabaseEditorState.GetRaritiesCollection);
+            rarityField = root.CreatePopup(ItemsEditorState.GetRaritiesCollection);
             rarityField.label = "Rarity";
 
-            typeField = root.CreatePopup(ItemsDatabaseEditorState.GetEquipTypesCollection);
+            typeField = root.CreatePopup(ItemsEditorState.GetEquipTypesCollection);
             typeField.label = "Type";
 
-            slotField = root.CreatePopup(ItemsDatabaseEditorState.GetEquipSlotsCollection);
+            slotField = root.CreatePopup(ItemsEditorState.GetEquipSlotsCollection);
             slotField.label = "Slot";
 
             root.CreateSpace();

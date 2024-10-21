@@ -8,13 +8,13 @@ namespace Game.Items
         [ES3Serializable] private string slot;
         [ES3Serializable] private ItemSM itemSM;
 
-        public EquipSlotSM(EquipSlotInfo info, IItemsDatabaseService itemsService)
+        public EquipSlotSM(EquipSlotInfo info, IItemsService itemsService)
         {
             slot = info.Slot;
             itemSM = itemsService.CreateItemSave(info.Item.Value);
         }
 
-        public EquipSlotInfo GetValue(IItemsDatabaseService itemsService)
+        public EquipSlotInfo GetValue(IItemsService itemsService)
         {
             var slotInfo = new EquipSlotInfo(slot);
             var itemInfo = itemsService.ReadItemSave(itemSM);

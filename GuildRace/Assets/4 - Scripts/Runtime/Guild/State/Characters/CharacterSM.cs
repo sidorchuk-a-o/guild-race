@@ -13,7 +13,7 @@ namespace Game.Guild
         [ES3Serializable] private string guildRankId;
         [ES3Serializable] private EquipSlotsSM equipSlotsSM;
 
-        public CharacterSM(CharacterInfo info, IItemsDatabaseService itemsService)
+        public CharacterSM(CharacterInfo info, IItemsService itemsService)
         {
             id = info.Id;
             nickname = info.Nickname;
@@ -23,7 +23,7 @@ namespace Game.Guild
             equipSlotsSM = itemsService.CreateSlotsSave(info.EquipSlots);
         }
 
-        public CharacterInfo GetValue(IItemsDatabaseService itemsService)
+        public CharacterInfo GetValue(IItemsService itemsService)
         {
             var equipSlots = itemsService.ReadSlotsSave(equipSlotsSM);
             var info = new CharacterInfo(id, nickname, classId, equipSlots);

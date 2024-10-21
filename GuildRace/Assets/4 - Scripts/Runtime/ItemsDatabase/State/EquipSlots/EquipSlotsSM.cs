@@ -11,14 +11,14 @@ namespace Game.Items
     {
         [ES3Serializable] private List<EquipSlotSM> values;
 
-        public EquipSlotsSM(IEnumerable<EquipSlotInfo> values, IItemsDatabaseService itemsService)
+        public EquipSlotsSM(IEnumerable<EquipSlotInfo> values, IItemsService itemsService)
         {
             this.values = values
                 .Select(x => itemsService.CreateSlotSave(x))
                 .ToList();
         }
 
-        public IEnumerable<EquipSlotInfo> GetValues(IItemsDatabaseService itemsService)
+        public IEnumerable<EquipSlotInfo> GetValues(IItemsService itemsService)
         {
             return values.Select(x => itemsService.ReadSlotSave(x));
         }
