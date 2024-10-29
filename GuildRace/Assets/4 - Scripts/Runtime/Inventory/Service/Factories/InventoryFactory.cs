@@ -1,7 +1,6 @@
 ﻿using AD.ToolsCollection;
 using System.Collections.Generic;
 using System.Linq;
-using VContainer;
 
 namespace Game.Inventory
 {
@@ -14,7 +13,7 @@ namespace Game.Inventory
         private readonly ItemsGridsFactory itemsGridsFactory;
         private readonly Dictionary<string, ItemsFactory> itemsFactories;
 
-        public InventoryFactory(InventoryState state, InventoryConfig config, IObjectResolver resolver)
+        public InventoryFactory(InventoryState state, InventoryConfig config)
         {
             this.state = state;
             this.config = config;
@@ -22,10 +21,10 @@ namespace Game.Inventory
             var itemsParams = config.ItemsParams;
 
             itemsFactories = itemsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
-            itemsFactories.ForEach(x => resolver.Inject(x.Value));
+            itemsFactories.ForEach(x => x.Value.Init(state, config));
 
-            itemSlotsFactory = new(config, this);
-            itemsGridsFactory = new(config, this);
+            itemSlotsFactory = new(state, config, this);
+            itemsGridsFactory = new(state, config, this);
         }
 
         // == Items ==
@@ -51,11 +50,7 @@ namespace Game.Inventory
                 return null;
             }
 
-            var item = itemsFactory.CreateInfo(data);
-
-            state.AddItem(item);
-
-            return item;
+            return itemsFactory.CreateInfo(data);
         }
 
         public ItemInfo RemoveItem(string itemId)
@@ -96,11 +91,7 @@ namespace Game.Inventory
                 return null;
             }
 
-            var item = itemsFactory.ReadSave(save);
-
-            state.AddItem(item);
-
-            return item;
+            return itemsFactory.ReadSave(save);
         }
 
         private ItemData GetItemData(string itemId)
@@ -131,11 +122,7 @@ namespace Game.Inventory
 
         public ItemSlotInfo CreateSlot(ItemSlot slot)
         {
-            var info = itemSlotsFactory.CreateInfo(slot);
-
-            state.AddSlot(info);
-
-            return info;
+            return itemSlotsFactory.CreateInfo(slot);
         }
 
         public ItemSlotInfo RemoveSlot(string slotId)
@@ -150,11 +137,7 @@ namespace Game.Inventory
 
         public ItemSlotInfo ReadSlotSave(ItemSlotSM save)
         {
-            var info = itemSlotsFactory.ReadSave(save);
-
-            state.AddSlot(info);
-
-            return info;
+            return itemSlotsFactory.ReadSave(save);
         }
 
         // == SLots ==
@@ -178,11 +161,7 @@ namespace Game.Inventory
 
         public ItemsGridInfo CreateGrid(ItemsGridData data)
         {
-            var info = itemsGridsFactory.CreateGrid(data);
-
-            state.AddGrid(info);
-
-            return info;
+            return itemsGridsFactory.CreateGrid(data);
         }
 
         public ItemsGridInfo RemoveGrid(string gridId)
@@ -197,11 +176,7 @@ namespace Game.Inventory
 
         public ItemsGridInfo ReadGridSave(ItemsGridSM save)
         {
-            var info = itemsGridsFactory.ReadGridSave(save);
-
-            state.AddGrid(info);
-
-            return info;
+            return itemsGridsFactory.ReadGridSave(save);
         }
 
         // == Items Grids ==

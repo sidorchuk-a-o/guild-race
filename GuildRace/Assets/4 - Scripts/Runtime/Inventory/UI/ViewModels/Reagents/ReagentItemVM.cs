@@ -1,4 +1,4 @@
-﻿using AD.ToolsCollection;
+﻿using AD.Services.Router;
 
 namespace Game.Inventory
 {
@@ -6,23 +6,23 @@ namespace Game.Inventory
     {
         private readonly ReagentItemInfo info;
 
-        public ItemStackVM Stack { get; }
-        public UIStateVM StackableState { get; }
+        public ItemStackVM StackVM { get; }
+        public UIStateVM StackableStateVM { get; }
 
         public ReagentItemVM(ReagentItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
             this.info = info;
 
-            Stack = new(info.Stack);
-            StackableState = new();
+            StackVM = new(info.Stack);
+            StackableStateVM = new();
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            base.InitSubscribes(disp);
+            base.InitSubscribes();
 
-            Stack.AddTo(disp);
-            StackableState.AddTo(disp);
+            StackVM.AddTo(this);
+            StackableStateVM.AddTo(this);
         }
 
         // == IVMStackableItem ==
@@ -34,12 +34,11 @@ namespace Game.Inventory
 
         public bool CheckPossibilityOfTransfer(ItemVM itemVM)
         {
-            return false;
-            //return inventoryVMF.CheckPossibilityOfTransfer(new TransferItemArgs
-            //{
-            //    SourceItemId = itemVM.Id,
-            //    TargetItemId = info.Id
-            //});
+            return inventoryVMF.CheckPossibilityOfTransfer(new TransferItemArgs
+            {
+                SourceItemId = itemVM.Id,
+                TargetItemId = info.Id
+            });
         }
     }
 }

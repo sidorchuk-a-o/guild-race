@@ -32,9 +32,11 @@ namespace Game.Inventory
         private IReadOnlyList<ReleaseHandler> splitHandlers;
         private IReadOnlyList<ReleaseHandler> rollbackHandlers;
 
-        private ItemVM selectedItem;
-        private ItemSlotContainer selectedSlot;
-        private ItemsGridContainer selectedGrid;
+        private ItemVM selectedItemVM;
+        private ItemSlotVM selectedSlotVM;
+        private ItemsGridVM selectedGridVM;
+
+        private ItemsGridContainer selectedGridContainer;
 
         private bool pickupCancelled;
         private PickupResult pickupResult;
@@ -76,6 +78,10 @@ namespace Game.Inventory
                 .Subscribe(ReleaseItemCallback)
                 .AddTo(disp);
 
+            ItemSlotContainer.OnInited
+                .Subscribe(ItemSlotInitedCallback)
+                .AddTo(disp);
+
             ItemSlotContainer.OnInteracted
                 .Subscribe(ItemSlotInteractedCallback)
                 .AddTo(disp);
@@ -92,7 +98,7 @@ namespace Game.Inventory
 
         private void UpdateItemPreviewPosition()
         {
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 return;
             }
@@ -106,14 +112,25 @@ namespace Game.Inventory
 
         // == Pointer Callbacks ==
 
+        private void ItemSlotInitedCallback(ItemSlotContainer itemSlot)
+        {
+            if (selectedItemVM == null)
+            {
+                return;
+            }
+
+            UpdateItemSlot(itemSlot);
+        }
+
         private void ItemSlotInteractedCallback(ItemSlotContainer itemSlot)
         {
-            selectedSlot = itemSlot;
+            selectedSlotVM = itemSlot?.ViewModel;
         }
 
         private void ItemsGridInteractedCallback(ItemsGridContainer itemsGrid)
         {
-            selectedGrid = itemsGrid;
+            selectedGridVM = itemsGrid?.ViewModel;
+            selectedGridContainer = itemsGrid;
         }
 
         // == Split Or Transfer Item ==
@@ -141,7 +158,7 @@ namespace Game.Inventory
 
         private void RotateItemCallback()
         {
-            selectedItem?.BoundsVM.Rotate();
+            selectedItemVM?.BoundsVM.Rotate();
         }
 
         private void PickupItemCallback()
@@ -162,9 +179,9 @@ namespace Game.Inventory
 
             var pickupContext = new PickupContext
             {
-                HoveredItem = hoveredItem,
-                SelectedGrid = selectedGrid,
-                SelectedSlot = selectedSlot
+                HoveredItemVM = hoveredItem,
+                SelectedGridVM = selectedGridVM,
+                SelectedSlotVM = selectedSlotVM
             };
 
             if (pickupCancelled)
@@ -173,9 +190,9 @@ namespace Game.Inventory
             }
 
             pickupResult = StartPickupProcess(pickupContext);
-            selectedItem = pickupResult.SelectedItem;
+            selectedItemVM = pickupResult.SelectedItemVM;
 
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 pickupResult = null;
 
@@ -184,7 +201,7 @@ namespace Game.Inventory
 
             // TODO: play pickup sfx
 
-            UpdateDragPreview(pickupResult);
+            UpdateDragPreview();
             UpdateStackableItems();
 
             if (!inventoryInputs.SplittingModeOn.Value)
@@ -196,83 +213,86 @@ namespace Game.Inventory
             onPickupItem.OnNext(pickupResult);
         }
 
-        private void UpdateDragPreview(PickupResult pickupResult)
+        private void UpdateDragPreview()
         {
-            var selectedGrid = pickupResult.Context.SelectedGrid;
-
-            if (selectedGrid != null)
+            if (selectedGridContainer != null)
             {
-                pickedGridPreview.SetParent(selectedGrid.PickedItemArea);
-                pickedGridPreview.ShowItem(selectedItem, iconStaticOn: true);
+                pickedGridPreview.SetParent(selectedGridContainer.PickedItemArea);
+                pickedGridPreview.ShowItem(selectedItemVM, iconStaticOn: true);
             }
 
-            pickedItemPreview.ShowItem(selectedItem, iconStaticOn: false);
+            pickedItemPreview.ShowItem(selectedItemVM, iconStaticOn: false);
         }
 
         private void UpdateItemSlots()
         {
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 return;
             }
 
             foreach (var itemSlot in ItemSlotContainer.EnabledComponents)
             {
-                if (itemSlot.ViewModel.CheckPossibilityOfPlacement(selectedItem))
-                {
-                    var state = pickupResult.Context.SelectedSlot == itemSlot
-                        ? slotPreviewState
-                        : slotReadyState;
+                UpdateItemSlot(itemSlot);
+            }
+        }
 
-                    itemSlot.ShowPickupPreview(selectedItem, state);
-                }
+        private void UpdateItemSlot(ItemSlotContainer itemSlot)
+        {
+            if (itemSlot.ViewModel.CheckPossibilityOfPlacement(selectedItemVM))
+            {
+                var state = pickupResult.Context.SelectedSlotVM == itemSlot.ViewModel
+                    ? slotPreviewState
+                    : slotReadyState;
+
+                itemSlot.ShowPickupPreview(selectedItemVM, state);
             }
         }
 
         private void UpdatePlacementContainers()
         {
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 return;
             }
 
             foreach (var itemSlot in ItemSlotContainer.EnabledComponents)
             {
-                if (itemSlot.ViewModel.ItemVM.Value is IPlacementContainerVM placement)
+                if (itemSlot.ViewModel.ItemVM.Value is IPlacementContainerVM placementVM)
                 {
-                    updatePlacementState(placement);
+                    updatePlacementState(placementVM);
 
-                    foreach (var child in placement.GetPlacementsInChildren())
+                    foreach (var child in placementVM.GetPlacementsInChildren())
                     {
                         updatePlacementState(child);
                     }
                 }
             }
 
-            void updatePlacementState(IPlacementContainerVM placement)
+            void updatePlacementState(IPlacementContainerVM placementVM)
             {
-                var check = placement.CheckPossibilityOfPlacement(selectedItem);
+                var check = placementVM.CheckPossibilityOfPlacement(selectedItemVM);
                 var state = check ? placeReadyState : string.Empty;
 
-                placement.PlacementState.SetState(state);
+                placementVM.PlacementStateVM.SetState(state);
             }
         }
 
         private void UpdateStackableItems()
         {
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 return;
             }
 
             foreach (var item in ItemInGridComponent.EnabledComponents)
             {
-                if (item.ViewModel is IStackableItemVM stackable)
+                if (item.ViewModel is IStackableItemVM stackableVM)
                 {
-                    var check = stackable.CheckPossibilityOfTransfer(selectedItem);
+                    var check = stackableVM.CheckPossibilityOfTransfer(selectedItemVM);
                     var state = check ? stackReadyState : string.Empty;
 
-                    stackable.StackableState.SetState(state);
+                    stackableVM.StackableStateVM.SetState(state);
                 }
             }
         }
@@ -288,7 +308,7 @@ namespace Game.Inventory
             {
                 pickupHandler.StartProcess(result);
 
-                if (result.SelectedItem != null)
+                if (result.SelectedItemVM != null)
                 {
                     break;
                 }
@@ -309,9 +329,9 @@ namespace Game.Inventory
             var releaseContext = new ReleaseContext
             {
                 PickupResult = pickupResult,
-                SelectedGrid = selectedGrid,
-                SelectedSlot = selectedSlot,
-                HoveredItem = GetHoveredItem(),
+                SelectedGridVM = selectedGridVM,
+                SelectedSlotVM = selectedSlotVM,
+                HoveredItemVM = GetHoveredItem(),
                 PositionOnSelectedGrid = GetPositionOnSelectedGrid(),
                 CurrentPositionIsPositionOfSelectedItem = CurrentPositionIsPositionOfSelectedItem()
             };
@@ -321,7 +341,7 @@ namespace Game.Inventory
             ResetPlacementContainers();
             ResetStackableItems();
 
-            selectedItem = null;
+            selectedItemVM = null;
             pickupResult = null;
 
             // release
@@ -335,17 +355,17 @@ namespace Game.Inventory
         public ItemVM GetHoveredItem()
         {
             // slot
-            if (selectedSlot != null && selectedSlot.HasItem)
+            if (selectedSlotVM != null && selectedSlotVM.HasItem)
             {
-                return selectedSlot.ViewModel.ItemVM.Value;
+                return selectedSlotVM.ItemVM.Value;
             }
 
             // grid
-            if (selectedGrid != null)
+            if (selectedGridVM != null)
             {
                 var positionOnGrid = GetPositionOnSelectedGrid();
 
-                return selectedGrid.ViewModel.GetItem(positionOnGrid.Cursor);
+                return selectedGridVM.GetItem(positionOnGrid.Cursor);
             }
 
             return null;
@@ -353,33 +373,33 @@ namespace Game.Inventory
 
         public PositionOnGrid GetPositionOnSelectedGrid()
         {
-            if (selectedGrid == null)
+            if (selectedGridVM == null)
             {
                 return default;
             }
 
-            var selectedItem = pickupResult?.SelectedItem;
+            var selectedItem = pickupResult?.SelectedItemVM;
             var cursorPosition = inventoryInputs.CursorPosition;
-            var gridTransform = selectedGrid.transform as RectTransform;
+            var gridTransform = selectedGridContainer.transform as RectTransform;
 
             var positionOnGrid = RectUtils.GetPositionOnGrid(
                 cursorPosition: cursorPosition,
                 gridTransform: gridTransform,
-                selectedItem: selectedItem);
+                itemVM: selectedItem);
 
             return positionOnGrid;
         }
 
         public bool CurrentPositionIsPositionOfSelectedItem()
         {
-            if (selectedGrid == null || pickupResult == null)
+            if (selectedGridVM == null || pickupResult == null)
             {
                 return false;
             }
 
             var positionOnGrid = GetPositionOnSelectedGrid();
 
-            return pickupResult.ThisPositionIsPositionOfSelectedItem(positionOnGrid, selectedGrid);
+            return pickupResult.ThisPositionIsPositionOfSelectedItem(positionOnGrid, selectedGridVM);
         }
 
         private void ResetDragPreview()
@@ -400,13 +420,13 @@ namespace Game.Inventory
         {
             foreach (var itemSlot in ItemSlotContainer.EnabledComponents)
             {
-                if (itemSlot.ViewModel.ItemVM.Value is IPlacementContainerVM placement)
+                if (itemSlot.ViewModel.ItemVM.Value is IPlacementContainerVM placementVM)
                 {
-                    placement.PlacementState.ResetState();
+                    placementVM.PlacementStateVM.ResetState();
 
-                    foreach (var child in placement.GetPlacementsInChildren())
+                    foreach (var child in placementVM.GetPlacementsInChildren())
                     {
-                        child.PlacementState.ResetState();
+                        child.PlacementStateVM.ResetState();
                     }
                 }
             }
@@ -416,9 +436,9 @@ namespace Game.Inventory
         {
             foreach (var item in ItemInGridComponent.EnabledComponents)
             {
-                if (item.ViewModel is IStackableItemVM stackable)
+                if (item.ViewModel is IStackableItemVM stackableVM)
                 {
-                    stackable.StackableState.ResetState();
+                    stackableVM.StackableStateVM.ResetState();
                 }
             }
         }

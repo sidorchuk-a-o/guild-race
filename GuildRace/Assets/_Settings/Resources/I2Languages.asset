@@ -41,6 +41,14 @@ MonoBehaviour:
       - "\u0417\u0430\u044F\u0432\u043A\u0438"
       Flags: 0000
       Languages_Touch: []
+    - Term: HUB/GUILD_BANK_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
+      Flags: 0000
+      Languages_Touch: []
     - Term: GUILD/CREATE_GUILD_TTL
       TermType: 0
       Description: 
@@ -217,6 +225,22 @@ MonoBehaviour:
       - 
       - "\u0424\u0438\u043B\u044C\u0442\u0440 \u043A\u043B\u0430\u0441\u0441\u043E\u0432\u044B\u0445
         \u0440\u043E\u043B\u0435\u0439"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: GUILD_BANK/BANK_EQUIPS_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: GUILD_BANK/BANK_REAGENTS_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0420\u0435\u0430\u0433\u0435\u043D\u0442\u044B"
       Flags: 0000
       Languages_Touch: []
     - Term: CHARACTERS/ROLE_TANK_TTL
@@ -589,7 +613,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1730139177052
+    Google_LastUpdatedVersion: 1730209637773
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

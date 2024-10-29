@@ -89,6 +89,11 @@ namespace Game.Inventory
 
         // == Grid ==
 
+        public ItemsGridVM CreateItemsGrid(ItemsGridInfo info)
+        {
+            return new ItemsGridVM(info, this);
+        }
+
         public bool CheckPossibilityOfPlacement(PlaceInGridArgs placeArgs)
         {
             return inventoryService.CheckPossibilityOfPlacement(placeArgs);

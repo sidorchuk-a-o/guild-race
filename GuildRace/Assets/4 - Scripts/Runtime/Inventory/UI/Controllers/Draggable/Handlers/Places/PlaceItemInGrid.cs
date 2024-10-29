@@ -8,16 +8,16 @@ namespace Game.Inventory
     {
         protected override bool CheckContext(ReleaseResult result)
         {
-            return result.Context.SelectedGrid != null;
+            return result.Context.SelectedGridVM != null;
         }
 
         protected override async UniTask Process(ReleaseResult result)
         {
-            var selectedItem = result.Context.PickupResult.SelectedItem;
-            var selectedGrid = result.Context.SelectedGrid;
+            var selectedItemVM = result.Context.PickupResult.SelectedItemVM;
+            var selectedGridVM = result.Context.SelectedGridVM;
             var positionOnGrid = result.Context.PositionOnSelectedGrid;
 
-            result.Placed = selectedGrid.ViewModel.TryPlaceItem(selectedItem, positionOnGrid.Item);
+            result.Placed = selectedGridVM.TryPlaceItem(selectedItemVM, positionOnGrid.Item);
         }
     }
 }

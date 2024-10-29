@@ -29,16 +29,16 @@ namespace Game.Inventory
             PickupStateVM = new();
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            PickupStateVM.AddTo(disp);
+            PickupStateVM.AddTo(this);
 
             info.Item
-                .Subscribe(x => ItemChangedCallback(x, disp))
-                .AddTo(disp);
+                .Subscribe(ItemChangedCallback)
+                .AddTo(this);
         }
 
-        private void ItemChangedCallback(ItemInfo info, CompositeDisp disp)
+        private void ItemChangedCallback(ItemInfo info)
         {
             if (itemVM.IsValid())
             {
@@ -49,7 +49,7 @@ namespace Game.Inventory
             {
                 var vm = inventoryVMF.CreateItem(info);
 
-                vm.AddTo(disp);
+                vm.AddTo(this);
 
                 itemVM.Value = vm;
             }

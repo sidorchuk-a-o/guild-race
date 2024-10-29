@@ -2,9 +2,9 @@
 {
     public class PickupContext
     {
-        public ItemVM HoveredItem { get; set; }
+        public ItemVM HoveredItemVM { get; set; }
 
-        public ItemsGridContainer SelectedGrid { get; set; }
-        public ItemSlotContainer SelectedSlot { get; set; }
+        public ItemsGridVM SelectedGridVM { get; set; }
+        public ItemSlotVM SelectedSlotVM { get; set; }
     }
 }

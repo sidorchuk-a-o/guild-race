@@ -30,6 +30,11 @@ namespace Game.Guild
             return new GuildVM(guildConfig, guildService);
         }
 
+        public GuildBankTabsVM GetGuildBankTabs()
+        {
+            return new GuildBankTabsVM(guildService.BankTabs, inventoryVMF);
+        }
+
         public CharactersVM GetRoster()
         {
             return new CharactersVM(guildService.Characters, this, inventoryVMF);

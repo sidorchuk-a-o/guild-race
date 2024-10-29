@@ -40,18 +40,18 @@ namespace Game.Guild
             EquiSlotsVM = inventoryVMF.CreateItemSlots(info.EquipSlots);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            ClassVM.AddTo(disp);
-            EquiSlotsVM.AddTo(disp);
+            ClassVM.AddTo(this);
+            EquiSlotsVM.AddTo(this);
 
             info.SpecId
                 .Subscribe(SpecializationChangedCallback)
-                .AddTo(disp);
+                .AddTo(this);
 
             info.GuildRankId
                 .Subscribe(GuildRankChangedCallback)
-                .AddTo(disp);
+                .AddTo(this);
         }
 
         private void SpecializationChangedCallback(SpecializationId specId)
@@ -59,7 +59,7 @@ namespace Game.Guild
             specVM.Value?.ResetSubscribes();
 
             specVM.Value = guildVMF.GetSpecialization(specId);
-            specVM.Value.AddTo(disp);
+            specVM.Value.AddTo(this);
         }
 
         private void GuildRankChangedCallback(GuildRankId guildRankId)
@@ -67,7 +67,7 @@ namespace Game.Guild
             guildRankVM.Value?.ResetSubscribes();
 
             guildRankVM.Value = guildVMF.GetGuildRank(guildRankId);
-            guildRankVM.Value.AddTo(disp);
+            guildRankVM.Value.AddTo(this);
 
             guildRankVM.Value.Name
                 .Subscribe(x => guildRankName.Value = x)

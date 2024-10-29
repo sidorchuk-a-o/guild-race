@@ -24,7 +24,7 @@ namespace Game.Inventory
 
         public async void Init(ItemsGridVM gridVM, CompositeDisp disp)
         {
-            itemsVM = gridVM.Items;
+            itemsVM = gridVM.ItemsVM;
 
             itemsVM.ObserveAdd()
                 .Subscribe(args => AddItemCallback(args.Index, disp))

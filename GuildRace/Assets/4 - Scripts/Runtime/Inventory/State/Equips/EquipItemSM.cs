@@ -11,7 +11,11 @@ namespace Game.Inventory
 
         public EquipItemInfo GetValue(EquipItemData data)
         {
-            return new EquipItemInfo(id, data);
+            var info = new EquipItemInfo(id, data);
+
+            boundsSM.ApplyValues(info.Bounds);
+
+            return info;
         }
     }
 }

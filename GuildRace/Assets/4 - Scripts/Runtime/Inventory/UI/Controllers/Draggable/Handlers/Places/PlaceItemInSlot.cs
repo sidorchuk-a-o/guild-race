@@ -8,15 +8,15 @@ namespace Game.Inventory
     {
         protected override bool CheckContext(ReleaseResult result)
         {
-            return result.Context.SelectedSlot != null;
+            return result.Context.SelectedSlotVM != null;
         }
 
         protected override async UniTask Process(ReleaseResult result)
         {
-            var selectedItem = result.Context.PickupResult.SelectedItem;
-            var selectedSlot = result.Context.SelectedSlot;
+            var selectedItemVM = result.Context.PickupResult.SelectedItemVM;
+            var selectedSlotVM = result.Context.SelectedSlotVM;
 
-            result.Placed = selectedSlot.ViewModel.TryAddItem(selectedItem);
+            result.Placed = selectedSlotVM.TryAddItem(selectedItemVM);
         }
     }
 }

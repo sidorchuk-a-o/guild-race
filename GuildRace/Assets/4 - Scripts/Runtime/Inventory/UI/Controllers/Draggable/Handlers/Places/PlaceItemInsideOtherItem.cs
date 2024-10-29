@@ -8,21 +8,19 @@ namespace Game.Inventory
     {
         protected override bool CheckContext(ReleaseResult result)
         {
-            var hoveringItem = result.Context.HoveredItem;
+            var hoveringItemVM = result.Context.HoveredItemVM;
 
-            return hoveringItem != null
-                && hoveringItem is IPlacementContainerVM;
+            return hoveringItemVM is IPlacementContainerVM;
         }
 
         protected override async UniTask Process(ReleaseResult result)
         {
-            var hoveringItem = result.Context.HoveredItem;
+            var hoveringItemVM = result.Context.HoveredItemVM;
+            var selectedItemVM = result.Context.PickupResult.SelectedItemVM;
 
-            if (hoveringItem is IPlacementContainerVM placement)
+            if (hoveringItemVM is IPlacementContainerVM placementVM)
             {
-                var selectedItem = result.Context.PickupResult.SelectedItem;
-
-                result.Placed = placement.TryPlaceItem(selectedItem);
+                result.Placed = placementVM.TryPlaceItem(selectedItemVM);
             }
         }
     }

@@ -29,12 +29,12 @@ namespace Game.Guild
             PlayerRank = guildService.GuildRanks.GuildMaster.Name;
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
             guildService.Characters
                 .ObserveCountChanged()
                 .Subscribe(CharactersCountChanged)
-                .AddTo(disp);
+                .AddTo(this);
 
             CharactersCountChanged(guildService.Characters.Count);
         }

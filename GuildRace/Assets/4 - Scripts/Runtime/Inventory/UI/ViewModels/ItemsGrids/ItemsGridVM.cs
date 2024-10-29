@@ -1,5 +1,4 @@
 ﻿using AD.Services.Router;
-using AD.ToolsCollection;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,11 +12,10 @@ namespace Game.Inventory
 
         public string Id { get; }
         public ItemsGridCellType CellType { get; }
-
         public BoundsInt Bounds { get; }
-        public ItemsVM Items { get; }
 
-        public UIStateVM PlacementState { get; }
+        public ItemsVM ItemsVM { get; }
+        public UIStateVM PlacementStateVM { get; }
 
         public ItemsGridVM(ItemsGridInfo info, InventoryVMFactory inventoryVMF)
         {
@@ -26,22 +24,21 @@ namespace Game.Inventory
 
             Id = info.Id;
             CellType = info.CellType;
-
             Bounds = new(Vector3Int.zero, info.Size);
-            Items = new(info.Items, inventoryVMF);
 
-            PlacementState = new();
+            ItemsVM = new(info.Items, inventoryVMF);
+            PlacementStateVM = new();
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            Items.AddTo(disp);
-            PlacementState.AddTo(disp);
+            ItemsVM.AddTo(this);
+            PlacementStateVM.AddTo(this);
         }
 
         public ItemVM GetItem(in Vector3Int positionOnGrid)
         {
-            return Items.ElementAtOrDefault(positionOnGrid);
+            return ItemsVM.ElementAtOrDefault(positionOnGrid);
         }
 
         // == Grid ==
@@ -70,11 +67,11 @@ namespace Game.Inventory
 
         public IEnumerable<IPlacementContainerVM> GetPlacementsInChildren()
         {
-            for (var i = 0; i < Items.Count; i++)
+            for (var i = 0; i < ItemsVM.Count; i++)
             {
-                if (Items[i] is IPlacementContainerVM placement)
+                if (ItemsVM[i] is IPlacementContainerVM placementVM)
                 {
-                    yield return placement;
+                    yield return placementVM;
                 }
             }
 

@@ -15,13 +15,13 @@ namespace Game.Inventory
         {
             base.Init(itemVM, disp);
 
-            var materialVM = itemVM as ReagentItemVM;
+            var reagentVM = itemVM as ReagentItemVM;
 
-            materialVM.StackableState.Value
+            reagentVM.StackableStateVM.Value
                 .Subscribe(stackableStates.SetState)
                 .AddTo(disp);
 
-            itemStackComponent.Init(materialVM.Stack, disp);
+            itemStackComponent.Init(reagentVM.StackVM, disp);
         }
     }
 }

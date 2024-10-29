@@ -19,13 +19,13 @@ namespace Game.Guild
             RoleVM = guildVMF.GetRole(info.RoleId);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            RoleVM.AddTo(disp);
+            RoleVM.AddTo(this);
 
             info.IsEnabled
                 .Subscribe(SetSelectState)
-                .AddTo(disp);
+                .AddTo(this);
         }
 
         public void SwitchSelectState()

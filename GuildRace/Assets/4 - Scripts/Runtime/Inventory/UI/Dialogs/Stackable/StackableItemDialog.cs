@@ -73,10 +73,10 @@ namespace Game.Inventory
 
         protected virtual int GetMaxSize()
         {
-            var selectedItem = Context.SelectedItem;
-            var stackableItem = selectedItem as IStackableItemVM;
+            var selectedItemVM = Context.SelectedItemVM;
+            var stackableItemVM = selectedItemVM as IStackableItemVM;
 
-            return stackableItem.Stack.Value - 1;
+            return stackableItemVM.StackVM.Value - 1;
         }
 
         private void InitPosition()

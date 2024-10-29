@@ -5,7 +5,7 @@ namespace Game.Inventory
 {
     public interface IPlacementContainerVM : IViewModel
     {
-        UIStateVM PlacementState { get; }
+        UIStateVM PlacementStateVM { get; }
 
         IEnumerable<IPlacementContainerVM> GetPlacementsInChildren();
 

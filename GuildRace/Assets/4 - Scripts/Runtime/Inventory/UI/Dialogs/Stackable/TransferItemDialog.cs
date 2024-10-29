@@ -6,26 +6,26 @@ namespace Game.Inventory
     {
         protected override int GetMaxSize()
         {
-            var hoveredItem = Context.HoveredItem;
-            var hoveredStackable = hoveredItem as IStackableItemVM;
-            var hoveredStack = hoveredStackable.Stack;
+            var hoveredItemVM = Context.HoveredItemVM;
+            var hoveredStackableVM = hoveredItemVM as IStackableItemVM;
+            var hoveredStackVM = hoveredStackableVM.StackVM;
 
             var transferCount = Mathf.Min(
                 a: base.GetMaxSize(),
-                b: hoveredStack.AvailableSpace);
+                b: hoveredStackVM.AvailableSpace);
 
             return transferCount;
         }
 
         protected override void OkCallback()
         {
-            var selectedItem = Context.SelectedItem;
-            var hoveredItem = Context.HoveredItem;
+            var selectedItemVM = Context.SelectedItemVM;
+            var hoveredItemVM = Context.HoveredItemVM;
 
             InventoryVMF.TryTransferItem(new TransferItemArgs
             {
-                SourceItemId = selectedItem.Id,
-                TargetItemId = hoveredItem.Id,
+                SourceItemId = selectedItemVM.Id,
+                TargetItemId = hoveredItemVM.Id,
                 Count = Size
             });
 

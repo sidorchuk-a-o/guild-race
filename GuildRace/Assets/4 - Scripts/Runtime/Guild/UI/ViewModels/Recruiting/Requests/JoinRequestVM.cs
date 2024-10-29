@@ -1,5 +1,4 @@
 ﻿using AD.Services.Router;
-using AD.ToolsCollection;
 using Game.Inventory;
 
 namespace Game.Guild
@@ -18,9 +17,9 @@ namespace Game.Guild
             CharacterVM = new CharacterVM(info.Character, guildVMF, inventoryVMF);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            CharacterVM.AddTo(disp);
+            CharacterVM.AddTo(this);
         }
     }
 }

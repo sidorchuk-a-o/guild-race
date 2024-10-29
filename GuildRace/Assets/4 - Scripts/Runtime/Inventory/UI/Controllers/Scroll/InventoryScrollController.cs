@@ -17,7 +17,9 @@ namespace Game.Inventory
         private IInventoryInputModule inventoryInputs;
 
         private InventoryScrollRect selectedScrollRect;
-        private ItemVM selectedItem;
+        private InventoryScrollViewRect selectedScrollViewRect;
+
+        private ItemVM selectedItemVM;
 
         [Inject]
         public void Inject(IInputService inputService)
@@ -38,16 +40,20 @@ namespace Game.Inventory
             InventoryScrollRect.OnInteracted
                 .Subscribe(ScrollRectInteractedCallback)
                 .AddTo(disp);
+
+            InventoryScrollViewRect.OnInteracted
+                .Subscribe(ScrollViewRectInteractedCallback)
+                .AddTo(disp);
         }
 
         private void PickupItemCallback(PickupResult result)
         {
-            selectedItem = result.SelectedItem;
+            selectedItemVM = result.SelectedItemVM;
         }
 
         private void ReleaseItemCallback(ReleaseResult _)
         {
-            selectedItem = null;
+            selectedItemVM = null;
         }
 
         private void ScrollRectInteractedCallback(InventoryScrollRect scrollRect)
@@ -55,9 +61,26 @@ namespace Game.Inventory
             selectedScrollRect = scrollRect;
         }
 
+        private void ScrollViewRectInteractedCallback(InventoryScrollViewRect scrollRect)
+        {
+            selectedScrollViewRect = scrollRect;
+        }
+
         private void Update()
         {
-            if (selectedItem == null || selectedScrollRect == null)
+            if (selectedItemVM == null)
+            {
+                return;
+            }
+
+            ScrollRect();
+
+            ScrollViewRect();
+        }
+
+        private void ScrollRect()
+        {
+            if (selectedScrollRect == null)
             {
                 return;
             }
@@ -72,16 +95,46 @@ namespace Game.Inventory
 
             if (positionOnViewport.y < viewportRect.min.y + holdScrollPadding)
             {
-                scrollValue -= selectedScrollRect.scrollSensitivity * Time.deltaTime;
+                scrollValue -= selectedScrollRect.scrollSensitivity * 10 * Time.deltaTime;
 
                 selectedScrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollValue / viewportRect.height);
             }
 
             if (positionOnViewport.y > viewportRect.max.y - holdScrollPadding)
             {
-                scrollValue += selectedScrollRect.scrollSensitivity * Time.deltaTime;
+                scrollValue += selectedScrollRect.scrollSensitivity * 10 * Time.deltaTime;
 
                 selectedScrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollValue / viewportRect.height);
+            }
+        }
+
+        private void ScrollViewRect()
+        {
+            if (selectedScrollViewRect == null)
+            {
+                return;
+            }
+
+            var viewport = selectedScrollViewRect.Viewport;
+            var viewportRect = viewport.rect;
+
+            var cursorPosition = inventoryInputs.CursorPosition;
+            var positionOnViewport = RectUtils.GetLocalPosition(viewport, cursorPosition);
+
+            var scrollValue = (float)selectedScrollViewRect.GetNormalizedPosition() * viewportRect.height;
+
+            if (positionOnViewport.y < viewportRect.min.y + holdScrollPadding)
+            {
+                scrollValue -= selectedScrollViewRect.ScrollSensitivity * 10 * Time.deltaTime;
+
+                selectedScrollViewRect.SetNormalizedPosition(Mathf.Clamp01(scrollValue / viewportRect.height));
+            }
+
+            if (positionOnViewport.y > viewportRect.max.y - holdScrollPadding)
+            {
+                scrollValue += selectedScrollViewRect.ScrollSensitivity * 10 * Time.deltaTime;
+
+                selectedScrollViewRect.SetNormalizedPosition(Mathf.Clamp01(scrollValue / viewportRect.height));
             }
         }
     }

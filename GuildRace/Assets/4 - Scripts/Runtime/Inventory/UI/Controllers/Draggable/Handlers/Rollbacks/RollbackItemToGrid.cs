@@ -8,7 +8,7 @@ namespace Game.Inventory
     {
         protected override bool CheckContext(ReleaseResult result)
         {
-            return result.Context.PickupResult.Context.SelectedGrid != null;
+            return result.Context.PickupResult.Context.SelectedGridVM != null;
         }
 
         protected override async UniTask Process(ReleaseResult result)
@@ -16,15 +16,15 @@ namespace Game.Inventory
             var pickupResult = result.Context.PickupResult;
             var pickupContext = pickupResult.Context;
 
-            var selectedItem = pickupResult.SelectedItem;
-            var selectedGrid = pickupContext.SelectedGrid;
+            var selectedItemVM = pickupResult.SelectedItemVM;
+            var selectedGridVM = pickupContext.SelectedGridVM;
 
-            if (selectedItem.BoundsVM.IsRotated != pickupResult.IsRotated)
+            if (selectedItemVM.BoundsVM.IsRotated != pickupResult.IsRotated)
             {
-                selectedItem.BoundsVM.Rotate();
+                selectedItemVM.BoundsVM.Rotate();
             }
 
-            result.Placed = selectedGrid.ViewModel.TryPlaceItem(selectedItem, pickupResult.Bounds.position);
+            result.Placed = selectedGridVM.TryPlaceItem(selectedItemVM, pickupResult.Bounds.position);
         }
     }
 }

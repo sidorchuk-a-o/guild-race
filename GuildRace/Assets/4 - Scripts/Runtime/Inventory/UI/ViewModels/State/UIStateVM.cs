@@ -17,8 +17,16 @@ namespace Game.Inventory
             value = new(defaultState);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
+            ResetState();
+        }
+
+        public override void ResetSubscribes()
+        {
+            ResetState();
+
+            base.ResetSubscribes();
         }
 
         public void SetState(string value)

@@ -1,6 +1,5 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
-using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
@@ -43,12 +42,11 @@ namespace Game.Inventory
             IsRemoved = info.IsRemoved;
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            BoundsVM.AddTo(disp);
-            HighlightStateVM.AddTo(disp);
+            BoundsVM.AddTo(this);
+            HighlightStateVM.AddTo(this);
         }
-
 
         // == Options ==
 

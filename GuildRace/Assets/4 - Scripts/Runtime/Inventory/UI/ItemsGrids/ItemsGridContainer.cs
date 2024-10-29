@@ -17,6 +17,7 @@ namespace Game.Inventory
         [SerializeField] private RectTransform highlightArea;
         [SerializeField] private RectTransform pickedItemArea;
 
+        private static readonly Subject<ItemsGridContainer> onInited = new();
         private static readonly Subject<ItemsGridContainer> onInteracted = new();
 
         public ItemsGridVM ViewModel { get; private set; }
@@ -24,6 +25,7 @@ namespace Game.Inventory
         public RectTransform HighlightArea => highlightArea;
         public RectTransform PickedItemArea => pickedItemArea;
 
+        public static IObservable<ItemsGridContainer> OnInited => onInited;
         public static IObservable<ItemsGridContainer> OnInteracted => onInteracted;
 
         public void Init(ItemsGridVM gridVM, CompositeDisp disp)
@@ -32,6 +34,21 @@ namespace Game.Inventory
 
             cellsContainer.Init(gridVM);
             itemsContainer.Init(gridVM, disp);
+
+            UpdateSize();
+
+            onInited.OnNext(this);
+        }
+
+        private void UpdateSize()
+        {
+            var rect = transform as RectTransform;
+
+            rect.sizeDelta = new Vector2
+            {
+                x = ViewModel.Bounds.size.x * RectUtils.CellSize,
+                y = ViewModel.Bounds.size.y * RectUtils.CellSize
+            };
         }
 
         // == IPointer ==

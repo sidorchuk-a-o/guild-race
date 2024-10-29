@@ -1321,6 +1321,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SidebarTabItems
       objectReference: {fileID: 0}
+    - target: {fileID: 4413879387502366245, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413879387502366245, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413879387502366245, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413879387502366245, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413879387502366245, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6037467810226013048, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1473,6 +1493,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2664719185197961057, guid: 639719423d8dde742a5086af571c5048, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2664719185197961057, guid: 639719423d8dde742a5086af571c5048, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2664719185197961057, guid: 639719423d8dde742a5086af571c5048, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2747315809865891528, guid: 639719423d8dde742a5086af571c5048, type: 3}

@@ -18,31 +18,23 @@ namespace Game.Inventory
 
         private Dictionary<OptionKey, OptionHandler> optionsHandlers;
 
-        private InventoryConfig config;
-        private IRouterService router;
-
-        private InventoryVMFactory inventoryVMF;
         private IInventoryInputModule inventoryInputs;
 
-        private OptionsContainer selectedOptions;
-        private ItemsGridContainer selectedGrid;
-        private ItemSlotContainer selectedSlot;
+        private ItemSlotVM selectedSlotVM;
+        private ItemsGridVM selectedGridVM;
 
-        private ItemVM selectedItem;
+        private OptionsContainer selectedOptions;
+        private ItemsGridContainer selectedGridContainer;
+
+        private ItemVM selectedItemVM;
         private OptionContext optionsContext;
 
         [Inject]
         public void Inject(
             InventoryConfig config,
-            InventoryVMFactory inventoryVMF,
             IInputService inputService,
-            IRouterService router,
             IObjectResolver resolver)
         {
-            this.config = config;
-            this.router = router;
-            this.inventoryVMF = inventoryVMF;
-
             inventoryInputs = inputService.InventoryModule;
 
             optionsHandlers = config.UIParams.OptionHandlers.ToDictionary(x => x.Key, x => x);
@@ -77,6 +69,14 @@ namespace Game.Inventory
                 .Subscribe(LeftClickCallback)
                 .AddTo(disp);
 
+            ItemSlotContainer.OnInteracted
+                .Subscribe(ItemSlotInteractedCallback)
+                .AddTo(disp);
+
+            ItemsGridContainer.OnInteracted
+                .Subscribe(ItemsGridInteractedCallback)
+                .AddTo(disp);
+
             OptionsContainer.OnInteracted
                 .Subscribe(OptionsContainerInteractedCallback)
                 .AddTo(disp);
@@ -84,14 +84,17 @@ namespace Game.Inventory
             OptionButton.OnInteracted
                 .Subscribe(OptionsButtonInteractedCallback)
                 .AddTo(disp);
+        }
 
-            ItemsGridContainer.OnInteracted
-                .Subscribe(ItemsGridInteractedCallback)
-                .AddTo(disp);
+        private void ItemSlotInteractedCallback(ItemSlotContainer itemSlot)
+        {
+            selectedSlotVM = itemSlot?.ViewModel;
+        }
 
-            ItemSlotContainer.OnInteracted
-                .Subscribe(ItemSlotInteractedCallback)
-                .AddTo(disp);
+        private void ItemsGridInteractedCallback(ItemsGridContainer itemsGrid)
+        {
+            selectedGridVM = itemsGrid?.ViewModel;
+            selectedGridContainer = itemsGrid;
         }
 
         private void OptionsContainerInteractedCallback(OptionsContainer optionsContainer)
@@ -104,55 +107,45 @@ namespace Game.Inventory
             StartOptionProcess(optionButton.Key, optionsContext);
         }
 
-        private void ItemsGridInteractedCallback(ItemsGridContainer grid)
-        {
-            selectedGrid = grid;
-        }
-
-        private void ItemSlotInteractedCallback(ItemSlotContainer slot)
-        {
-            selectedSlot = slot;
-        }
-
         private void OpenContextMenuCallback()
         {
-            selectedItem = GetItem();
+            selectedItemVM = GetItem();
 
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 CloseOptionsContainer();
                 return;
             }
 
-            OpenOptionsContainer(selectedItem);
+            OpenOptionsContainer(selectedItemVM);
         }
 
         private void FastContextMenuCallback()
         {
-            var selectedItem = GetItem();
+            var selectedItemVM = GetItem();
 
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 return;
             }
 
-            var optionKey = selectedItem.GetFastOptionKey();
+            var optionKey = selectedItemVM.GetFastOptionKey();
 
-            var context = CreateOptionContext(selectedItem);
+            var context = CreateOptionContext(selectedItemVM);
 
             StartOptionProcess(optionKey, context);
         }
 
         private void TryDeleteItemCallback()
         {
-            var selectedItem = GetItem();
+            var selectedItemVM = GetItem();
 
-            if (selectedItem == null)
+            if (selectedItemVM == null)
             {
                 return;
             }
 
-            var context = CreateOptionContext(selectedItem);
+            var context = CreateOptionContext(selectedItemVM);
 
             StartOptionProcess(OptionKeys.Common.discard, context);
         }
@@ -179,22 +172,22 @@ namespace Game.Inventory
 
         private ItemVM GetItem()
         {
-            if (selectedSlot != null && selectedSlot.HasItem)
+            if (selectedSlotVM != null && selectedSlotVM.HasItem)
             {
-                return selectedSlot.ViewModel.ItemVM.Value;
+                return selectedSlotVM.ItemVM.Value;
             }
 
-            if (selectedGrid != null)
+            if (selectedGridVM != null)
             {
                 var cursorPosition = inventoryInputs.CursorPosition;
-                var gridTransform = selectedGrid.transform as RectTransform;
+                var gridTransform = selectedGridContainer.transform as RectTransform;
 
                 var positionOnGrid = RectUtils.GetPositionOnGrid(
                     cursorPosition: cursorPosition,
                     gridTransform: gridTransform,
-                    selectedItem: null);
+                    itemVM: null);
 
-                return selectedGrid.ViewModel.GetItem(positionOnGrid.Cursor);
+                return selectedGridVM.GetItem(positionOnGrid.Cursor);
             }
 
             return null;
@@ -221,8 +214,8 @@ namespace Game.Inventory
             return new OptionContext
             {
                 SelectedItemId = selectedItem.Id,
-                SelectedSlot = selectedSlot,
-                SelectedGrid = selectedGrid
+                SelectedSlotVM = selectedSlotVM,
+                SelectedGridVM = selectedGridVM
             };
         }
 

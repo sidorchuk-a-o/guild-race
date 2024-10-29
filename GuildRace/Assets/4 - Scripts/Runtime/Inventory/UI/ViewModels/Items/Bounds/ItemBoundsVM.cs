@@ -1,5 +1,4 @@
 ﻿using AD.Services.Router;
-using AD.ToolsCollection;
 using System;
 using UnityEngine;
 
@@ -20,7 +19,7 @@ namespace Game.Inventory
             this.info = info;
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
         }
 

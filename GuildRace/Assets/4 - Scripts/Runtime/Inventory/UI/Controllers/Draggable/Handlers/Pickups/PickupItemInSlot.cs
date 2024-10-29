@@ -4,7 +4,7 @@
     {
         protected override bool CheckContext(PickupResult result)
         {
-            var itemHolderFromPickup = result.Context.SelectedSlot;
+            var itemHolderFromPickup = result.Context.SelectedSlotVM;
 
             return itemHolderFromPickup != null
                 && itemHolderFromPickup.HasItem;
@@ -12,12 +12,12 @@
 
         protected override void Process(PickupResult result)
         {
-            var selectedSlot = result.Context.SelectedSlot;
-            var pickupItemVM = result.Context.HoveredItem;
+            var selectedSlotVM = result.Context.SelectedSlotVM;
+            var pickupItemVM = result.Context.HoveredItemVM;
 
-            if (selectedSlot.ViewModel.TryRemoveItem())
+            if (selectedSlotVM.TryRemoveItem())
             {
-                result.SelectedItem = pickupItemVM;
+                result.SelectedItemVM = pickupItemVM;
             }
         }
     }

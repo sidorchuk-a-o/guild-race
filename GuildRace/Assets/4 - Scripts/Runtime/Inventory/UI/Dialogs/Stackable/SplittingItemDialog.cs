@@ -4,13 +4,13 @@
     {
         protected override void OkCallback()
         {
-            var selectedItem = Context.SelectedItem;
-            var selectedGrid = Context.SelectedGrid;
+            var selectedItemVM = Context.SelectedItemVM;
+            var selectedGridVM = Context.SelectedGridVM;
 
             InventoryVMF.TrySplitItem(new SplittingItemArgs
             {
-                SelectedItemId = selectedItem.Id,
-                GridId = selectedGrid.Id,
+                SelectedItemId = selectedItemVM.Id,
+                GridId = selectedGridVM.Id,
                 IsRotated = Context.IsRotated,
                 PositionOnGrid = Context.PositionOnGrid.Item,
                 Count = Size

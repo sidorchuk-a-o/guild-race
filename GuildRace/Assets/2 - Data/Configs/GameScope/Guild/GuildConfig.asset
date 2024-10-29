@@ -22,6 +22,26 @@ MonoBehaviour:
     value: 04baea5bc23d425db4ab0b49ed36147e
   specs:
   - {fileID: 7198393799899164901}
+--- !u!114 &-7773364321222611439
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1c8c0f1295c247d184f008afbac2b4e0
+  title: 
+  rowSize: 11
+  rowCount: 20
+  category:
+    value: ccd1118c0e8844649103e35844fe1139
+  cellType:
+    value: b8dc37d890a74c7bb1ff1c1c73e35bb7
 --- !u!114 &-7600222629343561412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38,6 +58,26 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_4_TTL
+--- !u!114 &-6831772010934211210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7410c4e91ddd49c8aa4daa8bafac9800
+  title: 
+  rowSize: 11
+  rowCount: 20
+  category:
+    value: ccd1118c0e8844649103e35844fe1139
+  cellType:
+    value: b96c32873e544b9897fc02b4d6445231
 --- !u!114 &-6722420641676964884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,6 +166,29 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_5_TTL
+--- !u!114 &-1146228020903282579
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: cff0f4c155ef4343b8e5a6bc347cdbc5
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_EQUIPS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: -6831772010934211210}
 --- !u!114 &-1063255563526852419
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,9 +281,9 @@ MonoBehaviour:
       specId:
         value: 02b71578fcbc466b919b19d5b02d9256
   guildBankParams:
-    storagePages:
-    - {fileID: 6506276319012628163}
-    - {fileID: 1851625410973760895}
+    tabs:
+    - {fileID: -1146228020903282579}
+    - {fileID: 4847741651264621419}
 --- !u!114 &499257089889080854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +300,7 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_0_TTL
---- !u!114 &1851625410973760895
+--- !u!114 &4847741651264621419
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,17 +309,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: c1016735601c49d5bf01de598f353286
+  id: 8f4f667946bd407ea080f6a394b95f4e
   title: 
-  rowSize: 6
-  rowCount: 10
-  category:
-    value: ccd1118c0e8844649103e35844fe1139
-  cellType:
-    value: b8dc37d890a74c7bb1ff1c1c73e35bb7
+  nameKey:
+    value: GUILD_BANK/BANK_REAGENTS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: -7773364321222611439}
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,26 +395,6 @@ MonoBehaviour:
   title: Healer
   nameKey:
     value: CHARACTERS/ROLE_HEALER_TTL
---- !u!114 &6506276319012628163
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 1cf03580833044eeb8517d345121c0db
-  title: 
-  rowSize: 6
-  rowCount: 10
-  category:
-    value: ccd1118c0e8844649103e35844fe1139
-  cellType:
-    value: b96c32873e544b9897fc02b4d6445231
 --- !u!114 &6798043786150933415
 MonoBehaviour:
   m_ObjectHideFlags: 1

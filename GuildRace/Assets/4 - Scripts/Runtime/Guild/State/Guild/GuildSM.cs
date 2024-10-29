@@ -10,8 +10,9 @@ namespace Game.Guild
         public const string key = "guild";
 
         [ES3Serializable] private string name;
-        [ES3Serializable] private CharactersSM characters;
-        [ES3Serializable] private GuildRanksSM guildRanks;
+        [ES3Serializable] private CharactersSM charactersSM;
+        [ES3Serializable] private GuildRanksSM guildRanksSM;
+        [ES3Serializable] private GuildBankTabsSM guildBankTabsSM;
 
         public string Name
         {
@@ -21,18 +22,28 @@ namespace Game.Guild
 
         public IEnumerable<GuildRankInfo> GuildRanks
         {
-            get => guildRanks.GetValues();
-            set => guildRanks = new(value);
+            get => guildRanksSM.GetValues();
+            set => guildRanksSM = new(value);
         }
 
         public void SetCharacters(IEnumerable<CharacterInfo> value, IInventoryService inventoryService)
         {
-            characters = new(value, inventoryService);
+            charactersSM = new(value, inventoryService);
         }
 
         public IEnumerable<CharacterInfo> GetCharacters(IInventoryService inventoryService)
         {
-            return characters.GetValues(inventoryService);
+            return charactersSM.GetValues(inventoryService);
+        }
+
+        public void SetBankTabs(IEnumerable<GuildBankTabInfo> values, IInventoryService inventoryService)
+        {
+            guildBankTabsSM = new(values, inventoryService);
+        }
+
+        public IEnumerable<GuildBankTabInfo> GetBankTabs(GuildConfig config, IInventoryService inventoryService)
+        {
+            return guildBankTabsSM.GetCollection(config, inventoryService);
         }
     }
 }

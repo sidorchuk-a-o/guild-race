@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3258851053247479487}
   - component: {fileID: 5360255714675448296}
   m_Layer: 5
-  m_Name: StorageGridShadow
+  m_Name: ItemsGridShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

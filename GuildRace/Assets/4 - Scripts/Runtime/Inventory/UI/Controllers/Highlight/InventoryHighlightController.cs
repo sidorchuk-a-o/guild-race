@@ -23,14 +23,16 @@ namespace Game.Inventory
 
         private IInventoryInputModule inventoryInputs;
 
-        private ItemsGridContainer selectedGrid;
-        private ItemSlotContainer selectedSlot;
+        private ItemSlotVM selectedSlotVM;
+        private ItemsGridVM selectedGridVM;
 
-        private ItemVM highlightedItem;
+        private ItemsGridContainer selectedGridContainer;
+
+        private ItemVM highlightedItemVM;
         private PositionOnGrid positionOnGrid;
 
+        private ItemVM selectedItemVM;
         private PickupResult pickupResult;
-        private ItemVM selectedItem;
 
         [Inject]
         public void Inject(IInputService inputService)
@@ -40,16 +42,16 @@ namespace Game.Inventory
 
         public void Init(CompositeDisp disp)
         {
-            inventoryInputs.SplittingModeOn
-                .Subscribe(SplittingModeChangedCallback)
+            ItemSlotContainer.OnInteracted
+                .Subscribe(ItemSlotInteractedCallback)
                 .AddTo(disp);
 
             ItemsGridContainer.OnInteracted
                 .Subscribe(ItemsGridInteractedCallback)
                 .AddTo(disp);
 
-            ItemSlotContainer.OnInteracted
-                .Subscribe(ItemSlotInteractedCallback)
+            inventoryInputs.SplittingModeOn
+                .Subscribe(SplittingModeChangedCallback)
                 .AddTo(disp);
 
             draggableController.OnPickupItem
@@ -73,7 +75,7 @@ namespace Game.Inventory
         private void PickupItemCallback(PickupResult result)
         {
             pickupResult = result;
-            selectedItem = result.SelectedItem;
+            selectedItemVM = result.SelectedItemVM;
 
             UpdateHighlightCallback();
         }
@@ -81,23 +83,24 @@ namespace Game.Inventory
         private void ReleaseItemCallback(ReleaseResult _)
         {
             pickupResult = null;
-            selectedItem = null;
+            selectedItemVM = null;
 
             UpdateHighlightCallback();
         }
 
-        private void ItemsGridInteractedCallback(ItemsGridContainer grid)
+        private void ItemSlotInteractedCallback(ItemSlotContainer itemSlot)
         {
-            selectedGrid = grid;
+            selectedSlotVM = itemSlot?.ViewModel;
+
+            UpdateHighlightCallback();
+        }
+
+        private void ItemsGridInteractedCallback(ItemsGridContainer itemsGrid)
+        {
+            selectedGridVM = itemsGrid?.ViewModel;
+            selectedGridContainer = itemsGrid;
 
             UpdateHighlighterParent();
-            UpdateHighlightCallback();
-        }
-
-        private void ItemSlotInteractedCallback(ItemSlotContainer slot)
-        {
-            selectedSlot = slot;
-
             UpdateHighlightCallback();
         }
 
@@ -105,27 +108,27 @@ namespace Game.Inventory
 
         private void Update()
         {
-            if (selectedGrid == null)
+            if (selectedGridVM == null)
             {
                 return;
             }
 
             var cursorPosition = inventoryInputs.CursorPosition;
-            var gridTransform = selectedGrid.transform as RectTransform;
+            var gridTransform = selectedGridContainer.transform as RectTransform;
 
             var positionOnGrid = RectUtils.GetPositionOnGrid(
                 cursorPosition: cursorPosition,
                 gridTransform: gridTransform,
-                selectedItem: selectedItem);
+                itemVM: selectedItemVM);
 
             UpdateHighlight(positionOnGrid);
         }
 
         private void UpdateHighlighterParent()
         {
-            if (selectedGrid != null)
+            if (selectedGridVM != null)
             {
-                highlighter.SetParent(selectedGrid.HighlightArea);
+                highlighter.SetParent(selectedGridContainer.HighlightArea);
             }
         }
 
@@ -144,14 +147,14 @@ namespace Game.Inventory
 
         private void UpdateHighlighter(in PositionOnGrid positionOnGrid)
         {
-            if (selectedGrid == null || selectedItem == null)
+            if (selectedGridVM == null || selectedItemVM == null)
             {
                 highlighter.Show(false);
                 return;
             }
 
             highlighter.SetState(GetHighlighterState(positionOnGrid));
-            highlighter.SetBounds(new(positionOnGrid.Item, selectedItem.BoundsVM.Size));
+            highlighter.SetBounds(new(positionOnGrid.Item, selectedItemVM.BoundsVM.Size));
 
             highlighter.Show(true);
         }
@@ -179,67 +182,67 @@ namespace Game.Inventory
         private bool SelectedItemCanBeSplitted(in PositionOnGrid positionOnGrid)
         {
             return SelectedItemCanBePlaced(positionOnGrid)
-                && !pickupResult.ThisPositionIsPositionOfSelectedItem(positionOnGrid, selectedGrid)
-                && selectedItem is IStackableItemVM stackableItem
-                && stackableItem.CheckPossibilityOfSplit()
-                && selectedGrid.ViewModel.GetItem(positionOnGrid.Cursor) is null;
+                && !pickupResult.ThisPositionIsPositionOfSelectedItem(positionOnGrid, selectedGridVM)
+                && selectedItemVM is IStackableItemVM stackableItemVM
+                && stackableItemVM.CheckPossibilityOfSplit()
+                && selectedGridVM.GetItem(positionOnGrid.Cursor) is null;
         }
 
         private bool SelectedItemCanBeTransferInHovered(in PositionOnGrid positionOnGrid)
         {
-            var hoveredItem = selectedGrid.ViewModel.GetItem(positionOnGrid.Cursor);
+            var hoveredItemVM = selectedGridVM.GetItem(positionOnGrid.Cursor);
 
-            return !pickupResult.ThisPositionIsPositionOfSelectedItem(positionOnGrid, selectedGrid)
-                && hoveredItem is IStackableItemVM stackableItem
-                && stackableItem.CheckPossibilityOfTransfer(selectedItem);
+            return !pickupResult.ThisPositionIsPositionOfSelectedItem(positionOnGrid, selectedGridVM)
+                && hoveredItemVM is IStackableItemVM stackableItemVM
+                && stackableItemVM.CheckPossibilityOfTransfer(selectedItemVM);
         }
 
         private bool SelectedItemCanBePlaced(in PositionOnGrid positionOnGrid)
         {
-            return selectedGrid.ViewModel.CheckPossibilityOfPlacement(selectedItem, positionOnGrid.Item);
+            return selectedGridVM.CheckPossibilityOfPlacement(selectedItemVM, positionOnGrid.Item);
         }
 
         private bool SelectedItemCanBeInsidePlacement(in PositionOnGrid positionOnGrid)
         {
-            var hoveredItem = selectedGrid.ViewModel.GetItem(positionOnGrid.Cursor);
+            var hoveredItemVM = selectedGridVM.GetItem(positionOnGrid.Cursor);
 
-            return hoveredItem is IPlacementContainerVM placement
-                && placement.CheckPossibilityOfPlacement(selectedItem);
+            return hoveredItemVM is IPlacementContainerVM placementVM
+                && placementVM.CheckPossibilityOfPlacement(selectedItemVM);
         }
 
         private void UpdateHighlightedItem(in PositionOnGrid positionOnGrid)
         {
-            var gridSelected = selectedGrid != null;
-            var equipSlotSelected = selectedSlot != null;
+            var gridSelected = selectedGridVM != null;
+            var equipSlotSelected = selectedSlotVM != null;
 
             if (gridSelected || equipSlotSelected)
             {
                 if (gridSelected)
                 {
-                    var newHighlightedItem = selectedGrid.ViewModel?.GetItem(positionOnGrid.Cursor);
+                    var newHighlightedItemVM = selectedGridVM?.GetItem(positionOnGrid.Cursor);
 
-                    if (newHighlightedItem != highlightedItem)
+                    if (newHighlightedItemVM != highlightedItemVM)
                     {
-                        highlightedItem?.HighlightStateVM.ResetState();
-                        highlightedItem = newHighlightedItem;
-                        highlightedItem?.HighlightStateVM.SetState(highlightedState);
+                        highlightedItemVM?.HighlightStateVM.ResetState();
+                        highlightedItemVM = newHighlightedItemVM;
+                        highlightedItemVM?.HighlightStateVM.SetState(highlightedState);
                     }
                 }
 
                 if (equipSlotSelected)
                 {
-                    if (highlightedItem == null)
+                    if (highlightedItemVM == null)
                     {
-                        highlightedItem?.HighlightStateVM.ResetState();
-                        highlightedItem = selectedSlot.ViewModel?.ItemVM.Value;
-                        highlightedItem?.HighlightStateVM.SetState(highlightedState);
+                        highlightedItemVM?.HighlightStateVM.ResetState();
+                        highlightedItemVM = selectedSlotVM?.ItemVM.Value;
+                        highlightedItemVM?.HighlightStateVM.SetState(highlightedState);
                     }
                 }
             }
-            else if (highlightedItem != null)
+            else if (highlightedItemVM != null)
             {
-                highlightedItem?.HighlightStateVM.ResetState();
-                highlightedItem = null;
+                highlightedItemVM?.HighlightStateVM.ResetState();
+                highlightedItemVM = null;
             }
         }
     }

@@ -29,13 +29,13 @@ namespace Game.Guild
             return new CharacterVM(value, guildVMF, inventoryVMF);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            base.InitSubscribes(disp);
+            base.InitSubscribes();
 
             ObserveCountChanged()
                 .Subscribe(CountChangedCallback)
-                .AddTo(disp);
+                .AddTo(this);
 
             CountChangedCallback(Count);
         }

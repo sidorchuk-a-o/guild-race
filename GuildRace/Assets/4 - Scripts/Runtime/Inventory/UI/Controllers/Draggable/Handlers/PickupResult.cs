@@ -4,16 +4,16 @@ namespace Game.Inventory
 {
     public class PickupResult
     {
-        public ItemVM SelectedItem { get; set; }
+        public ItemVM SelectedItemVM { get; set; }
 
         public BoundsInt Bounds { get; set; }
         public bool IsRotated { get; set; }
 
         public PickupContext Context { get; set; }
 
-        public bool ThisPositionIsPositionOfSelectedItem(in PositionOnGrid positionOnGrid, ItemsGridContainer selectedGrid)
+        public bool ThisPositionIsPositionOfSelectedItem(in PositionOnGrid positionOnGrid, ItemsGridVM selectedGridVM)
         {
-            var sameGrid = Context.SelectedGrid == selectedGrid;
+            var sameGrid = Context.SelectedGridVM == selectedGridVM;
             var samePosition = Bounds.Contains2D(positionOnGrid.Cursor);
 
             return sameGrid && samePosition;

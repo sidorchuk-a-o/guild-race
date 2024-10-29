@@ -16,7 +16,7 @@ namespace Game.Inventory
         public InventoryService(InventoryConfig config, IObjectResolver resolver)
         {
             state = new(config, resolver);
-            factory = new(state, config, resolver);
+            factory = new(state, config);
         }
 
         public override async UniTask<bool> Init()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Game.Inventory
@@ -29,6 +30,11 @@ namespace Game.Inventory
 
         public bool CheckPossibilityOfPlacement(ItemInfo item, in Vector3Int positionOnGrid)
         {
+            if (!CheckGridParams(item))
+            {
+                return false;
+            }
+
             var itemBounds = new BoundsInt(positionOnGrid, item.Bounds.Size);
 
             if (!CheckItemBounds(itemBounds))
@@ -46,6 +52,11 @@ namespace Game.Inventory
 
         public bool TryPlaceItem(ItemInfo item, in Vector3Int positionOnGrid)
         {
+            if (!CheckGridParams(item))
+            {
+                return false;
+            }
+
             var itemBounds = new BoundsInt(positionOnGrid, item.Bounds.Size);
 
             if (!CheckItemBounds(itemBounds))
@@ -65,6 +76,11 @@ namespace Game.Inventory
 
         public bool CheckPossibilityOfPlacement(ItemInfo item)
         {
+            if (!CheckGridParams(item))
+            {
+                return false;
+            }
+
             var originPosition = item.Bounds.Position;
             var result = false;
 
@@ -179,7 +195,22 @@ namespace Game.Inventory
             return false;
         }
 
-        // == Utils ==
+        // == Common ==
+
+        private bool CheckGridParams(ItemInfo item)
+        {
+            if (!item.GridCategories.Contains(Category))
+            {
+                return false;
+            }
+
+            if (!item.GridCellTypes.Contains(CellType))
+            {
+                return false;
+            }
+
+            return true;
+        }
 
         private bool CheckItemBounds(in BoundsInt itemBounds)
         {

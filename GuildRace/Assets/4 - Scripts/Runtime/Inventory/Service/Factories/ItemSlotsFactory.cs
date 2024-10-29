@@ -6,11 +6,13 @@ namespace Game.Inventory
 {
     public class ItemSlotsFactory
     {
+        private readonly InventoryState state;
         private readonly InventoryConfig config;
         private readonly IInventoryFactory inventoryFactory;
 
-        public ItemSlotsFactory(InventoryConfig config, IInventoryFactory inventoryFactory)
+        public ItemSlotsFactory(InventoryState state, InventoryConfig config, IInventoryFactory inventoryFactory)
         {
+            this.state = state;
             this.config = config;
             this.inventoryFactory = inventoryFactory;
         }
@@ -22,7 +24,16 @@ namespace Game.Inventory
             var id = GuidUtils.Generate();
             var data = config.ItemSlotsParams.GetSlot(slot);
 
-            return new ItemSlotInfo(id, data);
+            var info = new ItemSlotInfo(id, data);
+
+            state.AddSlot(info);
+
+            return info;
+        }
+
+        public ItemSlotInfo RemoveInfo(string id)
+        {
+            return state.RemoveSlot(id);
         }
 
         public ItemSlotSM CreateSave(ItemSlotInfo info)
@@ -42,7 +53,11 @@ namespace Game.Inventory
                 return null;
             }
 
-            return save.GetValue(config, inventoryFactory);
+            var info = save.GetValue(config, inventoryFactory);
+
+            state.AddSlot(info);
+
+            return info;
         }
 
         // == Slots ==

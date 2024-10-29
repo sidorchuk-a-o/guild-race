@@ -7,6 +7,7 @@ namespace Game.Inventory
     {
         [ES3Serializable] protected string id;
         [ES3Serializable] protected string dataId;
+        [ES3Serializable] protected ItemBoundsSM boundsSM;
 
         public string DataId => dataId;
 
@@ -14,6 +15,7 @@ namespace Game.Inventory
         {
             id = info.Id;
             dataId = info.DataId;
+            boundsSM = new(info.Bounds);
         }
     }
 }

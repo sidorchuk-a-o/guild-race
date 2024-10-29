@@ -7,14 +7,14 @@ namespace Game.Inventory
 {
     public class DiscardItemOptionHandler : OptionHandler
     {
-        private InventoryVMFactory inventoryVMF;
         private IRouterService router;
+        private InventoryVMFactory inventoryVMF;
 
         [Inject]
-        public void Inject(InventoryVMFactory inventoryVMF, IRouterService router)
+        public void Inject(IRouterService router, InventoryVMFactory inventoryVMF)
         {
-            this.inventoryVMF = inventoryVMF;
             this.router = router;
+            this.inventoryVMF = inventoryVMF;
         }
 
         public override async UniTask StartProcess(OptionContext context)
@@ -22,8 +22,8 @@ namespace Game.Inventory
             var discardArgs = new DiscardItemArgs
             {
                 ItemId = context.SelectedItemId,
-                SlotId = context.SelectedSlot?.ViewModel.Id,
-                PlacementId = context.SelectedGrid?.ViewModel.Id
+                SlotId = context.SelectedSlotVM?.Id,
+                PlacementId = context.SelectedGridVM?.Id
             };
 
             var parameters = RouteParams.Default;

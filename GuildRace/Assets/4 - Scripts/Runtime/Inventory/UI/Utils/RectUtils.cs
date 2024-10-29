@@ -6,6 +6,8 @@ namespace Game.Inventory
     {
         private static UIParams parameters;
 
+        public static int CellSize => parameters.CellSize;
+
         public static void Init(UIParams parameters)
         {
             RectUtils.parameters = parameters;
@@ -14,7 +16,7 @@ namespace Game.Inventory
         public static PositionOnGrid GetPositionOnGrid(
             in Vector2 cursorPosition,
             RectTransform gridTransform,
-            ItemVM selectedItem)
+            ItemVM itemVM)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 rect: gridTransform,
@@ -24,7 +26,7 @@ namespace Game.Inventory
 
             var cursorOnGrid = GetCellPosition(positionInGrid);
 
-            if (selectedItem == null)
+            if (itemVM == null)
             {
                 return new()
                 {
@@ -34,10 +36,10 @@ namespace Game.Inventory
             }
             else
             {
-                var itemSize = selectedItem.BoundsVM.Size;
+                var itemSize = itemVM.BoundsVM.Size;
 
-                positionInGrid.x -= (itemSize.x - 1f) * parameters.CellSize / 2f;
-                positionInGrid.y += (itemSize.y - 1f) * parameters.CellSize / 2f;
+                positionInGrid.x -= (itemSize.x - 1f) * CellSize / 2f;
+                positionInGrid.y += (itemSize.y - 1f) * CellSize / 2f;
 
                 var itemOnGrid = GetCellPosition(positionInGrid);
 
@@ -53,8 +55,8 @@ namespace Game.Inventory
         {
             return new()
             {
-                x = Mathf.FloorToInt(positionInGrid.x / parameters.CellSize),
-                y = Mathf.FloorToInt(-positionInGrid.y / parameters.CellSize)
+                x = Mathf.FloorToInt(positionInGrid.x / CellSize),
+                y = Mathf.FloorToInt(-positionInGrid.y / CellSize)
             };
         }
 
@@ -83,14 +85,14 @@ namespace Game.Inventory
 
             rect.sizeDelta = new Vector2
             {
-                x = itemBounds.size.x * parameters.CellSize,
-                y = itemBounds.size.y * parameters.CellSize
+                x = itemBounds.size.x * CellSize,
+                y = itemBounds.size.y * CellSize
             };
 
             rect.anchoredPosition = new Vector2
             {
-                x = itemBounds.x * parameters.CellSize,
-                y = -itemBounds.y * parameters.CellSize
+                x = itemBounds.x * CellSize,
+                y = -itemBounds.y * CellSize
             };
 
             rect.ForceUpdateRectTransforms();
@@ -110,8 +112,8 @@ namespace Game.Inventory
 
             rect.sizeDelta = new Vector2
             {
-                x = itemSize.x * parameters.CellSize,
-                y = itemSize.y * parameters.CellSize
+                x = itemSize.x * CellSize,
+                y = itemSize.y * CellSize
             };
 
             rect.ForceUpdateRectTransforms();

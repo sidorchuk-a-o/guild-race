@@ -6,11 +6,13 @@ namespace Game.Inventory
 {
     public class ItemsGridsFactory
     {
+        private readonly InventoryState state;
         private readonly InventoryConfig config;
         private readonly IInventoryFactory inventoryFactory;
 
-        public ItemsGridsFactory(InventoryConfig config, IInventoryFactory inventoryFactory)
+        public ItemsGridsFactory(InventoryState state, InventoryConfig config, IInventoryFactory inventoryFactory)
         {
+            this.state = state;
             this.config = config;
             this.inventoryFactory = inventoryFactory;
         }
@@ -18,8 +20,11 @@ namespace Game.Inventory
         public ItemsGridInfo CreateGrid(ItemsGridData data)
         {
             var id = GuidUtils.Generate();
+            var info = new ItemsGridInfo(id, data);
 
-            return new ItemsGridInfo(id, data);
+            state.AddGrid(info);
+
+            return info;
         }
 
         public ItemsGridSM CreateGridSave(ItemsGridInfo info)
@@ -39,12 +44,16 @@ namespace Game.Inventory
                 return null;
             }
 
-            return save.GetValue(config, inventoryFactory);
+            var info = save.GetValue(config, inventoryFactory);
+
+            state.AddGrid(info);
+
+            return info;
         }
 
         public IItemsGridsCollection CreateItemsGrids(IEnumerable<ItemsGridData> grids)
         {
-            var values = grids.Select(inventoryFactory.CreateGrid);
+            var values = grids.Select(CreateGrid);
 
             return new ItemsGridsCollection(values);
         }

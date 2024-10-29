@@ -1,5 +1,4 @@
 ﻿using AD.Services.Router;
-using AD.ToolsCollection;
 using UniRx;
 
 namespace Game.Guild
@@ -15,7 +14,7 @@ namespace Game.Guild
             Name = info.Name;
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
         }
     }

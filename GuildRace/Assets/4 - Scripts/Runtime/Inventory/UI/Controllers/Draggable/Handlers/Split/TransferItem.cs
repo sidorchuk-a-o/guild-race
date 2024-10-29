@@ -8,50 +8,50 @@ namespace Game.Inventory
 {
     public class TransferItem : ReleaseHandler
     {
-        private InventoryVMFactory inventoryVMF;
-
         private IRouterService router;
         private IInventoryInputModule inventoryInputs;
 
+        private InventoryVMFactory inventoryVMF;
+
         [Inject]
         public void Inject(
-            InventoryVMFactory inventoryVMF,
             IRouterService router,
-            IInputService inputService)
+            IInputService inputService,
+            InventoryVMFactory inventoryVMF)
         {
-            this.inventoryVMF = inventoryVMF;
             this.router = router;
+            this.inventoryVMF = inventoryVMF;
 
             inventoryInputs = inputService.InventoryModule;
         }
 
         protected override bool CheckContext(ReleaseResult result)
         {
-            var selectedGrid = result.Context.SelectedGrid;
-            var selectedItem = result.Context.PickupResult.SelectedItem;
-            var hoveredItem = result.Context.HoveredItem;
+            var selectedGridVM = result.Context.SelectedGridVM;
+            var selectedItemVM = result.Context.PickupResult.SelectedItemVM;
+            var hoveredItemVM = result.Context.HoveredItemVM;
 
-            return selectedGrid != null
+            return selectedGridVM != null
                 && !result.Context.CurrentPositionIsPositionOfSelectedItem
-                && hoveredItem is IStackableItemVM stackableItem
-                && stackableItem.CheckPossibilityOfTransfer(selectedItem);
+                && hoveredItemVM is IStackableItemVM stackableItemVM
+                && stackableItemVM.CheckPossibilityOfTransfer(selectedItemVM);
         }
 
         protected override async UniTask Process(ReleaseResult result)
         {
-            var selectedItem = result.Context.PickupResult.SelectedItem;
-            var selectedStackable = selectedItem as IStackableItemVM;
-            var selectedStack = selectedStackable.Stack;
+            var selectedItemVM = result.Context.PickupResult.SelectedItemVM;
+            var selectedStackableVM = selectedItemVM as IStackableItemVM;
+            var selectedStackVM = selectedStackableVM.StackVM;
 
-            var hoveredItem = result.Context.HoveredItem;
-            var hoveredStackable = hoveredItem as IStackableItemVM;
-            var hoveredStack = hoveredStackable.Stack;
+            var hoveredItemVM = result.Context.HoveredItemVM;
+            var hoveredStackableVM = hoveredItemVM as IStackableItemVM;
+            var hoveredStackVM = hoveredStackableVM.StackVM;
 
             var transferCount = Mathf.Min(
-                a: selectedStack.Value,
-                b: hoveredStack.AvailableSpace);
+                a: selectedStackVM.Value,
+                b: hoveredStackVM.AvailableSpace);
 
-            var selectedGridVM = result.Context.SelectedGrid.ViewModel;
+            var selectedGridVM = result.Context.SelectedGridVM;
             var positionOnGrid = result.Context.PositionOnSelectedGrid;
 
             if (inventoryInputs.SplittingModeOn.Value && transferCount > 2)
@@ -63,10 +63,10 @@ namespace Game.Inventory
 
                 parameters[StackableItemDialog.contextKey] = new StackableContext
                 {
-                    SelectedItem = selectedItem,
-                    HoveredItem = hoveredItem,
-                    SelectedGrid = selectedGridVM,
-                    IsRotated = selectedItem.BoundsVM.IsRotated,
+                    SelectedItemVM = selectedItemVM,
+                    HoveredItemVM = hoveredItemVM,
+                    SelectedGridVM = selectedGridVM,
+                    IsRotated = selectedItemVM.BoundsVM.IsRotated,
                     PositionOnGrid = positionOnGrid,
                     CompleteTask = completeTask
                 };
@@ -79,8 +79,8 @@ namespace Game.Inventory
             {
                 inventoryVMF.TryTransferItem(new TransferItemArgs
                 {
-                    SourceItemId = selectedItem.Id,
-                    TargetItemId = hoveredItem.Id,
+                    SourceItemId = selectedItemVM.Id,
+                    TargetItemId = hoveredItemVM.Id,
                     Count = transferCount
                 });
             }

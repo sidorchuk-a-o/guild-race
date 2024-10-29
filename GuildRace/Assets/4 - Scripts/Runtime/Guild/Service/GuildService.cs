@@ -18,6 +18,7 @@ namespace Game.Guild
 
         public ICharactersCollection Characters => state.Characters;
         public IGuildRanksCollection GuildRanks => state.GuildRanks;
+        public IGuildBankTabsCollection BankTabs => state.BankTabs;
 
         public IRecruitingModule RecruitingModule => recruitingModule;
 

@@ -122,7 +122,9 @@ namespace Game.Guild
                 var seconds = Random.Range(0, deltaTime);
                 var createTime = recruitingState.NextRequestTime.AddSeconds(seconds);
 
-                CreateRequest(createTime);
+                var request = CreateRequest(createTime);
+
+                recruitingState.AddRequest(request);
             }
 
             // next request time

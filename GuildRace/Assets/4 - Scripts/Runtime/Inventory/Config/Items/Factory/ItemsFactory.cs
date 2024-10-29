@@ -1,17 +1,18 @@
 ﻿using AD.ToolsCollection;
 using System;
-using VContainer;
 
 namespace Game.Inventory
 {
     public abstract class ItemsFactory : ScriptableData
     {
         public abstract Type DataType { get; }
-        public InventoryConfig Config { get; private set; }
 
-        [Inject]
-        public void Inject(InventoryConfig config)
+        protected InventoryState State { get; private set; }
+        protected InventoryConfig Config { get; private set; }
+
+        public void Init(InventoryState state, InventoryConfig config)
         {
+            State = state;
             Config = config;
         }
 
@@ -20,8 +21,11 @@ namespace Game.Inventory
         public ItemInfo CreateInfo(ItemData data)
         {
             var id = GuidUtils.Generate();
+            var info = CreateInfo(id, data);
 
-            return CreateInfo(id, data);
+            State.AddItem(info);
+
+            return info;
         }
 
         protected abstract ItemInfo CreateInfo(string id, ItemData data);
@@ -33,8 +37,11 @@ namespace Game.Inventory
         public ItemInfo ReadSave(ItemSM save)
         {
             var data = Config.GetItem(save.DataId);
+            var info = ReadSave(data, save);
 
-            return ReadSave(data, save);
+            State.AddItem(info);
+
+            return info;
         }
 
         protected abstract ItemInfo ReadSave(ItemData data, ItemSM save);

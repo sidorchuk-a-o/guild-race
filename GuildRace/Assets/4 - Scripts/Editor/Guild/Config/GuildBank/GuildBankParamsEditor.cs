@@ -1,5 +1,4 @@
 ﻿using AD.ToolsCollection;
-using Game.Inventory;
 using UnityEngine.UIElements;
 
 namespace Game.Guild
@@ -9,7 +8,7 @@ namespace Game.Guild
     /// </summary>
     public class GuildBankParamsEditor
     {
-        private ItemsGridsList storageGridsList;
+        private GuildBankTabsList tabsList;
 
         private static SerializedData GetData(SerializedData data)
         {
@@ -23,9 +22,9 @@ namespace Game.Guild
 
         private void CreateStorageTab(VisualElement root, SerializedData data)
         {
-            storageGridsList = root.CreateElement<ItemsGridsList>();
-            storageGridsList.BindProperty("storagePages", GetData(data));
-            storageGridsList.headerTitle = "Storage Pages";
+            tabsList = root.CreateElement<GuildBankTabsList>();
+            tabsList.BindProperty("tabs", GetData(data));
+            tabsList.headerTitle = "Storage Pages";
         }
     }
 }

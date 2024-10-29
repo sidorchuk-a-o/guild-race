@@ -239,8 +239,8 @@ MonoBehaviour:
   items:
   - {fileID: 3626631985758391469}
   itemsGrids:
-  - {fileID: 6506276319012628163, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
-  - {fileID: 1851625410973760895, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: -6831772010934211210, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: -7773364321222611439, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   itemsParams:
     rarities:
     - {fileID: 1814113300819470084}

@@ -15,6 +15,7 @@ namespace Game.Guild
         private readonly ReactiveProperty<string> name = new();
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
+        private readonly GuildBankTabsCollection bankTabs = new(null);
 
         private readonly IInventoryService inventoryService;
         private readonly ILocalizationService localization;
@@ -27,6 +28,7 @@ namespace Game.Guild
 
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
+        public IGuildBankTabsCollection BankTabs => bankTabs;
 
         public GuildState(
             GuildConfig config,
@@ -80,6 +82,7 @@ namespace Game.Guild
             };
 
             guildSM.SetCharacters(Characters, inventoryService);
+            guildSM.SetBankTabs(BankTabs, inventoryService);
 
             return guildSM;
         }
@@ -89,6 +92,7 @@ namespace Game.Guild
             if (save == null)
             {
                 guildRanks.AddRange(CreateDefaultGuildRanks());
+                bankTabs.AddRange(CreateDefaultBankTabs());
 
                 return;
             }
@@ -97,6 +101,7 @@ namespace Game.Guild
 
             guildRanks.AddRange(save.GuildRanks);
             characters.AddRange(save.GetCharacters(inventoryService));
+            bankTabs.AddRange(save.GetBankTabs(config, inventoryService));
         }
 
         private IEnumerable<GuildRankInfo> CreateDefaultGuildRanks()
@@ -106,6 +111,16 @@ namespace Game.Guild
                 var name = localization.Get(x.DefaultNameKey);
 
                 return new GuildRankInfo(x.Id, name);
+            });
+        }
+
+        private IEnumerable<GuildBankTabInfo> CreateDefaultBankTabs()
+        {
+            return config.GuildBankParams.Tabs.Select(x =>
+            {
+                var grid = inventoryService.Factory.CreateGrid(x.Grid);
+
+                return new GuildBankTabInfo(x, grid);
             });
         }
     }

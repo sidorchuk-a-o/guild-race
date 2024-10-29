@@ -123,7 +123,7 @@ namespace Game.Inventory
 
             if (windowsDict.TryGetValue(args.WindowRef.AssetGUID, out var windows))
             {
-                window = windows.FirstOrDefault(x => x.CurrentItem.Id == args.ItemId);
+                window = windows.FirstOrDefault(x => x.CurrentItemVM.Id == args.ItemId);
             }
 
             return window != null;

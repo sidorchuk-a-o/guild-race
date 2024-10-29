@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 3443337779575621380}
   - component: {fileID: 1008375820773713277}
   m_Layer: 5
-  m_Name: StorageGrid
+  m_Name: ItemsGridContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

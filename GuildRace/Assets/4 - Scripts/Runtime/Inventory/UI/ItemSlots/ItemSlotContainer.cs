@@ -23,21 +23,22 @@ namespace Game.Inventory
         [SerializeField] private UIStates pickupStates;
         [SerializeField] private Image pickupPreviewImage;
 
+        private static readonly Subject<ItemSlotContainer> onInited = new();
         private static readonly Subject<ItemSlotContainer> onInteracted = new();
 
         private readonly CompositeDisp itemDisp = new();
 
-        private ItemSlotVM slotVM;
         private InventoryVMFactory inventoryVMF;
 
         private ItemInSlotComponent item;
 
+        public static IObservable<ItemSlotContainer> OnInited => onInited;
         public static IObservable<ItemSlotContainer> OnInteracted => onInteracted;
 
         public ItemSlot Slot => slot;
 
-        public bool HasItem => slotVM.HasItem;
-        public ItemSlotVM ViewModel => slotVM;
+        public bool HasItem => ViewModel.HasItem;
+        public ItemSlotVM ViewModel { get; private set; }
 
         [Inject]
         public void Inject(InventoryVMFactory inventoryVMF)
@@ -47,7 +48,7 @@ namespace Game.Inventory
 
         public void Init(ItemSlotVM slotVM, CompositeDisp disp)
         {
-            this.slotVM = slotVM;
+            ViewModel = slotVM;
 
             slotVM.ItemVM
                 .Subscribe(x => ItemChangedCallback(x, disp))
@@ -56,6 +57,8 @@ namespace Game.Inventory
             slotVM.PickupStateVM.Value
                 .Subscribe(pickupStates.SetState)
                 .AddTo(disp);
+
+            onInited.OnNext(this);
         }
 
         private async void ItemChangedCallback(ItemVM itemVM, CompositeDisp disp)

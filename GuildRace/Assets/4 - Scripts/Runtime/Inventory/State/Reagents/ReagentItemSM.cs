@@ -17,6 +17,7 @@ namespace Game.Inventory
             var info = new ReagentItemInfo(id, data);
 
             stackSM.ApplyValues(info.Stack);
+            boundsSM.ApplyValues(info.Bounds);
 
             return info;
         }

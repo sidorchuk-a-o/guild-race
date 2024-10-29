@@ -4,7 +4,7 @@
     {
         public string SelectedItemId { get; set; }
 
-        public ItemsGridContainer SelectedGrid { get; set; }
-        public ItemSlotContainer SelectedSlot { get; set; }
+        public ItemsGridVM SelectedGridVM { get; set; }
+        public ItemSlotVM SelectedSlotVM { get; set; }
     }
 }

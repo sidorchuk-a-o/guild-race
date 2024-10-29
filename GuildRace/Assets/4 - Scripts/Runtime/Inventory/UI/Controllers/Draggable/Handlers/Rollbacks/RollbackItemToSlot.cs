@@ -8,7 +8,7 @@ namespace Game.Inventory
     {
         protected override bool CheckContext(ReleaseResult result)
         {
-            return result.Context.PickupResult.Context.SelectedSlot != null;
+            return result.Context.PickupResult.Context.SelectedSlotVM != null;
         }
 
         protected override async UniTask Process(ReleaseResult result)
@@ -16,10 +16,10 @@ namespace Game.Inventory
             var pickupResult = result.Context.PickupResult;
             var pickupContext = pickupResult.Context;
 
-            var selectedItem = pickupResult.SelectedItem;
-            var selectedSlot = pickupContext.SelectedSlot;
+            var selectedItemVM = pickupResult.SelectedItemVM;
+            var selectedSlotVM = pickupContext.SelectedSlotVM;
 
-            result.Placed = selectedSlot.ViewModel.TryAddItem(selectedItem);
+            result.Placed = selectedSlotVM.TryAddItem(selectedItemVM);
         }
     }
 }
