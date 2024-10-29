@@ -2,7 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
 using Cysharp.Threading.Tasks;
-using Game.Items;
+using Game.Inventory;
 using UniRx;
 using VContainer;
 
@@ -23,14 +23,14 @@ namespace Game.Guild
 
         public GuildService(
             GuildConfig guildConfig,
-            ItemsConfig itemsConfig,
-            IItemsService itemsService,
+            InventoryConfig inventoryConfig,
+            IInventoryService inventoryService,
             ILocalizationService localization,
             ITimeService time,
             IObjectResolver resolver)
         {
-            state = new(guildConfig, itemsService, localization, resolver);
-            recruitingModule = new(state, guildConfig, itemsConfig, itemsService, time, resolver);
+            state = new(guildConfig, inventoryService, localization, resolver);
+            recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, time, resolver);
         }
 
         public override async UniTask<bool> Init()

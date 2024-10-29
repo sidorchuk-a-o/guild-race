@@ -65,6 +65,10 @@ namespace Game.Guild
 
             declineButton.SetInteractableState(ViewModel.IsDefault == false);
 
+            characterVM.ItemsLevel
+                .Subscribe(x => itemsLevelText.SetTextParams(x))
+                .AddTo(disp);
+
             guildVM.RosterIsFull
                 .Subscribe(x => acceptButton.SetInteractableState(x == false))
                 .AddTo(disp);

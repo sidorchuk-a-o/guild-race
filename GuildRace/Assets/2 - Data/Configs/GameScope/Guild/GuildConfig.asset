@@ -17,9 +17,9 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/CLASS_1_TTL
   armorType:
-    value: 99b4b8fd043843a38b502a1922036b1c
+    value: 4514c8d7172c43399bc8fd3178b1f926
   weaponType:
-    value: a20d960cb01044879b8689f2e4e8dbed
+    value: 04baea5bc23d425db4ab0b49ed36147e
   specs:
   - {fileID: 7198393799899164901}
 --- !u!114 &-7600222629343561412
@@ -105,9 +105,9 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/CLASS_2_TTL
   armorType:
-    value: 99b4b8fd043843a38b502a1922036b1c
+    value: 4514c8d7172c43399bc8fd3178b1f926
   weaponType:
-    value: a20d960cb01044879b8689f2e4e8dbed
+    value: 8ffc4d70488b45409eef5be37e4b8e63
   specs:
   - {fileID: -4733274706201629649}
 --- !u!114 &-3730586026932445884
@@ -162,7 +162,7 @@ MonoBehaviour:
   - {fileID: -5064181589344827625}
   - {fileID: -7600222629343561412}
   - {fileID: -3730586026932445884}
-  charactersModule:
+  charactersParams:
     maxEquipSlotCount: 6
     classes:
     - {fileID: 6246976285171924263}
@@ -172,7 +172,7 @@ MonoBehaviour:
     - {fileID: -1063255563526852419}
     - {fileID: 6298160343060774326}
     - {fileID: 6798043786150933415}
-  recruitingModule:
+  recruitingParams:
     minRequestCount: 5
     maxRequestCount: 15
     requestLifetime: 3600
@@ -217,6 +217,10 @@ MonoBehaviour:
         value: a9d2f2fa7d0f427d8bd9194c3e46037c
       specId:
         value: 02b71578fcbc466b919b19d5b02d9256
+  guildBankParams:
+    storagePages:
+    - {fileID: 6506276319012628163}
+    - {fileID: 1851625410973760895}
 --- !u!114 &499257089889080854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,6 +237,26 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_0_TTL
+--- !u!114 &1851625410973760895
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: c1016735601c49d5bf01de598f353286
+  title: 
+  rowSize: 6
+  rowCount: 10
+  category:
+    value: ccd1118c0e8844649103e35844fe1139
+  cellType:
+    value: b8dc37d890a74c7bb1ff1c1c73e35bb7
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,9 +308,9 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/CLASS_0_TTL
   armorType:
-    value: 59379ea0bddc4cd7a3d92e348e1b45ee
+    value: 0939385155fe46aeb159207ffb3ab8fd
   weaponType:
-    value: c6ba0c33574f42aeac1636f946b1a25c
+    value: 578f88f69bb945188b475345f67a5f98
   specs:
   - {fileID: 5272075455439435193}
 --- !u!114 &6298160343060774326
@@ -305,6 +329,26 @@ MonoBehaviour:
   title: Healer
   nameKey:
     value: CHARACTERS/ROLE_HEALER_TTL
+--- !u!114 &6506276319012628163
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1cf03580833044eeb8517d345121c0db
+  title: 
+  rowSize: 6
+  rowCount: 10
+  category:
+    value: ccd1118c0e8844649103e35844fe1139
+  cellType:
+    value: b96c32873e544b9897fc02b4d6445231
 --- !u!114 &6798043786150933415
 MonoBehaviour:
   m_ObjectHideFlags: 1

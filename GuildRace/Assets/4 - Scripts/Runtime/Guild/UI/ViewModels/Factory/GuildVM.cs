@@ -4,7 +4,7 @@ using UniRx;
 
 namespace Game.Guild
 {
-    public class GuildVM : VMBase
+    public class GuildVM : ViewModel
     {
         private readonly GuildConfig guildConfig;
         private readonly IGuildService guildService;

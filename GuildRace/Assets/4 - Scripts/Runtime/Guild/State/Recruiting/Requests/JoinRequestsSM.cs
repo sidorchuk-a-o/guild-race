@@ -1,4 +1,4 @@
-﻿using Game.Items;
+﻿using Game.Inventory;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +11,16 @@ namespace Game.Guild
     {
         [ES3Serializable] private List<JoinRequestSM> values;
 
-        public JoinRequestsSM(IEnumerable<JoinRequestInfo> values, IItemsService itemsService)
+        public JoinRequestsSM(IEnumerable<JoinRequestInfo> values, IInventoryService inventoryService)
         {
             this.values = values
-                .Select(x => new JoinRequestSM(x, itemsService))
+                .Select(x => new JoinRequestSM(x, inventoryService))
                 .ToList();
         }
 
-        public IEnumerable<JoinRequestInfo> GetValues(IItemsService itemsService)
+        public IEnumerable<JoinRequestInfo> GetValues(IInventoryService inventoryService)
         {
-            return values.Select(x => x.GetValue(itemsService));
+            return values.Select(x => x.GetValue(inventoryService));
         }
     }
 }

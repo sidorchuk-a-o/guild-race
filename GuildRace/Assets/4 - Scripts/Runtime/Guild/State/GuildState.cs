@@ -2,7 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.Save;
 using AD.ToolsCollection;
-using Game.Items;
+using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -16,7 +16,7 @@ namespace Game.Guild
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
 
-        private readonly IItemsService itemsService;
+        private readonly IInventoryService inventoryService;
         private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
@@ -30,12 +30,12 @@ namespace Game.Guild
 
         public GuildState(
             GuildConfig config,
-            IItemsService itemsService,
+            IInventoryService inventoryService,
             ILocalizationService localization,
             IObjectResolver resolver)
             : base(config, resolver)
         {
-            this.itemsService = itemsService;
+            this.inventoryService = inventoryService;
             this.localization = localization;
         }
 
@@ -79,7 +79,7 @@ namespace Game.Guild
                 GuildRanks = GuildRanks
             };
 
-            guildSM.SetCharacters(Characters, itemsService);
+            guildSM.SetCharacters(Characters, inventoryService);
 
             return guildSM;
         }
@@ -96,7 +96,7 @@ namespace Game.Guild
             name.Value = save.Name;
 
             guildRanks.AddRange(save.GuildRanks);
-            characters.AddRange(save.GetCharacters(itemsService));
+            characters.AddRange(save.GetCharacters(inventoryService));
         }
 
         private IEnumerable<GuildRankInfo> CreateDefaultGuildRanks()

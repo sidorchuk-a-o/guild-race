@@ -26,6 +26,8 @@ namespace Game.Input
         {
             appEvents.AddAppTickListener(inventoryModule);
 
+            inventoryModule.Enable();
+
             return await Inited();
         }
 

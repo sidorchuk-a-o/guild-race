@@ -1,11 +1,11 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
-using Game.Items;
+using Game.Inventory;
 using UniRx;
 
 namespace Game.Guild
 {
-    public class CharacterVM : VMBase
+    public class CharacterVM : ViewModel
     {
         private readonly CharacterInfo info;
         private readonly GuildVMFactory guildVMF;
@@ -25,9 +25,9 @@ namespace Game.Guild
         public IReadOnlyReactiveProperty<GuildRankVM> GuildRankVM => guildRankVM;
 
         public IReadOnlyReactiveProperty<int> ItemsLevel { get; }
-        public EquipSlotsVM EquiSlotsVM { get; }
+        public ItemSlotsVM EquiSlotsVM { get; }
 
-        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF, ItemsVMFactory itemsVMF)
+        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF, InventoryVMFactory inventoryVMF)
         {
             this.info = info;
             this.guildVMF = guildVMF;
@@ -37,7 +37,7 @@ namespace Game.Guild
             ItemsLevel = info.ItemsLevel;
 
             ClassVM = guildVMF.GetClass(info.ClassId);
-            EquiSlotsVM = itemsVMF.CreateEquipSlots(info.EquipSlots);
+            EquiSlotsVM = inventoryVMF.CreateItemSlots(info.EquipSlots);
         }
 
         protected override void InitSubscribes(CompositeDisp disp)

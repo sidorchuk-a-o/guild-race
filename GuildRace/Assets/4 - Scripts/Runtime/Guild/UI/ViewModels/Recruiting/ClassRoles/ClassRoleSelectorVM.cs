@@ -4,7 +4,7 @@ using UniRx;
 
 namespace Game.Guild
 {
-    public class ClassRoleSelectorVM : VMBase
+    public class ClassRoleSelectorVM : ViewModel
     {
         private readonly ClassRoleSelectorInfo info;
         private readonly GuildVMFactory guildVMF;

@@ -1,6 +1,6 @@
 ﻿using AD.Services.Save;
 using AD.States;
-using Game.Items;
+using Game.Inventory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Game.Guild
     public class RecruitingState : State<RecruitingSM>
     {
         private readonly GuildConfig config;
-        private readonly IItemsService itemsService;
+        private readonly IInventoryService inventoryService;
 
         private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
@@ -29,12 +29,12 @@ namespace Game.Guild
 
         public RecruitingState(
             GuildConfig config,
-            IItemsService itemsService,
+            IInventoryService inventoryService,
             IObjectResolver resolver)
             : base(resolver)
         {
             this.config = config;
-            this.itemsService = itemsService;
+            this.inventoryService = inventoryService;
         }
 
         public void SetNextRequestTime(DateTime value)
@@ -92,7 +92,7 @@ namespace Game.Guild
                 ClassRoleSelectors = classRoleSelectors
             };
 
-            recruitingSM.SetRequests(Requests, itemsService);
+            recruitingSM.SetRequests(Requests, inventoryService);
 
             return recruitingSM;
         }
@@ -109,13 +109,13 @@ namespace Game.Guild
             isEnabled.Value = save.IsEnabled;
             NextRequestTime = save.NextRequestTime;
 
-            requests.AddRange(save.GetRequests(itemsService));
+            requests.AddRange(save.GetRequests(inventoryService));
             classRoleSelectors.AddRange(save.ClassRoleSelectors);
         }
 
         private IEnumerable<ClassRoleSelectorInfo> CreateDefaultClassRoleSelectors()
         {
-            return config.CharactersModule.Roles.Select(x =>
+            return config.CharactersParams.Roles.Select(x =>
             {
                 return new ClassRoleSelectorInfo(x.Id, isEnabled: true);
             });

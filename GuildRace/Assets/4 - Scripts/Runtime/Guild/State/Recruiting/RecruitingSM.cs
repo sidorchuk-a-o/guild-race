@@ -1,4 +1,4 @@
-﻿using Game.Items;
+﻿using Game.Inventory;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -33,14 +33,14 @@ namespace Game.Guild
             set => classRoleSelectorSM = new(value);
         }
 
-        public void SetRequests(IEnumerable<JoinRequestInfo> value, IItemsService itemsService)
+        public void SetRequests(IEnumerable<JoinRequestInfo> value, IInventoryService inventoryService)
         {
-            requestsSM = new(value, itemsService);
+            requestsSM = new(value, inventoryService);
         }
 
-        public IEnumerable<JoinRequestInfo> GetRequests(IItemsService itemsService)
+        public IEnumerable<JoinRequestInfo> GetRequests(IInventoryService inventoryService)
         {
-            return requestsSM.GetValues(itemsService);
+            return requestsSM.GetValues(inventoryService);
         }
     }
 }

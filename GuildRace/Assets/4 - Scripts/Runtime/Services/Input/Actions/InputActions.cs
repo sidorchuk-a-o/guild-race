@@ -48,7 +48,7 @@ namespace Game.Input
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Scroll"",
+                    ""name"": ""ScrollWheel"",
                     ""type"": ""PassThrough"",
                     ""id"": ""0489e84a-4833-4c40-bfae-cea84b696689"",
                     ""expectedControlType"": ""Vector2"",
@@ -253,7 +253,7 @@ namespace Game.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Scroll"",
+                    ""action"": ""ScrollWheel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -566,7 +566,7 @@ namespace Game.Input
                     ""name"": """",
                     ""id"": ""eaa5e9ee-8664-477a-bdda-8f1070238b0f"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""MultiTap"",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""FastContextMenu"",
@@ -643,7 +643,7 @@ namespace Game.Input
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
             m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
-            m_UI_Scroll = m_UI.FindAction("Scroll", throwIfNotFound: true);
+            m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
             m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
             m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
             m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
@@ -731,7 +731,7 @@ namespace Game.Input
         private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
         private readonly InputAction m_UI_Navigate;
         private readonly InputAction m_UI_Point;
-        private readonly InputAction m_UI_Scroll;
+        private readonly InputAction m_UI_ScrollWheel;
         private readonly InputAction m_UI_Click;
         private readonly InputAction m_UI_RightClick;
         private readonly InputAction m_UI_MiddleClick;
@@ -743,7 +743,7 @@ namespace Game.Input
             public UIActions(@InputActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
             public InputAction @Point => m_Wrapper.m_UI_Point;
-            public InputAction @Scroll => m_Wrapper.m_UI_Scroll;
+            public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
             public InputAction @Click => m_Wrapper.m_UI_Click;
             public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
             public InputAction @MiddleClick => m_Wrapper.m_UI_MiddleClick;
@@ -764,9 +764,9 @@ namespace Game.Input
                 @Point.started += instance.OnPoint;
                 @Point.performed += instance.OnPoint;
                 @Point.canceled += instance.OnPoint;
-                @Scroll.started += instance.OnScroll;
-                @Scroll.performed += instance.OnScroll;
-                @Scroll.canceled += instance.OnScroll;
+                @ScrollWheel.started += instance.OnScrollWheel;
+                @ScrollWheel.performed += instance.OnScrollWheel;
+                @ScrollWheel.canceled += instance.OnScrollWheel;
                 @Click.started += instance.OnClick;
                 @Click.performed += instance.OnClick;
                 @Click.canceled += instance.OnClick;
@@ -792,9 +792,9 @@ namespace Game.Input
                 @Point.started -= instance.OnPoint;
                 @Point.performed -= instance.OnPoint;
                 @Point.canceled -= instance.OnPoint;
-                @Scroll.started -= instance.OnScroll;
-                @Scroll.performed -= instance.OnScroll;
-                @Scroll.canceled -= instance.OnScroll;
+                @ScrollWheel.started -= instance.OnScrollWheel;
+                @ScrollWheel.performed -= instance.OnScrollWheel;
+                @ScrollWheel.canceled -= instance.OnScrollWheel;
                 @Click.started -= instance.OnClick;
                 @Click.performed -= instance.OnClick;
                 @Click.canceled -= instance.OnClick;
@@ -1002,7 +1002,7 @@ namespace Game.Input
         {
             void OnNavigate(InputAction.CallbackContext context);
             void OnPoint(InputAction.CallbackContext context);
-            void OnScroll(InputAction.CallbackContext context);
+            void OnScrollWheel(InputAction.CallbackContext context);
             void OnClick(InputAction.CallbackContext context);
             void OnRightClick(InputAction.CallbackContext context);
             void OnMiddleClick(InputAction.CallbackContext context);

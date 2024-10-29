@@ -1,18 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4598397243904044048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5bc9386a6cc6414789ac8031fcb816c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-3339438144672139053
+--- !u!114 &-8780754627985467287
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,6 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cb47a730c616e4c912b35e6b2d83ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8455271773868540638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02489fd68c2203a4ea04a33bfd2415ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInGridRef:
+    m_AssetGUID: 1c5107e71b130ec4cafe6c3c342adb42
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  itemInSlotRef:
+    m_AssetGUID: 17275d8adde4b5a40a51c3b2e5af6d76
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,9 +49,9 @@ MonoBehaviour:
   m_Name: VMFactoriesConfig
   m_EditorClassIdentifier: 
   installers:
-  - {fileID: -3339438144672139053}
-  - {fileID: -4598397243904044048}
---- !u!114 &2571882241046911705
+  - {fileID: 8510783800769510532}
+  - {fileID: -8780754627985467287}
+--- !u!114 &1258740967233688229
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,6 +60,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cb47a730c616e4c912b35e6b2d83ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ee880650910ef341bea5dfffe066e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemInGridRef:
+    m_AssetGUID: 837c7a95a5f2c6b40b24934f661cd30e
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  itemInSlotRef:
+    m_AssetGUID: 0892000102395c0458b7be27cea73a7a
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &8510783800769510532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bc9386a6cc6414789ac8031fcb816c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsFactories:
+  - {fileID: 1258740967233688229}
+  - {fileID: -8455271773868540638}

@@ -1,4 +1,4 @@
-﻿using Game.Items;
+﻿using Game.Inventory;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
@@ -25,14 +25,14 @@ namespace Game.Guild
             set => guildRanks = new(value);
         }
 
-        public void SetCharacters(IEnumerable<CharacterInfo> value, IItemsService itemsService)
+        public void SetCharacters(IEnumerable<CharacterInfo> value, IInventoryService inventoryService)
         {
-            characters = new(value, itemsService);
+            characters = new(value, inventoryService);
         }
 
-        public IEnumerable<CharacterInfo> GetCharacters(IItemsService itemsService)
+        public IEnumerable<CharacterInfo> GetCharacters(IInventoryService inventoryService)
         {
-            return characters.GetValues(itemsService);
+            return characters.GetValues(inventoryService);
         }
     }
 }

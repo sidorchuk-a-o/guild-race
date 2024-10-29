@@ -16,6 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 708d4be007999b2428c1f1dbec15173d, type: 2}
   - {fileID: 11400000, guid: 23e93292939633e4c9458ef2fdca9a39, type: 2}
   - {fileID: 11400000, guid: 59826968d3d517b46a81b483dc164873, type: 2}
+  - {fileID: 11400000, guid: 09b287803d26ca04ab68b3d3106876b8, type: 2}
   loadingScreens:
   - id: f8164f25fc6d477bb6bebf78af8935d1
     title: StartApp

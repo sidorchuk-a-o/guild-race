@@ -1,26 +1,26 @@
 ﻿using AD.Services.Router;
-using Game.Items;
+using Game.Inventory;
 
 namespace Game.Guild
 {
     public class JoinRequestsVM : VMCollection<JoinRequestInfo, JoinRequestVM>
     {
         private readonly GuildVMFactory guildVMF;
-        private readonly ItemsVMFactory itemsVMF;
+        private readonly InventoryVMFactory inventoryVMF;
 
         public JoinRequestsVM(
             IJoinRequestsCollection values,
             GuildVMFactory guildVMF,
-            ItemsVMFactory itemsVMF)
+            InventoryVMFactory inventoryVMF)
             : base(values)
         {
             this.guildVMF = guildVMF;
-            this.itemsVMF = itemsVMF;
+            this.inventoryVMF = inventoryVMF;
         }
 
         protected override JoinRequestVM Create(JoinRequestInfo value)
         {
-            return new JoinRequestVM(value, guildVMF, itemsVMF);
+            return new JoinRequestVM(value, guildVMF, inventoryVMF);
         }
     }
 }

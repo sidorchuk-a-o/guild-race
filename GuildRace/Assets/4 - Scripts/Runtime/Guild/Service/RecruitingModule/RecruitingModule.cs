@@ -1,7 +1,7 @@
 ﻿using AD.Services.ProtectedTime;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
-using Game.Items;
+using Game.Inventory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +15,13 @@ namespace Game.Guild
     public class RecruitingModule : IRecruitingModule
     {
         private readonly GuildConfig guildConfig;
-        private readonly RecruitingModuleData data;
-        private readonly ItemsConfig itemsConfig;
+        private readonly RecruitingParams data;
+        private readonly InventoryConfig inventoryConfig;
 
         private readonly GuildState guildState;
         private readonly RecruitingState recruitingState;
 
-        private readonly IItemsService itemsService;
+        private readonly IInventoryService inventoryService;
         private readonly ITimeService time;
 
         public IReadOnlyReactiveProperty<bool> IsEnabled => recruitingState.IsEnabled;
@@ -32,19 +32,19 @@ namespace Game.Guild
         public RecruitingModule(
             GuildState guildState,
             GuildConfig guildConfig,
-            ItemsConfig itemsConfig,
-            IItemsService itemsService,
+            InventoryConfig inventoryConfig,
+            IInventoryService inventoryService,
             ITimeService time,
             IObjectResolver resolver)
         {
             this.guildConfig = guildConfig;
             this.guildState = guildState;
-            this.itemsConfig = itemsConfig;
-            this.itemsService = itemsService;
+            this.inventoryConfig = inventoryConfig;
+            this.inventoryService = inventoryService;
             this.time = time;
 
-            data = guildConfig.RecruitingModule;
-            recruitingState = new(guildConfig, itemsService, resolver);
+            data = guildConfig.RecruitingParams;
+            recruitingState = new(guildConfig, inventoryService, resolver);
         }
 
         public void SwitchRecruitingState()
@@ -101,12 +101,19 @@ namespace Game.Guild
 
             // new requests
 
+            var requestCount = recruitingState.Requests.Count;
+            var maxRequestCount = CalcMaxRequestCount();
+
+            if (requestCount >= maxRequestCount)
+            {
+                return;
+            }
+
             var deltaTime = (int)(currentTime - recruitingState.NextRequestTime).TotalSeconds;
             var midRequestTime = (data.MaxNextRequestTime - data.MinNextRequestTime) / 2f;
             var possibleRequestCount = Mathf.RoundToInt(deltaTime / midRequestTime);
 
-            var requestCount = recruitingState.Requests.Count;
-            var maxRequestCount = Random.Range(requestCount, CalcMaxRequestCount());
+            maxRequestCount = Random.Range(requestCount, maxRequestCount + 1);
 
             var newRequestCount = Mathf.Min(maxRequestCount - requestCount, possibleRequestCount);
 
@@ -213,10 +220,10 @@ namespace Game.Guild
                 return;
             }
 
-            var defaultRequests = guildConfig.RecruitingModule.DefaultCharacters.Select(x =>
+            var defaultRequests = guildConfig.RecruitingParams.DefaultCharacters.Select(x =>
             {
-                var classData = guildConfig.CharactersModule.GetClass(x.ClassId);
-                var specData = guildConfig.CharactersModule.GetSpecialization(x.SpecId);
+                var classData = guildConfig.CharactersParams.GetClass(x.ClassId);
+                var specData = guildConfig.CharactersParams.GetSpecialization(x.SpecId);
 
                 return CreateRequest(classData, specData, DateTime.MinValue);
             });
@@ -233,7 +240,7 @@ namespace Game.Guild
                 .WeightedSelection(GetClassRoleWeight)
                 .RoleId;
 
-            var (classData, specData) = guildConfig.CharactersModule
+            var (classData, specData) = guildConfig.CharactersParams
                 .GetSpecializations(roleId)
                 .RandomValue();
 
@@ -246,12 +253,15 @@ namespace Game.Guild
             var nickname = GetNickname(id);
 
             var recruitRank = guildState.GuildRanks.Last();
-            var equipSlots = itemsService.CreateDefaultSlots();
+
+            var equipSlotKeys = inventoryConfig.EquipsParams.SlotParams.Slots;
+            var equipSlots = inventoryService.Factory.CreateSlots(equipSlotKeys);
 
             CreateEquipItems(equipSlots, classData);
 
             var character = new CharacterInfo(id, nickname, classData.Id, equipSlots);
 
+            character.Init();
             character.SetGuildRank(recruitRank.Id);
             character.SetSpecialization(specData.Id);
 
@@ -266,15 +276,15 @@ namespace Game.Guild
         private float GetClassRoleWeight(ClassRoleSelectorInfo classRoleSelector)
         {
             return classRoleSelector.IsEnabled.Value
-                ? guildConfig.RecruitingModule.WeightSelectedRole
-                : guildConfig.RecruitingModule.WeightUnselectedRole;
+                ? guildConfig.RecruitingParams.WeightSelectedRole
+                : guildConfig.RecruitingParams.WeightUnselectedRole;
         }
 
-        private void CreateEquipItems(IEquipSlotsCollection equipSlots, ClassData classData)
+        private void CreateEquipItems(IItemSlotsCollection equipSlots, ClassData classData)
         {
             // вычисление среднего уровня на основе среднего уровня текущих членов гильдии
 
-            var recruitingData = guildConfig.RecruitingModule;
+            var recruitingData = guildConfig.RecruitingParams;
             var midEquipLevel = recruitingData.MinEquipLevel;
 
             var characterGroupsWeight = recruitingData.CharacterGroupsWeights;
@@ -307,7 +317,7 @@ namespace Game.Guild
             var armorType = classData.ArmorType;
             var weaponType = classData.WeaponType;
 
-            var equipItemsPool = itemsConfig.EquipsParams.Items
+            var equipItemsPool = inventoryConfig.EquipsParams.Items
                 .Where(x => x.Type == armorType || x.Type == weaponType)
                 .ToListPool();
 
@@ -338,7 +348,7 @@ namespace Game.Guild
         private void CreatePhaseItems(
             EquipGeneratorPhaseData phaseData,
             IReadOnlyList<EquipItemData> equipsPool,
-            IEnumerable<EquipSlotInfo> equipSlots,
+            IEnumerable<ItemSlotInfo> equipSlots,
             int midEquipLevel)
         {
             var minLevel = midEquipLevel - phaseData.MinEquipLevel;
@@ -356,7 +366,7 @@ namespace Game.Guild
                     .Where(x => x.Slot == slotType)
                     .RandomValue();
 
-                var equipItem = itemsService.CreateItemInfo(equipData);
+                var equipItem = inventoryService.Factory.CreateItem(equipData);
 
                 equipSlot.SetItem(equipItem as EquipItemInfo);
             }

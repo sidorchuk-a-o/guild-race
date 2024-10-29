@@ -4,7 +4,7 @@ using AD.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Guild;
-using Game.Items;
+using Game.Inventory;
 using System;
 using System.Threading;
 using UniRx;
@@ -29,7 +29,7 @@ namespace Game
         [SerializeField] private UIText specNameText;
         [SerializeField] private UIText guildRankText;
         [Space]
-        [SerializeField] private EquipSlotsContainer equipSlotsContainer;
+        [SerializeField] private ItemSlotsContainer equipSlotsContainer;
 
         private readonly CompositeDisp characterDisp = new();
         private CancellationTokenSource characterToken;

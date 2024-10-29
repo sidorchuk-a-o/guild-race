@@ -5,7 +5,7 @@ using UniRx;
 
 namespace Game.Guild
 {
-    public class RecruitingVM : VMBase
+    public class RecruitingVM : ViewModel
     {
         private readonly IRecruitingModule module;
 

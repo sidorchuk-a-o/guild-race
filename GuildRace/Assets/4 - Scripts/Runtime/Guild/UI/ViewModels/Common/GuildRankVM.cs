@@ -4,7 +4,7 @@ using UniRx;
 
 namespace Game.Guild
 {
-    public class GuildRankVM : VMBase
+    public class GuildRankVM : ViewModel
     {
         public GuildRankId Id { get; }
         public IReadOnlyReactiveProperty<string> Name { get; }

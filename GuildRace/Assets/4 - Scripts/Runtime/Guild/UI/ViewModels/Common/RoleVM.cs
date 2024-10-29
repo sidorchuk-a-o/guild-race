@@ -4,7 +4,7 @@ using AD.ToolsCollection;
 
 namespace Game.Guild
 {
-    public class RoleVM : VMBase
+    public class RoleVM : ViewModel
     {
         public RoleId Id { get; }
         public LocalizeKey NameKey { get; }

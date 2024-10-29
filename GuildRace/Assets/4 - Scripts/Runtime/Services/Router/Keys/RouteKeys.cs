@@ -24,5 +24,11 @@ namespace AD.Services.Router
             public static readonly RouteKey declineJointRequest = new("b610db7aafe4494e86002c1b7c38a10a");
             public static readonly RouteKey recruitingSettings = new("d99256e407a84e348d6cecdce00bcdb1");
         }
+        public static class Inventory
+        {
+            public static readonly RouteKey splittingItemDialog = new("4bc6641ae77d42beb7f6b8bbd299c5ec");
+            public static readonly RouteKey transferItemDialog = new("00bc352d72324586b868701491aa2207");
+            public static readonly RouteKey discardItemDialog = new("06ac16fcc58645f098914571463282bc");
+        }
     }
 }
