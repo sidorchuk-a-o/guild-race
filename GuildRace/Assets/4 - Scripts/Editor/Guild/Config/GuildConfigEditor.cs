@@ -10,8 +10,8 @@ namespace Game.Guild
         private PropertyElement maxCharactersCountField;
         private GuildRanksList defaultGuildRanksList;
 
-        private CharactersParamsEditor charactersModuleEditor;
-        private RecruitingParamsEditor recruitingModuleEditor;
+        private CharactersParamsEditor charactersParamsEditor;
+        private RecruitingParamsEditor recruitingParamsEditor;
         private GuildBankParamsEditor guildBankParamsEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
@@ -39,14 +39,14 @@ namespace Game.Guild
 
         private void CreateCharactersTabs(TabsContainer tabs)
         {
-            charactersModuleEditor = new CharactersParamsEditor();
-            charactersModuleEditor.CreateTabs(tabs);
+            charactersParamsEditor = new CharactersParamsEditor();
+            charactersParamsEditor.CreateTabs(tabs);
         }
 
         private void CreateRecruitingTabs(TabsContainer tabs)
         {
-            recruitingModuleEditor = new RecruitingParamsEditor();
-            recruitingModuleEditor.CreateTabs(tabs);
+            recruitingParamsEditor = new RecruitingParamsEditor();
+            recruitingParamsEditor.CreateTabs(tabs);
         }
 
         private void CreateGuildBankTabs(TabsContainer tabs)

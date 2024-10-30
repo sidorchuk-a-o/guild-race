@@ -2,13 +2,11 @@
 
 namespace Game.Inventory
 {
-    public class ItemSlotsList : ListElement<ItemSlotData, ItemSlotItem>
+    public abstract class ItemSlotsList<TData> : ListElement<TData, ItemSlotItem>
+        where TData : ItemSlotData
     {
         public override void BindData(SerializedData data)
         {
-            headerTitle = "Item Slots";
-            wizardType = typeof(ItemSlotCreateWizard);
-
             showCloneButton = false;
 
             base.BindData(data);

@@ -253,11 +253,9 @@ namespace Game.Guild
         {
             var id = GuidUtils.Generate();
             var nickname = GetNickname(id);
-
             var recruitRank = guildState.GuildRanks.Last();
 
-            var equipSlotKeys = inventoryConfig.EquipsParams.SlotParams.Slots;
-            var equipSlots = inventoryService.Factory.CreateSlots(equipSlotKeys);
+            var equipSlots = CreateEquipSlots(classData);
 
             CreateEquipItems(equipSlots, classData);
 
@@ -282,7 +280,34 @@ namespace Game.Guild
                 : guildConfig.RecruitingParams.WeightUnselectedRole;
         }
 
-        private void CreateEquipItems(IItemSlotsCollection equipSlots, ClassData classData)
+        private IReadOnlyList<EquipSlotInfo> CreateEquipSlots(ClassData classData)
+        {
+            var equipsParams = inventoryConfig.EquipsParams;
+
+            var equipSlots = equipsParams.Slots
+                .Select(inventoryService.Factory.CreateSlot)
+                .Cast<EquipSlotInfo>()
+                .ToList();
+
+            // маркировка слотов типом предмета
+
+            var armorType = classData.ArmorType;
+            var weaponType = classData.WeaponType;
+
+            var armorGroup = (EquipGroup)equipsParams.GetGroup(armorType).Id;
+
+            foreach (var equipSlot in equipSlots)
+            {
+                var equipGroup = equipSlot.EquipGroup;
+                var equipType = equipGroup == armorGroup ? armorType : weaponType;
+
+                equipSlot.SetEquipType(equipType);
+            }
+
+            return equipSlots;
+        }
+
+        private void CreateEquipItems(IReadOnlyList<EquipSlotInfo> equipSlots, ClassData classData)
         {
             // вычисление среднего уровня на основе среднего уровня текущих членов гильдии
 
@@ -311,6 +336,7 @@ namespace Game.Guild
                     .Group;
 
                 midEquipLevel = characterGroup.Sum(x => x.ItemsLevel.Value) / characterGroup.Length;
+                midEquipLevel = Mathf.Max(midEquipLevel, recruitingData.MinEquipLevel);
             }
 
             // пул предметов доступных для персонажа
@@ -318,8 +344,9 @@ namespace Game.Guild
 
             var armorType = classData.ArmorType;
             var weaponType = classData.WeaponType;
+            var equipsParams = inventoryConfig.EquipsParams;
 
-            var equipItemsPool = inventoryConfig.EquipsParams.Items
+            var equipItemsPool = equipsParams.Items
                 .Where(x => x.Type == armorType || x.Type == weaponType)
                 .ToListPool();
 
@@ -349,14 +376,14 @@ namespace Game.Guild
 
         private void CreatePhaseItems(
             EquipGeneratorPhaseData phaseData,
-            IReadOnlyList<EquipItemData> equipsPool,
-            IEnumerable<ItemSlotInfo> equipSlots,
+            IReadOnlyList<EquipItemData> equipItems,
+            IEnumerable<EquipSlotInfo> equipSlots,
             int midEquipLevel)
         {
             var minLevel = midEquipLevel - phaseData.MinEquipLevel;
             var maxLevel = midEquipLevel + phaseData.MaxEquipLevel;
 
-            var firstPhaseItems = equipsPool
+            var filteredEquips = equipItems
                 .Where(x => x.Level >= minLevel && x.Level <= maxLevel)
                 .ToListPool();
 
@@ -364,7 +391,7 @@ namespace Game.Guild
             {
                 var slotType = equipSlot.Slot;
 
-                var equipData = firstPhaseItems
+                var equipData = filteredEquips
                     .Where(x => x.Slot == slotType)
                     .RandomValue();
 
@@ -373,7 +400,7 @@ namespace Game.Guild
                 equipSlot.SetItem(equipItem as EquipItemInfo);
             }
 
-            firstPhaseItems.ReleaseListPool();
+            filteredEquips.ReleaseListPool();
         }
     }
 }

@@ -15,5 +15,12 @@
             Rarity = data.Rarity;
             Type = data.Type;
         }
+
+        public override bool CheckSlotParams(ItemSlotInfo itemSlot)
+        {
+            return base.CheckSlotParams(itemSlot)
+                && itemSlot is EquipSlotInfo equipSlot
+                && equipSlot.EquipType == Type;
+        }
     }
 }

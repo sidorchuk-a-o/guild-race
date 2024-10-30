@@ -3,29 +3,19 @@
 namespace Game.Inventory
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class ItemSlotSM
+    public abstract class ItemSlotSM
     {
-        [ES3Serializable] private string id;
-        [ES3Serializable] private string slot;
-        [ES3Serializable] private ItemSM itemSM;
+        [ES3Serializable] protected string id;
+        [ES3Serializable] protected string dataId;
+        [ES3Serializable] protected ItemSM itemSM;
+
+        public string DataId => dataId;
 
         public ItemSlotSM(ItemSlotInfo info, IInventoryFactory inventoryFactory)
         {
             id = info.Id;
-            slot = info.Slot;
+            dataId = info.DataId;
             itemSM = inventoryFactory.CreateItemSave(info.Item.Value);
-        }
-
-        public ItemSlotInfo GetValue(InventoryConfig config, IInventoryFactory inventoryFactory)
-        {
-            var slotData = config.ItemSlotsParams.GetSlot(slot);
-            var slotInfo = new ItemSlotInfo(id, slotData);
-
-            var itemInfo = inventoryFactory.ReadItemSave(itemSM);
-
-            slotInfo.SetItem(itemInfo);
-
-            return slotInfo;
         }
     }
 }

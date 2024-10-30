@@ -15,6 +15,6 @@ namespace Game.Inventory
         public AssetReference ItemInGridRef => itemInGridRef;
         public AssetReference ItemInSlotRef => itemInSlotRef;
 
-        public abstract ItemVM Create(ItemInfo itemInfo, InventoryVMFactory inventoryVMF);
+        public abstract ItemVM Create(ItemInfo info, InventoryVMFactory inventoryVMF);
     }
 }

@@ -95,14 +95,14 @@ namespace Game.Inventory
 
             if (positionOnViewport.y < viewportRect.min.y + holdScrollPadding)
             {
-                scrollValue -= selectedScrollRect.scrollSensitivity * 10 * Time.deltaTime;
+                scrollValue -= selectedScrollRect.scrollSensitivity * 50 * Time.deltaTime;
 
                 selectedScrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollValue / viewportRect.height);
             }
 
             if (positionOnViewport.y > viewportRect.max.y - holdScrollPadding)
             {
-                scrollValue += selectedScrollRect.scrollSensitivity * 10 * Time.deltaTime;
+                scrollValue += selectedScrollRect.scrollSensitivity * 50 * Time.deltaTime;
 
                 selectedScrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollValue / viewportRect.height);
             }
@@ -125,14 +125,14 @@ namespace Game.Inventory
 
             if (positionOnViewport.y < viewportRect.min.y + holdScrollPadding)
             {
-                scrollValue -= selectedScrollViewRect.ScrollSensitivity * 10 * Time.deltaTime;
+                scrollValue -= selectedScrollViewRect.ScrollSensitivity * Time.deltaTime;
 
                 selectedScrollViewRect.SetNormalizedPosition(Mathf.Clamp01(scrollValue / viewportRect.height));
             }
 
             if (positionOnViewport.y > viewportRect.max.y - holdScrollPadding)
             {
-                scrollValue += selectedScrollViewRect.ScrollSensitivity * 10 * Time.deltaTime;
+                scrollValue += selectedScrollViewRect.ScrollSensitivity * Time.deltaTime;
 
                 selectedScrollViewRect.SetNormalizedPosition(Mathf.Clamp01(scrollValue / viewportRect.height));
             }

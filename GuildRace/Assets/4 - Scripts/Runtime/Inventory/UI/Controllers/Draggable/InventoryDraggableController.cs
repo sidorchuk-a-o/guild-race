@@ -62,20 +62,20 @@ namespace Game.Inventory
 
         public void Init(CompositeDisp disp)
         {
-            inventoryInputs.SplittingModeOn
-                .Subscribe(SplittingModeChangedCallback)
-                .AddTo(disp);
-
-            inventoryInputs.OnRotateItem
-                .Subscribe(RotateItemCallback)
-                .AddTo(disp);
-
             inventoryInputs.OnPickupItem
                 .Subscribe(PickupItemCallback)
                 .AddTo(disp);
 
             inventoryInputs.OnReleaseItem
                 .Subscribe(ReleaseItemCallback)
+                .AddTo(disp);
+
+            inventoryInputs.OnRotateItem
+                .Subscribe(RotateItemCallback)
+                .AddTo(disp);
+
+            inventoryInputs.SplittingModeOn
+                .Subscribe(SplittingModeChangedCallback)
                 .AddTo(disp);
 
             ItemSlotContainer.OnInited

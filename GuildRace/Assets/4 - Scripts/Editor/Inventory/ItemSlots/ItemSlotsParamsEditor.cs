@@ -8,7 +8,7 @@ namespace Game.Inventory
     /// </summary>
     public class ItemSlotsParamsEditor
     {
-        private ItemSlotsList slotsList;
+        private ItemSlotsFactoriesList factoriesList;
 
         private SerializedData GetData(SerializedData data)
         {
@@ -17,16 +17,16 @@ namespace Game.Inventory
 
         public void CreateTabs(TabsContainer tabs)
         {
-            tabs.CreateTab("Slots", CreateSlotsTab);
+            tabs.CreateTab("Params", CreateSlotsTab);
         }
 
         private void CreateSlotsTab(VisualElement root, SerializedData data)
         {
             root.ConvertToRow();
 
-            slotsList = root.CreateElement<ItemSlotsList>();
-            slotsList.BindProperty("slots", GetData(data));
-            slotsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            factoriesList = root.CreateElement<ItemSlotsFactoriesList>();
+            factoriesList.BindProperty("factories", GetData(data));
+            factoriesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
         }
     }
 }

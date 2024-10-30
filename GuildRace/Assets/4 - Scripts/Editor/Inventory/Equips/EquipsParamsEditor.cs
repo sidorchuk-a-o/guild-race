@@ -9,8 +9,8 @@ namespace Game.Inventory
     public class EquipsParamsEditor
     {
         private EquipItemsList itemsList;
+        private EquipSlotsList slotsList;
         private EquipGroupsList groupsList;
-        private SlotParamsForItemsElement slotParamsEditor;
         private GridParamsForItemsElement gridParamsEditor;
 
         private SerializedData GetData(SerializedData data)
@@ -34,13 +34,13 @@ namespace Game.Inventory
         {
             root.ConvertToRow();
 
+            slotsList = root.CreateElement<EquipSlotsList>();
+            slotsList.BindProperty("slots", GetData(data));
+            slotsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+
             groupsList = root.CreateElement<EquipGroupsList>();
             groupsList.BindProperty("groups", GetData(data));
             groupsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
-
-            slotParamsEditor = root.CreateElement<SlotParamsForItemsElement>();
-            slotParamsEditor.BindProperty("slotParams", GetData(data));
-            slotParamsEditor.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
 
             gridParamsEditor = root.CreateElement<GridParamsForItemsElement>();
             gridParamsEditor.BindProperty("gridParams", GetData(data));

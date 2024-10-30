@@ -15,7 +15,7 @@ namespace Game.Inventory
 
         protected override ItemSlotVM Create(ItemSlotInfo value)
         {
-            return inventoryVMF.CreateItemSlot(value);
+            return inventoryVMF.CreateSlot(value);
         }
     }
 }

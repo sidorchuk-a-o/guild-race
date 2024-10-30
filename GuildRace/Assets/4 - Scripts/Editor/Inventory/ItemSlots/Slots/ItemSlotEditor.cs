@@ -4,8 +4,10 @@ using UnityEngine.UIElements;
 
 namespace Game.Inventory
 {
-    [InventoryEditor(typeof(ItemSlotData))]
-    public class ItemSlotEditor : EntityEditor
+    /// <summary>
+    /// Editor: <see cref="ItemSlotData"/>
+    /// </summary>
+    public abstract class ItemSlotEditor : EntityEditor
     {
         private KeyElement nameKeyField;
 
@@ -13,13 +15,15 @@ namespace Game.Inventory
         {
             base.CreateTabItems(tabs);
 
-            tabs.CreateTab("Common", CreateCommonTab);
+            tabs.CreateTab("Params", CreateCommonTab);
 
             tabs.content.Width(50, LengthUnit.Percent);
         }
 
-        private void CreateCommonTab(VisualElement root, SerializedData data)
+        protected virtual void CreateCommonTab(VisualElement root, SerializedData data)
         {
+            root.CreateHeader("View");
+
             nameKeyField = root.CreateKey<LocalizeKey>();
             nameKeyField.BindProperty("nameKey", data);
         }

@@ -9,9 +9,9 @@ namespace Game.Inventory
         private readonly InventoryState state;
         private readonly InventoryConfig config;
 
-        private readonly ItemSlotsFactory itemSlotsFactory;
-        private readonly ItemsGridsFactory itemsGridsFactory;
         private readonly Dictionary<string, ItemsFactory> itemsFactories;
+        private readonly Dictionary<string, ItemSlotsFactory> slotsFactories;
+        private readonly ItemsGridsFactory itemsGridsFactory;
 
         public InventoryFactory(InventoryState state, InventoryConfig config)
         {
@@ -19,11 +19,14 @@ namespace Game.Inventory
             this.config = config;
 
             var itemsParams = config.ItemsParams;
+            var slotsParams = config.ItemSlotsParams;
 
             itemsFactories = itemsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
             itemsFactories.ForEach(x => x.Value.Init(state, config));
 
-            itemSlotsFactory = new(state, config, this);
+            slotsFactories = slotsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
+            slotsFactories.ForEach(x => x.Value.Init(state, config, this));
+
             itemsGridsFactory = new(state, config, this);
         }
 
@@ -120,9 +123,28 @@ namespace Game.Inventory
 
         // == Slot ==
 
-        public ItemSlotInfo CreateSlot(ItemSlot slot)
+        public ItemSlotInfo CreateSlot(string id)
         {
-            return itemSlotsFactory.CreateInfo(slot);
+            var data = config.GetSlot(id);
+
+            return CreateSlot(data);
+        }
+
+        public ItemSlotInfo CreateSlot(ItemSlotData data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+
+            var slotsFactory = GetSlotsFactory(data);
+
+            if (slotsFactory == null)
+            {
+                return null;
+            }
+
+            return slotsFactory.CreateInfo(data);
         }
 
         public ItemSlotInfo RemoveSlot(string slotId)
@@ -132,29 +154,62 @@ namespace Game.Inventory
 
         public ItemSlotSM CreateSlotSave(ItemSlotInfo info)
         {
-            return itemSlotsFactory.CreateSave(info);
+            if (info == null)
+            {
+                return null;
+            }
+
+            var slotData = GetSlotData(info.DataId);
+            var slotsFactory = GetSlotsFactory(slotData);
+
+            if (slotsFactory == null)
+            {
+                return null;
+            }
+
+            return slotsFactory.CreateSave(info);
         }
 
         public ItemSlotInfo ReadSlotSave(ItemSlotSM save)
         {
-            return itemSlotsFactory.ReadSave(save);
+            if (save == null)
+            {
+                return null;
+            }
+
+            var slotData = GetSlotData(save.DataId);
+            var slotsFactory = GetSlotsFactory(slotData);
+
+            if (slotsFactory == null)
+            {
+                return null;
+            }
+
+            return slotsFactory.ReadSave(save);
         }
 
-        // == SLots ==
-
-        public IItemSlotsCollection CreateSlots(IReadOnlyList<ItemSlot> slots)
+        private ItemSlotData GetSlotData(string slotId)
         {
-            return itemSlotsFactory.CreateSlots(slots);
+            if (slotId.IsNullOrEmpty())
+            {
+                return null;
+            }
+
+            return config.GetSlot(slotId);
         }
 
-        public ItemSlotsSM CreateSlotsSave(IItemSlotsCollection values)
+        private ItemSlotsFactory GetSlotsFactory(ItemSlotData slotData)
         {
-            return itemSlotsFactory.CreateSave(values);
-        }
+            if (slotData == null)
+            {
+                return null;
+            }
 
-        public IItemSlotsCollection ReadSlotsSave(ItemSlotsSM save)
-        {
-            return itemSlotsFactory.ReadSave(save);
+            var typeName = slotData.GetType().Name;
+
+            slotsFactories.TryGetValue(typeName, out var factory);
+
+            return factory;
         }
 
         // == Items Grid ==

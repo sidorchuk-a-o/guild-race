@@ -68,6 +68,24 @@ MonoBehaviour:
   title: Staves
   nameKey:
     value: INVENTORY/STAVES_WEAPON_TTL
+--- !u!114 &-5055724457134045466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Chest
+  m_EditorClassIdentifier: 
+  id: cb1812212b76459dba75b58ae5bc5cbd
+  title: Chest
+  nameKey:
+    value: INVENTORY/CHEST_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
 --- !u!114 &-3779093435946907101
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fb4bf0322ae4b4aa241ff02c49756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3186314466370089909
+--- !u!114 &-2203948068236090948
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,29 +107,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Equip/Chest
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Legs
   m_EditorClassIdentifier: 
-  id: cd8f2a2e4d044c1ab1ff36ea55d5e594
-  title: Equip/Chest
+  id: 86c4907c0cab4e81bf1609220dfb2496
+  title: Hands
   nameKey:
-    value: INVENTORY/CHEST_EQUIP_TTL
---- !u!114 &-2753849578007319535
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Craft/Reagent
-  m_EditorClassIdentifier: 
-  id: e4c1fe8c16da4f3888ed1893812966fa
-  title: Craft/Reagent
-  nameKey:
-    value: <none>
+    value: INVENTORY/HANDS_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
 --- !u!114 &-1232920642671462375
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,22 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71807dc6b2580394b9e9169a09ea3059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-722413569288434315
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Equip/Legs
-  m_EditorClassIdentifier: 
-  id: a65665ed434644a598ead81953a88e9c
-  title: Equip/Legs
-  nameKey:
-    value: INVENTORY/LEGS_EQUIP_TTL
 --- !u!114 &-612337858966185010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,17 +199,16 @@ MonoBehaviour:
   equipsParams:
     items:
     - {fileID: 3626631985758391469}
+    slots:
+    - {fileID: 7758220366892444151}
+    - {fileID: 8421421517493034453}
+    - {fileID: -5055724457134045466}
+    - {fileID: -2203948068236090948}
+    - {fileID: 3447759200840401154}
+    - {fileID: 8025899803318761657}
     groups:
     - {fileID: 3204854204213755107}
     - {fileID: 8994209143043327010}
-    slotParams:
-      slots:
-      - value: fd1ffebf05a14675b2d7ab2107b82078
-      - value: 12fb29f6aa8048c988d56dc18aa8fc07
-      - value: cd8f2a2e4d044c1ab1ff36ea55d5e594
-      - value: 229fb7b5956a4b09a1a0c6c019d19e34
-      - value: a65665ed434644a598ead81953a88e9c
-      - value: 124d087265694aac9df07d18b0dfea7d
     gridParams:
       categories:
       - value: ccd1118c0e8844649103e35844fe1139
@@ -231,13 +218,19 @@ MonoBehaviour:
       - value: b96c32873e544b9897fc02b4d6445231
   reagentsParams:
     items: []
-    slotParams:
-      slots: []
+    slots: []
     gridParams:
       categories: []
       cellTypes: []
   items:
   - {fileID: 3626631985758391469}
+  itemSlots:
+  - {fileID: 7758220366892444151}
+  - {fileID: 8421421517493034453}
+  - {fileID: -5055724457134045466}
+  - {fileID: -2203948068236090948}
+  - {fileID: 3447759200840401154}
+  - {fileID: 8025899803318761657}
   itemsGrids:
   - {fileID: -6831772010934211210, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: -7773364321222611439, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
@@ -248,14 +241,8 @@ MonoBehaviour:
     - {fileID: -1232920642671462375}
     - {fileID: -7001324336208455771}
   itemSlotsParams:
-    slots:
-    - {fileID: 4840266573120246858}
-    - {fileID: 8157240301326994006}
-    - {fileID: -3186314466370089909}
-    - {fileID: 4284145231426879725}
-    - {fileID: -722413569288434315}
-    - {fileID: 8559675692173470868}
-    - {fileID: -2753849578007319535}
+    factories:
+    - {fileID: 6431083172281420682}
   itemsGridsParams:
     categories:
     - id: ccd1118c0e8844649103e35844fe1139
@@ -353,6 +340,24 @@ MonoBehaviour:
   - {fileID: 2128090944940625758}
   - {fileID: -308781833572085785}
   - {fileID: -277264037390273867}
+--- !u!114 &3447759200840401154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Legs
+  m_EditorClassIdentifier: 
+  id: acf5b2a195324d49961c61a499ee86da
+  title: Legs
+  nameKey:
+    value: INVENTORY/LEGS_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
 --- !u!114 &3528656383035835354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,7 +408,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   slot:
-    value: cd8f2a2e4d044c1ab1ff36ea55d5e594
+    value: cb1812212b76459dba75b58ae5bc5cbd
   source:
     value: 
   level: 10
@@ -428,38 +433,6 @@ MonoBehaviour:
   title: Daggers
   nameKey:
     value: INVENTORY/DAGGERS_WEAPON_TTL
---- !u!114 &4284145231426879725
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Equip/Hands
-  m_EditorClassIdentifier: 
-  id: 229fb7b5956a4b09a1a0c6c019d19e34
-  title: Equip/Hands
-  nameKey:
-    value: INVENTORY/HANDS_EQUIP_TTL
---- !u!114 &4840266573120246858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Equip/Head
-  m_EditorClassIdentifier: 
-  id: fd1ffebf05a14675b2d7ab2107b82078
-  title: Equip/Head
-  nameKey:
-    value: INVENTORY/HEAD_EQUIP_TTL
 --- !u!114 &5803818987983749537
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -518,6 +491,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e216c37a13ef4f43a2c29d2aedfa68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6431083172281420682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfaa2039235d52a44a18894bc0afe905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7128875099509460014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -534,7 +519,7 @@ MonoBehaviour:
   title: Sword Shield
   nameKey:
     value: INVENTORY/SWORD_SHIELD_WEAPON_TTL
---- !u!114 &8157240301326994006
+--- !u!114 &7758220366892444151
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,13 +528,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Equip/Shoulders
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Head
   m_EditorClassIdentifier: 
-  id: 12fb29f6aa8048c988d56dc18aa8fc07
-  title: Equip/Shoulders
+  id: 87565922985f46feb1697f73ef1f6120
+  title: Head
+  nameKey:
+    value: INVENTORY/HEAD_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
+--- !u!114 &8025899803318761657
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Weapon
+  m_EditorClassIdentifier: 
+  id: ba29dc04ba544b4f9e813dfc3a7de181
+  title: Weapon
+  nameKey:
+    value: INVENTORY/WEAPON_EQUIP_TTL
+  equipGroup:
+    value: bd9c92cac5434892827e8cb7bca90e3d
+--- !u!114 &8421421517493034453
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Shoulders
+  m_EditorClassIdentifier: 
+  id: 318f4e8cf5ec476aa52ed4002f7af736
+  title: Shoulders
   nameKey:
     value: INVENTORY/SHOULDERS_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
 --- !u!114 &8516279873877236565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -562,22 +585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a98ab7ab4c3aae45861c6edafb016fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8559675692173470868
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fa83520355c00499906e791020f5e9, type: 3}
-  m_Name: Equip/Weapon
-  m_EditorClassIdentifier: 
-  id: 124d087265694aac9df07d18b0dfea7d
-  title: Equip/Weapon
-  nameKey:
-    value: INVENTORY/WEAPON_EQUIP_TTL
 --- !u!114 &8611978902752092087
 MonoBehaviour:
   m_ObjectHideFlags: 1

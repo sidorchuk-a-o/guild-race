@@ -18,7 +18,8 @@ namespace Game.Inventory
         private readonly PoolContainer<Sprite> spritesPool;
         private readonly PoolContainer<GameObject> objectsPool;
 
-        private Dictionary<Type, ItemsVMFactory> itemFactoriesDict;
+        private Dictionary<Type, ItemsVMFactory> itemsFactoriesDict;
+        private Dictionary<Type, ItemSlotsVMFactory> slotsFactoriesDict;
 
         public InventoryVMFactory(IPoolsService pools, IInventoryService inventoryService)
         {
@@ -34,18 +35,23 @@ namespace Game.Inventory
             }
         }
 
-        public void SetItemFactories(IReadOnlyList<ItemsVMFactory> itemVMFactories)
+        public void SetItemsFactories(IReadOnlyList<ItemsVMFactory> itemsFactories)
         {
-            itemFactoriesDict = itemVMFactories.ToDictionary(x => x.InfoType, x => x);
+            itemsFactoriesDict = itemsFactories.ToDictionary(x => x.InfoType, x => x);
+        }
+
+        public void SetItemSlotsFactories(IReadOnlyList<ItemSlotsVMFactory> slotsFactories)
+        {
+            slotsFactoriesDict = slotsFactories.ToDictionary(x => x.InfoType, x => x);
         }
 
         // == Items ==
 
-        public ItemVM CreateItem(string itemId)
+        public ItemVM CreateItem(string id)
         {
-            var itemInfo = inventoryService.GetItem(itemId);
+            var info = inventoryService.GetItem(id);
 
-            return CreateItem(itemInfo);
+            return CreateItem(info);
         }
 
         public ItemVM CreateItem(ItemInfo info)
@@ -55,19 +61,33 @@ namespace Game.Inventory
                 return null;
             }
 
-            var factory = itemFactoriesDict[info.GetType()];
+            var factory = itemsFactoriesDict[info.GetType()];
 
             return factory.Create(info, this);
         }
 
         // == Slots ==
 
-        public ItemSlotVM CreateItemSlot(ItemSlotInfo info)
+        public ItemSlotVM CreateSlot(string id)
         {
-            return new ItemSlotVM(info, this);
+            var info = inventoryService.GetSlot(id);
+
+            return CreateSlot(info);
         }
 
-        public ItemSlotsVM CreateItemSlots(IItemSlotsCollection itemSlots)
+        public ItemSlotVM CreateSlot(ItemSlotInfo info)
+        {
+            if (info == null)
+            {
+                return null;
+            }
+
+            var factory = slotsFactoriesDict[info.GetType()];
+
+            return factory.Create(info, this);
+        }
+
+        public ItemSlotsVM CreateSlots(IItemSlotsCollection itemSlots)
         {
             return new ItemSlotsVM(itemSlots, this);
         }
@@ -155,7 +175,7 @@ namespace Game.Inventory
         public UniTask<GameObject> RentItemInGridAsync(ItemVM itemVM)
         {
             var type = itemVM.InfoType;
-            var factory = itemFactoriesDict[type];
+            var factory = itemsFactoriesDict[type];
 
             return objectsPool.RentAsync(factory.ItemInGridRef);
         }
@@ -163,7 +183,7 @@ namespace Game.Inventory
         public UniTask<GameObject> RentItemInSlotAsync(ItemVM itemVM)
         {
             var type = itemVM.InfoType;
-            var factory = itemFactoriesDict[type];
+            var factory = itemsFactoriesDict[type];
 
             return objectsPool.RentAsync(factory.ItemInSlotRef);
         }

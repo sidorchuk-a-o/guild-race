@@ -7,12 +7,14 @@ namespace Game.Inventory
     public class InventoryVMFactoryInstaller : VMFactoryInstaller<InventoryVMFactory>
     {
         [SerializeField] private List<ItemsVMFactory> itemsFactories;
+        [SerializeField] private List<ItemSlotsVMFactory> itemSlotsFactories;
 
         protected override void PostInstall()
         {
             base.PostInstall();
 
-            Instance.SetItemFactories(itemsFactories);
+            Instance.SetItemsFactories(itemsFactories);
+            Instance.SetItemSlotsFactories(itemSlotsFactories);
         }
     }
 }

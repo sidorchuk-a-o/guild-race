@@ -2,6 +2,7 @@
 using AD.ToolsCollection;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UniRx;
 using UnityEngine.AddressableAssets;
 
@@ -51,6 +52,19 @@ namespace Game.Inventory
         public void MarkAsRemoved()
         {
             isRemoved.Value = true;
+        }
+
+        // == Check Params ==
+
+        public virtual bool CheckGridParams(ItemsGridInfo itemsGrid)
+        {
+            return GridCategories.Contains(itemsGrid.Category)
+                && GridCellTypes.Contains(itemsGrid.CellType);
+        }
+
+        public virtual bool CheckSlotParams(ItemSlotInfo itemSlot)
+        {
+            return Slot == itemSlot.Slot;
         }
 
         // == IEquatable ==

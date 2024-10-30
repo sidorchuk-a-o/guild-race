@@ -10,9 +10,9 @@ namespace Game.Inventory
     {
         // Items
         [SerializeField] private List<EquipItemData> items;
+        [SerializeField] private List<EquipSlotData> slots;
         [SerializeField] private List<EquipGroupData> groups;
         // Params
-        [SerializeField] private SlotParamsForItems slotParams = new();
         [SerializeField] private GridParamsForItems gridParams = new();
 
         private Dictionary<EquipType, EquipTypeData> typesCache;
@@ -20,9 +20,9 @@ namespace Game.Inventory
         private Dictionary<EquipType, EquipGroupData> groupsByTypeCache;
 
         public IReadOnlyList<EquipItemData> Items => items;
+        public IReadOnlyList<EquipSlotData> Slots => slots;
         public IReadOnlyList<EquipGroupData> Groups => groups;
 
-        public SlotParamsForItems SlotParams => slotParams;
         public GridParamsForItems GridParams => gridParams;
 
         public EquipTypeData GetType(EquipType type)

@@ -50,14 +50,14 @@ namespace Game.Inventory
             rollbackHandlersList = root.CreateElement<ReleaseHandlersList>();
             rollbackHandlersList.headerTitle = "Rollback Handlers";
             rollbackHandlersList.BindProperty("rollbackHandlers", GetData(data));
-            rollbackHandlersList.FlexGrow(1).MaxWidth(25, LengthUnit.Percent).MarginRight(10);
+            rollbackHandlersList.FlexGrow(1).MaxWidth(25, LengthUnit.Percent);
         }
 
         private void CreateOptionsTab(VisualElement root, SerializedData data)
         {
             optionHandlersList = root.CreateElement<OptionHandlersList>();
             optionHandlersList.BindProperty("optionHandlers", GetData(data));
-            optionHandlersList.MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            optionHandlersList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
         }
 
         private void CreateGridTab(VisualElement root, SerializedData data)

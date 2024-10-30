@@ -12,6 +12,7 @@ namespace Game.Inventory
         [SerializeField] private ReagentsParams reagentsParams = new();
         // Database
         [SerializeField] private List<ItemData> items = new();
+        [SerializeField] private List<ItemSlotData> itemSlots = new();
         [SerializeField] private List<ItemsGridData> itemsGrids = new();
         // Params
         [SerializeField] private ItemsParams itemsParams = new();
@@ -21,6 +22,7 @@ namespace Game.Inventory
         [SerializeField] private UIParams uiParams = new();
 
         private Dictionary<string, ItemData> itemsCache;
+        private Dictionary<string, ItemSlotData> itemSlotsCache;
         private Dictionary<string, ItemsGridData> itemsGridsCache;
 
         public EquipsParams EquipsParams => equipsParams;
@@ -40,15 +42,25 @@ namespace Game.Inventory
         public ItemData GetItem(string id)
         {
             itemsCache ??= items.ToDictionary(x => x.Id, x => x);
+            itemsCache.TryGetValue(id, out var data);
 
-            return itemsCache.TryGetValue(id, out var data) ? data : null;
+            return data;
+        }
+
+        public ItemSlotData GetSlot(string id)
+        {
+            itemSlotsCache ??= itemSlots.ToDictionary(x => x.Id, x => x);
+            itemSlotsCache.TryGetValue(id, out var data);
+
+            return data;
         }
 
         public ItemsGridData GetGrid(string id)
         {
             itemsGridsCache ??= itemsGrids.ToDictionary(x => x.Id, x => x);
+            itemsGridsCache.TryGetValue(id, out var data);
 
-            return itemsGridsCache.TryGetValue(id, out var data) ? data : null;
+            return data;
         }
     }
 }

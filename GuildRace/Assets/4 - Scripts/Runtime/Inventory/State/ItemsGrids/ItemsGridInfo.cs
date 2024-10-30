@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Game.Inventory
@@ -30,7 +29,7 @@ namespace Game.Inventory
 
         public bool CheckPossibilityOfPlacement(ItemInfo item, in Vector3Int positionOnGrid)
         {
-            if (!CheckGridParams(item))
+            if (!item.CheckGridParams(this))
             {
                 return false;
             }
@@ -52,7 +51,7 @@ namespace Game.Inventory
 
         public bool TryPlaceItem(ItemInfo item, in Vector3Int positionOnGrid)
         {
-            if (!CheckGridParams(item))
+            if (!item.CheckGridParams(this))
             {
                 return false;
             }
@@ -76,7 +75,7 @@ namespace Game.Inventory
 
         public bool CheckPossibilityOfPlacement(ItemInfo item)
         {
-            if (!CheckGridParams(item))
+            if (!item.CheckGridParams(this))
             {
                 return false;
             }
@@ -196,21 +195,6 @@ namespace Game.Inventory
         }
 
         // == Common ==
-
-        private bool CheckGridParams(ItemInfo item)
-        {
-            if (!item.GridCategories.Contains(Category))
-            {
-                return false;
-            }
-
-            if (!item.GridCellTypes.Contains(CellType))
-            {
-                return false;
-            }
-
-            return true;
-        }
 
         private bool CheckItemBounds(in BoundsInt itemBounds)
         {

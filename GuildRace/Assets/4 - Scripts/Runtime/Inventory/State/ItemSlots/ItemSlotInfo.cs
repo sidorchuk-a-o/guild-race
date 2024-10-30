@@ -4,11 +4,13 @@ using UniRx;
 
 namespace Game.Inventory
 {
-    public class ItemSlotInfo
+    public abstract class ItemSlotInfo
     {
         private readonly ReactiveProperty<ItemInfo> item = new();
 
         public string Id { get; }
+        public string DataId { get; }
+
         public ItemSlot Slot { get; }
         public LocalizeKey NameKey { get; }
 
@@ -18,6 +20,7 @@ namespace Game.Inventory
         public ItemSlotInfo(string id, ItemSlotData data)
         {
             Id = id;
+            DataId = data.Id;
             Slot = data.Id;
             NameKey = data.NameKey;
         }
@@ -30,7 +33,7 @@ namespace Game.Inventory
 
         public bool CheckPossibilityOfPlacement(ItemInfo itemInfo)
         {
-            return !HasItem && itemInfo.Slot == Slot;
+            return !HasItem && itemInfo.CheckSlotParams(this);
         }
 
         public bool TryAddItem(ItemInfo item)

@@ -182,8 +182,8 @@ MonoBehaviour:
     _Viewport: {fileID: 1776529909723963794}
     _Orientation: 0
     _Scrollbar: {fileID: 4178807749727479571}
-    _ScrollSensivity: 50
-    _ScrollSensivityOnXAxis: 50
+    _ScrollSensivity: 30
+    _ScrollSensivityOnXAxis: 30
     _ContentPadding:
       m_Left: 25
       m_Right: 25
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03cc8298506d7b942b27513aeb3c7a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSensitivity: 50
+  scrollSensitivity: 1500
 --- !u!1 &3650220438285983013
 GameObject:
   m_ObjectHideFlags: 0

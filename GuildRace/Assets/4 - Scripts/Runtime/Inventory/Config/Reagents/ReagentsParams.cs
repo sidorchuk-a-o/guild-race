@@ -9,13 +9,13 @@ namespace Game.Inventory
     {
         // Items
         [SerializeField] private List<ReagentItemData> items;
+        [SerializeField] private List<ReagentSlotData> slots;
         // Params
-        [SerializeField] private SlotParamsForItems slotParams = new();
         [SerializeField] private GridParamsForItems gridParams = new();
 
         public IReadOnlyList<ReagentItemData> Items => items;
+        public IReadOnlyList<ReagentSlotData> Slots => slots;
 
-        public SlotParamsForItems SlotParams => slotParams;
         public GridParamsForItems GridParams => gridParams;
     }
 }

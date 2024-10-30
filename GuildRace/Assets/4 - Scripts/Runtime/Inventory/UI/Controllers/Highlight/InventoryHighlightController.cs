@@ -241,7 +241,7 @@ namespace Game.Inventory
             }
             else if (highlightedItemVM != null)
             {
-                highlightedItemVM?.HighlightStateVM.ResetState();
+                highlightedItemVM.HighlightStateVM.ResetState();
                 highlightedItemVM = null;
             }
         }

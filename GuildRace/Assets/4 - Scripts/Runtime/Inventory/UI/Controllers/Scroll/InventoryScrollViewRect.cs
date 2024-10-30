@@ -9,7 +9,7 @@ namespace Game.Inventory
 {
     public class InventoryScrollViewRect : MonoBehaviour, IScrollRectProxy, IPointerEnterHandler, IPointerExitHandler
     {
-        [SerializeField] private float scrollSensitivity = 30;
+        [SerializeField] private float scrollSensitivity = 1500;
 
         private IScrollRectProxy scrollRect;
 

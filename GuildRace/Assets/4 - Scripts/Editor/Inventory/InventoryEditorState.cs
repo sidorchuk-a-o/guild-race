@@ -10,19 +10,27 @@ namespace Game.Inventory
     public class InventoryEditorState : EditorState<InventoryEditorState>
     {
         private InventoryConfig config;
+
         private InventoryEditorsFactory editorsFactory;
+        private ItemSlotEditorsFactory itemSlotEditorsFactory;
+
         private ItemVMEditorsFactory itemVMEditorsFactory;
+        private ItemSlotVMEditorsFactory itemSlotVMEditorsFactory;
+
         private PickupHandlerEditorsFactory pickupHandlersFactory;
         private ReleaseHandlerEditorsFactory releaseHandlerFactory;
         private OptionHandlerEditorsFactory optionHandlerFactory;
 
         private SerializedData itemsCacheData;
+        private SerializedData slotsCacheData;
         private SerializedData gridsCacheData;
 
         public static InventoryConfig Config => FindAsset(ref instance.config);
 
         public static InventoryEditorsFactory EditorsFactory => instance.editorsFactory ??= new();
+        public static ItemSlotEditorsFactory ItemSlotEditorsFactory => instance.itemSlotEditorsFactory ??= new();
         public static ItemVMEditorsFactory ItemVMEditorsFactory => instance.itemVMEditorsFactory ??= new();
+        public static ItemSlotVMEditorsFactory ItemSlotVMEditorsFactory => instance.itemSlotVMEditorsFactory ??= new();
         public static PickupHandlerEditorsFactory PickupHandlersFactory => instance.pickupHandlersFactory ??= new();
         public static ReleaseHandlerEditorsFactory ReleaseHandlerFactory => instance.releaseHandlerFactory ??= new();
         public static OptionHandlerEditorsFactory OptionHandlerFactory => instance.optionHandlerFactory ??= new();
@@ -64,6 +72,7 @@ namespace Game.Inventory
             var config = new SerializedData(Config);
 
             itemsCacheData = config.GetProperty("items");
+            slotsCacheData = config.GetProperty("itemSlots");
             gridsCacheData = config.GetProperty("itemsGrids");
         }
 
@@ -74,6 +83,7 @@ namespace Game.Inventory
                 case InventoryConfig: InitItemsCache(); break;
 
                 case ItemData: AddToCache(data, itemsCacheData); break;
+                case ItemSlotData: AddToCache(data, slotsCacheData); break;
                 case ItemsGridData: AddToCache(data, gridsCacheData); break;
             }
         }
@@ -83,6 +93,7 @@ namespace Game.Inventory
             switch (data)
             {
                 case ItemData: RemoveFromCache(data, itemsCacheData); break;
+                case ItemSlotData: RemoveFromCache(data, slotsCacheData); break;
                 case ItemsGridData: RemoveFromCache(data, gridsCacheData); break;
             }
         }
@@ -108,7 +119,18 @@ namespace Game.Inventory
 
         public static Collection<string> GetItemSlotsCollection()
         {
-            return Config.CreateKeyViewCollection<ItemSlotData>("itemSlotsParams.slots");
+            var keysDict = new Dictionary<string, string>();
+            var slots = Config.GetValue<List<ItemSlotData>>("itemSlots");
+
+            foreach (var slot in slots)
+            {
+                var slotType = slot.GetType();
+                var slotEditorData = ItemSlotEditorsFactory.GetEditorData(slotType);
+
+                keysDict[$"{slotEditorData.Title}/{slot.Title}"] = slot.Id;
+            }
+
+            return new(keysDict.Values, keysDict.Keys, autoSort: false);
         }
 
         public static Collection<string> GetItemsGridCategoriesCollection()
@@ -143,7 +165,7 @@ namespace Game.Inventory
                 }
             }
 
-            return new Collection<string>(keysDict.Values, keysDict.Keys, autoSort: false);
+            return new(keysDict.Values, keysDict.Keys, autoSort: false);
         }
 
         private static KeyScriptData GetOptionKeyScriptData() => new()

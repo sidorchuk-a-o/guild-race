@@ -4,7 +4,7 @@ using UniRx;
 
 namespace Game.Inventory
 {
-    public class ItemSlotVM : ViewModel
+    public abstract class ItemSlotVM : ViewModel
     {
         private readonly ItemSlotInfo info;
         private readonly InventoryVMFactory inventoryVMF;

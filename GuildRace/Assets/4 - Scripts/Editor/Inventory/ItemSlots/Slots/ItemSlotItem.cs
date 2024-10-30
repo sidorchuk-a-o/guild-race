@@ -7,6 +7,6 @@ namespace Game.Inventory
     /// </summary>
     public class ItemSlotItem : EntityListItemElement
     {
-        protected override IEditorsFactory EditorsFactory => InventoryEditorState.EditorsFactory;
+        protected override IEditorsFactory EditorsFactory => InventoryEditorState.ItemSlotEditorsFactory;
     }
 }

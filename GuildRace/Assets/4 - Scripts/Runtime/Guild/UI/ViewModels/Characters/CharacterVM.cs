@@ -37,7 +37,7 @@ namespace Game.Guild
             ItemsLevel = info.ItemsLevel;
 
             ClassVM = guildVMF.GetClass(info.ClassId);
-            EquiSlotsVM = inventoryVMF.CreateItemSlots(info.EquipSlots);
+            EquiSlotsVM = inventoryVMF.CreateSlots(info.EquipSlots);
         }
 
         protected override void InitSubscribes()

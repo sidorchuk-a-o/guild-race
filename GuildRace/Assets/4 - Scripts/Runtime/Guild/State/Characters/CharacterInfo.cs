@@ -1,5 +1,6 @@
 ﻿using AD.ToolsCollection;
 using Game.Inventory;
+using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace Game.Guild
         private readonly ReactiveProperty<SpecializationId> specId = new();
         private readonly ReactiveProperty<int> itemsLevel = new();
 
-        private readonly IItemSlotsCollection equipSlots;
+        private readonly ItemSlotsCollection equipSlots;
 
         public string Id { get; }
         public string Nickname { get; }
@@ -24,9 +25,9 @@ namespace Game.Guild
         public IReadOnlyReactiveProperty<int> ItemsLevel => itemsLevel;
         public IItemSlotsCollection EquipSlots => equipSlots;
 
-        public CharacterInfo(string id, string nickname, ClassId classId, IItemSlotsCollection equipSlots)
+        public CharacterInfo(string id, string nickname, ClassId classId, IEnumerable<EquipSlotInfo> equipSlots)
         {
-            this.equipSlots = equipSlots;
+            this.equipSlots = new(equipSlots);
 
             Id = id;
             Nickname = nickname;

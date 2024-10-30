@@ -6,9 +6,9 @@ namespace Game.Inventory
     {
         public override Type InfoType { get; } = typeof(EquipItemInfo);
 
-        public override ItemVM Create(ItemInfo itemInfo, InventoryVMFactory inventoryVMF)
+        public override ItemVM Create(ItemInfo info, InventoryVMFactory inventoryVMF)
         {
-            return new EquipItemVM(itemInfo as EquipItemInfo, inventoryVMF);
+            return new EquipItemVM(info as EquipItemInfo, inventoryVMF);
         }
     }
 }

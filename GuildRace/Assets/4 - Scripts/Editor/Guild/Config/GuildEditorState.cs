@@ -13,18 +13,18 @@ namespace Game.Guild
 
         public static Collection<string> CreateRolesViewCollection()
         {
-            return Config.CreateKeyViewCollection<RoleData>("charactersModule.roles");
+            return Config.CreateKeyViewCollection<RoleData>("charactersParams.roles");
         }
 
         public static Collection<string> CreateClassesViewCollection()
         {
-            return Config.CreateKeyViewCollection<ClassData>("charactersModule.classes");
+            return Config.CreateKeyViewCollection<ClassData>("charactersParams.classes");
         }
 
         public static Collection<string> CreateSpecializationsViewCollection()
         {
             var keysDict = new Dictionary<string, string> { ["< null >"] = null };
-            var classes = Config.GetValue<List<ClassData>>("charactersModule.classes");
+            var classes = Config.GetValue<List<ClassData>>("charactersParams.classes");
 
             foreach (var classData in classes)
             {
