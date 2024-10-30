@@ -4,8 +4,10 @@
       "version": "https://github.com/mob-sakai/SoftMaskForUGUI.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {},
-      "hash": "b870d64b5704a764fd03aaccb11f2dbe652b1756"
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "20a581b80077fb7465ed6eb6eb2aabc7e535b447"
     },
     "com.coffee.ui-effect": {
       "version": "https://github.com/mob-sakai/UIEffect.git",
@@ -22,7 +24,7 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
-      "hash": "686fff869000bdac0cb5b2ab6b1f3ed925839521"
+      "hash": "2e813c531325647f9d228100a76ab91cff993a00"
     },
     "com.cysharp.messagepipe": {
       "version": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe",
@@ -43,7 +45,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7c0f199fe0d3fc528024488ccd671e6c7b27745b"
+      "hash": "f9fd769be7c634610f2a61aa914a1a55f34740e1"
     },
     "com.neuecc.unirx": {
       "version": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
@@ -170,7 +172,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.17",
+      "version": "1.8.18",
       "depth": 3,
       "source": "registry",
       "dependencies": {
@@ -180,12 +182,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "2.4.3",
+      "version": "2.5.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {
-        "com.unity.burst": "1.8.13",
-        "com.unity.test-framework": "1.4.3",
+        "com.unity.burst": "1.8.17",
+        "com.unity.test-framework": "1.4.5",
         "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework.performance": "3.0.3"
       },
@@ -223,7 +225,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.11.1",
+      "version": "1.11.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -318,7 +320,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "afaeff82040994f7836afa9f5116eb52a4e54f69"
+      "hash": "931849c7a25d03784478550870ba53a2ee7c5c28"
     },
     "nl.jeffreylanters.web-requests": {
       "version": "git+https://github.com/jeffreylanters/unity-web-requests",
