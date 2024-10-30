@@ -2,6 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
 using Cysharp.Threading.Tasks;
+using Game.Inventory;
 using UniRx;
 using VContainer;
 
@@ -17,17 +18,20 @@ namespace Game.Guild
 
         public ICharactersCollection Characters => state.Characters;
         public IGuildRanksCollection GuildRanks => state.GuildRanks;
+        public IGuildBankTabsCollection BankTabs => state.BankTabs;
 
         public IRecruitingModule RecruitingModule => recruitingModule;
 
         public GuildService(
-            GuildConfig config,
+            GuildConfig guildConfig,
+            InventoryConfig inventoryConfig,
+            IInventoryService inventoryService,
             ILocalizationService localization,
             ITimeService time,
             IObjectResolver resolver)
         {
-            state = new(config, localization, resolver);
-            recruitingModule = new(config, state, time);
+            state = new(guildConfig, inventoryService, localization, resolver);
+            recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, time, resolver);
         }
 
         public override async UniTask<bool> Init()
@@ -42,6 +46,11 @@ namespace Game.Guild
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
         {
+            if (GuildExists == false)
+            {
+                recruitingModule.SwitchRecruitingState();
+            }
+
             state.CreateOrUpdateGuild(guildEM);
         }
 
@@ -52,17 +61,24 @@ namespace Game.Guild
 
         public int AcceptJoinRequest(string requestId)
         {
-            return state.AcceptJoinRequest(requestId);
+            var index = recruitingModule.AcceptJoinRequest(requestId, out var requestInfo);
+
+            if (index != -1)
+            {
+                state.AddCharacter(requestInfo.Character);
+            }
+
+            return index;
         }
 
         public int DeclineJoinRequest(string requestId)
         {
-            return state.RemoveJoinRequest(requestId);
+            return recruitingModule.RemoveRequest(requestId);
         }
 
         public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
         {
-            state.RecruitingState.SetClassRoleSelectorState(roleId, isEnabled);
+            recruitingModule.SetClassRoleSelectorState(roleId, isEnabled);
         }
     }
 }

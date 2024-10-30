@@ -1,25 +1,25 @@
 ﻿using AD.Services.Router;
-using AD.ToolsCollection;
+using Game.Inventory;
 
 namespace Game.Guild
 {
-    public class JoinRequestVM : VMBase
+    public class JoinRequestVM : ViewModel
     {
         public string Id { get; }
         public bool IsDefault { get; }
 
         public CharacterVM CharacterVM { get; }
 
-        public JoinRequestVM(JoinRequestInfo info, GuildVMFactory guildVMF)
+        public JoinRequestVM(JoinRequestInfo info, GuildVMFactory guildVMF, InventoryVMFactory inventoryVMF)
         {
             Id = info.Id;
             IsDefault = info.IsDefault;
-            CharacterVM = new CharacterVM(info.Character, guildVMF);
+            CharacterVM = new CharacterVM(info.Character, guildVMF, inventoryVMF);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            CharacterVM.AddTo(disp);
+            CharacterVM.AddTo(this);
         }
     }
 }

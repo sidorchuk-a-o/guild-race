@@ -2,6 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.Save;
 using AD.ToolsCollection;
+using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -14,9 +15,9 @@ namespace Game.Guild
         private readonly ReactiveProperty<string> name = new();
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
+        private readonly GuildBankTabsCollection bankTabs = new(null);
 
-        private readonly RecruitingState recruitingState;
-
+        private readonly IInventoryService inventoryService;
         private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
@@ -27,20 +28,34 @@ namespace Game.Guild
 
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
+        public IGuildBankTabsCollection BankTabs => bankTabs;
 
-        public RecruitingState RecruitingState => recruitingState;
-
-        public GuildState(GuildConfig config, ILocalizationService localization, IObjectResolver resolver)
+        public GuildState(
+            GuildConfig config,
+            IInventoryService inventoryService,
+            ILocalizationService localization,
+            IObjectResolver resolver)
             : base(config, resolver)
         {
+            this.inventoryService = inventoryService;
             this.localization = localization;
-
-            recruitingState = new(config, this);
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
         {
             name.Value = guildEM.Name;
+
+            MarkAsDirty();
+        }
+
+        public void AddCharacter(CharacterInfo info)
+        {
+            if (characters.Contains(info))
+            {
+                return;
+            }
+
+            characters.Add(info);
 
             MarkAsDirty();
         }
@@ -56,31 +71,20 @@ namespace Game.Guild
             return index;
         }
 
-        public int AcceptJoinRequest(string requestId)
-        {
-            var request = recruitingState.Requests.FirstOrDefault(x => x.Id == requestId);
-
-            characters.Add(request.Character);
-
-            return RemoveJoinRequest(request.Id);
-        }
-
-        public int RemoveJoinRequest(string requestId)
-        {
-            return recruitingState.RemoveRequest(requestId);
-        }
-
         // == Save ==
 
         protected override GuildSM CreateSave()
         {
-            return new GuildSM
+            var guildSM = new GuildSM
             {
                 Name = Name.Value,
-                Characters = Characters,
-                GuildRanks = GuildRanks,
-                Recruiting = RecruitingState.CreateSave()
+                GuildRanks = GuildRanks
             };
+
+            guildSM.SetCharacters(Characters, inventoryService);
+            guildSM.SetBankTabs(BankTabs, inventoryService);
+
+            return guildSM;
         }
 
         protected override void ReadSave(GuildSM save)
@@ -88,17 +92,16 @@ namespace Game.Guild
             if (save == null)
             {
                 guildRanks.AddRange(CreateDefaultGuildRanks());
+                bankTabs.AddRange(CreateDefaultBankTabs());
 
-                recruitingState.ReadSave(null);
                 return;
             }
 
             name.Value = save.Name;
 
             guildRanks.AddRange(save.GuildRanks);
-            characters.AddRange(save.Characters);
-
-            recruitingState.ReadSave(save.Recruiting);
+            characters.AddRange(save.GetCharacters(inventoryService));
+            bankTabs.AddRange(save.GetBankTabs(config, inventoryService));
         }
 
         private IEnumerable<GuildRankInfo> CreateDefaultGuildRanks()
@@ -108,6 +111,16 @@ namespace Game.Guild
                 var name = localization.Get(x.DefaultNameKey);
 
                 return new GuildRankInfo(x.Id, name);
+            });
+        }
+
+        private IEnumerable<GuildBankTabInfo> CreateDefaultBankTabs()
+        {
+            return config.GuildBankParams.Tabs.Select(x =>
+            {
+                var grid = inventoryService.Factory.CreateGrid(x.Grid);
+
+                return new GuildBankTabInfo(x, grid);
             });
         }
     }

@@ -1,11 +1,10 @@
 ﻿using AD.Services.Router;
-using AD.ToolsCollection;
 using System.Collections.Generic;
 using UniRx;
 
 namespace Game.Guild
 {
-    public class RecruitingVM : VMBase
+    public class RecruitingVM : ViewModel
     {
         private readonly IRecruitingModule module;
 
@@ -20,11 +19,11 @@ namespace Game.Guild
             ClassRoleSelectorsVM = guildVMF.GetClassRoleSelectors();
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
             foreach (var classRoleSelectorVM in ClassRoleSelectorsVM)
             {
-                classRoleSelectorVM.AddTo(disp);
+                classRoleSelectorVM.AddTo(this);
             }
         }
 

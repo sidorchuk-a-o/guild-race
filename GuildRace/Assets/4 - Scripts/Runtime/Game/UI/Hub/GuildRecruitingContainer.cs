@@ -4,6 +4,7 @@ using AD.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Guild;
+using Game.Inventory;
 using System.Threading;
 using UniRx;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace Game
         [SerializeField] private UIText nicknameText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
+        [Space]
+        [SerializeField] private ItemSlotsContainer equipSlotsContainer;
 
         [Header("Settings")]
         [SerializeField] private UIButton settingsButton;
@@ -41,6 +44,9 @@ namespace Game
 
         private void Awake()
         {
+            characterContainer.alpha = 0;
+            characterContainer.interactable = false;
+
             settingsButton.OnClick
                 .Subscribe(SettingsButtonCallback)
                 .AddTo(this);
@@ -165,9 +171,14 @@ namespace Game
             var characterVM = joinRequestVM.CharacterVM;
 
             nicknameText.SetTextParams(characterVM.Nickname);
-            itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
             specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
+
+            equipSlotsContainer.Init(characterVM.EquiSlotsVM, requestDisp);
+
+            characterVM.ItemsLevel
+                .Subscribe(x => itemsLevelText.SetTextParams(x))
+                .AddTo(requestDisp);
 
             await characterContainer.DOFade(1, duration);
         }

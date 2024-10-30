@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Inventory;
+using Newtonsoft.Json;
 
 namespace Game.Guild
 {
@@ -8,15 +9,15 @@ namespace Game.Guild
         [ES3Serializable] private long createdTime;
         [ES3Serializable] private CharacterSM characterSM;
 
-        public JoinRequestSM(JoinRequestInfo info)
+        public JoinRequestSM(JoinRequestInfo info, IInventoryService inventoryService)
         {
             createdTime = info.CreatedTime.Ticks;
-            characterSM = new CharacterSM(info.Character);
+            characterSM = new CharacterSM(info.Character, inventoryService);
         }
 
-        public JoinRequestInfo GetValue()
+        public JoinRequestInfo GetValue(IInventoryService inventoryService)
         {
-            var character = characterSM.GetValue();
+            var character = characterSM.GetValue(inventoryService);
 
             return new(character, new(createdTime));
         }

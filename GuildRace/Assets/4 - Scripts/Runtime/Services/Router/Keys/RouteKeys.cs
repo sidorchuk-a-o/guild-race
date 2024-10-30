@@ -15,6 +15,7 @@ namespace AD.Services.Router
             public static readonly RouteKey main = new("d6f3669a9a564d27838e811fa8b61417");
             public static readonly RouteKey roster = new("242d02a360db413fbc203ce58955890c");
             public static readonly RouteKey recruiting = new("213fcd3913be4f9092dc700d8020ebfc");
+            public static readonly RouteKey guildBank = new("3b396293764a4af5b1343cfbad262c57");
         }
         public static class Guild
         {
@@ -23,6 +24,12 @@ namespace AD.Services.Router
             public static readonly RouteKey acceptJointRequest = new("5f5d0747d56b4d0f9aa1d75b73fee228");
             public static readonly RouteKey declineJointRequest = new("b610db7aafe4494e86002c1b7c38a10a");
             public static readonly RouteKey recruitingSettings = new("d99256e407a84e348d6cecdce00bcdb1");
+        }
+        public static class Inventory
+        {
+            public static readonly RouteKey splittingItemDialog = new("4bc6641ae77d42beb7f6b8bbd299c5ec");
+            public static readonly RouteKey transferItemDialog = new("00bc352d72324586b868701491aa2207");
+            public static readonly RouteKey discardItemDialog = new("06ac16fcc58645f098914571463282bc");
         }
     }
 }

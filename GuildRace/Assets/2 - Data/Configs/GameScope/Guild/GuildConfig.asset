@@ -16,8 +16,32 @@ MonoBehaviour:
   title: Priest
   nameKey:
     value: CHARACTERS/CLASS_1_TTL
+  armorType:
+    value: 4514c8d7172c43399bc8fd3178b1f926
+  weaponType:
+    value: 04baea5bc23d425db4ab0b49ed36147e
   specs:
   - {fileID: 7198393799899164901}
+--- !u!114 &-7773364321222611439
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1c8c0f1295c247d184f008afbac2b4e0
+  title: 
+  rowSize: 11
+  rowCount: 20
+  category:
+    value: ccd1118c0e8844649103e35844fe1139
+  cellType:
+    value: b8dc37d890a74c7bb1ff1c1c73e35bb7
 --- !u!114 &-7600222629343561412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34,6 +58,26 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_4_TTL
+--- !u!114 &-6831772010934211210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7410c4e91ddd49c8aa4daa8bafac9800
+  title: 
+  rowSize: 11
+  rowCount: 20
+  category:
+    value: ccd1118c0e8844649103e35844fe1139
+  cellType:
+    value: b96c32873e544b9897fc02b4d6445231
 --- !u!114 &-6722420641676964884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,6 +144,10 @@ MonoBehaviour:
   title: Demonologist
   nameKey:
     value: CHARACTERS/CLASS_2_TTL
+  armorType:
+    value: 4514c8d7172c43399bc8fd3178b1f926
+  weaponType:
+    value: 8ffc4d70488b45409eef5be37e4b8e63
   specs:
   - {fileID: -4733274706201629649}
 --- !u!114 &-3730586026932445884
@@ -118,6 +166,29 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_5_TTL
+--- !u!114 &-1146228020903282579
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: cff0f4c155ef4343b8e5a6bc347cdbc5
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_EQUIPS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: -6831772010934211210}
 --- !u!114 &-1063255563526852419
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,7 +225,7 @@ MonoBehaviour:
   - {fileID: -5064181589344827625}
   - {fileID: -7600222629343561412}
   - {fileID: -3730586026932445884}
-  charactersModule:
+  charactersParams:
     maxEquipSlotCount: 6
     classes:
     - {fileID: 6246976285171924263}
@@ -164,7 +235,7 @@ MonoBehaviour:
     - {fileID: -1063255563526852419}
     - {fileID: 6298160343060774326}
     - {fileID: 6798043786150933415}
-  recruitingModule:
+  recruitingParams:
     minRequestCount: 5
     maxRequestCount: 15
     requestLifetime: 3600
@@ -172,6 +243,18 @@ MonoBehaviour:
     maxNextRequestTime: 120
     weightSelectedRole: 60
     weightUnselectedRole: 15
+    minEquipLevel: 10
+    characterGroupsWeights: 0f0000001e0000003c000000
+    firstPhase:
+      minEquipCount: 4
+      maxEquipCount: 5
+      minEquipLevel: 10
+      maxEquipLevel: 5
+    lastPhase:
+      minEquipCount: 1
+      maxEquipCount: 2
+      minEquipLevel: 5
+      maxEquipLevel: 10
     defaultCharacters:
     - id: eedcd1ecf942417c8e91e55656be6d8f
       title: Tank
@@ -197,6 +280,10 @@ MonoBehaviour:
         value: a9d2f2fa7d0f427d8bd9194c3e46037c
       specId:
         value: 02b71578fcbc466b919b19d5b02d9256
+  guildBankParams:
+    tabs:
+    - {fileID: -1146228020903282579}
+    - {fileID: 4847741651264621419}
 --- !u!114 &499257089889080854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,6 +300,29 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_0_TTL
+--- !u!114 &4847741651264621419
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8f4f667946bd407ea080f6a394b95f4e
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_REAGENTS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: -7773364321222611439}
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,6 +373,10 @@ MonoBehaviour:
   title: Warrior
   nameKey:
     value: CHARACTERS/CLASS_0_TTL
+  armorType:
+    value: 0939385155fe46aeb159207ffb3ab8fd
+  weaponType:
+    value: 578f88f69bb945188b475345f67a5f98
   specs:
   - {fileID: 5272075455439435193}
 --- !u!114 &6298160343060774326

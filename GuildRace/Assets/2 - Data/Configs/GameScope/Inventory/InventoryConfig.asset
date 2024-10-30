@@ -1,0 +1,636 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9104328803151399047
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe381b06d4c0974aa97069ba70464c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8928354529463672314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bad53f6eb408248940df3caa2eda46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7538872621634188431
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Fist
+  m_EditorClassIdentifier: 
+  id: a42f63bfa1134a29ad081a6fa579f3fb
+  title: Fist
+  nameKey:
+    value: INVENTORY/FIST_WEAPON_TTL
+--- !u!114 &-7001324336208455771
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb6b0a06edf6164fa96ad5898d0a210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6725473221984591030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Staves
+  m_EditorClassIdentifier: 
+  id: 04baea5bc23d425db4ab0b49ed36147e
+  title: Staves
+  nameKey:
+    value: INVENTORY/STAVES_WEAPON_TTL
+--- !u!114 &-5055724457134045466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Chest
+  m_EditorClassIdentifier: 
+  id: cb1812212b76459dba75b58ae5bc5cbd
+  title: Chest
+  nameKey:
+    value: INVENTORY/CHEST_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
+--- !u!114 &-3779093435946907101
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fb4bf0322ae4b4aa241ff02c49756d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2203948068236090948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Legs
+  m_EditorClassIdentifier: 
+  id: 86c4907c0cab4e81bf1609220dfb2496
+  title: Hands
+  nameKey:
+    value: INVENTORY/HANDS_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
+--- !u!114 &-1232920642671462375
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71807dc6b2580394b9e9169a09ea3059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-612337858966185010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe381b06d4c0974aa97069ba70464c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-605515206725505437
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c60fc701a4a89b4c8001bfad3dff272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-308781833572085785
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Leather
+  m_EditorClassIdentifier: 
+  id: 00def23e5b6b44638d004f5fbc32389e
+  title: Leather
+  nameKey:
+    value: INVENTORY/LEATHER_ARMOR_TTL
+--- !u!114 &-277264037390273867
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Plate
+  m_EditorClassIdentifier: 
+  id: 0939385155fe46aeb159207ffb3ab8fd
+  title: Plate
+  nameKey:
+    value: INVENTORY/PLATE_ARMOR_TTL
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75afa5020c89fad4f951a3d526540a35, type: 3}
+  m_Name: InventoryConfig
+  m_EditorClassIdentifier: 
+  equipsParams:
+    items:
+    - {fileID: 3626631985758391469}
+    slots:
+    - {fileID: 7758220366892444151}
+    - {fileID: 8421421517493034453}
+    - {fileID: -5055724457134045466}
+    - {fileID: -2203948068236090948}
+    - {fileID: 3447759200840401154}
+    - {fileID: 8025899803318761657}
+    groups:
+    - {fileID: 3204854204213755107}
+    - {fileID: 8994209143043327010}
+    gridParams:
+      categories:
+      - value: ccd1118c0e8844649103e35844fe1139
+      - value: 7ce4b29f857a492c9ddf3e693eefcbed
+      cellTypes:
+      - value: 020110f7a83640628b6bad4e8afbc52d
+      - value: b96c32873e544b9897fc02b4d6445231
+  reagentsParams:
+    items: []
+    slots: []
+    gridParams:
+      categories: []
+      cellTypes: []
+  items:
+  - {fileID: 3626631985758391469}
+  itemSlots:
+  - {fileID: 7758220366892444151}
+  - {fileID: 8421421517493034453}
+  - {fileID: -5055724457134045466}
+  - {fileID: -2203948068236090948}
+  - {fileID: 3447759200840401154}
+  - {fileID: 8025899803318761657}
+  itemsGrids:
+  - {fileID: -6831772010934211210, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: -7773364321222611439, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  itemsParams:
+    rarities:
+    - {fileID: 1814113300819470084}
+    factories:
+    - {fileID: -1232920642671462375}
+    - {fileID: -7001324336208455771}
+  itemSlotsParams:
+    factories:
+    - {fileID: 6431083172281420682}
+  itemsGridsParams:
+    categories:
+    - id: ccd1118c0e8844649103e35844fe1139
+      title: Guild Bank
+    - id: 7ce4b29f857a492c9ddf3e693eefcbed
+      title: Loot
+    cellTypes:
+    - id: 020110f7a83640628b6bad4e8afbc52d
+      title: Common
+    - id: b96c32873e544b9897fc02b4d6445231
+      title: Equips
+    - id: b8dc37d890a74c7bb1ff1c1c73e35bb7
+      title: Reagents
+  uiParams:
+    cellSize: 65
+    pickupHandlers:
+    - {fileID: 6301772883194522219}
+    - {fileID: -605515206725505437}
+    placeHandlers:
+    - {fileID: 3580327318598874604}
+    - {fileID: -3779093435946907101}
+    - {fileID: 8516279873877236565}
+    - {fileID: -612337858966185010}
+    - {fileID: -8928354529463672314}
+    splitHandlers:
+    - {fileID: -9104328803151399047}
+    - {fileID: 3528656383035835354}
+    rollbackHandlers:
+    - {fileID: 2734205929474609862}
+    - {fileID: 5803818987983749537}
+    optionHandlers:
+    - {fileID: 5987843277473568308}
+    - {fileID: 8611978902752092087}
+--- !u!114 &1814113300819470084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2fa940d2945704e8a36cf84a751ebf, type: 3}
+  m_Name: Common
+  m_EditorClassIdentifier: 
+  id: ffe3d402663c4b6da512a2e76e2a7c63
+  title: Common
+  nameKey:
+    value: INVENTORY/COMMON_RARITY_TTL
+--- !u!114 &2128090944940625758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Cloth
+  m_EditorClassIdentifier: 
+  id: 4514c8d7172c43399bc8fd3178b1f926
+  title: Cloth
+  nameKey:
+    value: INVENTORY/CLOTH_ARMOR_TTL
+--- !u!114 &2734205929474609862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cd7b5e811c589498ac2cb125c7e945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3204854204213755107
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd6dd5ed4a5c9243937b499c97bb21b, type: 3}
+  m_Name: Armor
+  m_EditorClassIdentifier: 
+  id: 46a81d60bcd34409928c1f501ce749d4
+  title: Armor
+  nameKey:
+    value: INVENTORY/ARMOR_GROUP_TTL
+  types:
+  - {fileID: 2128090944940625758}
+  - {fileID: -308781833572085785}
+  - {fileID: -277264037390273867}
+--- !u!114 &3447759200840401154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Legs
+  m_EditorClassIdentifier: 
+  id: acf5b2a195324d49961c61a499ee86da
+  title: Legs
+  nameKey:
+    value: INVENTORY/LEGS_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
+--- !u!114 &3528656383035835354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bad53f6eb408248940df3caa2eda46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3580327318598874604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52de55d73ee05c240bc1f6913bd04a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3626631985758391469
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: c49ed2d4128e4010b216b15e157f1d8b
+  title: 
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: 
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  slot:
+    value: cb1812212b76459dba75b58ae5bc5cbd
+  source:
+    value: 
+  level: 10
+  power: 15
+  rarity:
+    value: ffe3d402663c4b6da512a2e76e2a7c63
+  type:
+    value: 4514c8d7172c43399bc8fd3178b1f926
+--- !u!114 &3756156468903984131
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Daggers
+  m_EditorClassIdentifier: 
+  id: 8ffc4d70488b45409eef5be37e4b8e63
+  title: Daggers
+  nameKey:
+    value: INVENTORY/DAGGERS_WEAPON_TTL
+--- !u!114 &5803818987983749537
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33feae8feb103e46a4d3b3834d77559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5987843277473568308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3271942a6489a9644b8d4b6f01e13e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 257d7d9b5e5045f8a1ac3595db5b7741
+  title: Common/Inspect
+  titleKey:
+    value: INVENTORY/INSPECT_OPTION_TTL
+  iconRef:
+    m_AssetGUID: 55f5db2eae519ff4ba3fcc29f9ad0368
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  buttonRef:
+    m_AssetGUID: c7cfc34454137184ea5ec840b7061d2b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  windowRef:
+    m_AssetGUID: 288191d74af49a64a9c6ec5986881e40
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &6301772883194522219
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e216c37a13ef4f43a2c29d2aedfa68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6431083172281420682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfaa2039235d52a44a18894bc0afe905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7128875099509460014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: Sword Shield
+  m_EditorClassIdentifier: 
+  id: 578f88f69bb945188b475345f67a5f98
+  title: Sword Shield
+  nameKey:
+    value: INVENTORY/SWORD_SHIELD_WEAPON_TTL
+--- !u!114 &7758220366892444151
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Head
+  m_EditorClassIdentifier: 
+  id: 87565922985f46feb1697f73ef1f6120
+  title: Head
+  nameKey:
+    value: INVENTORY/HEAD_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
+--- !u!114 &8025899803318761657
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Weapon
+  m_EditorClassIdentifier: 
+  id: ba29dc04ba544b4f9e813dfc3a7de181
+  title: Weapon
+  nameKey:
+    value: INVENTORY/WEAPON_EQUIP_TTL
+  equipGroup:
+    value: bd9c92cac5434892827e8cb7bca90e3d
+--- !u!114 &8421421517493034453
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: Shoulders
+  m_EditorClassIdentifier: 
+  id: 318f4e8cf5ec476aa52ed4002f7af736
+  title: Shoulders
+  nameKey:
+    value: INVENTORY/SHOULDERS_EQUIP_TTL
+  equipGroup:
+    value: 46a81d60bcd34409928c1f501ce749d4
+--- !u!114 &8516279873877236565
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a98ab7ab4c3aae45861c6edafb016fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8611978902752092087
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5e867671d06d048a3975d70ff1cd4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1a5aab051f8341aaae1ca22bb5d62787
+  title: Common/Discard
+  titleKey:
+    value: INVENTORY/DISCARD_OPTION_TTL
+  iconRef:
+    m_AssetGUID: 5d542b0688084e741bb9cbb974532bc0
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  buttonRef:
+    m_AssetGUID: e06680f01ee967d47a511b4c309b4ed0
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &8994209143043327010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd6dd5ed4a5c9243937b499c97bb21b, type: 3}
+  m_Name: Weapon
+  m_EditorClassIdentifier: 
+  id: bd9c92cac5434892827e8cb7bca90e3d
+  title: Weapon
+  nameKey:
+    value: INVENTORY/WEAPON_GROUP_TTL
+  types:
+  - {fileID: 7128875099509460014}
+  - {fileID: 3756156468903984131}
+  - {fileID: -7538872621634188431}
+  - {fileID: -6725473221984591030}

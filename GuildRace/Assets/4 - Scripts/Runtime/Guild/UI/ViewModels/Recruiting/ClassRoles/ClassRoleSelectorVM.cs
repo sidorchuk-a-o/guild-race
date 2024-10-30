@@ -4,7 +4,7 @@ using UniRx;
 
 namespace Game.Guild
 {
-    public class ClassRoleSelectorVM : VMBase
+    public class ClassRoleSelectorVM : ViewModel
     {
         private readonly ClassRoleSelectorInfo info;
         private readonly GuildVMFactory guildVMF;
@@ -19,13 +19,13 @@ namespace Game.Guild
             RoleVM = guildVMF.GetRole(info.RoleId);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            RoleVM.AddTo(disp);
+            RoleVM.AddTo(this);
 
             info.IsEnabled
                 .Subscribe(SetSelectState)
-                .AddTo(disp);
+                .AddTo(this);
         }
 
         public void SwitchSelectState()

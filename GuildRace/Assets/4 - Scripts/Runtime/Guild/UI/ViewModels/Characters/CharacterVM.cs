@@ -1,10 +1,11 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
+using Game.Inventory;
 using UniRx;
 
 namespace Game.Guild
 {
-    public class CharacterVM : VMBase
+    public class CharacterVM : ViewModel
     {
         private readonly CharacterInfo info;
         private readonly GuildVMFactory guildVMF;
@@ -17,14 +18,16 @@ namespace Game.Guild
         public string Nickname { get; }
 
         public ClassVM ClassVM { get; }
+
         public IReadOnlyReactiveProperty<SpecializationVM> SpecVM => specVM;
 
         public IReadOnlyReactiveProperty<string> GuildRankName => guildRankName;
         public IReadOnlyReactiveProperty<GuildRankVM> GuildRankVM => guildRankVM;
 
         public IReadOnlyReactiveProperty<int> ItemsLevel { get; }
+        public ItemSlotsVM EquiSlotsVM { get; }
 
-        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF)
+        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF, InventoryVMFactory inventoryVMF)
         {
             this.info = info;
             this.guildVMF = guildVMF;
@@ -34,19 +37,21 @@ namespace Game.Guild
             ItemsLevel = info.ItemsLevel;
 
             ClassVM = guildVMF.GetClass(info.ClassId);
+            EquiSlotsVM = inventoryVMF.CreateSlots(info.EquipSlots);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            ClassVM.AddTo(disp);
+            ClassVM.AddTo(this);
+            EquiSlotsVM.AddTo(this);
 
             info.SpecId
                 .Subscribe(SpecializationChangedCallback)
-                .AddTo(disp);
+                .AddTo(this);
 
             info.GuildRankId
                 .Subscribe(GuildRankChangedCallback)
-                .AddTo(disp);
+                .AddTo(this);
         }
 
         private void SpecializationChangedCallback(SpecializationId specId)
@@ -54,7 +59,7 @@ namespace Game.Guild
             specVM.Value?.ResetSubscribes();
 
             specVM.Value = guildVMF.GetSpecialization(specId);
-            specVM.Value.AddTo(disp);
+            specVM.Value.AddTo(this);
         }
 
         private void GuildRankChangedCallback(GuildRankId guildRankId)
@@ -62,7 +67,7 @@ namespace Game.Guild
             guildRankVM.Value?.ResetSubscribes();
 
             guildRankVM.Value = guildVMF.GetGuildRank(guildRankId);
-            guildRankVM.Value.AddTo(disp);
+            guildRankVM.Value.AddTo(this);
 
             guildRankVM.Value.Name
                 .Subscribe(x => guildRankName.Value = x)

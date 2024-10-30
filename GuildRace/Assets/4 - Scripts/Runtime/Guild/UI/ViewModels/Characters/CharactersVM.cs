@@ -1,5 +1,6 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
+using Game.Inventory;
 using UniRx;
 
 namespace Game.Guild
@@ -7,27 +8,34 @@ namespace Game.Guild
     public class CharactersVM : VMCollection<CharacterInfo, CharacterVM>
     {
         private readonly GuildVMFactory guildVMF;
+        private readonly InventoryVMFactory inventoryVMF;
+
         private readonly ReactiveProperty<string> countStr = new();
 
         public ReactiveProperty<string> CountStr => countStr;
 
-        public CharactersVM(ICharactersCollection values, GuildVMFactory guildVMF) : base(values)
+        public CharactersVM(
+            ICharactersCollection values,
+            GuildVMFactory guildVMF,
+            InventoryVMFactory inventoryVMF)
+            : base(values)
         {
             this.guildVMF = guildVMF;
+            this.inventoryVMF = inventoryVMF;
         }
 
         protected override CharacterVM Create(CharacterInfo value)
         {
-            return new CharacterVM(value, guildVMF);
+            return new CharacterVM(value, guildVMF, inventoryVMF);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            base.InitSubscribes(disp);
+            base.InitSubscribes();
 
             ObserveCountChanged()
                 .Subscribe(CountChangedCallback)
-                .AddTo(disp);
+                .AddTo(this);
 
             CountChangedCallback(Count);
         }

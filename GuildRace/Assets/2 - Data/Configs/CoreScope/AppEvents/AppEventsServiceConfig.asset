@@ -30,4 +30,7 @@ MonoBehaviour:
   - value: 0
     typeAssembly: AD.Services.Narrative.NarrativeService, AD.Core, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Input.InventoryInputModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   exitByBackPress: 0

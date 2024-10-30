@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Inventory;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -7,6 +8,8 @@ namespace Game.Guild
     [JsonObject(MemberSerialization.Fields)]
     public class RecruitingSM
     {
+        public const string key = "recruiting";
+
         [ES3Serializable] private bool isEnabled;
         [ES3Serializable] private JoinRequestsSM requestsSM;
         [ES3Serializable] private long nextRequestTime;
@@ -16,12 +19,6 @@ namespace Game.Guild
         {
             get => isEnabled;
             set => isEnabled = value;
-        }
-
-        public IEnumerable<JoinRequestInfo> Requests
-        {
-            get => requestsSM.GetValues();
-            set => requestsSM = new(value);
         }
 
         public DateTime NextRequestTime
@@ -34,6 +31,16 @@ namespace Game.Guild
         {
             get => classRoleSelectorSM.GetValues();
             set => classRoleSelectorSM = new(value);
+        }
+
+        public void SetRequests(IEnumerable<JoinRequestInfo> value, IInventoryService inventoryService)
+        {
+            requestsSM = new(value, inventoryService);
+        }
+
+        public IEnumerable<JoinRequestInfo> GetRequests(IInventoryService inventoryService)
+        {
+            return requestsSM.GetValues(inventoryService);
         }
     }
 }

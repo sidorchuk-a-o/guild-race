@@ -9,6 +9,7 @@ namespace Game.Guild
 
         ICharactersCollection Characters { get; }
         IGuildRanksCollection GuildRanks { get; }
+        IGuildBankTabsCollection BankTabs { get; }
 
         IRecruitingModule RecruitingModule { get; }
 

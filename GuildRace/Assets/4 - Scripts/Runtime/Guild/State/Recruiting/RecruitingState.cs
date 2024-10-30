@@ -1,19 +1,25 @@
-﻿using AD.ToolsCollection;
+﻿using AD.Services.Save;
+using AD.States;
+using Game.Inventory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
+using VContainer;
 
 namespace Game.Guild
 {
-    public class RecruitingState
+    public class RecruitingState : State<RecruitingSM>
     {
-        private readonly GuildState state;
         private readonly GuildConfig config;
+        private readonly IInventoryService inventoryService;
 
         private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
         private readonly List<ClassRoleSelectorInfo> classRoleSelectors = new();
+
+        public override string SaveKey => RecruitingSM.key;
+        public override SaveSource SaveSource => SaveSource.app;
 
         public IReadOnlyReactiveProperty<bool> IsEnabled => isEnabled;
 
@@ -21,10 +27,14 @@ namespace Game.Guild
         public IJoinRequestsCollection Requests => requests;
         public IReadOnlyList<ClassRoleSelectorInfo> ClassRoleSelectors => classRoleSelectors;
 
-        public RecruitingState(GuildConfig config, GuildState state)
+        public RecruitingState(
+            GuildConfig config,
+            IInventoryService inventoryService,
+            IObjectResolver resolver)
+            : base(resolver)
         {
-            this.state = state;
             this.config = config;
+            this.inventoryService = inventoryService;
         }
 
         public void SetNextRequestTime(DateTime value)
@@ -32,56 +42,22 @@ namespace Game.Guild
             NextRequestTime = value;
         }
 
-        public void CreateRequest(DateTime? createdTime = null)
+        public void AddRequest(JoinRequestInfo request)
         {
-            var id = GuidUtils.Generate();
-            var nickname = GetNickname(id);
-
-            var roleId = classRoleSelectors
-                .WeightedSelection(GetClassRoleWeight)
-                .RoleId;
-
-            var (classData, specData) = config.CharactersModule
-                .GetSpecializations(roleId)
-                .RandomValue();
-
-            var recruitRank = state.GuildRanks.Last();
-
-            var character = new CharacterInfo(id, nickname, classData.Id);
-
-            character.SetGuildRank(recruitRank.Id);
-            character.SetSpecialization(specData.Id);
-
-            createdTime ??= DateTime.Now;
-
-            var request = new JoinRequestInfo(character, createdTime.Value);
-
             requests.Add(request);
 
-            state.MarkAsDirty();
+            MarkAsDirty();
         }
 
         public int RemoveRequest(string requestId)
         {
             var index = requests.FindIndex(x => x.Id == requestId);
 
-            RemoveRequest(index);
+            requests.RemoveAt(index);
+
+            MarkAsDirty();
 
             return index;
-        }
-
-        public void RemoveRequest(int requestIndex)
-        {
-            requests.RemoveAt(requestIndex);
-
-            state.MarkAsDirty();
-        }
-
-        private float GetClassRoleWeight(ClassRoleSelectorInfo classRoleSelector)
-        {
-            return classRoleSelector.IsEnabled.Value
-                ? config.RecruitingModule.WeightSelectedRole
-                : config.RecruitingModule.WeightUnselectedRole;
         }
 
         public void SwitchRecruitingState()
@@ -93,7 +69,7 @@ namespace Game.Guild
                 requests.Clear();
             }
 
-            state.MarkAsDirty();
+            MarkAsDirty();
         }
 
         public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
@@ -102,28 +78,29 @@ namespace Game.Guild
 
             weight.SetActiveState(isEnabled);
 
-            state.MarkAsDirty();
+            MarkAsDirty();
         }
 
         // == Save ==
 
-        public RecruitingSM CreateSave()
+        protected override RecruitingSM CreateSave()
         {
-            return new RecruitingSM
+            var recruitingSM = new RecruitingSM
             {
                 IsEnabled = IsEnabled.Value,
-                Requests = Requests,
                 NextRequestTime = NextRequestTime,
                 ClassRoleSelectors = classRoleSelectors
             };
+
+            recruitingSM.SetRequests(Requests, inventoryService);
+
+            return recruitingSM;
         }
 
-        public void ReadSave(RecruitingSM save)
+        protected override void ReadSave(RecruitingSM save)
         {
             if (save == null)
             {
-                isEnabled.Value = true;
-                requests.AddRange(CreateDefaultRequests());
                 classRoleSelectors.AddRange(CreateDefaultClassRoleSelectors());
 
                 return;
@@ -132,39 +109,16 @@ namespace Game.Guild
             isEnabled.Value = save.IsEnabled;
             NextRequestTime = save.NextRequestTime;
 
-            requests.AddRange(save.Requests);
+            requests.AddRange(save.GetRequests(inventoryService));
             classRoleSelectors.AddRange(save.ClassRoleSelectors);
-        }
-
-        private IEnumerable<JoinRequestInfo> CreateDefaultRequests()
-        {
-            var recruitRank = state.GuildRanks.Last();
-
-            return config.RecruitingModule.DefaultCharacters.Select(x =>
-            {
-                var id = GuidUtils.Generate();
-                var nickname = GetNickname(id);
-
-                var character = new CharacterInfo(id, nickname, x.ClassId);
-
-                character.SetGuildRank(recruitRank.Id);
-                character.SetSpecialization(x.SpecId);
-
-                return new JoinRequestInfo(character, createdTime: DateTime.MinValue);
-            });
         }
 
         private IEnumerable<ClassRoleSelectorInfo> CreateDefaultClassRoleSelectors()
         {
-            return config.CharactersModule.Roles.Select(x =>
+            return config.CharactersParams.Roles.Select(x =>
             {
                 return new ClassRoleSelectorInfo(x.Id, isEnabled: true);
             });
-        }
-
-        private static string GetNickname(string id)
-        {
-            return $"Игрок ({id[..7]})";
         }
     }
 }

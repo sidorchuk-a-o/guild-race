@@ -1,10 +1,9 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
-using AD.ToolsCollection;
 
 namespace Game.Guild
 {
-    public class SpecializationVM : VMBase
+    public class SpecializationVM : ViewModel
     {
         public SpecializationId Id { get; }
         public LocalizeKey NameKey { get; }
@@ -19,9 +18,9 @@ namespace Game.Guild
             RoleVM = guildVMF.GetRole(data.RoleId);
         }
 
-        protected override void InitSubscribes(CompositeDisp disp)
+        protected override void InitSubscribes()
         {
-            RoleVM.AddTo(disp);
+            RoleVM.AddTo(this);
         }
     }
 }

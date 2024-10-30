@@ -1,4 +1,8 @@
-﻿using UniRx;
+﻿using AD.ToolsCollection;
+using Game.Inventory;
+using System.Collections.Generic;
+using UniRx;
+using UnityEngine;
 
 namespace Game.Guild
 {
@@ -7,6 +11,8 @@ namespace Game.Guild
         private readonly ReactiveProperty<GuildRankId> guildRankId = new();
         private readonly ReactiveProperty<SpecializationId> specId = new();
         private readonly ReactiveProperty<int> itemsLevel = new();
+
+        private readonly ItemSlotsCollection equipSlots;
 
         public string Id { get; }
         public string Nickname { get; }
@@ -17,12 +23,25 @@ namespace Game.Guild
         public IReadOnlyReactiveProperty<GuildRankId> GuildRankId => guildRankId;
 
         public IReadOnlyReactiveProperty<int> ItemsLevel => itemsLevel;
+        public IItemSlotsCollection EquipSlots => equipSlots;
 
-        public CharacterInfo(string id, string nickname, ClassId classId)
+        public CharacterInfo(string id, string nickname, ClassId classId, IEnumerable<EquipSlotInfo> equipSlots)
         {
+            this.equipSlots = new(equipSlots);
+
             Id = id;
             Nickname = nickname;
             ClassId = classId;
+        }
+
+        public void Init()
+        {
+            foreach (var slot in equipSlots)
+            {
+                slot.Item.SilentSubscribe(UpdateItemsLevel);
+            }
+
+            UpdateItemsLevel();
         }
 
         public void SetSpecialization(SpecializationId value)
@@ -33,6 +52,23 @@ namespace Game.Guild
         public void SetGuildRank(GuildRankId value)
         {
             guildRankId.Value = value;
+        }
+
+        private void UpdateItemsLevel()
+        {
+            var count = 0;
+            var level = 0;
+
+            foreach (var slot in equipSlots)
+            {
+                if (slot.Item.Value is EquipItemInfo equip)
+                {
+                    count++;
+                    level += equip.Level;
+                }
+            }
+
+            itemsLevel.Value = level / Mathf.Max(1, count);
         }
     }
 }

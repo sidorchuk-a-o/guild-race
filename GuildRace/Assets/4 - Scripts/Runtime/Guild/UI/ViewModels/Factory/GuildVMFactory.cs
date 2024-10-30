@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,13 +9,18 @@ namespace Game.Guild
     {
         private readonly GuildConfig guildConfig;
         private readonly IGuildService guildService;
+        private readonly InventoryVMFactory inventoryVMF;
 
         public int MaxCharactersCount => guildConfig.MaxCharactersCount;
 
-        public GuildVMFactory(GuildConfig guildConfig, IGuildService guildService)
+        public GuildVMFactory(
+            GuildConfig guildConfig,
+            IGuildService guildService,
+            InventoryVMFactory inventoryVMF)
         {
             this.guildConfig = guildConfig;
             this.guildService = guildService;
+            this.inventoryVMF = inventoryVMF;
         }
 
         // == View Models ==
@@ -24,9 +30,14 @@ namespace Game.Guild
             return new GuildVM(guildConfig, guildService);
         }
 
+        public GuildBankTabsVM GetGuildBankTabs()
+        {
+            return new GuildBankTabsVM(guildService.BankTabs, inventoryVMF);
+        }
+
         public CharactersVM GetRoster()
         {
-            return new CharactersVM(guildService.Characters, this);
+            return new CharactersVM(guildService.Characters, this, inventoryVMF);
         }
 
         public RecruitingVM GetRecruiting()
@@ -36,7 +47,7 @@ namespace Game.Guild
 
         public JoinRequestsVM GetJoinRequests()
         {
-            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this);
+            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this, inventoryVMF);
         }
 
         public IReadOnlyList<ClassRoleSelectorVM> GetClassRoleSelectors()
@@ -48,21 +59,21 @@ namespace Game.Guild
 
         public RoleVM GetRole(RoleId roleId)
         {
-            var roleData = guildConfig.CharactersModule.GetRole(roleId);
+            var roleData = guildConfig.CharactersParams.GetRole(roleId);
 
             return new RoleVM(roleData);
         }
 
         public ClassVM GetClass(ClassId classId)
         {
-            var classData = guildConfig.CharactersModule.GetClass(classId);
+            var classData = guildConfig.CharactersParams.GetClass(classId);
 
             return new ClassVM(classData);
         }
 
         public SpecializationVM GetSpecialization(SpecializationId specId)
         {
-            var specData = guildConfig.CharactersModule.GetSpecialization(specId);
+            var specData = guildConfig.CharactersParams.GetSpecialization(specId);
 
             return new SpecializationVM(specData, this);
         }
