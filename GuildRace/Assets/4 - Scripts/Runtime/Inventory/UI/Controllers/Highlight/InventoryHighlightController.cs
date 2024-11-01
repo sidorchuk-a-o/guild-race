@@ -21,6 +21,8 @@ namespace Game.Inventory
         [Header("Draggable")]
         [SerializeField] private InventoryDraggableController draggableController;
 
+        private Transform highlighterDefaultParent;
+
         private IInventoryInputModule inventoryInputs;
 
         private ItemSlotVM selectedSlotVM;
@@ -38,6 +40,11 @@ namespace Game.Inventory
         public void Inject(IInputService inputService)
         {
             inventoryInputs = inputService.InventoryModule;
+        }
+
+        private void Awake()
+        {
+            highlighterDefaultParent = highlighter.transform.parent;
         }
 
         public void Init(CompositeDisp disp)
@@ -67,7 +74,7 @@ namespace Game.Inventory
 
         private void SplittingModeChangedCallback(bool modeOn)
         {
-            UpdateHighlightCallback();
+            UpdateHighlight();
         }
 
         // == Drag Callbacks ==
@@ -77,7 +84,7 @@ namespace Game.Inventory
             pickupResult = result;
             selectedItemVM = result.SelectedItemVM;
 
-            UpdateHighlightCallback();
+            UpdateHighlight();
         }
 
         private void ReleaseItemCallback(ReleaseResult _)
@@ -85,14 +92,14 @@ namespace Game.Inventory
             pickupResult = null;
             selectedItemVM = null;
 
-            UpdateHighlightCallback();
+            UpdateHighlight();
         }
 
         private void ItemSlotInteractedCallback(ItemSlotContainer itemSlot)
         {
             selectedSlotVM = itemSlot?.ViewModel;
 
-            UpdateHighlightCallback();
+            UpdateHighlight();
         }
 
         private void ItemsGridInteractedCallback(ItemsGridContainer itemsGrid)
@@ -101,7 +108,7 @@ namespace Game.Inventory
             selectedGridContainer = itemsGrid;
 
             UpdateHighlighterParent();
-            UpdateHighlightCallback();
+            UpdateHighlight();
         }
 
         // == Update ==
@@ -126,13 +133,14 @@ namespace Game.Inventory
 
         private void UpdateHighlighterParent()
         {
-            if (selectedGridVM != null)
-            {
-                highlighter.SetParent(selectedGridContainer.HighlightArea);
-            }
+            var parent = selectedGridVM != null
+                ? selectedGridContainer.HighlightArea
+                : highlighterDefaultParent;
+
+            highlighter.SetParent(parent);
         }
 
-        private void UpdateHighlightCallback()
+        private void UpdateHighlight()
         {
             UpdateHighlight(positionOnGrid);
         }

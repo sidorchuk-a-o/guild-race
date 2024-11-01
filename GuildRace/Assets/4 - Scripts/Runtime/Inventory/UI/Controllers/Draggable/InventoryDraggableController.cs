@@ -22,6 +22,8 @@ namespace Game.Inventory
         [SerializeField] private PickedItemPreview pickedGridPreview;
         [SerializeField] private float dragMovementSpeed = 128f;
 
+        private Transform previewDefaultParent;
+
         private readonly Subject<PickupResult> onPickupItem = new();
         private readonly Subject<ReleaseResult> onReleaseItem = new();
 
@@ -58,6 +60,11 @@ namespace Game.Inventory
             placeHandlers.ForEach(resolver.Inject);
             splitHandlers.ForEach(resolver.Inject);
             rollbackHandlers.ForEach(resolver.Inject);
+        }
+
+        private void Awake()
+        {
+            previewDefaultParent = pickedGridPreview.transform.parent;
         }
 
         public void Init(CompositeDisp disp)
@@ -404,6 +411,9 @@ namespace Game.Inventory
 
         private void ResetDragPreview()
         {
+            pickedGridPreview.SetParent(previewDefaultParent);
+            pickedItemPreview.SetParent(previewDefaultParent);
+
             pickedGridPreview.SetActive(false);
             pickedItemPreview.SetActive(false);
         }
