@@ -6,12 +6,12 @@ namespace Game.Inventory
     [InventoryEditor(typeof(EquipGroupData))]
     public class EquipGroupFoldoutElement : Element
     {
-        private KeyElement nameKeyField;
+        private KeyElement<string> nameKeyField;
         private EquipTypesList typesList;
 
         protected override void CreateElementGUI(Element root)
         {
-            nameKeyField = root.CreateKey<LocalizeKey>();
+            nameKeyField = root.CreateKey<LocalizeKey, string>();
             nameKeyField.labelOn = false;
 
             root.CreateSpace();

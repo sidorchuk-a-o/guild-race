@@ -8,7 +8,7 @@ namespace Game.Inventory
         private readonly ItemsCollection items;
 
         public string Id { get; }
-        public string DataId { get; }
+        public int DataId { get; }
 
         public Vector3Int Size { get; }
         public ItemsGridCategory Category { get; }

@@ -7,9 +7,10 @@ namespace Game.Inventory
         public override void BindData(SerializedData data)
         {
             headerTitle = "Rarities";
-            wizardType = typeof(RarityCreateWizard);
+            wizardType = typeof(RarityImportWizard);
 
             showCloneButton = false;
+            showRemoveButton = false;
 
             base.BindData(data);
         }

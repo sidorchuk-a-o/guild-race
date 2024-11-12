@@ -7,21 +7,22 @@ namespace Game.Inventory
     [InventoryEditor(typeof(RarityData))]
     public class RarityEditor : EntityEditor
     {
-        private KeyElement nameKeyField;
+        private LocalizeKeyElement nameKeyField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
             base.CreateTabItems(tabs);
 
-            tabs.CreateTab("Common", CreateCommonTab);
+            tabs.CreateTab("Params", CreateParamsTab);
 
             tabs.content.Width(50, LengthUnit.Percent);
         }
 
-        private void CreateCommonTab(VisualElement root, SerializedData data)
+        private void CreateParamsTab(VisualElement root, SerializedData data)
         {
-            nameKeyField = root.CreateKey<LocalizeKey>();
+            nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.BindProperty("nameKey", data);
+            nameKeyField.previewOn = true;
         }
     }
 }

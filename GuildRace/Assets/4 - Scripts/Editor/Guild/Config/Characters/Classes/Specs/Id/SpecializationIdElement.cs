@@ -4,7 +4,7 @@ using System;
 namespace Game.Guild
 {
     [KeyElement(typeof(SpecializationId))]
-    public class SpecializationIdElement : KeyElement
+    public class SpecializationIdElement : KeyElement<string>
     {
         protected override Func<Collection<string>> GetCollection
         {

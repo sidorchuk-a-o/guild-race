@@ -6,11 +6,11 @@ namespace Game.Inventory
     public class ItemsGridSM
     {
         [ES3Serializable] private string id;
-        [ES3Serializable] private string dataId;
+        [ES3Serializable] private int dataId;
         [ES3Serializable] private ItemsSM itemsSM;
 
         public string Id => id;
-        public string DataId => dataId;
+        public int DataId => dataId;
 
         public ItemsGridSM(ItemsGridInfo info, IInventoryFactory inventoryFactory)
         {

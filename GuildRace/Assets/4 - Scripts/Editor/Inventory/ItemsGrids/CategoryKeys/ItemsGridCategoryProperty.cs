@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Game.Inventory
 {
     [CustomPropertyDrawer(typeof(ItemsGridCategory))]
-    public class ItemsGridCategoryProperty : KeyPropertyDrawer<ItemsGridCategory>
+    public class ItemsGridCategoryProperty : KeyPropertyDrawer<ItemsGridCategory, int>
     {
     }
 }

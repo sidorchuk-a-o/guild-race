@@ -11,9 +11,9 @@ namespace Game.Inventory
         private SpriteField iconField;
         private PropertyElement levelField;
         private PropertyElement powerField;
-        private KeyElement typeField;
-        private KeyElement itemSlotField;
-        private KeyElement rarityField;
+        private KeyElement<int> typeField;
+        private KeyElement<int> itemSlotField;
+        private KeyElement<int> rarityField;
 
         protected override void CreateItemContentGUI(VisualElement root)
         {
@@ -37,7 +37,7 @@ namespace Game.Inventory
             powerField.FontSize(18);
             powerField.labelOn = false;
 
-            typeField = root.CreateKey<EquipType>();
+            typeField = root.CreateKey<EquipType, int>();
             typeField.Width(200);
             typeField.FontSize(16);
             typeField.labelOn = false;
@@ -45,7 +45,7 @@ namespace Game.Inventory
             typeField.filterOn = false;
             typeField.updateOn = false;
 
-            itemSlotField = root.CreateKey<ItemSlot>();
+            itemSlotField = root.CreateKey<ItemSlot, int>();
             itemSlotField.Width(175);
             itemSlotField.FontSize(16);
             itemSlotField.labelOn = false;
@@ -53,7 +53,7 @@ namespace Game.Inventory
             itemSlotField.filterOn = false;
             itemSlotField.updateOn = false;
 
-            rarityField = root.CreateKey<Rarity>();
+            rarityField = root.CreateKey<Rarity, int>();
             rarityField.Width(120);
             rarityField.FontSize(16);
             rarityField.labelOn = false;

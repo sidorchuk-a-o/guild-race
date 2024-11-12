@@ -6,7 +6,7 @@ using UnityEngine.AddressableAssets;
 
 namespace Game.Guild
 {
-    public class GuildBankTabData : ScriptableEntity
+    public class GuildBankTabData : ScriptableEntity<string>
     {
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private AssetReference iconRef;

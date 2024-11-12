@@ -13,7 +13,7 @@ namespace Game.Inventory
         private readonly ReactiveProperty<bool> isRemoved = new();
 
         public string Id { get; }
-        public string DataId { get; }
+        public int DataId { get; }
         public LocalizeKey NameKey { get; }
         public AssetReference IconRef { get; }
         public ItemBoundsInfo Bounds { get; }

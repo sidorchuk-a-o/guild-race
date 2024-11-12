@@ -13,7 +13,7 @@ namespace Game.Guild
         {
             base.CreateEditorGUI(root);
 
-            nameKeyField = contentContainer.CreateKey<LocalizeKey>() as LocalizeKeyElement;
+            nameKeyField = contentContainer.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
         }
 

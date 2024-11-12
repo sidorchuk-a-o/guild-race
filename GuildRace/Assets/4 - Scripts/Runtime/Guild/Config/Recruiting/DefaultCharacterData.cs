@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Game.Guild
 {
     [Serializable]
-    public class DefaultCharacterData : Entity
+    public class DefaultCharacterData : Entity<string>
     {
         [SerializeField] private ClassId classId;
         [SerializeField] private SpecializationId specId;

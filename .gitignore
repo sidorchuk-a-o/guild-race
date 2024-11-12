@@ -92,3 +92,5 @@ crashlytics-build.properties
 **/Assets/Samples.meta
 
 #Other
+**/Google
+**/Google.meta

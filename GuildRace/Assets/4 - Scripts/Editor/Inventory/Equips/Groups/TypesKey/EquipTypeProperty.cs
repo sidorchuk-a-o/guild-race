@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Game.Inventory
 {
     [CustomPropertyDrawer(typeof(EquipType))]
-    public class EquipTypeProperty : KeyPropertyDrawer<EquipType>
+    public class EquipTypeProperty : KeyPropertyDrawer<EquipType, int>
     {
     }
 }

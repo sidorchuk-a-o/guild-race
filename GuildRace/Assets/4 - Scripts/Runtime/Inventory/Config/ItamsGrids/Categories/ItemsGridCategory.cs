@@ -4,17 +4,17 @@ using System;
 namespace Game.Inventory
 {
     [Serializable]
-    public class ItemsGridCategory : Key
+    public class ItemsGridCategory : Key<int>
     {
         public ItemsGridCategory()
         {
         }
 
-        public ItemsGridCategory(string key) : base(key)
+        public ItemsGridCategory(int key) : base(key)
         {
         }
 
-        public static implicit operator string(ItemsGridCategory key) => key?.value;
-        public static implicit operator ItemsGridCategory(string key) => new(key);
+        public static implicit operator int(ItemsGridCategory key) => key?.value ?? -1;
+        public static implicit operator ItemsGridCategory(int key) => new(key);
     }
 }

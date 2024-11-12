@@ -9,7 +9,7 @@ namespace Game.Inventory
     {
         private IntegerField minLevelFilter;
         private IntegerField maxLevelFilter;
-        private KeyElement typeFilter;
+        private KeyElement<int> typeFilter;
 
         protected override List<Header> Headers => new()
         {
@@ -21,6 +21,16 @@ namespace Game.Inventory
             new Header("Rarity", 127, LengthUnit.Pixel),
             new Header("Source")
         };
+
+        public override void BindData(SerializedData data)
+        {
+            wizardType = typeof(EquipItemImportWizard);
+
+            showCloneButton = false;
+            showRemoveButton = false;
+
+            base.BindData(data);
+        }
 
         protected override void CreateFilters(VisualElement root)
         {
@@ -50,7 +60,7 @@ namespace Game.Inventory
             typeLabel.PaddingLeft(15);
             typeLabel.text = "Type:";
 
-            typeFilter = filterBlock.CreateKey<EquipType>();
+            typeFilter = filterBlock.CreateKey<EquipType, int>();
             typeFilter.Width(225);
             typeFilter.filterOn = false;
             typeFilter.updateOn = false;
@@ -84,17 +94,6 @@ namespace Game.Inventory
             minLevelFilter.value = 0;
             maxLevelFilter.value = 0;
             typeFilter.ResetValue();
-        }
-
-        public override void BindData(SerializedData data)
-        {
-            wizardType = typeof(EquipItemCreateWizard);
-
-            showCloneButton = false;
-
-            base.BindData(data);
-
-            ApplyFilter();
         }
     }
 }

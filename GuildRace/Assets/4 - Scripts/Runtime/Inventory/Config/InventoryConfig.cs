@@ -21,9 +21,9 @@ namespace Game.Inventory
         // UI
         [SerializeField] private UIParams uiParams = new();
 
-        private Dictionary<string, ItemData> itemsCache;
-        private Dictionary<string, ItemSlotData> itemSlotsCache;
-        private Dictionary<string, ItemsGridData> itemsGridsCache;
+        private Dictionary<int, ItemData> itemsCache;
+        private Dictionary<int, ItemSlotData> itemSlotsCache;
+        private Dictionary<int, ItemsGridData> itemsGridsCache;
 
         public EquipsParams EquipsParams => equipsParams;
         public ReagentsParams ReagentsParams => reagentsParams;
@@ -39,7 +39,7 @@ namespace Game.Inventory
             uiParams.OnEnable();
         }
 
-        public ItemData GetItem(string id)
+        public ItemData GetItem(int id)
         {
             itemsCache ??= items.ToDictionary(x => x.Id, x => x);
             itemsCache.TryGetValue(id, out var data);
@@ -47,7 +47,7 @@ namespace Game.Inventory
             return data;
         }
 
-        public ItemSlotData GetSlot(string id)
+        public ItemSlotData GetSlot(int id)
         {
             itemSlotsCache ??= itemSlots.ToDictionary(x => x.Id, x => x);
             itemSlotsCache.TryGetValue(id, out var data);
@@ -55,7 +55,7 @@ namespace Game.Inventory
             return data;
         }
 
-        public ItemsGridData GetGrid(string id)
+        public ItemsGridData GetGrid(int id)
         {
             itemsGridsCache ??= itemsGrids.ToDictionary(x => x.Id, x => x);
             itemsGridsCache.TryGetValue(id, out var data);

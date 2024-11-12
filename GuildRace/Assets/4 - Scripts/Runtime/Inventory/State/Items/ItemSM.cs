@@ -6,10 +6,10 @@ namespace Game.Inventory
     public abstract class ItemSM
     {
         [ES3Serializable] protected string id;
-        [ES3Serializable] protected string dataId;
+        [ES3Serializable] protected int dataId;
         [ES3Serializable] protected ItemBoundsSM boundsSM;
 
-        public string DataId => dataId;
+        public int DataId => dataId;
 
         public ItemSM(ItemInfo info)
         {

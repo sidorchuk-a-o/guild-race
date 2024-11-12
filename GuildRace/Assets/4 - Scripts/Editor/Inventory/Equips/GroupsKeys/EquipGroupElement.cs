@@ -4,9 +4,9 @@ using System;
 namespace Game.Inventory
 {
     [KeyElement(typeof(EquipGroup))]
-    public class EquipGroupElement : KeyElement
+    public class EquipGroupElement : KeyElement<int>
     {
-        protected override Func<Collection<string>> GetCollection
+        protected override Func<Collection<int>> GetCollection
         {
             get => InventoryEditorState.GetEquipGroupsCollection;
         }

@@ -4,7 +4,7 @@ using System;
 namespace Game.Inventory
 {
     [KeyElement(typeof(OptionKey))]
-    public class OptionKeyElement : KeyElement
+    public class OptionKeyElement : KeyElement<string>
     {
         protected override Func<Collection<string>> GetCollection
         {

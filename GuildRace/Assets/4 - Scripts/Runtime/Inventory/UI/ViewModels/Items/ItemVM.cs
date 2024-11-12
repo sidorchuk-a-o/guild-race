@@ -17,7 +17,7 @@ namespace Game.Inventory
         private Sprite sprite;
 
         public string Id { get; }
-        public string DataId { get; }
+        public int DataId { get; }
         public LocalizeKey NameKey { get; }
         public Type InfoType { get; }
 

@@ -7,9 +7,10 @@ namespace Game.Inventory
         public override void BindData(SerializedData data)
         {
             headerTitle = "Grid Cell Types";
-            wizardType = typeof(ItemsGridCellTypeCreateWizard);
+            wizardType = typeof(ItemsGridCellTypeImportWizard);
 
             showCloneButton = false;
+            showRemoveButton = false;
 
             base.BindData(data);
         }

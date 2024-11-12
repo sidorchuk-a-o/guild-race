@@ -6,8 +6,8 @@ namespace Game.Guild
     [GuildEditor(typeof(DefaultCharacterData))]
     public class DefaultCharacterEditor : EntityEditor
     {
-        private KeyElement classIdKey;
-        private KeyElement specIdKey;
+        private KeyElement<string> classIdKey;
+        private KeyElement<string> specIdKey;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -18,10 +18,10 @@ namespace Game.Guild
 
         private void CreateCommonTab(VisualElement root, SerializedData data)
         {
-            classIdKey = root.CreateKey<ClassId>();
+            classIdKey = root.CreateKey<ClassId, string>();
             classIdKey.BindProperty("classId", data);
 
-            specIdKey = root.CreateKey<SpecializationId>();
+            specIdKey = root.CreateKey<SpecializationId, string>();
             specIdKey.BindProperty("specId", data);
         }
     }

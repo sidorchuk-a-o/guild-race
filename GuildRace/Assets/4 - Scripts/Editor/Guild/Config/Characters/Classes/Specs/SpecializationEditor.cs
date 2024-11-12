@@ -16,7 +16,7 @@ namespace Game.Guild
 
             contentContainer.CreateHeader("Common");
 
-            nameKeyField = contentContainer.CreateKey<LocalizeKey>() as LocalizeKeyElement;
+            nameKeyField = contentContainer.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
 
             contentContainer.CreateHeader("Role");
