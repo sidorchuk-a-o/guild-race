@@ -10,6 +10,6 @@ namespace Game.Inventory
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "inventory-data";
-        public override string SheetRange => "Y2:AA";
+        public override string SheetRange => "X2:Y";
     }
 }

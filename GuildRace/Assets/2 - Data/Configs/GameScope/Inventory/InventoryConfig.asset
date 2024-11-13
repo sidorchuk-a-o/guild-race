@@ -44,21 +44,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10034
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20020
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-8472422733814341553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,21 +82,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10061
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20011
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-7976013286353870678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,21 +120,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10055
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20011
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-7747445019385112284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,21 +158,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10076
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20014
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-7316531994249119311
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,21 +212,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10013
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20021
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-7001324336208455771
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,21 +262,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10020
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20029
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 31
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6950904633013905063
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,9 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 52
-  title: Rare
+  title: Epic
   nameKey:
-    value: <none>
+    value: INVENTORY/EPIC_RARITY_TTL
 --- !u!114 &-6862540958533503585
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,21 +316,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10035
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20018
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6614947257460562497
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,21 +354,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10011
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20018
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6183353682262618565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,21 +392,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10083
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20013
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 41
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6150907231377672594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,21 +430,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10067
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 44
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6133608900172429420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,21 +468,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10050
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20012
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6114776268038394866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,21 +506,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10086
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 44
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6110813638385256761
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,21 +544,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10060
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-6077349596849091963
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,21 +582,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10065
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20015
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 42
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-5950450103269691187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,21 +620,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10033
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20029
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-5737075243555858367
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,21 +658,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10051
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20013
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-5264673978053023553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -648,21 +696,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10017
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20028
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-5161679761343262562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -701,21 +752,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10021
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20023
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 32
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-4450523110700388368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -752,21 +806,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10079
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20011
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-4298722491863905509
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -787,21 +844,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10046
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20026
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 42
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-4187781191333709216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -822,21 +882,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10026
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20018
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-4042651223683728926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -857,21 +920,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10031
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20026
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-3779093435946907101
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -920,21 +986,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10058
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20014
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-3128139311566442411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -955,21 +1024,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10015
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20025
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-3109398812195642226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1008,21 +1080,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10023
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20024
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-3039325825505055318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1043,21 +1118,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10048
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20020
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 44
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-2537615286543567961
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1078,21 +1156,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10038
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20022
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-2315033124716837991
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1129,21 +1210,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10040
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20019
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1717270387008189411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1164,21 +1248,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10056
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20012
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1657617199462621251
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1220,21 +1307,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10069
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20015
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1379920717474179501
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1255,21 +1345,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10081
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20015
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1345641969649985332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1290,21 +1383,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10029
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20023
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 32
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1232920642671462375
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1337,21 +1433,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10019
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20020
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 31
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1063377336643817000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1372,21 +1471,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10068
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 31
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-1062136430006192684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1407,21 +1509,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10016
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20022
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-995771998939256200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1442,21 +1547,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10073
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20011
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-976144031733252825
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,21 +1585,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10041
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20019
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 41
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-753766681237061545
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1512,21 +1623,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10027
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20020
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 32
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-612337858966185010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1571,21 +1685,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10062
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20012
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &-11673543929542161
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1806,7 +1923,6 @@ MonoBehaviour:
     rarities:
     - {fileID: -7316531994249119311}
     - {fileID: -6950904633013905063}
-    - {fileID: 3277843978655593006}
     factories:
     - {fileID: -1232920642671462375}
     - {fileID: -7001324336208455771}
@@ -1866,21 +1982,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10052
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20014
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &255827085126145541
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1901,21 +2020,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10064
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20014
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 41
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &311866390919283212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1952,21 +2074,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10054
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 32
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &406163380787924127
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1987,21 +2112,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10072
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20012
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &518433714357507813
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2022,21 +2150,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10077
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20013
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &841691043756883268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2057,21 +2188,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10049
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20011
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &1009505861965748416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2110,21 +2244,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10071
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20013
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &1057532855618524533
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2145,21 +2282,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10084
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20012
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 42
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &1189334565303918666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2180,21 +2320,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10063
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20013
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &1223950982166912609
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2215,21 +2358,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10032
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20023
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &1372262859629279956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2268,21 +2414,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10014
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20024
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &2223622560626977374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2303,21 +2452,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10047
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20023
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 43
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &2558845237322644653
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2366,21 +2518,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10082
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20014
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &2852506058818597817
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2401,21 +2556,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10045
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20029
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 41
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &3020438398822890104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2436,37 +2594,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10066
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 43
---- !u!114 &3277843978655593006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2fa940d2945704e8a36cf84a751ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 53
-  title: Epic
-  nameKey:
-    value: <none>
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &3528656383035835354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2511,21 +2656,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10030
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20025
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &3651724357173251947
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2546,21 +2694,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10043
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20025
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 43
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &3698016436506853915
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2581,21 +2732,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10057
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20013
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &3852932945951644673
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2616,21 +2770,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10070
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20014
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &3875896697679450297
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2669,21 +2826,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10044
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20028
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 44
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &4300600863543967724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2704,21 +2864,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10059
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20015
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &4434524417934112057
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2739,21 +2902,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10042
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20022
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 42
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &4734373708846455812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2774,21 +2940,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10053
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20015
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &4747047883465077511
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2809,21 +2978,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10039
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 25
   source:
     value: 20026
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &5221070637314442134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2844,21 +3016,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10025
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20027
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &5374728186150439257
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2879,21 +3054,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10037
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20021
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &5674290880999002455
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2914,21 +3092,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10018
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20019
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &5803818987983749537
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2961,21 +3142,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10080
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 33
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &5987843277473568308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3070,21 +3254,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10022
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20026
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 25
   type:
     value: 32
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &7427189725676400778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3105,21 +3292,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10036
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20027
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &7638315775081361980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3140,21 +3330,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10075
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 23
   source:
     value: 20015
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 35
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &7697856569677621517
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3175,21 +3368,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10024
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20021
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &7777365869135470539
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3228,21 +3424,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10085
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 26
   source:
     value: 20011
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 43
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &8195572707257725941
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3323,21 +3522,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10028
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 24
   source:
     value: 20028
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 32
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &8679672984712988871
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3358,21 +3560,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10074
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 22
   source:
     value: 20016
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 40
   type:
     value: 32
+  rarity:
+    value: 52
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &8781013962483808008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3393,21 +3598,24 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10078
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20012
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 30
   type:
     value: 33
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1
 --- !u!114 &9111820585827621426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3428,18 +3636,21 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10012
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   slot:
     value: 21
   source:
     value: 20027
-  level: 10
-  power: 10
-  rarity:
-    value: 0
+  level: 20
   type:
     value: 31
+  rarity:
+    value: 51
+  characterParams:
+    power: 1
+    health: 1
+    resource: 1

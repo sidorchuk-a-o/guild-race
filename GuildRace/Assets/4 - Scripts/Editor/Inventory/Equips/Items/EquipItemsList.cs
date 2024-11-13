@@ -14,9 +14,10 @@ namespace Game.Inventory
         protected override List<Header> Headers => new()
         {
             new Header("Icon", 68, LengthUnit.Pixel),
-            new Header("Level", 75, LengthUnit.Pixel),
-            new Header("Power", 125, LengthUnit.Pixel),
-            new Header("Type", 207, LengthUnit.Pixel),
+            new Header("Id", 70, LengthUnit.Pixel),
+            new Header("Level", 60, LengthUnit.Pixel),
+            new Header("Params (HP/AP/RES)", 150, LengthUnit.Pixel),
+            new Header("Type", 205, LengthUnit.Pixel),
             new Header("Slot", 180, LengthUnit.Pixel),
             new Header("Rarity", 127, LengthUnit.Pixel),
             new Header("Source")

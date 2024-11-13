@@ -459,6 +459,14 @@ MonoBehaviour:
       - "\u041E\u0431\u044B\u0447\u043D\u044B\u0439"
       Flags: 0000
       Languages_Touch: []
+    - Term: INVENTORY/EPIC_RARITY_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
+      Flags: 0000
+      Languages_Touch: []
     - Term: INVENTORY/INSPECT_OPTION_TTL
       TermType: 0
       Description: 
@@ -1221,7 +1229,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1730958094891
+    Google_LastUpdatedVersion: 1731487411006
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

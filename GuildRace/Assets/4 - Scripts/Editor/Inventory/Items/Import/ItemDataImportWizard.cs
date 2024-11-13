@@ -1,6 +1,8 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Game.Inventory
 {
@@ -16,12 +18,18 @@ namespace Game.Inventory
         {
             base.UpdateData(data, row);
 
-            //AssetReference iconRef;
-
             var localizeKey = row[IdKey].LocalizeKeyParse();
             var slot = new ItemSlot(row["eq_slot_id"].IntParse());
             var source = new ItemSource(row["source_id"].IntParse());
 
+            var iconName = row["icon_name"];
+            var iconRef = new AssetReference();
+            var iconAsset = AssetsEditorUtils.LoadAssetByName<Object>(iconName) 
+                         ?? AssetsEditorUtils.LoadAssetByName<Object>("cloth-chest-10015"); // TEMP
+
+            iconRef.SetEditorAsset(iconAsset);
+
+            data.GetProperty("iconRef").SetValue(iconRef);
             data.GetProperty("nameKey").SetValue(localizeKey);
             data.GetProperty("slot").SetValue(slot);
             data.GetProperty("source").SetValue(source);
