@@ -32,7 +32,7 @@ namespace Game.Inventory
 
         // == Items ==
 
-        public ItemInfo CreateItem(string id)
+        public ItemInfo CreateItem(int id)
         {
             var data = config.GetItem(id);
 
@@ -97,13 +97,8 @@ namespace Game.Inventory
             return itemsFactory.ReadSave(save);
         }
 
-        private ItemData GetItemData(string itemId)
+        private ItemData GetItemData(int itemId)
         {
-            if (itemId.IsNullOrEmpty())
-            {
-                return null;
-            }
-
             return config.GetItem(itemId);
         }
 
@@ -123,7 +118,7 @@ namespace Game.Inventory
 
         // == Slot ==
 
-        public ItemSlotInfo CreateSlot(string id)
+        public ItemSlotInfo CreateSlot(int id)
         {
             var data = config.GetSlot(id);
 
@@ -188,13 +183,8 @@ namespace Game.Inventory
             return slotsFactory.ReadSave(save);
         }
 
-        private ItemSlotData GetSlotData(string slotId)
+        private ItemSlotData GetSlotData(int slotId)
         {
-            if (slotId.IsNullOrEmpty())
-            {
-                return null;
-            }
-
             return config.GetSlot(slotId);
         }
 

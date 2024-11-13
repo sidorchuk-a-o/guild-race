@@ -4,7 +4,7 @@ using System;
 namespace Game.Guild
 {
     [Serializable]
-    public class GuildRankId : Key
+    public class GuildRankId : Key<string>
     {
         public GuildRankId()
         {

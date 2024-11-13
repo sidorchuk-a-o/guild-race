@@ -9,7 +9,7 @@ namespace Game.Inventory
         private readonly ReactiveProperty<ItemInfo> item = new();
 
         public string Id { get; }
-        public string DataId { get; }
+        public int DataId { get; }
 
         public ItemSlot Slot { get; }
         public LocalizeKey NameKey { get; }

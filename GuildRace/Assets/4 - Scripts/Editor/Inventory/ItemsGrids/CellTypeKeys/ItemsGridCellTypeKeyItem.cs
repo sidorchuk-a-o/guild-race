@@ -5,13 +5,13 @@ namespace Game.Inventory
 {
     public class ItemsGridCellTypeKeyItem : ListItemElement
     {
-        private KeyElement keyField;
+        private KeyElement<int> keyField;
 
         protected override void CreateItemContentGUI(VisualElement root)
         {
             base.CreateItemContentGUI(root);
 
-            keyField = root.CreateKey<ItemsGridCellType>();
+            keyField = root.CreateKey<ItemsGridCellType, int>();
             keyField.FlexGrow(1);
             keyField.removeOn = false;
             keyField.filterOn = false;

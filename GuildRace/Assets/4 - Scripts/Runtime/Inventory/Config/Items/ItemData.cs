@@ -5,7 +5,7 @@ using UnityEngine.AddressableAssets;
 
 namespace Game.Inventory
 {
-    public abstract class ItemData : ScriptableEntity
+    public abstract class ItemData : ScriptableEntity<int>
     {
         // Params
         [SerializeField] private ItemSize size = ItemSize.Default;

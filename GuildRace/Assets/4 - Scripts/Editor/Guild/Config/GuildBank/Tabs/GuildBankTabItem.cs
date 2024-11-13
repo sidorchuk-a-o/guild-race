@@ -15,8 +15,8 @@ namespace Game.Guild
         private AddressableElement<Sprite> iconRefField;
         private PropertyElement rowSizeField;
         private PropertyElement rowCountField;
-        private KeyElement categoryField;
-        private KeyElement cellTypeField;
+        private KeyElement<int> categoryField;
+        private KeyElement<int> cellTypeField;
 
         protected override void CreateItemContentGUI(VisualElement root)
         {
@@ -25,7 +25,7 @@ namespace Game.Guild
             root.ConvertToColumn();
 
             root.CreateHeader("View");
-            nameKeyField = root.CreateKey<LocalizeKey>() as LocalizeKeyElement;
+            nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
 
             iconRefField = root.CreateAddressable<Sprite>();
@@ -33,8 +33,8 @@ namespace Game.Guild
             root.CreateHeader("Params");
             rowSizeField = root.CreateProperty();
             rowCountField = root.CreateProperty();
-            categoryField = root.CreateKey<ItemsGridCategory>();
-            cellTypeField = root.CreateKey<ItemsGridCellType>();
+            categoryField = root.CreateKey<ItemsGridCategory, int>();
+            cellTypeField = root.CreateKey<ItemsGridCellType, int>();
         }
 
         public override void BindData(SerializedData data)

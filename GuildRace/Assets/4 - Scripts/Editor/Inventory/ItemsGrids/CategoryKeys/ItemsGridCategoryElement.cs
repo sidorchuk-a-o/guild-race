@@ -4,9 +4,9 @@ using System;
 namespace Game.Inventory
 {
     [KeyElement(typeof(ItemsGridCategory))]
-    public class ItemsGridCategoryElement : KeyElement
+    public class ItemsGridCategoryElement : KeyElement<int>
     {
-        protected override Func<Collection<string>> GetCollection
+        protected override Func<Collection<int>> GetCollection
         {
             get => InventoryEditorState.GetItemsGridCategoriesCollection;
         }

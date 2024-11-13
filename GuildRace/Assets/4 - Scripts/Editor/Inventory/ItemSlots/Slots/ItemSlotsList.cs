@@ -8,6 +8,7 @@ namespace Game.Inventory
         public override void BindData(SerializedData data)
         {
             showCloneButton = false;
+            showRemoveButton = false;
 
             base.BindData(data);
         }

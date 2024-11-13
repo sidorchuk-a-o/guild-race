@@ -4,17 +4,17 @@ using System;
 namespace Game.Inventory
 {
     [Serializable]
-    public class EquipGroup : Key
+    public class EquipGroup : Key<int>
     {
         public EquipGroup()
         {
         }
 
-        public EquipGroup(string key) : base(key)
+        public EquipGroup(int key) : base(key)
         {
         }
 
-        public static implicit operator string(EquipGroup key) => key?.value;
-        public static implicit operator EquipGroup(string key) => new(key);
+        public static implicit operator int(EquipGroup key) => key?.value ?? -1;
+        public static implicit operator EquipGroup(int key) => new(key);
     }
 }

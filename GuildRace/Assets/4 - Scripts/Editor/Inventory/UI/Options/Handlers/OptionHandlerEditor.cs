@@ -10,7 +10,7 @@ namespace Game.Inventory
     /// </summary>
     public abstract class OptionHandlerEditor : EntityEditor
     {
-        private KeyElement titleKeyField;
+        private KeyElement<string> titleKeyField;
         private AddressableElement<Sprite> iconRefField;
         private AddressableElement<GameObject> buttonRefField;
 
@@ -21,7 +21,7 @@ namespace Game.Inventory
 
         protected virtual void CreateHandlerTab(VisualElement root, SerializedData data)
         {
-            titleKeyField = root.CreateKey<LocalizeKey>();
+            titleKeyField = root.CreateKey<LocalizeKey, string>();
             titleKeyField.BindProperty("titleKey", data);
 
             root.CreateSpace();

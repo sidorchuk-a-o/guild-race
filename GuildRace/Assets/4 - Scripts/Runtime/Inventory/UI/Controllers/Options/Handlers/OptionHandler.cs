@@ -6,13 +6,13 @@ using UnityEngine.AddressableAssets;
 
 namespace Game.Inventory
 {
-    public abstract class OptionHandler : ScriptableEntity
+    public abstract class OptionHandler : ScriptableEntity<string>
     {
         [SerializeField] private LocalizeKey titleKey;
         [SerializeField] private AssetReference iconRef;
         [SerializeField] private AssetReference buttonRef;
 
-        public OptionKey Key => new(Id);
+        public OptionKey Key => Id;
         public LocalizeKey TitleKey => titleKey;
 
         public AssetReference IconRef => iconRef;

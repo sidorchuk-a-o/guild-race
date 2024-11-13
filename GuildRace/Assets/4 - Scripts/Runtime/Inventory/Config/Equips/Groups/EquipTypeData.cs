@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Inventory
 {
-    public class EquipTypeData : ScriptableEntity
+    public class EquipTypeData : ScriptableEntity<int>
     {
         [SerializeField] private LocalizeKey nameKey;
 

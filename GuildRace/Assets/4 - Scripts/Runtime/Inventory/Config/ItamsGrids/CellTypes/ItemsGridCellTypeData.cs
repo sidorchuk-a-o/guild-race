@@ -4,7 +4,7 @@ using System;
 namespace Game.Inventory
 {
     [Serializable]
-    public class ItemsGridCellTypeData : Entity
+    public class ItemsGridCellTypeData : Entity<int>
     {
     }
 }

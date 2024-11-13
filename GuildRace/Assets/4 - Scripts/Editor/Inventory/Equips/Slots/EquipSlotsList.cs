@@ -7,7 +7,7 @@ namespace Game.Inventory
         public override void BindData(SerializedData data)
         {
             headerTitle = "Equip Slots";
-            wizardType = typeof(EquipSlotCreateWizard);
+            wizardType = typeof(EquipSlotImportWizard);
 
             base.BindData(data);
         }

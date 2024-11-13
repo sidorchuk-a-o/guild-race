@@ -4,17 +4,17 @@ using System;
 namespace Game.Inventory
 {
     [Serializable]
-    public class Rarity : Key
+    public class Rarity : Key<int>
     {
         public Rarity()
         {
         }
 
-        public Rarity(string key) : base(key)
+        public Rarity(int key) : base(key)
         {
         }
 
-        public static implicit operator string(Rarity key) => key?.value;
-        public static implicit operator Rarity(string key) => new(key);
+        public static implicit operator int(Rarity key) => key?.value ?? -1;
+        public static implicit operator Rarity(int key) => new(key);
     }
 }

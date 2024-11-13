@@ -4,17 +4,17 @@ using System;
 namespace Game.Inventory
 {
     [Serializable]
-    public class ItemsGridCellType : Key
+    public class ItemsGridCellType : Key<int>
     {
         public ItemsGridCellType()
         {
         }
 
-        public ItemsGridCellType(string key) : base(key)
+        public ItemsGridCellType(int key) : base(key)
         {
         }
 
-        public static implicit operator string(ItemsGridCellType key) => key?.value;
-        public static implicit operator ItemsGridCellType(string key) => new(key);
+        public static implicit operator int(ItemsGridCellType key) => key?.value ?? -1;
+        public static implicit operator ItemsGridCellType(int key) => new(key);
     }
 }

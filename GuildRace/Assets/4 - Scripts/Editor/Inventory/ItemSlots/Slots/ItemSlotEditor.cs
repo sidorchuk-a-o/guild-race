@@ -9,7 +9,7 @@ namespace Game.Inventory
     /// </summary>
     public abstract class ItemSlotEditor : EntityEditor
     {
-        private KeyElement nameKeyField;
+        private KeyElement<string> nameKeyField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -24,7 +24,7 @@ namespace Game.Inventory
         {
             root.CreateHeader("View");
 
-            nameKeyField = root.CreateKey<LocalizeKey>();
+            nameKeyField = root.CreateKey<LocalizeKey, string>();
             nameKeyField.BindProperty("nameKey", data);
         }
     }

@@ -15,7 +15,7 @@ namespace Game.Guild
         {
             base.CreateItemContentGUI(root);
 
-            defaultNameKeyField = root.CreateKey<LocalizeKey>() as LocalizeKeyElement;
+            defaultNameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             defaultNameKeyField.FlexGrow(1);
             defaultNameKeyField.labelOn = false;
             defaultNameKeyField.removeOn = false;

@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Game.Inventory
 {
     [CustomPropertyDrawer(typeof(Rarity))]
-    public class RarityProperty : KeyPropertyDrawer<Rarity>
+    public class RarityProperty : KeyPropertyDrawer<Rarity, int>
     {
     }
 }

@@ -7,9 +7,10 @@ namespace Game.Inventory
         public override void BindData(SerializedData data)
         {
             headerTitle = "Equip Groups";
-            wizardType = typeof(EquipGroupCreateWizard);
+            wizardType = typeof(EquipGroupImportWizard);
 
             showCloneButton = false;
+            showRemoveButton = false;
 
             base.BindData(data);
         }

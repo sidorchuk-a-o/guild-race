@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Inventory
 {
-    public class ItemsGridData : ScriptableEntity
+    public class ItemsGridData : ScriptableEntity<int>
     {
         // Size
         [SerializeField] private int rowSize;

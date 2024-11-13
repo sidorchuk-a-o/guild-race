@@ -10,8 +10,8 @@ namespace Game.Inventory
     {
         private PropertyElement rowSizeField;
         private PropertyElement rowCountField;
-        private KeyElement categoryField;
-        private KeyElement cellTypeField;
+        private KeyElement<int> categoryField;
+        private KeyElement<int> cellTypeField;
 
         protected override void CreateItemContentGUI(VisualElement root)
         {
@@ -27,13 +27,13 @@ namespace Game.Inventory
             rowCountField.Width(80);
             rowCountField.labelOn = false;
 
-            categoryField = root.CreateKey<ItemsGridCategory>();
+            categoryField = root.CreateKey<ItemsGridCategory, int>();
             categoryField.Width(160);
             categoryField.filterOn = false;
             categoryField.removeOn = false;
             categoryField.labelOn = false;
 
-            cellTypeField = root.CreateKey<ItemsGridCellType>();
+            cellTypeField = root.CreateKey<ItemsGridCellType, int>();
             cellTypeField.FlexGrow(1);
             cellTypeField.filterOn = false;
             cellTypeField.removeOn = false;

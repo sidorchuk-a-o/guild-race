@@ -13,12 +13,12 @@ namespace Game.Guild
 
         public static Collection<string> CreateRolesViewCollection()
         {
-            return Config.CreateKeyViewCollection<RoleData>("charactersParams.roles");
+            return Config.CreateKeyViewCollection<RoleData, string>("charactersParams.roles");
         }
 
         public static Collection<string> CreateClassesViewCollection()
         {
-            return Config.CreateKeyViewCollection<ClassData>("charactersParams.classes");
+            return Config.CreateKeyViewCollection<ClassData, string>("charactersParams.classes");
         }
 
         public static Collection<string> CreateSpecializationsViewCollection()

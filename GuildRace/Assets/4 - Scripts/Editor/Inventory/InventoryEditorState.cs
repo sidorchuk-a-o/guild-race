@@ -112,14 +112,14 @@ namespace Game.Inventory
 
         // == Collections ==
 
-        public static Collection<string> GetRaritiesCollection()
+        public static Collection<int> GetRaritiesCollection()
         {
-            return Config.CreateKeyViewCollection<RarityData>("itemsParams.rarities");
+            return Config.CreateKeyViewCollection<RarityData, int>("itemsParams.rarities");
         }
 
-        public static Collection<string> GetItemSlotsCollection()
+        public static Collection<int> GetItemSlotsCollection()
         {
-            var keysDict = new Dictionary<string, string>();
+            var keysDict = new Dictionary<string, int>();
             var slots = Config.GetValue<List<ItemSlotData>>("itemSlots");
 
             foreach (var slot in slots)
@@ -133,24 +133,24 @@ namespace Game.Inventory
             return new(keysDict.Values, keysDict.Keys, autoSort: false);
         }
 
-        public static Collection<string> GetItemsGridCategoriesCollection()
+        public static Collection<int> GetItemsGridCategoriesCollection()
         {
-            return Config.CreateKeyViewCollection<ItemsGridCategoryData>("itemsGridsParams.categories");
+            return Config.CreateKeyViewCollection<ItemsGridCategoryData, int>("itemsGridsParams.categories");
         }
 
-        public static Collection<string> GetItemsGridCellTypesCollection()
+        public static Collection<int> GetItemsGridCellTypesCollection()
         {
-            return Config.CreateKeyViewCollection<ItemsGridCellTypeData>("itemsGridsParams.cellTypes");
+            return Config.CreateKeyViewCollection<ItemsGridCellTypeData, int>("itemsGridsParams.cellTypes");
         }
 
-        public static Collection<string> GetEquipGroupsCollection()
+        public static Collection<int> GetEquipGroupsCollection()
         {
-            return Config.CreateKeyViewCollection<EquipGroupData>("equipsParams.groups");
+            return Config.CreateKeyViewCollection<EquipGroupData, int>("equipsParams.groups");
         }
 
-        public static Collection<string> GetEquipTypesCollection()
+        public static Collection<int> GetEquipTypesCollection()
         {
-            var keysDict = new Dictionary<string, string>();
+            var keysDict = new Dictionary<string, int>();
             var equipGroups = Config.GetValue<List<EquipGroupData>>("equipsParams.groups");
 
             foreach (var equipGroup in equipGroups)
@@ -177,12 +177,12 @@ namespace Game.Inventory
 
         public static Collection<string> CreateOptionsCollection()
         {
-            return Config.CreateKeyCollection<OptionHandler>("uiParams.optionHandlers");
+            return Config.CreateKeyCollection<OptionHandler, string>("uiParams.optionHandlers");
         }
 
         public static Collection<string> CreateOptionsViewCollection()
         {
-            return Config.CreateKeyViewCollection<OptionHandler>("uiParams.optionHandlers");
+            return Config.CreateKeyViewCollection<OptionHandler, string>("uiParams.optionHandlers");
         }
 
         public static IReadOnlyList<Type> GetExistOptionHandlerTypes()

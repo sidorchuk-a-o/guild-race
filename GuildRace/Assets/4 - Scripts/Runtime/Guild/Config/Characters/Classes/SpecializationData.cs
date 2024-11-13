@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class SpecializationData : ScriptableEntity
+    public class SpecializationData : ScriptableEntity<string>
     {
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private RoleId roleId;

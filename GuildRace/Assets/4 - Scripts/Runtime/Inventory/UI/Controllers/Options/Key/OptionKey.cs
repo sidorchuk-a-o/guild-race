@@ -4,7 +4,7 @@ using System;
 namespace Game.Inventory
 {
     [Serializable]
-    public class OptionKey : Key
+    public class OptionKey : Key<string>
     {
         public OptionKey()
         {

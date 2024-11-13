@@ -5,7 +5,7 @@ namespace Game.Inventory
     [JsonObject(MemberSerialization.Fields)]
     public class EquipSlotSM : ItemSlotSM
     {
-        [ES3Serializable] private string equipType;
+        [ES3Serializable] private int equipType;
 
         public EquipSlotSM(EquipSlotInfo info, IInventoryFactory inventoryFactory)
             : base(info, inventoryFactory)

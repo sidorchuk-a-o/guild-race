@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Game.Inventory
 {
     [CustomPropertyDrawer(typeof(OptionKey))]
-    public class OptionKeyProperty : KeyPropertyDrawer<OptionKey>
+    public class OptionKeyProperty : KeyPropertyDrawer<OptionKey, string>
     {
     }
 }

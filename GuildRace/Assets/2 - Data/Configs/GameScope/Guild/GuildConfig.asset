@@ -17,31 +17,11 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/CLASS_1_TTL
   armorType:
-    value: 4514c8d7172c43399bc8fd3178b1f926
+    value: 4514
   weaponType:
-    value: 04baea5bc23d425db4ab0b49ed36147e
+    value: 4
   specs:
   - {fileID: 7198393799899164901}
---- !u!114 &-7773364321222611439
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 1c8c0f1295c247d184f008afbac2b4e0
-  title: 
-  rowSize: 11
-  rowCount: 20
-  category:
-    value: ccd1118c0e8844649103e35844fe1139
-  cellType:
-    value: b8dc37d890a74c7bb1ff1c1c73e35bb7
 --- !u!114 &-7600222629343561412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,26 +38,6 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_4_TTL
---- !u!114 &-6831772010934211210
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 7410c4e91ddd49c8aa4daa8bafac9800
-  title: 
-  rowSize: 11
-  rowCount: 20
-  category:
-    value: ccd1118c0e8844649103e35844fe1139
-  cellType:
-    value: b96c32873e544b9897fc02b4d6445231
 --- !u!114 &-6722420641676964884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,9 +105,9 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/CLASS_2_TTL
   armorType:
-    value: 4514c8d7172c43399bc8fd3178b1f926
+    value: 4514
   weaponType:
-    value: 8ffc4d70488b45409eef5be37e4b8e63
+    value: 8
   specs:
   - {fileID: -4733274706201629649}
 --- !u!114 &-3730586026932445884
@@ -166,7 +126,7 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_5_TTL
---- !u!114 &-1146228020903282579
+--- !u!114 &-2170756541552804806
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,17 +138,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: cff0f4c155ef4343b8e5a6bc347cdbc5
+  id: 
   title: 
   nameKey:
-    value: GUILD_BANK/BANK_EQUIPS_TAB_TTL
+    value: GUILD_BANK/BANK_REAGENTS_TAB_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  grid: {fileID: -6831772010934211210}
+  grid: {fileID: 4062836607073430714}
 --- !u!114 &-1063255563526852419
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,8 +242,8 @@ MonoBehaviour:
         value: 02b71578fcbc466b919b19d5b02d9256
   guildBankParams:
     tabs:
-    - {fileID: -1146228020903282579}
-    - {fileID: 4847741651264621419}
+    - {fileID: 7326914904955865639}
+    - {fileID: -2170756541552804806}
 --- !u!114 &499257089889080854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,7 +260,7 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_0_TTL
---- !u!114 &4847741651264621419
+--- !u!114 &4062836607073430714
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,20 +269,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 8f4f667946bd407ea080f6a394b95f4e
+  id: 0
   title: 
-  nameKey:
-    value: GUILD_BANK/BANK_REAGENTS_TAB_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  grid: {fileID: -7773364321222611439}
+  rowSize: 11
+  rowCount: 20
+  category:
+    value: 61
+  cellType:
+    value: 73
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,6 +314,26 @@ MonoBehaviour:
     value: CHARACTERS/CLASS_0_SPEC_0_TTL
   roleId:
     value: 42c4136f902e4bc3af5e751f35a7877a
+--- !u!114 &6159485941193676221
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  title: 
+  rowSize: 11
+  rowCount: 20
+  category:
+    value: 61
+  cellType:
+    value: 72
 --- !u!114 &6246976285171924263
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,9 +351,9 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/CLASS_0_TTL
   armorType:
-    value: 0939385155fe46aeb159207ffb3ab8fd
+    value: 939385155
   weaponType:
-    value: 578f88f69bb945188b475345f67a5f98
+    value: 578
   specs:
   - {fileID: 5272075455439435193}
 --- !u!114 &6298160343060774326
@@ -429,3 +406,26 @@ MonoBehaviour:
     value: CHARACTERS/CLASS_1_SPEC_0_TTL
   roleId:
     value: a03305001e1c4eaf957945627f401dfb
+--- !u!114 &7326914904955865639
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_EQUIPS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: 6159485941193676221}
