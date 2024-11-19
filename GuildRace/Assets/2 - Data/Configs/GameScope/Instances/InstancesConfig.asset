@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-624584689624486608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 123
+  title: Dungeon3
+  type:
+    value: 111
+  nameKey:
+    value: 
+  descKey:
+    value: 
+  mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39878800ca968844e96a9e5747681377, type: 3}
+  m_Name: InstancesConfig
+  m_EditorClassIdentifier: 
+  seasons:
+  - {fileID: 1944806825668537170}
+  instanceTypes:
+  - id: 111
+    title: Dungeon
+    nameKey:
+      value: INSTANCES/INSTANCE_DUNGEON_TTL
+  - id: 112
+    title: Raid
+    nameKey:
+      value: INSTANCES/INSTANCE_RAID_TTL
+--- !u!114 &981582152149035343
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 121
+  title: Dungeon1
+  type:
+    value: 111
+  nameKey:
+    value: <none>
+  descKey:
+    value: <none>
+  mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &1283688112228560719
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 125
+  title: "\u0425\u0440\u0430\u043C \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+  type:
+    value: 112
+  nameKey:
+    value: <none>
+  descKey:
+    value: <none>
+  mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &1944806825668537170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2874b0e8a5f5af949a2d9b571d8be4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 101
+  title: Season 1
+  nameKey:
+    value: INSTANCES/SEASON_1_TTL
+  instances:
+  - {fileID: 981582152149035343}
+  - {fileID: 3222700181868745754}
+  - {fileID: -624584689624486608}
+  - {fileID: 9176709590746743493}
+  - {fileID: 1283688112228560719}
+--- !u!114 &3222700181868745754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 122
+  title: Dungeon2
+  type:
+    value: 111
+  nameKey:
+    value: 
+  descKey:
+    value: 
+  mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &9176709590746743493
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 124
+  title: Dungeon4
+  type:
+    value: 111
+  nameKey:
+    value: <none>
+  descKey:
+    value: <none>
+  mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
