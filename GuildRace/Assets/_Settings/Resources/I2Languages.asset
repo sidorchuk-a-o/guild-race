@@ -275,6 +275,22 @@ MonoBehaviour:
       - 
       Flags: 0000
       Languages_Touch: []
+    - Term: CHARACTERS/SUB_ROLE_MELEE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u043B\u0438\u0436\u043D\u0438\u0439 \u0431\u043E\u0439"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: CHARACTERS/SUB_ROLE_RANGED_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0414\u0430\u043B\u044C\u043D\u0438\u0439 \u0431\u043E\u0439"
+      Flags: 0000
+      Languages_Touch: []
     - Term: CHARACTERS/CLASS_0_TTL
       TermType: 0
       Description: 
@@ -1229,7 +1245,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1731487411006
+    Google_LastUpdatedVersion: 1731603770044
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

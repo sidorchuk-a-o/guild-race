@@ -9,7 +9,9 @@ namespace Game.Guild
     public class CharactersParamsEditor
     {
         private PropertyElement maxEquipSlotCountField;
+
         private RolesList rolesList;
+        private SubRolesList subRolesList;
 
         private ClassesList classesList;
 
@@ -35,6 +37,11 @@ namespace Game.Guild
 
             rolesList = root.CreateElement<RolesList>();
             rolesList.BindProperty("roles", GetData(data));
+
+            root.CreateHeader("Sub Roles");
+
+            subRolesList = root.CreateElement<SubRolesList>();
+            subRolesList.BindProperty("subRoles", GetData(data));
         }
 
         private void CreateClassesTab(VisualElement root, SerializedData data)

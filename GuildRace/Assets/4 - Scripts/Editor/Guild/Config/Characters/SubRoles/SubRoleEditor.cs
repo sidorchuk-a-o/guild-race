@@ -4,26 +4,17 @@ using UnityEngine.UIElements;
 
 namespace Game.Guild
 {
-    [GuildEditor(typeof(SpecializationData))]
-    public class SpecializationEditor : EntityEditor
+    [GuildEditor(typeof(SubRoleData))]
+    public class SubRoleEditor : EntityEditor
     {
         private LocalizeKeyElement nameKeyField;
-        private PropertyElement roleIdField;
-        private PropertyElement subRoleIdField;
 
         protected override void CreateEditorGUI(VisualElement root)
         {
             base.CreateEditorGUI(root);
 
-            contentContainer.CreateHeader("Common");
-
             nameKeyField = contentContainer.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
-
-            contentContainer.CreateHeader("Role");
-
-            roleIdField = contentContainer.CreateProperty();
-            subRoleIdField = contentContainer.CreateProperty();
         }
 
         public override void BindData(SerializedData data)
@@ -31,8 +22,6 @@ namespace Game.Guild
             base.BindData(data);
 
             nameKeyField.BindProperty("nameKey", data);
-            roleIdField.BindProperty("roleId", data);
-            subRoleIdField.BindProperty("subRoleId", data);
         }
     }
 }

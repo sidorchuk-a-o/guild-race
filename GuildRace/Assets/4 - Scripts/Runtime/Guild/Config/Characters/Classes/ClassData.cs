@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class ClassData : ScriptableEntity<string>
+    public class ClassData : ScriptableEntity<int>
     {
         [SerializeField] private LocalizeKey nameKey;
         [Space]

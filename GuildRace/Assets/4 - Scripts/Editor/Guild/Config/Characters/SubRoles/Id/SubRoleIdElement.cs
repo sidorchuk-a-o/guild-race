@@ -3,12 +3,12 @@ using System;
 
 namespace Game.Guild
 {
-    [KeyElement(typeof(RoleId))]
-    public class RoleIdElement : KeyElement<int>
+    [KeyElement(typeof(SubRoleId))]
+    public class SubRoleIdElement : KeyElement<int>
     {
         protected override Func<Collection<int>> GetCollection
         {
-            get => GuildEditorState.CreateRolesViewCollection;
+            get => GuildEditorState.CreateSubRolesViewCollection;
         }
 
         protected override void CreateElementGUI(Element root)

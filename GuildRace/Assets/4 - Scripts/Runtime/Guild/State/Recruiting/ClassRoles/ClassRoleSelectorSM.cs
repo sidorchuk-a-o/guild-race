@@ -5,7 +5,7 @@ namespace Game.Guild
     [JsonObject(MemberSerialization.Fields)]
     public class ClassRoleSelectorSM
     {
-        [ES3Serializable] private string roleId;
+        [ES3Serializable] private int roleId;
         [ES3Serializable] private bool isEnabled;
 
         public ClassRoleSelectorSM(ClassRoleSelectorInfo info)

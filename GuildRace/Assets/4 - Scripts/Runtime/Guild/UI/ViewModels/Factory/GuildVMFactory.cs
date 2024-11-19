@@ -64,6 +64,13 @@ namespace Game.Guild
             return new RoleVM(roleData);
         }
 
+        public SubRoleVM GetRole(SubRoleId subRoleId)
+        {
+            var subRoleData = guildConfig.CharactersParams.GetSubRole(subRoleId);
+
+            return new SubRoleVM(subRoleData);
+        }
+
         public ClassVM GetClass(ClassId classId)
         {
             var classData = guildConfig.CharactersParams.GetClass(classId);

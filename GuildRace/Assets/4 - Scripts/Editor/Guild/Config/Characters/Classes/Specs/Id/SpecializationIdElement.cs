@@ -4,9 +4,9 @@ using System;
 namespace Game.Guild
 {
     [KeyElement(typeof(SpecializationId))]
-    public class SpecializationIdElement : KeyElement<string>
+    public class SpecializationIdElement : KeyElement<int>
     {
-        protected override Func<Collection<string>> GetCollection
+        protected override Func<Collection<int>> GetCollection
         {
             get => GuildEditorState.CreateSpecializationsViewCollection;
         }

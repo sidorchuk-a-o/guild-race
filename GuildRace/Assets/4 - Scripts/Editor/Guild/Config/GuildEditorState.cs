@@ -11,19 +11,24 @@ namespace Game.Guild
         public static GuildConfig Config => FindAsset(ref instance.config);
         public static GuildEditorsFactory EditorsFactory => instance.editorsFactory ??= new();
 
-        public static Collection<string> CreateRolesViewCollection()
+        public static Collection<int> CreateRolesViewCollection()
         {
-            return Config.CreateKeyViewCollection<RoleData, string>("charactersParams.roles");
+            return Config.CreateKeyViewCollection<RoleData, int>("charactersParams.roles");
         }
 
-        public static Collection<string> CreateClassesViewCollection()
+        public static Collection<int> CreateSubRolesViewCollection()
         {
-            return Config.CreateKeyViewCollection<ClassData, string>("charactersParams.classes");
+            return Config.CreateKeyViewCollection<SubRoleData, int>("charactersParams.subRoles");
         }
 
-        public static Collection<string> CreateSpecializationsViewCollection()
+        public static Collection<int> CreateClassesViewCollection()
         {
-            var keysDict = new Dictionary<string, string> { ["< null >"] = null };
+            return Config.CreateKeyViewCollection<ClassData, int>("charactersParams.classes");
+        }
+
+        public static Collection<int> CreateSpecializationsViewCollection()
+        {
+            var keysDict = new Dictionary<string, int> { ["< null >"] = -1 };
             var classes = Config.GetValue<List<ClassData>>("charactersParams.classes");
 
             foreach (var classData in classes)

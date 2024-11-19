@@ -9,9 +9,9 @@ namespace Game.Guild
     {
         [ES3Serializable] private string id;
         [ES3Serializable] private string nickname;
-        [ES3Serializable] private string classId;
-        [ES3Serializable] private string specId;
-        [ES3Serializable] private string guildRankId;
+        [ES3Serializable] private int classId;
+        [ES3Serializable] private int specId;
+        [ES3Serializable] private int guildRankId;
         [ES3Serializable] private ItemSlotsSM equipSlotsSM;
 
         public CharacterSM(CharacterInfo info, IInventoryService inventoryService)
