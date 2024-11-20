@@ -14,16 +14,9 @@ namespace Game.Instances
         {
             base.CreateTabItems(tabs);
 
-            tabs.CreateTab("Instances", CreateInstancesTab);
             tabs.CreateTab("Params", CreateCommonTab);
 
             tabs.content.Width(50, LengthUnit.Percent);
-        }
-
-        private void CreateInstancesTab(VisualElement root, SerializedData data)
-        {
-            instancesList = root.CreateElement<InstancesList>();
-            instancesList.BindProperty("instances", data);
         }
 
         protected virtual void CreateCommonTab(VisualElement root, SerializedData data)
@@ -33,6 +26,11 @@ namespace Game.Instances
             nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.BindProperty("nameKey", data);
             nameKeyField.previewOn = true;
+
+            root.CreateHeader("Instances");
+
+            instancesList = root.CreateElement<InstancesList>();
+            instancesList.BindProperty("instances", data);
         }
     }
 }

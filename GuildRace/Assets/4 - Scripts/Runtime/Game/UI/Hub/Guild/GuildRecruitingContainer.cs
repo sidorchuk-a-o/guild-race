@@ -3,14 +3,13 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using Game.Guild;
 using Game.Inventory;
 using System.Threading;
 using UniRx;
 using UnityEngine;
 using VContainer;
 
-namespace Game
+namespace Game.Guild
 {
     public class GuildRecruitingContainer : UIContainer
     {

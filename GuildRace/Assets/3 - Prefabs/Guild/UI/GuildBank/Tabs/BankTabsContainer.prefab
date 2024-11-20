@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831636154026032011, guid: bf248273f69d27a468b77047388477af, type: 3}
       propertyPath: cellType.value
-      value: b96c32873e544b9897fc02b4d6445231
+      value: 72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831636154026032011, guid: bf248273f69d27a468b77047388477af, type: 3}
       propertyPath: cellType.value
-      value: b8dc37d890a74c7bb1ff1c1c73e35bb7
+      value: 73
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

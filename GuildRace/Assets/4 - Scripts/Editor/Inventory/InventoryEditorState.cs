@@ -168,7 +168,7 @@ namespace Game.Inventory
             return new(keysDict.Values, keysDict.Keys, autoSort: false);
         }
 
-        private static KeyScriptData GetOptionKeyScriptData() => new()
+        private static KeyScriptData<string> GetOptionKeyScriptData() => new()
         {
             keyTypeName = nameof(OptionKey),
             namespaceValue = "Game.Inventory",

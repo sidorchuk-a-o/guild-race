@@ -49,6 +49,14 @@ MonoBehaviour:
       - "\u0411\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       Flags: 0000
       Languages_Touch: []
+    - Term: HUB/INSTANCES_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B"
+      Flags: 0000
+      Languages_Touch: []
     - Term: GUILD/CREATE_GUILD_TTL
       TermType: 0
       Description: 
@@ -1628,6 +1636,56 @@ MonoBehaviour:
       - 
       Flags: 0000
       Languages_Touch: []
+    - Term: INSTANCES/SEASON_1_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - Season 1
+      - "\u0421\u0435\u0437\u043E\u043D 1"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: INSTANCES/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: INSTANCES/INSTANCE_DUNGEON_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - Dungeon
+      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u0435"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: INSTANCES/INSTANCE_RAID_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - Raid
+      - "\u0420\u0435\u0439\u0434"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: INSTANCES/INSTANCES_LIST_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B
+        - {[0]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: INSTANCES/SETUP_INSTANCE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u043F\u043E\u0445\u043E\u0434\u0430
+        \u0432 {[0]}"
+      Flags: 0000
+      Languages_Touch: []
     - Term: STORE/GOLD_CURRENCY_TTL
       TermType: 0
       Description: 
@@ -1686,38 +1744,6 @@ MonoBehaviour:
       - "\u041F\u0430\u043A\u0438 \u0441 \u0432\u0430\u043B\u044E\u0442\u0430\u043C\u0438"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/SEASON_1_TTL
-      TermType: 0
-      Description: 
-      Languages:
-      - Season 1
-      - "\u0421\u0435\u0437\u043E\u043D 1"
-      Flags: 0000
-      Languages_Touch: []
-    - Term: INSTANCES/
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      Flags: 0000
-      Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_DUNGEON_TTL
-      TermType: 0
-      Description: 
-      Languages:
-      - Dungeon
-      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u0435"
-      Flags: 0000
-      Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_RAID_TTL
-      TermType: 0
-      Description: 
-      Languages:
-      - Raid
-      - "\u0420\u0435\u0439\u0434"
-      Flags: 0000
-      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: DEFAULT/APP_NAME
@@ -1733,7 +1759,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1731957242189
+    Google_LastUpdatedVersion: 1732136478887
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

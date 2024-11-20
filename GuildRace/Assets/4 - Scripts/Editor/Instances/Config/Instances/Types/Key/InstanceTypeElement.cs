@@ -8,7 +8,7 @@ namespace Game.Instances
     {
         protected override Func<Collection<int>> GetCollection
         {
-            get => InstancesEditorState.GetInstanceTypesCollection;
+            get => InstancesEditorState.GetInstanceTypesViewCollection;
         }
 
         protected override void CreateElementGUI(Element root)
