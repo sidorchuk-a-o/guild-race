@@ -51,8 +51,12 @@ namespace Game.Instances
         {
             var tasks = ListPool<UniTask>.Get();
 
-            tasks.Add(raidItem.Init(seasonVM.RaidVM));
-            tasks.AddRange(dungeonItems.Select((x, i) => x.Init(seasonVM.DungeonsVM[i])));
+            tasks.Add(raidItem.Init(seasonVM.Id, seasonVM.RaidVM));
+
+            tasks.AddRange(dungeonItems.Select((x, i) =>
+            {
+                return x.Init(seasonVM.Id, seasonVM.DungeonsVM[i]);
+            }));
 
             await UniTask.WhenAll(tasks);
 

@@ -1,5 +1,6 @@
 ﻿using AD.States;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Game.Instances
 {
@@ -7,6 +8,11 @@ namespace Game.Instances
     {
         public SeasonsCollection(IEnumerable<SeasonInfo> values) : base(values)
         {
+        }
+
+        public SeasonInfo GetById(int id)
+        {
+            return Values.FirstOrDefault(x => x.Id == id);
         }
     }
 }

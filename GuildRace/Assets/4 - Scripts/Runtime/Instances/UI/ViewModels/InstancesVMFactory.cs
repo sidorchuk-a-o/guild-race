@@ -18,5 +18,13 @@ namespace Game.Instances
 
             return new SeasonVM(firstSeason);
         }
+
+        public InstanceVM GetInstance(int seasonId, int instanceId)
+        {
+            var season = instancesService.Seasons.GetById(seasonId);
+            var instance = season.GetInstanceById(instanceId);
+
+            return new InstanceVM(instance);
+        }
     }
 }

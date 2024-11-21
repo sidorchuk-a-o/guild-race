@@ -1,5 +1,6 @@
 ﻿using AD.Services.Localization;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Game.Instances
 {
@@ -18,6 +19,16 @@ namespace Game.Instances
 
             Raid = raid;
             Dungeons = new InstancesCollection(dungeons);
+        }
+
+        public InstanceInfo GetInstanceById(int instanceId)
+        {
+            if (Raid.Id == instanceId)
+            {
+                return Raid;
+            }
+
+            return Dungeons.FirstOrDefault(x => x.Id == instanceId);
         }
     }
 }

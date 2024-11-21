@@ -32,5 +32,9 @@ namespace AD.Services.Router
             public static readonly RouteKey transferItemDialog = new("00bc352d72324586b868701491aa2207");
             public static readonly RouteKey discardItemDialog = new("06ac16fcc58645f098914571463282bc");
         }
+        public static class Instances
+        {
+            public static readonly RouteKey setupInstances = new("ca322824650e4873b53fcfcdf970f543");
+        }
     }
 }
