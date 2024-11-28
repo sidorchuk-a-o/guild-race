@@ -8,7 +8,7 @@ namespace Game.Guild
     {
         public GuildRankInfo this[GuildRankId id] => Values.FirstOrDefault(x => x.Id == id);
 
-        public GuildRankInfo GuildMaster => this[0];
+        public GuildRankInfo GuildMaster => this[index: 0];
 
         public GuildRanksCollection(IEnumerable<GuildRankInfo> values) : base(values)
         {

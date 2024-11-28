@@ -14,5 +14,20 @@ namespace Game.Instances
         {
             return Values.FirstOrDefault(x => x.Id == id);
         }
+
+        public InstanceInfo GetInstance(int id)
+        {
+            foreach (var season in Values)
+            {
+                var instance = season.GetInstanceById(id);
+
+                if (instance != null)
+                {
+                    return instance;
+                }
+            }
+
+            return null;
+        }
     }
 }

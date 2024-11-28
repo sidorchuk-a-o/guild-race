@@ -13,14 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 123
-  title: Dungeon3
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
+    \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442"
   type:
     value: 111
   nameKey:
-    value: 
+    value: INSTANCES/INSTANCE_123_TTL
   descKey:
     value: 
   mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
@@ -62,15 +69,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 121
-  title: Dungeon1
+  title: "\u041A\u0440\u0435\u043F\u043E\u0441\u0442\u044C \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
   type:
     value: 111
   nameKey:
-    value: <none>
+    value: INSTANCES/INSTANCE_121_TTL
   descKey:
     value: <none>
   mapRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -92,10 +105,16 @@ MonoBehaviour:
   type:
     value: 112
   nameKey:
-    value: <none>
+    value: INSTANCES/INSTANCE_125_TTL
   descKey:
-    value: <none>
+    value: 
   mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
@@ -136,14 +155,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 122
-  title: Dungeon2
+  title: "\u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u044B\u0439 \u0433\u0440\u043E\u0442"
   type:
     value: 111
   nameKey:
-    value: 
+    value: INSTANCES/INSTANCE_122_TTL
   descKey:
     value: 
   mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
@@ -162,14 +187,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 124
-  title: Dungeon4
+  title: "\u0412\u044B\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043A\u0443\u0437\u043D\u044F"
   type:
     value: 111
   nameKey:
-    value: <none>
+    value: INSTANCES/INSTANCE_124_TTL
   descKey:
-    value: <none>
+    value: 
   mapRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 

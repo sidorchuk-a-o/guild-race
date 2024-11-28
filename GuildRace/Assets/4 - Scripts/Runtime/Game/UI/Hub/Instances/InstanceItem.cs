@@ -15,7 +15,6 @@ namespace Game.Instances
 
         private IRouterService router;
 
-        private int seasonId;
         private InstanceVM instanceVM;
 
         [Inject]
@@ -31,9 +30,8 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        public async UniTask Init(int seasonId, InstanceVM instanceVM)
+        public async UniTask Init(InstanceVM instanceVM)
         {
-            this.seasonId = seasonId;
             this.instanceVM = instanceVM;
 
             nameText.SetTextParams(instanceVM.NameKey);
@@ -43,11 +41,10 @@ namespace Game.Instances
         {
             var parameters = RouteParams.Default;
 
-            parameters[SetupInstanceContainer.seasonKey] = seasonId;
             parameters[SetupInstanceContainer.instanceKey] = instanceVM.Id;
 
             await router.PushAsync(
-                pathKey: RouteKeys.Instances.setupInstances,
+                pathKey: RouteKeys.Instances.setupInstance,
                 loadingKey: LoadingScreenKeys.loading,
                 parameters: parameters);
         }

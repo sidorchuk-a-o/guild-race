@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using Cysharp.Threading.Tasks;
 using System.Linq;
 
 namespace Game.Instances
@@ -12,6 +13,8 @@ namespace Game.Instances
             this.instancesService = instancesService;
         }
 
+        // == Season ==
+
         public SeasonVM GetFirstSeason()
         {
             var firstSeason = instancesService.Seasons.FirstOrDefault();
@@ -19,12 +22,39 @@ namespace Game.Instances
             return new SeasonVM(firstSeason);
         }
 
-        public InstanceVM GetInstance(int seasonId, int instanceId)
+        // == Instance ==
+
+        public InstanceVM GetInstance(int instanceId)
         {
-            var season = instancesService.Seasons.GetById(seasonId);
-            var instance = season.GetInstanceById(instanceId);
+            var instance = instancesService.Seasons.GetInstance(instanceId);
 
             return new InstanceVM(instance);
+        }
+
+        public InstanceVM GetCurrentInstance()
+        {
+            var instance = instancesService.CurrentInstance;
+
+            return new InstanceVM(instance);
+        }
+
+        public async UniTask StartInstance(int instanceId)
+        {
+            await instancesService.StartInstance(instanceId);
+        }
+
+        public async UniTask StopCurrentInstance()
+        {
+            await instancesService.StopCurrentInstance();
+        }
+
+        // == Map == 
+
+        public InstanceMapVM GetInstanceMap()
+        {
+            var mapComponent = InstanceMapComponent.GetComponent();
+
+            return new InstanceMapVM(mapComponent);
         }
     }
 }

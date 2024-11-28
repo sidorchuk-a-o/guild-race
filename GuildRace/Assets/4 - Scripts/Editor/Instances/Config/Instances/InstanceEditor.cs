@@ -10,7 +10,9 @@ namespace Game.Instances
         private PropertyElement typeField;
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
+
         private AddressableElement<GameObject> mapRefField;
+        private AddressableElement<GameObject> uiRefField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -38,6 +40,9 @@ namespace Game.Instances
 
             mapRefField = root.CreateAddressable<GameObject>();
             mapRefField.BindProperty("mapRef", data);
+
+            uiRefField = root.CreateAddressable<GameObject>();
+            uiRefField.BindProperty("uiRef", data);
 
             root.CreateHeader("Bosses");
             root.CreateHeader("--- --- ---");

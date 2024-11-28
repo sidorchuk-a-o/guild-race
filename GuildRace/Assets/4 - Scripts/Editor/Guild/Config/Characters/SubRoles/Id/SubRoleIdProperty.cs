@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Game.Guild
 {
     [CustomPropertyDrawer(typeof(SubRoleId))]
-    public class SubRoleIdProperty : KeyPropertyDrawer<RoleId, int>
+    public class SubRoleIdProperty : KeyPropertyDrawer<SubRoleId, int>
     {
     }
 }

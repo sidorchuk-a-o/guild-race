@@ -37,7 +37,7 @@ MonoBehaviour:
       m_EditorAssetChanged: 0
   scenes:
   - id: 3e7590c332d84ba0bb365225372f279e
-    title: Hub
+    title: Game
     asset:
       m_AssetGUID: dbedac27232d02d4889633012795280d
       m_SubObjectName: 

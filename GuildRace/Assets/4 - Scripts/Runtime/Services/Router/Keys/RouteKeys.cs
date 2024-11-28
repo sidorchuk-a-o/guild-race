@@ -34,7 +34,8 @@ namespace AD.Services.Router
         }
         public static class Instances
         {
-            public static readonly RouteKey setupInstances = new("ca322824650e4873b53fcfcdf970f543");
+            public static readonly RouteKey setupInstance = new("ca322824650e4873b53fcfcdf970f543");
+            public static readonly RouteKey currentInstance = new("920eb14bde51465bae20738f20777ca4");
         }
     }
 }

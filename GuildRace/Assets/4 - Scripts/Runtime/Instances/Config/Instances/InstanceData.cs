@@ -13,10 +13,13 @@ namespace Game.Instances
         [SerializeField] private LocalizeKey descKey;
         // map logic
         [SerializeField] private AssetReference mapRef;
+        [SerializeField] private AssetReference uiRef;
 
+        public InstanceType Type => type;
         public LocalizeKey NameKey => nameKey;
         public LocalizeKey DescKey => descKey;
-        public InstanceType Type => type;
+
         public AssetReference MapRef => mapRef;
+        public AssetReference UIRef => uiRef;
     }
 }

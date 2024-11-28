@@ -23,6 +23,11 @@ namespace Game.UI
             return x.enabled && x.gameObject.activeInHierarchy;
         });
 
+        public static T GetComponent()
+        {
+            return EnabledComponents.FirstOrDefault();
+        }
+
         protected virtual void Awake()
         {
             components.Add(this as T);

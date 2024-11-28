@@ -2,7 +2,7 @@
 
 namespace Game.Instances
 {
-    public class InstancesList : ListElement<InstanceData, InstanceItem>
+    public class InstancesList : ListElement<InstanceData, InstanceListItem>
     {
         public override void BindData(SerializedData data)
         {
