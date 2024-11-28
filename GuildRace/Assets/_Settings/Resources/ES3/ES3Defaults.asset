@@ -33,9 +33,12 @@ MonoBehaviour:
     - ACTk.Runtime
     - AD.Core
     - AD.ToolsCollection
+    - andywiecko.BurstTriangulator
+    - AstarPathfindingProject
     - Coffee.SoftMaskForUGUI
     - Coffee.UIParticle
     - DOTween.Modules
+    - Drawing
     - EasySave3
     - ES3.PlayMaker
     - Game
@@ -47,6 +50,7 @@ MonoBehaviour:
     - nl.jeffreylanters.web-requests
     - OSA.Core
     - OSA.Utilities
+    - PackageTools
     - UIEffect
     - UniRx
     - UniTask
