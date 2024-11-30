@@ -29,15 +29,13 @@ namespace Game.Guild
         {
             await base.Init(parameters, disp);
 
-            var hasBack = parameters.HasBackRouteKey();
-            var hasReinit = parameters.HasReinitializeKey();
-            var forcedReset = hasReinit && !hasBack;
-
             bankTabsVM.AddTo(disp);
             charactersVM.AddTo(disp);
 
-            charactersScroll.Init(charactersVM, forcedReset);
-            bankTabsContainer.Init(bankTabsVM, disp, forcedReset);
+            var hasForcedReset = parameters.HasForceReset();
+
+            charactersScroll.Init(charactersVM, hasForcedReset);
+            bankTabsContainer.Init(bankTabsVM, disp, hasForcedReset);
         }
     }
 }

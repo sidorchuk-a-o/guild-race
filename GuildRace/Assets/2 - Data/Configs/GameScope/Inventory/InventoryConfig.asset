@@ -1832,6 +1832,12 @@ MonoBehaviour:
     gridParams:
       categories: []
       cellTypes: []
+  consumablesParams:
+    items: []
+    slots: []
+    gridParams:
+      categories: []
+      cellTypes: []
   items:
   - {fileID: -6614947257460562497}
   - {fileID: 9111820585827621426}
@@ -1919,6 +1925,7 @@ MonoBehaviour:
   itemsGrids:
   - {fileID: -8197956687249327810, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 1183720720073450144, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: 6966395837178485508, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   itemsParams:
     rarities:
     - {fileID: -7316531994249119311}
@@ -1926,6 +1933,7 @@ MonoBehaviour:
     factories:
     - {fileID: -1232920642671462375}
     - {fileID: -7001324336208455771}
+    - {fileID: 6356543479013324972}
   itemSlotsParams:
     factories:
     - {fileID: 6431083172281420682}
@@ -1942,6 +1950,8 @@ MonoBehaviour:
       title: Equips
     - id: 73
       title: Reagents
+    - id: 75
+      title: Consumables
   uiParams:
     cellSize: 65
     pickupHandlers:
@@ -3220,6 +3230,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e216c37a13ef4f43a2c29d2aedfa68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6356543479013324972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7085e9f15ec17494796739c85bc97294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6431083172281420682

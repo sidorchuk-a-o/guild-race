@@ -2,7 +2,7 @@
 using AD.ToolsCollection;
 using UniRx;
 
-namespace Game.Inventory
+namespace Game.UI
 {
     public class UIStateVM : ViewModel
     {

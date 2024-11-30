@@ -56,10 +56,10 @@ namespace Game.Guild
             await base.Init(parameters, disp);
 
             var hasBack = parameters.HasBackRouteKey();
-            var hasReinit = parameters.HasReinitializeKey();
+            var hasForcedReset = parameters.HasForceReset();
 
             joinRequestsVM.AddTo(disp);
-            joinRequestsScroll.Init(joinRequestsVM, forcedReset: hasReinit && !hasBack);
+            joinRequestsScroll.Init(joinRequestsVM, hasForcedReset);
 
             joinRequestsScroll.OnSelect
                 .Subscribe(RequestSelectCallback)

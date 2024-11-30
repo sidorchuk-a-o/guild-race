@@ -3,14 +3,14 @@ using Game.UI;
 
 namespace Game.Inventory
 {
-    public class ReagentItemVM : ItemVM, IStackableItemVM
+    public class СonsumablesItemVM : ItemVM, IStackableItemVM
     {
-        private readonly ReagentItemInfo info;
+        private readonly СonsumablesItemInfo info;
 
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
 
-        public ReagentItemVM(ReagentItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
+        public СonsumablesItemVM(СonsumablesItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
             this.info = info;
 

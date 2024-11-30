@@ -36,8 +36,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 667744408
   title: 
-  rowSize: 11
-  rowCount: 20
+  rowSize: 8
+  rowCount: 10
   category:
     value: 61
   cellType:
@@ -205,7 +205,6 @@ MonoBehaviour:
   - {fileID: -7600222629343561412}
   - {fileID: -3730586026932445884}
   charactersParams:
-    maxEquipSlotCount: 6
     classes:
     - {fileID: -8413056992514617584}
     roles:
@@ -233,7 +232,25 @@ MonoBehaviour:
       maxEquipCount: 2
       minEquipLevel: 5
       maxEquipLevel: 10
-    defaultCharacters: []
+    defaultCharacters:
+    - id: edfe425165c64129a011721b93ee29a3
+      title: test 1
+      classId:
+        value: 113816267
+      specId:
+        value: 1971898540
+    - id: d681eff815494b12911ac5302d12fa17
+      title: test 2
+      classId:
+        value: 113816267
+      specId:
+        value: 1971898540
+    - id: 5a2efac4264344c6900722a3826bfbe0
+      title: test 3
+      classId:
+        value: 113816267
+      specId:
+        value: 1971898540
   guildBankParams:
     tabs:
     - {fileID: -5316411198448944541}
@@ -268,8 +285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 433774906
   title: 
-  rowSize: 11
-  rowCount: 20
+  rowSize: 8
+  rowCount: 10
   category:
     value: 61
   cellType:
@@ -288,12 +305,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1971898540
   title: Test Spec
-  nameKey:
-    value: CHARACTERS/CLASS_0_SPEC_0_TTL
   roleId:
     value: 1132535647
   subRoleId:
     value: 1456777985
+  nameKey:
+    value: CHARACTERS/CLASS_0_SPEC_0_TTL
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,8 +8,6 @@ namespace Game.Guild
     [Serializable]
     public class CharactersParams
     {
-        [SerializeField] private int maxEquipSlotCount = 6;
-        [Space]
         [SerializeField] private List<ClassData> classes;
         [Space]
         [SerializeField] private List<RoleData> roles;
@@ -21,7 +19,6 @@ namespace Game.Guild
         private Dictionary<SpecializationId, SpecializationData> specsCache;
         private Dictionary<RoleId, List<(ClassData, SpecializationData)>> specByRoleCache;
 
-        public int MaxEquipSlotCount => maxEquipSlotCount;
         public IReadOnlyList<RoleData> Roles => roles;
         public IReadOnlyList<SubRoleData> SubRoles => subRoles;
         public IReadOnlyList<ClassData> Classes => classes;

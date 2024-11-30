@@ -6,7 +6,7 @@ using AD.UI;
 
 namespace Game.Inventory
 {
-    public class InventorySystem : UIContainer
+    public class InventoryUISystem : UIContainer
     {
         [Header("Controllers")]
         [SerializeField] private InventoryDraggableController draggableController;

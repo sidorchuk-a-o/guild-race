@@ -64,6 +64,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4fcc168042334ca6a723dd20e2c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &926111459344990997
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09ad60db31585d4eb70858332cfcb95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInGridRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  itemInSlotRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!114 &1258740967233688229
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,5 +139,6 @@ MonoBehaviour:
   itemsFactories:
   - {fileID: 1258740967233688229}
   - {fileID: -8455271773868540638}
+  - {fileID: 926111459344990997}
   itemSlotsFactories:
   - {fileID: 719888801571365860}

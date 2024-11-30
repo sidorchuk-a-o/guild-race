@@ -63,10 +63,10 @@ namespace Game.Guild
             await base.Init(parameters, disp);
 
             var hasBack = parameters.HasBackRouteKey();
-            var hasReinit = parameters.HasReinitializeKey();
+            var hasForcedReset = parameters.HasForceReset();
 
             charactersVM.AddTo(disp);
-            charactersScroll.Init(charactersVM, forcedReset: hasReinit && !hasBack);
+            charactersScroll.Init(charactersVM, hasForcedReset);
 
             charactersVM.CountStr
                 .Subscribe(x => charactersCountText.SetTextParams(x))
