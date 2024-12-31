@@ -20,7 +20,7 @@ namespace Game.Instances
         {
             instancesImporter ??= new(SheetId, SheetName, "N2:V", typeof(InstanceData));
 
-            await instancesImporter.LoadData();
+            await instancesImporter.LoadData(IdKey);
 
             base.SaveCallback();
         }
@@ -52,14 +52,14 @@ namespace Game.Instances
         {
             var id = row[IdKey].IntParse();
             var title = row[TitleKey].ToUpperFirst();
-            var localizeKey = row["Localize Key"].LocalizeKeyParse();
-            var descLocalizeKey = row["Desc Localize Key"].LocalizeKeyParse();
+            var nameKey = row["Localize Key"].LocalizeKeyParse();
+            var descKey = row["Desc Localize Key"].LocalizeKeyParse();
             var type = new InstanceType(row["Instance Type Id"].IntParse());
 
             data.GetProperty("id").SetValue(id);
             data.GetProperty("title").SetValue(title);
-            data.GetProperty("nameKey").SetValue(localizeKey);
-            data.GetProperty("descKey").SetValue(descLocalizeKey);
+            data.GetProperty("nameKey").SetValue(nameKey);
+            data.GetProperty("descKey").SetValue(descKey);
             data.GetProperty("type").SetValue(type);
         }
     }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-624584689624486608
+--- !u!114 &-4062295242015255834
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,23 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 123
-  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
-    \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442"
+  id: 304
+  title: "\u0412\u044B\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043A\u0443\u0437\u043D\u044F"
   type:
-    value: 111
+    value: 251
   nameKey:
-    value: INSTANCES/INSTANCE_123_TTL
+    value: INSTANCES/INSTANCE_304_TTL
   descKey:
-    value: 
+    value: <none>
   mapRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   uiRef:
-    m_AssetGUID: 
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -46,17 +45,48 @@ MonoBehaviour:
   m_Name: InstancesConfig
   m_EditorClassIdentifier: 
   seasons:
-  - {fileID: 1944806825668537170}
+  - {fileID: 1624386071120413150}
   instanceTypes:
-  - id: 111
+  - id: 251
     title: Dungeon
     nameKey:
       value: INSTANCES/INSTANCE_DUNGEON_TTL
-  - id: 112
+  - id: 252
     title: Raid
     nameKey:
       value: INSTANCES/INSTANCE_RAID_TTL
---- !u!114 &981582152149035343
+  squads:
+  - instanceType:
+      value: 251
+    roles: []
+    maxUnitsCount: 4
+  - instanceType:
+      value: 252
+    roles: []
+    maxUnitsCount: 8
+--- !u!114 &1624386071120413150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2874b0e8a5f5af949a2d9b571d8be4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11
+  title: Season 1
+  nameKey:
+    value: INSTANCES/SEASON_1_TTL
+  instances:
+  - {fileID: 2768101852309104497}
+  - {fileID: 2506231177554234613}
+  - {fileID: 8670504497906546672}
+  - {fileID: -4062295242015255834}
+  - {fileID: 5775344422896784859}
+--- !u!114 &2506231177554234613
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 121
-  title: "\u041A\u0440\u0435\u043F\u043E\u0441\u0442\u044C \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+  id: 302
+  title: "\u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u044B\u0439 \u0433\u0440\u043E\u0442"
   type:
-    value: 111
+    value: 251
   nameKey:
-    value: INSTANCES/INSTANCE_121_TTL
+    value: INSTANCES/INSTANCE_302_TTL
   descKey:
     value: <none>
   mapRef:
@@ -88,7 +118,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
---- !u!114 &1283688112228560719
+--- !u!114 &2768101852309104497
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,12 +130,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 125
+  id: 301
+  title: "\u041A\u0440\u0435\u043F\u043E\u0441\u0442\u044C \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+  type:
+    value: 251
+  nameKey:
+    value: INSTANCES/INSTANCE_301_TTL
+  descKey:
+    value: <none>
+  mapRef:
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &5775344422896784859
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 305
   title: "\u0425\u0440\u0430\u043C \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
   type:
-    value: 112
+    value: 252
   nameKey:
-    value: INSTANCES/INSTANCE_125_TTL
+    value: INSTANCES/INSTANCE_305_TTL
   descKey:
     value: 
   mapRef:
@@ -120,29 +182,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
---- !u!114 &1944806825668537170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2874b0e8a5f5af949a2d9b571d8be4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 101
-  title: Season 1
-  nameKey:
-    value: INSTANCES/SEASON_1_TTL
-  instances:
-  - {fileID: 981582152149035343}
-  - {fileID: 3222700181868745754}
-  - {fileID: -624584689624486608}
-  - {fileID: 9176709590746743493}
-  - {fileID: 1283688112228560719}
---- !u!114 &3222700181868745754
+--- !u!114 &8670504497906546672
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,54 +194,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 122
-  title: "\u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u044B\u0439 \u0433\u0440\u043E\u0442"
+  id: 303
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
+    \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442"
   type:
-    value: 111
+    value: 251
   nameKey:
-    value: INSTANCES/INSTANCE_122_TTL
+    value: INSTANCES/INSTANCE_303_TTL
   descKey:
-    value: 
+    value: <none>
   mapRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   uiRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
---- !u!114 &9176709590746743493
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 124
-  title: "\u0412\u044B\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043A\u0443\u0437\u043D\u044F"
-  type:
-    value: 111
-  nameKey:
-    value: INSTANCES/INSTANCE_124_TTL
-  descKey:
-    value: 
-  mapRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  uiRef:
-    m_AssetGUID: 
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 

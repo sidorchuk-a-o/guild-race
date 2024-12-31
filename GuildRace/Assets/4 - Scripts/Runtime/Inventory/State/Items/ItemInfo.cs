@@ -14,6 +14,7 @@ namespace Game.Inventory
 
         public string Id { get; }
         public int DataId { get; }
+
         public LocalizeKey NameKey { get; }
         public AssetReference IconRef { get; }
         public ItemBoundsInfo Bounds { get; }

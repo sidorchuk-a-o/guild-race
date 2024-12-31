@@ -20,7 +20,7 @@ namespace Game.Inventory
         {
             equipTypesImporter ??= new(SheetId, SheetName, "K2:O", typeof(EquipTypeData));
 
-            await equipTypesImporter.LoadData();
+            await equipTypesImporter.LoadData(IdKey);
 
             base.SaveCallback();
         }

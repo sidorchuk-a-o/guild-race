@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8413056992514617584
+--- !u!114 &-9008320005003930121
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,19 +9,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  id: 113816267
-  title: Test Class
+  id: 712
+  title: "\u0417\u0430\u043A\u043B\u0438\u043D\u0430\u0442\u0435\u043B\u044C"
   nameKey:
-    value: CHARACTERS/CLASS_0_TTL
-  armorType:
-    value: 31
-  weaponType:
-    value: 43
-  specs:
-  - {fileID: 2870407627543817699}
+    value: CHARACTERS/SPEC_712_TTL
+  descKey:
+    value: CHARACTERS/SPEC_712_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
+--- !u!114 &-8876693316626268968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc72b079b3013c74aba596c547fe640f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 541
+  title: MANA
+  nameKey:
+    value: CHARACTERS/RESOURCE_MANA_TTL
+--- !u!114 &-8346132011526749932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 501
+  title: DPS
+  nameKey:
+    value: 
 --- !u!114 &-8197956687249327810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,9 +71,9 @@ MonoBehaviour:
   rowSize: 8
   rowCount: 10
   category:
-    value: 61
+    value: 201
   cellType:
-    value: 72
+    value: 212
 --- !u!114 &-7600222629343561412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,7 +90,7 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_4_TTL
---- !u!114 &-7460019116406388972
+--- !u!114 &-7572584695603090114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,13 +99,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
-  m_Name: Tank
+  m_Script: {fileID: 11500000, guid: e68e592bead36504aa1a55cad1ab4bcb, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  id: 1132535647
-  title: Tank
+  id: 523
+  title: SUPPORT
   nameKey:
-    value: CHARACTERS/ROLE_TANK_TTL
+    value: CHARACTERS/SUBROLE_SUPPORT_TTL
+--- !u!114 &-7000185162162723182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: b308069c091c43c0869ad35aab855f4d
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_CONSUMABLES_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: 76776547799289294}
 --- !u!114 &-6722420641676964884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +145,76 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_2_TTL
---- !u!114 &-5407030355698824318
+--- !u!114 &-6689499474866927032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 709
+  title: "\u0424\u043B\u043E\u0440\u0438\u0441\u0442"
+  nameKey:
+    value: CHARACTERS/SPEC_709_TTL
+  descKey:
+    value: CHARACTERS/SPEC_709_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
+--- !u!114 &-6623397568569760015
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 602
+  title: "\u0416\u0440\u0435\u0446"
+  nameKey:
+    value: CHARACTERS/CLASS_602_TTL
+  descKey:
+    value: CHARACTERS/CLASS_602_DSC
+  armorType:
+    value: 141
+  weaponType:
+    value: 146
+  specs:
+  - {fileID: 4352505467803637179}
+  - {fileID: -2469804027384436182}
+--- !u!114 &-6539849637681063960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 710
+  title: "\u0410\u0441\u0442\u0440\u0430\u043B"
+  nameKey:
+    value: CHARACTERS/SPEC_710_TTL
+  descKey:
+    value: CHARACTERS/SPEC_710_DSC
+  roleId:
+    value: 503
+  subRoleId:
+    value: 524
+--- !u!114 &-5338355903722540116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,12 +224,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e68e592bead36504aa1a55cad1ab4bcb, type: 3}
-  m_Name: Range
+  m_Name: 
   m_EditorClassIdentifier: 
-  id: 493102460
-  title: Range
+  id: 524
+  title: MELEE
   nameKey:
-    value: CHARACTERS/SUB_ROLE_RANGED_TTL
+    value: CHARACTERS/SUBROLE_MELEE_TTL
 --- !u!114 &-5316411198448944541
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,6 +269,53 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_3_TTL
+--- !u!114 &-5055811891075304928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 604
+  title: "\u0412\u043E\u0438\u043D"
+  nameKey:
+    value: CHARACTERS/CLASS_604_TTL
+  descKey:
+    value: CHARACTERS/CLASS_604_DSC
+  armorType:
+    value: 143
+  weaponType:
+    value: 144
+  specs:
+  - {fileID: 4026000880702577928}
+  - {fileID: 8249881096464231259}
+--- !u!114 &-4694587001071973687
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 701
+  title: "\u041C\u0430\u0433\u0438\u0441\u0442\u0440 \u0441\u0442\u0438\u0445\u0438\u0439"
+  nameKey:
+    value: CHARACTERS/SPEC_701_TTL
+  descKey:
+    value: CHARACTERS/SPEC_701_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
 --- !u!114 &-3730586026932445884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,6 +332,44 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_5_TTL
+--- !u!114 &-3532688074755841650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc72b079b3013c74aba596c547fe640f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 542
+  title: ENERGY
+  nameKey:
+    value: CHARACTERS/RESOURCE_ENERGY_TTL
+--- !u!114 &-3107739647621433713
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 714
+  title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440"
+  nameKey:
+    value: CHARACTERS/SPEC_714_TTL
+  descKey:
+    value: CHARACTERS/SPEC_714_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
 --- !u!114 &-2476405077858922527
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,6 +393,116 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   grid: {fileID: 1183720720073450144}
+--- !u!114 &-2469804027384436182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 704
+  title: "\u0421\u0435\u043A\u0442\u0430\u043D\u0442"
+  nameKey:
+    value: CHARACTERS/SPEC_704_TTL
+  descKey:
+    value: CHARACTERS/SPEC_704_DSC
+  roleId:
+    value: 502
+  subRoleId:
+    value: 523
+--- !u!114 &-1261306564598353220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 608
+  title: "\u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043A"
+  nameKey:
+    value: CHARACTERS/CLASS_608_TTL
+  descKey:
+    value: CHARACTERS/CLASS_608_DSC
+  armorType:
+    value: 142
+  weaponType:
+    value: 145
+  specs:
+  - {fileID: 7727481233043288398}
+  - {fileID: 60821224119431582}
+--- !u!114 &-1085160420808501345
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 601
+  title: "\u0427\u0430\u0440\u043E\u0434\u0435\u0439"
+  nameKey:
+    value: CHARACTERS/CLASS_601_TTL
+  descKey:
+    value: CHARACTERS/CLASS_601_DSC
+  armorType:
+    value: 141
+  weaponType:
+    value: 146
+  specs:
+  - {fileID: -4694587001071973687}
+  - {fileID: 2841863336987669863}
+--- !u!114 &-1084165470938094318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 503
+  title: TANK
+  nameKey:
+    value: CHARACTERS/ROLE_TANK_TTL
+--- !u!114 &-55547621386745197
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 711
+  title: "\u041C\u0435\u0442\u0430\u043C\u043E\u0440\u0444"
+  nameKey:
+    value: CHARACTERS/SPEC_711_TTL
+  descKey:
+    value: CHARACTERS/SPEC_711_DSC
+  roleId:
+    value: 503
+  subRoleId:
+    value: 524
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,12 +525,26 @@ MonoBehaviour:
   - {fileID: -3730586026932445884}
   charactersParams:
     classes:
-    - {fileID: -8413056992514617584}
+    - {fileID: -1085160420808501345}
+    - {fileID: -6623397568569760015}
+    - {fileID: 7492917005212791002}
+    - {fileID: -5055811891075304928}
+    - {fileID: 133220843808419609}
+    - {fileID: 59231052814991113}
+    - {fileID: 2998155847386568026}
+    - {fileID: -1261306564598353220}
     roles:
-    - {fileID: -7460019116406388972}
+    - {fileID: -8346132011526749932}
+    - {fileID: 5335921967913264061}
+    - {fileID: -1084165470938094318}
     subRoles:
-    - {fileID: 8968395102269354174}
-    - {fileID: -5407030355698824318}
+    - {fileID: 4201286608953013207}
+    - {fileID: 3937412005290520608}
+    - {fileID: -7572584695603090114}
+    - {fileID: -5338355903722540116}
+    resources:
+    - {fileID: -8876693316626268968}
+    - {fileID: -3532688074755841650}
   recruitingParams:
     minRequestCount: 5
     maxRequestCount: 15
@@ -233,28 +566,127 @@ MonoBehaviour:
       minEquipLevel: 5
       maxEquipLevel: 10
     defaultCharacters:
-    - id: edfe425165c64129a011721b93ee29a3
-      title: test 1
+    - id: 528563120bb14d51ab58619d0e582554
+      title: Tank
       classId:
-        value: 113816267
+        value: 604
       specId:
-        value: 1971898540
-    - id: d681eff815494b12911ac5302d12fa17
-      title: test 2
+        value: 707
+    - id: 2e16f8e841da48f78b13ae2e2efd8647
+      title: Healer
       classId:
-        value: 113816267
+        value: 602
       specId:
-        value: 1971898540
-    - id: 5a2efac4264344c6900722a3826bfbe0
-      title: test 3
+        value: 703
+    - id: 68dfca098736401997ef5aad6d2d7f38
+      title: Damage 1
       classId:
-        value: 113816267
+        value: 601
       specId:
-        value: 1971898540
+        value: 701
+    - id: 3e799245661c46199dec6df98a23de98
+      title: Damage 2
+      classId:
+        value: 603
+      specId:
+        value: 705
   guildBankParams:
     tabs:
     - {fileID: -5316411198448944541}
     - {fileID: -2476405077858922527}
+    - {fileID: -7000185162162723182}
+--- !u!114 &59231052814991113
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 606
+  title: "\u041D\u0435\u043A\u0440\u043E\u043C\u0430\u043D\u0442"
+  nameKey:
+    value: CHARACTERS/CLASS_606_TTL
+  descKey:
+    value: CHARACTERS/CLASS_606_DSC
+  armorType:
+    value: 141
+  weaponType:
+    value: 145
+  specs:
+  - {fileID: -55547621386745197}
+  - {fileID: -9008320005003930121}
+--- !u!114 &60821224119431582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 716
+  title: "\u0422\u0435\u043D\u0435\u0432\u043E\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
+  nameKey:
+    value: CHARACTERS/SPEC_716_TTL
+  descKey:
+    value: CHARACTERS/SPEC_716_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 524
+--- !u!114 &76776547799289294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 522906889
+  title: 
+  rowSize: 8
+  rowCount: 10
+  category:
+    value: 201
+  cellType:
+    value: 214
+--- !u!114 &133220843808419609
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 605
+  title: "\u0414\u0440\u0443\u0438\u0434"
+  nameKey:
+    value: CHARACTERS/CLASS_605_TTL
+  descKey:
+    value: CHARACTERS/CLASS_605_DSC
+  armorType:
+    value: 142
+  weaponType:
+    value: 147
+  specs:
+  - {fileID: -6689499474866927032}
+  - {fileID: -6539849637681063960}
 --- !u!114 &499257089889080854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -288,10 +720,10 @@ MonoBehaviour:
   rowSize: 8
   rowCount: 10
   category:
-    value: 61
+    value: 201
   cellType:
-    value: 73
---- !u!114 &2870407627543817699
+    value: 213
+--- !u!114 &2248301654606666036
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,16 +733,163 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: Test Spec
+  m_Name: 
   m_EditorClassIdentifier: 
-  id: 1971898540
-  title: Test Spec
-  roleId:
-    value: 1132535647
-  subRoleId:
-    value: 1456777985
+  id: 705
+  title: "\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C"
   nameKey:
-    value: CHARACTERS/CLASS_0_SPEC_0_TTL
+    value: CHARACTERS/SPEC_705_TTL
+  descKey:
+    value: CHARACTERS/SPEC_705_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 524
+--- !u!114 &2841863336987669863
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 702
+  title: "\u0425\u0440\u0430\u043D\u0438\u0442\u0435\u043B\u044C"
+  nameKey:
+    value: CHARACTERS/SPEC_702_TTL
+  descKey:
+    value: CHARACTERS/SPEC_702_DSC
+  roleId:
+    value: 502
+  subRoleId:
+    value: 522
+--- !u!114 &2998155847386568026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 607
+  title: "\u0418\u043D\u0436\u0435\u043D\u0435\u0440"
+  nameKey:
+    value: CHARACTERS/CLASS_607_TTL
+  descKey:
+    value: CHARACTERS/CLASS_607_DSC
+  armorType:
+    value: 142
+  weaponType:
+    value: 147
+  specs:
+  - {fileID: 4971091951725825254}
+  - {fileID: -3107739647621433713}
+--- !u!114 &3937412005290520608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68e592bead36504aa1a55cad1ab4bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 522
+  title: HEAL
+  nameKey:
+    value: CHARACTERS/SUBROLE_HEAL_TTL
+--- !u!114 &4026000880702577928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 707
+  title: "\u0413\u043B\u0430\u0434\u0438\u0430\u0442\u043E\u0440"
+  nameKey:
+    value: CHARACTERS/SPEC_707_TTL
+  descKey:
+    value: CHARACTERS/SPEC_707_DSC
+  roleId:
+    value: 503
+  subRoleId:
+    value: 524
+--- !u!114 &4201286608953013207
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68e592bead36504aa1a55cad1ab4bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 521
+  title: RANGED
+  nameKey:
+    value: CHARACTERS/SUBROLE_RANGED_TTL
+--- !u!114 &4352505467803637179
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 703
+  title: "\u041C\u043E\u043B\u0435\u043B\u044C\u043D\u0438\u043A"
+  nameKey:
+    value: CHARACTERS/SPEC_703_TTL
+  descKey:
+    value: CHARACTERS/SPEC_703_DSC
+  roleId:
+    value: 502
+  subRoleId:
+    value: 522
+--- !u!114 &4971091951725825254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 713
+  title: "\u0421\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C"
+  nameKey:
+    value: CHARACTERS/SPEC_713_TTL
+  descKey:
+    value: CHARACTERS/SPEC_713_DSC
+  roleId:
+    value: 503
+  subRoleId:
+    value: 524
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,6 +906,44 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_1_TTL
+--- !u!114 &5335921967913264061
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0815aaa7615a004b93ea524b746e889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 502
+  title: HEAL
+  nameKey:
+    value: CHARACTERS/SUBROLE_HEAL_TTL
+--- !u!114 &5807667443719656722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 706
+  title: "\u0417\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u043A"
+  nameKey:
+    value: CHARACTERS/SPEC_706_TTL
+  descKey:
+    value: CHARACTERS/SPEC_706_DSC
+  roleId:
+    value: 502
+  subRoleId:
+    value: 522
 --- !u!114 &6159485941193676221
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -370,7 +987,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   grid: {fileID: 6159485941193676221}
---- !u!114 &8968395102269354174
+--- !u!114 &7492917005212791002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,10 +996,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68e592bead36504aa1a55cad1ab4bcb, type: 3}
-  m_Name: Melee
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  id: 1456777985
-  title: Melee
+  id: 603
+  title: "\u041F\u0430\u043B\u0430\u0434\u0438\u043D"
   nameKey:
-    value: CHARACTERS/SUB_ROLE_MELEE_TTL
+    value: CHARACTERS/CLASS_603_TTL
+  descKey:
+    value: CHARACTERS/CLASS_603_DSC
+  armorType:
+    value: 143
+  weaponType:
+    value: 144
+  specs:
+  - {fileID: 2248301654606666036}
+  - {fileID: 5807667443719656722}
+--- !u!114 &7727481233043288398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 715
+  title: "\u0421\u043B\u0435\u0434\u043E\u043F\u044B\u0442"
+  nameKey:
+    value: CHARACTERS/SPEC_715_TTL
+  descKey:
+    value: CHARACTERS/SPEC_715_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
+--- !u!114 &8249881096464231259
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 708
+  title: "\u0421\u0442\u0440\u0430\u0436"
+  nameKey:
+    value: CHARACTERS/SPEC_708_TTL
+  descKey:
+    value: CHARACTERS/SPEC_708_DSC
+  roleId:
+    value: 501
+  subRoleId:
+    value: 524

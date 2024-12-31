@@ -1,5 +1,4 @@
 ﻿using AD.ToolsCollection;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Game.Instances
@@ -9,7 +8,7 @@ namespace Game.Instances
     /// </summary>
     public class SeasonItem : EntityListItemElement
     {
-        private LabelElement idLabel;
+        private ItemIdElement idLabel;
 
         protected override IEditorsFactory EditorsFactory => InstancesEditorState.EditorsFactory;
 
@@ -17,17 +16,14 @@ namespace Game.Instances
         {
             base.CreateItemContentGUI(root);
 
-            idLabel = root.CreateElement<LabelElement>(classNames: ClassNames.stretchCell);
-            idLabel.textElement.TextAnchor(TextAnchor.MiddleRight);
+            idLabel = root.CreateElement<ItemIdElement>();
         }
 
         public override void BindData(SerializedData data)
         {
             base.BindData(data);
 
-            var id = data.GetProperty("id").GetValue();
-
-            idLabel.text = id.ToString();
+            idLabel.BindData(data);
         }
     }
 }

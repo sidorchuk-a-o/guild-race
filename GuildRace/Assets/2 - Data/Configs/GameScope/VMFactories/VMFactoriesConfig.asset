@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   installers:
   - {fileID: 8510783800769510532}
-  - {fileID: -8780754627985467287}
   - {fileID: 3941234877957987389}
+  - {fileID: -8780754627985467287}
 --- !u!114 &719888801571365860
 MonoBehaviour:
   m_ObjectHideFlags: 1

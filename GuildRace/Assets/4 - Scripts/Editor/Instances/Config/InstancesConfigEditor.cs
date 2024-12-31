@@ -27,6 +27,8 @@ namespace Game.Instances
 
         private void CreateCommonTab(VisualElement root, SerializedData data)
         {
+            root.ConvertToRow();
+
             instanceTypesList = root.CreateElement<InstanceTypesList>();
             instanceTypesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
             instanceTypesList.BindProperty("instanceTypes", data);

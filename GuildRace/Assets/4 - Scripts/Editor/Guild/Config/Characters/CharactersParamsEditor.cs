@@ -11,6 +11,7 @@ namespace Game.Guild
         private RolesList rolesList;
         private SubRolesList subRolesList;
         private ClassesList classesList;
+        private ResourcesList resourcesList;
 
         private static SerializedData GetData(SerializedData data)
         {
@@ -19,7 +20,14 @@ namespace Game.Guild
 
         public void CreateTabs(TabsContainer tabs)
         {
+            tabs.CreateTab("Classes", CreateClassesTab);
             tabs.CreateTab("Common", CreateCommonTab);
+        }
+
+        private void CreateClassesTab(VisualElement root, SerializedData data)
+        {
+            classesList = root.CreateElement<ClassesList>();
+            classesList.BindProperty("classes", GetData(data));
         }
 
         private void CreateCommonTab(VisualElement root, SerializedData data)
@@ -34,10 +42,10 @@ namespace Game.Guild
             subRolesList = root.CreateElement<SubRolesList>();
             subRolesList.BindProperty("subRoles", GetData(data));
 
-            root.CreateHeader("Classes");
+            root.CreateHeader("Resources");
 
-            classesList = root.CreateElement<ClassesList>();
-            classesList.BindProperty("classes", GetData(data));
+            resourcesList = root.CreateElement<ResourcesList>();
+            resourcesList.BindProperty("resources", GetData(data));
         }
     }
 }

@@ -12,16 +12,19 @@ namespace Game.Guild
         [Space]
         [SerializeField] private List<RoleData> roles;
         [SerializeField] private List<SubRoleData> subRoles;
+        [SerializeField] private List<ResourceData> resources;
 
         private Dictionary<RoleId, RoleData> rolesCache;
         private Dictionary<SubRoleId, SubRoleData> subRolesCache;
         private Dictionary<ClassId, ClassData> classesCache;
         private Dictionary<SpecializationId, SpecializationData> specsCache;
         private Dictionary<RoleId, List<(ClassData, SpecializationData)>> specByRoleCache;
+        private Dictionary<ResourceId, ResourceData> resourcesCache;
 
         public IReadOnlyList<RoleData> Roles => roles;
         public IReadOnlyList<SubRoleData> SubRoles => subRoles;
         public IReadOnlyList<ClassData> Classes => classes;
+        public IReadOnlyList<ResourceData> Resources => resources;
 
         public RoleData GetRole(RoleId roleId)
         {
@@ -61,6 +64,13 @@ namespace Game.Guild
                 .ToDictionary(x => x.Key, x => x.ToList());
 
             return specByRoleCache[roleId];
+        }
+
+        public ResourceData GetResource(ResourceId resourceId)
+        {
+            resourcesCache ??= resources.ToDictionary(x => (ResourceId)x.Id, x => x);
+
+            return resourcesCache[resourceId];
         }
     }
 }
