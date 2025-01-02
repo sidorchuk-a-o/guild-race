@@ -30,7 +30,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u0421\u043F\u0438\u0441\u043E\u043A"
+      - "\u0421\u043E\u0441\u0442\u0430\u0432 \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
       Flags: 0000
       Languages_Touch: []
     - Term: HUB/RECRUITING_TAB_TTL
@@ -55,6 +55,14 @@ MonoBehaviour:
       Languages:
       - 
       - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HUB/ACTIVE_INSTANCES_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0445\u043E\u0434\u044B"
       Flags: 0000
       Languages_Touch: []
     - Term: GUILD/CREATE_GUILD_TTL
@@ -267,7 +275,7 @@ MonoBehaviour:
       - "\u0422\u0430\u043D\u043A"
       Flags: 0000
       Languages_Touch: []
-    - Term: CHARACTERS/ROLE_HEALER_TTL
+    - Term: CHARACTERS/ROLE_HEAL_TTL
       TermType: 0
       Description: 
       Languages:
@@ -275,7 +283,7 @@ MonoBehaviour:
       - "\u041B\u0435\u0447\u0435\u043D\u0438\u0435"
       Flags: 0000
       Languages_Touch: []
-    - Term: CHARACTERS/ROLE_DAMAGE_TTL
+    - Term: CHARACTERS/ROLE_DPS_TTL
       TermType: 0
       Description: 
       Languages:
@@ -3639,7 +3647,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1735577935338
+    Google_LastUpdatedVersion: 1735783653739
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

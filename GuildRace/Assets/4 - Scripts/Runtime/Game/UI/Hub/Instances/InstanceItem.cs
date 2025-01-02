@@ -1,4 +1,6 @@
-﻿using AD.Services.Router;
+﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+
+using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
@@ -13,14 +15,13 @@ namespace Game.Instances
         [SerializeField] private UIText nameText;
         [SerializeField] private UIButton button;
 
-        private IRouterService router;
-
         private InstanceVM instanceVM;
+        private InstancesVMFactory instancesVMF;
 
         [Inject]
-        public void Inject(IRouterService router)
+        public void Inject(InstancesVMFactory instancesVMF)
         {
-            this.router = router;
+            this.instancesVMF = instancesVMF;
         }
 
         private void Awake()
@@ -39,14 +40,7 @@ namespace Game.Instances
 
         private async void ClickCallback()
         {
-            var parameters = RouteParams.Default;
-
-            parameters[SetupInstanceContainer.instanceKey] = instanceVM.Id;
-
-            await router.PushAsync(
-                pathKey: RouteKeys.Instances.setupInstance,
-                loadingKey: LoadingScreenKeys.loading,
-                parameters: parameters);
+            await instancesVMF.StartSetupInstance(instanceVM.Id);
         }
     }
 }

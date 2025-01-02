@@ -5,12 +5,21 @@ namespace Game.Instances
     public interface IInstancesService
     {
         ISeasonsCollection Seasons { get; }
+        IActiveInstancesCollection ActiveInstances { get; }
 
-        bool HasCurrentInstance { get; }
-        InstanceInfo CurrentInstance { get; }
+        bool HasPlayerInstance { get; }
+        ActiveInstanceInfo SetupInstance { get; }
+        ActiveInstanceInfo PlayerInstance { get; }
 
-        UniTask StartInstance(int instanceId);
-        UniTask StartCurrentInstance();
-        UniTask StopCurrentInstance();
+        UniTask StartSetupInstance(int instanceId);
+        void TryAddCharacterToSquad(string characterId);
+        void TryRemoveCharacterFromSquad(string characterId);
+
+        UniTask CompleteSetupAndStartInstance(bool playerInstance);
+        void CancelSetupInstance();
+
+        UniTask StartPlayerInstance();
+        UniTask StopPlayerInstance();
+        int StopActiveInstance(string activeInstanceId);
     }
 }

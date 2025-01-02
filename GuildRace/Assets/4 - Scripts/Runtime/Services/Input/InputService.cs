@@ -10,10 +10,10 @@ namespace Game.Input
         private readonly IAppEventsService appEvents;
 
         private readonly InventoryInputModule inventoryModule;
-        private readonly MapInputModule mapModule;
+        private readonly InstancesInputModule instancesModule;
 
         public IInventoryInputModule InventoryModule => inventoryModule;
-        public IMapInputModule MapModule => mapModule;
+        public IInstancesInputModule InstancesModule => instancesModule;
 
         public InputService(IAppEventsService appEvents)
         {
@@ -22,16 +22,16 @@ namespace Game.Input
             actions = new InputActions();
 
             inventoryModule = new InventoryInputModule(actions);
-            mapModule = new MapInputModule(actions);
+            instancesModule = new InstancesInputModule(actions);
         }
 
         public override async UniTask<bool> Init()
         {
             appEvents.AddAppTickListener(inventoryModule);
-            appEvents.AddAppTickListener(mapModule);
+            appEvents.AddAppTickListener(instancesModule);
 
             inventoryModule.Enable();
-            mapModule.Enable();
+            instancesModule.Enable();
 
             return await Inited();
         }

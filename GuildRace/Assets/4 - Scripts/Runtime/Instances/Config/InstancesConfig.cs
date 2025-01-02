@@ -9,6 +9,7 @@ namespace Game.Instances
     {
         [SerializeField] private List<SeasonData> seasons;
         [SerializeField] private List<InstanceTypeData> instanceTypes;
+        [SerializeField] private SquadParams squadParams;
 
         private Dictionary<int, SeasonData> seasonsCache;
         private Dictionary<int, InstanceData> instancesCache;
@@ -16,6 +17,7 @@ namespace Game.Instances
 
         public IReadOnlyList<SeasonData> Seasons => seasons;
         public IReadOnlyList<InstanceTypeData> InstanceTypes => instanceTypes;
+        public SquadParams SquadParams => squadParams;
 
         public SeasonData GetSeason(int id)
         {

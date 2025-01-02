@@ -33,9 +33,9 @@ namespace Game
                 sceneKey: SceneKeys.game,
                 parameters: RouteParams.FirstRoute);
 
-            if (instancesService.HasCurrentInstance)
+            if (instancesService.HasPlayerInstance)
             {
-                await instancesService.StartCurrentInstance();
+                await instancesService.StartPlayerInstance();
             }
             else
             {

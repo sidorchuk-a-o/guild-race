@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Inventory;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Game.Instances
@@ -9,22 +10,33 @@ namespace Game.Instances
         public const string key = "instances";
 
         [ES3Serializable] private SeasonsSM seasonsSM;
-        [ES3Serializable] private int currentInstanceId;
+        [ES3Serializable] private ActiveInstancesSM activeInstancesSM;
+        [ES3Serializable] private string playerInstanceId;
 
-        public IEnumerable<SeasonInfo> Seasons
+        public string PlayerInstanceId
         {
-            set => seasonsSM = new(value);
+            get => playerInstanceId;
+            set => playerInstanceId = value;
         }
 
-        public int CurrentInstanceId
+        public void SetSeasons(IEnumerable<SeasonInfo> value)
         {
-            get => currentInstanceId;
-            set => currentInstanceId = value;
+            seasonsSM = new(value);
         }
 
         public IEnumerable<SeasonInfo> GetSeasons(InstancesConfig config)
         {
             return seasonsSM.GetValues(config);
+        }
+
+        public IEnumerable<ActiveInstanceInfo> GetActiveInstances(IInventoryService inventoryService)
+        {
+            return activeInstancesSM.GetValues(inventoryService);
+        }
+
+        public void SetActiveInstances(IEnumerable<ActiveInstanceInfo> value, IInventoryService inventoryService)
+        {
+            activeInstancesSM = new(value, inventoryService);
         }
     }
 }

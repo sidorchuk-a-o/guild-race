@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 
   title: Instances  Service
   enabled: 1
-  order: 0
+  order: 100
   configRef:
     m_AssetGUID: a4754f5879a74514ab6ecf03bff1dc36
     m_SubObjectName: 

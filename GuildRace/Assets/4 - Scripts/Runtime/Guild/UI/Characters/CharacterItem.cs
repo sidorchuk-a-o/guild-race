@@ -29,13 +29,16 @@ namespace Game.Guild
                 .Subscribe(x => itemsLevelText.SetTextParams(x))
                 .AddTo(disp);
 
-            ViewModel.GuildRankName
-                .Subscribe(x => guildRankText.SetTextParams(x))
-                .AddTo(disp);
-
             ViewModel.SpecVM
                 .Subscribe(x => specNameText.SetTextParams(x.NameKey))
                 .AddTo(disp);
+
+            if (guildRankText)
+            {
+                ViewModel.GuildRankName
+                    .Subscribe(x => guildRankText.SetTextParams(x))
+                    .AddTo(disp);
+            }
         }
     }
 }

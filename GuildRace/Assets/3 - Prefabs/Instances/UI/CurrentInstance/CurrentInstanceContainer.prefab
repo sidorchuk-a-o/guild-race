@@ -319,6 +319,7 @@ MonoBehaviour:
   ignoreParentGroup: 0
   headerText: {fileID: 6533361978287904826}
   mapScrollRect: {fileID: 3744753436954189533}
+  stopInstanceButton: {fileID: 9088391944435742146}
 --- !u!1 &3097079670148238524
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119297716273473451, guid: e06ed4e98cc9a2b498838bbe07df6c1e, type: 3}
       propertyPath: m_Name
-      value: BackButton
+      value: StopInstanceButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -701,3 +702,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6003126305200342965, guid: e06ed4e98cc9a2b498838bbe07df6c1e, type: 3}
   m_PrefabInstance: {fileID: 3338602637001780225}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9088391944435742146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5797660194728139203, guid: e06ed4e98cc9a2b498838bbe07df6c1e, type: 3}
+  m_PrefabInstance: {fileID: 3338602637001780225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4755677c64cc825429ebccf05a38c335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

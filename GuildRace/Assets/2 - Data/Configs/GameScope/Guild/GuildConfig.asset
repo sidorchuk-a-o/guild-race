@@ -53,7 +53,7 @@ MonoBehaviour:
   id: 501
   title: DPS
   nameKey:
-    value: 
+    value: CHARACTERS/ROLE_DPS_TTL
 --- !u!114 &-8197956687249327810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -921,7 +921,7 @@ MonoBehaviour:
   id: 502
   title: HEAL
   nameKey:
-    value: CHARACTERS/SUBROLE_HEAL_TTL
+    value: CHARACTERS/ROLE_HEAL_TTL
 --- !u!114 &5807667443719656722
 MonoBehaviour:
   m_ObjectHideFlags: 1

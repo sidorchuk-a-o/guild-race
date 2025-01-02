@@ -9,6 +9,7 @@ namespace Game.Instances
     {
         private SeasonsList seasonsList;
         private InstanceTypesList instanceTypesList;
+        private SquadParamsEditor squadParamsEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -16,6 +17,7 @@ namespace Game.Instances
 
             tabs.CreateTab("Seasons", CreateSeasonsTab);
             tabs.CreateTab("Common", CreateCommonTab);
+            tabs.CreateTabs("Squad Params", CreateSquadParamsTab);
         }
 
         private void CreateSeasonsTab(VisualElement root, SerializedData data)
@@ -32,6 +34,12 @@ namespace Game.Instances
             instanceTypesList = root.CreateElement<InstanceTypesList>();
             instanceTypesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
             instanceTypesList.BindProperty("instanceTypes", data);
+        }
+
+        private void CreateSquadParamsTab(TabsContainer tabs)
+        {
+            squadParamsEditor = new SquadParamsEditor();
+            squadParamsEditor.CreateTabs(tabs);
         }
 
         // == Menu ==

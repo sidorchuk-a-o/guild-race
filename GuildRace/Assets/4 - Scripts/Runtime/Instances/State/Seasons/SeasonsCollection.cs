@@ -10,7 +10,7 @@ namespace Game.Instances
         {
         }
 
-        public SeasonInfo GetById(int id)
+        public SeasonInfo GetSeason(int id)
         {
             return Values.FirstOrDefault(x => x.Id == id);
         }

@@ -224,8 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c162dc854d2f24fa639ba0623de5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  algorithm: 0
   size: 10
   spread: 0.35
+  useGlobalAngle: 0
   offsetAngle: 0
   offsetDistance: 0
   offset: {x: 0, y: 0}
@@ -235,6 +237,7 @@ MonoBehaviour:
   useCasterAlpha: 1
   ignoreCasterColor: 0
   colorBleedMode: 2
+  disableFitCompensation: 0
   shadowAsSibling: 0
   cutout: 0
   baked: 0
@@ -505,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slot:
-    value: 
+    value: 181
   itemPreview: {fileID: 7295498088897353069}
   pickupStates: {fileID: 6944904510650452497}
   pickupPreviewImage: {fileID: 3380064364650367119}

@@ -2,6 +2,7 @@
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
+using UniRx;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -16,10 +17,13 @@ namespace Game.Instances
         [Header("Map")]
         [SerializeField] private InstanceMapScrollRect mapScrollRect;
 
+        [Header("Buttons")]
+        [SerializeField] private UIButton stopInstanceButton;
+
         private InstancesVMFactory instancesVMF;
         private IObjectResolver resolver;
 
-        private InstanceVM instanceVM;
+        private ActiveInstanceVM activeInstanceVM;
 
         private InstanceMapUIComponent instanceMap;
         private AddressableGameObject instanceMapRef;
@@ -29,19 +33,25 @@ namespace Game.Instances
         {
             this.instancesVMF = instancesVMF;
             this.resolver = resolver;
+        }
 
-            instanceVM = instancesVMF.GetCurrentInstance();
+        private void Awake()
+        {
+            stopInstanceButton.OnClick
+                .Subscribe(StopInstanceCallback)
+                .AddTo(this);
         }
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
         {
             await base.Init(parameters, disp);
 
-            instanceVM.AddTo(disp);
+            activeInstanceVM = instancesVMF.GetPlayerInstance();
+            activeInstanceVM.AddTo(disp);
 
             // header
 
-            headerText.SetTextParams(instanceVM.NameKey);
+            headerText.SetTextParams(activeInstanceVM.InstanceVM.NameKey);
 
             // map
 
@@ -58,7 +68,7 @@ namespace Game.Instances
                 await instanceMapRef.ReleaseAsync();
             }
 
-            instanceMapRef = instanceVM.UIRef;
+            instanceMapRef = activeInstanceVM.InstanceVM.UIRef;
             instanceMapRef.SetParent(mapScrollRect.content);
 
             var instanceMapGO = await instanceMapRef.LoadAsync();
@@ -67,6 +77,11 @@ namespace Game.Instances
 
             instanceMap = instanceMapGO.GetComponent<InstanceMapUIComponent>();
             instanceMap.Init(disp);
+        }
+
+        private async void StopInstanceCallback()
+        {
+            await instancesVMF.StopPlayerInstance();
         }
 
         // == Destroy ==

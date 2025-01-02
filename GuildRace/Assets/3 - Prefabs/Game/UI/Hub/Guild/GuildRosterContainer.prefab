@@ -1513,6 +1513,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharactersScrollView
       objectReference: {fileID: 0}
+    - target: {fileID: 5895517005055463644, guid: f24a1f271647b4a4c8d788b703c26e1e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895517005055463644, guid: f24a1f271647b4a4c8d788b703c26e1e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7004596309607400400, guid: f24a1f271647b4a4c8d788b703c26e1e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

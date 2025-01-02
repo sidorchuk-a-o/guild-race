@@ -55,15 +55,35 @@ MonoBehaviour:
     title: Raid
     nameKey:
       value: INSTANCES/INSTANCE_RAID_TTL
-  squads:
-  - instanceType:
-      value: 251
-    roles: []
-    maxUnitsCount: 4
-  - instanceType:
-      value: 252
-    roles: []
-    maxUnitsCount: 8
+  squadParams:
+    bag: {fileID: 3341094923558873629}
+    squads:
+    - instanceType:
+        value: 251
+      roles:
+      - role:
+          value: 501
+        maxUnitsCount: 2
+      - role:
+          value: 502
+        maxUnitsCount: 1
+      - role:
+          value: 503
+        maxUnitsCount: 1
+      maxUnitsCount: 4
+    - instanceType:
+        value: 252
+      roles:
+      - role:
+          value: 501
+        maxUnitsCount: 5
+      - role:
+          value: 502
+        maxUnitsCount: 4
+      - role:
+          value: 503
+        maxUnitsCount: 3
+      maxUnitsCount: 8
 --- !u!114 &1624386071120413150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +170,26 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+--- !u!114 &3341094923558873629
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 511507390
+  title: 
+  rowSize: 6
+  rowCount: 3
+  category:
+    value: 203
+  cellType:
+    value: 214
 --- !u!114 &5775344422896784859
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,15 +209,15 @@ MonoBehaviour:
   nameKey:
     value: INSTANCES/INSTANCE_305_TTL
   descKey:
-    value: 
+    value: <none>
   mapRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   uiRef:
-    m_AssetGUID: 
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 

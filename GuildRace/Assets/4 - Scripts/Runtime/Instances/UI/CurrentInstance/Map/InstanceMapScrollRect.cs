@@ -11,7 +11,7 @@ namespace Game.Instances
 {
     public class InstanceMapScrollRect : ScrollRect, IPointerEnterHandler, IPointerExitHandler
     {
-        private IMapInputModule mapInputs;
+        private IInstancesInputModule instancesInputs;
 
         private Vector2 prevCursorPosition;
         private bool scrollStarted;
@@ -23,16 +23,16 @@ namespace Game.Instances
         [Inject]
         public void Inject(IInputService inputService)
         {
-            mapInputs = inputService.MapModule;
+            instancesInputs = inputService.InstancesModule;
         }
 
         public void Init(CompositeDisp disp)
         {
-            mapInputs.OnStartScroll
+            instancesInputs.OnStartScroll
                 .Subscribe(StartScrollCallback)
                 .AddTo(disp);
 
-            mapInputs.OnStopScroll
+            instancesInputs.OnStopScroll
                 .Subscribe(StopScrollCallback)
                 .AddTo(disp);
         }
@@ -49,7 +49,12 @@ namespace Game.Instances
 
         private void Update()
         {
-            var cursorPosition = mapInputs.CursorPosition;
+            if (Application.isPlaying == false)
+            {
+                return;
+            }
+
+            var cursorPosition = instancesInputs.CursorPosition;
 
             if (scrollStarted)
             {

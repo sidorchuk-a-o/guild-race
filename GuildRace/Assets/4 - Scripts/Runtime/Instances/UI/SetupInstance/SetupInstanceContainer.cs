@@ -3,9 +3,15 @@ using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
+using Game.Guild;
+using Game.Inventory;
+using System.Collections.Generic;
+using System.Linq;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
+using VContainer.Unity;
 
 namespace Game.Instances
 {
@@ -15,21 +21,40 @@ namespace Game.Instances
         [SerializeField] private UIText headerText;
         [SerializeField] private LocalizeKey headerKey;
 
+        [Header("Squad")]
+        [SerializeField] private CharactersTabsContainer charactersContainer;
+        [SerializeField] private SquadRolesCountersContainer rolesCountersContainer;
+        [SerializeField] private Transform squadContainerRoot;
+        [SerializeField] private List<SquadContainerParams> squadContainers;
+
+        [Header("Bag")]
+        [SerializeField] private GuildBankTabsContainer guildBankContainer;
+        [SerializeField] private ItemsGridContainer squadBagContainer;
+
+        [Header("Params")]
+        [SerializeField] private Toggle playerInstanceToggle;
+
         [Header("Button")]
         [SerializeField] private UIButton backButton;
         [SerializeField] private UIButton startButton;
 
-        public const string instanceKey = "instance_id";
-
         private InstancesVMFactory instancesVMF;
+        private IObjectResolver resolver;
 
-        private int instanceId;
-        private InstanceVM instanceVM;
+        private ActiveInstanceVM activeInstanceVM;
+
+        private GuildBankTabsVM bankTabsVM;
+        private IReadOnlyList<RoleTabVM> roleTabsVM;
+
+        private SquadUnitsContainer squadUnitsContainer;
 
         [Inject]
-        public void Inject(InstancesVMFactory instancesVMF)
+        public void Inject(InstancesVMFactory instancesVMF, GuildVMFactory guildVMF, IObjectResolver resolver)
         {
             this.instancesVMF = instancesVMF;
+            this.resolver = resolver;
+
+            bankTabsVM = guildVMF.GetGuildBankTabs();
         }
 
         private void Awake()
@@ -47,14 +72,49 @@ namespace Game.Instances
         {
             await base.Init(parameters, disp);
 
-            parameters.TryGetRouteValue(instanceKey, out instanceId);
+            var hasForcedReset = parameters.HasForceReset();
 
-            instanceVM = instancesVMF.GetInstance(instanceId);
-            instanceVM.AddTo(disp);
+            activeInstanceVM = instancesVMF.GetSetupInstance();
+            activeInstanceVM.AddTo(disp);
 
             // upd params
 
-            headerText.SetTextParams(new(headerKey, instanceVM.NameKey));
+            var headerKey = activeInstanceVM.InstanceVM.NameKey;
+            var headerData = new UITextData(this.headerKey, headerKey);
+
+            headerText.SetTextParams(headerData);
+
+            // characters
+
+            roleTabsVM = instancesVMF.GetCharactersByRoles();
+            roleTabsVM.ForEach(tab => tab.AddTo(disp));
+
+            charactersContainer.Init(roleTabsVM, activeInstanceVM, disp);
+            rolesCountersContainer.Init(activeInstanceVM, disp);
+
+            SpawnSquadContainer(disp);
+
+            // guild bank
+
+            bankTabsVM.AddTo(disp);
+
+            guildBankContainer.Init(bankTabsVM, disp, hasForcedReset);
+            squadBagContainer.Init(activeInstanceVM.BagVM, disp);
+        }
+
+        private void SpawnSquadContainer(CompositeDisp disp)
+        {
+            var instanceType = activeInstanceVM.InstanceVM.Type;
+            var containerParams = squadContainers.FirstOrDefault(x => x.Type == instanceType);
+
+            var prefab = containerParams.SquadPrefab;
+
+            squadUnitsContainer = Instantiate(prefab, squadContainerRoot);
+            squadUnitsContainer.transform.SetAsFirstSibling();
+
+            resolver.InjectGameObject(squadUnitsContainer.gameObject);
+
+            squadUnitsContainer.Init(activeInstanceVM, disp);
         }
 
         private void BackCallback()
@@ -66,7 +126,9 @@ namespace Game.Instances
         {
             SetButtonsState(false);
 
-            await instancesVMF.StartInstance(instanceId);
+            var playerInstance = playerInstanceToggle.isOn;
+
+            await instancesVMF.CompleteSetupAndStartInstance(playerInstance);
 
             SetButtonsState(true);
         }
@@ -75,6 +137,15 @@ namespace Game.Instances
         {
             backButton.SetInteractableState(state);
             startButton.SetInteractableState(state);
+        }
+
+        public override void DisableElement()
+        {
+            base.DisableElement();
+
+            instancesVMF.CancelSetupInstance();
+
+            Destroy(squadUnitsContainer.gameObject);
         }
     }
 }

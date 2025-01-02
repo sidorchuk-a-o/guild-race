@@ -552,13 +552,22 @@
             ]
         },
         {
-            "name": "Map",
+            "name": "Instances",
             "id": "bad0f875-c63f-4483-bab7-e39259b1574d",
             "actions": [
                 {
                     "name": "Cursor",
                     "type": "PassThrough",
                     "id": "3675b5b1-f778-4ba1-9e9b-760bc3485dac",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Pickup",
+                    "type": "PassThrough",
+                    "id": "23b74e0a-e292-41d2-b748-8d739f546cb8",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -647,6 +656,39 @@
                     "action": "RightClick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Mouse Drag",
+                    "id": "70e4fdc1-4a1c-4176-b86d-f67aa38ea84f",
+                    "path": "MouseDrag",
+                    "interactions": "MouseDrag(dragDistance=10)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pickup",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Button",
+                    "id": "0ca2fac9-1d45-455b-b0cc-e3e9fb2161a4",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Pickup",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Position",
+                    "id": "b4794eff-6ac3-4e63-afdd-79a0bf0effa4",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Pickup",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

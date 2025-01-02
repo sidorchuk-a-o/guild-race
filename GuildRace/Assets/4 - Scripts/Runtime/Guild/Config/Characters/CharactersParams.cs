@@ -33,6 +33,13 @@ namespace Game.Guild
             return rolesCache[roleId];
         }
 
+        public RoleId GetRoleBySpec(SpecializationId specId)
+        {
+            var spec = GetSpecialization(specId);
+
+            return spec.RoleId;
+        }
+
         public SubRoleData GetSubRole(SubRoleId subRoleId)
         {
             subRolesCache ??= subRoles.ToDictionary(x => (SubRoleId)x.Id, x => x);
