@@ -35,6 +35,11 @@ namespace Game.Inventory
             data.GetProperty("nameKey").SetValue(localizeKey);
 
             // types
+            ImportEquipTypes(data);
+        }
+
+        private void ImportEquipTypes(SerializedData data)
+        {
             var id = data.GetProperty("id").GetValue<int>();
 
             var typesData = data.GetProperty("types");

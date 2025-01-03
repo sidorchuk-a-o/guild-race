@@ -8,6 +8,8 @@ namespace Game.Instances
     public class SeasonsImportWizard : EntitiesImportWizard<int>
     {
         private GoogleSheetsImporter instancesImporter;
+        private GoogleSheetsImporter boosUnitsImporter;
+        private GoogleSheetsImporter abilitiesImporter;
 
         public override string IdKey => "Id";
         public override string TitleKey => "Name";
@@ -18,29 +20,38 @@ namespace Game.Instances
 
         protected override async void SaveCallback()
         {
-            instancesImporter ??= new(SheetId, SheetName, "N2:V", typeof(InstanceData));
+            instancesImporter ??= new(SheetId, "boss-data", "N2:V", typeof(InstanceData));
+            boosUnitsImporter ??= new(SheetId, "boss-units", "A:Q", typeof(UnitData));
+            abilitiesImporter ??= new(SheetId, "unit-abilities", "A:M", typeof(AbilityData));
 
-            await instancesImporter.LoadData(IdKey);
+            await instancesImporter.LoadData("Id");
+            await boosUnitsImporter.LoadData("Id");
+            await abilitiesImporter.LoadData("Ability ID");
 
             base.SaveCallback();
         }
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData seasonData, IReadOnlyDictionary<string, string> row)
         {
-            base.UpdateData(data, row);
+            base.UpdateData(seasonData, row);
 
             // name key
             var localizeKey = row["Localize Key"].LocalizeKeyParse();
 
-            data.GetProperty("nameKey").SetValue(localizeKey);
+            seasonData.GetProperty("nameKey").SetValue(localizeKey);
 
             // instances
-            var id = data.GetProperty("id").GetValue<int>();
+            ImportInstances(seasonData);
+        }
 
-            var instancesData = data.GetProperty("instances");
+        private void ImportInstances(SerializedData seasonData)
+        {
+            var id = seasonData.GetProperty("id").GetValue<int>();
+
+            var instancesData = seasonData.GetProperty("instances");
             var instancesSaveMeta = new SaveMeta(isSubObject: true, instancesData);
 
-            instancesImporter.ImportData(instancesSaveMeta, CheckEqual, UpdateInstanceData, onFilterRow: row =>
+            instancesImporter.ImportData(instancesSaveMeta, CheckInstanceEqual, UpdateInstanceData, onFilterRow: row =>
             {
                 var seasonId = row["Season Id"].IntParse();
 
@@ -48,19 +59,107 @@ namespace Game.Instances
             });
         }
 
-        private void UpdateInstanceData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        private bool CheckInstanceEqual(SerializedData instanceData, IReadOnlyDictionary<string, string> row)
         {
-            var id = row[IdKey].IntParse();
-            var title = row[TitleKey].ToUpperFirst();
+            var dataId = instanceData.GetProperty("id").GetValue<int>();
+            var rowId = row["Id"].IntParse();
+
+            return Equals(dataId, rowId);
+        }
+
+        private void UpdateInstanceData(SerializedData instanceData, IReadOnlyDictionary<string, string> row)
+        {
+            var id = row["Id"].IntParse();
+            var title = row["Name"].ToUpperFirst();
             var nameKey = row["Localize Key"].LocalizeKeyParse();
             var descKey = row["Desc Localize Key"].LocalizeKeyParse();
             var type = new InstanceType(row["Instance Type Id"].IntParse());
 
-            data.GetProperty("id").SetValue(id);
-            data.GetProperty("title").SetValue(title);
-            data.GetProperty("nameKey").SetValue(nameKey);
-            data.GetProperty("descKey").SetValue(descKey);
-            data.GetProperty("type").SetValue(type);
+            instanceData.GetProperty("id").SetValue(id);
+            instanceData.GetProperty("title").SetValue(title);
+            instanceData.GetProperty("nameKey").SetValue(nameKey);
+            instanceData.GetProperty("descKey").SetValue(descKey);
+            instanceData.GetProperty("type").SetValue(type);
+
+            ImportBossUnits(instanceData);
+        }
+
+        private void ImportBossUnits(SerializedData instanceData)
+        {
+            var id = instanceData.GetProperty("id").GetValue<int>();
+
+            var unitsData = instanceData.GetProperty("boosUnits");
+            var unitsSaveMeta = new SaveMeta(isSubObject: true, unitsData);
+
+            boosUnitsImporter.ImportData(unitsSaveMeta, CheckBossUnitEqual, UpdateBoosUnitData, onFilterRow: row =>
+            {
+                var instanceId = row["Instance ID"].IntParse();
+
+                return id == instanceId;
+            });
+        }
+
+        private bool CheckBossUnitEqual(SerializedData unitData, IReadOnlyDictionary<string, string> row)
+        {
+            var dataId = unitData.GetProperty("id").GetValue<int>();
+            var rowId = row["Id"].IntParse();
+
+            return Equals(dataId, rowId);
+        }
+
+        private void UpdateBoosUnitData(SerializedData unitData, IReadOnlyDictionary<string, string> row)
+        {
+            var id = row["Id"].IntParse();
+            var title = row["Unit Name"].ToUpperFirst();
+            var nameKey = row["Name Localize Key"].LocalizeKeyParse();
+            var descKey = row["Desc Localize Key"].LocalizeKeyParse();
+            var imageRef = row["Image Name"].AddressableFileParse();
+
+            unitData.GetProperty("id").SetValue(id);
+            unitData.GetProperty("title").SetValue(title);
+            unitData.GetProperty("nameKey").SetValue(nameKey);
+            unitData.GetProperty("descKey").SetValue(descKey);
+            unitData.GetProperty("imageRef").SetValue(imageRef);
+
+            ImportAbilities(unitData);
+        }
+
+        private void ImportAbilities(SerializedData unitData)
+        {
+            var id = unitData.GetProperty("id").GetValue<int>();
+
+            var abilitiesData = unitData.GetProperty("abilities");
+            var abilitiesSaveMeta = new SaveMeta(isSubObject: true, abilitiesData);
+
+            abilitiesImporter.ImportData(abilitiesSaveMeta, CheckAbilityEqual, UpdateAbilityData, onFilterRow: row =>
+            {
+                var unitId = row["Boss ID"].IntParse();
+
+                return id == unitId;
+            });
+        }
+
+        private bool CheckAbilityEqual(SerializedData abilityData, IReadOnlyDictionary<string, string> row)
+        {
+            var dataId = abilityData.GetProperty("id").GetValue<int>();
+            var rowId = row["Ability ID"].IntParse();
+
+            return Equals(dataId, rowId);
+        }
+
+        private void UpdateAbilityData(SerializedData abilityData, IReadOnlyDictionary<string, string> row)
+        {
+            var id = row["Ability ID"].IntParse();
+            var title = row["Ability Name"].ToUpperFirst();
+            var nameKey = row["Localization Key (Title)"].LocalizeKeyParse();
+            var descKey = row["Localization Key (Description)"].LocalizeKeyParse();
+            var iconRef = row["Icon Name"].AddressableFileParse();
+
+            abilityData.GetProperty("id").SetValue(id);
+            abilityData.GetProperty("title").SetValue(title);
+            abilityData.GetProperty("nameKey").SetValue(nameKey);
+            abilityData.GetProperty("descKey").SetValue(descKey);
+            abilityData.GetProperty("iconRef").SetValue(iconRef);
         }
     }
 }

@@ -14,11 +14,15 @@ namespace Game.Instances
         private AddressableElement<GameObject> mapRefField;
         private AddressableElement<GameObject> uiRefField;
 
+        private UnitsList boosUnitsList;
+        private UnitsList trashUnitsList;
+
         protected override void CreateTabItems(TabsContainer tabs)
         {
             base.CreateTabItems(tabs);
 
             tabs.CreateTab("Params", CreateParamsTab);
+            tabs.content.Width(50, LengthUnit.Percent);
         }
 
         private void CreateParamsTab(VisualElement root, SerializedData data)
@@ -44,11 +48,17 @@ namespace Game.Instances
             uiRefField = root.CreateAddressable<GameObject>();
             uiRefField.BindProperty("uiRef", data);
 
-            root.CreateHeader("Bosses");
-            root.CreateHeader("--- --- ---");
+            root.CreateHeader("Boos Units");
+
+            boosUnitsList = root.CreateElement<UnitsList>();
+            boosUnitsList.BindProperty("boosUnits", data);
+            boosUnitsList.headerTitle = string.Empty;
 
             root.CreateHeader("Trash Units");
-            root.CreateHeader("--- --- ---");
+
+            trashUnitsList = root.CreateElement<UnitsList>();
+            trashUnitsList.BindProperty("trashUnits", data);
+            trashUnitsList.headerTitle = string.Empty;
         }
     }
 }
