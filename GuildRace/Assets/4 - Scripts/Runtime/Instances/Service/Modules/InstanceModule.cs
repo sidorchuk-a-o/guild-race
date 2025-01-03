@@ -1,4 +1,5 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.ProtectedTime;
+using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
@@ -52,7 +53,7 @@ namespace Game.Instances
             }
 
             var setupInstanceId = setupInstance.Id;
-            var instance = state.Seasons.GetInstance(setupInstance.InstanceId);
+            var instance = setupInstance.Instance;
 
             var character = guildService.Characters[characterId];
             var characterRole = guildConfig.CharactersParams.GetRoleBySpec(character.SpecId.Value);
@@ -174,8 +175,7 @@ namespace Game.Instances
 
             await router.ShowLoading(LoadingScreenKeys.loading);
 
-            var instanceId = state.PlayerInstance.InstanceId;
-            var instance = state.Seasons.GetInstance(instanceId);
+            var instance = state.PlayerInstance.Instance;
 
             // load map
             await InstanceLogic.GetComponent().LoadMap(instance);

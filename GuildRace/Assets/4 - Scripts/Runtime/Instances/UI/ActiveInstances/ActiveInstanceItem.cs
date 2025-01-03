@@ -5,6 +5,7 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using System.Threading;
+using UniRx;
 using UnityEngine;
 
 namespace Game.Instances
@@ -13,10 +14,15 @@ namespace Game.Instances
     {
         [Header("Instance")]
         [SerializeField] private UIText instanceNameText;
+        [SerializeField] private GameObject readyToCompleteIndicator;
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
             instanceNameText.SetTextParams(ViewModel.InstanceVM.NameKey);
+
+            ViewModel.IsReadyToComplete
+                .Subscribe(x => readyToCompleteIndicator.SetActive(x))
+                .AddTo(disp);
         }
     }
 }

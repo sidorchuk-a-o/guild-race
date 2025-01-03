@@ -29,9 +29,9 @@ namespace Game.Instances
             return seasonsSM.GetValues(config);
         }
 
-        public IEnumerable<ActiveInstanceInfo> GetActiveInstances(IInventoryService inventoryService)
+        public IEnumerable<ActiveInstanceInfo> GetActiveInstances(IInventoryService inventoryService, SeasonsCollection seasons)
         {
-            return activeInstancesSM.GetValues(inventoryService);
+            return activeInstancesSM.GetValues(inventoryService, seasons);
         }
 
         public void SetActiveInstances(IEnumerable<ActiveInstanceInfo> value, IInventoryService inventoryService)

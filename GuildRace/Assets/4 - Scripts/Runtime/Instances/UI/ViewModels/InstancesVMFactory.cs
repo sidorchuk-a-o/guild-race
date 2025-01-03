@@ -56,6 +56,11 @@ namespace Game.Instances
         {
             var instance = instancesService.Seasons.GetInstance(instanceId);
 
+            return GetInstance(instance);
+        }
+
+        public InstanceVM GetInstance(InstanceInfo instance)
+        {
             return new InstanceVM(instance);
         }
 
@@ -82,7 +87,7 @@ namespace Game.Instances
         {
             var activeInstance = FindActiveInstance(activeInstanceId);
 
-            var instanceType = instancesConfig.GetInstance(activeInstance.InstanceId).Type;
+            var instanceType = activeInstance.Instance.Type;
             var squadData = instancesConfig.SquadParams.GetSquadParams(instanceType);
 
             return new SquadRolesCountersVM(squadData, activeInstance, GuildVMF);

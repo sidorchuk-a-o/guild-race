@@ -1,4 +1,6 @@
 ﻿using AD.Services;
+using AD.Services.AppEvents;
+using AD.Services.ProtectedTime;
 using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
@@ -10,7 +12,11 @@ namespace Game.Instances
     public class InstancesService : Service, IInstancesService
     {
         private readonly InstancesState state;
+
         private readonly InstanceModule instanceModule;
+        private readonly ActiveInstanceModule activeInstanceModule;
+
+        private readonly IAppEventsService appEvents;
 
         public ISeasonsCollection Seasons => state.Seasons;
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
@@ -25,15 +31,23 @@ namespace Game.Instances
             IGuildService guildService,
             IInventoryService inventoryService,
             IRouterService router,
+            IAppEventsService appEvents,
+            ITimeService time,
             IObjectResolver resolver)
         {
-            state = new(instancesConfig, inventoryService, resolver);
+            this.appEvents = appEvents;
+
+            state = new(instancesConfig, time, inventoryService, resolver);
+
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService);
+            activeInstanceModule = new(instancesConfig, this, time);
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
+
+            appEvents.AddAppTickListener(activeInstanceModule);
 
             return await Inited();
         }
@@ -78,6 +92,15 @@ namespace Game.Instances
         public int StopActiveInstance(string activeInstanceId)
         {
             return instanceModule.StopActiveInstance(activeInstanceId);
+        }
+
+        // == Dispose ==
+
+        public override void Dispose()
+        {
+            base.Dispose();
+
+            appEvents.RemoveAppTickListener(activeInstanceModule);
         }
     }
 }

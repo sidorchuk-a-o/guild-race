@@ -7,9 +7,12 @@ namespace Game.Instances
 {
     public class InstancesConfig : ScriptableConfig
     {
+        // seasons
         [SerializeField] private List<SeasonData> seasons;
         [SerializeField] private List<InstanceTypeData> instanceTypes;
+        // params
         [SerializeField] private SquadParams squadParams;
+        [SerializeField] private ActiveInstanceParams activeInstanceParams;
 
         private Dictionary<int, SeasonData> seasonsCache;
         private Dictionary<int, InstanceData> instancesCache;
@@ -17,7 +20,9 @@ namespace Game.Instances
 
         public IReadOnlyList<SeasonData> Seasons => seasons;
         public IReadOnlyList<InstanceTypeData> InstanceTypes => instanceTypes;
+
         public SquadParams SquadParams => squadParams;
+        public ActiveInstanceParams ActiveInstanceParams => activeInstanceParams;
 
         public SeasonData GetSeason(int id)
         {

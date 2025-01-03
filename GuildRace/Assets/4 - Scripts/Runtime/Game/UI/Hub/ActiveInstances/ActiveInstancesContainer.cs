@@ -3,7 +3,6 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using System;
 using System.Threading;
 using UniRx;
 using UnityEngine;
@@ -18,7 +17,7 @@ namespace Game.Instances
 
         [Header("Instance")]
         [SerializeField] private CanvasGroup instanceContainer;
-        [SerializeField] private UIButton stopInstanceButton;
+        [SerializeField] private UIButton completeInstanceButton;
         [Space]
         [SerializeField] private UIText instanceNameText;
 
@@ -42,8 +41,11 @@ namespace Game.Instances
 
         private void Awake()
         {
-            stopInstanceButton.OnClick
-                .Subscribe(StopInstanceCallback)
+            instanceContainer.alpha = 0;
+            instanceContainer.interactable = false;
+
+            completeInstanceButton.OnClick
+                .Subscribe(CompleteInstanceCallback)
                 .AddTo(this);
         }
 
@@ -127,27 +129,32 @@ namespace Game.Instances
 
             instanceNameText.SetTextParams(activeInstanceVM.InstanceVM.NameKey);
 
+            activeInstanceVM.IsReadyToComplete
+                .Subscribe(x => completeInstanceButton.SetInteractableState(x))
+                .AddTo(instanceDisp);
+
             await instanceContainer.DOFade(1, duration);
         }
 
-        private void StopInstanceCallback()
+        private void CompleteInstanceCallback()
         {
             if (activeInstanceVM == null)
             {
                 return;
             }
 
-            var parameters = RouteParams.Default;
+            var index = instancesVMF.StopActiveInstance(activeInstanceVM.Id);
+            var switchToInstanceVM = activeInstancesVM.NearbyOrDefault(index);
 
-            parameters[BaseDialog.okKey] = (Action)(() =>
+            activeInstanceVM = null;
+
+            SelectActiveInstance(switchToInstanceVM);
+
+            if (activeInstanceVM == null)
             {
-                var index = instancesVMF.StopActiveInstance(activeInstanceVM.Id);
-
-                activeInstanceVM = null;
-                switchToInstanceVM = activeInstancesVM.NearbyOrDefault(index);
-            });
-
-            Router.Push(RouteKeys.Guild.removeCharacter, parameters: parameters);
+                instanceContainer.alpha = 0;
+                instanceContainer.interactable = false;
+            }
         }
     }
 }

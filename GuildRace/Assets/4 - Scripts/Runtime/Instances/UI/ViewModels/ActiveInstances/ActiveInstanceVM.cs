@@ -9,8 +9,10 @@ namespace Game.Instances
         public string Id { get; }
 
         public InstanceVM InstanceVM { get; }
-        public IdsVM SquadVM { get; }
         public ItemsGridVM BagVM { get; }
+        public IdsVM SquadVM { get; }
+
+        public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
 
         public ActiveInstanceVM(
             ActiveInstanceInfo info,
@@ -18,8 +20,9 @@ namespace Game.Instances
             InventoryVMFactory inventoryVMF)
         {
             Id = info.Id;
+            IsReadyToComplete = info.IsReadyToComplete;
 
-            InstanceVM = instancesVMF.GetInstance(info.InstanceId);
+            InstanceVM = instancesVMF.GetInstance(info.Instance);
             SquadVM = new IdsVM(info.Squad);
             BagVM = inventoryVMF.CreateItemsGrid(info.Bag);
         }

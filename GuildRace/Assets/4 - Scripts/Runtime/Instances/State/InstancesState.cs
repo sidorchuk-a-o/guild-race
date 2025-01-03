@@ -1,4 +1,5 @@
 ﻿using AD.Services;
+using AD.Services.ProtectedTime;
 using AD.Services.Save;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Game.Instances
 {
     public class InstancesState : ServiceState<InstancesConfig, InstancesStateSM>
     {
+        private readonly ITimeService time;
         private readonly IInventoryService inventoryService;
 
         private readonly SeasonsCollection seasons = new(null);
@@ -26,17 +28,24 @@ namespace Game.Instances
         public ActiveInstanceInfo SetupInstance { get; private set; }
         public ActiveInstanceInfo PlayerInstance { get; private set; }
 
-        public InstancesState(InstancesConfig config, IInventoryService inventoryService, IObjectResolver resolver) : base(config, resolver)
+        public InstancesState(
+            InstancesConfig config,
+            ITimeService time,
+            IInventoryService inventoryService,
+            IObjectResolver resolver)
+            : base(config, resolver)
         {
+            this.time = time;
             this.inventoryService = inventoryService;
         }
 
         public void CreateSetupInstance(int instanceId)
         {
             var id = GuidUtils.Generate();
+            var instance = seasons.GetInstance(instanceId);
             var bagGrid = inventoryService.Factory.CreateGrid(config.SquadParams.Bag);
 
-            SetupInstance = new(id, instanceId, bagGrid, squad: null);
+            SetupInstance = new(id, instance, bagGrid, squad: null);
         }
 
         public void CancelSetupInstance()
@@ -53,6 +62,7 @@ namespace Game.Instances
                 PlayerInstance = SetupInstance;
             }
 
+            SetupInstance.SetStartTime(time.TotalTime);
             SetupInstance = null;
 
             MarkAsDirty(true);
@@ -104,7 +114,7 @@ namespace Game.Instances
             }
 
             seasons.AddRange(save.GetSeasons(config));
-            activeInstances.AddRange(save.GetActiveInstances(inventoryService));
+            activeInstances.AddRange(save.GetActiveInstances(inventoryService, seasons));
 
             PlayerInstance = activeInstances.GetInstance(save.PlayerInstanceId);
 

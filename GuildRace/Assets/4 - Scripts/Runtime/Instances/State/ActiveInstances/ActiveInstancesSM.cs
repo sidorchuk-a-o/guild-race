@@ -17,9 +17,9 @@ namespace Game.Instances
                 .ToList();
         }
 
-        public IEnumerable<ActiveInstanceInfo> GetValues(IInventoryService inventoryService)
+        public IEnumerable<ActiveInstanceInfo> GetValues(IInventoryService inventoryService, SeasonsCollection seasons)
         {
-            return values.Select(x => x.GetValue(inventoryService));
+            return values.Select(x => x.GetValue(inventoryService, seasons));
         }
     }
 }
