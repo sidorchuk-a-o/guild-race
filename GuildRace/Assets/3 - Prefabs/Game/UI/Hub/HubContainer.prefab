@@ -1321,6 +1321,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SidebarTabItems
       objectReference: {fileID: 0}
+    - target: {fileID: 2742647476857810515, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742647476857810515, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742647476857810515, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742647476857810515, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4413879387502366245, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1438,6 +1454,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6324228970388252693, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928507392228679375, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928507392228679375, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928507392228679375, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928507392228679375, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928507392228679375, guid: 634d33f1ab776ac4191e17fb0de4b795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

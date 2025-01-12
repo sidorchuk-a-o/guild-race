@@ -7,9 +7,10 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class ClassData : ScriptableEntity<string>
+    public class ClassData : ScriptableEntity<int>
     {
         [SerializeField] private LocalizeKey nameKey;
+        [SerializeField] private LocalizeKey descKey;
         [Space]
         [SerializeField] private EquipType armorType;
         [SerializeField] private EquipType weaponType;
@@ -19,6 +20,8 @@ namespace Game.Guild
         private Dictionary<SpecializationId, SpecializationData> specsCache;
 
         public LocalizeKey NameKey => nameKey;
+        public LocalizeKey DescKey => descKey;
+
         public EquipType ArmorType => armorType;
         public EquipType WeaponType => weaponType;
         public IReadOnlyList<SpecializationData> Specs => specs;

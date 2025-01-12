@@ -1,26 +1,35 @@
 ﻿using AD.Services.Router;
+using Game.Instances;
 using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
+using VContainer;
 
 namespace Game.Guild
 {
     public class GuildVMFactory : VMFactory
     {
         private readonly GuildConfig guildConfig;
+
         private readonly IGuildService guildService;
-        private readonly InventoryVMFactory inventoryVMF;
+        private readonly IObjectResolver resolver;
+
+        private InventoryVMFactory inventoryVMF;
+        private InstancesVMFactory instancesVMF;
 
         public int MaxCharactersCount => guildConfig.MaxCharactersCount;
+
+        public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
+        public InstancesVMFactory InstancesVMF => instancesVMF ??= resolver.Resolve<InstancesVMFactory>();
 
         public GuildVMFactory(
             GuildConfig guildConfig,
             IGuildService guildService,
-            InventoryVMFactory inventoryVMF)
+            IObjectResolver resolver)
         {
             this.guildConfig = guildConfig;
             this.guildService = guildService;
-            this.inventoryVMF = inventoryVMF;
+            this.resolver = resolver;
         }
 
         // == View Models ==
@@ -32,12 +41,19 @@ namespace Game.Guild
 
         public GuildBankTabsVM GetGuildBankTabs()
         {
-            return new GuildBankTabsVM(guildService.BankTabs, inventoryVMF);
+            return new GuildBankTabsVM(guildService.BankTabs, InventoryVMF);
+        }
+
+        public CharacterVM GetCharacter(string characterId)
+        {
+            var character = guildService.Characters[characterId];
+
+            return new CharacterVM(character, this, InventoryVMF, InstancesVMF);
         }
 
         public CharactersVM GetRoster()
         {
-            return new CharactersVM(guildService.Characters, this, inventoryVMF);
+            return new CharactersVM(guildService.Characters, this, InventoryVMF, InstancesVMF);
         }
 
         public RecruitingVM GetRecruiting()
@@ -47,7 +63,7 @@ namespace Game.Guild
 
         public JoinRequestsVM GetJoinRequests()
         {
-            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this, inventoryVMF);
+            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this, InventoryVMF);
         }
 
         public IReadOnlyList<ClassRoleSelectorVM> GetClassRoleSelectors()
@@ -62,6 +78,13 @@ namespace Game.Guild
             var roleData = guildConfig.CharactersParams.GetRole(roleId);
 
             return new RoleVM(roleData);
+        }
+
+        public SubRoleVM GetRole(SubRoleId subRoleId)
+        {
+            var subRoleData = guildConfig.CharactersParams.GetSubRole(subRoleId);
+
+            return new SubRoleVM(subRoleData);
         }
 
         public ClassVM GetClass(ClassId classId)

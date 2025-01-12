@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class GuildRankData : ScriptableEntity<string>
+    public class GuildRankData : ScriptableEntity<int>
     {
         [SerializeField] private LocalizeKey defaultNameKey;
 

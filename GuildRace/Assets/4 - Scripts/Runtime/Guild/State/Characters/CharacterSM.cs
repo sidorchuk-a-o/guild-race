@@ -9,9 +9,10 @@ namespace Game.Guild
     {
         [ES3Serializable] private string id;
         [ES3Serializable] private string nickname;
-        [ES3Serializable] private string classId;
-        [ES3Serializable] private string specId;
-        [ES3Serializable] private string guildRankId;
+        [ES3Serializable] private int classId;
+        [ES3Serializable] private int specId;
+        [ES3Serializable] private string instanceId;
+        [ES3Serializable] private int guildRankId;
         [ES3Serializable] private ItemSlotsSM equipSlotsSM;
 
         public CharacterSM(CharacterInfo info, IInventoryService inventoryService)
@@ -20,6 +21,7 @@ namespace Game.Guild
             nickname = info.Nickname;
             classId = info.ClassId;
             specId = info.SpecId.Value;
+            instanceId = info.InstanceId.Value;
             guildRankId = info.GuildRankId.Value;
             equipSlotsSM = new(info.EquipSlots, inventoryService.Factory);
         }
@@ -34,6 +36,7 @@ namespace Game.Guild
 
             info.Init();
             info.SetGuildRank(guildRankId);
+            info.SetInstanceId(instanceId);
             info.SetSpecialization(specId);
 
             return info;

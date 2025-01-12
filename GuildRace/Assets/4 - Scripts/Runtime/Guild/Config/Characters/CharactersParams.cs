@@ -8,25 +8,43 @@ namespace Game.Guild
     [Serializable]
     public class CharactersParams
     {
-        [SerializeField] private int maxEquipSlotCount = 6;
-
         [SerializeField] private List<ClassData> classes;
+        [Space]
         [SerializeField] private List<RoleData> roles;
+        [SerializeField] private List<SubRoleData> subRoles;
+        [SerializeField] private List<ResourceData> resources;
 
         private Dictionary<RoleId, RoleData> rolesCache;
+        private Dictionary<SubRoleId, SubRoleData> subRolesCache;
         private Dictionary<ClassId, ClassData> classesCache;
         private Dictionary<SpecializationId, SpecializationData> specsCache;
         private Dictionary<RoleId, List<(ClassData, SpecializationData)>> specByRoleCache;
+        private Dictionary<ResourceId, ResourceData> resourcesCache;
 
-        public int MaxEquipSlotCount => maxEquipSlotCount;
-        public IReadOnlyList<ClassData> Classes => classes;
         public IReadOnlyList<RoleData> Roles => roles;
+        public IReadOnlyList<SubRoleData> SubRoles => subRoles;
+        public IReadOnlyList<ClassData> Classes => classes;
+        public IReadOnlyList<ResourceData> Resources => resources;
 
         public RoleData GetRole(RoleId roleId)
         {
             rolesCache ??= roles.ToDictionary(x => (RoleId)x.Id, x => x);
 
             return rolesCache[roleId];
+        }
+
+        public RoleId GetRoleBySpec(SpecializationId specId)
+        {
+            var spec = GetSpecialization(specId);
+
+            return spec.RoleId;
+        }
+
+        public SubRoleData GetSubRole(SubRoleId subRoleId)
+        {
+            subRolesCache ??= subRoles.ToDictionary(x => (SubRoleId)x.Id, x => x);
+
+            return subRolesCache[subRoleId];
         }
 
         public ClassData GetClass(ClassId classId)
@@ -53,6 +71,13 @@ namespace Game.Guild
                 .ToDictionary(x => x.Key, x => x.ToList());
 
             return specByRoleCache[roleId];
+        }
+
+        public ResourceData GetResource(ResourceId resourceId)
+        {
+            resourcesCache ??= resources.ToDictionary(x => (ResourceId)x.Id, x => x);
+
+            return resourcesCache[resourceId];
         }
     }
 }

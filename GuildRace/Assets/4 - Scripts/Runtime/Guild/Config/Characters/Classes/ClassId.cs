@@ -4,17 +4,17 @@ using System;
 namespace Game.Guild
 {
     [Serializable]
-    public class ClassId : Key<string>
+    public class ClassId : Key<int>
     {
         public ClassId()
         {
         }
 
-        public ClassId(string key) : base(key)
+        public ClassId(int key) : base(key)
         {
         }
 
-        public static implicit operator string(ClassId key) => key?.value;
-        public static implicit operator ClassId(string key) => new(key);
+        public static implicit operator int(ClassId key) => key?.value ?? -1;
+        public static implicit operator ClassId(int key) => new(key);
     }
 }

@@ -5,7 +5,7 @@ namespace Game.Guild
     [JsonObject(MemberSerialization.Fields)]
     public class GuildRankSM
     {
-        [ES3Serializable] private string id;
+        [ES3Serializable] private int id;
         [ES3Serializable] private string name;
 
         public GuildRankSM(GuildRankInfo info)

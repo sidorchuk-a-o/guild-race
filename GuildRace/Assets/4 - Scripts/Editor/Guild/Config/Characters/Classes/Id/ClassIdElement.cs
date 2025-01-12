@@ -4,9 +4,9 @@ using System;
 namespace Game.Guild
 {
     [KeyElement(typeof(ClassId))]
-    public class ClassIdElement : KeyElement<string>
+    public class ClassIdElement : KeyElement<int>
     {
-        protected override Func<Collection<string>> GetCollection
+        protected override Func<Collection<int>> GetCollection
         {
             get => GuildEditorState.CreateClassesViewCollection;
         }

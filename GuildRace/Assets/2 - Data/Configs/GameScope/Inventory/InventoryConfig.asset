@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9211555178591356751
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10119
+  title: 10119
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10119
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-9104328803151399047
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12,6 +50,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe381b06d4c0974aa97069ba70464c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8935944566364473840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 146
+  title: Staff
+  nameKey:
+    value: INVENTORY/FISTS_WEAPON_TTL
 --- !u!114 &-8928354529463672314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24,6 +78,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bad53f6eb408248940df3caa2eda46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8918075209650945491
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 183
+  title: Chest
+  nameKey:
+    value: INVENTORY/CHEST_EQUIP_TTL
+  equipGroup:
+    value: 111
 --- !u!114 &-8828454054120025654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,18 +122,94 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
-    value: 20020
+    value: 20019
   level: 25
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &-8826924889863600484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10093
+  title: 10093
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10093
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &-8816477437093287099
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10118
+  title: 10118
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10118
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-8472422733814341553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,18 +236,94 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
     value: 20011
   level: 30
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-8396260996354326224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10131
+  title: 10131
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10131
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-8231145598918426906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10129
+  title: 10129
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10129
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-7976013286353870678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,18 +350,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
     value: 20011
   level: 30
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-7786134524771069982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10107
+  title: 10107
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10107
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-7747445019385112284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,19 +426,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
     value: 20014
   level: 35
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-7316531994249119311
+    power: 35
+    health: 35
+    resource: 35
+--- !u!114 &-7652101298570031518
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,13 +447,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2fa940d2945704e8a36cf84a751ebf, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 51
-  title: Common
+  id: 10103
+  title: 10103
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/COMMON_RARITY_TTL
+    value: EQUIPS/10103
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-7449035984528177374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10114
+  title: 10114
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10114
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-7212983667274812868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,18 +540,94 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
-    value: 20021
+    value: 20020
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-7175090527530127482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10141
+  title: 10141
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10141
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 145
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-7080529732421677225
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10105
+  title: 10105
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10105
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-7001324336208455771
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,19 +666,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
-    value: 20029
+    value: 20028
   level: 25
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-6950904633013905063
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &-6887878195513756772
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,13 +687,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2fa940d2945704e8a36cf84a751ebf, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 52
-  title: Epic
+  id: 10101
+  title: 10101
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/EPIC_RARITY_TTL
+    value: EQUIPS/10101
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &-6862540958533503585
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,18 +742,74 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
-    value: 20018
+    value: 20017
   level: 20
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-6806210110799492770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 184
+  title: Hands
+  nameKey:
+    value: INVENTORY/HANDS_EQUIP_TTL
+  equipGroup:
+    value: 111
+--- !u!114 &-6747019915732971749
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10135
+  title: 10135
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10135
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 147
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &-6614947257460562497
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,18 +836,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
-    value: 20018
+    value: 20017
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-6183353682262618565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -398,18 +874,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20013
   level: 30
   type:
-    value: 41
+    value: 144
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-6150907231377672594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,18 +912,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20016
   level: 40
   type:
-    value: 44
+    value: 147
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
 --- !u!114 &-6133608900172429420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -474,18 +950,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
     value: 20012
   level: 30
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-6114776268038394866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,18 +988,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20016
   level: 40
   type:
-    value: 44
+    value: 147
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
 --- !u!114 &-6110813638385256761
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,18 +1026,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
     value: 20016
   level: 40
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
 --- !u!114 &-6077349596849091963
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -588,18 +1064,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20015
   level: 35
   type:
-    value: 42
+    value: 145
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &-5950450103269691187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -626,18 +1102,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
-    value: 20029
+    value: 20028
   level: 25
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &-5906239369190842854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10089
+  title: 10089
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10089
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &-5737075243555858367
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -664,18 +1178,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
     value: 20013
   level: 30
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-5545082573401686429
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10133
+  title: 10133
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10133
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 145
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &-5264673978053023553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -702,19 +1254,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
-    value: 20028
+    value: 20027
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-5161679761343262562
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-4706629457753465657
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -726,12 +1278,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 23
-  title: Chest
+  id: 182
+  title: Shoulders
   nameKey:
-    value: INVENTORY/CHEST_EQUIP_TTL
+    value: INVENTORY/SHOULDERS_EQUIP_TTL
   equipGroup:
-    value: 11
+    value: 111
 --- !u!114 &-4706465094894642045
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,19 +1310,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20023
   level: 25
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-4450523110700388368
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &-4649489801524151643
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -779,13 +1331,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 33
-  title: Plate
+  id: 10122
+  title: 10122
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/PLATE_ARMOR_TTL
+    value: EQUIPS/10122
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-4422783340732822949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -812,18 +1386,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
     value: 20011
   level: 30
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-4298722491863905509
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -850,18 +1424,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20026
+    value: 20025
   level: 25
   type:
-    value: 42
+    value: 145
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
 --- !u!114 &-4187781191333709216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -888,18 +1462,38 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
-    value: 20018
+    value: 20017
   level: 20
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-4086103811589660623
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd6dd5ed4a5c9243937b499c97bb21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 111
+  title: Armor
+  nameKey:
+    value: INVENTORY/ARMOR_GROUP_TTL
+  types:
+  - {fileID: 2172033002375078472}
+  - {fileID: 243303202286163940}
+  - {fileID: 5192041196401389597}
 --- !u!114 &-4042651223683728926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -926,18 +1520,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
-    value: 20026
+    value: 20025
   level: 25
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
 --- !u!114 &-3779093435946907101
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -950,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fb4bf0322ae4b4aa241ff02c49756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3260789447655761764
+--- !u!114 &-3715535821649933246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -959,13 +1553,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 42
-  title: Daggers
+  id: 10134
+  title: 10134
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/DAGGERS_WEAPON_TTL
+    value: EQUIPS/10134
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 146
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &-3192710916682309853
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10113
+  title: 10113
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10113
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-3139738672294733290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -992,18 +1646,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
     value: 20014
   level: 35
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &-3128139311566442411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1030,36 +1684,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
-    value: 20025
+    value: 20024
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-3109398812195642226
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 22
-  title: Shoulders
-  nameKey:
-    value: INVENTORY/SHOULDERS_EQUIP_TTL
-  equipGroup:
-    value: 11
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-3053621089744547346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1086,18 +1722,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
-    value: 20024
+    value: 20023
   level: 20
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-3039325825505055318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,18 +1760,132 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20020
+    value: 20019
   level: 25
   type:
-    value: 44
+    value: 147
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &-2984385885765960227
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10111
+  title: 10111
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10111
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-2901791957114803695
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10102
+  title: 10102
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10102
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-2880662800390554586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10126
+  title: 10126
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10126
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-2537615286543567961
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,19 +1912,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
-    value: 20022
+    value: 20021
   level: 20
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-2315033124716837991
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-2515399012765761056
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1183,13 +1933,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 43
-  title: Staff
+  id: 10096
+  title: 10096
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: 
+    value: EQUIPS/10096
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &-2203573243443984181
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10104
+  title: 10104
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10104
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-2140721920580831846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1216,18 +2026,132 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
-    value: 20019
+    value: 20018
   level: 20
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-1922595333489817320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10117
+  title: 10117
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10117
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-1822881498046691059
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10092
+  title: 10092
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10092
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &-1781769187498898997
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10124
+  title: 10124
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10124
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-1717270387008189411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1254,19 +2178,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
     value: 20012
   level: 30
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-1657617199462621251
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &-1496942897883920671
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1275,18 +2199,91 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd6dd5ed4a5c9243937b499c97bb21b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 12
-  title: Weapon
+  id: 10109
+  title: 10109
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/WEAPON_GROUP_TTL
-  types:
-  - {fileID: 311866390919283212}
-  - {fileID: -3260789447655761764}
-  - {fileID: -2315033124716837991}
-  - {fileID: 2558845237322644653}
+    value: EQUIPS/10109
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-1455371521357839726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 185
+  title: Legs
+  nameKey:
+    value: INVENTORY/LEGS_EQUIP_TTL
+  equipGroup:
+    value: 111
+--- !u!114 &-1397640674778838253
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10143
+  title: 10143
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10143
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 147
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-1385969258091611105
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1313,18 +2310,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
     value: 20015
   level: 35
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &-1379920717474179501
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1351,18 +2348,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
     value: 20015
   level: 35
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &-1345641969649985332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,18 +2386,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
-    value: 20023
+    value: 20022
   level: 25
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
 --- !u!114 &-1232920642671462375
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,6 +2410,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71807dc6b2580394b9e9169a09ea3059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1177750880321945018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10098
+  title: 10098
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10098
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &-1103882048033937079
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1439,18 +2474,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
-    value: 20020
+    value: 20019
   level: 25
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
 --- !u!114 &-1063377336643817000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,18 +2512,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20016
   level: 40
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
 --- !u!114 &-1062136430006192684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1515,18 +2550,72 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
-    value: 20022
+    value: 20021
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-1058030996441149953
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10132
+  title: 10132
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10132
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 144
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &-1029915359850127392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 144
+  title: Swordshield
+  nameKey:
+    value: INVENTORY/SWORD_SHIELD_WEAPON_TTL
 --- !u!114 &-995771998939256200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1553,18 +2642,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20011
   level: 30
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-976144031733252825
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1591,18 +2680,94 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20019
+    value: 20018
   level: 20
   type:
-    value: 41
+    value: 144
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-950174056014292139
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10116
+  title: 10116
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10116
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &-904854680988985666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10112
+  title: 10112
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10112
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &-753766681237061545
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1629,18 +2794,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
-    value: 20020
+    value: 20019
   level: 25
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
 --- !u!114 &-612337858966185010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1665,6 +2830,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c60fc701a4a89b4c8001bfad3dff272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-366468662695823535
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10121
+  title: 10121
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10121
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &-66409358018346676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1691,34 +2894,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
     value: 20012
   level: 30
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &-11673543929542161
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 32
-  title: Leather
-  nameKey:
-    value: INVENTORY/LEATHER_ARMOR_TTL
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1809,24 +2996,87 @@ MonoBehaviour:
     - {fileID: 1057532855618524533}
     - {fileID: 7785800891378577920}
     - {fileID: -6114776268038394866}
+    - {fileID: 1146862404774681540}
+    - {fileID: 8768025246458969749}
+    - {fileID: -5906239369190842854}
+    - {fileID: 6252780992562068410}
+    - {fileID: 4931558719855862773}
+    - {fileID: -1822881498046691059}
+    - {fileID: -8826924889863600484}
+    - {fileID: 4336203229436919653}
+    - {fileID: 4626130929355491073}
+    - {fileID: -2515399012765761056}
+    - {fileID: 6623181956789968478}
+    - {fileID: -1177750880321945018}
+    - {fileID: 2889767576748943482}
+    - {fileID: 3092212957855857889}
+    - {fileID: -6887878195513756772}
+    - {fileID: -2901791957114803695}
+    - {fileID: -7652101298570031518}
+    - {fileID: -2203573243443984181}
+    - {fileID: -7080529732421677225}
+    - {fileID: 6815719833297973283}
+    - {fileID: -7786134524771069982}
+    - {fileID: 4383393171423201285}
+    - {fileID: -1496942897883920671}
+    - {fileID: 1424568110847715213}
+    - {fileID: -2984385885765960227}
+    - {fileID: -904854680988985666}
+    - {fileID: -3192710916682309853}
+    - {fileID: -7449035984528177374}
+    - {fileID: 3157436081391586742}
+    - {fileID: -950174056014292139}
+    - {fileID: -1922595333489817320}
+    - {fileID: -8816477437093287099}
+    - {fileID: -9211555178591356751}
+    - {fileID: 2547879043090320572}
+    - {fileID: -366468662695823535}
+    - {fileID: -4649489801524151643}
+    - {fileID: 7419684207783315249}
+    - {fileID: -1781769187498898997}
+    - {fileID: 2041079010886698170}
+    - {fileID: -2880662800390554586}
+    - {fileID: 9192822233424299849}
+    - {fileID: 4119991724450200512}
+    - {fileID: -8231145598918426906}
+    - {fileID: 3225340754304345197}
+    - {fileID: -8396260996354326224}
+    - {fileID: -1058030996441149953}
+    - {fileID: -5545082573401686429}
+    - {fileID: -3715535821649933246}
+    - {fileID: -6747019915732971749}
+    - {fileID: 8229471332804516462}
+    - {fileID: 783570048604300030}
+    - {fileID: 4300491796616334485}
+    - {fileID: 9144019996957310207}
+    - {fileID: 462244929390968814}
+    - {fileID: -7175090527530127482}
+    - {fileID: 2382765222928833730}
+    - {fileID: -1397640674778838253}
     slots:
-    - {fileID: 7777365869135470539}
-    - {fileID: -3109398812195642226}
-    - {fileID: -5161679761343262562}
-    - {fileID: 1372262859629279956}
-    - {fileID: 3875896697679450297}
-    - {fileID: 1009505861965748416}
+    - {fileID: 9180415984051115598}
+    - {fileID: -4706629457753465657}
+    - {fileID: -8918075209650945491}
+    - {fileID: -6806210110799492770}
+    - {fileID: -1455371521357839726}
+    - {fileID: 674322806141242743}
     groups:
-    - {fileID: 8195572707257725941}
-    - {fileID: -1657617199462621251}
+    - {fileID: -4086103811589660623}
+    - {fileID: 9113102958087313022}
     gridParams:
       categories:
-      - value: 61
-      - value: 62
+      - value: 201
+      - value: 202
       cellTypes:
-      - value: 71
-      - value: 72
+      - value: 211
+      - value: 212
   reagentsParams:
+    items: []
+    slots: []
+    gridParams:
+      categories: []
+      cellTypes: []
+  consumablesParams:
     items: []
     slots: []
     gridParams:
@@ -1909,39 +3159,104 @@ MonoBehaviour:
   - {fileID: 1057532855618524533}
   - {fileID: 7785800891378577920}
   - {fileID: -6114776268038394866}
+  - {fileID: 1146862404774681540}
+  - {fileID: 8768025246458969749}
+  - {fileID: -5906239369190842854}
+  - {fileID: 6252780992562068410}
+  - {fileID: 4931558719855862773}
+  - {fileID: -1822881498046691059}
+  - {fileID: -8826924889863600484}
+  - {fileID: 4336203229436919653}
+  - {fileID: 4626130929355491073}
+  - {fileID: -2515399012765761056}
+  - {fileID: 6623181956789968478}
+  - {fileID: -1177750880321945018}
+  - {fileID: 2889767576748943482}
+  - {fileID: 3092212957855857889}
+  - {fileID: -6887878195513756772}
+  - {fileID: -2901791957114803695}
+  - {fileID: -7652101298570031518}
+  - {fileID: -2203573243443984181}
+  - {fileID: -7080529732421677225}
+  - {fileID: 6815719833297973283}
+  - {fileID: -7786134524771069982}
+  - {fileID: 4383393171423201285}
+  - {fileID: -1496942897883920671}
+  - {fileID: 1424568110847715213}
+  - {fileID: -2984385885765960227}
+  - {fileID: -904854680988985666}
+  - {fileID: -3192710916682309853}
+  - {fileID: -7449035984528177374}
+  - {fileID: 3157436081391586742}
+  - {fileID: -950174056014292139}
+  - {fileID: -1922595333489817320}
+  - {fileID: -8816477437093287099}
+  - {fileID: -9211555178591356751}
+  - {fileID: 2547879043090320572}
+  - {fileID: -366468662695823535}
+  - {fileID: -4649489801524151643}
+  - {fileID: 7419684207783315249}
+  - {fileID: -1781769187498898997}
+  - {fileID: 2041079010886698170}
+  - {fileID: -2880662800390554586}
+  - {fileID: 9192822233424299849}
+  - {fileID: 4119991724450200512}
+  - {fileID: -8231145598918426906}
+  - {fileID: 3225340754304345197}
+  - {fileID: -8396260996354326224}
+  - {fileID: -1058030996441149953}
+  - {fileID: -5545082573401686429}
+  - {fileID: -3715535821649933246}
+  - {fileID: -6747019915732971749}
+  - {fileID: 8229471332804516462}
+  - {fileID: 783570048604300030}
+  - {fileID: 4300491796616334485}
+  - {fileID: 9144019996957310207}
+  - {fileID: 462244929390968814}
+  - {fileID: -7175090527530127482}
+  - {fileID: 2382765222928833730}
+  - {fileID: -1397640674778838253}
   itemSlots:
-  - {fileID: 7777365869135470539}
-  - {fileID: -3109398812195642226}
-  - {fileID: -5161679761343262562}
-  - {fileID: 1372262859629279956}
-  - {fileID: 3875896697679450297}
-  - {fileID: 1009505861965748416}
+  - {fileID: 9180415984051115598}
+  - {fileID: -4706629457753465657}
+  - {fileID: -8918075209650945491}
+  - {fileID: -6806210110799492770}
+  - {fileID: -1455371521357839726}
+  - {fileID: 674322806141242743}
   itemsGrids:
-  - {fileID: 6159485941193676221, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
-  - {fileID: 4062836607073430714, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: -8197956687249327810, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: 1183720720073450144, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: 6966395837178485508, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: 76776547799289294, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
+  - {fileID: 3341094923558873629, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   itemsParams:
     rarities:
-    - {fileID: -7316531994249119311}
-    - {fileID: -6950904633013905063}
+    - {fileID: 3190576719803835710}
+    - {fileID: 1110932812422987802}
     factories:
     - {fileID: -1232920642671462375}
     - {fileID: -7001324336208455771}
+    - {fileID: 6356543479013324972}
   itemSlotsParams:
     factories:
     - {fileID: 6431083172281420682}
   itemsGridsParams:
     categories:
-    - id: 61
+    - id: 201
       title: Guild-bank
-    - id: 62
+    - id: 202
       title: Loot
+    - id: 203
+      title: Squad-bag
     cellTypes:
-    - id: 71
+    - id: 211
       title: Common
-    - id: 72
+    - id: 212
       title: Equips
-    - id: 73
+    - id: 213
       title: Reagents
+    - id: 214
+      title: Consumables
   uiParams:
     cellSize: 65
     pickupHandlers:
@@ -1988,18 +3303,34 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
     value: 20014
   level: 35
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
+--- !u!114 &243303202286163940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 142
+  title: Leather
+  nameKey:
+    value: INVENTORY/LEATHER_ARMOR_TTL
 --- !u!114 &255827085126145541
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2026,34 +3357,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20014
   level: 35
   type:
-    value: 41
+    value: 144
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &311866390919283212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 41
-  title: Swordshield
-  nameKey:
-    value: INVENTORY/SWORD_SHIELD_WEAPON_TTL
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &331208564779327751
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2080,18 +3395,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20016
   level: 40
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
 --- !u!114 &406163380787924127
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2118,18 +3433,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
     value: 20012
   level: 30
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &462244929390968814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10140
+  title: 10140
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10140
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 144
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &518433714357507813
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2156,18 +3509,74 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
     value: 20013
   level: 30
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &674322806141242743
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 186
+  title: Weapon
+  nameKey:
+    value: INVENTORY/WEAPON_EQUIP_TTL
+  equipGroup:
+    value: 112
+--- !u!114 &783570048604300030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10137
+  title: 10137
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10137
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 145
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &841691043756883268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2194,36 +3603,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20011
   level: 30
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &1009505861965748416
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 26
-  title: Weapon
-  nameKey:
-    value: INVENTORY/WEAPON_EQUIP_TTL
-  equipGroup:
-    value: 12
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &1010764327341742373
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2250,18 +3641,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
     value: 20013
   level: 30
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &1057532855618524533
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2288,18 +3679,72 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20012
   level: 30
   type:
-    value: 42
+    value: 145
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &1110932812422987802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2fa940d2945704e8a36cf84a751ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 122
+  title: Epic
+  nameKey:
+    value: INVENTORY/EPIC_RARITY_TTL
+--- !u!114 &1146862404774681540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10087
+  title: 10087
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10087
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &1189334565303918666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2326,18 +3771,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
     value: 20013
   level: 30
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &1223950982166912609
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2364,19 +3809,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
-    value: 20023
+    value: 20022
   level: 25
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &1372262859629279956
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &1424568110847715213
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2385,15 +3830,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 24
-  title: Hands
+  id: 10110
+  title: 10110
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/HANDS_EQUIP_TTL
-  equipGroup:
-    value: 11
+    value: EQUIPS/10110
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &1660921729696098959
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2420,18 +3885,72 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
-    value: 20024
+    value: 20023
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &2041079010886698170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10125
+  title: 10125
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10125
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &2172033002375078472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 141
+  title: Cloth
+  nameKey:
+    value: INVENTORY/CLOTH_ARMOR_TTL
 --- !u!114 &2223622560626977374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2458,19 +3977,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20023
+    value: 20022
   level: 25
   type:
-    value: 43
+    value: 146
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &2558845237322644653
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &2382765222928833730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2479,13 +3998,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 44
-  title: Fists
+  id: 10142
+  title: 10142
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/STAVES_WEAPON_TTL
+    value: EQUIPS/10142
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 146
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &2547879043090320572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10120
+  title: 10120
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10120
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &2734205929474609862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2524,18 +4103,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
     value: 20014
   level: 35
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &2852506058818597817
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2562,18 +4141,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20029
+    value: 20028
   level: 25
   type:
-    value: 41
+    value: 144
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &2889767576748943482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10099
+  title: 10099
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10099
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &3020438398822890104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2600,18 +4217,148 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20016
   level: 40
   type:
-    value: 43
+    value: 146
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
+--- !u!114 &3092212957855857889
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10100
+  title: 10100
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10100
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &3157436081391586742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10115
+  title: 10115
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10115
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &3190576719803835710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2fa940d2945704e8a36cf84a751ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 121
+  title: Common
+  nameKey:
+    value: INVENTORY/COMMON_RARITY_TTL
+--- !u!114 &3225340754304345197
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10130
+  title: 10130
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10130
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &3528656383035835354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2662,18 +4409,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
-    value: 20025
+    value: 20024
   level: 20
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &3651724357173251947
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2700,18 +4447,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20025
+    value: 20024
   level: 20
   type:
-    value: 43
+    value: 146
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &3698016436506853915
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2738,18 +4485,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
     value: 20013
   level: 30
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &3852932945951644673
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2776,19 +4523,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
     value: 20014
   level: 35
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &3875896697679450297
+    power: 35
+    health: 35
+    resource: 35
+--- !u!114 &4119991724450200512
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2797,15 +4544,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 25
-  title: Legs
+  id: 10128
+  title: 10128
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/LEGS_EQUIP_TTL
-  equipGroup:
-    value: 11
+    value: EQUIPS/10128
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &4241016530502353956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2832,18 +4599,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20028
+    value: 20027
   level: 20
   type:
-    value: 44
+    value: 147
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &4300491796616334485
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10138
+  title: 10138
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10138
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 146
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &4300600863543967724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2870,18 +4675,94 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20015
   level: 35
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
+--- !u!114 &4336203229436919653
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10094
+  title: 10094
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10094
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 183
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &4383393171423201285
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10108
+  title: 10108
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10108
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &4434524417934112057
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2908,18 +4789,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
-    value: 20022
+    value: 20021
   level: 20
   type:
-    value: 42
+    value: 145
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &4626130929355491073
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10095
+  title: 10095
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10095
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &4734373708846455812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2946,18 +4865,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
     value: 20015
   level: 35
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &4747047883465077511
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2984,18 +4903,88 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 25
+    value: 185
   source:
-    value: 20026
+    value: 20025
   level: 25
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &4931558719855862773
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10091
+  title: 10091
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10091
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &5015050402526860843
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 147
+  title: Fists
+  nameKey:
+    value: INVENTORY/STAVES_WEAPON_TTL
+--- !u!114 &5192041196401389597
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 143
+  title: Plate
+  nameKey:
+    value: INVENTORY/PLATE_ARMOR_TTL
 --- !u!114 &5221070637314442134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3022,18 +5011,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
-    value: 20027
+    value: 20026
   level: 20
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &5374728186150439257
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3060,18 +5049,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
-    value: 20021
+    value: 20020
   level: 20
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &5674290880999002455
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3098,18 +5087,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
-    value: 20019
+    value: 20018
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &5803818987983749537
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3148,18 +5137,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
     value: 20016
   level: 40
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
 --- !u!114 &5987843277473568308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3194,7 +5183,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
---- !u!114 &6238446329362543954
+--- !u!114 &6252780992562068410
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3203,13 +5192,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 31
-  title: Cloth
+  id: 10090
+  title: 10090
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/CLOTH_ARMOR_TTL
+    value: EQUIPS/10090
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 184
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &6301772883194522219
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3220,6 +5231,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e216c37a13ef4f43a2c29d2aedfa68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6356543479013324972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7085e9f15ec17494796739c85bc97294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6431083172281420682
@@ -3234,6 +5257,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfaa2039235d52a44a18894bc0afe905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6623181956789968478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10097
+  title: 10097
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10097
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
+--- !u!114 &6661488557336679770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa19b5444f983d4a9441869a21da8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 145
+  title: Daggers
+  nameKey:
+    value: INVENTORY/DAGGERS_WEAPON_TTL
+--- !u!114 &6815719833297973283
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10106
+  title: 10106
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10106
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 185
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &6959670025149417345
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3260,18 +5375,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
-    value: 20026
+    value: 20025
   level: 25
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 25
+    health: 25
+    resource: 25
+--- !u!114 &7419684207783315249
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10123
+  title: 10123
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10123
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 142
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &7427189725676400778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3298,18 +5451,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
-    value: 20027
+    value: 20026
   level: 20
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &7638315775081361980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3336,18 +5489,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 23
+    value: 183
   source:
     value: 20015
   level: 35
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 35
+    health: 35
+    resource: 35
 --- !u!114 &7697856569677621517
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3374,36 +5527,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
-    value: 20021
+    value: 20020
   level: 20
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &7777365869135470539
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 21
-  title: Head
-  nameKey:
-    value: INVENTORY/HEAD_EQUIP_TTL
-  equipGroup:
-    value: 11
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &7785800891378577920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3430,19 +5565,19 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 26
+    value: 186
   source:
     value: 20011
   level: 30
   type:
-    value: 43
+    value: 146
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
---- !u!114 &8195572707257725941
+    power: 30
+    health: 30
+    resource: 30
+--- !u!114 &8229471332804516462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3451,17 +5586,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd6dd5ed4a5c9243937b499c97bb21b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 11
-  title: Armor
+  id: 10136
+  title: 10136
+  size:
+    width: 1
+    height: 1
   nameKey:
-    value: INVENTORY/ARMOR_GROUP_TTL
-  types:
-  - {fileID: 6238446329362543954}
-  - {fileID: -11673543929542161}
-  - {fileID: -4450523110700388368}
+    value: EQUIPS/10136
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 144
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &8516279873877236565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3528,18 +5681,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 24
+    value: 184
   source:
-    value: 20028
+    value: 20027
   level: 20
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
 --- !u!114 &8679672984712988871
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3566,18 +5719,56 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 22
+    value: 182
   source:
     value: 20016
   level: 40
   type:
-    value: 32
+    value: 142
   rarity:
-    value: 52
+    value: 122
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 40
+    health: 40
+    resource: 40
+--- !u!114 &8768025246458969749
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10088
+  title: 10088
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10088
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 182
+  source:
+    value: 20001
+  level: 10
+  type:
+    value: 141
+  rarity:
+    value: 121
+  characterParams:
+    power: 10
+    health: 10
+    resource: 10
 --- !u!114 &8781013962483808008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3604,18 +5795,18 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
     value: 20012
   level: 30
   type:
-    value: 33
+    value: 143
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 30
+    health: 30
+    resource: 30
 --- !u!114 &9111820585827621426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3642,15 +5833,130 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   slot:
-    value: 21
+    value: 181
   source:
-    value: 20027
+    value: 20026
   level: 20
   type:
-    value: 31
+    value: 141
   rarity:
-    value: 51
+    value: 121
   characterParams:
-    power: 1
-    health: 1
-    resource: 1
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &9113102958087313022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd6dd5ed4a5c9243937b499c97bb21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 112
+  title: Weapon
+  nameKey:
+    value: INVENTORY/WEAPON_GROUP_TTL
+  types:
+  - {fileID: -1029915359850127392}
+  - {fileID: 6661488557336679770}
+  - {fileID: -8935944566364473840}
+  - {fileID: 5015050402526860843}
+--- !u!114 &9144019996957310207
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10139
+  title: 10139
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10139
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 186
+  source:
+    value: 20010
+  level: 20
+  type:
+    value: 147
+  rarity:
+    value: 121
+  characterParams:
+    power: 20
+    health: 20
+    resource: 20
+--- !u!114 &9180415984051115598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f97106654b37f44b90700f82ccdd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 181
+  title: Head
+  nameKey:
+    value: INVENTORY/HEAD_EQUIP_TTL
+  equipGroup:
+    value: 111
+--- !u!114 &9192822233424299849
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72ca2137aef8643948d8ad0ba28bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10127
+  title: 10127
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: EQUIPS/10127
+  iconRef:
+    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  slot:
+    value: 181
+  source:
+    value: 20010
+  level: 30
+  type:
+    value: 143
+  rarity:
+    value: 121
+  characterParams:
+    power: 30
+    health: 30
+    resource: 30

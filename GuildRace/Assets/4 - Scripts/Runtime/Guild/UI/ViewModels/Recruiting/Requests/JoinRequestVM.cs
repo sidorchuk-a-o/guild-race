@@ -10,11 +10,14 @@ namespace Game.Guild
 
         public CharacterVM CharacterVM { get; }
 
-        public JoinRequestVM(JoinRequestInfo info, GuildVMFactory guildVMF, InventoryVMFactory inventoryVMF)
+        public JoinRequestVM(
+            JoinRequestInfo info,
+            GuildVMFactory guildVMF,
+            InventoryVMFactory inventoryVMF)
         {
             Id = info.Id;
             IsDefault = info.IsDefault;
-            CharacterVM = new CharacterVM(info.Character, guildVMF, inventoryVMF);
+            CharacterVM = new CharacterVM(info.Character, guildVMF, inventoryVMF, null);
         }
 
         protected override void InitSubscribes()

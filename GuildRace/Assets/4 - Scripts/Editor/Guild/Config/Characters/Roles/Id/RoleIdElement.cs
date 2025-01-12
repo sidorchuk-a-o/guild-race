@@ -4,9 +4,9 @@ using System;
 namespace Game.Guild
 {
     [KeyElement(typeof(RoleId))]
-    public class RoleIdElement : KeyElement<string>
+    public class RoleIdElement : KeyElement<int>
     {
-        protected override Func<Collection<string>> GetCollection
+        protected override Func<Collection<int>> GetCollection
         {
             get => GuildEditorState.CreateRolesViewCollection;
         }

@@ -11,6 +11,7 @@ namespace Game.Guild
         private readonly ReactiveProperty<GuildRankId> guildRankId = new();
         private readonly ReactiveProperty<SpecializationId> specId = new();
         private readonly ReactiveProperty<int> itemsLevel = new();
+        private readonly ReactiveProperty<string> instanceId = new();
 
         private readonly ItemSlotsCollection equipSlots;
 
@@ -24,6 +25,9 @@ namespace Game.Guild
 
         public IReadOnlyReactiveProperty<int> ItemsLevel => itemsLevel;
         public IItemSlotsCollection EquipSlots => equipSlots;
+
+        public bool HasInstance => instanceId.Value.IsValid();
+        public IReadOnlyReactiveProperty<string> InstanceId => instanceId;
 
         public CharacterInfo(string id, string nickname, ClassId classId, IEnumerable<EquipSlotInfo> equipSlots)
         {
@@ -52,6 +56,11 @@ namespace Game.Guild
         public void SetGuildRank(GuildRankId value)
         {
             guildRankId.Value = value;
+        }
+
+        public void SetInstanceId(string value)
+        {
+            instanceId.Value = value;
         }
 
         private void UpdateItemsLevel()

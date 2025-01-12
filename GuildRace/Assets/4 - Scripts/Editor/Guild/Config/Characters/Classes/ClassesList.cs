@@ -6,9 +6,10 @@ namespace Game.Guild
     {
         public override void BindData(SerializedData data)
         {
-            wizardType = typeof(ClassCreateWizard);
+            wizardType = typeof(ClassImportWizard);
 
             showCloneButton = false;
+            showRemoveButton = false;
 
             base.BindData(data);
         }

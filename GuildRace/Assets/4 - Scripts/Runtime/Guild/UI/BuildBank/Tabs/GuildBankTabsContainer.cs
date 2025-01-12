@@ -58,7 +58,7 @@ namespace Game.Guild
 
         private void UpdateCurrentTabView()
         {
-            currentTabVM ??= tabsVM[0];
+            currentTabVM ??= tabsVM[tabs[0].CellType];
             currentTabVM.SetSelectState(true);
 
             gridContainer.Init(currentTabVM.GridVM, disp);

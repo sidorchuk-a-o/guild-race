@@ -11,6 +11,7 @@
         "EasySave3",
         "OSA.Core",
         "ACTk.Runtime",
+        "AstarPathfindingProject",
         "Unity.InputSystem",
         "Unity.Addressables",
         "Unity.TextMeshPro",

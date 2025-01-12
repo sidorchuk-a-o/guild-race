@@ -1,0 +1,1342 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9017412359138805976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1017
+  title: "\u041F\u0440\u0438\u0437\u044B\u0432 \u0438\u0437 \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+  nameKey:
+    value: ABILITIES/ABILITY_1017_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1017_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-8764740460794827738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20011
+  title: "\u0411\u0443\u0440\u0435\u043A"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20011_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20011_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -994596056938201725}
+  - {fileID: -1394303912816611489}
+--- !u!114 &-8463737379030873147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20028
+  title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+    \u0424\u0435\u043D\u0438\u0442"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20028_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20028_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: 6832601459202208957}
+--- !u!114 &-8399120171220073973
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1015
+  title: "\u041A\u0443\u043F\u0435\u043B\u044C \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u043A\u043E\u0432"
+  nameKey:
+    value: ABILITIES/ABILITY_1015_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1015_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-8066860899731964247
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1012
+  title: "2. \u0422\u0435\u043C\u043D\u044B\u0439 \u043E\u0431\u0435\u043B\u0438\u0441\u043A"
+  nameKey:
+    value: ABILITIES/ABILITY_1012_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1012_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-7995946185557049400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1021
+  title: "\u0414\u0438\u043A\u0430\u044F \u043B\u0438\u0430\u043D\u0430"
+  nameKey:
+    value: ABILITIES/ABILITY_1021_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1021_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-6817629990367587574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20027
+  title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20027_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20027_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -246572903842778920}
+--- !u!114 &-6234201196874151812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1018
+  title: "\u0422\u043E\u0442\u0435\u043C \u0445\u0432\u0430\u0442\u043A\u0438"
+  nameKey:
+    value: ABILITIES/ABILITY_1018_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1018_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-5493536620309919282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20017
+  title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+  nameKey:
+    value: 
+  descKey:
+    value: 
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: 6270116825951526421}
+--- !u!114 &-5235721762853683676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20019
+  title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20019_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20019_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -8399120171220073973}
+--- !u!114 &-4170858758287194157
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1016
+  title: "\u0420\u044B\u043A \u0438 \u0442\u043E\u043F\u043E\u0442"
+  nameKey:
+    value: ABILITIES/ABILITY_1016_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1016_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-4062295242015255834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 304
+  title: "\u0412\u044B\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043A\u0443\u0437\u043D\u044F"
+  type:
+    value: 251
+  nameKey:
+    value: INSTANCES/INSTANCE_304_TTL
+  descKey:
+    value: 
+  mapRef:
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  boosUnits:
+  - {fileID: -2276837553481969826}
+  - {fileID: -6817629990367587574}
+  - {fileID: -8463737379030873147}
+  trashUnits: []
+--- !u!114 &-3995241848682968268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1011
+  title: "1. \u041F\u0440\u0438\u0437\u044B\u0432 \u0432\u0437\u0440\u044B\u0432\u043E\u0431\u043E\u0442\u0430"
+  nameKey:
+    value: ABILITIES/ABILITY_1011_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1011_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-3306835461563961595
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20025
+  title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20025_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20025_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -7995946185557049400}
+--- !u!114 &-3232594601914623554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1006
+  title: "2. \u041F\u0440\u0438\u043A\u0440\u0435\u043F\u0438\u0442\u044C \"\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u0435\u043A\""
+  nameKey:
+    value: ABILITIES/ABILITY_1006_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1006_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-2705219886538243093
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1003
+  title: "1. \u041F\u043E\u0438\u043C\u043A\u0430 \u043D\u0430\u0440\u0443\u0448\u0438\u0442\u0435\u043B\u0435\u0439"
+  nameKey:
+    value: ABILITIES/ABILITY_1003_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1003_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-2451450757037362544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1019
+  title: "\u0423\u0434\u0430\u0440 \u0438\u0437 \u0442\u0435\u043D\u0438"
+  nameKey:
+    value: ABILITIES/ABILITY_1019_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1019_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-2276837553481969826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20026
+  title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20026_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20026_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -1830490506216973420}
+--- !u!114 &-1830490506216973420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1022
+  title: "\u041F\u0440\u0438\u0437\u044B\u0432: \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E
+    \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+  nameKey:
+    value: ABILITIES/ABILITY_1022_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1022_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-1394303912816611489
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1002
+  title: "2. \u0423\u0434\u0430\u0440 \u0433\u0440\u043E\u0437\u043E\u0432\u043E\u0439
+    \u043F\u043B\u0435\u0442\u044C\u044E"
+  nameKey:
+    value: ABILITIES/ABILITY_1002_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1002_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-1055109466483382171
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1008
+  title: "2. \u0428\u0438\u043F\u0430\u0441\u0442\u043E\u0435 \u043B\u0430\u0441\u0441\u043E"
+  nameKey:
+    value: ABILITIES/ABILITY_1008_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1008_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-994596056938201725
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1001
+  title: "1. \u0421\u043E\u0437\u0434\u0430\u0442\u044C \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A"
+  nameKey:
+    value: ABILITIES/ABILITY_1001_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1001_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-940734721021695946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1009
+  title: "1. \u0421\u0432\u044F\u0437\u0443\u044E\u0449\u0430\u044F \u0441\u0442\u0440\u0435\u043B\u0430"
+  nameKey:
+    value: ABILITIES/ABILITY_1009_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1009_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-639089928592747097
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1004
+  title: "2. \u0420\u0430\u0437\u043C\u0430\u0448\u0438\u0441\u0442\u044B\u0439 \u0443\u0434\u0430\u0440"
+  nameKey:
+    value: ABILITIES/ABILITY_1004_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1004_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &-246572903842778920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1023
+  title: "\u0411\u0440\u043E\u0441\u043E\u043A \u0443\u0433\u043B\u0435\u0439 \u0438\u0437
+    \u043A\u0443\u0437\u043D\u0438"
+  nameKey:
+    value: ABILITIES/ABILITY_1023_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1023_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39878800ca968844e96a9e5747681377, type: 3}
+  m_Name: InstancesConfig
+  m_EditorClassIdentifier: 
+  seasons:
+  - {fileID: 1624386071120413150}
+  instanceTypes:
+  - id: 251
+    title: Dungeon
+    nameKey:
+      value: INSTANCES/INSTANCE_DUNGEON_TTL
+  - id: 252
+    title: Raid
+    nameKey:
+      value: INSTANCES/INSTANCE_RAID_TTL
+  squadParams:
+    bag: {fileID: 3341094923558873629}
+    squads:
+    - instanceType:
+        value: 251
+      roles:
+      - role:
+          value: 501
+        maxUnitsCount: 2
+      - role:
+          value: 502
+        maxUnitsCount: 1
+      - role:
+          value: 503
+        maxUnitsCount: 1
+      maxUnitsCount: 4
+    - instanceType:
+        value: 252
+      roles:
+      - role:
+          value: 501
+        maxUnitsCount: 5
+      - role:
+          value: 502
+        maxUnitsCount: 4
+      - role:
+          value: 503
+        maxUnitsCount: 3
+      maxUnitsCount: 8
+--- !u!114 &656443804852022631
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20013
+  title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20013_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20013_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: 3914375014585952450}
+  - {fileID: -3232594601914623554}
+--- !u!114 &1058380421933136497
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20018
+  title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20018_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20018_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: 5826487545976228742}
+--- !u!114 &1529957877096102003
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20014
+  title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20014_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20014_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: 5920314164074615136}
+  - {fileID: -1055109466483382171}
+--- !u!114 &1624386071120413150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2874b0e8a5f5af949a2d9b571d8be4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11
+  title: Season 1
+  nameKey:
+    value: INSTANCES/SEASON_1_TTL
+  instances:
+  - {fileID: 2768101852309104497}
+  - {fileID: 2506231177554234613}
+  - {fileID: 8670504497906546672}
+  - {fileID: -4062295242015255834}
+  - {fileID: 5775344422896784859}
+--- !u!114 &2506231177554234613
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 302
+  title: "\u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u044B\u0439 \u0433\u0440\u043E\u0442"
+  type:
+    value: 251
+  nameKey:
+    value: INSTANCES/INSTANCE_302_TTL
+  descKey:
+    value: 
+  mapRef:
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  boosUnits:
+  - {fileID: 9087908372515839852}
+  - {fileID: 5591080354931211738}
+  - {fileID: 6337698615535423822}
+  trashUnits: []
+--- !u!114 &2585528470604347719
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20016
+  title: "\u041D\u0430\u0430\u043B"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20016_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20016_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -3995241848682968268}
+  - {fileID: -8066860899731964247}
+--- !u!114 &2768101852309104497
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 301
+  title: "\u041A\u0440\u0435\u043F\u043E\u0441\u0442\u044C \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+  type:
+    value: 251
+  nameKey:
+    value: INSTANCES/INSTANCE_301_TTL
+  descKey:
+    value: 
+  mapRef:
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  boosUnits:
+  - {fileID: -5493536620309919282}
+  - {fileID: 1058380421933136497}
+  - {fileID: -5235721762853683676}
+  trashUnits: []
+--- !u!114 &3341094923558873629
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85120383392bd9248819ee0fc8ea75a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 511507390
+  title: 
+  rowSize: 6
+  rowCount: 3
+  category:
+    value: 203
+  cellType:
+    value: 214
+--- !u!114 &3914375014585952450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1005
+  title: "1. \u0412\u0437\u0440\u044B\u0432\u043D\u044B\u0435 \u043B\u043E\u0432\u0443\u0448\u043A\u0438"
+  nameKey:
+    value: ABILITIES/ABILITY_1005_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1005_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &4023610351170042578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20015
+  title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+    \u0417\u0430\u0432\u0435\u0442\u0430"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20015_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20015_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -940734721021695946}
+  - {fileID: 5136623673967633251}
+--- !u!114 &4548264943697822237
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20023
+  title: "\u0413\u0430'\u0420\u0430\u0442"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20023_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20023_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -2451450757037362544}
+--- !u!114 &5136623673967633251
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1010
+  title: "2. \u0413\u0440\u0430\u0434 \u0441\u0442\u0440\u0435\u043B"
+  nameKey:
+    value: ABILITIES/ABILITY_1010_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1010_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &5591080354931211738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20021
+  title: "\u0410\u0440\u0438\u043C"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20021_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20021_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -9017412359138805976}
+--- !u!114 &5775344422896784859
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 305
+  title: "\u0425\u0440\u0430\u043C \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+  type:
+    value: 252
+  nameKey:
+    value: INSTANCES/INSTANCE_305_TTL
+  descKey:
+    value: 
+  mapRef:
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  boosUnits:
+  - {fileID: -8764740460794827738}
+  - {fileID: 8440570006751686523}
+  - {fileID: 656443804852022631}
+  - {fileID: 1529957877096102003}
+  - {fileID: 4023610351170042578}
+  - {fileID: 2585528470604347719}
+  trashUnits: []
+--- !u!114 &5826487545976228742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1014
+  title: "\u041F\u0440\u0438\u0437\u044B\u0432: \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E
+    \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+  nameKey:
+    value: ABILITIES/ABILITY_1014_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1014_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &5920314164074615136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1007
+  title: "1. \u041A \u0431\u043E\u044E!"
+  nameKey:
+    value: ABILITIES/ABILITY_1007_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1007_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &6270116825951526421
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1013
+  title: "\u0423\u0434\u0430\u0440 \u0434\u0443\u0431\u0438\u043D\u043E\u0439"
+  nameKey:
+    value: ABILITIES/ABILITY_1013_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1013_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &6337698615535423822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20022
+  title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20022_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20022_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -6234201196874151812}
+--- !u!114 &6688116476916530650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1020
+  title: "\u0412\u0440\u0435\u043C\u044F \u043E\u0445\u043E\u0442\u044B"
+  nameKey:
+    value: ABILITIES/ABILITY_1020_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1020_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &6832601459202208957
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2711ac4f80ef34d8e8fb316c4d94e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1024
+  title: "\u0415\u0434\u0438\u043D\u044B\u043C \u0446\u0435\u043B\u044B\u043C \u0441
+    \u043A\u0443\u0437\u043D\u0435\u0439"
+  nameKey:
+    value: ABILITIES/ABILITY_1024_TTL
+  descKey:
+    value: ABILITIES/ABILITY_1024_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &7268032314370676034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20024
+  title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20024_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20024_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: 6688116476916530650}
+--- !u!114 &8440570006751686523
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20012
+  title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20012_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20012_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -2705219886538243093}
+  - {fileID: -639089928592747097}
+--- !u!114 &8670504497906546672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc398eba439a5c488b0823fa6756d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 303
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
+    \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442"
+  type:
+    value: 251
+  nameKey:
+    value: INSTANCES/INSTANCE_303_TTL
+  descKey:
+    value: <none>
+  mapRef:
+    m_AssetGUID: 5256563037a612b48a1ab42af1092472
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  uiRef:
+    m_AssetGUID: 624506479edbf904ea026cbbb4ad0d7b
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  boosUnits:
+  - {fileID: 4548264943697822237}
+  - {fileID: 7268032314370676034}
+  - {fileID: -3306835461563961595}
+  trashUnits: []
+--- !u!114 &9087908372515839852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0921d6b36ebc364ababcd59d03e373a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20020
+  title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+  nameKey:
+    value: INSTANCES/INSTANCE_UNIT_20020_TTL
+  descKey:
+    value: INSTANCES/INSTANCE_UNIT_20020_DSC
+  imageRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  abilities:
+  - {fileID: -4170858758287194157}
