@@ -10,6 +10,8 @@ namespace Game.Inventory
         public override string SheetName => "equips";
         public override string SheetRange => "A:T";
 
+        public override string NameLocalizeKey => IdKey;
+
         protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
         {
             base.UpdateData(data, row);

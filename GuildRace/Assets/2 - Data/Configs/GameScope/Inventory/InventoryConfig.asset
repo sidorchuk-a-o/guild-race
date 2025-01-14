@@ -3070,12 +3070,6 @@ MonoBehaviour:
       cellTypes:
       - value: 211
       - value: 212
-  reagentsParams:
-    items: []
-    slots: []
-    gridParams:
-      categories: []
-      cellTypes: []
   consumablesParams:
     items: []
     slots: []

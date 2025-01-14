@@ -11,7 +11,7 @@ namespace Game.Inventory
             var equipData = data as EquipItemData;
             var equip = new EquipItemInfo(id, equipData);
 
-            equip.SetGridParams(Config.EquipsParams.GridParams);
+            equip.SetGridParams(InventoryConfig.EquipsParams.GridParams);
 
             return equip;
         }
@@ -28,7 +28,7 @@ namespace Game.Inventory
 
             var equip = equipSave.GetValue(equipData);
 
-            equip.SetGridParams(Config.EquipsParams.GridParams);
+            equip.SetGridParams(InventoryConfig.EquipsParams.GridParams);
 
             return equip;
         }

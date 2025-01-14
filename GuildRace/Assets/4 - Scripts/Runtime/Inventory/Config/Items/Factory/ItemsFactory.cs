@@ -7,13 +7,13 @@ namespace Game.Inventory
     {
         public abstract Type DataType { get; }
 
-        protected InventoryState State { get; private set; }
-        protected InventoryConfig Config { get; private set; }
+        protected InventoryState InventoryState { get; private set; }
+        protected InventoryConfig InventoryConfig { get; private set; }
 
         public void Init(InventoryState state, InventoryConfig config)
         {
-            State = state;
-            Config = config;
+            InventoryState = state;
+            InventoryConfig = config;
         }
 
         // == Info ==
@@ -23,7 +23,7 @@ namespace Game.Inventory
             var id = GuidUtils.Generate();
             var info = CreateInfo(id, data);
 
-            State.AddItem(info);
+            InventoryState.AddItem(info);
 
             return info;
         }
@@ -36,10 +36,10 @@ namespace Game.Inventory
 
         public ItemInfo ReadSave(ItemSM save)
         {
-            var data = Config.GetItem(save.DataId);
+            var data = InventoryConfig.GetItem(save.DataId);
             var info = ReadSave(data, save);
 
-            State.AddItem(info);
+            InventoryState.AddItem(info);
 
             return info;
         }

@@ -11,12 +11,13 @@ namespace Game.Inventory
     {
         public override string IdKey => "Id";
         public override string TitleKey => "Id";
+        public abstract string NameLocalizeKey { get; }
 
         protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
         {
             base.UpdateData(data, row);
 
-            var localizeKey = row[IdKey].LocalizeKeyParse();
+            var localizeKey = row[NameLocalizeKey].LocalizeKeyParse();
             var slot = new ItemSlot(row["eq_slot_id"].IntParse());
             var source = new ItemSource(row["source_id"].IntParse());
             var iconRef = row["icon_name"].AddressableFileParse();

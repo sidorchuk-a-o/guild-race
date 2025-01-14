@@ -23,7 +23,7 @@ namespace Game.Instances
         private void CreateParamsTab(VisualElement root, SerializedData data)
         {
             tempCompeteTimeField = root.CreateProperty();
-            tempCompeteTimeField.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            tempCompeteTimeField.FlexWidth(33).MarginRight(10);
             tempCompeteTimeField.BindProperty("tempCompeteTime", GetData(data));
         }
     }

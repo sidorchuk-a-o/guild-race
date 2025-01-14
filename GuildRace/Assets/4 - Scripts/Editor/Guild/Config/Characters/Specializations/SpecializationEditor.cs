@@ -11,19 +11,19 @@ namespace Game.Guild
         private PropertyElement roleIdField;
         private PropertyElement subRoleIdField;
 
-        protected override void CreateEditorGUI(VisualElement root)
+        protected override void CreateSimpleContentGUI(VisualElement root)
         {
-            base.CreateEditorGUI(root);
+            base.CreateSimpleContentGUI(root);
 
-            contentContainer.CreateHeader("Common");
+            root.CreateHeader("Common");
 
-            nameKeyField = contentContainer.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
+            nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
 
-            contentContainer.CreateHeader("Role");
+            root.CreateHeader("Role");
 
-            roleIdField = contentContainer.CreateProperty();
-            subRoleIdField = contentContainer.CreateProperty();
+            roleIdField = root.CreateProperty();
+            subRoleIdField = root.CreateProperty();
         }
 
         public override void BindData(SerializedData data)

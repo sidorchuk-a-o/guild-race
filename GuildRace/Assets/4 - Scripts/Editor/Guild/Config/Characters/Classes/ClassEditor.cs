@@ -12,23 +12,23 @@ namespace Game.Guild
         private PropertyElement weaponTypeField;
         private SpecializationsList specsList;
 
-        protected override void CreateEditorGUI(VisualElement root)
+        protected override void CreateSimpleContentGUI(VisualElement root)
         {
-            base.CreateEditorGUI(root);
+            base.CreateSimpleContentGUI(root);
 
-            contentContainer.CreateHeader("Common");
+            root.CreateHeader("Common");
 
-            nameKeyField = contentContainer.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
+            nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
 
-            contentContainer.CreateHeader("Equips");
+            root.CreateHeader("Equips");
 
-            armorTypeField = contentContainer.CreateProperty();
-            weaponTypeField = contentContainer.CreateProperty();
+            armorTypeField = root.CreateProperty();
+            weaponTypeField = root.CreateProperty();
 
-            contentContainer.CreateHeader("Specs");
+            root.CreateHeader("Specs");
 
-            specsList = contentContainer.CreateElement<SpecializationsList>();
+            specsList = root.CreateElement<SpecializationsList>();
         }
 
         public override void BindData(SerializedData data)

@@ -9,11 +9,11 @@ namespace Game.Guild
     {
         private LocalizeKeyElement nameKeyField;
 
-        protected override void CreateEditorGUI(VisualElement root)
+        protected override void CreateSimpleContentGUI(VisualElement root)
         {
-            base.CreateEditorGUI(root);
+            base.CreateSimpleContentGUI(root);
 
-            nameKeyField = contentContainer.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
+            nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.previewOn = true;
         }
 

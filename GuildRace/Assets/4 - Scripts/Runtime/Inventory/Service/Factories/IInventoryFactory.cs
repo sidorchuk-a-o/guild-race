@@ -4,7 +4,9 @@ namespace Game.Inventory
 {
     public interface IInventoryFactory
     {
+        ItemInfo CreateItem(int dataId);
         ItemInfo CreateItem(ItemData data);
+        ItemInfo RemoveItem(string itemId);
         ItemSM CreateItemSave(ItemInfo info);
         ItemInfo ReadItemSave(ItemSM save);
 

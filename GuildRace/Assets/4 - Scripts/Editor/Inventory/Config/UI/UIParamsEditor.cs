@@ -35,29 +35,29 @@ namespace Game.Inventory
             pickupHandlersList = root.CreateElement<PickupHandlersList>();
             pickupHandlersList.headerTitle = "Pickup Handlers";
             pickupHandlersList.BindProperty("pickupHandlers", GetData(data));
-            pickupHandlersList.FlexGrow(1).MaxWidth(25, LengthUnit.Percent).MarginRight(10);
+            pickupHandlersList.FlexWidth(25).MarginRight(10);
 
             placeHandlersList = root.CreateElement<ReleaseHandlersList>();
             placeHandlersList.headerTitle = "Place Handlers";
             placeHandlersList.BindProperty("placeHandlers", GetData(data));
-            placeHandlersList.FlexGrow(1).MaxWidth(25, LengthUnit.Percent).MarginRight(10);
+            placeHandlersList.FlexWidth(25).MarginRight(10);
 
             splitHandlersList = root.CreateElement<ReleaseHandlersList>();
             splitHandlersList.headerTitle = "Split Handlers";
             splitHandlersList.BindProperty("splitHandlers", GetData(data));
-            splitHandlersList.FlexGrow(1).MaxWidth(25, LengthUnit.Percent).MarginRight(10);
+            splitHandlersList.FlexWidth(25).MarginRight(10);
 
             rollbackHandlersList = root.CreateElement<ReleaseHandlersList>();
             rollbackHandlersList.headerTitle = "Rollback Handlers";
             rollbackHandlersList.BindProperty("rollbackHandlers", GetData(data));
-            rollbackHandlersList.FlexGrow(1).MaxWidth(25, LengthUnit.Percent);
+            rollbackHandlersList.FlexWidth(25);
         }
 
         private void CreateOptionsTab(VisualElement root, SerializedData data)
         {
             optionHandlersList = root.CreateElement<OptionHandlersList>();
             optionHandlersList.BindProperty("optionHandlers", GetData(data));
-            optionHandlersList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            optionHandlersList.FlexWidth(33).MarginRight(10);
         }
 
         private void CreateGridTab(VisualElement root, SerializedData data)

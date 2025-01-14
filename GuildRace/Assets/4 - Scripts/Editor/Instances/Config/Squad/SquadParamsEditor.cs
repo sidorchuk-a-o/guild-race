@@ -27,11 +27,11 @@ namespace Game.Instances
             root.ConvertToRow();
 
             squadsList = root.CreateElement<SquadsList>();
-            squadsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            squadsList.FlexWidth(33).MarginRight(10);
             squadsList.BindProperty("squads", GetData(data));
 
             bagEditor = root.CreateElement<ItemsGridElement>();
-            bagEditor.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            bagEditor.FlexWidth(33).MarginRight(10);
             bagEditor.BindProperty("bag", GetData(data));
             bagEditor.label = "Squad Bag Params";
         }

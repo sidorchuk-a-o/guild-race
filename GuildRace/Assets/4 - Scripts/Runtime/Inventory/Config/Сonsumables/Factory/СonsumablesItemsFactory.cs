@@ -11,7 +11,7 @@ namespace Game.Inventory
             var consumablesData = data as СonsumablesItemData;
             var consumables = new СonsumablesItemInfo(id, consumablesData);
 
-            consumables.SetGridParams(Config.ConsumablesParams.GridParams);
+            consumables.SetGridParams(InventoryConfig.ConsumablesParams.GridParams);
 
             return consumables;
         }
@@ -28,7 +28,7 @@ namespace Game.Inventory
 
             var consumables = consumablesSave.GetValue(consumablesData);
 
-            consumables.SetGridParams(Config.ConsumablesParams.GridParams);
+            consumables.SetGridParams(InventoryConfig.ConsumablesParams.GridParams);
 
             return consumables;
         }

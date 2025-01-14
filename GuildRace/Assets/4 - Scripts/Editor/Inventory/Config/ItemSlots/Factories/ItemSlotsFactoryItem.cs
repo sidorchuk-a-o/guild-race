@@ -25,7 +25,7 @@ namespace Game.Inventory
             base.BindData(data);
 
             typeNameLabel.text = data.DataType.Name
-                .Replace("Factory", "")
+                .Clear("Factory")
                 .SplitByUpper();
         }
     }

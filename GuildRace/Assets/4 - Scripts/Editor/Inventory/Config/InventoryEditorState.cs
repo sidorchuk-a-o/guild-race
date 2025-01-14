@@ -192,5 +192,29 @@ namespace Game.Inventory
                 .Select(x => x.GetType())
                 .ToList();
         }
+
+        public static Collection<int> GetAllItemsCollection()
+        {
+            var items = Config.GetValue<List<ItemData>>("items");
+            var itemsGroups = items.GroupBy(x => x.GetType().Name);
+
+            var values = new List<int>();
+            var options = new List<string>();
+
+            foreach (var group in itemsGroups)
+            {
+                var groupName = group.Key.Clear("Item", "Data");
+
+                foreach (var item in group)
+                {
+                    var option = $"{groupName}/{item.Title}";
+
+                    values.Add(item.Id);
+                    options.Add(option);
+                }
+            }
+
+            return new Collection<int>(values, options, autoSort: false);
+        }
     }
 }
