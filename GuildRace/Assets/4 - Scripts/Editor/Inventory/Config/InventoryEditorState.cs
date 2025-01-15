@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Callbacks;
 
 namespace Game.Inventory
 {
@@ -44,25 +43,6 @@ namespace Game.Inventory
 
             DataFactory.OnDataRemove -= DataFactory_OnDataRemove;
             DataFactory.OnDataRemove += DataFactory_OnDataRemove;
-
-            SaveEditorUtils.OnStartSavePropcess -= UpdateScriptFiles;
-            SaveEditorUtils.OnStartSavePropcess += UpdateScriptFiles;
-        }
-
-        [DidReloadScripts]
-        private static void CheckScriptFiles()
-        {
-            if (Config == null)
-            {
-                return;
-            }
-
-            KeyScriptFileUtils.CheckScriptFile(GetOptionKeyScriptData());
-        }
-
-        private static void UpdateScriptFiles()
-        {
-            KeyScriptFileUtils.UpdateScriptFile(GetOptionKeyScriptData());
         }
 
         // == Cache ==
@@ -167,13 +147,6 @@ namespace Game.Inventory
 
             return new(keysDict.Values, keysDict.Keys, autoSort: false);
         }
-
-        private static KeyScriptData<string> GetOptionKeyScriptData() => new()
-        {
-            keyTypeName = nameof(OptionKey),
-            namespaceValue = "Game.Inventory",
-            getCollection = CreateOptionsCollection
-        };
 
         public static Collection<string> CreateOptionsCollection()
         {
