@@ -1,7 +1,6 @@
 ﻿using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
-using Game.Guild;
 using Game.Inventory;
 using System.Threading;
 using UniRx;
@@ -21,7 +20,7 @@ namespace Game.Craft
 
         private readonly ReactiveProperty<bool> isAvailable = new();
 
-        private GuildVMFactory guildVMF;
+        private CraftVMFactory craftVMF;
 
         private IngredientVM ingredientVM;
         private ItemCounterVM reagentCounterVM;
@@ -30,9 +29,9 @@ namespace Game.Craft
         public IReadOnlyReactiveProperty<bool> IsAvailable => isAvailable;
 
         [Inject]
-        public void Inject(GuildVMFactory guildVMF)
+        public void Inject(CraftVMFactory craftVMF)
         {
-            this.guildVMF = guildVMF;
+            this.craftVMF = craftVMF;
         }
 
         public async UniTask Init(
@@ -54,11 +53,11 @@ namespace Game.Craft
             iconImage.sprite = sprite;
 
             // reagent
-            reagentCounterVM = guildVMF.GetReagentItemCounter(ingredientVM.ReagentVM.Id);
+            reagentCounterVM = craftVMF.GetReagentItemCounter(ingredientVM.ReagentVM.Id);
             reagentCounterVM.AddTo(disp);
 
             reagentCounterVM.Count
-                .Subscribe(UpdateAvailableState)
+                .SilentSubscribe(UpdateView)
                 .AddTo(disp);
 
             // count
@@ -69,6 +68,11 @@ namespace Game.Craft
         {
             ingridientsCount = ingredientVM.Count * count;
 
+            UpdateView();
+        }
+
+        private void UpdateView()
+        {
             UpdateAvailableState();
             UpdateCountText();
         }

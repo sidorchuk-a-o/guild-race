@@ -63,7 +63,7 @@ namespace Game.Craft
             recipeDisp.Clear();
             recipeDisp.AddTo(disp);
 
-            var hasRecipe = recipeVM == null;
+            var hasRecipe = recipeVM != null;
             var token = new CancellationTokenSource();
 
             recipeToken?.Cancel();

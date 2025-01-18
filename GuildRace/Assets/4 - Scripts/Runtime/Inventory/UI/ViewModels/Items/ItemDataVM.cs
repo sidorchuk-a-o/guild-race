@@ -19,6 +19,9 @@ namespace Game.Inventory
         {
             this.data = data;
             this.inventoryVMF = inventoryVMF;
+
+            Id = data.Id;
+            NameKey = data.NameKey;
         }
 
         protected override void InitSubscribes()

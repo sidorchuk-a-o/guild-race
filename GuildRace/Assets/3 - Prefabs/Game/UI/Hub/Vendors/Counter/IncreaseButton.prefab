@@ -459,10 +459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 3608563379183825175}
-  autoLocalize: 1
+  autoLocalize: 0
   termMod: 0
   localizeKey:
-    value: INSTANCES/COMPLETE_INSTANCE_BTN
+    value: 
 --- !u!1 &6476608118178746521
 GameObject:
   m_ObjectHideFlags: 0

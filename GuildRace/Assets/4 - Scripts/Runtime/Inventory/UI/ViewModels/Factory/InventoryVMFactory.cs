@@ -174,7 +174,7 @@ namespace Game.Inventory
 
         public bool TrySplitItem(SplittingItemArgs splittingArgs)
         {
-            return inventoryService.TrySplitItem(splittingArgs);
+            return inventoryService.TrySplitItem(splittingArgs, out _);
         }
 
         public bool TryTransferItem(TransferItemArgs transferArgs)

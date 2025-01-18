@@ -99,7 +99,14 @@ namespace Game.Craft
 
         private void SetRecipe(RecipeVM value)
         {
+            if (recipeVM.Value == value)
+            {
+                return;
+            }
+
+            recipeVM.Value?.SetSelectState(false);
             recipeVM.Value = value;
+            recipeVM.Value?.SetSelectState(true);
         }
     }
 }

@@ -110,13 +110,6 @@ namespace Game.Guild
             return new GuildBankTabsVM(guildService.BankTabs, InventoryVMF);
         }
 
-        public ItemCounterVM GetReagentItemCounter(int reagentId)
-        {
-            var bankGrids = guildService.BankTabs.Select(x => x.Grid);
-
-            return InventoryVMF.CreateItemCounter(reagentId, bankGrids);
-        }
-
         // == Common Methods ==
 
         public void CreateOrUpdateGuild(GuildEM guildEM)

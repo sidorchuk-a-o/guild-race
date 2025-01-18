@@ -91,7 +91,7 @@ namespace Game.Inventory
 
         private void AddCount(int value)
         {
-            count.Value = value;
+            count.Value += value;
         }
 
         void IDisposable.Dispose()

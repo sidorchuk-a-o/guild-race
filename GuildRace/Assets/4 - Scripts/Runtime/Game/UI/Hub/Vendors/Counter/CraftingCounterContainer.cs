@@ -29,13 +29,16 @@ namespace Game.Craft
 
         private void IncreaseCallback(int value)
         {
-            SetCount(value);
+            AddCount(value);
         }
 
-        private void SetCount(int value)
+        private void AddCount(int value)
         {
-            var newValue = count.Value + value;
+            SetCount(count.Value + value);
+        }
 
+        private void SetCount(int newValue)
+        {
             count.Value = Mathf.Clamp(newValue, 1, 500);
 
             countText.SetTextParams(count.Value);

@@ -808,8 +808,8 @@ MonoBehaviour:
         \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u043C\u043E\u0439
         \u0443\u0441\u0442\u0430\u043B\u043E\u0441\u0442\u0438 \u043D\u0430 25%"
       nameKey:
-        value: <none>
-      productItemId: 10011
+        value: 
+      productItemId: 0
       ingredients: []
     - id: 2056
       title: "\u0421\u0432\u0438\u0442\u043E\u043A \u043D\u0430 \u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0435

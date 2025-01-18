@@ -15,7 +15,7 @@ MonoBehaviour:
   id: fe7672797fe64ccba982f0669fab7f90
   title: Craft  Service
   enabled: 1
-  order: 0
+  order: 100
   configRef:
     m_AssetGUID: b373453171fbb5c4ab35f151583f9f55
     m_SubObjectName: 

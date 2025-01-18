@@ -6,7 +6,7 @@ namespace Game.Craft
     [JsonObject(MemberSerialization.Fields)]
     public class ReagentItemSM : ItemSM
     {
-        [ES3NonSerializable] private ItemStackSM stackSM;
+        [ES3Serializable] private ItemStackSM stackSM;
 
         public ReagentItemSM(ReagentItemInfo info) : base(info)
         {

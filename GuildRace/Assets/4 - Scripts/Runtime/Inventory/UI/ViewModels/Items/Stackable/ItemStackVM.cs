@@ -22,7 +22,7 @@ namespace Game.Inventory
         {
         }
 
-        public IObservable<StackChanged> ObserveValue()
+        public IObservable<StackChanged> ObserveChanged()
         {
             return info.ObserveChanged();
         }
