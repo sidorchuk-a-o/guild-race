@@ -11,7 +11,7 @@ using VContainer;
 
 namespace Game.Craft
 {
-    public class IngredientItem : MonoBehaviour
+    public class IngredientItemSlot : MonoBehaviour
     {
         [SerializeField] private Image iconImage;
         [Space]

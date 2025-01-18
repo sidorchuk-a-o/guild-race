@@ -1,6 +1,5 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Instances
 {
@@ -31,7 +30,7 @@ namespace Game.Instances
             base.SaveCallback();
         }
 
-        protected override void UpdateData(SerializedData seasonData, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData seasonData, IDataRow row)
         {
             base.UpdateData(seasonData, row);
 
@@ -59,7 +58,7 @@ namespace Game.Instances
             });
         }
 
-        private bool CheckInstanceEqual(SerializedData instanceData, IReadOnlyDictionary<string, string> row)
+        private bool CheckInstanceEqual(SerializedData instanceData, IDataRow row)
         {
             var dataId = instanceData.GetProperty("id").GetValue<int>();
             var rowId = row["Id"].IntParse();
@@ -67,7 +66,7 @@ namespace Game.Instances
             return Equals(dataId, rowId);
         }
 
-        private void UpdateInstanceData(SerializedData instanceData, IReadOnlyDictionary<string, string> row)
+        private void UpdateInstanceData(SerializedData instanceData, IDataRow row)
         {
             var id = row["Id"].IntParse();
             var title = row["Name"].ToUpperFirst();
@@ -99,7 +98,7 @@ namespace Game.Instances
             });
         }
 
-        private bool CheckBossUnitEqual(SerializedData unitData, IReadOnlyDictionary<string, string> row)
+        private bool CheckBossUnitEqual(SerializedData unitData, IDataRow row)
         {
             var dataId = unitData.GetProperty("id").GetValue<int>();
             var rowId = row["Id"].IntParse();
@@ -107,7 +106,7 @@ namespace Game.Instances
             return Equals(dataId, rowId);
         }
 
-        private void UpdateBoosUnitData(SerializedData unitData, IReadOnlyDictionary<string, string> row)
+        private void UpdateBoosUnitData(SerializedData unitData, IDataRow row)
         {
             var id = row["Id"].IntParse();
             var title = row["Unit Name"].ToUpperFirst();
@@ -139,7 +138,7 @@ namespace Game.Instances
             });
         }
 
-        private bool CheckAbilityEqual(SerializedData abilityData, IReadOnlyDictionary<string, string> row)
+        private bool CheckAbilityEqual(SerializedData abilityData, IDataRow row)
         {
             var dataId = abilityData.GetProperty("id").GetValue<int>();
             var rowId = row["Ability ID"].IntParse();
@@ -147,7 +146,7 @@ namespace Game.Instances
             return Equals(dataId, rowId);
         }
 
-        private void UpdateAbilityData(SerializedData abilityData, IReadOnlyDictionary<string, string> row)
+        private void UpdateAbilityData(SerializedData abilityData, IDataRow row)
         {
             var id = row["Ability ID"].IntParse();
             var title = row["Ability Name"].ToUpperFirst();

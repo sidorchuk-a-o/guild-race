@@ -1,7 +1,6 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
 using Game.Inventory;
-using System.Collections.Generic;
 
 namespace Game.Guild
 {
@@ -26,21 +25,25 @@ namespace Game.Guild
             base.SaveCallback();
         }
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData classData, IDataRow row)
         {
-            base.UpdateData(data, row);
+            base.UpdateData(classData, row);
 
             var nameKey = row["Class Name Loc Key"].LocalizeKeyParse();
             var descKey = row["Class Desc Loc Key"].LocalizeKeyParse();
             var armorType = new EquipType(row["Armortype ID"].IntParse());
             var weaponType = new EquipType(row["Weapontype ID"].IntParse());
 
-            data.GetProperty("nameKey").SetValue(nameKey);
-            data.GetProperty("descKey").SetValue(descKey);
-            data.GetProperty("armorType").SetValue(armorType);
-            data.GetProperty("weaponType").SetValue(weaponType);
+            classData.GetProperty("nameKey").SetValue(nameKey);
+            classData.GetProperty("descKey").SetValue(descKey);
+            classData.GetProperty("armorType").SetValue(armorType);
+            classData.GetProperty("weaponType").SetValue(weaponType);
 
-            // specs
+            ImportSpecs(classData);
+        }
+
+        private void ImportSpecs(SerializedData data)
+        {
             var id = data.GetProperty("id").GetValue<int>();
 
             var specsData = data.GetProperty("specs");
@@ -54,7 +57,7 @@ namespace Game.Guild
             });
         }
 
-        private bool CheckSpecEqual(SerializedData data, IReadOnlyDictionary<string, string> row)
+        private bool CheckSpecEqual(SerializedData data, IDataRow row)
         {
             var dataId = data.GetProperty("id").GetValue<int>();
             var rowId = row["Spec ID"].IntParse();
@@ -62,7 +65,7 @@ namespace Game.Guild
             return dataId == rowId;
         }
 
-        private void UpdateSpecData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        private void UpdateSpecData(SerializedData data, IDataRow row)
         {
             var id = row["Spec ID"].IntParse();
             var title = row["Spec"].ToUpperFirst();

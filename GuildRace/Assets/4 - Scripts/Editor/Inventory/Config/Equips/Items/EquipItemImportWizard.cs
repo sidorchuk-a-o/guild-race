@@ -1,5 +1,4 @@
 ﻿using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Inventory
 {
@@ -11,8 +10,9 @@ namespace Game.Inventory
         public override string SheetRange => "A:T";
 
         public override string NameLocalizeKey => IdKey;
+        public override string SlotKey => "eq_slot_id";
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 

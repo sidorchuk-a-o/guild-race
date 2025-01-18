@@ -6,8 +6,6 @@ namespace Game.Craft
     {
         public override void BindData(SerializedData data)
         {
-            headerTitle = "Ingredients";
-
             showAddButton = false;
             showCloneButton = false;
             showRemoveButton = false;

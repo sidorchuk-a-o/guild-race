@@ -1,6 +1,5 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Inventory
 {
@@ -25,7 +24,7 @@ namespace Game.Inventory
             base.SaveCallback();
         }
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 
@@ -53,7 +52,7 @@ namespace Game.Inventory
             });
         }
 
-        private void UpdateTypeData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        private void UpdateTypeData(SerializedData data, IDataRow row)
         {
             var id = row[IdKey].IntParse();
             var title = row[TitleKey].ToUpperFirst();

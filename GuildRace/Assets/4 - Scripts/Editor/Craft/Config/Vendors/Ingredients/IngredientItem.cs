@@ -6,7 +6,7 @@ namespace Game.Craft
     /// <summary>
     /// Item: <see cref="IngredientData"/>
     /// </summary>
-    public class IngredientItem : EntityListItemElement
+    public class IngredientItem : ListItemElement
     {
         private PropertyElement countField;
         private PopupElement<int> reagentPopup;
@@ -16,12 +16,14 @@ namespace Game.Craft
             base.CreateItemContentGUI(root);
 
             root.ConvertToRow();
+            root.AlignItems(Align.Center);
 
             countField = root.CreateProperty();
-            countField.Width(100);
+            countField.Width(60);
             countField.labelOn = false;
 
             reagentPopup = root.CreatePopup(CraftEditorState.GetReagentsCollection);
+            reagentPopup.FlexGrow(1);
             reagentPopup.labelOn = false;
         }
 

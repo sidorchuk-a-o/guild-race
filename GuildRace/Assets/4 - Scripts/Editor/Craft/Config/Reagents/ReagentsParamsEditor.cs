@@ -27,6 +27,7 @@ namespace Game.Craft
         {
             itemsList = root.CreateElement<ReagentItemsList>();
             itemsList.BindProperty("items", GetData(data));
+            itemsList.FlexWidth(50);
         }
 
         private void CreateParamsTab(VisualElement root, SerializedData data)

@@ -11,5 +11,11 @@ namespace Game.Craft
 
         public int ReagentId => reagentId;
         public int Count => count;
+
+        public IngredientData(int reagentId, int count)
+        {
+            this.reagentId = reagentId;
+            this.count = count;
+        }
     }
 }

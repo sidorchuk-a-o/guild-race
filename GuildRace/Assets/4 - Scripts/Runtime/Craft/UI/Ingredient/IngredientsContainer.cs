@@ -12,7 +12,7 @@ namespace Game.Craft
     public class IngredientsContainer : MonoBehaviour
     {
         [SerializeField] private CraftingCounterContainer counterContainer;
-        [SerializeField] private List<IngredientItem> ingredientItems;
+        [SerializeField] private List<IngredientItemSlot> ingredientItems;
 
         private readonly ReactiveProperty<bool> isAvailablle = new();
 
