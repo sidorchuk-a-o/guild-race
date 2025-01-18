@@ -38,7 +38,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u0417\u0430\u044F\u0432\u043A\u0438"
+      - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
       Flags: 0000
       Languages_Touch: []
     - Term: HUB/GUILD_BANK_TAB_TTL
@@ -63,6 +63,14 @@ MonoBehaviour:
       Languages:
       - 
       - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0445\u043E\u0434\u044B"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HUB/VANDORS_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0423\u043B\u0438\u0446\u0430 \u0440\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
       Flags: 0000
       Languages_Touch: []
     - Term: GUILD/CREATE_GUILD_TTL
@@ -3582,6 +3590,22 @@ MonoBehaviour:
         \u044D\u0444\u0444\u0435\u043A\u0442 \u041E\u0441\u043A\u043E\u043B\u043A\u0430."
       Flags: 0000
       Languages_Touch: []
+    - Term: CRAFT/START_CRAFTING_BTN
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0434\u0435\u043B\u0430\u0442\u044C \u0437\u0430\u043A\u0430\u0437"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: CRAFT/EMPTY_RECIPE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0420\u0435\u0446\u0435\u043F\u0442 \u043D\u0435 \u0432\u044B\u0431\u0440\u0430\u043D"
+      Flags: 0000
+      Languages_Touch: []
     - Term: STORE/GOLD_CURRENCY_TTL
       TermType: 0
       Description: 
@@ -3655,7 +3679,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1735916683777
+    Google_LastUpdatedVersion: 1737204957683
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

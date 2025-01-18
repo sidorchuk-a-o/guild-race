@@ -19,8 +19,9 @@ namespace Game.Instances
         public SquadData GetSquadParams(InstanceType type)
         {
             squadsCache ??= squads.ToDictionary(x => x.InstanceType, x => x);
+            squadsCache.TryGetValue(type, out var data);
 
-            return squadsCache[type];
+            return data;
         }
     }
 }

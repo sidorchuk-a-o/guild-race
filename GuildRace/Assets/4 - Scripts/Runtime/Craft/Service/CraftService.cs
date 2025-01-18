@@ -1,4 +1,5 @@
 ﻿using AD.Services;
+using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using VContainer;
 
@@ -7,6 +8,8 @@ namespace Game.Craft
     public class CraftService : Service, ICraftService
     {
         private readonly CraftState state;
+
+        public IVendorsCollection Vendors => state.Vendors;
 
         public CraftService(CraftConfig config, IObjectResolver resolver)
         {
@@ -18,6 +21,11 @@ namespace Game.Craft
             state.Init();
 
             return await Inited();
+        }
+
+        public void StartCraftingProcess(StartCraftingEM craftingEM)
+        {
+            this.LogMsg("START CRAFTING ...");
         }
     }
 }

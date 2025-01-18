@@ -1,4 +1,4 @@
-﻿using AD.Services.Store;
+﻿using AD.Services.Localization;
 using AD.ToolsCollection;
 using System;
 using System.Collections.Generic;
@@ -9,13 +9,13 @@ namespace Game.Craft
     [Serializable]
     public class RecipeData : Entity<int>
     {
-        [SerializeField] private CurrencyAmountData amount = new();
-        [SerializeField] private List<IngredientData> ingredients;
+        [SerializeField] private LocalizeKey nameKey;
         [Space]
-        [SerializeField] private List<ProductData> products;
+        [SerializeField] private int productItemId;
+        [SerializeField] private List<IngredientData> ingredients;
 
-        public CurrencyAmount Amount => amount;
+        public LocalizeKey NameKey => nameKey;
+        public int ProductItemId => productItemId;
         public IReadOnlyList<IngredientData> Ingredients => ingredients;
-        public IReadOnlyList<ProductData> Products => products;
     }
 }

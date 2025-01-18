@@ -29,8 +29,9 @@ namespace Game.Guild
         public RoleData GetRole(RoleId roleId)
         {
             rolesCache ??= roles.ToDictionary(x => (RoleId)x.Id, x => x);
+            rolesCache.TryGetValue(roleId, out var data);
 
-            return rolesCache[roleId];
+            return data;
         }
 
         public RoleId GetRoleBySpec(SpecializationId specId)
@@ -43,15 +44,17 @@ namespace Game.Guild
         public SubRoleData GetSubRole(SubRoleId subRoleId)
         {
             subRolesCache ??= subRoles.ToDictionary(x => (SubRoleId)x.Id, x => x);
+            subRolesCache.TryGetValue(subRoleId, out var data);
 
-            return subRolesCache[subRoleId];
+            return data;
         }
 
         public ClassData GetClass(ClassId classId)
         {
             classesCache ??= classes.ToDictionary(x => (ClassId)x.Id, x => x);
+            classesCache.TryGetValue(classId, out var data);
 
-            return classesCache[classId];
+            return data;
         }
 
         public SpecializationData GetSpecialization(SpecializationId specId)
@@ -60,7 +63,9 @@ namespace Game.Guild
                 .SelectMany(x => x.Specs)
                 .ToDictionary(x => (SpecializationId)x.Id, x => x);
 
-            return specsCache[specId];
+            specsCache.TryGetValue(specId, out var data);
+
+            return data;
         }
 
         public IReadOnlyList<(ClassData, SpecializationData)> GetSpecializations(RoleId roleId)
@@ -70,14 +75,17 @@ namespace Game.Guild
                 .GroupBy(x => x.specData.RoleId)
                 .ToDictionary(x => x.Key, x => x.ToList());
 
-            return specByRoleCache[roleId];
+            specByRoleCache.TryGetValue(roleId, out var data);
+
+            return data;
         }
 
         public ResourceData GetResource(ResourceId resourceId)
         {
             resourcesCache ??= resources.ToDictionary(x => (ResourceId)x.Id, x => x);
+            resourcesCache.TryGetValue(resourceId, out var data);
 
-            return resourcesCache[resourceId];
+            return data;
         }
     }
 }

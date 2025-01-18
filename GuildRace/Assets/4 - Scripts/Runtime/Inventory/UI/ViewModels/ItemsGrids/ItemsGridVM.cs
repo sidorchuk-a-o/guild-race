@@ -12,6 +12,7 @@ namespace Game.Inventory
         private readonly InventoryVMFactory inventoryVMF;
 
         public string Id { get; }
+        public ItemsGridCategory Category { get; }
         public ItemsGridCellType CellType { get; }
         public BoundsInt Bounds { get; }
 
@@ -24,6 +25,7 @@ namespace Game.Inventory
             this.inventoryVMF = inventoryVMF;
 
             Id = info.Id;
+            Category = info.Category;
             CellType = info.CellType;
             Bounds = new(Vector3Int.zero, info.Size);
 

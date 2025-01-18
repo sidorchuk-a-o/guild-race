@@ -31,14 +31,17 @@ namespace Game.Inventory
                 .SelectMany(x => x.Types)
                 .ToDictionary(x => (EquipType)x.Id, x => x);
 
-            return typesCache[type];
+            typesCache.TryGetValue(type, out var data);
+
+            return data;
         }
 
         public EquipGroupData GetGroup(EquipGroup group)
         {
             groupsCache ??= groups.ToDictionary(x => (EquipGroup)x.Id, x => x);
+            groupsCache.TryGetValue(group, out var data);
 
-            return groupsCache[group];
+            return data;
         }
 
         public EquipGroupData GetGroup(EquipType type)
@@ -47,7 +50,9 @@ namespace Game.Inventory
                 .SelectMany(group => group.Types.Select(type => (type, group)))
                 .ToDictionary(x => (EquipType)x.type.Id, x => x.group);
 
-            return groupsByTypeCache[type];
+            groupsByTypeCache.TryGetValue(type, out var data);
+
+            return data;
         }
     }
 }

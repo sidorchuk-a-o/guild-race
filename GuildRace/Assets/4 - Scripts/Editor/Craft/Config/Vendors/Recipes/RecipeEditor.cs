@@ -1,5 +1,5 @@
-﻿using AD.Services.Store;
-using AD.ToolsCollection;
+﻿using AD.ToolsCollection;
+using Game.Inventory;
 using UnityEngine.UIElements;
 
 namespace Game.Craft
@@ -7,9 +7,9 @@ namespace Game.Craft
     [CraftEditor(typeof(RecipeData))]
     public class RecipeEditor : EntityEditor
     {
-        private CurrencyAmountElement amountField;
+        private PropertyElement nameKeyField;
+        private PopupElement<int> productItemPopup;
         private IngredientsList ingredientsList;
-        private ProductsList productsList;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -21,18 +21,20 @@ namespace Game.Craft
 
         private void CreateParamsTab(VisualElement root, SerializedData data)
         {
-            root.CreateHeader("Ingredients");
+            root.CreateHeader("View");
 
-            amountField = root.CreateElement<CurrencyAmountElement>();
-            amountField.BindProperty("amount", data);
+            nameKeyField = root.CreateProperty();
+            nameKeyField.BindProperty("nameKey", data);
+
+            root.CreateHeader("Product");
+
+            productItemPopup = root.CreatePopup(InventoryEditorState.GetAllItemsCollection);
+            productItemPopup.BindProperty("productItemId", data);
+
+            root.CreateHeader("Ingredients");
 
             ingredientsList = root.CreateElement<IngredientsList>();
             ingredientsList.BindProperty("ingredients", data);
-
-            root.CreateHeader("Products");
-
-            productsList = root.CreateElement<ProductsList>();
-            productsList.BindProperty("products", data);
         }
     }
 }
