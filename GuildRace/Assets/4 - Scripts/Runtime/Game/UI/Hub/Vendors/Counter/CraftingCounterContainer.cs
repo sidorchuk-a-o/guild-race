@@ -27,6 +27,11 @@ namespace Game.Craft
             SetCount(1);
         }
 
+        public void ResetCount()
+        {
+            SetCount(0);
+        }
+
         private void IncreaseCallback(int value)
         {
             AddCount(value);

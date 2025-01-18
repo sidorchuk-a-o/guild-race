@@ -73,6 +73,11 @@ namespace Game.Inventory
             return items;
         }
 
+        public bool CheckBasePlacementParams(ItemInfo item)
+        {
+            return item.CheckGridParams(this);
+        }
+
         public bool CheckPossibilityOfPlacement(ItemInfo item)
         {
             if (!item.CheckGridParams(this))

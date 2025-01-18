@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Craft
 {
-    public class ReagentItemData : ItemData
+    public class ReagentItemData : ItemData, IStackable
     {
         [SerializeField] private ItemStack stack;
 

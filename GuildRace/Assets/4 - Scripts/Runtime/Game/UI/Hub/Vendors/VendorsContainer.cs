@@ -129,6 +129,8 @@ namespace Game.Craft
                 };
 
                 craftVMF.StartCraftingProcess(craftingEM);
+
+                counterContainer.ResetCount();
             }
         }
     }

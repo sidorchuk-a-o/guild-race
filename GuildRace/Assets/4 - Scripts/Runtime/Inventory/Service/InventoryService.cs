@@ -112,6 +112,41 @@ namespace Game.Inventory
                 return false;
             }
 
+            if (placement.CheckBasePlacementParams(item) == false)
+            {
+                return false;
+            }
+
+            if (item is IStackableItem stackableItem)
+            {
+                var itemStack = stackableItem.Stack.Value;
+
+                foreach (var targetItem in placement.GetItems())
+                {
+                    if (item.DataId != targetItem.DataId)
+                    {
+                        continue;
+                    }
+
+                    var targetStackableItem = targetItem as IStackableItem;
+                    var targetItemStack = targetStackableItem.Stack;
+
+                    if (targetItemStack.IsFulled)
+                    {
+                        continue;
+                    }
+
+                    var availableSpace = targetItemStack.AvailableSpace;
+
+                    if (availableSpace >= itemStack)
+                    {
+                        return true;
+                    }
+
+                    itemStack -= availableSpace;
+                }
+            }
+
             return placement.CheckPossibilityOfPlacement(item);
         }
 
@@ -121,6 +156,11 @@ namespace Game.Inventory
             var placement = GetPlacement(placeArgs.PlacementId);
 
             if (item.IsNotExist() || placement.IsNotExist())
+            {
+                return false;
+            }
+
+            if (placement.CheckBasePlacementParams(item) == false)
             {
                 return false;
             }
