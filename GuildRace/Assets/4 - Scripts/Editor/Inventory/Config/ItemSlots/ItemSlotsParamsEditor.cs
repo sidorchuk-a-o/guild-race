@@ -26,7 +26,7 @@ namespace Game.Inventory
 
             factoriesList = root.CreateElement<ItemSlotsFactoriesList>();
             factoriesList.BindProperty("factories", GetData(data));
-            factoriesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            factoriesList.FlexWidth(33).MarginRight(10);
         }
     }
 }

@@ -27,8 +27,9 @@ namespace Game.Instances
         public SeasonData GetSeason(int id)
         {
             seasonsCache ??= seasons.ToDictionary(x => x.Id, x => x);
+            seasonsCache.TryGetValue(id, out var data);
 
-            return seasonsCache[id];
+            return data;
         }
 
         public InstanceData GetInstance(int id)
@@ -37,14 +38,17 @@ namespace Game.Instances
                 .SelectMany(x => x.Instances)
                 .ToDictionary(x => x.Id, x => x);
 
-            return instancesCache[id];
+            instancesCache.TryGetValue(id, out var data);
+
+            return data;
         }
 
         public InstanceTypeData GetInstanceType(InstanceType type)
         {
             instanceTypesCache ??= instanceTypes.ToDictionary(x => (InstanceType)x.Id, x => x);
+            instanceTypesCache.TryGetValue(type, out var data);
 
-            return instanceTypesCache[type];
+            return data;
         }
     }
 }

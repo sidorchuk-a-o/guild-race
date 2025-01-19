@@ -2,7 +2,7 @@
 
 namespace Game.Inventory
 {
-    public class СonsumablesItemData : ItemData
+    public class СonsumablesItemData : ItemData, IStackable
     {
         [SerializeField] private ItemStack stack;
 

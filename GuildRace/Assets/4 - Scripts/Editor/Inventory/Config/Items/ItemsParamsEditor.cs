@@ -27,11 +27,11 @@ namespace Game.Inventory
 
             raritiesList = root.CreateElement<RaritiesList>();
             raritiesList.BindProperty("rarities", GetData(data));
-            raritiesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            raritiesList.FlexWidth(33).MarginRight(10);
 
             factoriesList = root.CreateElement<ItemsFactoriesList>();
             factoriesList.BindProperty("factories", GetData(data));
-            factoriesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            factoriesList.FlexWidth(33).MarginRight(10);
         }
     }
 }

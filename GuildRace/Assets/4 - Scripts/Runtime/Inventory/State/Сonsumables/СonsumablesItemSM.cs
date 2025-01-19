@@ -5,7 +5,7 @@ namespace Game.Inventory
     [JsonObject(MemberSerialization.Fields)]
     public class СonsumablesItemSM : ItemSM
     {
-        [ES3NonSerializable] private ItemStackSM stackSM;
+        [ES3Serializable] private ItemStackSM stackSM;
 
         public СonsumablesItemSM(СonsumablesItemInfo info) : base(info)
         {

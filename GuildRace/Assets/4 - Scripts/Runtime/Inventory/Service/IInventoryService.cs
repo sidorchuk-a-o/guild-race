@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace Game.Inventory
 {
     public interface IInventoryService
@@ -23,7 +25,10 @@ namespace Game.Inventory
 
         bool CheckPossibilityOfTransfer(TransferItemArgs transferItemArgs);
         bool TryTransferItem(TransferItemArgs transferArgs);
-        bool TrySplitItem(SplittingItemArgs splittingArgs);
+        bool TrySplitItem(SplittingItemArgs splittingArgs, out ItemInfo newItem);
+
+        bool CheckPossibilityOfTake(TakeItemsArgs takeArgs);
+        bool TryTakeItems(TakeItemsArgs takeArgs, out List<ItemInfo> itemsTaken);
 
         bool TryDiscardItem(DiscardItemArgs discardArgs);
     }

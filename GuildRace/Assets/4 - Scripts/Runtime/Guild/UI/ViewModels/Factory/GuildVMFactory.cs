@@ -39,11 +39,6 @@ namespace Game.Guild
             return new GuildVM(guildConfig, guildService);
         }
 
-        public GuildBankTabsVM GetGuildBankTabs()
-        {
-            return new GuildBankTabsVM(guildService.BankTabs, InventoryVMF);
-        }
-
         public CharacterVM GetCharacter(string characterId)
         {
             var character = guildService.Characters[characterId];
@@ -106,6 +101,13 @@ namespace Game.Guild
             var guildRank = guildService.GuildRanks[guildRankId];
 
             return new GuildRankVM(guildRank);
+        }
+
+        // == Bank ==
+
+        public GuildBankTabsVM GetGuildBankTabs()
+        {
+            return new GuildBankTabsVM(guildService.BankTabs, InventoryVMF);
         }
 
         // == Common Methods ==

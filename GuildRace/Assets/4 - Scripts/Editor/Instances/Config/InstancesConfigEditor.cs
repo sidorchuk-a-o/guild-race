@@ -25,7 +25,7 @@ namespace Game.Instances
         private void CreateSeasonsTab(VisualElement root, SerializedData data)
         {
             seasonsList = root.CreateElement<SeasonsList>();
-            seasonsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            seasonsList.FlexWidth(33).MarginRight(10);
             seasonsList.BindProperty("seasons", data);
         }
 
@@ -34,7 +34,7 @@ namespace Game.Instances
             root.ConvertToRow();
 
             instanceTypesList = root.CreateElement<InstanceTypesList>();
-            instanceTypesList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            instanceTypesList.FlexWidth(33).MarginRight(10);
             instanceTypesList.BindProperty("instanceTypes", data);
         }
 

@@ -12,6 +12,7 @@ namespace Game.Inventory
 {
     public class InventoryVMFactory : VMFactory
     {
+        private readonly InventoryConfig inventoryConfig;
         private readonly IInventoryService inventoryService;
 
         private readonly GameObject poolsContainer;
@@ -21,8 +22,12 @@ namespace Game.Inventory
         private Dictionary<Type, ItemsVMFactory> itemsFactoriesDict;
         private Dictionary<Type, ItemSlotsVMFactory> slotsFactoriesDict;
 
-        public InventoryVMFactory(IPoolsService pools, IInventoryService inventoryService)
+        public InventoryVMFactory(
+            InventoryConfig inventoryConfig,
+            IPoolsService pools,
+            IInventoryService inventoryService)
         {
+            this.inventoryConfig = inventoryConfig;
             this.inventoryService = inventoryService;
 
             if (poolsContainer == null)
@@ -47,6 +52,13 @@ namespace Game.Inventory
 
         // == Items ==
 
+        public ItemDataVM CreateItemData(int id)
+        {
+            var data = inventoryConfig.GetItem(id);
+
+            return new ItemDataVM(data, this);
+        }
+
         public ItemVM CreateItem(string id)
         {
             var info = inventoryService.GetItem(id);
@@ -64,6 +76,13 @@ namespace Game.Inventory
             var factory = itemsFactoriesDict[info.GetType()];
 
             return factory.Create(info, this);
+        }
+
+        public ItemCounterVM CreateItemCounter(int itemDataId, IEnumerable<ItemsGridInfo> itemsGrids)
+        {
+            var counter = new ItemCounter(itemDataId, itemsGrids);
+
+            return new ItemCounterVM(counter, this);
         }
 
         // == Slots ==
@@ -155,7 +174,7 @@ namespace Game.Inventory
 
         public bool TrySplitItem(SplittingItemArgs splittingArgs)
         {
-            return inventoryService.TrySplitItem(splittingArgs);
+            return inventoryService.TrySplitItem(splittingArgs, out _);
         }
 
         public bool TryTransferItem(TransferItemArgs transferArgs)

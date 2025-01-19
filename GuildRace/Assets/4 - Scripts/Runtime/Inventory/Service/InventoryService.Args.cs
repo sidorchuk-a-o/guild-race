@@ -68,6 +68,16 @@ namespace Game.Inventory
         public int Count { get; set; }
     }
 
+    // == Take ==
+
+    public class TakeItemsArgs
+    {
+        public int ItemDataId { get; set; }
+        public int Count { get; set; }
+
+        public string GridId { get; set; }
+    }
+
     // == Discard ==
 
     public class DiscardItemArgs

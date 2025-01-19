@@ -1,6 +1,7 @@
 ﻿using AD.ToolsCollection;
 using System.Collections.Generic;
 using System.Linq;
+using VContainer;
 
 namespace Game.Inventory
 {
@@ -13,7 +14,7 @@ namespace Game.Inventory
         private readonly Dictionary<string, ItemSlotsFactory> slotsFactories;
         private readonly ItemsGridsFactory itemsGridsFactory;
 
-        public InventoryFactory(InventoryState state, InventoryConfig config)
+        public InventoryFactory(InventoryState state, InventoryConfig config, IObjectResolver resolver)
         {
             this.state = state;
             this.config = config;
@@ -22,19 +23,29 @@ namespace Game.Inventory
             var slotsParams = config.ItemSlotsParams;
 
             itemsFactories = itemsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
-            itemsFactories.ForEach(x => x.Value.Init(state, config));
+            itemsFactories.ForEach(x =>
+            {
+                resolver.Inject(x.Value);
+
+                x.Value.Init(state, config);
+            });
 
             slotsFactories = slotsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
-            slotsFactories.ForEach(x => x.Value.Init(state, config, this));
+            slotsFactories.ForEach(x =>
+            {
+                resolver.Inject(x.Value);
+
+                x.Value.Init(state, config, this);
+            });
 
             itemsGridsFactory = new(state, config, this);
         }
 
         // == Items ==
 
-        public ItemInfo CreateItem(int id)
+        public ItemInfo CreateItem(int dataId)
         {
-            var data = config.GetItem(id);
+            var data = config.GetItem(dataId);
 
             return CreateItem(data);
         }

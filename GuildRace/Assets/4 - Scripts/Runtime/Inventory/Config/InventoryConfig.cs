@@ -7,9 +7,8 @@ namespace Game.Inventory
 {
     public class InventoryConfig : ScriptableConfig
     {
-        // Equips
+        // Items
         [SerializeField] private EquipsParams equipsParams = new();
-        [SerializeField] private ReagentsParams reagentsParams = new();
         [SerializeField] private СonsumablesParams consumablesParams = new();
         // Database
         [SerializeField] private List<ItemData> items = new();
@@ -27,7 +26,6 @@ namespace Game.Inventory
         private Dictionary<int, ItemsGridData> itemsGridsCache;
 
         public EquipsParams EquipsParams => equipsParams;
-        public ReagentsParams ReagentsParams => reagentsParams;
         public СonsumablesParams ConsumablesParams => consumablesParams;
 
         public ItemsParams ItemsParams => itemsParams;

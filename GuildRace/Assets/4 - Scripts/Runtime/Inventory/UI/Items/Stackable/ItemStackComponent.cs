@@ -16,12 +16,14 @@ namespace Game.Inventory
         {
             ViewModel = itemStackVM;
 
-            itemStackVM.ObserveValue()
-                .Subscribe(ValueChanged)
+            itemStackVM.ObserveChanged()
+                .Subscribe(UpdateSizeText)
                 .AddTo(disp);
+
+            UpdateSizeText();
         }
 
-        private void ValueChanged()
+        private void UpdateSizeText()
         {
             sizeText.SetTextParams(showMaxValue
                 ? $"{ViewModel.Value}/{ViewModel.Size}"

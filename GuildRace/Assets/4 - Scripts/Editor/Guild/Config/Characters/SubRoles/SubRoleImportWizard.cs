@@ -1,6 +1,5 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Guild
 {
@@ -14,7 +13,7 @@ namespace Game.Guild
         public override string SheetName => "class-data";
         public override string SheetRange => "E2:G";
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 

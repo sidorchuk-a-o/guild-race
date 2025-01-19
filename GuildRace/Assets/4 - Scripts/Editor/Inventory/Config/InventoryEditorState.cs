@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Callbacks;
 
 namespace Game.Inventory
 {
@@ -44,25 +43,6 @@ namespace Game.Inventory
 
             DataFactory.OnDataRemove -= DataFactory_OnDataRemove;
             DataFactory.OnDataRemove += DataFactory_OnDataRemove;
-
-            SaveEditorUtils.OnStartSavePropcess -= UpdateScriptFiles;
-            SaveEditorUtils.OnStartSavePropcess += UpdateScriptFiles;
-        }
-
-        [DidReloadScripts]
-        private static void CheckScriptFiles()
-        {
-            if (Config == null)
-            {
-                return;
-            }
-
-            KeyScriptFileUtils.CheckScriptFile(GetOptionKeyScriptData());
-        }
-
-        private static void UpdateScriptFiles()
-        {
-            KeyScriptFileUtils.UpdateScriptFile(GetOptionKeyScriptData());
         }
 
         // == Cache ==
@@ -168,13 +148,6 @@ namespace Game.Inventory
             return new(keysDict.Values, keysDict.Keys, autoSort: false);
         }
 
-        private static KeyScriptData<string> GetOptionKeyScriptData() => new()
-        {
-            keyTypeName = nameof(OptionKey),
-            namespaceValue = "Game.Inventory",
-            getCollection = CreateOptionsCollection
-        };
-
         public static Collection<string> CreateOptionsCollection()
         {
             return Config.CreateKeyCollection<OptionHandler, string>("uiParams.optionHandlers");
@@ -191,6 +164,30 @@ namespace Game.Inventory
                 .GetValue<List<OptionHandler>>("uiParams.optionHandlers")
                 .Select(x => x.GetType())
                 .ToList();
+        }
+
+        public static Collection<int> GetAllItemsCollection()
+        {
+            var items = Config.GetValue<List<ItemData>>("items");
+            var itemsGroups = items.GroupBy(x => x.GetType().Name);
+
+            var values = new List<int>();
+            var options = new List<string>();
+
+            foreach (var group in itemsGroups)
+            {
+                var groupName = group.Key.Clear("Item", "Data");
+
+                foreach (var item in group)
+                {
+                    var option = $"{groupName}/{item.Title}";
+
+                    values.Add(item.Id);
+                    options.Add(option);
+                }
+            }
+
+            return new Collection<int>(values, options, autoSort: false);
         }
     }
 }

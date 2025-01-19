@@ -1,6 +1,5 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Inventory
 {
@@ -12,7 +11,7 @@ namespace Game.Inventory
         public override string IdKey => "Id";
         public override string TitleKey => "Name";
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 

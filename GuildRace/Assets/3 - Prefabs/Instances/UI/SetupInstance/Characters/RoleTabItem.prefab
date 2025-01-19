@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 3296099021988132257}
-  autoLocalize: 1
+  autoLocalize: 0
   termMod: 0
   localizeKey:
     value: <none>

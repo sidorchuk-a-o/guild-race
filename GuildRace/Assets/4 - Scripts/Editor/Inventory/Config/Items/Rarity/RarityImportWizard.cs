@@ -1,6 +1,5 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Inventory
 {
@@ -14,7 +13,7 @@ namespace Game.Inventory
         public override string SheetName => "inventory-data";
         public override string SheetRange => "Q2:S";
 
-        protected override void UpdateData(SerializedData data, IReadOnlyDictionary<string, string> row)
+        protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 

@@ -36,15 +36,15 @@ namespace Game.Inventory
 
             slotsList = root.CreateElement<EquipSlotsList>();
             slotsList.BindProperty("slots", GetData(data));
-            slotsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            slotsList.FlexWidth(33).MarginRight(10);
 
             groupsList = root.CreateElement<EquipGroupsList>();
             groupsList.BindProperty("groups", GetData(data));
-            groupsList.FlexGrow(1).MaxWidth(33, LengthUnit.Percent).MarginRight(10);
+            groupsList.FlexWidth(33).MarginRight(10);
 
             gridParamsEditor = root.CreateElement<GridParamsForItemsElement>();
             gridParamsEditor.BindProperty("gridParams", GetData(data));
-            gridParamsEditor.FlexGrow(1).MaxWidth(33, LengthUnit.Percent);
+            gridParamsEditor.FlexWidth(33);
         }
     }
 }

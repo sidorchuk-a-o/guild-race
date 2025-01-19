@@ -1,6 +1,8 @@
 ﻿using AD.Services;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using VContainer;
 
@@ -16,7 +18,7 @@ namespace Game.Inventory
         public InventoryService(InventoryConfig config, IObjectResolver resolver)
         {
             state = new(config, resolver);
-            factory = new(state, config);
+            factory = new(state, config, resolver);
         }
 
         public override async UniTask<bool> Init()
@@ -110,6 +112,41 @@ namespace Game.Inventory
                 return false;
             }
 
+            if (placement.CheckBasePlacementParams(item) == false)
+            {
+                return false;
+            }
+
+            if (item is IStackableItem stackableItem)
+            {
+                var itemStack = stackableItem.Stack.Value;
+
+                foreach (var targetItem in placement.GetItems())
+                {
+                    if (item.DataId != targetItem.DataId)
+                    {
+                        continue;
+                    }
+
+                    var targetStackableItem = targetItem as IStackableItem;
+                    var targetItemStack = targetStackableItem.Stack;
+
+                    if (targetItemStack.IsFulled)
+                    {
+                        continue;
+                    }
+
+                    var availableSpace = targetItemStack.AvailableSpace;
+
+                    if (availableSpace >= itemStack)
+                    {
+                        return true;
+                    }
+
+                    itemStack -= availableSpace;
+                }
+            }
+
             return placement.CheckPossibilityOfPlacement(item);
         }
 
@@ -119,6 +156,11 @@ namespace Game.Inventory
             var placement = GetPlacement(placeArgs.PlacementId);
 
             if (item.IsNotExist() || placement.IsNotExist())
+            {
+                return false;
+            }
+
+            if (placement.CheckBasePlacementParams(item) == false)
             {
                 return false;
             }
@@ -297,13 +339,14 @@ namespace Game.Inventory
             return true;
         }
 
-        public bool TrySplitItem(SplittingItemArgs splittingArgs)
+        public bool TrySplitItem(SplittingItemArgs splittingArgs, out ItemInfo newItem)
         {
             var selectedItem = GetItem(splittingArgs.SelectedItemId);
             var grid = GetGrid(splittingArgs.GridId);
 
             if (selectedItem is not IStackableItem selectedStackable || grid.IsNotExist())
             {
+                newItem = null;
                 return false;
             }
 
@@ -336,7 +379,105 @@ namespace Game.Inventory
                 state.RemoveItem(copyItem.Id);
             }
 
+            newItem = copyItem;
+
             return placeResult;
+        }
+
+        // == Take ==
+
+        public bool CheckPossibilityOfTake(TakeItemsArgs takeArgs)
+        {
+            var grid = GetGrid(takeArgs.GridId);
+
+            if (grid.IsNotExist())
+            {
+                return false;
+            }
+
+            var itemsCount = grid.Items
+                .Where(x => x.DataId == takeArgs.ItemDataId)
+                .Sum(GetItemCount);
+
+            return itemsCount >= takeArgs.Count;
+        }
+
+        public bool TryTakeItems(TakeItemsArgs takeArgs, out List<ItemInfo> itemsTaken)
+        {
+            var grid = GetGrid(takeArgs.GridId);
+
+            if (grid.IsNotExist())
+            {
+                itemsTaken = null;
+                return false;
+            }
+
+            itemsTaken = new();
+
+            var needCount = takeArgs.Count;
+            var itemCandidates = grid.Items
+                .Where(x => x.DataId == takeArgs.ItemDataId)
+                .ToListPool();
+
+            foreach (var itemCandidate in itemCandidates)
+            {
+                var itemCount = GetItemCount(itemCandidate);
+
+                if (itemCount < needCount)
+                {
+                    needCount -= itemCount;
+
+                    itemsTaken.Add(itemCandidate);
+
+                    TryRemoveItem(new RemoveFromPlacementArgs
+                    {
+                        ItemId = itemCandidate.Id,
+                        PlacementId = grid.Id
+                    });
+                }
+                else
+                {
+                    if (itemCandidate is IStackableItem)
+                    {
+                        var copyItem = factory.CreateItem(itemCandidate.DataId);
+
+                        var copyStackable = copyItem as IStackableItem;
+                        var candidateStackable = itemCandidate as IStackableItem;
+
+                        copyStackable.Stack.SetValue(needCount);
+                        candidateStackable.Stack.AddValue(-needCount);
+
+                        itemsTaken.Add(copyItem);
+                    }
+                    else
+                    {
+                        itemsTaken.Add(itemCandidate);
+
+                        TryRemoveItem(new RemoveFromPlacementArgs
+                        {
+                            ItemId = itemCandidate.Id,
+                            PlacementId = grid.Id
+                        });
+                    }
+
+                    break;
+                }
+            }
+
+            itemCandidates.ReleaseListPool();
+
+            return true;
+        }
+
+        private static int GetItemCount(ItemInfo item)
+        {
+            const int defaultCount = 1;
+
+            return item switch
+            {
+                IStackableItem sItem => sItem.Stack.Value,
+                _ => defaultCount
+            };
         }
 
         // == Discard ==
