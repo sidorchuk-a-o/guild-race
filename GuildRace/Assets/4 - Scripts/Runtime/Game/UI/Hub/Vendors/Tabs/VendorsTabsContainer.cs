@@ -6,6 +6,7 @@ using System.Linq;
 using UniRx;
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 
 namespace Game.Craft
 {
@@ -22,14 +23,17 @@ namespace Game.Craft
         private readonly ReactiveProperty<VendorVM> vendorVM = new();
         private readonly ReactiveProperty<RecipeVM> recipeVM = new();
 
+        private IObjectResolver resolver;
         private VendorsVM vendorsVM;
 
         public IReadOnlyReactiveProperty<VendorVM> VendorVM => vendorVM;
         public IReadOnlyReactiveProperty<RecipeVM> RecipeVM => recipeVM;
 
         [Inject]
-        public void Inject(CraftVMFactory craftVMF)
+        public void Inject(CraftVMFactory craftVMF, IObjectResolver resolver)
         {
+            this.resolver = resolver;
+
             vendorsVM = craftVMF.GetVendors();
         }
 
@@ -66,6 +70,8 @@ namespace Game.Craft
                 if (vendorTab == null)
                 {
                     vendorTab = Instantiate(vendorTabPrefab, transform);
+
+                    resolver.InjectGameObject(vendorTab.gameObject);
 
                     tabs.Add(vendorTab);
                 }

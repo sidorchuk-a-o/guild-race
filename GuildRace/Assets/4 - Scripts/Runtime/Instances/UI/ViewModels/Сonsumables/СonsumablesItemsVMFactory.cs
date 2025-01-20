@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Game.Inventory;
+using System;
 
-namespace Game.Inventory
+namespace Game.Instances
 {
     public class СonsumablesItemsVMFactory : ItemsVMFactory
     {

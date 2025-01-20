@@ -78,13 +78,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemInGridRef:
-    m_AssetGUID: 
+    m_AssetGUID: eb5d7d75703369044998b7ef879c7c28
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   itemInSlotRef:
-    m_AssetGUID: 
+    m_AssetGUID: 95f44bdfaa5ab8f459241570a9832453
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 

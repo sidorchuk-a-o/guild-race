@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 
-namespace Game.Craft
+namespace Game.Instances
 {
-    public class ReagentItemsList : ListElement<ReagentItemData, ReagentItemItem>
+    public class СonsumablesItemsList : ListElement<СonsumablesItemData, СonsumablesItemItem>
     {
         protected override List<Header> Headers => new()
         {
@@ -19,7 +19,7 @@ namespace Game.Craft
             showCloneButton = false;
             showRemoveButton = false;
 
-            wizardType = typeof(ReagentItemImportWizard);
+            wizardType = typeof(СonsumablesItemImportWizard);
 
             base.BindData(data);
         }

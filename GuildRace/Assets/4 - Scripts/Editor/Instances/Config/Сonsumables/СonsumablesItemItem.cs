@@ -2,12 +2,12 @@
 using Game.Inventory;
 using UnityEngine.UIElements;
 
-namespace Game.Craft
+namespace Game.Instances
 {
     /// <summary>
-    /// Item: <see cref="ReagentItemData"/>
+    /// Item: <see cref="СonsumablesItemData"/>
     /// </summary>
-    public class ReagentItemItem : ListItemElement
+    public class СonsumablesItemItem : ListItemElement
     {
         private PropertyElement idLabel;
         private LabelElement titleLabel;

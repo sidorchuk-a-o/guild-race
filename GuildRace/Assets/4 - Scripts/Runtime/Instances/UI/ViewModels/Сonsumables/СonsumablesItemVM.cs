@@ -1,11 +1,16 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.Localization;
+using AD.Services.Router;
+using Game.Inventory;
 using Game.UI;
 
-namespace Game.Inventory
+namespace Game.Instances
 {
     public class СonsumablesItemVM : ItemVM, IStackableItemVM
     {
         private readonly СonsumablesItemInfo info;
+
+        public Rarity Rarity { get; }
+        public LocalizeKey DescKey { get; }
 
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
@@ -13,6 +18,9 @@ namespace Game.Inventory
         public СonsumablesItemVM(СonsumablesItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
             this.info = info;
+
+            Rarity = info.Rarity;
+            DescKey = info.DescKey;
 
             StackVM = new(info.Stack);
             StackableStateVM = new();

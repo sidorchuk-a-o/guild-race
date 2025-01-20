@@ -15,7 +15,7 @@ namespace Game.Craft
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "craft-data";
-        public override string SheetRange => "A2:C";
+        public override string SheetRange => "A2:D";
 
         protected override async void SaveCallback()
         {
@@ -30,8 +30,8 @@ namespace Game.Craft
         {
             base.UpdateData(vendorData, row);
 
-            var nameKey = row["Localize Key"].LocalizeKeyParse();
-            var descKey = row["Localize Key"].LocalizeKeyParse();
+            var nameKey = row["Name Key"].LocalizeKeyParse();
+            var descKey = row["Desc Key"].LocalizeKeyParse();
 
             vendorData.GetProperty("nameKey").SetValue(nameKey);
             vendorData.GetProperty("descKey").SetValue(descKey);
@@ -66,12 +66,10 @@ namespace Game.Craft
         {
             var id = row["Recipe ID"].IntParse();
             var title = row["Item"].ToUpperFirst();
-            var nameKey = row["Recipe Localization Key"].LocalizeKeyParse();
             var productItemId = row["Item ID"].IntParse();
 
             recipeData.GetProperty("id").SetValue(id);
             recipeData.GetProperty("title").SetValue(title);
-            recipeData.GetProperty("nameKey").SetValue(nameKey);
             recipeData.GetProperty("productItemId").SetValue(productItemId);
 
             // reagents

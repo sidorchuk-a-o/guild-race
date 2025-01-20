@@ -99,7 +99,7 @@ namespace Game.Craft
                     return;
                 }
 
-                recipeNameText.SetTextParams(recipeVM.NameKey);
+                recipeNameText.SetTextParams(recipeVM.ProductVM.NameKey);
 
                 ingredientsContainer.IsAvailablle
                     .Subscribe(startCraftingButton.SetInteractableState)

@@ -1535,14 +1535,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2664719185197961057, guid: 639719423d8dde742a5086af571c5048, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2664719185197961057, guid: 639719423d8dde742a5086af571c5048, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2747315809865891528, guid: 639719423d8dde742a5086af571c5048, type: 3}
       propertyPath: m_Name
       value: InventorySystem

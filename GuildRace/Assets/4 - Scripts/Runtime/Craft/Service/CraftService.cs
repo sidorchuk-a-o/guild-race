@@ -64,7 +64,7 @@ namespace Game.Craft
 
             foreach (var reagent in reagents)
             {
-                reagent.Stack.SetValue(200);
+                reagent.Stack.SetValue(50);
 
                 var placementArgs = new PlaceInPlacementArgs
                 {

@@ -30,7 +30,7 @@ namespace Game.Craft
 
         public VendorsVM GetVendors()
         {
-            return new VendorsVM(craftService.Vendors);
+            return new VendorsVM(craftService.Vendors, inventoryVMF);
         }
 
         public ItemDataVM GetRecipeProduct(int recipeId)

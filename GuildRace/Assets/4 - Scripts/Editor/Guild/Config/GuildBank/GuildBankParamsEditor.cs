@@ -22,9 +22,10 @@ namespace Game.Guild
 
         private void CreateStorageTab(VisualElement root, SerializedData data)
         {
+            root.CreateHeader("Storage Tabs");
+
             tabsList = root.CreateElement<GuildBankTabsList>();
             tabsList.BindProperty("tabs", GetData(data));
-            tabsList.headerTitle = "Storage Pages";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Game.Craft
     {
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "craft-data";
-        public override string SheetRange => "E2:G";
+        public override string SheetRange => "F2:J";
 
         public override string TitleKey => "Name";
         public override string NameLocalizeKey => "Localize Key";
@@ -18,7 +18,11 @@ namespace Game.Craft
         {
             base.UpdateData(data, row);
 
-            data.GetProperty("stack").SetValue(new ItemStack(200));
+            var stack = new ItemStack(200);
+            var rarity = new Rarity(row["Rarity ID"].IntParse());
+
+            data.GetProperty("stack").SetValue(stack);
+            data.GetProperty("rarity").SetValue(rarity);
         }
     }
 }

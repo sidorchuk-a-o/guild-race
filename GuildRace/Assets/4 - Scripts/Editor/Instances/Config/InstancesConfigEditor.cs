@@ -11,6 +11,7 @@ namespace Game.Instances
         private InstanceTypesList instanceTypesList;
         private SquadParamsEditor squadParamsEditor;
         private ActiveInstanceParamsEditor activeInstanceParamsEditor;
+        private СonsumablesParamsEditor consumablesParamsEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -20,6 +21,7 @@ namespace Game.Instances
             tabs.CreateTab("Common", CreateCommonTab);
             tabs.CreateTabs("Squad Params", CreateSquadParamsTab);
             tabs.CreateTabs("Active Instance Params", CreateActiveInstanceParamsTab);
+            tabs.CreateTabs("Сonsumables Params", CreateСonsumablesParamsTab);
         }
 
         private void CreateSeasonsTab(VisualElement root, SerializedData data)
@@ -48,6 +50,12 @@ namespace Game.Instances
         {
             activeInstanceParamsEditor = new ActiveInstanceParamsEditor();
             activeInstanceParamsEditor.CreateTabs(tabs);
+        }
+
+        private void CreateСonsumablesParamsTab(TabsContainer tabs)
+        {
+            consumablesParamsEditor = new СonsumablesParamsEditor();
+            consumablesParamsEditor.CreateTabs(tabs);
         }
 
         // == Menu ==

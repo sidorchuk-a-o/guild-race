@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using Game.Inventory;
+using Newtonsoft.Json;
 
-namespace Game.Inventory
+namespace Game.Instances
 {
     [JsonObject(MemberSerialization.Fields)]
     public class СonsumablesItemSM : ItemSM

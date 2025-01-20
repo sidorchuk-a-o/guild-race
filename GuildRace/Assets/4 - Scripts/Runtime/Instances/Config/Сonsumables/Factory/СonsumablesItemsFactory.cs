@@ -1,17 +1,27 @@
-﻿using System;
+﻿using Game.Inventory;
+using System;
+using VContainer;
 
-namespace Game.Inventory
+namespace Game.Instances
 {
     public class СonsumablesItemsFactory : ItemsFactory
     {
+        private InstancesConfig config;
+
         public override Type DataType { get; } = typeof(СonsumablesItemData);
+
+        [Inject]
+        public void Inject(InstancesConfig config)
+        {
+            this.config = config;
+        }
 
         protected override ItemInfo CreateInfo(string id, ItemData data)
         {
             var consumablesData = data as СonsumablesItemData;
             var consumables = new СonsumablesItemInfo(id, consumablesData);
 
-            consumables.SetGridParams(InventoryConfig.ConsumablesParams.GridParams);
+            consumables.SetGridParams(config.ConsumablesParams.GridParams);
 
             return consumables;
         }
@@ -28,7 +38,7 @@ namespace Game.Inventory
 
             var consumables = consumablesSave.GetValue(consumablesData);
 
-            consumables.SetGridParams(InventoryConfig.ConsumablesParams.GridParams);
+            consumables.SetGridParams(config.ConsumablesParams.GridParams);
 
             return consumables;
         }
