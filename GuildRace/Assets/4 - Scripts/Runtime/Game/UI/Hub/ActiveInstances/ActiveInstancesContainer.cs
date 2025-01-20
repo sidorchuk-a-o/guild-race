@@ -91,15 +91,13 @@ namespace Game.Instances
 
         private void SelectActiveInstance(ActiveInstanceVM activeInstanceVM)
         {
-            if (this.activeInstanceVM == activeInstanceVM)
+            if (this.activeInstanceVM != activeInstanceVM)
             {
-                return;
+                this.activeInstanceVM?.SetSelectState(false);
+
+                this.activeInstanceVM = activeInstanceVM;
+                this.activeInstanceVM?.SetSelectState(true);
             }
-
-            this.activeInstanceVM?.SetSelectState(false);
-
-            this.activeInstanceVM = activeInstanceVM;
-            this.activeInstanceVM?.SetSelectState(true);
 
             UpdateActiveInstanceBlock();
         }

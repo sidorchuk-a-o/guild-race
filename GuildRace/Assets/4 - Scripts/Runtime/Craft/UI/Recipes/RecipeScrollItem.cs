@@ -16,7 +16,7 @@ namespace Game.Craft
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
-            nameText.SetTextParams(ViewModel.NameKey);
+            nameText.SetTextParams(ViewModel.ProductVM.NameKey);
         }
     }
 }

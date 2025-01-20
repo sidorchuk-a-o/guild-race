@@ -22,7 +22,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10119
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -33,7 +33,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-9104328803151399047
@@ -116,7 +116,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10034
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -127,7 +127,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-8826924889863600484
@@ -152,7 +152,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10093
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -163,7 +163,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &-8816477437093287099
@@ -188,7 +188,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10118
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -199,7 +199,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-8472422733814341553
@@ -224,7 +224,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10061
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -235,7 +235,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-8396260996354326224
@@ -260,7 +260,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10131
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -271,7 +271,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-8231145598918426906
@@ -296,7 +296,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10129
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -307,7 +307,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-7976013286353870678
@@ -332,7 +332,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10055
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -343,7 +343,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-7786134524771069982
@@ -368,7 +368,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10107
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -379,7 +379,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-7747445019385112284
@@ -404,7 +404,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10076
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -415,7 +415,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &-7652101298570031518
@@ -440,7 +440,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10103
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -451,7 +451,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-7449035984528177374
@@ -476,7 +476,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10114
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -487,7 +487,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-7212983667274812868
@@ -512,7 +512,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10013
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -523,7 +523,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-7175090527530127482
@@ -548,7 +548,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10141
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -560,8 +560,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &-7080529732421677225
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10105
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -595,7 +595,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-7001324336208455771
@@ -632,7 +632,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10020
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -643,7 +643,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-6887878195513756772
@@ -668,7 +668,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10101
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -679,7 +679,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &-6862540958533503585
@@ -704,7 +704,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10035
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -715,7 +715,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-6806210110799492770
@@ -758,7 +758,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10135
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -770,8 +770,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 10
-    health: 10
-    resource: 10
+    health: 0
+    resource: 0
 --- !u!114 &-6614947257460562497
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -794,7 +794,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10011
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -805,7 +805,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-6183353682262618565
@@ -830,7 +830,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10083
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -842,8 +842,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &-6150907231377672594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -866,7 +866,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10067
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -878,8 +878,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 40
-    health: 40
-    resource: 40
+    health: 0
+    resource: 0
 --- !u!114 &-6133608900172429420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -902,7 +902,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10050
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -913,7 +913,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-6114776268038394866
@@ -938,7 +938,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10086
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -950,8 +950,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 40
-    health: 40
-    resource: 40
+    health: 0
+    resource: 0
 --- !u!114 &-6110813638385256761
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -974,7 +974,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10060
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -985,7 +985,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
+    power: 0
     health: 40
     resource: 40
 --- !u!114 &-6077349596849091963
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10065
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1022,8 +1022,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 35
-    health: 35
-    resource: 35
+    health: 0
+    resource: 0
 --- !u!114 &-5950450103269691187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10033
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1057,7 +1057,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-5906239369190842854
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10089
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &-5737075243555858367
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10051
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-5545082573401686429
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10133
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1166,8 +1166,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 10
-    health: 10
-    resource: 10
+    health: 0
+    resource: 0
 --- !u!114 &-5264673978053023553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10017
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-4706629457753465657
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10021
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-4649489801524151643
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10122
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1291,7 +1291,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-4422783340732822949
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10079
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-4298722491863905509
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10046
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1364,8 +1364,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 25
-    health: 25
-    resource: 25
+    health: 0
+    resource: 0
 --- !u!114 &-4187781191333709216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10026
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-4086103811589660623
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10031
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-3779093435946907101
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10134
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1504,8 +1504,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 10
-    health: 10
-    resource: 10
+    health: 0
+    resource: 0
 --- !u!114 &-3192710916682309853
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10113
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-3139738672294733290
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10058
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &-3128139311566442411
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-3053621089744547346
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10023
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-3039325825505055318
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10048
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1684,8 +1684,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 25
-    health: 25
-    resource: 25
+    health: 0
+    resource: 0
 --- !u!114 &-2984385885765960227
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1708,7 +1708,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10111
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-2901791957114803695
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10102
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-2880662800390554586
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10126
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1791,7 +1791,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-2537615286543567961
@@ -1816,7 +1816,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10038
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-2515399012765761056
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10096
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &-2203573243443984181
@@ -1888,7 +1888,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10104
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-2140721920580831846
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10040
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1935,7 +1935,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-1922595333489817320
@@ -1960,7 +1960,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10117
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-1822881498046691059
@@ -1996,7 +1996,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10092
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2007,7 +2007,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &-1781769187498898997
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10124
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2043,7 +2043,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-1717270387008189411
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10056
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2079,7 +2079,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-1496942897883920671
@@ -2104,7 +2104,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10109
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2115,7 +2115,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-1455371521357839726
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10143
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2170,8 +2170,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &-1385969258091611105
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2194,7 +2194,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10069
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &-1379920717474179501
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10081
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &-1345641969649985332
@@ -2266,7 +2266,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10029
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-1232920642671462375
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10098
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2325,7 +2325,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &-1103882048033937079
@@ -2350,7 +2350,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10019
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2361,7 +2361,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-1063377336643817000
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10068
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2397,7 +2397,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
+    power: 0
     health: 40
     resource: 40
 --- !u!114 &-1062136430006192684
@@ -2422,7 +2422,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10016
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2433,7 +2433,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-1058030996441149953
@@ -2458,7 +2458,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10132
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2470,8 +2470,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 10
-    health: 10
-    resource: 10
+    health: 0
+    resource: 0
 --- !u!114 &-1029915359850127392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10073
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2521,7 +2521,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-976144031733252825
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10041
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2558,8 +2558,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &-950174056014292139
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10116
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-904854680988985666
@@ -2618,7 +2618,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10112
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &-753766681237061545
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10027
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2665,7 +2665,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &-612337858966185010
@@ -2714,7 +2714,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10121
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &-66409358018346676
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10062
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2761,7 +2761,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &11400000
@@ -2928,12 +2928,6 @@ MonoBehaviour:
       cellTypes:
       - value: 211
       - value: 212
-  consumablesParams:
-    items: []
-    slots: []
-    gridParams:
-      categories: []
-      cellTypes: []
   items:
   - {fileID: -6614947257460562497}
   - {fileID: 9111820585827621426}
@@ -3080,6 +3074,34 @@ MonoBehaviour:
   - {fileID: -3660557200253247270, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
   - {fileID: -4153265079499619491, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
   - {fileID: 4908823914005692528, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
+  - {fileID: -4528990965215213837, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 6116469841440588695, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -2402425100919101519, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 6325628730763029348, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 5855095073285179966, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -7211600281512318256, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -2624396034881592701, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 8972673178651738578, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 6646846226119907776, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 4037090930490511092, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 3409425287689555601, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 144429709343451076, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 4071338290387918875, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -923443413668151343, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 4549520025710094879, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 5940245885779881331, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -1086309156230088210, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -3764328915951443008, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 5882689212587807430, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -8487262239374094708, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -5490952678775940715, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -7236153642462459841, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -4714937801475931359, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 2555245202603140155, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -3653689908814051244, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -7942082118564427778, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 7904727434667658797, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 1763850391587158359, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   itemSlots:
   - {fileID: 9180415984051115598}
   - {fileID: -4706629457753465657}
@@ -3163,7 +3185,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10052
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3174,7 +3196,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &243303202286163940
@@ -3215,7 +3237,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10064
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3227,8 +3249,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 35
-    health: 35
-    resource: 35
+    health: 0
+    resource: 0
 --- !u!114 &331208564779327751
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3251,7 +3273,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10054
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3262,7 +3284,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
+    power: 0
     health: 40
     resource: 40
 --- !u!114 &406163380787924127
@@ -3287,7 +3309,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10072
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3298,7 +3320,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &462244929390968814
@@ -3323,7 +3345,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10140
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3335,8 +3357,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &518433714357507813
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3359,7 +3381,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10077
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3370,7 +3392,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &674322806141242743
@@ -3413,7 +3435,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10137
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3425,8 +3447,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &841691043756883268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3449,7 +3471,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10049
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3460,7 +3482,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &1010764327341742373
@@ -3485,7 +3507,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10071
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3496,7 +3518,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &1057532855618524533
@@ -3521,7 +3543,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10084
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3533,8 +3555,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &1110932812422987802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3548,9 +3570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 122
-  title: Epic
+  title: Rare
   nameKey:
-    value: INVENTORY/EPIC_RARITY_TTL
+    value: INVENTORY/RARE_RARITY_TTL
 --- !u!114 &1146862404774681540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3573,7 +3595,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10087
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3584,7 +3606,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &1189334565303918666
@@ -3609,7 +3631,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10063
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3620,7 +3642,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &1223950982166912609
@@ -3645,7 +3667,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10032
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3656,7 +3678,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &1424568110847715213
@@ -3681,7 +3703,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10110
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3692,7 +3714,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &1660921729696098959
@@ -3717,7 +3739,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10014
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3728,7 +3750,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &2041079010886698170
@@ -3753,7 +3775,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10125
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3764,7 +3786,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &2172033002375078472
@@ -3805,7 +3827,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10047
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3817,8 +3839,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 25
-    health: 25
-    resource: 25
+    health: 0
+    resource: 0
 --- !u!114 &2382765222928833730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3841,7 +3863,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10142
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3853,8 +3875,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &2547879043090320572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3877,7 +3899,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10120
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3888,7 +3910,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &2734205929474609862
@@ -3925,7 +3947,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10082
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3936,7 +3958,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &2852506058818597817
@@ -3961,7 +3983,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10045
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -3973,8 +3995,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 25
-    health: 25
-    resource: 25
+    health: 22
+    resource: 0
 --- !u!114 &2889767576748943482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3997,7 +4019,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10099
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4008,7 +4030,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &3020438398822890104
@@ -4033,7 +4055,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10066
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4045,8 +4067,8 @@ MonoBehaviour:
     value: 122
   characterParams:
     power: 40
-    health: 40
-    resource: 40
+    health: 0
+    resource: 0
 --- !u!114 &3092212957855857889
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4069,7 +4091,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10100
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4080,7 +4102,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &3157436081391586742
@@ -4105,7 +4127,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10115
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4116,7 +4138,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &3190576719803835710
@@ -4157,7 +4179,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10130
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4168,7 +4190,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &3528656383035835354
@@ -4217,7 +4239,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10030
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4228,7 +4250,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &3651724357173251947
@@ -4253,7 +4275,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10043
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4265,8 +4287,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &3698016436506853915
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4289,7 +4311,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10057
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4300,7 +4322,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &3852932945951644673
@@ -4325,7 +4347,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10070
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4336,7 +4358,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &4119991724450200512
@@ -4361,7 +4383,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10128
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4372,7 +4394,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &4241016530502353956
@@ -4397,7 +4419,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10044
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4409,8 +4431,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &4300491796616334485
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4433,7 +4455,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10138
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4445,8 +4467,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &4300600863543967724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4469,7 +4491,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10059
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4480,7 +4502,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &4336203229436919653
@@ -4505,7 +4527,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10094
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4516,7 +4538,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &4383393171423201285
@@ -4541,7 +4563,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10108
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4552,7 +4574,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &4434524417934112057
@@ -4577,7 +4599,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10042
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4589,8 +4611,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &4626130929355491073
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4613,7 +4635,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10095
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4624,7 +4646,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &4734373708846455812
@@ -4649,7 +4671,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10053
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4660,7 +4682,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &4747047883465077511
@@ -4685,7 +4707,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10039
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4696,7 +4718,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &4931558719855862773
@@ -4721,7 +4743,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10091
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4732,7 +4754,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &5015050402526860843
@@ -4789,7 +4811,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10025
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4800,7 +4822,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &5374728186150439257
@@ -4825,7 +4847,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10037
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4836,7 +4858,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &5674290880999002455
@@ -4861,7 +4883,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10018
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4872,7 +4894,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &5803818987983749537
@@ -4909,7 +4931,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10080
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4920,7 +4942,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
+    power: 0
     health: 40
     resource: 40
 --- !u!114 &5987843277473568308
@@ -4979,7 +5001,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10090
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -4990,7 +5012,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &6301772883194522219
@@ -5051,7 +5073,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10097
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5062,7 +5084,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &6661488557336679770
@@ -5103,7 +5125,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10106
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5114,7 +5136,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &6959670025149417345
@@ -5139,7 +5161,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10022
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5150,7 +5172,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
+    power: 0
     health: 25
     resource: 25
 --- !u!114 &7419684207783315249
@@ -5175,7 +5197,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10123
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5186,7 +5208,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &7427189725676400778
@@ -5211,7 +5233,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10036
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5222,7 +5244,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &7638315775081361980
@@ -5247,7 +5269,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10075
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5258,7 +5280,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
+    power: 0
     health: 35
     resource: 35
 --- !u!114 &7697856569677621517
@@ -5283,7 +5305,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10024
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5294,7 +5316,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &7785800891378577920
@@ -5319,7 +5341,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10085
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5331,8 +5353,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 30
-    health: 30
-    resource: 30
+    health: 0
+    resource: 0
 --- !u!114 &8229471332804516462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5355,7 +5377,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10136
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5367,8 +5389,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &8516279873877236565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5431,7 +5453,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10028
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5442,7 +5464,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &8679672984712988871
@@ -5467,7 +5489,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10074
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5478,7 +5500,7 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
+    power: 0
     health: 40
     resource: 40
 --- !u!114 &8768025246458969749
@@ -5503,7 +5525,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10088
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5514,7 +5536,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
+    power: 0
     health: 10
     resource: 10
 --- !u!114 &8781013962483808008
@@ -5539,7 +5561,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10078
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5550,7 +5572,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30
 --- !u!114 &9111820585827621426
@@ -5575,7 +5597,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10012
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5586,7 +5608,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
+    power: 0
     health: 20
     resource: 20
 --- !u!114 &9113102958087313022
@@ -5632,7 +5654,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10139
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5644,8 +5666,8 @@ MonoBehaviour:
     value: 121
   characterParams:
     power: 20
-    health: 20
-    resource: 20
+    health: 0
+    resource: 0
 --- !u!114 &9180415984051115598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5686,7 +5708,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10127
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -5697,6 +5719,6 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
+    power: 0
     health: 30
     resource: 30

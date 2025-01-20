@@ -7,7 +7,6 @@ namespace Game.Craft
     [CraftEditor(typeof(RecipeData))]
     public class RecipeEditor : EntityEditor
     {
-        private PropertyElement nameKeyField;
         private PopupElement<int> productItemPopup;
         private IngredientsList ingredientsList;
 
@@ -21,11 +20,6 @@ namespace Game.Craft
 
         private void CreateParamsTab(VisualElement root, SerializedData data)
         {
-            root.CreateHeader("View");
-
-            nameKeyField = root.CreateProperty();
-            nameKeyField.BindProperty("nameKey", data);
-
             root.CreateHeader("Product");
 
             productItemPopup = root.CreatePopup(InventoryEditorState.GetAllItemsCollection);

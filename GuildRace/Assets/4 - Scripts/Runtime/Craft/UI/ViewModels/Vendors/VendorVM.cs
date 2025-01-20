@@ -1,5 +1,6 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
+using Game.Inventory;
 
 namespace Game.Craft
 {
@@ -11,12 +12,12 @@ namespace Game.Craft
 
         public RecipesVM RecipesVM { get; }
 
-        public VendorVM(VendorInfo info)
+        public VendorVM(VendorInfo info, InventoryVMFactory inventoryVMF)
         {
             Id = info.Id;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
-            RecipesVM = new(info.Recipes);
+            RecipesVM = new(info.Recipes, inventoryVMF);
         }
 
         protected override void InitSubscribes()

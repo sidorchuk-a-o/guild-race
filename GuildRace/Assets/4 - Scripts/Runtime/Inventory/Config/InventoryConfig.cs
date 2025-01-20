@@ -9,7 +9,6 @@ namespace Game.Inventory
     {
         // Items
         [SerializeField] private EquipsParams equipsParams = new();
-        [SerializeField] private СonsumablesParams consumablesParams = new();
         // Database
         [SerializeField] private List<ItemData> items = new();
         [SerializeField] private List<ItemSlotData> itemSlots = new();
@@ -26,7 +25,6 @@ namespace Game.Inventory
         private Dictionary<int, ItemsGridData> itemsGridsCache;
 
         public EquipsParams EquipsParams => equipsParams;
-        public СonsumablesParams ConsumablesParams => consumablesParams;
 
         public ItemsParams ItemsParams => itemsParams;
         public ItemSlotsParams ItemSlotsParams => itemSlotsParams;

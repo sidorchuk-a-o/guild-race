@@ -19,8 +19,7 @@ namespace Game.Inventory
             new Header("Params (HP/AP/RES)", 150, LengthUnit.Pixel),
             new Header("Type", 205, LengthUnit.Pixel),
             new Header("Slot", 180, LengthUnit.Pixel),
-            new Header("Rarity", 127, LengthUnit.Pixel),
-            new Header("Source")
+            new Header("Rarity", 127, LengthUnit.Pixel)
         };
 
         public override void BindData(SerializedData data)
