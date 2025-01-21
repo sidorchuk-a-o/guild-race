@@ -68,8 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 667744408
   title: 
-  rowSize: 8
-  rowCount: 12
+  rowSize: 10
+  rowCount: 11
   category:
     value: 201
   cellType:
@@ -656,8 +656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 522906889
   title: 
-  rowSize: 8
-  rowCount: 12
+  rowSize: 10
+  rowCount: 11
   category:
     value: 201
   cellType:
@@ -717,8 +717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 433774906
   title: 
-  rowSize: 8
-  rowCount: 12
+  rowSize: 10
+  rowCount: 11
   category:
     value: 201
   cellType:

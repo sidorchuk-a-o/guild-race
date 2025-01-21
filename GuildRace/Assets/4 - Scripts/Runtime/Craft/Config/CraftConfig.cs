@@ -9,12 +9,14 @@ namespace Game.Craft
     {
         [SerializeField] private List<VendorData> vendors;
         [SerializeField] private ReagentsParams reagentsParams = new();
+        [SerializeField] private RemoveItemSlotData removeItemSlot;
 
         private Dictionary<int, VendorData> vendorsCache;
         private Dictionary<int, RecipeData> recipesCache;
 
         public IReadOnlyList<VendorData> Vendors => vendors;
         public ReagentsParams ReagentsParams => reagentsParams;
+        public RemoveItemSlotData RemoveItemSlot => removeItemSlot;
 
         public VendorData GetVendor(int id)
         {

@@ -20,6 +20,7 @@ namespace Game.Craft
         private readonly IInventoryService inventoryService;
 
         public IVendorsCollection Vendors => state.Vendors;
+        public RemoveItemSlotInfo RemoveItemSlot => state.RemoveItemSlot;
 
         public CraftService(
             CraftConfig craftConfig,
@@ -34,7 +35,7 @@ namespace Game.Craft
             this.guildService = guildService;
             this.inventoryService = inventoryService;
 
-            state = new(craftConfig, resolver);
+            state = new(craftConfig, inventoryService, resolver);
         }
 
         public override async UniTask<bool> Init()

@@ -202,6 +202,18 @@ MonoBehaviour:
     power: 0
     health: 30
     resource: 30
+--- !u!114 &-8555131310274555377
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbd4042c7aa6cf4098abee09226e3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-8472422733814341553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3109,6 +3121,7 @@ MonoBehaviour:
   - {fileID: -6806210110799492770}
   - {fileID: -1455371521357839726}
   - {fileID: 674322806141242743}
+  - {fileID: 2861691473548613074, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
   itemsGrids:
   - {fileID: -8197956687249327810, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 1183720720073450144, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
@@ -3125,6 +3138,7 @@ MonoBehaviour:
   itemSlotsParams:
     factories:
     - {fileID: 6431083172281420682}
+    - {fileID: -8555131310274555377}
   itemsGridsParams:
     categories:
     - id: 201

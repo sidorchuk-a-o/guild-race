@@ -31,12 +31,12 @@ namespace Game.Inventory
             item.Value?.SetItemSlot(Id);
         }
 
-        public bool CheckPossibilityOfPlacement(ItemInfo itemInfo)
+        public virtual bool CheckPossibilityOfPlacement(ItemInfo itemInfo)
         {
             return !HasItem && itemInfo.CheckSlotParams(this);
         }
 
-        public bool TryAddItem(ItemInfo item)
+        public virtual bool TryAddItem(ItemInfo item)
         {
             var check = CheckPossibilityOfPlacement(item);
 
@@ -53,7 +53,7 @@ namespace Game.Inventory
             return check;
         }
 
-        public bool TryRemoveItem()
+        public virtual bool TryRemoveItem()
         {
             var check = HasItem;
 

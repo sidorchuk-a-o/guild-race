@@ -68,5 +68,12 @@ namespace Game.Craft
         {
             craftService.StartCraftingProcess(craftingEM);
         }
+
+        // == Remove Items ==
+
+        public RemoveItemSlotVM GetRemoveItemSlot()
+        {
+            return new RemoveItemSlotVM(craftService.RemoveItemSlot, inventoryVMF);
+        }
     }
 }

@@ -65,8 +65,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabs:
   - {fileID: 7471738673301258726}
-  - {fileID: 3532845980642550753}
   - {fileID: 2701959117360575310}
+  - {fileID: 3532845980642550753}
   gridContainer: {fileID: 8695263263285087261}
 --- !u!1001 &4419693060080095993
 PrefabInstance:
@@ -94,6 +94,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2814664506815179960, guid: 4b7e11f514210ea4b98a08cac889386c, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814664506815179960, guid: 4b7e11f514210ea4b98a08cac889386c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814664506815179960, guid: 4b7e11f514210ea4b98a08cac889386c, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2814664506815179960, guid: 4b7e11f514210ea4b98a08cac889386c, type: 3}
@@ -134,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5470223923711108763, guid: 4b7e11f514210ea4b98a08cac889386c, type: 3}
       propertyPath: m_Name
-      value: TabsContainer
+      value: BankTabsContainer
       objectReference: {fileID: 0}
     - target: {fileID: 7331870398836006416, guid: 4b7e11f514210ea4b98a08cac889386c, type: 3}
       propertyPath: m_AnchorMax.y

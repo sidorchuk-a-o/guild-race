@@ -119,8 +119,11 @@ namespace Game.Inventory
 
         public static Collection<int> GetItemSlotsCollection()
         {
-            var keysDict = new Dictionary<string, int>();
             var slots = Config.GetValue<List<ItemSlotData>>("itemSlots");
+            var keysDict = new Dictionary<string, int>
+            {
+                ["<none>"] = -1
+            };
 
             foreach (var slot in slots)
             {

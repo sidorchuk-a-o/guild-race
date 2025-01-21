@@ -14,6 +14,7 @@ namespace Game.Guild
         [Header("Selected Tab")]
         [SerializeField] private ItemsGridContainer gridContainer;
 
+        private readonly CompositeDisp gridDisp = new();
         private CompositeDisp disp;
 
         private GuildBankTabsVM tabsVM;
@@ -34,11 +35,11 @@ namespace Game.Guild
             this.tabsVM = tabsVM;
             this.disp = disp;
 
-            InitTabButtons();
+            InitTabButtons(disp);
             UpdateCurrentTabView();
         }
 
-        private void InitTabButtons()
+        private void InitTabButtons(CompositeDisp disp)
         {
             foreach (var tab in tabs)
             {
@@ -58,10 +59,13 @@ namespace Game.Guild
 
         private void UpdateCurrentTabView()
         {
+            gridDisp.Clear();
+            gridDisp.AddTo(disp);
+
             currentTabVM ??= tabsVM[tabs[0].CellType];
             currentTabVM.SetSelectState(true);
 
-            gridContainer.Init(currentTabVM.GridVM, disp);
+            gridContainer.Init(currentTabVM.GridVM, gridDisp);
         }
     }
 }

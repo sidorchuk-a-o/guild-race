@@ -9,6 +9,7 @@ namespace Game.Craft
     {
         private VendorsList vendorsList;
         private ReagentsParamsEditor reagentsParamsEditor;
+        private RemoveItemSlotElement removeItemSlotEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -16,6 +17,7 @@ namespace Game.Craft
 
             tabs.CreateTab("Vendors", CreateVendorsTab);
             tabs.CreateTabs("Reagent Params", CreateParamsTabs);
+            tabs.CreateTab("Remove Items", CreateRemoveItemsTab);
         }
 
         private void CreateVendorsTab(VisualElement root, SerializedData data)
@@ -29,6 +31,12 @@ namespace Game.Craft
         {
             reagentsParamsEditor = new ReagentsParamsEditor();
             reagentsParamsEditor.CreateTabs(tabs);
+        }
+
+        private void CreateRemoveItemsTab(VisualElement root, SerializedData data)
+        {
+            removeItemSlotEditor = root.CreateElement<RemoveItemSlotElement>();
+            removeItemSlotEditor.BindProperty("removeItemSlot", data);
         }
 
         // == Menu ==
