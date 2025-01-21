@@ -51,9 +51,29 @@ namespace Game.Inventory
         {
             var config = new SerializedData(Config);
 
-            itemsCacheData = config.GetProperty("items");
-            slotsCacheData = config.GetProperty("itemSlots");
-            gridsCacheData = config.GetProperty("itemsGrids");
+            itemsCacheData = GetCache(config, "items");
+            slotsCacheData = GetCache(config, "itemSlots");
+            gridsCacheData = GetCache(config, "itemsGrids");
+        }
+
+        private static SerializedData GetCache(SerializedData config, string PropName)
+        {
+            var cache = config.GetProperty(PropName);
+
+            if (cache.GetValue<IList>() is IList list)
+            {
+                for (var i = list.Count - 1; i >= 0; i--)
+                {
+                    if (list[i] == null)
+                    {
+                        list.RemoveAt(i);
+
+                        cache.MarkAsDirty();
+                    }
+                }
+            }
+
+            return cache;
         }
 
         private void DataFactory_OnDataCreate(object data)

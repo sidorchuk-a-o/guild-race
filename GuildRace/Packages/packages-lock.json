@@ -352,15 +352,6 @@
       "dependencies": {},
       "hash": "931849c7a25d03784478550870ba53a2ee7c5c28"
     },
-    "nl.jeffreylanters.web-requests": {
-      "version": "git+https://github.com/jeffreylanters/unity-web-requests",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.modules.unitywebrequest": ""
-      },
-      "hash": "62b9b9cad98b7b3241837ccfe2a3757239c5ef56"
-    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

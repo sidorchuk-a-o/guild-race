@@ -3112,7 +3112,6 @@ MonoBehaviour:
   itemsGrids:
   - {fileID: -8197956687249327810, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 1183720720073450144, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
-  - {fileID: 6966395837178485508, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 76776547799289294, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 3341094923558873629, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   itemsParams:
