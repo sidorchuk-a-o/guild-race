@@ -166,7 +166,7 @@ MonoBehaviour:
   ignoreParentGroup: 0
   charactersScroll: {fileID: 4146940235130851178}
   bankTabsContainer: {fileID: 4793651307487807200}
-  removeItemSlot: {fileID: 746033063805229841}
+  recycleSlot: {fileID: 746033063805229841}
 --- !u!1 &7347585011020141269
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7491081678902752821, guid: b9b08094123570843b088833395be81c, type: 3}
       propertyPath: m_Name
-      value: RemoveItemSlotContainer
+      value: RecycleSlotContainer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7961442954145976759, guid: 92beb5bd1c1ec534ca17e508c01f0f5e, type: 3}
       propertyPath: m_Size
-      value: 0.87647057
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

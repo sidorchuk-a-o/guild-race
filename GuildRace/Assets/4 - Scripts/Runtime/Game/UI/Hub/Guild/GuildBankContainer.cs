@@ -15,18 +15,18 @@ namespace Game.Guild
 
         [Header("Bunk Tabs")]
         [SerializeField] private GuildBankTabsContainer bankTabsContainer;
-        [SerializeField] private RemoveItemSlotContainer removeItemSlot;
+        [SerializeField] private RecycleSlotContainer recycleSlot;
 
         private CharactersVM charactersVM;
         private GuildBankTabsVM bankTabsVM;
-        private RemoveItemSlotVM removeItemSlotVM;
+        private RecycleSlotVM recycleSlotVM;
 
         [Inject]
         public void Inject(GuildVMFactory guildVMF, CraftVMFactory craftVMF)
         {
             bankTabsVM = guildVMF.GetGuildBankTabs();
             charactersVM = guildVMF.GetRoster();
-            removeItemSlotVM = craftVMF.GetRemoveItemSlot();
+            recycleSlotVM = craftVMF.GetRecycleSlot();
         }
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
@@ -37,11 +37,11 @@ namespace Game.Guild
 
             bankTabsVM.AddTo(disp);
             charactersVM.AddTo(disp);
-            removeItemSlotVM.AddTo(disp);
+            recycleSlotVM.AddTo(disp);
 
             charactersScroll.Init(charactersVM, hasForcedReset);
             bankTabsContainer.Init(bankTabsVM, disp, hasForcedReset);
-            removeItemSlot.Init(removeItemSlotVM, disp);
+            recycleSlot.Init(recycleSlotVM, disp);
         }
     }
 }

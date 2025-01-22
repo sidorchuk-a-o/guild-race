@@ -17,7 +17,7 @@ namespace Game.Craft
         public override SaveSource SaveSource => SaveSource.app;
 
         public IVendorsCollection Vendors => vendors;
-        public RemoveItemSlotInfo RemoveItemSlot { get; }
+        public RecycleSlotInfo RecycleSlot { get; }
 
         public CraftState(
             CraftConfig config,
@@ -27,15 +27,15 @@ namespace Game.Craft
         {
             this.inventoryService = inventoryService;
 
-            RemoveItemSlot = CreateRemoveItemSlot();
+            RecycleSlot = CreateRecycleSlot();
         }
 
-        private RemoveItemSlotInfo CreateRemoveItemSlot()
+        private RecycleSlotInfo CreateRecycleSlot()
         {
-            var slotData = config.RemoveItemSlot;
+            var slotData = config.RecyclingParams.RecycleSlot;
             var slotInfo = inventoryService.Factory.CreateSlot(slotData);
 
-            return slotInfo as RemoveItemSlotInfo;
+            return slotInfo as RecycleSlotInfo;
         }
 
         // == Save ==

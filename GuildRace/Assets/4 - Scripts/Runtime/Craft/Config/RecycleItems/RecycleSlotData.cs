@@ -2,7 +2,7 @@
 
 namespace Game.Craft
 {
-    public class RemoveItemSlotContainer : ItemSlotContainer
+    public class RecycleSlotData : ItemSlotData
     {
     }
 }

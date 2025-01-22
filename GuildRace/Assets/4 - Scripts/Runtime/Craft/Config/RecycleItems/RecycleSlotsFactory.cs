@@ -3,15 +3,15 @@ using System;
 
 namespace Game.Craft
 {
-    public class RemoveItemSlotsFactory : ItemSlotsFactory
+    public class RecycleSlotsFactory : ItemSlotsFactory
     {
-        public override Type DataType { get; } = typeof(RemoveItemSlotData);
+        public override Type DataType { get; } = typeof(RecycleSlotData);
 
         protected override ItemSlotInfo CreateInfo(string id, ItemSlotData data)
         {
-            var removeSlotData = data as RemoveItemSlotData;
+            var recycleSlotData = data as RecycleSlotData;
 
-            return new RemoveItemSlotInfo(id, removeSlotData);
+            return new RecycleSlotInfo(id, recycleSlotData);
         }
 
         public override ItemSlotSM CreateSave(ItemSlotInfo info)

@@ -1,20 +1,14 @@
 ﻿using AD.ToolsCollection;
-using UnityEngine.UIElements;
 
 namespace Game.Craft
 {
     /// <summary>
-    /// Element: <see cref="RemoveItemSlotData"/>
+    /// Element: <see cref="RecycleSlotData"/>
     /// </summary>
-    public class RemoveItemSlotElement : Element
+    public class RecycleSlotElement : Element
     {
-        private Label labelField;
-
         protected override void CreateElementGUI(Element root)
         {
-            labelField = root.Create<Label>();
-            labelField.Height(50).FontSize(16).TextAnchor(UnityEngine.TextAnchor.MiddleCenter);
-            labelField.text = "RemoveItemSlot - Created";
         }
 
         public override void BindData(SerializedData data)
@@ -23,8 +17,10 @@ namespace Game.Craft
 
             if (data.GetValue() == null)
             {
-                var newData = DataFactory.Create<RemoveItemSlotData>();
+                var newData = DataFactory.Create<RecycleSlotData>();
                 var saveMeta = new SaveMeta(isSubObject: true, data);
+
+                newData.SetTitle("Recycle Slot");
 
                 DataFactory.Save(newData, saveMeta);
 

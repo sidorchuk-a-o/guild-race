@@ -27,8 +27,9 @@ namespace Game.Inventory
 
         public void SetItem(ItemInfo value)
         {
+            value?.SetItemSlot(Id);
+
             item.Value = value;
-            item.Value?.SetItemSlot(Id);
         }
 
         public virtual bool CheckPossibilityOfPlacement(ItemInfo itemInfo)

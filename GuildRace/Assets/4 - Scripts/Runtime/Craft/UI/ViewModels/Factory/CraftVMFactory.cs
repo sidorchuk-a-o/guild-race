@@ -69,11 +69,18 @@ namespace Game.Craft
             craftService.StartCraftingProcess(craftingEM);
         }
 
-        // == Remove Items ==
+        // == Recycle Items ==
 
-        public RemoveItemSlotVM GetRemoveItemSlot()
+        public RecycleSlotVM GetRecycleSlot()
         {
-            return new RemoveItemSlotVM(craftService.RemoveItemSlot, inventoryVMF);
+            return new RecycleSlotVM(craftService.RecycleSlot, inventoryVMF);
+        }
+
+        public RecyclingResultVM GetRecyclingParams(string itemId)
+        {
+            var data = craftService.GetRecyclingResult(itemId);
+
+            return data != null ? new RecyclingResultVM(data, inventoryVMF) : null;
         }
     }
 }

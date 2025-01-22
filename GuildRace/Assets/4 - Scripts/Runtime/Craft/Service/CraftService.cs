@@ -2,8 +2,10 @@
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
+using Game.Instances;
 using Game.Inventory;
 using System.Linq;
+using UniRx;
 using UnityEngine;
 using VContainer;
 
@@ -20,7 +22,7 @@ namespace Game.Craft
         private readonly IInventoryService inventoryService;
 
         public IVendorsCollection Vendors => state.Vendors;
-        public RemoveItemSlotInfo RemoveItemSlot => state.RemoveItemSlot;
+        public RecycleSlotInfo RecycleSlot => state.RecycleSlot;
 
         public CraftService(
             CraftConfig craftConfig,
@@ -42,7 +44,8 @@ namespace Game.Craft
         {
             state.Init();
 
-            CreateReagents(); // TODO: TEMP
+            //CreateReagents(); // TODO: TEMP
+            InitRecycleProcess();
 
             return await Inited();
         }
@@ -76,6 +79,152 @@ namespace Game.Craft
                 inventoryService.TryPlaceItem(placementArgs);
             }
         }
+
+        // == Recycling ==
+
+        private void InitRecycleProcess()
+        {
+            state.RecycleSlot.Item
+                .Where(x => x != null)
+                .Subscribe(StartRecycleProcess);
+        }
+
+        private void StartRecycleProcess(ItemInfo item)
+        {
+            var recyclingParams = GetRecyclingResult(item.Id);
+
+            // create reagent
+            var newItemId = recyclingParams.ReagentId;
+            var newItem = inventoryService.Factory.CreateItem(newItemId);
+
+            if (newItem is not ReagentItemInfo reagentItem)
+            {
+                return;
+            }
+
+            // find bank tab
+            var reagentsParams = craftConfig.ReagentsParams;
+            var reagentCellTypes = reagentsParams.GridParams.CellTypes;
+
+            var reagentsBank = guildService.BankTabs
+                .Select(x => x.Grid)
+                .FirstOrDefault(x => reagentCellTypes.Contains(x.CellType));
+
+            // place in bank
+            var reagentCount = recyclingParams.Count;
+
+            reagentItem.Stack.SetValue(reagentCount);
+
+            var placementArgs = new PlaceInPlacementArgs
+            {
+                ItemId = reagentItem.Id,
+                PlacementId = reagentsBank.Id
+            };
+
+            inventoryService.TryPlaceItem(placementArgs);
+
+            // remove item
+            var removeArgs = new RemoveFromSlotArgs
+            {
+                ItemId = item.Id
+            };
+
+            inventoryService.TryRemoveItem(removeArgs);
+        }
+
+        public RecyclingResult GetRecyclingResult(string itemId)
+        {
+            const float recyclePercent = .3f;
+
+            var item = inventoryService.GetItem(itemId);
+
+            if (item is ReagentItemInfo)
+            {
+                return null;
+            }
+
+            var recipe = craftConfig.GetRecipeByItem(item.DataId)
+                      ?? GetNearbyRecipe(item.DataId);
+
+            var ingredient = recipe.Ingredients[0];
+
+            var stack = GetStack(item);
+            var rarity = GetRarity(item);
+            var rariryMod = craftConfig.RecyclingParams.GetRarityMod(rarity);
+
+            var recyclingResult = Mathf.CeilToInt(ingredient.Count * recyclePercent) * rariryMod.Value * stack;
+
+            return new RecyclingResult
+            {
+                ReagentId = ingredient.ReagentId,
+                Count = recyclingResult
+            };
+        }
+
+        private RecipeData GetNearbyRecipe(int dataId)
+        {
+            var itemData = inventoryConfig.GetItem(dataId);
+            var itemType = itemData.GetType();
+
+            var vendors = craftConfig.Vendors.Where(vendor =>
+            {
+                var productItemId = vendor.Recipes[0].ProductItemId;
+                var productData = inventoryConfig.GetItem(productItemId);
+
+                return itemType == productData.GetType();
+            });
+
+            var recipe = vendors.SelectMany(x => x.Recipes).FirstOrDefault(recipe =>
+            {
+                var productData = inventoryConfig.GetItem(recipe.ProductItemId);
+
+                // TODO: добавить в конфиг хелперы для сравнения предметов на переработку
+                return productData switch
+                {
+                    EquipItemData => checkEquips(productData, itemData),
+                    СonsumablesItemData => checkСonsumables(productData, itemData),
+                    _ => false
+                };
+
+                bool checkEquips(ItemData a, ItemData b)
+                {
+                    // предметы из данжа не создаются, ищем по общим параметрам
+                    return a is EquipItemData ea
+                        && b is EquipItemData eb
+                        && ea.Slot == eb.Slot
+                        && ea.Type == eb.Type;
+                }
+
+                bool checkСonsumables(ItemData a, ItemData b)
+                {
+                    // все расходники создаются через крафт
+                    return a.Id == b.Id;
+                }
+            });
+
+            return recipe;
+        }
+
+        private int GetStack(ItemInfo item)
+        {
+            return item switch
+            {
+                IStackableItem stackableItem => stackableItem.Stack.Value,
+                _ => 1
+            };
+        }
+
+        private Rarity GetRarity(ItemInfo item)
+        {
+            return item switch
+            {
+                СonsumablesItemInfo сonsumables => сonsumables.Rarity,
+                EquipItemInfo equip => equip.Rarity,
+                _ => -1
+            };
+        }
+
+        // == Crafting ==
 
         public void StartCraftingProcess(StartCraftingEM craftingEM)
         {

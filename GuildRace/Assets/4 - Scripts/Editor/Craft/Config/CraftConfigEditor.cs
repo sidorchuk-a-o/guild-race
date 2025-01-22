@@ -9,15 +9,15 @@ namespace Game.Craft
     {
         private VendorsList vendorsList;
         private ReagentsParamsEditor reagentsParamsEditor;
-        private RemoveItemSlotElement removeItemSlotEditor;
+        private RecyclingParamsEditor recyclingParamsEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
             base.CreateTabItems(tabs);
 
             tabs.CreateTab("Vendors", CreateVendorsTab);
-            tabs.CreateTabs("Reagent Params", CreateParamsTabs);
-            tabs.CreateTab("Remove Items", CreateRemoveItemsTab);
+            tabs.CreateTabs("Reagent Params", CreateReagentParamsTabs);
+            tabs.CreateTabs("Recycling Params", CreateRecyclingParamsTabs);
         }
 
         private void CreateVendorsTab(VisualElement root, SerializedData data)
@@ -27,16 +27,16 @@ namespace Game.Craft
             vendorsList.FlexWidth(50);
         }
 
-        private void CreateParamsTabs(TabsContainer tabs)
+        private void CreateReagentParamsTabs(TabsContainer tabs)
         {
             reagentsParamsEditor = new ReagentsParamsEditor();
             reagentsParamsEditor.CreateTabs(tabs);
         }
 
-        private void CreateRemoveItemsTab(VisualElement root, SerializedData data)
+        private void CreateRecyclingParamsTabs(TabsContainer tabs)
         {
-            removeItemSlotEditor = root.CreateElement<RemoveItemSlotElement>();
-            removeItemSlotEditor.BindProperty("removeItemSlot", data);
+            recyclingParamsEditor = new RecyclingParamsEditor();
+            recyclingParamsEditor.CreateTabs(tabs);
         }
 
         // == Menu ==

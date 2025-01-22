@@ -89,7 +89,7 @@ namespace Game.Inventory
 
         // == Pickup Preview ==
 
-        public async void ShowPickupPreview(ItemVM itemVM, string state)
+        public virtual async void ShowPickupPreview(ItemVM itemVM, string state)
         {
             if (pickupPreviewImage)
             {
@@ -99,7 +99,7 @@ namespace Game.Inventory
             ViewModel.PickupStateVM.SetState(state);
         }
 
-        public void ResetPickupPreview()
+        public virtual void ResetPickupPreview()
         {
             if (pickupPreviewImage)
             {
