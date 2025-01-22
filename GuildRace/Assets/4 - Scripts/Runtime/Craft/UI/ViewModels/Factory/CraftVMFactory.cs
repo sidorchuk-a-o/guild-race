@@ -68,5 +68,19 @@ namespace Game.Craft
         {
             craftService.StartCraftingProcess(craftingEM);
         }
+
+        // == Recycle Items ==
+
+        public RecycleSlotVM GetRecycleSlot()
+        {
+            return new RecycleSlotVM(craftService.RecycleSlot, inventoryVMF);
+        }
+
+        public RecyclingResultVM GetRecyclingParams(string itemId)
+        {
+            var data = craftService.GetRecyclingResult(itemId);
+
+            return data != null ? new RecyclingResultVM(data, inventoryVMF) : null;
+        }
     }
 }

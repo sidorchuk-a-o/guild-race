@@ -50,9 +50,12 @@ namespace Game.Inventory
         {
             ViewModel = slotVM;
 
-            slotVM.ItemVM
-                .Subscribe(x => ItemChangedCallback(x, disp))
-                .AddTo(disp);
+            if (itemPreview)
+            {
+                slotVM.ItemVM
+                    .Subscribe(x => ItemChangedCallback(x, disp))
+                    .AddTo(disp);
+            }
 
             slotVM.PickupStateVM.Value
                 .Subscribe(pickupStates.SetState)
@@ -86,16 +89,22 @@ namespace Game.Inventory
 
         // == Pickup Preview ==
 
-        public async void ShowPickupPreview(ItemVM itemVM, string state)
+        public virtual async void ShowPickupPreview(ItemVM itemVM, string state)
         {
-            pickupPreviewImage.sprite = await itemVM.LoadIcon();
+            if (pickupPreviewImage)
+            {
+                pickupPreviewImage.sprite = await itemVM.LoadIcon();
+            }
 
             ViewModel.PickupStateVM.SetState(state);
         }
 
-        public void ResetPickupPreview()
+        public virtual void ResetPickupPreview()
         {
-            pickupPreviewImage.sprite = null;
+            if (pickupPreviewImage)
+            {
+                pickupPreviewImage.sprite = null;
+            }
 
             ViewModel.PickupStateVM.ResetState();
         }

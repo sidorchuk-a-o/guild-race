@@ -2,6 +2,7 @@
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
+using Game.Craft;
 using UnityEngine;
 using VContainer;
 
@@ -14,28 +15,33 @@ namespace Game.Guild
 
         [Header("Bunk Tabs")]
         [SerializeField] private GuildBankTabsContainer bankTabsContainer;
+        [SerializeField] private RecycleSlotContainer recycleSlot;
 
         private CharactersVM charactersVM;
         private GuildBankTabsVM bankTabsVM;
+        private RecycleSlotVM recycleSlotVM;
 
         [Inject]
-        public void Inject(GuildVMFactory guildVMF)
+        public void Inject(GuildVMFactory guildVMF, CraftVMFactory craftVMF)
         {
             bankTabsVM = guildVMF.GetGuildBankTabs();
             charactersVM = guildVMF.GetRoster();
+            recycleSlotVM = craftVMF.GetRecycleSlot();
         }
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
         {
             await base.Init(parameters, disp);
 
+            var hasForcedReset = parameters.HasForceReset();
+
             bankTabsVM.AddTo(disp);
             charactersVM.AddTo(disp);
-
-            var hasForcedReset = parameters.HasForceReset();
+            recycleSlotVM.AddTo(disp);
 
             charactersScroll.Init(charactersVM, hasForcedReset);
             bankTabsContainer.Init(bankTabsVM, disp, hasForcedReset);
+            recycleSlot.Init(recycleSlotVM, disp);
         }
     }
 }
