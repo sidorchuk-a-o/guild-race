@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Instances
 {
-    public class СonsumablesItemData : ItemData, IStackable
+    public class ConsumablesItemData : ItemData, IStackable
     {
         // Params
         [SerializeField] private Rarity rarity;

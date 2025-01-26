@@ -13,7 +13,7 @@ namespace Game.Instances
         // params
         [SerializeField] private SquadParams squadParams;
         [SerializeField] private ActiveInstanceParams activeInstanceParams;
-        [SerializeField] private СonsumablesParams consumablesParams;
+        [SerializeField] private ConsumablesParams consumablesParams;
 
         private Dictionary<int, SeasonData> seasonsCache;
         private Dictionary<int, InstanceData> instancesCache;
@@ -24,7 +24,7 @@ namespace Game.Instances
 
         public SquadParams SquadParams => squadParams;
         public ActiveInstanceParams ActiveInstanceParams => activeInstanceParams;
-        public СonsumablesParams ConsumablesParams => consumablesParams;
+        public ConsumablesParams ConsumablesParams => consumablesParams;
 
         public SeasonData GetSeason(int id)
         {

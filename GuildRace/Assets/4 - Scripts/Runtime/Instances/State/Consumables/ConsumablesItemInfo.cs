@@ -3,13 +3,13 @@ using Game.Inventory;
 
 namespace Game.Instances
 {
-    public class СonsumablesItemInfo : ItemInfo, IStackableItem
+    public class ConsumablesItemInfo : ItemInfo, IStackableItem
     {
         public ItemStackInfo Stack { get; }
         public Rarity Rarity { get; }
         public LocalizeKey DescKey { get; }
 
-        public СonsumablesItemInfo(string id, СonsumablesItemData data) : base(id, data)
+        public ConsumablesItemInfo(string id, ConsumablesItemData data) : base(id, data)
         {
             Stack = new(data.Stack);
             Rarity = data.Rarity;

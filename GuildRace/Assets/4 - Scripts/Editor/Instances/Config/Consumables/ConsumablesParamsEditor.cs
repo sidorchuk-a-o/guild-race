@@ -5,11 +5,11 @@ using UnityEngine.UIElements;
 namespace Game.Instances
 {
     /// <summary>
-    /// Editor: <see cref="СonsumablesParams"/>
+    /// Editor: <see cref="ConsumablesParams"/>
     /// </summary>
-    public class СonsumablesParamsEditor
+    public class ConsumablesParamsEditor
     {
-        private СonsumablesItemsList itemsList;
+        private ConsumablesItemsList itemsList;
         private GridParamsForItemsElement gridParamsEditor;
 
         private SerializedData GetData(SerializedData data)
@@ -25,7 +25,7 @@ namespace Game.Instances
 
         private void CreateItemsTab(VisualElement root, SerializedData data)
         {
-            itemsList = root.CreateElement<СonsumablesItemsList>();
+            itemsList = root.CreateElement<ConsumablesItemsList>();
             itemsList.BindProperty("items", GetData(data));
         }
 

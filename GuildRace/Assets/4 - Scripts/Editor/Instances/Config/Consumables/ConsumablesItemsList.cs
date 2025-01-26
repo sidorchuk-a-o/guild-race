@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 namespace Game.Instances
 {
-    public class СonsumablesItemsList : ListElement<СonsumablesItemData, СonsumablesItemItem>
+    public class ConsumablesItemsList : ListElement<ConsumablesItemData, ConsumablesItemItem>
     {
         protected override List<Header> Headers => new()
         {
@@ -19,7 +19,7 @@ namespace Game.Instances
             showCloneButton = false;
             showRemoveButton = false;
 
-            wizardType = typeof(СonsumablesItemImportWizard);
+            wizardType = typeof(ConsumablesItemImportWizard);
 
             base.BindData(data);
         }

@@ -4,18 +4,18 @@ using Newtonsoft.Json;
 namespace Game.Instances
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class СonsumablesItemSM : ItemSM
+    public class ConsumablesItemSM : ItemSM
     {
         [ES3Serializable] private ItemStackSM stackSM;
 
-        public СonsumablesItemSM(СonsumablesItemInfo info) : base(info)
+        public ConsumablesItemSM(ConsumablesItemInfo info) : base(info)
         {
             stackSM = new(info.Stack);
         }
 
-        public СonsumablesItemInfo GetValue(СonsumablesItemData data)
+        public ConsumablesItemInfo GetValue(ConsumablesItemData data)
         {
-            var info = new СonsumablesItemInfo(id, data);
+            var info = new ConsumablesItemInfo(id, data);
 
             stackSM.ApplyValues(info.Stack);
             boundsSM.ApplyValues(info.Bounds);

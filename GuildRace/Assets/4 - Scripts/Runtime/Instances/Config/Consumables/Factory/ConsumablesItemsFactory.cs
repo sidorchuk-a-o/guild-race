@@ -4,11 +4,11 @@ using VContainer;
 
 namespace Game.Instances
 {
-    public class СonsumablesItemsFactory : ItemsFactory
+    public class ConsumablesItemsFactory : ItemsFactory
     {
         private InstancesConfig config;
 
-        public override Type DataType { get; } = typeof(СonsumablesItemData);
+        public override Type DataType { get; } = typeof(ConsumablesItemData);
 
         [Inject]
         public void Inject(InstancesConfig config)
@@ -18,8 +18,8 @@ namespace Game.Instances
 
         protected override ItemInfo CreateInfo(string id, ItemData data)
         {
-            var consumablesData = data as СonsumablesItemData;
-            var consumables = new СonsumablesItemInfo(id, consumablesData);
+            var consumablesData = data as ConsumablesItemData;
+            var consumables = new ConsumablesItemInfo(id, consumablesData);
 
             consumables.SetGridParams(config.ConsumablesParams.GridParams);
 
@@ -28,13 +28,13 @@ namespace Game.Instances
 
         public override ItemSM CreateSave(ItemInfo info)
         {
-            return new СonsumablesItemSM(info as СonsumablesItemInfo);
+            return new ConsumablesItemSM(info as ConsumablesItemInfo);
         }
 
         protected override ItemInfo ReadSave(ItemData data, ItemSM save)
         {
-            var consumablesData = data as СonsumablesItemData;
-            var consumablesSave = save as СonsumablesItemSM;
+            var consumablesData = data as ConsumablesItemData;
+            var consumablesSave = save as ConsumablesItemSM;
 
             var consumables = consumablesSave.GetValue(consumablesData);
 

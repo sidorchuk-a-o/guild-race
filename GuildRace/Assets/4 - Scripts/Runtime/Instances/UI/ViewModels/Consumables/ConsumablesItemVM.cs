@@ -5,9 +5,9 @@ using Game.UI;
 
 namespace Game.Instances
 {
-    public class СonsumablesItemVM : ItemVM, IStackableItemVM
+    public class ConsumablesItemVM : ItemVM, IStackableItemVM
     {
-        private readonly СonsumablesItemInfo info;
+        private readonly ConsumablesItemInfo info;
 
         public Rarity Rarity { get; }
         public LocalizeKey DescKey { get; }
@@ -15,7 +15,7 @@ namespace Game.Instances
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
 
-        public СonsumablesItemVM(СonsumablesItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
+        public ConsumablesItemVM(ConsumablesItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
             this.info = info;
 

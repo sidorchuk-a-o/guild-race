@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Game.Instances
 {
-    public class СonsumablesInSlotComponent : ItemInSlotComponent
+    public class ConsumablesInGridComponent : ItemInGridComponent
     {
         [Header("Stack")]
         [SerializeField] private UIStates stackableStates;
@@ -18,13 +18,13 @@ namespace Game.Instances
         {
             base.Init(itemVM, disp);
 
-            var сonsumablesVM = itemVM as СonsumablesItemVM;
+            var consumablesVM = itemVM as ConsumablesItemVM;
 
-            сonsumablesVM.StackableStateVM.Value
+            consumablesVM.StackableStateVM.Value
                 .Subscribe(stackableStates.SetState)
                 .AddTo(disp);
 
-            itemStackComponent.Init(сonsumablesVM.StackVM, disp);
+            itemStackComponent.Init(consumablesVM.StackVM, disp);
         }
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine.UIElements;
 namespace Game.Instances
 {
     /// <summary>
-    /// Item: <see cref="СonsumablesItemData"/>
+    /// Item: <see cref="ConsumablesItemData"/>
     /// </summary>
-    public class СonsumablesItemItem : ListItemElement
+    public class ConsumablesItemItem : ListItemElement
     {
         private PropertyElement idLabel;
         private LabelElement titleLabel;

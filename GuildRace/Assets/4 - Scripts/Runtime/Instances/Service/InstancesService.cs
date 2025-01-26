@@ -57,7 +57,7 @@ namespace Game.Instances
 
             appEvents.AddAppTickListener(activeInstanceModule);
 
-            CreateСonsumables(); // TODO: TEMP
+            CreateConsumables(); // TODO: TEMP
 
             return await Inited();
         }
@@ -65,7 +65,7 @@ namespace Game.Instances
         /// <summary>
         /// TEMP
         /// </summary>
-        private void CreateСonsumables()
+        private void CreateConsumables()
         {
             var consumablesParams = instancesConfig.ConsumablesParams;
             var consumablesCellTypes = consumablesParams.GridParams.CellTypes;
@@ -76,7 +76,7 @@ namespace Game.Instances
 
             var consumablesItems = consumablesParams.Items
                 .Select(x => inventoryService.Factory.CreateItem(x))
-                .OfType<СonsumablesItemInfo>();
+                .OfType<ConsumablesItemInfo>();
 
             foreach (var consumables in consumablesItems)
             {

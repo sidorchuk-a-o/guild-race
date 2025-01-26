@@ -4,8 +4,8 @@ using Game.Inventory;
 
 namespace Game.Instances
 {
-    [CreateWizard(typeof(СonsumablesItemData))]
-    public class СonsumablesItemImportWizard : ItemDataImportWizard
+    [CreateWizard(typeof(ConsumablesItemData))]
+    public class ConsumablesItemImportWizard : ItemDataImportWizard
     {
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "consumables";
