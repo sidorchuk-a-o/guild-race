@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8981516f988de74b8bedeb23c5ca38c, type: 3}
+  m_Name: QuestsServiceInstaller
+  m_EditorClassIdentifier: 
+  id: ee8c1ddabaa14378842927267396776f
+  title: Quests  Service
+  enabled: 1
+  order: 500
+  configRef:
+    m_AssetGUID: 8823a2cef6afd4f4ea3262f3c6d6e9bd
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1

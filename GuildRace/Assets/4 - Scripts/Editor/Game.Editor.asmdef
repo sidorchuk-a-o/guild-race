@@ -7,6 +7,7 @@
         "AD.Core.Editor",
         "AD.ToolsCollection",
         "AD.ToolsCollection.Editor",
+        "ACTk.Runtime",
         "I2Localization",
         "Unity.ResourceManager",
         "Unity.Addressables",
