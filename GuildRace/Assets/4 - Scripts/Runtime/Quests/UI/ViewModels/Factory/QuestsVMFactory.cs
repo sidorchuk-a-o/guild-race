@@ -27,6 +27,11 @@ namespace Game.Quests
             return new QuestMechanicVM(mechanic);
         }
 
+        public CompletedQuestsVM GetCompletedQuests()
+        {
+            return new CompletedQuestsVM(questsService);
+        }
+
         public void TakeQuestReward(TakeRewardArgs args)
         {
             questsService.TakeQuestReward(args);
