@@ -36,6 +36,18 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+--- !u!114 &-7747619364179239090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76d16b487180544981983220a2e1dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +65,7 @@ MonoBehaviour:
   - {fileID: 3941234877957987389}
   - {fileID: -8780754627985467287}
   - {fileID: 6893162987156986704}
+  - {fileID: -7747619364179239090}
 --- !u!114 &719888801571365860
 MonoBehaviour:
   m_ObjectHideFlags: 1

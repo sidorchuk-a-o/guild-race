@@ -1,0 +1,891 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6439480853414721079
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8d99edf432e7a43af2160788578c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 26
+  title: "\u0421\u0434\u0430\u0447\u0430 \u0440\u0430\u0441\u0445\u043E\u0434\u043D\u0438\u043A\u043E\u0432"
+  nameKey:
+    value: QUESTS/QUEST_MECHANIC_26_TTL
+  descKey:
+    value: QUESTS/QUEST_MECHANIC_26_DSC
+--- !u!114 &-4799863275862927487
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1ebcf6937ed2a458e6f8f456112c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 21
+  title: "\u041F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u043E\u0433\u043E
+    \u0431\u043E\u0441\u0441\u0430"
+  nameKey:
+    value: QUESTS/QUEST_MECHANIC_21_TTL
+  descKey:
+    value: QUESTS/QUEST_MECHANIC_21_DSC
+--- !u!114 &-3623957146100002963
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a344237576da4f865cbf8d992f6af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 25
+  title: "\u0421\u0431\u043E\u0440 \u0438 \u0441\u0434\u0430\u0447\u0430 \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u043E\u0432"
+  nameKey:
+    value: QUESTS/QUEST_MECHANIC_25_TTL
+  descKey:
+    value: QUESTS/QUEST_MECHANIC_25_DSC
+--- !u!114 &-606092070064157701
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ec21382b590124f950b91ced9988a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 23
+  title: "\u041F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445
+    \u0431\u043E\u0441\u0441\u043E\u0432"
+  nameKey:
+    value: QUESTS/QUEST_MECHANIC_23_TTL
+  descKey:
+    value: QUESTS/QUEST_MECHANIC_23_DSC
+--- !u!114 &-456478674626762270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8cb5fada1efda4bb0a59c98adc491b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11
+  title: "\u0420\u0430\u0437 \u0432 \u0434\u0435\u043D\u044C"
+  nameKey:
+    value: QUESTS/DAILY_GROUP_TTL
+  maxQuestsCount: 3
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64688fbe37613e468b988d5ad1b9a51, type: 3}
+  m_Name: QuestsConfig
+  m_EditorClassIdentifier: 
+  quests:
+  - id: 1001
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0411\u0443\u0440\u0435\u043A\u0430
+      \u0432 \u0425\u0440\u0430\u043C\u0435 \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20011
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1002
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041A\u0430\u043F\u0438\u0442\u0430\u043D\u0430
+      \u0441\u0442\u0440\u0430\u0436\u0438 \u0432 \u0425\u0440\u0430\u043C\u0435
+      \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20012
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1003
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440\u0430
+      \u0423\u0440\u0442\u0430 \u0432 \u0425\u0440\u0430\u043C\u0435 \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20013
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1004
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041A\u0435\u0441\u043F\u0438\u0440\u0430
+      \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u043E\u0433\u043E \u0432
+      \u0425\u0440\u0430\u043C\u0435 \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20014
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1005
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0422\u0435\u043C\u043D\u0443\u044E
+      \u043B\u0443\u0447\u043D\u0438\u0446\u0443 \u0417\u0430\u0432\u0435\u0442\u0430
+      \u0432 \u0425\u0440\u0430\u043C\u0435 \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20015
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1006
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041D\u0430\u0430\u043B\u0430
+      \u0432 \u0425\u0440\u0430\u043C\u0435 \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20016
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1007
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041E\u0433\u0440\u0430-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A\u0430
+      \u0432 \u041A\u0440\u0435\u043F\u043E\u0441\u0442\u0438 \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20017
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1008
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041A\u043E\u0440\u0437\u0443
+      \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C \u0432 \u041A\u0440\u0435\u043F\u043E\u0441\u0442\u0438
+      \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20018
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1009
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0418\u043D\u0433\u0440\u0438\u0434
+      \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0443 \u0432 \u041A\u0440\u0435\u043F\u043E\u0441\u0442\u0438
+      \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20019
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1010
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041E\u0433\u0440\u0430-\u0433\u0440\u043E\u043C\u0438\u043B\u0443
+      \u0432 \u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u043E\u043C \u0433\u0440\u043E\u0442\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20020
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1011
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0410\u0440\u0438\u043C\u0430
+      \u0432 \u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u043E\u043C \u0433\u0440\u043E\u0442\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20021
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1012
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u041A\u0430\u0440\u0433\u0430
+      \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442\u0430 \u0432 \u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u043E\u043C
+      \u0433\u0440\u043E\u0442\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20022
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1013
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0413\u0430'\u0420\u0430\u0442\u0430
+      \u0432 \u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u043C
+      \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20023
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1014
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0418\u0433\u0430\u043D\u0430
+      \u0411\u0435\u0440\u0441\u043A\u0430 \u0432 \u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u043C
+      \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20024
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1015
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0427\u043E\u043A\u043D\u0443\u0442\u043E\u0433\u043E
+      \u0442\u0440\u0430\u0432\u043D\u0438\u043A\u0430 \u0432 \u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u043C
+      \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20025
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1016
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0420\u0438\u0430\u0440\u0434\u043E\u043D
+      \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C \u0432 \u0412\u044B\u0436\u0436\u0435\u043D\u043D\u043E\u0439
+      \u043A\u0443\u0437\u043D\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20026
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1017
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445\u0430
+      \u0432 \u0412\u044B\u0436\u0436\u0435\u043D\u043D\u043E\u0439 \u043A\u0443\u0437\u043D\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20027
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1018
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0421\u0442\u0430\u0440\u0448\u0435\u0433\u043E
+      \u043A\u0443\u0437\u043D\u0435\u0446\u0430 \u0424\u0435\u043D\u0438\u0442\u0430
+      \u0432 \u0412\u044B\u0436\u0436\u0435\u043D\u043D\u043E\u0439 \u043A\u0443\u0437\u043D\u0435"
+    groupId:
+      value: 11
+    mechanicId: 21
+    requiredProgress: 1
+    mechanicParams:
+    - 20028
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1019
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C 3 \u0431\u043E\u0441\u0441\u043E\u0432
+      \u0432 \u0441\u0440\u0430\u0436\u0435\u043D\u0438\u044F\u0445 \u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F\u0445"
+    groupId:
+      value: 12
+    mechanicId: 23
+    requiredProgress: 3
+    mechanicParams:
+    - 251
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1020
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C 2 \u0431\u043E\u0441\u0441\u043E\u0432
+      \u0432 \u0441\u0440\u0430\u0436\u0435\u043D\u0438\u044F\u0445 \u0432 \u0425\u0440\u0430\u043C\u0435
+      \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 23
+    requiredProgress: 2
+    mechanicParams:
+    - 252
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1021
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C 5 \u0431\u043E\u0441\u0441\u043E\u0432
+      \u0432 \u0441\u0440\u0430\u0436\u0435\u043D\u0438\u044F\u0445 \u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F\u0445"
+    groupId:
+      value: 12
+    mechanicId: 23
+    requiredProgress: 5
+    mechanicParams:
+    - 251
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1022
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C 8 \u0431\u043E\u0441\u0441\u043E\u0432
+      \u0432 \u0441\u0440\u0430\u0436\u0435\u043D\u0438\u044F\u0445 \u0432 \u0425\u0440\u0430\u043C\u0435
+      \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 23
+    requiredProgress: 8
+    mechanicParams:
+    - 252
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1023
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C 4 \u0431\u043E\u0441\u0441\u043E\u0432
+      \u0432 \u0441\u0440\u0430\u0436\u0435\u043D\u0438\u044F\u0445 \u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F\u0445"
+    groupId:
+      value: 12
+    mechanicId: 23
+    requiredProgress: 4
+    mechanicParams:
+    - 251
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1024
+    title: "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C 6 \u0431\u043E\u0441\u0441\u043E\u0432
+      \u0432 \u0441\u0440\u0430\u0436\u0435\u043D\u0438\u044F\u0445 \u0432 \u0425\u0440\u0430\u043C\u0435
+      \u041F\u0443\u0441\u0442\u043E\u0442\u044B"
+    groupId:
+      value: 12
+    mechanicId: 23
+    requiredProgress: 6
+    mechanicParams:
+    - 252
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1025
+    title: "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
+      \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u041A\u0440\u0435\u043F\u043E\u0441\u0442\u0438
+      \u0411\u0430\u0433\u0440\u0435\u0437\u0438\u044F"
+    groupId:
+      value: 12
+    mechanicId: 22
+    requiredProgress: 1
+    mechanicParams:
+    - 301
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1026
+    title: "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
+      \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u0421\u0443\u043C\u0435\u0440\u0435\u0447\u043D\u043E\u0433\u043E
+      \u0413\u0440\u043E\u0442\u0430"
+    groupId:
+      value: 12
+    mechanicId: 22
+    requiredProgress: 1
+    mechanicParams:
+    - 302
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1027
+    title: "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
+      \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u0433\u043E
+      \u041B\u0430\u0431\u0438\u0440\u0438\u043D\u0442\u0430"
+    groupId:
+      value: 12
+    mechanicId: 22
+    requiredProgress: 1
+    mechanicParams:
+    - 303
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1028
+    title: "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
+      \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u0412\u044B\u0436\u0436\u0435\u043D\u043D\u043E\u0439
+      \u043A\u0443\u0437\u043D\u0438"
+    groupId:
+      value: 12
+    mechanicId: 22
+    requiredProgress: 1
+    mechanicParams:
+    - 304
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1029
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u0425\u043B\u043E\u043F\u043A\u043E\u0432\u043E\u0435 \u043F\u043E\u043B\u043E\u0442\u043D\u043E"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1001
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1030
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u043E\u0436\u0430"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1002
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1031
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u041C\u0435\u0434\u043D\u044B\u0439 \u0441\u043B\u0438\u0442\u043E\u043A"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1003
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1032
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u041B\u0438\u0441\u0442\u043E\u0446\u0432\u0435\u0442"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1004
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1033
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u0414\u0443\u0431\u043E\u043A\u043E\u0440\u0435\u043D\u044C"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1005
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1034
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u041A\u0440\u0430\u0441\u043D\u044B\u0439 \u043B\u043E\u0442\u043E\u0441"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1006
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1035
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u041C\u044F\u0441\u043D\u044B\u0435 \u0437\u0430\u0433\u043E\u0442\u043E\u0432\u043A\u0438"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1007
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1036
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u0420\u0443\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0437\u0430\u0433\u043E\u0442\u043E\u0432\u043A\u0430"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1008
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1037
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u043F\u0440\u0438\u0440\u043E\u0434\u044B"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1009
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1038
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u0437\u0435\u043C\u043B\u0438"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1010
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1039
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 10 \u0435\u0434\u0438\u043D\u0438\u0446
+      \u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u043E\u0433\u043D\u044F"
+    groupId:
+      value: 11
+    mechanicId: 25
+    requiredProgress: 10
+    mechanicParams:
+    - 1011
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1040
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u041C\u0438\u043A\u0441\u0442\u0443\u0440\u0430 \u0438\u0437 \u043B\u0438\u0441\u0442\u043E\u0446\u0432\u0435\u0442\u0430"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3001
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1041
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u041C\u0438\u043A\u0441\u0442\u0443\u0440\u0430 \u0438\u0437 \u0434\u0443\u0431\u043E\u043A\u043E\u0440\u043D\u044F"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3003
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1042
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u041C\u0438\u043A\u0441\u0442\u0443\u0440\u0430 \u0438\u0437 \u043A\u0440\u0430\u0441\u043D\u043E\u0433\u043E
+      \u043B\u043E\u0442\u043E\u0441\u0430"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3005
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1043
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0421\u0442\u0435\u0439\u043A \u0438\u0437 \u043B\u043E\u0441\u043E\u0441\u044F"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3007
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1044
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u041A\u0430\u0440\u0442\u043E\u0444\u0435\u043B\u044C\u043D\u044B\u0439 \u0441\u0430\u043B\u0430\u0442"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3009
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1045
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u041E\u0432\u043E\u0449\u043D\u043E\u0439 \u0441\u0443\u043F \u0441\u043E
+      \u0441\u0432\u0438\u043D\u0438\u043D\u043E\u0439"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3011
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1046
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0421\u0432\u0438\u0442\u043E\u043A \u0437\u0435\u043C\u043B\u0438"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3013
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1047
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0421\u0432\u0438\u0442\u043E\u043A \u043F\u0440\u0438\u0440\u043E\u0434\u044B"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3014
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1048
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0421\u0432\u0438\u0442\u043E\u043A \u043E\u0433\u043D\u044F"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3015
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1049
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u043E\u0433\u043D\u0435\u043D\u043D\u043E\u0439 \u0437\u0430\u0449\u0438\u0442\u044B"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3016
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1050
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u043E\u0439
+      \u0437\u0430\u0449\u0438\u0442\u044B"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3018
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1051
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u043F\u0440\u0438\u0440\u043E\u0434\u043D\u043E\u0439
+      \u0437\u0430\u0449\u0438\u0442\u044B"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3020
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1052
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u043E\u0433\u043D\u0435\u043D\u043D\u043E\u0439 \u044F\u0440\u043E\u0441\u0442\u0438"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3022
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1053
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E
+      \u043F\u0440\u0435\u0432\u043E\u0441\u0445\u043E\u0434\u0441\u0442\u0432\u0430"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3024
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1054
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u043F\u0440\u0438\u0440\u043E\u0434\u043D\u043E\u0439
+      \u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0446\u0438\u0438"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3026
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  - id: 1055
+    title: "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C 3 \u0435\u0434\u0438\u043D\u0438\u0446\u044B
+      \u0420\u0443\u043D\u0430 \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F
+      \u0434\u0443\u0448\u0438"
+    groupId:
+      value: 11
+    mechanicId: 26
+    requiredProgress: 3
+    mechanicParams:
+    - 3028
+    reward:
+      key:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      value: 100
+  groupModules:
+  - {fileID: -456478674626762270}
+  - {fileID: 1547051549232750799}
+  mechanicHandlers:
+  - {fileID: -4799863275862927487}
+  - {fileID: 1790770171655509041}
+  - {fileID: -606092070064157701}
+  - {fileID: -3623957146100002963}
+  - {fileID: -6439480853414721079}
+--- !u!114 &1547051549232750799
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f64169fa9411bf41a31043b8cc9b8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 12
+  title: "\u0420\u0430\u0437 \u0432 \u043A\u0434"
+  nameKey:
+    value: QUESTS/WEEKLY_GROUP_TTL
+  maxQuestsCount: 3
+--- !u!114 &1790770171655509041
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83992cb3db035ae48b01dbf0952151f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 22
+  title: "\u041F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u043E\u0433\u043E
+    \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F"
+  nameKey:
+    value: QUESTS/QUEST_MECHANIC_22_TTL
+  descKey:
+    value: QUESTS/QUEST_MECHANIC_22_DSC

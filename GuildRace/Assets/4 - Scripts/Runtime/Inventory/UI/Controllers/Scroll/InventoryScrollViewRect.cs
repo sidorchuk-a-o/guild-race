@@ -44,6 +44,13 @@ namespace Game.Inventory
             {
                 return x != (IScrollRectProxy)this;
             });
+
+            scrollRect.ScrollPositionChanged += ScrollPositionChanged;
+        }
+
+        private void OnDestroy()
+        {
+            scrollRect.ScrollPositionChanged -= ScrollPositionChanged;
         }
 
         public double GetViewportSize()

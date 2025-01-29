@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Instances;
 using Game.Inventory;
+using System;
 using System.Linq;
 using UniRx;
 using UnityEngine;
@@ -21,8 +22,12 @@ namespace Game.Craft
         private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
 
+        private readonly Subject<CraftingResult> onCraftingComplete = new();
+
         public IVendorsCollection Vendors => state.Vendors;
         public RecycleSlotInfo RecycleSlot => state.RecycleSlot;
+
+        public IObservable<CraftingResult> OnCraftingComplete => onCraftingComplete;
 
         public CraftService(
             CraftConfig craftConfig,
@@ -44,7 +49,7 @@ namespace Game.Craft
         {
             state.Init();
 
-            //CreateReagents(); // TODO: TEMP
+            CreateReagents(); // TODO: TEMP
             InitRecycleProcess();
 
             return await Inited();
@@ -182,7 +187,7 @@ namespace Game.Craft
                 return productData switch
                 {
                     EquipItemData => checkEquips(productData, itemData),
-                    СonsumablesItemData => checkСonsumables(productData, itemData),
+                    ConsumablesItemData => checkConsumables(productData, itemData),
                     _ => false
                 };
 
@@ -195,7 +200,7 @@ namespace Game.Craft
                         && ea.Type == eb.Type;
                 }
 
-                bool checkСonsumables(ItemData a, ItemData b)
+                bool checkConsumables(ItemData a, ItemData b)
                 {
                     // все расходники создаются через крафт
                     return a.Id == b.Id;
@@ -218,7 +223,7 @@ namespace Game.Craft
         {
             return item switch
             {
-                СonsumablesItemInfo сonsumables => сonsumables.Rarity,
+                ConsumablesItemInfo consumables => consumables.Rarity,
                 EquipItemInfo equip => equip.Rarity,
                 _ => -1
             };
@@ -242,7 +247,9 @@ namespace Game.Craft
 
             // create product items
 
+            var craftingResultCount = 0;
             var totalCraftingCount = craftingEM.Count;
+
             var productCount = productData is IStackable stackable
                 ? Mathf.CeilToInt(totalCraftingCount / (float)stackable.Stack.Size)
                 : totalCraftingCount;
@@ -317,6 +324,15 @@ namespace Game.Craft
                 // place product
 
                 inventoryService.TryPlaceItem(productPlacementArgs);
+
+                craftingResultCount += craftingCount;
+            }
+
+            if (craftingResultCount > 0)
+            {
+                var craftingResult = new CraftingResult(recipeData.ProductItemId, craftingResultCount);
+
+                onCraftingComplete.OnNext(craftingResult);
             }
         }
     }

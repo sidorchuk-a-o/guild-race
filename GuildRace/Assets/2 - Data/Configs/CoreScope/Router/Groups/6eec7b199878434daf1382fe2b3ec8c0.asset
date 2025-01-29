@@ -114,6 +114,7 @@ MonoBehaviour:
   - {fileID: 618499627384911689}
   - {fileID: -5429601353496565382}
   - {fileID: 941076224696289187}
+  - {fileID: 3754611210617734579}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +180,33 @@ MonoBehaviour:
     title: default
     asset:
       m_AssetGUID: 2b64a1e6a11068b428a32a5762e1ea11
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &3754611210617734579
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Quests
+  m_EditorClassIdentifier: 
+  id: 180f07bff28e4415a08a52deb9e48c22
+  title: Quests
+  path: Quests
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 73cb9fb27e3e4beba57ae68c00152966
+    title: default
+    asset:
+      m_AssetGUID: c80f8865f713b5749bca6e993b2e5c6a
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 

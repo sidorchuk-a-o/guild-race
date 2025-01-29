@@ -11,7 +11,7 @@ namespace Game.Instances
         private InstanceTypesList instanceTypesList;
         private SquadParamsEditor squadParamsEditor;
         private ActiveInstanceParamsEditor activeInstanceParamsEditor;
-        private СonsumablesParamsEditor consumablesParamsEditor;
+        private ConsumablesParamsEditor consumablesParamsEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -54,7 +54,7 @@ namespace Game.Instances
 
         private void CreateСonsumablesParamsTab(TabsContainer tabs)
         {
-            consumablesParamsEditor = new СonsumablesParamsEditor();
+            consumablesParamsEditor = new ConsumablesParamsEditor();
             consumablesParamsEditor.CreateTabs(tabs);
         }
 
