@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace Game.Instances
 {
-    public class ActiveInstanceItem : VMScrollItem<ActiveInstanceVM>
+    public class ActiveInstanceScrollItem : VMScrollItem<ActiveInstanceVM>
     {
         [Header("Instance")]
         [SerializeField] private UIText instanceNameText;

@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class CharacterItem : VMScrollItem<CharacterVM>
+    public class CharacterScrollItem : VMScrollItem<CharacterVM>
     {
         [Header("Character")]
         [SerializeField] private UIText itemsLevelText;

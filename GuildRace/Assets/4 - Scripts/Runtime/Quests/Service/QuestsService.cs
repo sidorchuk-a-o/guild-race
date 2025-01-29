@@ -11,31 +11,31 @@ namespace Game.Quests
     {
         private readonly IObjectResolver resolver;
 
-        private readonly IReadOnlyList<QuestsGroupModule> modules;
+        private readonly IReadOnlyList<QuestsGroupModule> groupModules;
         private readonly IReadOnlyList<QuestMechanicHandler> mechanicHandlers;
 
-        public IEnumerable<QuestInfo> Quests => modules.SelectMany(x => x.Quests);
-        public IEnumerable<QuestsGroupModule> Modules => modules;
+        public IEnumerable<QuestInfo> Quests => groupModules.SelectMany(x => x.Quests);
+        public IEnumerable<QuestsGroupModule> Modules => groupModules;
 
         public QuestsService(QuestsConfig config, IObjectResolver resolver)
         {
             this.resolver = resolver;
 
-            modules = config.GroupModules.ToList();
+            groupModules = config.GroupModules.ToList();
             mechanicHandlers = config.MechanicHandlers.ToList();
         }
 
         public override async UniTask<bool> Init()
         {
-            InitModules();
+            InitGroupModules();
             InitMechanicHandlers();
 
             return await Inited();
         }
 
-        private void InitModules()
+        private void InitGroupModules()
         {
-            modules.ForEach(module =>
+            groupModules.ForEach(module =>
             {
                 resolver.Inject(module);
 
@@ -53,14 +53,26 @@ namespace Game.Quests
             });
         }
 
-        public QuestsGroupModule GetModule(QuestsGroup id)
+        public QuestsGroupModule GetGroupModule(QuestsGroup group)
         {
-            return modules.FirstOrDefault(x => x.Id == id);
+            return groupModules.FirstOrDefault(x => x.Id == group);
         }
 
         public QuestMechanicHandler GetMechanicHandler(int id)
         {
             return mechanicHandlers.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void TakeQuestReward(TakeRewardArgs args)
+        {
+            var group = groupModules.FirstOrDefault(x => x.Id == args.GroupId);
+
+            if (group == null)
+            {
+                return;
+            }
+
+            group.TakeQuestReward(args);
         }
     }
 }

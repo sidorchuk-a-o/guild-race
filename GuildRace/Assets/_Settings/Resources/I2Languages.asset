@@ -41,14 +41,6 @@ MonoBehaviour:
       - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
       Flags: 0000
       Languages_Touch: []
-    - Term: HUB/GUILD_BANK_TAB_TTL
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "\u0411\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
-      Flags: 0000
-      Languages_Touch: []
     - Term: HUB/INSTANCES_TAB_TTL
       TermType: 0
       Description: 
@@ -65,12 +57,28 @@ MonoBehaviour:
       - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0445\u043E\u0434\u044B"
       Flags: 0000
       Languages_Touch: []
+    - Term: HUB/GUILD_BANK_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
+      Flags: 0000
+      Languages_Touch: []
     - Term: HUB/VANDORS_TAB_TTL
       TermType: 0
       Description: 
       Languages:
       - 
       - "\u0423\u043B\u0438\u0446\u0430 \u0440\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HUB/QUESTS_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0414\u043E\u0441\u043A\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
       Flags: 0000
       Languages_Touch: []
     - Term: GUILD/CREATE_GUILD_TTL
@@ -4375,7 +4383,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u0415\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438"
+      - "\u0415\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u044F"
       Flags: 0000
       Languages_Touch: []
     - Term: QUESTS/WEEKLY_GROUP_TTL
@@ -4384,7 +4392,47 @@ MonoBehaviour:
       Languages:
       - 
       - "\u0415\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0435
-        \u0437\u0430\u0434\u0430\u0447\u0438"
+        \u0437\u0430\u0434\u0430\u043D\u0438\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: QUESTS/EMPTY_QUEST_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u043D\u0435 \u0432\u044B\u0431\u0440\u0430\u043D\u043E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: QUESTS/PROGRESS_BLOCK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: QUESTS/REWARD_BLOCK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041D\u0430\u0433\u0440\u0430\u0434\u0430"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: QUESTS/TAKE_REWARD_BNT
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: QUESTS/REWARD_TAKED_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041D\u0430\u0433\u0440\u0430\u0434\u0430 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0430"
       Flags: 0000
       Languages_Touch: []
     - Term: QUESTS/
@@ -4494,7 +4542,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1737833295153
+    Google_LastUpdatedVersion: 1738177883988
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

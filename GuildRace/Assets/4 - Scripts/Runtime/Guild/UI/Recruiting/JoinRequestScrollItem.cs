@@ -12,7 +12,7 @@ using VContainer;
 
 namespace Game.Guild
 {
-    public class JoinRequestItem : VMScrollItem<JoinRequestVM>
+    public class JoinRequestScrollItem : VMScrollItem<JoinRequestVM>
     {
         [Header("Character")]
         [SerializeField] private UIText itemsLevelText;

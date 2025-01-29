@@ -49,5 +49,17 @@ namespace Game.Quests
             state.AddQuests(newQuests);
             state.SetLastResetDate(currentDate);
         }
+
+        public override bool TakeQuestReward(TakeRewardArgs args)
+        {
+            var result = base.TakeQuestReward(args);
+
+            if (result)
+            {
+                state.MarkAsDirty();
+            }
+
+            return result;
+        }
     }
 }

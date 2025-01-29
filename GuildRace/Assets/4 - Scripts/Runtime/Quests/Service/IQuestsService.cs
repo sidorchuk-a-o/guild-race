@@ -7,7 +7,9 @@ namespace Game.Quests
         IEnumerable<QuestInfo> Quests { get; }
         IEnumerable<QuestsGroupModule> Modules { get; }
 
-        QuestsGroupModule GetModule(QuestsGroup id);
+        QuestsGroupModule GetGroupModule(QuestsGroup group);
         QuestMechanicHandler GetMechanicHandler(int id);
+
+        void TakeQuestReward(TakeRewardArgs args);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class GuildBankCharacterItem : CharacterItem
+    public class GuildBankCharacterScrollItem : CharacterScrollItem
     {
         [Header("Equip Slots")]
         [SerializeField] private ItemSlotsContainer equipSlotsContainer;

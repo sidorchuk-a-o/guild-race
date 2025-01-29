@@ -19,7 +19,7 @@ namespace Game.Quests
         protected IEnumerable<QuestInfo> Quests => questsService.Quests.Where(x =>
         {
             return x.MechanicId == Id
-                && x.Completed.Value == false;
+                && x.IsCompleted.Value == false;
         });
 
         [Inject]

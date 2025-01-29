@@ -8,7 +8,8 @@ namespace Game.Quests
     public class QuestInfo
     {
         private readonly ReactiveProperty<int> progress = new();
-        private readonly ReactiveProperty<bool> completed = new();
+        private readonly ReactiveProperty<bool> isCompleted = new();
+        private readonly ReactiveProperty<bool> isRewarded = new();
 
         public string Id { get; }
         public int DataId { get; }
@@ -20,7 +21,9 @@ namespace Game.Quests
 
         public int RequiredProgress { get; }
         public IReadOnlyReactiveProperty<int> ProgressCounter => progress;
-        public IReadOnlyReactiveProperty<bool> Completed => completed;
+
+        public IReadOnlyReactiveProperty<bool> IsCompleted => isCompleted;
+        public IReadOnlyReactiveProperty<bool> IsRewarded => isRewarded;
 
         public QuestInfo(string id, QuestData data)
         {
@@ -40,10 +43,15 @@ namespace Game.Quests
 
         public void SetProgress(int value)
         {
-            var newProgress = Mathf.Max(value, 0, RequiredProgress);
+            var newProgress = Mathf.Clamp(value, 0, RequiredProgress);
 
             progress.Value = newProgress;
-            completed.Value = newProgress >= RequiredProgress;
+            isCompleted.Value = newProgress >= RequiredProgress;
+        }
+
+        public void MarkAsRewarded()
+        {
+            isRewarded.Value = true;
         }
     }
 }
