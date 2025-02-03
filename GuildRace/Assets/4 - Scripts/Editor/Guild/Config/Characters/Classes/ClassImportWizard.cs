@@ -9,12 +9,12 @@ namespace Game.Guild
     {
         private GoogleSheetsImporter specsImporter;
 
-        public override string IdKey => "Class ID";
-        public override string TitleKey => "Class";
+        public override string IdKey => "ID";
+        public override string TitleKey => "Name";
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "classes";
-        public override string SheetRange => "A:AB";
+        public override string SheetRange => "A:AH";
 
         protected override async void SaveCallback()
         {
@@ -29,10 +29,10 @@ namespace Game.Guild
         {
             base.UpdateData(classData, row);
 
-            var nameKey = row["Class Name Loc Key"].LocalizeKeyParse();
-            var descKey = row["Class Desc Loc Key"].LocalizeKeyParse();
-            var armorType = new EquipType(row["Armortype ID"].IntParse());
-            var weaponType = new EquipType(row["Weapontype ID"].IntParse());
+            var nameKey = row["Class Name Key"].LocalizeKeyParse();
+            var descKey = row["Class Desc Key"].LocalizeKeyParse();
+            var armorType = new EquipType(row["Armor ID"].IntParse());
+            var weaponType = new EquipType(row["Weapon ID"].IntParse());
 
             classData.GetProperty("nameKey").SetValue(nameKey);
             classData.GetProperty("descKey").SetValue(descKey);
@@ -51,7 +51,7 @@ namespace Game.Guild
 
             specsImporter.ImportData(specsSaveMeta, CheckSpecEqual, UpdateSpecData, onFilterRow: row =>
             {
-                var classId = row["Class ID*"].IntParse();
+                var classId = row["Class ID"].IntParse();
 
                 return id == classId;
             });
@@ -65,22 +65,41 @@ namespace Game.Guild
             return dataId == rowId;
         }
 
-        private void UpdateSpecData(SerializedData data, IDataRow row)
+        private void UpdateSpecData(SerializedData specData, IDataRow row)
         {
             var id = row["Spec ID"].IntParse();
             var title = row["Spec"].ToUpperFirst();
-            var nameKey = row["Spec Name Loc Key"].LocalizeKeyParse();
-            var descKey = row["Spec Desc Loc Key"].LocalizeKeyParse();
+            var nameKey = row["Spec Name Key"].LocalizeKeyParse();
+            var descKey = row["Spec Desc Key"].LocalizeKeyParse();
             var roleId = new RoleId(row["Role ID"].IntParse());
             var subRoleId = new SubRoleId(row["Subrole ID"].IntParse());
 
-            data.GetProperty("id").SetValue(id);
-            data.GetProperty("title").SetValue(title);
+            specData.GetProperty("id").SetValue(id);
+            specData.GetProperty("title").SetValue(title);
 
-            data.GetProperty("nameKey").SetValue(nameKey);
-            data.GetProperty("descKey").SetValue(descKey);
-            data.GetProperty("roleId").SetValue(roleId);
-            data.GetProperty("subRoleId").SetValue(subRoleId);
+            specData.GetProperty("nameKey").SetValue(nameKey);
+            specData.GetProperty("descKey").SetValue(descKey);
+            specData.GetProperty("roleId").SetValue(roleId);
+            specData.GetProperty("subRoleId").SetValue(subRoleId);
+
+            // unit params
+            ImportUnitParams(specData, row);
+        }
+
+        public static void ImportUnitParams(SerializedData specData, IDataRow row)
+        {
+            var health = row["HP"].FloatParse();
+            var power = row["AP"].FloatParse();
+            var resourceValue = row["RES"].FloatParse();
+            var resourceRegen = row["RES Regen"].FloatParse();
+
+            var unitParams = specData.GetProperty("unitParams");
+            unitParams.GetProperty("health").SetValue(health);
+            unitParams.GetProperty("power").SetValue(power);
+
+            var resourceParams = unitParams.GetProperty("resourceParams");
+            resourceParams.GetProperty("maxValue").SetValue(resourceValue);
+            resourceParams.GetProperty("regenValue").SetValue(resourceRegen);
         }
     }
 }

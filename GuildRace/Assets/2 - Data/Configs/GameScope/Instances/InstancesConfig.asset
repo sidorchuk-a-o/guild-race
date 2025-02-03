@@ -48,6 +48,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 32481
+    power: 1324
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -994596056938201725}
   - {fileID: -1394303912816611489}
@@ -110,6 +116,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 17956
+    power: 862
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: 6832601459202208957}
 --- !u!114 &-8399120171220073973
@@ -311,6 +323,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 16126
+    power: 831
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -246572903842778920}
 --- !u!114 &-6234201196874151812
@@ -352,15 +370,21 @@ MonoBehaviour:
   id: 20017
   title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
   nameKey:
-    value: 
+    value: <none>
   descKey:
-    value: 
+    value: <none>
   imageRef:
     m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 14830
+    power: 778
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: 6270116825951526421}
 --- !u!114 &-5490952678775940715
@@ -422,6 +446,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 16039
+    power: 811
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -8399120171220073973}
 --- !u!114 &-4714937801475931359
@@ -669,6 +699,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 17284
+    power: 844
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -7995946185557049400}
 --- !u!114 &-3232594601914623554
@@ -833,6 +869,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 15099
+    power: 806
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -1830490506216973420}
 --- !u!114 &-1830490506216973420
@@ -991,39 +1033,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
---- !u!114 &-923443413668151343
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa618c1776e57644a9fbd669506a9a73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 3014
-  title: "\u0421\u0432\u0438\u0442\u043E\u043A \u043F\u0440\u0438\u0440\u043E\u0434\u044B"
-  slot:
-    value: 0
-  size:
-    width: 1
-    height: 1
-  nameKey:
-    value: CRAFT/CONSUME_3014_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 1
-  rarity:
-    value: 121
-  stack:
-    size: 100
-  descKey:
-    value: CRAFT/CONSUME_3014_DSC
 --- !u!114 &-639089928592747097
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1141,9 +1150,6 @@ MonoBehaviour:
     - {fileID: 4037090930490511092}
     - {fileID: 3409425287689555601}
     - {fileID: 144429709343451076}
-    - {fileID: 4071338290387918875}
-    - {fileID: -923443413668151343}
-    - {fileID: 4549520025710094879}
     - {fileID: 5940245885779881331}
     - {fileID: -1086309156230088210}
     - {fileID: -3764328915951443008}
@@ -1223,6 +1229,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 34639
+    power: 1351
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: 3914375014585952450}
   - {fileID: -3232594601914623554}
@@ -1250,6 +1262,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 15149
+    power: 791
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: 5826487545976228742}
 --- !u!114 &1529957877096102003
@@ -1276,6 +1294,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 35068
+    power: 1359
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: 5920314164074615136}
   - {fileID: -1055109466483382171}
@@ -1430,6 +1454,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 44348
+    power: 1390
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -3995241848682968268}
   - {fileID: -8066860899731964247}
@@ -1452,7 +1482,7 @@ MonoBehaviour:
   nameKey:
     value: INSTANCES/INSTANCE_301_TTL
   descKey:
-    value: 
+    value: <none>
   mapRef:
     m_AssetGUID: 5256563037a612b48a1ab42af1092472
     m_SubObjectName: 
@@ -1573,6 +1603,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 36017
+    power: 1374
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -940734721021695946}
   - {fileID: 5136623673967633251}
@@ -1610,39 +1646,6 @@ MonoBehaviour:
     size: 100
   descKey:
     value: CRAFT/CONSUME_3010_DSC
---- !u!114 &4071338290387918875
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa618c1776e57644a9fbd669506a9a73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 3013
-  title: "\u0421\u0432\u0438\u0442\u043E\u043A \u0437\u0435\u043C\u043B\u0438"
-  slot:
-    value: 0
-  size:
-    width: 1
-    height: 1
-  nameKey:
-    value: CRAFT/CONSUME_3013_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 1
-  rarity:
-    value: 121
-  stack:
-    size: 100
-  descKey:
-    value: CRAFT/CONSUME_3013_DSC
 --- !u!114 &4548264943697822237
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1667,41 +1670,14 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 15765
+    power: 794
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -2451450757037362544}
---- !u!114 &4549520025710094879
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa618c1776e57644a9fbd669506a9a73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 3015
-  title: "\u0421\u0432\u0438\u0442\u043E\u043A \u043E\u0433\u043D\u044F"
-  slot:
-    value: 0
-  size:
-    width: 1
-    height: 1
-  nameKey:
-    value: CRAFT/CONSUME_3015_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 1
-  rarity:
-    value: 121
-  stack:
-    size: 100
-  descKey:
-    value: CRAFT/CONSUME_3015_DSC
 --- !u!114 &5136623673967633251
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1750,6 +1726,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 15399
+    power: 769
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -9017412359138805976}
 --- !u!114 &5775344422896784859
@@ -2060,6 +2042,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 16618
+    power: 801
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -6234201196874151812}
 --- !u!114 &6646846226119907776
@@ -2169,6 +2157,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 16868
+    power: 819
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: 6688116476916530650}
 --- !u!114 &7904727434667658797
@@ -2230,6 +2224,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 33142
+    power: 1336
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -2705219886538243093}
   - {fileID: -639089928592747097}
@@ -2253,7 +2253,7 @@ MonoBehaviour:
   nameKey:
     value: INSTANCES/INSTANCE_303_TTL
   descKey:
-    value: <none>
+    value: 
   mapRef:
     m_AssetGUID: 5256563037a612b48a1ab42af1092472
     m_SubObjectName: 
@@ -2329,5 +2329,11 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+  unitParams:
+    health: 14125
+    power: 744
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
   abilities:
   - {fileID: -4170858758287194157}

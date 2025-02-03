@@ -22,6 +22,12 @@ MonoBehaviour:
     value: 501
   subRoleId:
     value: 521
+  unitParams:
+    health: 500
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &-8876693316626268968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +173,12 @@ MonoBehaviour:
     value: 501
   subRoleId:
     value: 521
+  unitParams:
+    health: 550
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &-6623397568569760015
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +226,12 @@ MonoBehaviour:
     value: 503
   subRoleId:
     value: 524
+  unitParams:
+    health: 625
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &-5338355903722540116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,31 +287,6 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_3_TTL
---- !u!114 &-5055811891075304928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 604
-  title: "\u0412\u043E\u0438\u043D"
-  nameKey:
-    value: CHARACTERS/CLASS_604_TTL
-  descKey:
-    value: CHARACTERS/CLASS_604_DSC
-  armorType:
-    value: 143
-  weaponType:
-    value: 144
-  specs:
-  - {fileID: 4026000880702577928}
-  - {fileID: 8249881096464231259}
 --- !u!114 &-4694587001071973687
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,6 +309,12 @@ MonoBehaviour:
     value: 501
   subRoleId:
     value: 521
+  unitParams:
+    health: 525
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &-3730586026932445884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,28 +347,6 @@ MonoBehaviour:
   title: ENERGY
   nameKey:
     value: CHARACTERS/RESOURCE_ENERGY_TTL
---- !u!114 &-3107739647621433713
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 714
-  title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440"
-  nameKey:
-    value: CHARACTERS/SPEC_714_TTL
-  descKey:
-    value: CHARACTERS/SPEC_714_DSC
-  roleId:
-    value: 501
-  subRoleId:
-    value: 521
 --- !u!114 &-2476405077858922527
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,31 +392,12 @@ MonoBehaviour:
     value: 502
   subRoleId:
     value: 523
---- !u!114 &-1261306564598353220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 608
-  title: "\u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043A"
-  nameKey:
-    value: CHARACTERS/CLASS_608_TTL
-  descKey:
-    value: CHARACTERS/CLASS_608_DSC
-  armorType:
-    value: 142
-  weaponType:
-    value: 145
-  specs:
-  - {fileID: 7727481233043288398}
-  - {fileID: 60821224119431582}
+  unitParams:
+    health: 575
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &-1085160420808501345
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -503,6 +461,12 @@ MonoBehaviour:
     value: 503
   subRoleId:
     value: 524
+  unitParams:
+    health: 650
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,11 +492,8 @@ MonoBehaviour:
     - {fileID: -1085160420808501345}
     - {fileID: -6623397568569760015}
     - {fileID: 7492917005212791002}
-    - {fileID: -5055811891075304928}
     - {fileID: 133220843808419609}
     - {fileID: 59231052814991113}
-    - {fileID: 2998155847386568026}
-    - {fileID: -1261306564598353220}
     roles:
     - {fileID: -8346132011526749932}
     - {fileID: 5335921967913264061}
@@ -542,9 +503,6 @@ MonoBehaviour:
     - {fileID: 3937412005290520608}
     - {fileID: -7572584695603090114}
     - {fileID: -5338355903722540116}
-    resources:
-    - {fileID: -8876693316626268968}
-    - {fileID: -3532688074755841650}
   recruitingParams:
     minRequestCount: 5
     maxRequestCount: 15
@@ -569,9 +527,9 @@ MonoBehaviour:
     - id: 528563120bb14d51ab58619d0e582554
       title: Tank
       classId:
-        value: 604
+        value: 603
       specId:
-        value: 707
+        value: 706
     - id: 2e16f8e841da48f78b13ae2e2efd8647
       title: Healer
       classId:
@@ -587,9 +545,9 @@ MonoBehaviour:
     - id: 3e799245661c46199dec6df98a23de98
       title: Damage 2
       classId:
-        value: 603
+        value: 605
       specId:
-        value: 705
+        value: 710
   guildBankParams:
     tabs:
     - {fileID: -5316411198448944541}
@@ -620,28 +578,6 @@ MonoBehaviour:
   specs:
   - {fileID: -55547621386745197}
   - {fileID: -9008320005003930121}
---- !u!114 &60821224119431582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 716
-  title: "\u0422\u0435\u043D\u0435\u0432\u043E\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
-  nameKey:
-    value: CHARACTERS/SPEC_716_TTL
-  descKey:
-    value: CHARACTERS/SPEC_716_DSC
-  roleId:
-    value: 501
-  subRoleId:
-    value: 524
 --- !u!114 &76776547799289294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -745,6 +681,12 @@ MonoBehaviour:
     value: 501
   subRoleId:
     value: 524
+  unitParams:
+    health: 550
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &2841863336987669863
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -767,31 +709,12 @@ MonoBehaviour:
     value: 502
   subRoleId:
     value: 522
---- !u!114 &2998155847386568026
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 607
-  title: "\u0418\u043D\u0436\u0435\u043D\u0435\u0440"
-  nameKey:
-    value: CHARACTERS/CLASS_607_TTL
-  descKey:
-    value: CHARACTERS/CLASS_607_DSC
-  armorType:
-    value: 142
-  weaponType:
-    value: 147
-  specs:
-  - {fileID: 4971091951725825254}
-  - {fileID: -3107739647621433713}
+  unitParams:
+    health: 500
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &3937412005290520608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -808,28 +731,6 @@ MonoBehaviour:
   title: HEAL
   nameKey:
     value: CHARACTERS/SUBROLE_HEAL_TTL
---- !u!114 &4026000880702577928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 707
-  title: "\u0413\u043B\u0430\u0434\u0438\u0430\u0442\u043E\u0440"
-  nameKey:
-    value: CHARACTERS/SPEC_707_TTL
-  descKey:
-    value: CHARACTERS/SPEC_707_DSC
-  roleId:
-    value: 503
-  subRoleId:
-    value: 524
 --- !u!114 &4201286608953013207
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -868,28 +769,12 @@ MonoBehaviour:
     value: 502
   subRoleId:
     value: 522
---- !u!114 &4971091951725825254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 713
-  title: "\u0421\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C"
-  nameKey:
-    value: CHARACTERS/SPEC_713_TTL
-  descKey:
-    value: CHARACTERS/SPEC_713_DSC
-  roleId:
-    value: 503
-  subRoleId:
-    value: 524
+  unitParams:
+    health: 550
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -944,6 +829,12 @@ MonoBehaviour:
     value: 502
   subRoleId:
     value: 522
+  unitParams:
+    health: 550
+    power: 30
+    resourceParams:
+      maxValue: 100
+      regenValue: 3
 --- !u!114 &6159485941193676221
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1012,47 +903,3 @@ MonoBehaviour:
   specs:
   - {fileID: 2248301654606666036}
   - {fileID: 5807667443719656722}
---- !u!114 &7727481233043288398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 715
-  title: "\u0421\u043B\u0435\u0434\u043E\u043F\u044B\u0442"
-  nameKey:
-    value: CHARACTERS/SPEC_715_TTL
-  descKey:
-    value: CHARACTERS/SPEC_715_DSC
-  roleId:
-    value: 501
-  subRoleId:
-    value: 521
---- !u!114 &8249881096464231259
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 708
-  title: "\u0421\u0442\u0440\u0430\u0436"
-  nameKey:
-    value: CHARACTERS/SPEC_708_TTL
-  descKey:
-    value: CHARACTERS/SPEC_708_DSC
-  roleId:
-    value: 501
-  subRoleId:
-    value: 524

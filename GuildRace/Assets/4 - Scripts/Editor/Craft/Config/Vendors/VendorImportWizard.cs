@@ -10,7 +10,7 @@ namespace Game.Craft
     {
         private GoogleSheetsImporter recipeImporter;
 
-        public override string IdKey => "Id";
+        public override string IdKey => "ID";
         public override string TitleKey => "Name";
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
@@ -21,7 +21,7 @@ namespace Game.Craft
         {
             recipeImporter ??= new(SheetId, "craft", "A:P", typeof(RecipeData));
 
-            await recipeImporter.LoadData("Recipe ID");
+            await recipeImporter.LoadData("ID");
 
             base.SaveCallback();
         }
@@ -57,14 +57,14 @@ namespace Game.Craft
         private bool CheckRecipeEqual(SerializedData data, IDataRow row)
         {
             var dataId = data.GetProperty("id").GetValue<int>();
-            var rowId = row["Recipe ID"].IntParse();
+            var rowId = row["ID"].IntParse();
 
             return dataId == rowId;
         }
 
         private void UpdateRecipeData(SerializedData recipeData, IDataRow row)
         {
-            var id = row["Recipe ID"].IntParse();
+            var id = row["ID"].IntParse();
             var title = row["Item"].ToUpperFirst();
             var productItemId = row["Item ID"].IntParse();
 
@@ -75,9 +75,9 @@ namespace Game.Craft
             // reagents
             var reagents = new List<(int reagentId, int count)>
             {
-                (row["Reagent1 ID"].IntParse(), row["Amount #1"].IntParse()),
-                (row["Reagent2 ID"].IntParse(), row["Amount #2"].IntParse()),
-                (row["Reagent3 ID"].IntParse(), row["Amount #3"].IntParse())
+                (row["Reagent 1 ID"].IntParse(), row["Amount 1"].IntParse()),
+                (row["Reagent 2 ID"].IntParse(), row["Amount 2"].IntParse()),
+                (row["Reagent 3 ID"].IntParse(), row["Amount 3"].IntParse())
             };
 
             var ingredients = reagents

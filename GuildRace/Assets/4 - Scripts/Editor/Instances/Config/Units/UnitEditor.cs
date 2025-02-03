@@ -1,4 +1,5 @@
 ﻿using AD.ToolsCollection;
+using Game.Guild;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,6 +12,7 @@ namespace Game.Instances
         private PropertyElement descKeyField;
         private AddressableElement<Sprite> imageRefField;
         private AbilitiesList abilitiesList;
+        private UnitParamsElement unitParamsField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -31,6 +33,11 @@ namespace Game.Instances
 
             imageRefField = root.CreateAddressable<Sprite>();
             imageRefField.BindProperty("imageRef", data);
+
+            root.CreateHeader("Params");
+
+            unitParamsField = root.CreateElement<UnitParamsElement>();
+            unitParamsField.BindProperty("unitParams", data);
 
             root.CreateHeader("Abilities");
 

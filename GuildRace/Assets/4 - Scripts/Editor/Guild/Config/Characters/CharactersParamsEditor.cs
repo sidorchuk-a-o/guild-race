@@ -11,7 +11,6 @@ namespace Game.Guild
         private RolesList rolesList;
         private SubRolesList subRolesList;
         private ClassesList classesList;
-        private ResourcesList resourcesList;
 
         private static SerializedData GetData(SerializedData data)
         {
@@ -41,11 +40,6 @@ namespace Game.Guild
 
             subRolesList = root.CreateElement<SubRolesList>();
             subRolesList.BindProperty("subRoles", GetData(data));
-
-            root.CreateHeader("Resources");
-
-            resourcesList = root.CreateElement<ResourcesList>();
-            resourcesList.BindProperty("resources", GetData(data));
         }
     }
 }

@@ -10,8 +10,6 @@ namespace Game.Craft
         public override string SheetName => "craft-data";
         public override string SheetRange => "F2:J";
 
-        public override string TitleKey => "Name";
-        public override string NameLocalizeKey => "Localize Key";
         public override string SlotKey => string.Empty;
 
         protected override void UpdateData(SerializedData data, IDataRow row)

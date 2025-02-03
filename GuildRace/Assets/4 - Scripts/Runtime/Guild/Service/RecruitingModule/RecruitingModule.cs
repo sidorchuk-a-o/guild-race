@@ -83,7 +83,7 @@ namespace Game.Guild
 
         private void UpdateOffileRequests()
         {
-            if (!IsEnabled.Value)
+            if (!guildState.IsExists || !IsEnabled.Value)
             {
                 return;
             }
@@ -131,17 +131,24 @@ namespace Game.Guild
 
             if (newRequestCount > 0)
             {
-                var randomRequestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
-                var nextRequestTime = currentTime.AddSeconds(randomRequestTime);
-
-                recruitingState.SetNextRequestTime(nextRequestTime);
+                ResetNextRequestTime(currentTime);
             }
+        }
+
+        private void ResetNextRequestTime(DateTime currentTime)
+        {
+            var randomRequestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
+            var nextRequestTime = currentTime.AddSeconds(randomRequestTime);
+
+            recruitingState.SetNextRequestTime(nextRequestTime);
         }
 
         private void OnUpdate(TimeTick tick)
         {
-            if (!IsEnabled.Value)
+            if (!guildState.IsExists || !IsEnabled.Value)
             {
+                ResetNextRequestTime(DateTime.Now);
+
                 return;
             }
 
@@ -217,7 +224,7 @@ namespace Game.Guild
 
         private void CreateDefaultRequests()
         {
-            if (guildState.IsExists)
+            if (guildState.IsExists || recruitingState.Requests.Any())
             {
                 return;
             }
