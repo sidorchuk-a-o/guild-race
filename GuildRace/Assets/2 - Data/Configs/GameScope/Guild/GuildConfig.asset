@@ -74,7 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 667744408
   title: 
-  rowSize: 10
+  rowSize: 8
   rowCount: 11
   category:
     value: 201
@@ -524,30 +524,22 @@ MonoBehaviour:
       minEquipLevel: 5
       maxEquipLevel: 10
     defaultCharacters:
-    - id: 528563120bb14d51ab58619d0e582554
-      title: Tank
-      classId:
-        value: 603
-      specId:
-        value: 706
-    - id: 2e16f8e841da48f78b13ae2e2efd8647
-      title: Healer
-      classId:
-        value: 602
-      specId:
-        value: 703
-    - id: 68dfca098736401997ef5aad6d2d7f38
-      title: Damage 1
-      classId:
-        value: 601
-      specId:
-        value: 701
-    - id: 3e799245661c46199dec6df98a23de98
-      title: Damage 2
-      classId:
+    - classId:
         value: 605
       specId:
         value: 710
+    - classId:
+        value: 602
+      specId:
+        value: 703
+    - classId:
+        value: 603
+      specId:
+        value: 705
+    - classId:
+        value: 606
+      specId:
+        value: 712
   guildBankParams:
     tabs:
     - {fileID: -5316411198448944541}
@@ -592,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 522906889
   title: 
-  rowSize: 10
+  rowSize: 8
   rowCount: 11
   category:
     value: 201
@@ -653,7 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 433774906
   title: 
-  rowSize: 10
+  rowSize: 8
   rowCount: 11
   category:
     value: 201

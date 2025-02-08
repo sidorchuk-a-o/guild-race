@@ -7,8 +7,9 @@ namespace Game.Guild
         public override void BindData(SerializedData data)
         {
             showCloneButton = false;
+            showRemoveButton = false;
 
-            wizardType = typeof(DefaultCharacterCreateWizard);
+            wizardType = typeof(DefaultCharacterImportWizard);
 
             base.BindData(data);
         }
