@@ -9,10 +9,8 @@ namespace Game.Instances
     {
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "consumables";
-        public override string SheetRange => "A:J";
+        public override string SheetRange => "A:M";
 
-        public override string TitleKey => "Title";
-        public override string NameLocalizeKey => "localization title key";
         public override string SlotKey => string.Empty;
 
         protected override void UpdateData(SerializedData data, IDataRow row)
@@ -21,7 +19,7 @@ namespace Game.Instances
 
             var stack = new ItemStack(100);
             var rarity = new Rarity(row["Rarity ID"].IntParse());
-            var descKey = row["localization description key"].LocalizeKeyParse();
+            var descKey = row["Desc Key"].LocalizeKeyParse();
 
             data.GetProperty("stack").SetValue(stack);
             data.GetProperty("rarity").SetValue(rarity);

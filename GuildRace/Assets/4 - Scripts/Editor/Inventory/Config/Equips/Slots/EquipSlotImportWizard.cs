@@ -13,7 +13,7 @@ namespace Game.Inventory
         {
             base.UpdateData(data, row);
 
-            var equipGroup = new EquipGroup(row["Group Id"].IntParse());
+            var equipGroup = new EquipGroup(row["Group ID"].IntParse());
 
             data.GetProperty("equipGroup").SetValue(equipGroup);
         }

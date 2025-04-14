@@ -13,6 +13,7 @@ namespace Game.Inventory
         private PropertyElement levelField;
         private PropertyElement powerField;
         private PropertyElement healthField;
+        private PropertyElement armorField;
         private PropertyElement resourceField;
         private KeyElement<int> typeField;
         private KeyElement<int> itemSlotField;
@@ -45,6 +46,10 @@ namespace Game.Inventory
             healthField = root.CreateProperty();
             healthField.Width(56).FontSize(14).MarginRight(-9).ReadOnly();
             healthField.labelOn = false;
+
+            armorField = root.CreateProperty();
+            armorField.Width(56).FontSize(14).MarginRight(-9).ReadOnly();
+            armorField.labelOn = false;
 
             resourceField = root.CreateProperty();
             resourceField.Width(56).FontSize(14).ReadOnly();
@@ -83,6 +88,7 @@ namespace Game.Inventory
             levelField.BindProperty("level", data);
             powerField.BindProperty("power", characterData);
             healthField.BindProperty("health", characterData);
+            armorField.BindProperty("armor", characterData);
             resourceField.BindProperty("resource", characterData);
             typeField.BindProperty("type", data);
             itemSlotField.BindProperty("slot", data);

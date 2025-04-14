@@ -27,34 +27,15 @@ namespace Game
 
         public async UniTask StartGame()
         {
-            await router.ShowLoading(LoadingScreenKeys.startApp);
+            var pathKey = !guildService.GuildExists
+                ? RouteKeys.Guild.createGuild
+                : RouteKeys.Hub.roster;
 
             await router.OpenScene(
                 sceneKey: SceneKeys.game,
+                loadingKey: LoadingScreenKeys.startApp,
+                pathKey: pathKey,
                 parameters: RouteParams.FirstRoute);
-
-            if (instancesService.HasPlayerInstance)
-            {
-                await instancesService.StartPlayerInstance();
-            }
-            else
-            {
-                await router.PushAsync(
-                    pathKey: getPathKey(),
-                    parameters: RouteParams.FirstRoute);
-
-                RouteKey getPathKey()
-                {
-                    if (guildService.GuildExists == false)
-                    {
-                        return RouteKeys.Guild.createGuild;
-                    }
-
-                    return RouteKeys.Hub.roster;
-                }
-            }
-
-            await router.HideLoading(LoadingScreenKeys.startApp);
         }
     }
 }

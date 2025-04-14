@@ -33,9 +33,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-9104328803151399047
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,9 +128,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-8826924889863600484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,9 +165,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &-8816477437093287099
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,9 +202,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-8555131310274555377
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,9 +251,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-8396260996354326224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,9 +288,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-8231145598918426906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,9 +325,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-7976013286353870678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,9 +362,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-7786134524771069982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,9 +399,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-7747445019385112284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,9 +436,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &-7652101298570031518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,9 +473,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-7449035984528177374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,9 +510,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-7212983667274812868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -535,9 +547,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-7175090527530127482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -571,8 +584,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &-7080529732421677225
 MonoBehaviour:
@@ -607,9 +621,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-7001324336208455771
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -655,9 +670,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-6887878195513756772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -691,9 +707,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &-6862540958533503585
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -727,9 +744,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-6806210110799492770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -781,8 +799,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
     health: 0
+    power: 24
+    armor: 0
     resource: 0
 --- !u!114 &-6614947257460562497
 MonoBehaviour:
@@ -817,9 +836,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-6183353682262618565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,8 +873,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &-6150907231377672594
 MonoBehaviour:
@@ -889,8 +910,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
     health: 0
+    power: 53
+    armor: 0
     resource: 0
 --- !u!114 &-6133608900172429420
 MonoBehaviour:
@@ -925,9 +947,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-6114776268038394866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -961,8 +984,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
     health: 0
+    power: 53
+    armor: 0
     resource: 0
 --- !u!114 &-6110813638385256761
 MonoBehaviour:
@@ -997,9 +1021,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 694
     power: 0
-    health: 40
-    resource: 40
+    armor: 8
+    resource: 0.5
 --- !u!114 &-6077349596849091963
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1033,8 +1058,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
     health: 0
+    power: 47
+    armor: 0
     resource: 0
 --- !u!114 &-5950450103269691187
 MonoBehaviour:
@@ -1069,9 +1095,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-5906239369190842854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1105,9 +1132,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &-5737075243555858367
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1141,9 +1169,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-5545082573401686429
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1177,8 +1206,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
     health: 0
+    power: 24
+    armor: 0
     resource: 0
 --- !u!114 &-5264673978053023553
 MonoBehaviour:
@@ -1213,9 +1243,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-4706629457753465657
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1267,9 +1298,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-4649489801524151643
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1303,9 +1335,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-4422783340732822949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1339,9 +1372,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-4298722491863905509
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1375,8 +1409,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
     health: 0
+    power: 27
+    armor: 0
     resource: 0
 --- !u!114 &-4187781191333709216
 MonoBehaviour:
@@ -1411,9 +1446,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-4086103811589660623
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1467,9 +1503,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-3779093435946907101
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1515,8 +1552,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
     health: 0
+    power: 24
+    armor: 0
     resource: 0
 --- !u!114 &-3192710916682309853
 MonoBehaviour:
@@ -1551,9 +1589,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-3139738672294733290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1587,9 +1626,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &-3128139311566442411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1623,9 +1663,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-3053621089744547346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1659,9 +1700,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-3039325825505055318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1695,8 +1737,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
     health: 0
+    power: 27
+    armor: 0
     resource: 0
 --- !u!114 &-2984385885765960227
 MonoBehaviour:
@@ -1731,9 +1774,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-2901791957114803695
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1767,9 +1811,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-2880662800390554586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1803,9 +1848,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-2537615286543567961
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1839,9 +1885,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-2515399012765761056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1875,9 +1922,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &-2203573243443984181
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1911,9 +1959,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-2140721920580831846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1947,9 +1996,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-1922595333489817320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1983,9 +2033,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-1822881498046691059
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2019,9 +2070,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &-1781769187498898997
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2055,9 +2107,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-1717270387008189411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2091,9 +2144,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-1496942897883920671
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2127,9 +2181,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-1455371521357839726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2181,8 +2236,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &-1385969258091611105
 MonoBehaviour:
@@ -2217,9 +2273,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &-1379920717474179501
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2253,9 +2310,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &-1345641969649985332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2289,9 +2347,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-1232920642671462375
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2337,9 +2396,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &-1103882048033937079
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2373,9 +2433,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-1063377336643817000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2409,9 +2470,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 694
     power: 0
-    health: 40
-    resource: 40
+    armor: 8
+    resource: 0.5
 --- !u!114 &-1062136430006192684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2445,9 +2507,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-1058030996441149953
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2481,8 +2544,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 10
     health: 0
+    power: 24
+    armor: 0
     resource: 0
 --- !u!114 &-1029915359850127392
 MonoBehaviour:
@@ -2533,9 +2597,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-976144031733252825
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2569,8 +2634,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &-950174056014292139
 MonoBehaviour:
@@ -2605,9 +2671,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-904854680988985666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2641,9 +2708,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &-753766681237061545
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2677,9 +2745,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &-612337858966185010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2737,9 +2806,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &-66409358018346676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2773,9 +2843,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3098,9 +3169,6 @@ MonoBehaviour:
   - {fileID: 4037090930490511092, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: 3409425287689555601, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: 144429709343451076, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 4071338290387918875, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -923443413668151343, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 4549520025710094879, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: 5940245885779881331, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: -1086309156230088210, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: -3764328915951443008, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
@@ -3209,9 +3277,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &243303202286163940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3261,8 +3330,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 35
     health: 0
+    power: 47
+    armor: 0
     resource: 0
 --- !u!114 &331208564779327751
 MonoBehaviour:
@@ -3297,9 +3367,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 694
     power: 0
-    health: 40
-    resource: 40
+    armor: 8
+    resource: 0.5
 --- !u!114 &406163380787924127
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3333,9 +3404,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &462244929390968814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3369,8 +3441,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &518433714357507813
 MonoBehaviour:
@@ -3405,9 +3478,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &674322806141242743
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3459,8 +3533,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &841691043756883268
 MonoBehaviour:
@@ -3495,9 +3570,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &1010764327341742373
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3531,9 +3607,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &1057532855618524533
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3567,8 +3644,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &1110932812422987802
 MonoBehaviour:
@@ -3619,9 +3697,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &1189334565303918666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3655,9 +3734,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &1223950982166912609
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3691,9 +3771,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &1424568110847715213
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3727,9 +3808,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &1660921729696098959
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3763,9 +3845,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &2041079010886698170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3799,9 +3882,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &2172033002375078472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3851,8 +3935,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
     health: 0
+    power: 27
+    armor: 0
     resource: 0
 --- !u!114 &2382765222928833730
 MonoBehaviour:
@@ -3887,8 +3972,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &2547879043090320572
 MonoBehaviour:
@@ -3923,9 +4009,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &2734205929474609862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3971,9 +4058,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &2852506058818597817
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4007,8 +4095,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 25
-    health: 22
+    health: 0
+    power: 27
+    armor: 0
     resource: 0
 --- !u!114 &2889767576748943482
 MonoBehaviour:
@@ -4043,9 +4132,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &3020438398822890104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4079,8 +4169,9 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    power: 40
     health: 0
+    power: 53
+    armor: 0
     resource: 0
 --- !u!114 &3092212957855857889
 MonoBehaviour:
@@ -4115,9 +4206,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &3157436081391586742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4151,9 +4243,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &3190576719803835710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4203,9 +4296,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &3528656383035835354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4263,9 +4357,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &3651724357173251947
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4299,8 +4394,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &3698016436506853915
 MonoBehaviour:
@@ -4335,9 +4431,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &3852932945951644673
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4371,9 +4468,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &4119991724450200512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4407,9 +4505,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &4241016530502353956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4443,8 +4542,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &4300491796616334485
 MonoBehaviour:
@@ -4479,8 +4579,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &4300600863543967724
 MonoBehaviour:
@@ -4515,9 +4616,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &4336203229436919653
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4551,9 +4653,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &4383393171423201285
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4587,9 +4690,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &4434524417934112057
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4623,8 +4727,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &4626130929355491073
 MonoBehaviour:
@@ -4659,9 +4764,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &4734373708846455812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4695,9 +4801,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &4747047883465077511
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4731,9 +4838,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &4931558719855862773
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4767,9 +4875,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &5015050402526860843
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4835,9 +4944,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &5374728186150439257
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4871,9 +4981,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &5674290880999002455
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4907,9 +5018,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &5803818987983749537
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4955,9 +5067,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 694
     power: 0
-    health: 40
-    resource: 40
+    armor: 8
+    resource: 0.5
 --- !u!114 &5987843277473568308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5025,9 +5138,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &6301772883194522219
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5097,9 +5211,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &6661488557336679770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5149,9 +5264,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &6959670025149417345
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5185,9 +5301,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 456
     power: 0
-    health: 25
-    resource: 25
+    armor: 6.5
+    resource: 0.35
 --- !u!114 &7419684207783315249
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5221,9 +5338,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &7427189725676400778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5257,9 +5375,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &7638315775081361980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5293,9 +5412,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 603
     power: 0
-    health: 35
-    resource: 35
+    armor: 7.5
+    resource: 0.45
 --- !u!114 &7697856569677621517
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5329,9 +5449,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &7785800891378577920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5365,8 +5486,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 30
     health: 0
+    power: 41
+    armor: 0
     resource: 0
 --- !u!114 &8229471332804516462
 MonoBehaviour:
@@ -5401,8 +5523,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &8516279873877236565
 MonoBehaviour:
@@ -5477,9 +5600,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &8679672984712988871
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5513,9 +5637,10 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
+    health: 694
     power: 0
-    health: 40
-    resource: 40
+    armor: 8
+    resource: 0.5
 --- !u!114 &8768025246458969749
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5549,9 +5674,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 300
     power: 0
-    health: 10
-    resource: 10
+    armor: 5
+    resource: 0.2
 --- !u!114 &8781013962483808008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5585,9 +5711,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4
 --- !u!114 &9111820585827621426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5621,9 +5748,10 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 397
     power: 0
-    health: 20
-    resource: 20
+    armor: 6
+    resource: 0.3
 --- !u!114 &9113102958087313022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5678,8 +5806,9 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    power: 20
     health: 0
+    power: 31
+    armor: 0
     resource: 0
 --- !u!114 &9180415984051115598
 MonoBehaviour:
@@ -5732,6 +5861,7 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
+    health: 525
     power: 0
-    health: 30
-    resource: 30
+    armor: 7
+    resource: 0.4

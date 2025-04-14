@@ -6,7 +6,7 @@ namespace Game.Inventory
     [CreateWizard(typeof(RarityData))]
     public class RarityImportWizard : EntitiesImportWizard<int>
     {
-        public override string IdKey => "Id";
+        public override string IdKey => "ID";
         public override string TitleKey => "Name";
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
@@ -17,9 +17,9 @@ namespace Game.Inventory
         {
             base.UpdateData(data, row);
 
-            var localizeKey = row["Localize Key"].LocalizeKeyParse();
+            var nameKey = row["Name Key"].LocalizeKeyParse();
 
-            data.GetProperty("nameKey").SetValue(localizeKey);
+            data.GetProperty("nameKey").SetValue(nameKey);
         }
     }
 }

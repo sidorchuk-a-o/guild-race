@@ -8,7 +8,7 @@ namespace Game.Inventory
     {
         private GoogleSheetsImporter equipTypesImporter;
 
-        public override string IdKey => "Id";
+        public override string IdKey => "ID";
         public override string TitleKey => "Name";
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
@@ -29,9 +29,9 @@ namespace Game.Inventory
             base.UpdateData(data, row);
 
             // name key
-            var localizeKey = row["Localize Key"].LocalizeKeyParse();
+            var nameKey = row["Name Key"].LocalizeKeyParse();
 
-            data.GetProperty("nameKey").SetValue(localizeKey);
+            data.GetProperty("nameKey").SetValue(nameKey);
 
             // types
             ImportEquipTypes(data);
@@ -46,7 +46,7 @@ namespace Game.Inventory
 
             equipTypesImporter.ImportData(typesSaveMeta, CheckEqual, UpdateTypeData, onFilterRow: row =>
             {
-                var groupId = row["Group Id"].IntParse();
+                var groupId = row["Group ID"].IntParse();
 
                 return id == groupId;
             });
@@ -56,11 +56,11 @@ namespace Game.Inventory
         {
             var id = row[IdKey].IntParse();
             var title = row[TitleKey].ToUpperFirst();
-            var localizeKey = row["Localize Key"].LocalizeKeyParse();
+            var nameKey = row["Name Key"].LocalizeKeyParse();
 
             data.GetProperty("id").SetValue(id);
             data.GetProperty("title").SetValue(title);
-            data.GetProperty("nameKey").SetValue(localizeKey);
+            data.GetProperty("nameKey").SetValue(nameKey);
         }
     }
 }

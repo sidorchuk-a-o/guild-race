@@ -8,16 +8,16 @@ namespace Game.Inventory
     /// </summary>
     public abstract class ItemSlotImportWizard : EntitiesImportWizard<int>
     {
-        public override string IdKey => "Id";
+        public override string IdKey => "ID";
         public override string TitleKey => "Name";
 
         protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 
-            var localizeKey = row["Localize Key"].LocalizeKeyParse();
+            var nameKey = row["Name Key"].LocalizeKeyParse();
 
-            data.GetProperty("nameKey").SetValue(localizeKey);
+            data.GetProperty("nameKey").SetValue(nameKey);
         }
     }
 }

@@ -26,11 +26,6 @@ namespace Game.Guild
             return Config.CreateKeyViewCollection<ClassData, int>("charactersParams.classes");
         }
 
-        public static Collection<int> CreateResourcesViewCollection()
-        {
-            return Config.CreateKeyViewCollection<ResourceData, int>("charactersParams.resources");
-        }
-
         public static Collection<int> CreateSpecializationsViewCollection()
         {
             var keysDict = new Dictionary<string, int> { ["< null >"] = -1 };

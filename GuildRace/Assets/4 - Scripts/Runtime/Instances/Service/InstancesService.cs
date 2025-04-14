@@ -26,9 +26,7 @@ namespace Game.Instances
         public ISeasonsCollection Seasons => state.Seasons;
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
 
-        public bool HasPlayerInstance => state.HasPlayerInstance;
         public ActiveInstanceInfo SetupInstance => state.SetupInstance;
-        public ActiveInstanceInfo PlayerInstance => state.PlayerInstance;
 
         public InstancesService(
             GuildConfig guildConfig,
@@ -109,24 +107,14 @@ namespace Game.Instances
             instanceModule.TryRemoveCharacterFromSquad(characterId);
         }
 
-        public async UniTask CompleteSetupAndStartInstance(bool playerInstance)
+        public async UniTask CompleteSetupAndStartInstance()
         {
-            await instanceModule.CompleteSetupAndStartInstance(playerInstance);
+            await instanceModule.CompleteSetupAndStartInstance();
         }
 
         public void CancelSetupInstance()
         {
             instanceModule.CancelSetupInstance();
-        }
-
-        public async UniTask StartPlayerInstance()
-        {
-            await instanceModule.StartPlayerInstance();
-        }
-
-        public async UniTask StopPlayerInstance()
-        {
-            await instanceModule.StopPlayerInstance();
         }
 
         public int StopActiveInstance(string activeInstanceId)

@@ -10,6 +10,7 @@ namespace Game.Guild
         private LocalizeKeyElement nameKeyField;
         private PropertyElement roleIdField;
         private PropertyElement subRoleIdField;
+        private UnitParamsElement unitParamsField;
 
         protected override void CreateSimpleContentGUI(VisualElement root)
         {
@@ -24,6 +25,10 @@ namespace Game.Guild
 
             roleIdField = root.CreateProperty();
             subRoleIdField = root.CreateProperty();
+
+            root.CreateHeader("Params");
+
+            unitParamsField = root.CreateElement<UnitParamsElement>();
         }
 
         public override void BindData(SerializedData data)
@@ -33,6 +38,7 @@ namespace Game.Guild
             nameKeyField.BindProperty("nameKey", data);
             roleIdField.BindProperty("roleId", data);
             subRoleIdField.BindProperty("subRoleId", data);
+            unitParamsField.BindProperty("unitParams", data);
         }
     }
 }

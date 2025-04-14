@@ -16,34 +16,6 @@ MonoBehaviour:
   title: Instances
   routes:
   - {fileID: 9186100594492082964}
-  - {fileID: 1050678254961342035}
---- !u!114 &1050678254961342035
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
-  m_Name: CurrentInstance
-  m_EditorClassIdentifier: 
-  id: 920eb14bde51465bae20738f20777ca4
-  title: CurrentInstance
-  path: CurrentInstance
-  layerKey:
-    value: 37907a48d71b406fb0dad3e7b3d60e42
-  components:
-  - id: e7bf89d5583341f58027de52132774b3
-    title: default
-    asset:
-      m_AssetGUID: 1fbe2bc94599203439b22febe3ce9354
-      m_SubObjectName: 
-      m_SubObjectGUID: 
-      m_SubObjectType: 
-      m_EditorAssetChanged: 0
-  children: []
 --- !u!114 &9186100594492082964
 MonoBehaviour:
   m_ObjectHideFlags: 1

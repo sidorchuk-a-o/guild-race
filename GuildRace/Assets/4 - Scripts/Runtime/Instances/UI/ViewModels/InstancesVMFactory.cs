@@ -95,14 +95,9 @@ namespace Game.Instances
 
         private ActiveInstanceInfo FindActiveInstance(string activeInstanceId)
         {
-            var playerInstance = instancesService.PlayerInstance;
             var setupInstance = instancesService.SetupInstance;
 
-            if (playerInstance != null && activeInstanceId == playerInstance.Id)
-            {
-                return playerInstance;
-            }
-            else if (setupInstance != null && activeInstanceId == setupInstance.Id)
+            if (setupInstance != null && activeInstanceId == setupInstance.Id)
             {
                 return setupInstance;
             }
@@ -129,9 +124,9 @@ namespace Game.Instances
             instancesService.TryRemoveCharacterFromSquad(characterId);
         }
 
-        public async UniTask CompleteSetupAndStartInstance(bool playerInstance)
+        public async UniTask CompleteSetupAndStartInstance()
         {
-            await instancesService.CompleteSetupAndStartInstance(playerInstance);
+            await instancesService.CompleteSetupAndStartInstance();
         }
 
         public void CancelSetupInstance()
@@ -139,21 +134,9 @@ namespace Game.Instances
             instancesService.CancelSetupInstance();
         }
 
-        public async UniTask StopPlayerInstance()
-        {
-            await instancesService.StopPlayerInstance();
-        }
-
         public int StopActiveInstance(string activeInstanceId)
         {
             return instancesService.StopActiveInstance(activeInstanceId);
-        }
-
-        public ActiveInstanceVM GetPlayerInstance()
-        {
-            var activeInstance = instancesService.PlayerInstance;
-
-            return new ActiveInstanceVM(activeInstance, this, InventoryVMF);
         }
 
         public ActiveInstanceVM GetSetupInstance()
@@ -161,15 +144,6 @@ namespace Game.Instances
             var activeInstance = instancesService.SetupInstance;
 
             return new ActiveInstanceVM(activeInstance, this, InventoryVMF);
-        }
-
-        // == Map == 
-
-        public InstanceMapVM GetInstanceMap()
-        {
-            var mapComponent = InstanceMapComponent.GetComponent();
-
-            return new InstanceMapVM(mapComponent);
         }
 
         // == Characters ==

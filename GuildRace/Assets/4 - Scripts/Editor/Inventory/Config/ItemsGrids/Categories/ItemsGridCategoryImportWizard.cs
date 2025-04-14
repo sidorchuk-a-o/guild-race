@@ -5,7 +5,7 @@ namespace Game.Inventory
     [CreateWizard(typeof(ItemsGridCategoryData))]
     public class ItemsGridCategoryImportWizard : EntitiesImportWizard<int>
     {
-        public override string IdKey => "Id";
+        public override string IdKey => "ID";
         public override string TitleKey => "Name";
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";

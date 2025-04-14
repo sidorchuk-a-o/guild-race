@@ -7,10 +7,12 @@ namespace Game.Instances
 {
     public class AbilityData : ScriptableEntity<int>
     {
-        // params
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private LocalizeKey descKey;
-        // ui
         [SerializeField] private AssetReference iconRef;
+
+        public LocalizeKey NameKey => nameKey;
+        public LocalizeKey DescKey => descKey;
+        public AssetReference IconRef => iconRef;
     }
 }

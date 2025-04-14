@@ -11,13 +11,6 @@ namespace Game.Instances
 
         [ES3Serializable] private SeasonsSM seasonsSM;
         [ES3Serializable] private ActiveInstancesSM activeInstancesSM;
-        [ES3Serializable] private string playerInstanceId;
-
-        public string PlayerInstanceId
-        {
-            get => playerInstanceId;
-            set => playerInstanceId = value;
-        }
 
         public void SetSeasons(IEnumerable<SeasonInfo> value)
         {
@@ -29,14 +22,14 @@ namespace Game.Instances
             return seasonsSM.GetValues(config);
         }
 
-        public IEnumerable<ActiveInstanceInfo> GetActiveInstances(IInventoryService inventoryService, SeasonsCollection seasons)
-        {
-            return activeInstancesSM.GetValues(inventoryService, seasons);
-        }
-
         public void SetActiveInstances(IEnumerable<ActiveInstanceInfo> value, IInventoryService inventoryService)
         {
             activeInstancesSM = new(value, inventoryService);
+        }
+
+        public IEnumerable<ActiveInstanceInfo> GetActiveInstances(IInventoryService inventoryService, SeasonsCollection seasons)
+        {
+            return activeInstancesSM.GetValues(inventoryService, seasons);
         }
     }
 }

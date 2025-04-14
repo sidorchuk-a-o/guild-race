@@ -1,11 +1,10 @@
-﻿using AD.ToolsCollection;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace Game.Guild
 {
     [Serializable]
-    public class DefaultCharacterData : Entity<string>
+    public class DefaultCharacterData
     {
         [SerializeField] private ClassId classId;
         [SerializeField] private SpecializationId specId;
