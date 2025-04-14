@@ -1,5 +1,4 @@
-﻿using AD.Services.ProtectedTime;
-using AD.Services.Router;
+﻿using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
@@ -97,7 +96,7 @@ namespace Game.Instances
             setupInstance.RemoveCharacter(characterId);
         }
 
-        public async UniTask CompleteSetupAndStartInstance(bool playerInstance)
+        public async UniTask CompleteSetupAndStartInstance()
         {
             var setupInstance = state.SetupInstance;
 
@@ -107,19 +106,12 @@ namespace Game.Instances
             }
 
             // upd state
-            state.CompleteSetupAndStartInstance(playerInstance);
+            state.CompleteSetupAndStartInstance();
 
             // start
-            if (playerInstance)
-            {
-                await StartPlayerInstance();
-            }
-            else
-            {
-                await router.PushAsync(
-                    pathKey: RouteKeys.Hub.activeInstances,
-                    parameters: RouteParams.FirstRoute);
-            }
+            await router.PushAsync(
+                pathKey: RouteKeys.Hub.activeInstances,
+                parameters: RouteParams.FirstRoute);
         }
 
         public void CancelSetupInstance()
@@ -164,51 +156,6 @@ namespace Game.Instances
                     PlacementId = guildTab.Grid.Id
                 });
             }
-        }
-
-        public async UniTask StartPlayerInstance()
-        {
-            if (state.HasPlayerInstance == false)
-            {
-                return;
-            }
-
-            await router.ShowLoading(LoadingScreenKeys.loading);
-
-            var instance = state.PlayerInstance.Instance;
-
-            // load map
-            await InstanceLogic.GetComponent().LoadMap(instance);
-
-            // load map ui
-            await router.PushAsync(
-                pathKey: RouteKeys.Instances.currentInstance,
-                parameters: RouteParams.FirstRoute);
-
-            await router.HideLoading(LoadingScreenKeys.loading);
-        }
-
-        public async UniTask StopPlayerInstance()
-        {
-            if (state.HasPlayerInstance == false)
-            {
-                return;
-            }
-
-            await router.ShowLoading(LoadingScreenKeys.loading);
-
-            // upd state
-            StopActiveInstance(state.PlayerInstance.Id);
-
-            // unload map
-            await InstanceLogic.GetComponent().UnloadMap();
-
-            // load hub ui
-            await router.PushAsync(
-                pathKey: RouteKeys.Hub.instances,
-                parameters: RouteParams.FirstRoute);
-
-            await router.HideLoading(LoadingScreenKeys.loading);
         }
 
         public int StopActiveInstance(string activeInstanceId)

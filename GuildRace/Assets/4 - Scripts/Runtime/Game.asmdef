@@ -12,6 +12,8 @@
         "OSA.Core",
         "ACTk.Runtime",
         "AstarPathfindingProject",
+        "Drawing",
+        "PackageTools",
         "Unity.InputSystem",
         "Unity.Addressables",
         "Unity.TextMeshPro",

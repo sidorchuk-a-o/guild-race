@@ -24,9 +24,7 @@ namespace Game.Instances
         public ISeasonsCollection Seasons => seasons;
         public IActiveInstancesCollection ActiveInstances => activeInstances;
 
-        public bool HasPlayerInstance => PlayerInstance != null;
         public ActiveInstanceInfo SetupInstance { get; private set; }
-        public ActiveInstanceInfo PlayerInstance { get; private set; }
 
         public InstancesState(
             InstancesConfig config,
@@ -53,14 +51,9 @@ namespace Game.Instances
             SetupInstance = null;
         }
 
-        public void CompleteSetupAndStartInstance(bool playerInstance)
+        public void CompleteSetupAndStartInstance()
         {
             activeInstances.Add(SetupInstance);
-
-            if (playerInstance)
-            {
-                PlayerInstance = SetupInstance;
-            }
 
             SetupInstance.SetStartTime(time.TotalTime);
             SetupInstance = null;
@@ -79,11 +72,6 @@ namespace Game.Instances
 
             activeInstances.RemoveAt(index);
 
-            if (PlayerInstance == activeInstance)
-            {
-                PlayerInstance = null;
-            }
-
             MarkAsDirty(true);
 
             return index;
@@ -93,10 +81,7 @@ namespace Game.Instances
 
         protected override InstancesStateSM CreateSave()
         {
-            var instancesStateSM = new InstancesStateSM
-            {
-                PlayerInstanceId = PlayerInstance?.Id
-            };
+            var instancesStateSM = new InstancesStateSM();
 
             instancesStateSM.SetSeasons(seasons);
             instancesStateSM.SetActiveInstances(activeInstances, inventoryService);
@@ -115,8 +100,6 @@ namespace Game.Instances
 
             seasons.AddRange(save.GetSeasons(config));
             activeInstances.AddRange(save.GetActiveInstances(inventoryService, seasons));
-
-            PlayerInstance = activeInstances.GetInstance(save.PlayerInstanceId);
 
             CreateNewSeasons();
         }

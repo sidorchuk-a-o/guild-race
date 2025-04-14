@@ -25,8 +25,7 @@ namespace Game.Instances
         {
             foreach (var activeInstance in instancesService.ActiveInstances)
             {
-                if (activeInstance.Equals(instancesService.PlayerInstance) ||
-                    activeInstance.IsReadyToComplete.Value)
+                if (activeInstance.IsReadyToComplete.Value)
                 {
                     continue;
                 }

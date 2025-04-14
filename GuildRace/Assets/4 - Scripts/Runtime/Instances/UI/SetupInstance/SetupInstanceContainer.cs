@@ -31,9 +31,6 @@ namespace Game.Instances
         [SerializeField] private GuildBankTabsContainer guildBankContainer;
         [SerializeField] private ItemsGridContainer squadBagContainer;
 
-        [Header("Params")]
-        [SerializeField] private Toggle playerInstanceToggle;
-
         [Header("Button")]
         [SerializeField] private UIButton backButton;
         [SerializeField] private UIButton startButton;
@@ -126,9 +123,7 @@ namespace Game.Instances
         {
             SetButtonsState(false);
 
-            var playerInstance = playerInstanceToggle.isOn;
-
-            await instancesVMF.CompleteSetupAndStartInstance(playerInstance);
+            await instancesVMF.CompleteSetupAndStartInstance();
 
             SetButtonsState(true);
         }
