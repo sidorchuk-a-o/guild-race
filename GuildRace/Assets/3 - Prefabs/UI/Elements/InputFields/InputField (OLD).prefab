@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294178034
-  m_fontColor: {r: 0.9490197, g: 0.9568628, b: 0.95294124, a: 1}
+    rgba: 4293325553
+  m_fontColor: {r: 0.94509804, g: 0.9490196, b: 0.9019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -152,11 +152,11 @@ MonoBehaviour:
   targetComponent: {fileID: 6079767779993258647}
   states:
   - name: default
-    normalColor: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
-    highlightedColor: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
-    pressedColor: {r: 0.84303284, g: 0.85, b: 0.84651643, a: 1}
-    selectedColor: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
-    disabledColor: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 0.5019608}
+    normalColor: {r: 0.94509804, g: 0.9490196, b: 0.9019608, a: 1}
+    highlightedColor: {r: 0.94509804, g: 0.9490196, b: 0.9019608, a: 1}
+    pressedColor: {r: 0.84648764, g: 0.85, b: 0.80785125, a: 1}
+    selectedColor: {r: 0.94509804, g: 0.9490196, b: 0.9019608, a: 1}
+    disabledColor: {r: 0.94509804, g: 0.9490196, b: 0.9019608, a: 0.5019608}
     colorMultiplier: 1
     fadeDuration: 0.1
   - name: error
@@ -275,7 +275,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3435695763862040423}
   - component: {fileID: 7142410930006700906}
-  - component: {fileID: 8917436768934154847}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -317,23 +316,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!114 &8917436768934154847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6221036651822768677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51408d5808290e4458f61dff85bdd3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1565025997102533197}
-  autoLocalize: 1
-  termMod: 0
-  localizeKey:
-    value: <none>
 --- !u!1 &6378308745869048354
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +328,7 @@ GameObject:
   - component: {fileID: 5044048798613030736}
   - component: {fileID: 138590356391039266}
   m_Layer: 0
-  m_Name: InputField
+  m_Name: InputField (OLD)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,7 +399,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7917963256778512729}
   m_TextViewport: {fileID: 8020738821012929643}
   m_TextComponent: {fileID: 6079767779993258647}
-  m_Placeholder: {fileID: 0}
+  m_Placeholder: {fileID: 1565025997102533197}
   m_VerticalScrollbar: {fileID: 0}
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
@@ -459,7 +441,7 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_SelectionColor: {r: 0.6509804, g: 0.5921569, b: 0.49803925, a: 0.69803923}
   m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
@@ -489,12 +471,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateKeys:
   - default
-  - filled
   - error
   components:
   - {fileID: 938292437053851015}
   - {fileID: 4468647029254761659}
-  - {fileID: 271768922542589071}
   ignoreSelectedState: 0
   inputField: {fileID: 5044048798613030736}
 --- !u!1 &7127548097206562442
@@ -508,7 +488,7 @@ GameObject:
   - component: {fileID: 6053565061224419531}
   - component: {fileID: 6716399046926982632}
   - component: {fileID: 1565025997102533197}
-  - component: {fileID: 271768922542589071}
+  - component: {fileID: 9000612120040504994}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -573,7 +553,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 1717723746
-  m_fontColor: {r: 0.9490197, g: 0.9568628, b: 0.95294124, a: 0.4}
+  m_fontColor: {r: 0.94634616, g: 0.95, b: 0.9025, a: 0.4}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -634,7 +614,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &271768922542589071
+--- !u!114 &9000612120040504994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -643,45 +623,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7127548097206562442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f827def481e624468db33f6b0dfd413, type: 3}
+  m_Script: {fileID: 11500000, guid: 51408d5808290e4458f61dff85bdd3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetComponent: {fileID: 1565025997102533197}
-  states:
-  - name: default
-    normalParams:
-      fontSize: 32
-      alignmentOptions: 513
-    highlightedParams:
-      fontSize: 32
-      alignmentOptions: 513
-    pressedParams:
-      fontSize: 22
-      alignmentOptions: 257
-    selectedParams:
-      fontSize: 22
-      alignmentOptions: 257
-    disabledParams:
-      fontSize: 32
-      alignmentOptions: 513
-    fadeDuration: 0.1
-  - name: filled
-    normalParams:
-      fontSize: 22
-      alignmentOptions: 257
-    highlightedParams:
-      fontSize: 22
-      alignmentOptions: 257
-    pressedParams:
-      fontSize: 22
-      alignmentOptions: 257
-    selectedParams:
-      fontSize: 22
-      alignmentOptions: 257
-    disabledParams:
-      fontSize: 22
-      alignmentOptions: 257
-    fadeDuration: 0.1
+  text: {fileID: 1565025997102533197}
+  autoLocalize: 1
+  termMod: 0
+  localizeKey:
+    value: <none>
 --- !u!1 &7550247230251098163
 GameObject:
   m_ObjectHideFlags: 0
