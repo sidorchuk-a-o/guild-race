@@ -6,6 +6,7 @@ namespace Game.Guild
     {
         bool GuildExists { get; }
         IReadOnlyReactiveProperty<string> Name { get; }
+        EmblemInfo Emblem { get; }
 
         ICharactersCollection Characters { get; }
         IGuildRanksCollection GuildRanks { get; }
@@ -14,6 +15,10 @@ namespace Game.Guild
         IRecruitingModule RecruitingModule { get; }
 
         void CreateOrUpdateGuild(GuildEM guildEM);
+
+        EmblemEM CreateEmblemEM();
+        void SaveEmblem(EmblemEM emblemEM);
+
         int RemoveCharacter(string characterId);
         int AcceptJoinRequest(string requestId);
         int DeclineJoinRequest(string requestId);

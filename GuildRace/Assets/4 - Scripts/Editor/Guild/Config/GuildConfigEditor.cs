@@ -13,6 +13,7 @@ namespace Game.Guild
         private CharactersParamsEditor charactersParamsEditor;
         private RecruitingParamsEditor recruitingParamsEditor;
         private GuildBankParamsEditor guildBankParamsEditor;
+        private EmblemParamsEditor emblemParamsEditor;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -22,6 +23,7 @@ namespace Game.Guild
             tabs.CreateTabs("Characters", CreateCharactersTabs);
             tabs.CreateTabs("Recruiting", CreateRecruitingTabs);
             tabs.CreateTabs("Guild Bank", CreateGuildBankTabs);
+            tabs.CreateTabs("Emblem", CreateEmblemTabs);
         }
 
         private void CreateGuildTab(VisualElement root, SerializedData data)
@@ -53,6 +55,12 @@ namespace Game.Guild
         {
             guildBankParamsEditor = new GuildBankParamsEditor();
             guildBankParamsEditor.CreateTabs(tabs);
+        }
+
+        private void CreateEmblemTabs(TabsContainer tabs)
+        {
+            emblemParamsEditor = new EmblemParamsEditor();
+            emblemParamsEditor.CreateTabs(tabs);
         }
 
         // == Menu ==

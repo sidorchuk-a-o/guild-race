@@ -15,6 +15,7 @@ namespace Game.Guild
 
         public bool GuildExists => state.IsExists;
         public IReadOnlyReactiveProperty<string> Name => state.Name;
+        public EmblemInfo Emblem => state.Emblem;
 
         public ICharactersCollection Characters => state.Characters;
         public IGuildRanksCollection GuildRanks => state.GuildRanks;
@@ -53,6 +54,20 @@ namespace Game.Guild
 
             state.CreateOrUpdateGuild(guildEM);
         }
+
+        // == Emblem ==
+
+        public EmblemEM CreateEmblemEM()
+        {
+            return state.CreateEmblemEM();
+        }
+
+        public void SaveEmblem(EmblemEM emblemEM)
+        {
+            state.SaveEmblem(emblemEM);
+        }
+
+        // == Characters ==
 
         public int RemoveCharacter(string characterId)
         {

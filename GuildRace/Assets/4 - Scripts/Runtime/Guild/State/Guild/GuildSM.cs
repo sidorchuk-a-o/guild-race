@@ -13,11 +13,18 @@ namespace Game.Guild
         [ES3Serializable] private CharactersSM charactersSM;
         [ES3Serializable] private GuildRanksSM guildRanksSM;
         [ES3Serializable] private GuildBankTabsSM guildBankTabsSM;
+        [ES3Serializable] private EmblemSM emblemSM;
 
         public string Name
         {
             get => name;
             set => name = value;
+        }
+
+        public EmblemInfo Emblem
+        {
+            get => emblemSM.GetValue();
+            set => emblemSM = new(value);
         }
 
         public IEnumerable<GuildRankInfo> GuildRanks

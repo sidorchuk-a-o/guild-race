@@ -5,7 +5,6 @@ using Cysharp.Threading.Tasks;
 using Game.Guild;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 using VContainer;
 
 namespace Game
@@ -13,7 +12,7 @@ namespace Game
     public class HubContainer : UIContainer
     {
         [Header("Guild & Player")]
-        [SerializeField] private Image guildIconImage;
+        [SerializeField] private EmblemContainer emblemContainer;
         [SerializeField] private UIText guildNameText;
         [Space]
         [SerializeField] private UIText playerNicknameText;
@@ -32,6 +31,8 @@ namespace Game
             await base.Init(parameters, disp);
 
             guildVM.AddTo(disp);
+
+            await emblemContainer.Init(guildVM.EmblemVM);
 
             guildVM.GuildName
                 .Subscribe(x => guildNameText.SetTextParams(x))
