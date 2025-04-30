@@ -545,6 +545,416 @@ MonoBehaviour:
     - {fileID: -5316411198448944541}
     - {fileID: -2476405077858922527}
     - {fileID: -7000185162162723182}
+  emblemParams:
+    symbols:
+    - m_AssetGUID: f7bbd536b3831584f8699f579aa366bf
+      m_SubObjectName: symbol-1
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: a0bbb5c236798ee4c98d267d4533926e
+      m_SubObjectName: symbol-2
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: c75476208aa19474883ca9edada9220a
+      m_SubObjectName: symbol-3
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 98f5888438204d649b37802877a91e16
+      m_SubObjectName: symbol-4
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 004a49a3b1b43f842a4d2a44e60d809e
+      m_SubObjectName: symbol-5
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: c2affab60b482af4e84ce54295224b67
+      m_SubObjectName: symbol-6
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 43d9ac1706cbe194c877560bc9591718
+      m_SubObjectName: symbol-7
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 2caf73819092e024b95f3548cda223f5
+      m_SubObjectName: symbol-8
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: fa196d0cd1f6cdf4d8d05929fa07f304
+      m_SubObjectName: symbol-9
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: bf8a7243226bf304f9ab29dbe42c5133
+      m_SubObjectName: symbol-10
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 6773fa71b68ba2e45b82710ae811fe74
+      m_SubObjectName: symbol-11
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: a5fd424fe0eca404887a09e3add93589
+      m_SubObjectName: symbol-12
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: e0013ac25f0169a46bee78b919f22809
+      m_SubObjectName: symbol-13
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 81328e6fc33d882459a75eb2eca8d7d1
+      m_SubObjectName: symbol-14
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 4678cb28d86b721439476d02851de893
+      m_SubObjectName: symbol-15
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 12b3a3a58e4961e41810a17218443ecc
+      m_SubObjectName: symbol-16
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 58aca20e55f73b24d9da608de4d38bb4
+      m_SubObjectName: symbol-17
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: a579b688928228540a80b5bd7b7a51db
+      m_SubObjectName: symbol-18
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 48dbf295d7f837d48abc05b1a6c19321
+      m_SubObjectName: symbol-19
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: c157836063b6bf343b31d1372d6bcfdc
+      m_SubObjectName: symbol-20
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 35243ee44f90dd945a88ccfca7d9c4b7
+      m_SubObjectName: symbol-21
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: bff800dea0203774bab9764596561876
+      m_SubObjectName: symbol-22
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 6a4b8d5e82b03374e84a6216b084dd03
+      m_SubObjectName: symbol-23
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: d65df29b5fd5ad740a137ed6d96f323b
+      m_SubObjectName: symbol-24
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 4dab88781449ecf40baca6d7930c2eb7
+      m_SubObjectName: symbol-25
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: b689ad5b0648bc1438d7b23b18815263
+      m_SubObjectName: symbol-26
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: fbb31d7007260f145818cfd3b961f06a
+      m_SubObjectName: symbol-27
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 2d6625ddee2a3c54faefde7004328dca
+      m_SubObjectName: symbol-28
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 23077797067576144a0b72776241d1b7
+      m_SubObjectName: symbol-29
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 4241e6fbd5672fd4d9a619e55a2698ac
+      m_SubObjectName: symbol-30
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 888e8776fa7a05743accb0965fecbd71
+      m_SubObjectName: symbol-31
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 6cf617ccccbbb014e9370020b6bb130e
+      m_SubObjectName: symbol-32
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 7b2aa395884311b4f9013ae45a32d59b
+      m_SubObjectName: symbol-33
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 954de75a142bdc54d8d9179f200d26a6
+      m_SubObjectName: symbol-34
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 430a11f392f319649818cc8c7dc05ee5
+      m_SubObjectName: symbol-35
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: e02659638187cdd48a24660fe4579255
+      m_SubObjectName: symbol-36
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 911f6c06c808df54d84d69ad0232139d
+      m_SubObjectName: symbol-37
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 10dd4ed6a7967dc49aaa7244dd5a75e7
+      m_SubObjectName: symbol-38
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: a8e098e68586f784eaf77754665baaeb
+      m_SubObjectName: symbol-39
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 244b4daee7d33ff4ba9ffba37e969d62
+      m_SubObjectName: symbol-40
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: b4f7029e5323f614e8b91a7433c784ce
+      m_SubObjectName: symbol-41
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: cb6ae8978f820b944b75ff11eecd4f85
+      m_SubObjectName: symbol-42
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: fdad1be94fbb5c64b8f65e00879b7bb3
+      m_SubObjectName: symbol-43
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 8dc6f85be1afa3c4589d8abfa5f18d93
+      m_SubObjectName: symbol-44
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 856763e39ed7157428708fba697b26d0
+      m_SubObjectName: symbol-45
+      m_SubObjectGUID: 
+      m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_EditorAssetChanged: 1
+    divisions:
+    - m_AssetGUID: 3a56f4a401d4a0d41a5631d0171f4778
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 87e5206237a5cbd49ba3912c80a340b1
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 5b7675e113037164ca1470403a826d52
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 3f30a50ee65de8d4eb0c5f22c5e319d7
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 7172b4d14797792488fc81d7861ea28d
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 4db7a1ea9b889e444aa117e2225002fa
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 9e4e680057e74924fad32bfb91216585
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: adaed5e0d5b19784fa3e2aaa2a00133a
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 2727bedafe4d94342a1d10275993159d
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 56289b43db1544442b60f4ed3984af74
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 2e0c6d901a619a14ab462524942d9c1d
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 68e10d58c2eb0274d808959913f560fc
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 9d0bf76d917d08c4ea04a6424ac96fed
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: a7b2107b66df1ae45bd4492f823c4c0b
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 7bb76bb1261354d4a89a98516f06ccbb
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 25ee6c7ed81da2a4bad88a55836552cb
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 1bef209db72ed2841b47315744eb2ada
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 5472f2f3488353b4d9eb2c9e31f002f5
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: b72c05b8ddff4554f81c3fa52b08908c
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 6f0aecc32aa08e443ae0579f22400f14
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 91cd3e1fb468e814cab7a2d0f037fb87
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 5d831d5d69e0f3349a35e1eb1a6f1a63
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    - m_AssetGUID: 17dc21010e4e448499940b02b20ae104
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    colors:
+    - {r: 0.86274517, g: 0.7019608, b: 0.10588236, a: 1}
+    - {r: 0.9568628, g: 0.9568628, b: 0.9568628, a: 1}
+    - {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
+    - {r: 0.84313726, g: 0.21568628, b: 0.2901961, a: 1}
+    - {r: 0.8431373, g: 0.13725491, b: 0.10980393, a: 1}
+    - {r: 0.21568628, g: 0.4862745, b: 0.84313726, a: 1}
+    - {r: 0.24313727, g: 0.43137258, b: 0.67058825, a: 1}
+    - {r: 0.04705883, g: 0.19607845, b: 0.41960788, a: 1}
+    - {r: 0.34509805, g: 0.627451, b: 0.64705884, a: 1}
+    - {r: 0.5764706, g: 0.6627451, b: 0.36078432, a: 1}
+    - {r: 0.14901961, g: 0.7529412, b: 0.38039216, a: 1}
+    - {r: 0.18431373, g: 0.6039216, b: 0.25490198, a: 1}
+    - {r: 0.7372549, g: 0.5529412, b: 0.75294125, a: 1}
+    - {r: 0.40000004, g: 0.28235295, b: 0.48627454, a: 1}
+    - {r: 0.52156866, g: 0.09411765, b: 0.35686275, a: 1}
+    - {r: 1, g: 0.8784314, b: 0.4, a: 1}
+    - {r: 0.9725491, g: 0.5686275, b: 0, a: 1}
+    - {r: 0.5254902, g: 0.2627451, b: 0, a: 1}
+    - {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 1}
+    - {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
+    - {r: 0.2, g: 0.2, b: 0.2, a: 1}
 --- !u!114 &59231052814991113
 MonoBehaviour:
   m_ObjectHideFlags: 1

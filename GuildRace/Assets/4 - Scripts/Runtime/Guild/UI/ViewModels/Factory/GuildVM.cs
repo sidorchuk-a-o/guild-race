@@ -12,6 +12,7 @@ namespace Game.Guild
         private readonly ReactiveProperty<bool> rosterIsFull = new();
 
         public IReadOnlyReactiveProperty<string> GuildName { get; }
+        public EmblemVM EmblemVM { get; }
 
         public IReadOnlyReactiveProperty<string> PlayerNickname { get; }
         public IReadOnlyReactiveProperty<string> PlayerRank { get; }
@@ -24,6 +25,7 @@ namespace Game.Guild
             this.guildService = guildService;
 
             GuildName = guildService.Name;
+            EmblemVM = new(guildService.Emblem, guildConfig.EmblemParams);
 
             PlayerNickname = new ReactiveProperty<string>("< NICKNAME >");
             PlayerRank = guildService.GuildRanks.GuildMaster.Name;
@@ -31,6 +33,8 @@ namespace Game.Guild
 
         protected override void InitSubscribes()
         {
+            EmblemVM.AddTo(this);
+
             guildService.Characters
                 .ObserveCountChanged()
                 .Subscribe(CharactersCountChanged)

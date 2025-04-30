@@ -15,10 +15,25 @@ MonoBehaviour:
   assetPoolsFactories:
   - {fileID: 5128579174644463104}
   - {fileID: 6910678221014707312}
+  - {fileID: 521349800542138665}
   prefabPoolsFactories:
   - {fileID: 1706265491268713895}
   - {fileID: 6898037358196196923}
   - {fileID: 6423315347795307317}
+--- !u!114 &521349800542138665
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7744aad4c079f4d4d9c17457d6bb546b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: ea1291da12ff4cbba793981ff1342ba9
+  title: 
 --- !u!114 &1706265491268713895
 MonoBehaviour:
   m_ObjectHideFlags: 1

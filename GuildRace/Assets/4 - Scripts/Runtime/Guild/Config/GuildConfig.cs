@@ -12,6 +12,7 @@ namespace Game.Guild
         [SerializeField] private CharactersParams charactersParams = new();
         [SerializeField] private RecruitingParams recruitingParams = new();
         [SerializeField] private GuildBankParams guildBankParams = new();
+        [SerializeField] private EmblemParams emblemParams = new();
 
         public int MaxCharactersCount => maxCharactersCount;
         public IReadOnlyList<GuildRankData> DefaultGuildRanks => defaultGuildRanks;
@@ -19,5 +20,6 @@ namespace Game.Guild
         public CharactersParams CharactersParams => charactersParams;
         public RecruitingParams RecruitingParams => recruitingParams;
         public GuildBankParams GuildBankParams => guildBankParams;
+        public EmblemParams EmblemParams => emblemParams;
     }
 }

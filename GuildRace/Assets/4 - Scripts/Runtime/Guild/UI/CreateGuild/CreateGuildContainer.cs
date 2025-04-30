@@ -14,6 +14,9 @@ namespace Game.Guild
         [SerializeField] private UIInputField nameField;
         [SerializeField] private UIButton createButton;
 
+        [Header("Emblem")]
+        [SerializeField] private EmblemParamsContainer emblemParamsContainer;
+
         private GuildVMFactory guildVMF;
 
         [Inject]
@@ -42,7 +45,8 @@ namespace Game.Guild
         {
             var guildEM = new GuildEM
             {
-                Name = nameField.Value.Value
+                Name = nameField.Value.Value,
+                Emblem = emblemParamsContainer.EmblemEM
             };
 
             guildVMF.CreateOrUpdateGuild(guildEM);

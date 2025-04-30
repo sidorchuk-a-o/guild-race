@@ -25,6 +25,7 @@ namespace Game.Guild
 
         public bool IsExists => name.IsValid();
         public IReadOnlyReactiveProperty<string> Name => name;
+        public EmblemInfo Emblem { get; private set; }
 
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
@@ -45,8 +46,29 @@ namespace Game.Guild
         {
             name.Value = guildEM.Name;
 
+            SaveEmblem(guildEM.Emblem);
+
             MarkAsDirty();
         }
+
+        // == Emblem ==
+
+        public EmblemEM CreateEmblemEM()
+        {
+            return new EmblemEM(Emblem);
+        }
+
+        public void SaveEmblem(EmblemEM emblemEM)
+        {
+            Emblem.SetSymbol(emblemEM.Symbol);
+            Emblem.SetSymbolColor(emblemEM.SymbolColor);
+            Emblem.SetBackground(emblemEM.Background);
+            Emblem.SetBackgroundColors(emblemEM.BackgroundColors);
+
+            MarkAsDirty();
+        }
+
+        // == Character ==
 
         public void AddCharacter(CharacterInfo info)
         {
@@ -78,7 +100,8 @@ namespace Game.Guild
             var guildSM = new GuildSM
             {
                 Name = Name.Value,
-                GuildRanks = GuildRanks
+                GuildRanks = GuildRanks,
+                Emblem = Emblem
             };
 
             guildSM.SetCharacters(Characters, inventoryService);
@@ -91,13 +114,15 @@ namespace Game.Guild
         {
             if (save == null)
             {
-                guildRanks.AddRange(CreateDefaultGuildRanks());
+                Emblem = new();
                 bankTabs.AddRange(CreateDefaultBankTabs());
+                guildRanks.AddRange(CreateDefaultGuildRanks());
 
                 return;
             }
 
             name.Value = save.Name;
+            Emblem = save.Emblem;
 
             guildRanks.AddRange(save.GuildRanks);
             characters.AddRange(save.GetCharacters(inventoryService));
