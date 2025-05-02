@@ -9,6 +9,8 @@ namespace Game.Instances
 
         ActiveInstanceInfo SetupInstance { get; }
 
+        ConsumableMechanicHandler GetMechanicHandler(int id);
+
         UniTask StartSetupInstance(int instanceId);
         void TryAddCharacterToSquad(string characterId);
         void TryRemoveCharacterFromSquad(string characterId);

@@ -23,7 +23,7 @@ namespace Game.Quests
             var mechanicId = row["Mech ID"].IntParse();
             var requiredProgress = Mathf.Max(row["Progress"].IntParse(), 1);
 
-            var mechanicParamsData = new[] { row["Param1"], row["Param2"] };
+            var mechanicParamsData = new[] { row["Param 1"], row["Param 2"] };
             var mechanicParams = mechanicParamsData
                 .Where(x => x.IsValid())
                 .ToList();

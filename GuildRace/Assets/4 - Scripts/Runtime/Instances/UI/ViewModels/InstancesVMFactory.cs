@@ -35,6 +35,15 @@ namespace Game.Instances
             this.resolver = resolver;
         }
 
+        // == Consumables ==
+
+        public ConsumableMechanicVM GetConsumableMechanic(int mechanicId)
+        {
+            var mechanic = instancesService.GetMechanicHandler(mechanicId);
+
+            return new ConsumableMechanicVM(mechanic);
+        }
+
         // == Season ==
 
         public SeasonVM GetFirstSeason()

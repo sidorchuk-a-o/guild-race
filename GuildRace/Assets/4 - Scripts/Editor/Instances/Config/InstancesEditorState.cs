@@ -23,6 +23,16 @@ namespace Game.Instances
             return Config.CreateKeyViewCollection<InstanceTypeData, int>("instanceTypes");
         }
 
+        public static Collection<int> GetConsumableTypesViewCollection()
+        {
+            return Config.ConsumablesParams.CreateKeyViewCollection<ConsumableTypeData, int>("types");
+        }
+
+        public static Collection<int> CreateConsumableMechanicsViewCollection()
+        {
+            return Config.ConsumablesParams.CreateKeyViewCollection<ConsumableMechanicHandler, int>("mechanicHandlers");
+        }
+
         public static Collection<int> GetThreatsViewCollection()
         {
             return Config.CreateKeyViewCollection<ThreatData, int>("threats");

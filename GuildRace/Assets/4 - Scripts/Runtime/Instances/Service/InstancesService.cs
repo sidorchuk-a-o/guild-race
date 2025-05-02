@@ -1,4 +1,6 @@
-﻿using AD.Services;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AD.Services;
 using AD.Services.AppEvents;
 using AD.Services.ProtectedTime;
 using AD.Services.Router;
@@ -16,7 +18,10 @@ namespace Game.Instances
         private readonly InstanceModule instanceModule;
         private readonly ActiveInstanceModule activeInstanceModule;
 
+        private readonly List<ConsumableMechanicHandler> mechanicHandlers;
+
         private readonly IAppEventsService appEvents;
+        private readonly IObjectResolver resolver;
 
         public ISeasonsCollection Seasons => state.Seasons;
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
@@ -34,20 +39,41 @@ namespace Game.Instances
             IObjectResolver resolver)
         {
             this.appEvents = appEvents;
+            this.resolver = resolver;
 
             state = new(instancesConfig, time, guildService, inventoryService, resolver);
 
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService);
             activeInstanceModule = new(instancesConfig, this, time);
+
+            mechanicHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToList();
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
+            InitMechanicHandlers();
 
             appEvents.AddAppTickListener(activeInstanceModule);
 
             return await Inited();
+        }
+
+        // == Consumable Mechanics ==
+
+        private void InitMechanicHandlers()
+        {
+            mechanicHandlers.ForEach(handler =>
+            {
+                resolver.Inject(handler);
+
+                handler.Init();
+            });
+        }
+
+        public ConsumableMechanicHandler GetMechanicHandler(int id)
+        {
+            return mechanicHandlers.FirstOrDefault(x => x.Id == id);
         }
 
         // == Instance ==

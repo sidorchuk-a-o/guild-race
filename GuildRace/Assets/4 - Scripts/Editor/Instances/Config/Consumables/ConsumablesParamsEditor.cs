@@ -10,6 +10,8 @@ namespace Game.Instances
     public class ConsumablesParamsEditor
     {
         private ConsumablesItemsList itemsList;
+        private ConsumableTypesList typesList;
+        private ConsumableMechanicHandlersList mechanicHandlersList;
         private GridParamsForItemsElement gridParamsEditor;
 
         private SerializedData GetData(SerializedData data)
@@ -32,6 +34,14 @@ namespace Game.Instances
         private void CreateParamsTab(VisualElement root, SerializedData data)
         {
             root.ConvertToRow();
+
+            typesList = root.CreateElement<ConsumableTypesList>();
+            typesList.BindProperty("types", GetData(data));
+            typesList.FlexWidth(33).MarginRight(10);
+
+            mechanicHandlersList = root.CreateElement<ConsumableMechanicHandlersList>();
+            mechanicHandlersList.BindProperty("mechanicHandlers", GetData(data));
+            mechanicHandlersList.FlexWidth(33).MarginRight(10);
 
             gridParamsEditor = root.CreateElement<GridParamsForItemsElement>();
             gridParamsEditor.BindProperty("gridParams", GetData(data));

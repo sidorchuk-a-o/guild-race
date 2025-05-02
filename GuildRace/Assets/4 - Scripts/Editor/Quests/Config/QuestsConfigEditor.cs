@@ -43,12 +43,12 @@ namespace Game.Quests
         [MenuItem("Game Services/Game/Quests")]
         public static QuestsConfigEditor GoToEditor()
         {
-            return GoToEditor<QuestsConfigEditor>();
+            return GoToEditor<QuestsConfigEditor>(width: 550, height: 700);
         }
 
         public static QuestsConfigEditor GoToEditor(QuestsConfig config)
         {
-            return GoToEditor<QuestsConfigEditor>(config);
+            return GoToEditor<QuestsConfigEditor>(config, width: 550, height: 700);
         }
     }
 }
