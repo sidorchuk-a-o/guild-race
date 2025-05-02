@@ -8,9 +8,9 @@ namespace Game.Guild
     /// </summary>
     public class CharactersParamsEditor
     {
+        private ClassesList classesList;
         private RolesList rolesList;
         private SubRolesList subRolesList;
-        private ClassesList classesList;
 
         private static SerializedData GetData(SerializedData data)
         {

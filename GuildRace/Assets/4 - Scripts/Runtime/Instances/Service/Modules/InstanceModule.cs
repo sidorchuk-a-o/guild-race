@@ -2,7 +2,6 @@
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
-using System.Linq;
 
 namespace Game.Instances
 {
@@ -52,23 +51,7 @@ namespace Game.Instances
             }
 
             var setupInstanceId = setupInstance.Id;
-            var instance = setupInstance.Instance;
-
             var character = guildService.Characters[characterId];
-            var characterRole = guildConfig.CharactersParams.GetRoleBySpec(character.SpecId.Value);
-
-            var squad = setupInstance.Squad.Select(id => guildService.Characters[id]);
-            var squadParams = instancesConfig.SquadParams.GetSquadParams(instance.Type);
-            var roleParams = squadParams.GetRole(characterRole);
-
-            var roleCountInSquad = squad
-                .Select(x => guildConfig.CharactersParams.GetRoleBySpec(x.SpecId.Value))
-                .Count(role => role == characterRole);
-
-            if (roleCountInSquad >= roleParams.MaxUnitsCount)
-            {
-                return;
-            }
 
             character.SetInstanceId(setupInstanceId);
             setupInstance.AddCharacter(characterId);
@@ -141,20 +124,20 @@ namespace Game.Instances
                 var character = guildService.Characters[characterId];
 
                 character.SetInstanceId(null);
-            }
 
-            // reset bag
+                // TODO: reset bag ...
 
-            var bagCellType = instancesConfig.SquadParams.Bag.CellType;
-            var guildTab = guildService.BankTabs.FirstOrDefault(x => x.Grid.CellType == bagCellType);
+                //var bagCellType = instancesConfig.SquadParams.Bag.CellType;
+                //var guildTab = guildService.BankTabs.FirstOrDefault(x => x.Grid.CellType == bagCellType);
 
-            foreach (var item in instance.Bag.Items)
-            {
-                inventoryService.TryPlaceItem(new PlaceInPlacementArgs
-                {
-                    ItemId = item.Id,
-                    PlacementId = guildTab.Grid.Id
-                });
+                //foreach (var item in instance.Bag.Items)
+                //{
+                //    inventoryService.TryPlaceItem(new PlaceInPlacementArgs
+                //    {
+                //        ItemId = item.Id,
+                //        PlacementId = guildTab.Grid.Id
+                //    });
+                //}
             }
         }
 

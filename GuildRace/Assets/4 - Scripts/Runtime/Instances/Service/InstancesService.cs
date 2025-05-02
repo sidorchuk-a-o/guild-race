@@ -5,8 +5,6 @@ using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
-using System;
-using System.Linq;
 using VContainer;
 
 namespace Game.Instances
@@ -14,13 +12,10 @@ namespace Game.Instances
     public class InstancesService : Service, IInstancesService
     {
         private readonly InstancesState state;
-        private readonly InstancesConfig instancesConfig;
 
         private readonly InstanceModule instanceModule;
         private readonly ActiveInstanceModule activeInstanceModule;
 
-        private readonly IGuildService guildService;
-        private readonly IInventoryService inventoryService;
         private readonly IAppEventsService appEvents;
 
         public ISeasonsCollection Seasons => state.Seasons;
@@ -38,12 +33,9 @@ namespace Game.Instances
             ITimeService time,
             IObjectResolver resolver)
         {
-            this.instancesConfig = instancesConfig;
-            this.guildService = guildService;
-            this.inventoryService = inventoryService;
             this.appEvents = appEvents;
 
-            state = new(instancesConfig, time, inventoryService, resolver);
+            state = new(instancesConfig, time, guildService, inventoryService, resolver);
 
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService);
             activeInstanceModule = new(instancesConfig, this, time);
@@ -55,39 +47,7 @@ namespace Game.Instances
 
             appEvents.AddAppTickListener(activeInstanceModule);
 
-            CreateConsumables(); // TODO: TEMP
-
             return await Inited();
-        }
-
-        /// <summary>
-        /// TEMP
-        /// </summary>
-        private void CreateConsumables()
-        {
-            var consumablesParams = instancesConfig.ConsumablesParams;
-            var consumablesCellTypes = consumablesParams.GridParams.CellTypes;
-
-            var consumablesBank = guildService.BankTabs
-                .Select(x => x.Grid)
-                .FirstOrDefault(x => consumablesCellTypes.Contains(x.CellType));
-
-            var consumablesItems = consumablesParams.Items
-                .Select(x => inventoryService.Factory.CreateItem(x))
-                .OfType<ConsumablesItemInfo>();
-
-            foreach (var consumables in consumablesItems)
-            {
-                consumables.Stack.SetValue(10);
-
-                var placementArgs = new PlaceInPlacementArgs
-                {
-                    ItemId = consumables.Id,
-                    PlacementId = consumablesBank.Id
-                };
-
-                inventoryService.TryPlaceItem(placementArgs);
-            }
         }
 
         // == Instance ==

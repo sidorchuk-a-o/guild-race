@@ -3,6 +3,7 @@ using AD.Services.ProtectedTime;
 using AD.Services.Save;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
+using Game.Guild;
 using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Game.Instances
     public class InstancesState : ServiceState<InstancesConfig, InstancesStateSM>
     {
         private readonly ITimeService time;
+        private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
 
         private readonly SeasonsCollection seasons = new(null);
@@ -29,11 +31,13 @@ namespace Game.Instances
         public InstancesState(
             InstancesConfig config,
             ITimeService time,
+            IGuildService guildService,
             IInventoryService inventoryService,
             IObjectResolver resolver)
             : base(config, resolver)
         {
             this.time = time;
+            this.guildService = guildService;
             this.inventoryService = inventoryService;
         }
 
@@ -41,9 +45,8 @@ namespace Game.Instances
         {
             var id = GuidUtils.Generate();
             var instance = seasons.GetInstance(instanceId);
-            var bagGrid = inventoryService.Factory.CreateGrid(config.SquadParams.Bag);
 
-            SetupInstance = new(id, instance, bagGrid, squad: null);
+            SetupInstance = new(id, instance, squad: null);
         }
 
         public void CancelSetupInstance()
@@ -94,6 +97,7 @@ namespace Game.Instances
             if (save == null)
             {
                 seasons.AddRange(CreateDefaultSeasons());
+                CreateDefaultConsumables();
 
                 return;
             }
@@ -108,7 +112,7 @@ namespace Game.Instances
         {
             return config.Seasons.Select(seasonData =>
             {
-                return CreateISeason(seasonData);
+                return CreateSeason(seasonData);
             });
         }
 
@@ -121,13 +125,13 @@ namespace Game.Instances
                     continue;
                 }
 
-                var season = CreateISeason(seasonData);
+                var season = CreateSeason(seasonData);
 
                 seasons.Add(season);
             }
         }
 
-        private static SeasonInfo CreateISeason(SeasonData seasonData)
+        private static SeasonInfo CreateSeason(SeasonData seasonData)
         {
             var raidData = seasonData.Instances.FirstOrDefault(x => x.Type == InstanceTypes.raid);
             var dungeonsData = seasonData.Instances.Where(x => x.Type == InstanceTypes.dungeon);
@@ -136,6 +140,33 @@ namespace Game.Instances
             var dungeons = dungeonsData.Select(x => new InstanceInfo(x));
 
             return new SeasonInfo(seasonData, raid, dungeons);
+        }
+
+        private void CreateDefaultConsumables()
+        {
+            var consumablesParams = config.ConsumablesParams;
+            var consumablesCellTypes = consumablesParams.GridParams.CellTypes;
+
+            var consumablesBank = guildService.BankTabs
+                .Select(x => x.Grid)
+                .FirstOrDefault(x => consumablesCellTypes.Contains(x.CellType));
+
+            var consumablesItems = consumablesParams.Items
+                .Select(x => inventoryService.Factory.CreateItem(x))
+                .OfType<ConsumablesItemInfo>();
+
+            foreach (var consumables in consumablesItems)
+            {
+                consumables.Stack.SetValue(10);
+
+                var placementArgs = new PlaceInPlacementArgs
+                {
+                    ItemId = consumables.Id,
+                    PlacementId = consumablesBank.Id
+                };
+
+                inventoryService.TryPlaceItem(placementArgs);
+            }
         }
     }
 }

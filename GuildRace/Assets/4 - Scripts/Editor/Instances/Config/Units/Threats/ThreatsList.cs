@@ -2,13 +2,13 @@
 
 namespace Game.Instances
 {
-    public class AbilitiesList : ListElement<AbilityData, AbilityItem>
+    public class ThreatsList : ListElement<ThreatData, ThreatItem>
     {
         public override void BindData(SerializedData data)
         {
-            headerTitle = "Abilities";
+            headerTitle = "Threats";
+            wizardType = typeof(ThreatDataImportWizard);
 
-            showAddButton = false;
             showCloneButton = false;
             showRemoveButton = false;
 

@@ -33,7 +33,7 @@ namespace Game.Instances
             bagEditor = root.CreateElement<ItemsGridElement>();
             bagEditor.FlexWidth(33).MarginRight(10);
             bagEditor.BindProperty("bag", GetData(data));
-            bagEditor.label = "Squad Bag Params";
+            bagEditor.label = "Unit Bag Params";
         }
     }
 }

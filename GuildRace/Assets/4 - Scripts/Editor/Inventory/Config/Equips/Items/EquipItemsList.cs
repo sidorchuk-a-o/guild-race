@@ -15,11 +15,12 @@ namespace Game.Inventory
         {
             new Header("Icon", 68, LengthUnit.Pixel),
             new Header("Id", 70, LengthUnit.Pixel),
+            new Header("Title"),
             new Header("Level", 60, LengthUnit.Pixel),
-            new Header("Params (HP/AP/ARMOR/RES)", 198, LengthUnit.Pixel),
+            new Header("Params (HP/AP)", 105, LengthUnit.Pixel),
             new Header("Type", 205, LengthUnit.Pixel),
             new Header("Slot", 180, LengthUnit.Pixel),
-            new Header("Rarity", 127, LengthUnit.Pixel)
+            new Header("Rarity", 140, LengthUnit.Pixel)
         };
 
         public override void BindData(SerializedData data)

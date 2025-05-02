@@ -1,5 +1,6 @@
 ﻿using AD.Services;
 using AD.Services.Save;
+using Game.Guild;
 using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Game.Craft
 {
     public class CraftState : ServiceState<CraftConfig, CraftStateSM>
     {
+        private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
 
         private readonly VendorsCollection vendors = new(null);
@@ -21,10 +23,12 @@ namespace Game.Craft
 
         public CraftState(
             CraftConfig config,
+            IGuildService guildService,
             IInventoryService inventoryService,
             IObjectResolver resolver)
             : base(config, resolver)
         {
+            this.guildService = guildService;
             this.inventoryService = inventoryService;
 
             RecycleSlot = CreateRecycleSlot();
@@ -53,6 +57,7 @@ namespace Game.Craft
             if (save == null)
             {
                 vendors.AddRange(GetDefaultVendors());
+                CreateDefaultReagents();
 
                 return;
             }
@@ -66,6 +71,33 @@ namespace Game.Craft
             {
                 return new VendorInfo(data);
             });
+        }
+
+        private void CreateDefaultReagents()
+        {
+            var reagentsParams = config.ReagentsParams;
+            var reagentCellTypes = reagentsParams.GridParams.CellTypes;
+
+            var reagentsBank = guildService.BankTabs
+                .Select(x => x.Grid)
+                .FirstOrDefault(x => reagentCellTypes.Contains(x.CellType));
+
+            var reagents = reagentsParams.Items
+                .Select(x => inventoryService.Factory.CreateItem(x))
+                .OfType<ReagentItemInfo>();
+
+            foreach (var reagent in reagents)
+            {
+                reagent.Stack.SetValue(50);
+
+                var placementArgs = new PlaceInPlacementArgs
+                {
+                    ItemId = reagent.Id,
+                    PlacementId = reagentsBank.Id
+                };
+
+                inventoryService.TryPlaceItem(placementArgs);
+            }
         }
     }
 }

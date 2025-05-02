@@ -9,15 +9,13 @@ namespace Game.Instances
     {
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "consumables";
-        public override string SheetRange => "A:M";
-
-        public override string SlotKey => string.Empty;
+        public override string SheetRange => "A:Q";
 
         protected override void UpdateData(SerializedData data, IDataRow row)
         {
             base.UpdateData(data, row);
 
-            var stack = new ItemStack(100);
+            var stack = new ItemStack(row["Stack Amount"].IntParse());
             var rarity = new Rarity(row["Rarity ID"].IntParse());
             var descKey = row["Desc Key"].LocalizeKeyParse();
 

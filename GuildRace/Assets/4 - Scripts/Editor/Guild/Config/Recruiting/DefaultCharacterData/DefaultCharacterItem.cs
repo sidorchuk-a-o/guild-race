@@ -29,6 +29,11 @@ namespace Game.Guild
         {
             base.BindData(data);
 
+            titleLabel.text = GetTitle(data);
+        }
+
+        public static string GetTitle(SerializedData data)
+        {
             var charactersParams = GuildEditorState.Config.CharactersParams;
 
             var classId = data.GetProperty("classId").GetValue<ClassId>();
@@ -40,7 +45,7 @@ namespace Game.Guild
             var roleId = specData.RoleId;
             var roleData = charactersParams.GetRole(roleId);
 
-            titleLabel.text = $"{roleData.Title} - {classData.Title} - {specData.Title}";
+            return $"{roleData.Title} - {classData.Title} - {specData.Title}";
         }
     }
 }

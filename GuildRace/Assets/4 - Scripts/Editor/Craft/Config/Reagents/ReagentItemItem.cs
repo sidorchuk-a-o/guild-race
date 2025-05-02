@@ -13,6 +13,7 @@ namespace Game.Craft
         private LabelElement titleLabel;
         private SpriteField iconField;
         private KeyElement<int> rarityField;
+        private PropertyElement stackField;
 
         protected override void CreateItemContentGUI(VisualElement root)
         {
@@ -35,11 +36,15 @@ namespace Game.Craft
             titleLabel.labelOn = false;
 
             rarityField = root.CreateKey<Rarity, int>();
-            rarityField.Width(120).FontSize(16).ReadOnly();
+            rarityField.Width(120).FontSize(16);
             rarityField.labelOn = false;
             rarityField.removeOn = false;
             rarityField.filterOn = false;
             rarityField.updateOn = false;
+
+            stackField = root.CreateProperty();
+            stackField.Width(70).FontSize(16);
+            stackField.labelOn = false;
         }
 
         public override void BindData(SerializedData data)
@@ -50,6 +55,7 @@ namespace Game.Craft
             iconField.BindProperty("iconRef", data);
             titleLabel.BindProperty("title", data);
             rarityField.BindProperty("rarity", data);
+            stackField.BindProperty("size", data.GetProperty("stack"));
         }
     }
 }

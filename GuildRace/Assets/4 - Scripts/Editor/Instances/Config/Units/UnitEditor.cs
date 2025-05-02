@@ -11,14 +11,15 @@ namespace Game.Instances
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
         private AddressableElement<Sprite> imageRefField;
-        private AbilitiesList abilitiesList;
         private UnitParamsElement unitParamsField;
+        private AbilitiesList abilitiesList;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
             base.CreateTabItems(tabs);
 
             tabs.CreateTab("Params", CreateParamsTab);
+            tabs.content.Width(50, LengthUnit.Percent);
         }
 
         private void CreateParamsTab(VisualElement root, SerializedData data)

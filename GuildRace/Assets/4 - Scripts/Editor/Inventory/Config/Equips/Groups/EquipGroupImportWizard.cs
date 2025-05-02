@@ -17,6 +17,8 @@ namespace Game.Inventory
 
         protected override async void SaveCallback()
         {
+            LockWizard();
+
             equipTypesImporter ??= new(SheetId, SheetName, "K2:O", typeof(EquipTypeData));
 
             await equipTypesImporter.LoadData(IdKey);

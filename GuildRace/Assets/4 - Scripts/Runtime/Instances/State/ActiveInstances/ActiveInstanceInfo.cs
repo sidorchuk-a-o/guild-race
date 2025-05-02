@@ -1,5 +1,4 @@
-﻿using Game.Inventory;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UniRx;
 
@@ -12,22 +11,15 @@ namespace Game.Instances
 
         public string Id { get; }
         public InstanceInfo Instance { get; }
-
-        public ItemsGridInfo Bag { get; }
         public IIdsCollection Squad => squad;
 
         public long StartTime { get; private set; }
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete => isReadyToComplete;
 
-        public ActiveInstanceInfo(
-            string id,
-            InstanceInfo inst,
-            ItemsGridInfo bag,
-            IEnumerable<string> squad)
+        public ActiveInstanceInfo(string id, InstanceInfo inst, IEnumerable<string> squad)
         {
             Id = id;
             Instance = inst;
-            Bag = bag;
 
             this.squad = new(squad);
         }

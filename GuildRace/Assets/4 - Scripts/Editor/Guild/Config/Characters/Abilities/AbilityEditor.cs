@@ -1,15 +1,14 @@
 ﻿using AD.ToolsCollection;
-using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Game.Instances
+namespace Game.Guild
 {
-    [InstancesEditor(typeof(AbilityData))]
+    [GuildEditor(typeof(AbilityData))]
     public class AbilityEditor : EntityEditor
     {
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
-        private AddressableElement<Sprite> iconRefField;
+        private PropertyElement threatIdField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -28,8 +27,8 @@ namespace Game.Instances
             descKeyField = root.CreateProperty();
             descKeyField.BindProperty("descKey", data);
 
-            iconRefField = root.CreateAddressable<Sprite>();
-            iconRefField.BindProperty("iconRef", data);
+            threatIdField = root.CreateProperty();
+            threatIdField.BindProperty("threatId", data);
         }
     }
 }

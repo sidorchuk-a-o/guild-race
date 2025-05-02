@@ -1,4 +1,5 @@
-﻿using AD.ToolsCollection;
+﻿using System.Collections.Generic;
+using AD.ToolsCollection;
 
 namespace Game.Instances
 {
@@ -20,6 +21,62 @@ namespace Game.Instances
         public static Collection<int> GetInstanceTypesViewCollection()
         {
             return Config.CreateKeyViewCollection<InstanceTypeData, int>("instanceTypes");
+        }
+
+        public static Collection<int> GetThreatsViewCollection()
+        {
+            return Config.CreateKeyViewCollection<ThreatData, int>("threats");
+        }
+
+        public static Collection<int> GetInstancesCollection()
+        {
+            var seasons = Config.GetValue<List<SeasonData>>("seasons");
+
+            var values = new List<int>();
+            var options = new List<string>();
+
+            foreach (var season in seasons)
+            {
+                var seasonName = season.Title;
+
+                foreach (var instance in season.Instances)
+                {
+                    var option = $"{seasonName} / {instance.Title}";
+
+                    values.Add(instance.Id);
+                    options.Add(option);
+                }
+            }
+
+            return new Collection<int>(values, options, autoSort: false);
+        }
+
+        public static Collection<int> GetBossesCollection()
+        {
+            var seasons = Config.GetValue<List<SeasonData>>("seasons");
+
+            var values = new List<int>();
+            var options = new List<string>();
+
+            foreach (var season in seasons)
+            {
+                var seasonName = season.Title;
+
+                foreach (var instance in season.Instances)
+                {
+                    var instanceName = instance.Title;
+
+                    foreach (var bossUnit in instance.BoosUnits)
+                    {
+                        var option = $"{seasonName} / {instanceName} / {bossUnit.Title}";
+
+                        values.Add(bossUnit.Id);
+                        options.Add(option);
+                    }
+                }
+            }
+
+            return new Collection<int>(values, options, autoSort: false);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Game.Guild
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "class-data";
-        public override string SheetRange => "J2:L";
+        public override string SheetRange => "N2:P";
 
         protected override bool CheckEqual(SerializedData data, IDataRow row)
         {

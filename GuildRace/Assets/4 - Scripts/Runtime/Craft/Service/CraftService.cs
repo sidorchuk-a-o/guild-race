@@ -42,47 +42,16 @@ namespace Game.Craft
             this.guildService = guildService;
             this.inventoryService = inventoryService;
 
-            state = new(craftConfig, inventoryService, resolver);
+            state = new(craftConfig, guildService, inventoryService, resolver);
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
 
-            CreateReagents(); // TODO: TEMP
             InitRecycleProcess();
 
             return await Inited();
-        }
-
-        /// <summary>
-        /// TEMP
-        /// </summary>
-        private void CreateReagents()
-        {
-            var reagentsParams = craftConfig.ReagentsParams;
-            var reagentCellTypes = reagentsParams.GridParams.CellTypes;
-
-            var reagentsBank = guildService.BankTabs
-                .Select(x => x.Grid)
-                .FirstOrDefault(x => reagentCellTypes.Contains(x.CellType));
-
-            var reagents = reagentsParams.Items
-                .Select(x => inventoryService.Factory.CreateItem(x))
-                .OfType<ReagentItemInfo>();
-
-            foreach (var reagent in reagents)
-            {
-                reagent.Stack.SetValue(50);
-
-                var placementArgs = new PlaceInPlacementArgs
-                {
-                    ItemId = reagent.Id,
-                    PlacementId = reagentsBank.Id
-                };
-
-                inventoryService.TryPlaceItem(placementArgs);
-            }
         }
 
         // == Recycling ==

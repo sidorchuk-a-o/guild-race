@@ -4,12 +4,10 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
-using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 using VContainer;
 using VContainer.Unity;
 
@@ -23,13 +21,11 @@ namespace Game.Instances
 
         [Header("Squad")]
         [SerializeField] private CharactersTabsContainer charactersContainer;
-        [SerializeField] private SquadRolesCountersContainer rolesCountersContainer;
         [SerializeField] private Transform squadContainerRoot;
         [SerializeField] private List<SquadContainerParams> squadContainers;
 
         [Header("Bag")]
         [SerializeField] private GuildBankTabsContainer guildBankContainer;
-        [SerializeField] private ItemsGridContainer squadBagContainer;
 
         [Header("Button")]
         [SerializeField] private UIButton backButton;
@@ -87,7 +83,6 @@ namespace Game.Instances
             roleTabsVM.ForEach(tab => tab.AddTo(disp));
 
             charactersContainer.Init(roleTabsVM, activeInstanceVM, disp);
-            rolesCountersContainer.Init(activeInstanceVM, disp);
 
             SpawnSquadContainer(disp);
 
@@ -96,7 +91,6 @@ namespace Game.Instances
             bankTabsVM.AddTo(disp);
 
             guildBankContainer.Init(bankTabsVM, disp, hasForcedReset);
-            squadBagContainer.Init(activeInstanceVM.BagVM, disp);
         }
 
         private void SpawnSquadContainer(CompositeDisp disp)
@@ -104,9 +98,9 @@ namespace Game.Instances
             var instanceType = activeInstanceVM.InstanceVM.Type;
             var containerParams = squadContainers.FirstOrDefault(x => x.Type == instanceType);
 
-            var prefab = containerParams.SquadPrefab;
+            var squadPrefab = containerParams.SquadPrefab;
 
-            squadUnitsContainer = Instantiate(prefab, squadContainerRoot);
+            squadUnitsContainer = Instantiate(squadPrefab, squadContainerRoot);
             squadUnitsContainer.transform.SetAsFirstSibling();
 
             resolver.InjectGameObject(squadUnitsContainer.gameObject);

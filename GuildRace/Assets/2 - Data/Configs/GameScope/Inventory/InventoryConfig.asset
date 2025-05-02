@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10119
-  title: 10119
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
+    \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
   slot:
     value: 183
   size:
@@ -33,10 +34,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-9104328803151399047
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10034
-  title: 10034
+  title: Plate shoulders 25
   slot:
     value: 182
   size:
@@ -128,10 +127,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-8826924889863600484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10093
-  title: 10093
+  title: Leather shoulders 10
   slot:
     value: 182
   size:
@@ -165,10 +162,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &-8816477437093287099
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10118
-  title: 10118
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
+    \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
   slot:
     value: 182
   size:
@@ -202,10 +198,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-8555131310274555377
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10061
-  title: 10061
+  title: Plate chest 30
   slot:
     value: 183
   size:
@@ -251,10 +245,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-8396260996354326224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,7 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10131
-  title: 10131
+  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
+    \u043D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
   slot:
     value: 185
   size:
@@ -288,10 +281,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-8231145598918426906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10129
-  title: 10129
+  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
+    \u0434\u043E\u0441\u043F\u0435\u0445"
   slot:
     value: 183
   size:
@@ -325,10 +317,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-7976013286353870678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10055
-  title: 10055
+  title: Leather shoulders 30
   slot:
     value: 182
   size:
@@ -362,10 +352,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-7786134524771069982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10107
-  title: 10107
+  title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u043A\u0430"
   slot:
     value: 181
   size:
@@ -399,10 +387,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-7747445019385112284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -416,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10076
-  title: 10076
+  title: Leather hands 35
   slot:
     value: 184
   size:
@@ -436,10 +422,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &-7652101298570031518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -453,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10103
-  title: 10103
+  title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u043D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
   slot:
     value: 182
   size:
@@ -473,10 +457,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-7449035984528177374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10114
-  title: 10114
+  title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445"
   slot:
     value: 183
   size:
@@ -510,10 +492,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-7212983667274812868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10013
-  title: 10013
+  title: Cloth shoulders 20
   slot:
     value: 182
   size:
@@ -547,10 +527,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-7175090527530127482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,7 +542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10141
-  title: 10141
+  title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
+    \u043A\u043B\u044B\u043A\u0438"
   slot:
     value: 186
   size:
@@ -585,9 +564,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &-7080529732421677225
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,7 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10105
-  title: 10105
+  title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0430"
   slot:
     value: 184
   size:
@@ -621,10 +598,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-7001324336208455771
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,7 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10020
-  title: 10020
+  title: Cloth legs 25
   slot:
     value: 185
   size:
@@ -670,10 +645,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-6887878195513756772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -687,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10101
-  title: 10101
+  title: Plate legs 10
   slot:
     value: 185
   size:
@@ -707,10 +680,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &-6862540958533503585
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -724,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10035
-  title: 10035
+  title: Plate chest 20
   slot:
     value: 183
   size:
@@ -744,10 +715,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-6806210110799492770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -779,7 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10135
-  title: 10135
+  title: Fists weapon 10
   slot:
     value: 186
   size:
@@ -801,8 +770,6 @@ MonoBehaviour:
   characterParams:
     health: 0
     power: 24
-    armor: 0
-    resource: 0
 --- !u!114 &-6614947257460562497
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -816,7 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10011
-  title: 10011
+  title: Cloth head 20
   slot:
     value: 181
   size:
@@ -836,10 +803,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-6183353682262618565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10083
-  title: 10083
+  title: Swordshield weapon 30
   slot:
     value: 186
   size:
@@ -874,9 +839,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &-6150907231377672594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -890,7 +853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10067
-  title: 10067
+  title: Fists weapon 40
   slot:
     value: 186
   size:
@@ -911,9 +874,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 53
-    armor: 0
-    resource: 0
+    power: 48
 --- !u!114 &-6133608900172429420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10050
-  title: 10050
+  title: Cloth shoulders 30
   slot:
     value: 182
   size:
@@ -947,10 +908,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-6114776268038394866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -964,7 +923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10086
-  title: 10086
+  title: Fists weapon 40
   slot:
     value: 186
   size:
@@ -985,9 +944,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 53
-    armor: 0
-    resource: 0
+    power: 48
 --- !u!114 &-6110813638385256761
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1001,7 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10060
-  title: 10060
+  title: Plate shoulders 40
   slot:
     value: 182
   size:
@@ -1021,10 +978,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 694
+    health: 396
     power: 0
-    armor: 8
-    resource: 0.5
 --- !u!114 &-6077349596849091963
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1038,7 +993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10065
-  title: 10065
+  title: Daggers weapon 35
   slot:
     value: 186
   size:
@@ -1059,9 +1014,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 47
-    armor: 0
-    resource: 0
+    power: 43
 --- !u!114 &-5950450103269691187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1075,7 +1028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10033
-  title: 10033
+  title: Plate shoulders 25
   slot:
     value: 182
   size:
@@ -1095,10 +1048,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-5906239369190842854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1112,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10089
-  title: 10089
+  title: Cloth chest 10
   slot:
     value: 183
   size:
@@ -1132,10 +1083,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &-5737075243555858367
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1149,7 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10051
-  title: 10051
+  title: Cloth chest 30
   slot:
     value: 183
   size:
@@ -1169,10 +1118,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-5545082573401686429
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,7 +1133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10133
-  title: 10133
+  title: Daggers weapon 10
   slot:
     value: 186
   size:
@@ -1208,8 +1155,6 @@ MonoBehaviour:
   characterParams:
     health: 0
     power: 24
-    armor: 0
-    resource: 0
 --- !u!114 &-5264673978053023553
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1223,7 +1168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10017
-  title: 10017
+  title: Cloth hands 20
   slot:
     value: 184
   size:
@@ -1243,10 +1188,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-4706629457753465657
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1278,7 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10021
-  title: 10021
+  title: Leather head 25
   slot:
     value: 181
   size:
@@ -1298,10 +1241,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-4649489801524151643
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1315,7 +1256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10122
-  title: 10122
+  title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0430\u044F
+    \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u043A\u0430"
   slot:
     value: 181
   size:
@@ -1335,10 +1277,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-4422783340732822949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1352,7 +1292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10079
-  title: 10079
+  title: Plate shoulders 30
   slot:
     value: 182
   size:
@@ -1372,10 +1312,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-4298722491863905509
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10046
-  title: 10046
+  title: Daggers weapon 25
   slot:
     value: 186
   size:
@@ -1410,9 +1348,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 27
-    armor: 0
-    resource: 0
+    power: 34
 --- !u!114 &-4187781191333709216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1426,7 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10026
-  title: 10026
+  title: Leather chest 20
   slot:
     value: 183
   size:
@@ -1446,10 +1382,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-4086103811589660623
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1483,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10031
-  title: 10031
+  title: Plate head 25
   slot:
     value: 181
   size:
@@ -1503,10 +1437,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-3779093435946907101
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1532,7 +1464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10134
-  title: 10134
+  title: Staff weapon 10
   slot:
     value: 186
   size:
@@ -1554,8 +1486,6 @@ MonoBehaviour:
   characterParams:
     health: 0
     power: 24
-    armor: 0
-    resource: 0
 --- !u!114 &-3192710916682309853
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1569,7 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10113
-  title: 10113
+  title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u043D\u0430\u043F\u043B\u0435\u0447"
   slot:
     value: 182
   size:
@@ -1589,10 +1519,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-3139738672294733290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1606,7 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10058
-  title: 10058
+  title: Leather legs 35
   slot:
     value: 185
   size:
@@ -1626,10 +1554,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &-3128139311566442411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1643,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10015
-  title: 10015
+  title: Cloth chest 20
   slot:
     value: 183
   size:
@@ -1663,10 +1589,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-3053621089744547346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1680,7 +1604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10023
-  title: 10023
+  title: Leather shoulders 20
   slot:
     value: 182
   size:
@@ -1700,10 +1624,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-3039325825505055318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1717,7 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10048
-  title: 10048
+  title: Fists weapon 25
   slot:
     value: 186
   size:
@@ -1738,9 +1660,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 27
-    armor: 0
-    resource: 0
+    power: 34
 --- !u!114 &-2984385885765960227
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1754,7 +1674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10111
-  title: 10111
+  title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u0431\u0440\u044E\u043A\u0438"
   slot:
     value: 185
   size:
@@ -1774,10 +1694,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-2901791957114803695
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1791,7 +1709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10102
-  title: 10102
+  title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
   slot:
     value: 181
   size:
@@ -1811,10 +1729,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-2880662800390554586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1828,7 +1744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10126
-  title: 10126
+  title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
+    \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u0431\u0440\u044E\u043A\u0438"
   slot:
     value: 185
   size:
@@ -1848,10 +1765,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-2537615286543567961
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1865,7 +1780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10038
-  title: 10038
+  title: Plate hands 20
   slot:
     value: 184
   size:
@@ -1885,10 +1800,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-2515399012765761056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1902,7 +1815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10096
-  title: 10096
+  title: Leather legs 10
   slot:
     value: 185
   size:
@@ -1922,10 +1835,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &-2203573243443984181
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1939,7 +1850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10104
-  title: 10104
+  title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
   slot:
     value: 183
   size:
@@ -1959,10 +1870,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-2140721920580831846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1976,7 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10040
-  title: 10040
+  title: Plate legs 20
   slot:
     value: 185
   size:
@@ -1996,10 +1905,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-1922595333489817320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2013,7 +1920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10117
-  title: 10117
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
+    \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
   slot:
     value: 181
   size:
@@ -2033,10 +1941,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-1822881498046691059
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2050,7 +1956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10092
-  title: 10092
+  title: Leather head 10
   slot:
     value: 181
   size:
@@ -2070,10 +1976,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &-1781769187498898997
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2087,7 +1991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10124
-  title: 10124
+  title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0430\u044F
+    \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u0443\u0440\u0442\u043A\u0430"
   slot:
     value: 183
   size:
@@ -2107,10 +2012,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-1717270387008189411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2124,7 +2027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10056
-  title: 10056
+  title: Leather chest 30
   slot:
     value: 183
   size:
@@ -2144,10 +2047,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-1496942897883920671
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2161,7 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10109
-  title: 10109
+  title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u0443\u0440\u0442\u043A\u0430"
   slot:
     value: 183
   size:
@@ -2181,10 +2082,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-1455371521357839726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2216,7 +2115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10143
-  title: 10143
+  title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
+    \u043A\u0430\u0441\u0442\u0435\u0442\u044B"
   slot:
     value: 186
   size:
@@ -2237,9 +2137,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &-1385969258091611105
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2253,7 +2151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10069
-  title: 10069
+  title: Cloth shoulders 35
   slot:
     value: 182
   size:
@@ -2273,10 +2171,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &-1379920717474179501
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2290,7 +2186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10081
-  title: 10081
+  title: Plate hands 35
   slot:
     value: 184
   size:
@@ -2310,10 +2206,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &-1345641969649985332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2327,7 +2221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10029
-  title: 10029
+  title: Leather legs 25
   slot:
     value: 185
   size:
@@ -2347,10 +2241,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-1232920642671462375
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2376,7 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10098
-  title: 10098
+  title: Plate shoulders 10
   slot:
     value: 182
   size:
@@ -2396,10 +2288,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &-1103882048033937079
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2413,7 +2303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10019
-  title: 10019
+  title: Cloth legs 25
   slot:
     value: 185
   size:
@@ -2433,10 +2323,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-1063377336643817000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2450,7 +2338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10068
-  title: 10068
+  title: Cloth head 40
   slot:
     value: 181
   size:
@@ -2470,10 +2358,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 694
+    health: 396
     power: 0
-    armor: 8
-    resource: 0.5
 --- !u!114 &-1062136430006192684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2487,7 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10016
-  title: 10016
+  title: Cloth chest 20
   slot:
     value: 183
   size:
@@ -2507,10 +2393,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-1058030996441149953
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2524,7 +2408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10132
-  title: 10132
+  title: Swordshield weapon 10
   slot:
     value: 186
   size:
@@ -2546,8 +2430,6 @@ MonoBehaviour:
   characterParams:
     health: 0
     power: 24
-    armor: 0
-    resource: 0
 --- !u!114 &-1029915359850127392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2577,7 +2459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10073
-  title: 10073
+  title: Leather head 30
   slot:
     value: 181
   size:
@@ -2597,10 +2479,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-976144031733252825
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2614,7 +2494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10041
-  title: 10041
+  title: Swordshield weapon 20
   slot:
     value: 186
   size:
@@ -2635,9 +2515,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &-950174056014292139
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2651,7 +2529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10116
-  title: 10116
+  title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
   slot:
     value: 185
   size:
@@ -2671,10 +2549,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-904854680988985666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2688,7 +2564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10112
-  title: 10112
+  title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u0440\u043E\u0433\u0430\u0442\u044B\u0439
+    \u0448\u043B\u0435\u043C"
   slot:
     value: 181
   size:
@@ -2708,10 +2585,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &-753766681237061545
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2725,7 +2600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10027
-  title: 10027
+  title: Leather hands 25
   slot:
     value: 184
   size:
@@ -2745,10 +2620,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &-612337858966185010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2786,7 +2659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10121
-  title: 10121
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
+    \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438"
   slot:
     value: 185
   size:
@@ -2806,10 +2680,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &-66409358018346676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2823,7 +2695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10062
-  title: 10062
+  title: Plate hands 30
   slot:
     value: 184
   size:
@@ -2843,10 +2715,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,31 +3027,35 @@ MonoBehaviour:
   - {fileID: -3660557200253247270, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
   - {fileID: -4153265079499619491, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
   - {fileID: 4908823914005692528, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
-  - {fileID: -4528990965215213837, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 6116469841440588695, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -2402425100919101519, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 6325628730763029348, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 5855095073285179966, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -7211600281512318256, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -2624396034881592701, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 8972673178651738578, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 6646846226119907776, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 4037090930490511092, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 3409425287689555601, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 144429709343451076, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 5940245885779881331, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -1086309156230088210, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -3764328915951443008, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 5882689212587807430, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -8487262239374094708, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -5490952678775940715, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -7236153642462459841, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -4714937801475931359, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 2555245202603140155, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -3653689908814051244, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: -7942082118564427778, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 7904727434667658797, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
-  - {fileID: 1763850391587158359, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 3283174283311822006, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -7156515646824161879, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -4012184158452347232, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 3230505844149595986, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 7579246870529269957, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 158652485465871805, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 7822794407337259877, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 4701231186855528148, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -5019856845528501837, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 4900050241145349559, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 2197165542769726586, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 2646838354991106303, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -5270412850753509173, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -8164090888796558184, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -5008624268758370049, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 2949298156513669491, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 6580333437868225501, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 6037188601119046549, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -2700836854538093554, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -3390309312309710562, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -3866559040373866136, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -301210039354352855, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -2341850238847268915, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 7510200508511156509, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -3638602047269428924, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -1781602698460361114, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 5170631395212109203, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -5135041722633170205, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: 2699701626808027002, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
   itemSlots:
   - {fileID: 9180415984051115598}
   - {fileID: -4706629457753465657}
@@ -3194,7 +3068,7 @@ MonoBehaviour:
   - {fileID: -8197956687249327810, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 1183720720073450144, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
   - {fileID: 76776547799289294, guid: 93e1c624195545849933d9a0eeaeb5ea, type: 2}
-  - {fileID: 3341094923558873629, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
+  - {fileID: -6809558547493564753, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   itemsParams:
     rarities:
     - {fileID: 3190576719803835710}
@@ -3257,7 +3131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10052
-  title: 10052
+  title: Cloth hands 35
   slot:
     value: 184
   size:
@@ -3277,10 +3151,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &243303202286163940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3310,7 +3182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10064
-  title: 10064
+  title: Swordshield weapon 35
   slot:
     value: 186
   size:
@@ -3331,9 +3203,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 47
-    armor: 0
-    resource: 0
+    power: 43
 --- !u!114 &331208564779327751
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3347,7 +3217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10054
-  title: 10054
+  title: Leather head 40
   slot:
     value: 181
   size:
@@ -3367,10 +3237,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 694
+    health: 396
     power: 0
-    armor: 8
-    resource: 0.5
 --- !u!114 &406163380787924127
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3384,7 +3252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10072
-  title: 10072
+  title: Cloth legs 30
   slot:
     value: 185
   size:
@@ -3404,10 +3272,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &462244929390968814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3421,7 +3287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10140
-  title: 10140
+  title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
+    \u0441\u0442\u0440\u0430\u0436"
   slot:
     value: 186
   size:
@@ -3442,9 +3309,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &518433714357507813
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3458,7 +3323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10077
-  title: 10077
+  title: Leather legs 30
   slot:
     value: 185
   size:
@@ -3478,10 +3343,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &674322806141242743
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3513,7 +3376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10137
-  title: 10137
+  title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043A\u043B\u044B\u043A\u0438"
   slot:
     value: 186
   size:
@@ -3534,9 +3397,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &841691043756883268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3550,7 +3411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10049
-  title: 10049
+  title: Cloth head 30
   slot:
     value: 181
   size:
@@ -3570,10 +3431,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &1010764327341742373
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3587,7 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10071
-  title: 10071
+  title: Cloth hands 30
   slot:
     value: 184
   size:
@@ -3607,10 +3466,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &1057532855618524533
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3624,7 +3481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10084
-  title: 10084
+  title: Daggers weapon 30
   slot:
     value: 186
   size:
@@ -3645,9 +3502,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &1110932812422987802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3677,7 +3532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10087
-  title: 10087
+  title: Cloth head 10
   slot:
     value: 181
   size:
@@ -3697,10 +3552,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &1189334565303918666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3714,7 +3567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10063
-  title: 10063
+  title: Plate legs 30
   slot:
     value: 185
   size:
@@ -3734,10 +3587,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &1223950982166912609
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3751,7 +3602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10032
-  title: 10032
+  title: Plate head 25
   slot:
     value: 181
   size:
@@ -3771,10 +3622,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &1424568110847715213
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3788,7 +3637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10110
-  title: 10110
+  title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
   slot:
     value: 184
   size:
@@ -3808,10 +3657,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &1660921729696098959
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3825,7 +3672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10014
-  title: 10014
+  title: Cloth shoulders 20
   slot:
     value: 182
   size:
@@ -3845,10 +3692,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &2041079010886698170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3862,7 +3707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10125
-  title: 10125
+  title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
+    \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
   slot:
     value: 184
   size:
@@ -3882,10 +3728,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &2172033002375078472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3915,7 +3759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10047
-  title: 10047
+  title: Staff weapon 25
   slot:
     value: 186
   size:
@@ -3936,9 +3780,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 27
-    armor: 0
-    resource: 0
+    power: 34
 --- !u!114 &2382765222928833730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3952,7 +3794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10142
-  title: 10142
+  title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
+    \u0442\u0440\u043E\u0441\u0442\u044C"
   slot:
     value: 186
   size:
@@ -3973,9 +3816,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &2547879043090320572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3989,7 +3830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10120
-  title: 10120
+  title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
+    \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0430"
   slot:
     value: 184
   size:
@@ -4009,10 +3851,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &2734205929474609862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4038,7 +3878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10082
-  title: 10082
+  title: Plate legs 35
   slot:
     value: 185
   size:
@@ -4058,10 +3898,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &2852506058818597817
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4075,7 +3913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10045
-  title: 10045
+  title: Swordshield weapon 25
   slot:
     value: 186
   size:
@@ -4096,9 +3934,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 27
-    armor: 0
-    resource: 0
+    power: 34
 --- !u!114 &2889767576748943482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4112,7 +3948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10099
-  title: 10099
+  title: Plate chest 10
   slot:
     value: 183
   size:
@@ -4132,10 +3968,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &3020438398822890104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4149,7 +3983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10066
-  title: 10066
+  title: Staff weapon 40
   slot:
     value: 186
   size:
@@ -4170,9 +4004,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 53
-    armor: 0
-    resource: 0
+    power: 48
 --- !u!114 &3092212957855857889
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4186,7 +4018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10100
-  title: 10100
+  title: Plate hands 10
   slot:
     value: 184
   size:
@@ -4206,10 +4038,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &3157436081391586742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4223,7 +4053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10115
-  title: 10115
+  title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
   slot:
     value: 184
   size:
@@ -4243,10 +4073,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &3190576719803835710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4276,7 +4104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10130
-  title: 10130
+  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
+    \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
   slot:
     value: 184
   size:
@@ -4296,10 +4125,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &3528656383035835354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4337,7 +4164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10030
-  title: 10030
+  title: Leather legs 20
   slot:
     value: 185
   size:
@@ -4357,10 +4184,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &3651724357173251947
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4374,7 +4199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10043
-  title: 10043
+  title: Staff weapon 20
   slot:
     value: 186
   size:
@@ -4395,9 +4220,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &3698016436506853915
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4411,7 +4234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10057
-  title: 10057
+  title: Leather hands 30
   slot:
     value: 184
   size:
@@ -4431,10 +4254,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &3852932945951644673
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4448,7 +4269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10070
-  title: 10070
+  title: Cloth chest 35
   slot:
     value: 183
   size:
@@ -4468,10 +4289,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &4119991724450200512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4485,7 +4304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10128
-  title: 10128
+  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
+    \u043D\u0430\u043F\u043B\u0435\u0447"
   slot:
     value: 182
   size:
@@ -4505,10 +4325,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &4241016530502353956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4522,7 +4340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10044
-  title: 10044
+  title: Fists weapon 20
   slot:
     value: 186
   size:
@@ -4543,9 +4361,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &4300491796616334485
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4559,7 +4375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10138
-  title: 10138
+  title: "\u041C\u0435\u0434\u043D\u0430\u044F \u0442\u0440\u043E\u0441\u0442\u044C"
   slot:
     value: 186
   size:
@@ -4580,9 +4396,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &4300600863543967724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4596,7 +4410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10059
-  title: 10059
+  title: Plate head 35
   slot:
     value: 181
   size:
@@ -4616,10 +4430,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &4336203229436919653
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4633,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10094
-  title: 10094
+  title: Leather chest 10
   slot:
     value: 183
   size:
@@ -4653,10 +4465,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &4383393171423201285
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4670,7 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10108
-  title: 10108
+  title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0439 \u0449\u0438\u0442\u043E\u043A"
   slot:
     value: 182
   size:
@@ -4690,10 +4500,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &4434524417934112057
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4707,7 +4515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10042
-  title: 10042
+  title: Daggers weapon 20
   slot:
     value: 186
   size:
@@ -4728,9 +4536,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &4626130929355491073
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4744,7 +4550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10095
-  title: 10095
+  title: Leather hands 10
   slot:
     value: 184
   size:
@@ -4764,10 +4570,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &4734373708846455812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4781,7 +4585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10053
-  title: 10053
+  title: Cloth legs 35
   slot:
     value: 185
   size:
@@ -4801,10 +4605,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &4747047883465077511
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4818,7 +4620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10039
-  title: 10039
+  title: Plate legs 25
   slot:
     value: 185
   size:
@@ -4838,10 +4640,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &4931558719855862773
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4855,7 +4655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10091
-  title: 10091
+  title: Cloth legs 10
   slot:
     value: 185
   size:
@@ -4875,10 +4675,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &5015050402526860843
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4924,7 +4722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10025
-  title: 10025
+  title: Leather chest 20
   slot:
     value: 183
   size:
@@ -4944,10 +4742,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &5374728186150439257
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4961,7 +4757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10037
-  title: 10037
+  title: Plate hands 20
   slot:
     value: 184
   size:
@@ -4981,10 +4777,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &5674290880999002455
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4998,7 +4792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10018
-  title: 10018
+  title: Cloth hands 20
   slot:
     value: 184
   size:
@@ -5018,10 +4812,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &5803818987983749537
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5047,7 +4839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10080
-  title: 10080
+  title: Plate chest 40
   slot:
     value: 183
   size:
@@ -5067,10 +4859,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 694
+    health: 396
     power: 0
-    armor: 8
-    resource: 0.5
 --- !u!114 &5987843277473568308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5118,7 +4908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10090
-  title: 10090
+  title: Cloth hands 10
   slot:
     value: 184
   size:
@@ -5138,10 +4928,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &6301772883194522219
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5191,7 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10097
-  title: 10097
+  title: Plate head 10
   slot:
     value: 181
   size:
@@ -5211,10 +4999,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &6661488557336679770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5244,7 +5030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10106
-  title: 10106
+  title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438"
   slot:
     value: 185
   size:
@@ -5264,10 +5050,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &6959670025149417345
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5281,7 +5065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10022
-  title: 10022
+  title: Leather head 25
   slot:
     value: 181
   size:
@@ -5301,10 +5085,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 456
+    health: 315
     power: 0
-    armor: 6.5
-    resource: 0.35
 --- !u!114 &7419684207783315249
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5318,7 +5100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10123
-  title: 10123
+  title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0439
+    \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0439 \u0449\u0438\u0442\u043E\u043A"
   slot:
     value: 182
   size:
@@ -5338,10 +5121,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &7427189725676400778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5355,7 +5136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10036
-  title: 10036
+  title: Plate chest 20
   slot:
     value: 183
   size:
@@ -5375,10 +5156,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &7638315775081361980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5392,7 +5171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10075
-  title: 10075
+  title: Leather chest 35
   slot:
     value: 183
   size:
@@ -5412,10 +5191,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 603
+    health: 367
     power: 0
-    armor: 7.5
-    resource: 0.45
 --- !u!114 &7697856569677621517
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5429,7 +5206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10024
-  title: 10024
+  title: Leather shoulders 20
   slot:
     value: 182
   size:
@@ -5449,10 +5226,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &7785800891378577920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5466,7 +5241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10085
-  title: 10085
+  title: Staff weapon 30
   slot:
     value: 186
   size:
@@ -5487,9 +5262,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 41
-    armor: 0
-    resource: 0
+    power: 38
 --- !u!114 &8229471332804516462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5503,7 +5276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10136
-  title: 10136
+  title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u0441\u0442\u0440\u0430\u0436"
   slot:
     value: 186
   size:
@@ -5524,9 +5297,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &8516279873877236565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5580,7 +5351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10028
-  title: 10028
+  title: Leather hands 20
   slot:
     value: 184
   size:
@@ -5600,10 +5371,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &8679672984712988871
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5617,7 +5386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10074
-  title: 10074
+  title: Leather shoulders 40
   slot:
     value: 182
   size:
@@ -5637,10 +5406,8 @@ MonoBehaviour:
   rarity:
     value: 122
   characterParams:
-    health: 694
+    health: 396
     power: 0
-    armor: 8
-    resource: 0.5
 --- !u!114 &8768025246458969749
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5654,7 +5421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10088
-  title: 10088
+  title: Cloth shoulders 10
   slot:
     value: 182
   size:
@@ -5674,10 +5441,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 300
+    health: 250
     power: 0
-    armor: 5
-    resource: 0.2
 --- !u!114 &8781013962483808008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5691,7 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10078
-  title: 10078
+  title: Plate head 30
   slot:
     value: 181
   size:
@@ -5711,10 +5476,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4
 --- !u!114 &9111820585827621426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5728,7 +5491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10012
-  title: 10012
+  title: Cloth head 20
   slot:
     value: 181
   size:
@@ -5748,10 +5511,8 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 397
+    health: 292
     power: 0
-    armor: 6
-    resource: 0.3
 --- !u!114 &9113102958087313022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5786,7 +5547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10139
-  title: 10139
+  title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043A\u0430\u0441\u0442\u0435\u0442\u044B"
   slot:
     value: 186
   size:
@@ -5807,9 +5568,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 31
-    armor: 0
-    resource: 0
+    power: 30
 --- !u!114 &9180415984051115598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5841,7 +5600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10127
-  title: 10127
+  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
+    \u0440\u043E\u0433\u0430\u0442\u044B\u0439 \u0448\u043B\u0435\u043C"
   slot:
     value: 181
   size:
@@ -5861,7 +5621,5 @@ MonoBehaviour:
   rarity:
     value: 121
   characterParams:
-    health: 525
+    health: 340
     power: 0
-    armor: 7
-    resource: 0.4

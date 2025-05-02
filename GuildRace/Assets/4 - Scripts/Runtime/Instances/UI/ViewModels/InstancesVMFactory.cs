@@ -12,9 +12,7 @@ namespace Game.Instances
     public class InstancesVMFactory : VMFactory
     {
         private readonly GuildConfig guildConfig;
-        private readonly InstancesConfig instancesConfig;
 
-        private readonly IRouterService router;
         private readonly IInstancesService instancesService;
         private readonly IGuildService guildService;
         private readonly IObjectResolver resolver;
@@ -26,17 +24,13 @@ namespace Game.Instances
         public GuildVMFactory GuildVMF => guildVMF ??= resolver.Resolve<GuildVMFactory>();
 
         public InstancesVMFactory(
-            IRouterService router,
             IInstancesService instancesService,
             IGuildService guildService,
-            InstancesConfig instancesConfig,
             GuildConfig guildConfig,
             IObjectResolver resolver)
         {
-            this.router = router;
             this.instancesService = instancesService;
             this.guildService = guildService;
-            this.instancesConfig = instancesConfig;
             this.guildConfig = guildConfig;
             this.resolver = resolver;
         }
@@ -81,16 +75,6 @@ namespace Game.Instances
         public ActiveInstancesVM GetActiveInstances()
         {
             return new ActiveInstancesVM(instancesService.ActiveInstances, this, InventoryVMF);
-        }
-
-        public SquadRolesCountersVM GetRolesCounters(string activeInstanceId)
-        {
-            var activeInstance = FindActiveInstance(activeInstanceId);
-
-            var instanceType = activeInstance.Instance.Type;
-            var squadData = instancesConfig.SquadParams.GetSquadParams(instanceType);
-
-            return new SquadRolesCountersVM(squadData, activeInstance, GuildVMF);
         }
 
         private ActiveInstanceInfo FindActiveInstance(string activeInstanceId)

@@ -1,32 +1,27 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace Game.Instances
 {
-    public class InstanceData : ScriptableEntity<int>
+    [Serializable]
+    public class InstanceData : Entity<int>
     {
-        // params
-        [SerializeField] private InstanceType type;
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private LocalizeKey descKey;
-        // map logic
-        [SerializeField] private AssetReference mapRef;
-        [SerializeField] private AssetReference uiRef;
-        // boos units
+        [SerializeField] private AssetReference imageRef;
+        [Space]
+        [SerializeField] private InstanceType type;
         [SerializeField] private List<UnitData> boosUnits;
-        [SerializeField] private List<UnitData> trashUnits;
 
-        public InstanceType Type => type;
         public LocalizeKey NameKey => nameKey;
         public LocalizeKey DescKey => descKey;
+        public AssetReference ImageRef => imageRef;
 
-        public AssetReference MapRef => mapRef;
-        public AssetReference UIRef => uiRef;
-
+        public InstanceType Type => type;
         public IReadOnlyList<UnitData> BoosUnits => boosUnits;
-        public IReadOnlyList<UnitData> TrashUnits => trashUnits;
     }
 }

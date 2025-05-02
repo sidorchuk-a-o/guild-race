@@ -8,13 +8,12 @@ namespace Game.Inventory
     /// </summary>
     public class EquipItemItem : ListItemElement
     {
-        private PropertyElement idLabel;
         private SpriteField iconField;
+        private PropertyElement idLabel;
+        private LabelElement titleLabel;
         private PropertyElement levelField;
         private PropertyElement powerField;
         private PropertyElement healthField;
-        private PropertyElement armorField;
-        private PropertyElement resourceField;
         private KeyElement<int> typeField;
         private KeyElement<int> itemSlotField;
         private KeyElement<int> rarityField;
@@ -35,42 +34,38 @@ namespace Game.Inventory
             idLabel.Width(70).FontSize(16).ReadOnly();
             idLabel.labelOn = false;
 
+            titleLabel = root.CreateElement<LabelElement>();
+            titleLabel.FlexGrow(1).FontSize(16).Height(100, LengthUnit.Percent);
+            titleLabel.labelOn = false;
+
             levelField = root.CreateProperty();
-            levelField.Width(60).FontSize(16).ReadOnly();
+            levelField.Width(60).FontSize(16);
             levelField.labelOn = false;
 
             powerField = root.CreateProperty();
-            powerField.Width(56).FontSize(14).MarginRight(-9).ReadOnly();
+            powerField.Width(56).FontSize(14).MarginRight(-9);
             powerField.labelOn = false;
 
             healthField = root.CreateProperty();
-            healthField.Width(56).FontSize(14).MarginRight(-9).ReadOnly();
+            healthField.Width(56).FontSize(14);
             healthField.labelOn = false;
 
-            armorField = root.CreateProperty();
-            armorField.Width(56).FontSize(14).MarginRight(-9).ReadOnly();
-            armorField.labelOn = false;
-
-            resourceField = root.CreateProperty();
-            resourceField.Width(56).FontSize(14).ReadOnly();
-            resourceField.labelOn = false;
-
             typeField = root.CreateKey<EquipType, int>();
-            typeField.Width(200).FontSize(16).ReadOnly();
+            typeField.Width(200).FontSize(16);
             typeField.labelOn = false;
             typeField.removeOn = false;
             typeField.filterOn = false;
             typeField.updateOn = false;
 
             itemSlotField = root.CreateKey<ItemSlot, int>();
-            itemSlotField.Width(175).FontSize(16).ReadOnly();
+            itemSlotField.Width(175).FontSize(16);
             itemSlotField.labelOn = false;
             itemSlotField.removeOn = false;
             itemSlotField.filterOn = false;
             itemSlotField.updateOn = false;
 
             rarityField = root.CreateKey<Rarity, int>();
-            rarityField.Width(120).FontSize(16).ReadOnly();
+            rarityField.Width(120).FontSize(16);
             rarityField.labelOn = false;
             rarityField.removeOn = false;
             rarityField.filterOn = false;
@@ -84,12 +79,11 @@ namespace Game.Inventory
             var characterData = data.GetProperty("characterParams");
 
             idLabel.BindProperty("id", data);
+            titleLabel.BindProperty("title", data);
             iconField.BindProperty("iconRef", data);
             levelField.BindProperty("level", data);
             powerField.BindProperty("power", characterData);
             healthField.BindProperty("health", characterData);
-            armorField.BindProperty("armor", characterData);
-            resourceField.BindProperty("resource", characterData);
             typeField.BindProperty("type", data);
             itemSlotField.BindProperty("slot", data);
             rarityField.BindProperty("rarity", data);

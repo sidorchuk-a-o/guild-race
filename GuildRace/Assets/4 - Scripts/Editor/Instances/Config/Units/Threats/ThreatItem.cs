@@ -4,9 +4,9 @@ using UnityEngine.UIElements;
 namespace Game.Instances
 {
     /// <summary>
-    /// Item: <see cref="AbilityData"/>
+    /// Item: <see cref="ThreatData"/>
     /// </summary>
-    public class AbilityItem : EntityListItemElement
+    public class ThreatItem : EntityListItemElement
     {
         private ItemIdElement idLabel;
 

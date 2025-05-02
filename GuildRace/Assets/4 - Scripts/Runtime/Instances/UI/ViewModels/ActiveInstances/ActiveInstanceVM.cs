@@ -9,7 +9,6 @@ namespace Game.Instances
         public string Id { get; }
 
         public InstanceVM InstanceVM { get; }
-        public ItemsGridVM BagVM { get; }
         public IdsVM SquadVM { get; }
 
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
@@ -24,14 +23,12 @@ namespace Game.Instances
 
             InstanceVM = instancesVMF.GetInstance(info.Instance);
             SquadVM = new IdsVM(info.Squad);
-            BagVM = inventoryVMF.CreateItemsGrid(info.Bag);
         }
 
         protected override void InitSubscribes()
         {
             InstanceVM.AddTo(this);
             SquadVM.AddTo(this);
-            BagVM.AddTo(this);
         }
     }
 }

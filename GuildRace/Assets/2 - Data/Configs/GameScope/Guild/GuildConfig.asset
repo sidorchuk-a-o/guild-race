@@ -13,21 +13,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 712
-  title: "\u0417\u0430\u043A\u043B\u0438\u043D\u0430\u0442\u0435\u043B\u044C"
+  title: "\u0427\u0443\u043C\u043D\u043E\u0439 \u0410\u043B\u0445\u0438\u043C\u0438\u043A"
   nameKey:
     value: CHARACTERS/SPEC_712_TTL
   descKey:
     value: CHARACTERS/SPEC_712_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 501
   subRoleId:
     value: 521
   unitParams:
     health: 500
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 31
+  abilities:
+  - id: 5012
+    title: "\u041C\u0430\u0441\u0442\u0435\u0440 \u0430\u043B\u0445\u0438\u043C\u0438\u0438"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5012_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5012_DSC
+    threatId:
+      value: 12
+  - id: 5028
+    title: "\u0411\u043E\u043B\u0435\u0437\u043D\u0435\u043D\u043D\u043E\u0435 \u043F\u0440\u0438\u043A\u043E\u0441\u043D\u043E\u0432\u0435\u043D\u0438\u0435"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5028_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5028_DSC
+    threatId:
+      value: 112
 --- !u!114 &-8876693316626268968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -60,6 +80,12 @@ MonoBehaviour:
   title: DPS
   nameKey:
     value: CHARACTERS/ROLE_DPS_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &-8197956687249327810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +138,12 @@ MonoBehaviour:
   title: SUPPORT
   nameKey:
     value: CHARACTERS/SUBROLE_SUPPORT_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &-7000185162162723182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +167,54 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   grid: {fileID: 76776547799289294}
+--- !u!114 &-6860257373225403384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 707
+  title: "\u0427\u0435\u0441\u0442\u043E\u0431\u043E\u0440\u0435\u0446 "
+  nameKey:
+    value: CHARACTERS/SPEC_707_TTL
+  descKey:
+    value: CHARACTERS/SPEC_707_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  roleId:
+    value: 503
+  subRoleId:
+    value: 524
+  unitParams:
+    health: 625
+    power: 28
+  abilities:
+  - id: 5007
+    title: "\u0412\u0435\u0440\u043D\u044B\u0439 \u0441\u043A\u0430\u043A\u0443\u043D"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5007_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5007_DSC
+    threatId:
+      value: 14
+  - id: 5023
+    title: "\u0413\u0435\u0440\u043E\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0434\u0443\u044D\u043B\u044C"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5023_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5023_DSC
+    threatId:
+      value: 113
 --- !u!114 &-6722420641676964884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,21 +244,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 709
-  title: "\u0424\u043B\u043E\u0440\u0438\u0441\u0442"
+  title: "\u041B\u0435\u0441\u043E\u0432\u0438\u043A"
   nameKey:
     value: CHARACTERS/SPEC_709_TTL
   descKey:
     value: CHARACTERS/SPEC_709_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 501
   subRoleId:
     value: 521
   unitParams:
     health: 550
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 33
+  abilities:
+  - id: 5009
+    title: "\u041E\u043F\u0443\u0442\u044B\u0432\u0430\u044E\u0449\u0438\u0435 \u043A\u043E\u0440\u043D\u0438"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5009_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5009_DSC
+    threatId:
+      value: 16
+  - id: 5025
+    title: "\u0425\u0438\u0449\u043D\u044B\u0435 \u043B\u0438\u0430\u043D\u044B"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5025_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5025_DSC
+    threatId:
+      value: 111
 --- !u!114 &-6623397568569760015
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,11 +292,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 602
-  title: "\u0416\u0440\u0435\u0446"
+  title: "\u0410\u0432\u0433\u0443\u0440"
   nameKey:
     value: CHARACTERS/CLASS_602_TTL
   descKey:
     value: CHARACTERS/CLASS_602_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   armorType:
     value: 141
   weaponType:
@@ -217,21 +323,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 710
-  title: "\u0410\u0441\u0442\u0440\u0430\u043B"
+  title: "\u0412\u0435\u0441\u0442\u043D\u0438\u043A"
   nameKey:
     value: CHARACTERS/SPEC_710_TTL
   descKey:
     value: CHARACTERS/SPEC_710_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 503
   subRoleId:
     value: 524
   unitParams:
     health: 625
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 27
+  abilities:
+  - id: 5010
+    title: "\u0410\u0441\u0442\u0440\u0430\u043B\u044C\u043D\u043E\u0435 \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5010_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5010_DSC
+    threatId:
+      value: 17
+  - id: 5026
+    title: "\u0421\u0432\u044F\u0437\u044C \u0441 \u043C\u0438\u0440\u043E\u043C
+      \u0434\u0443\u0445\u043E\u0432"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5026_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5026_DSC
+    threatId:
+      value: 113
+--- !u!114 &-6452331274015941336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 608
+  title: "\u041B\u0430\u0437\u0443\u0442\u0447\u0438\u043A"
+  nameKey:
+    value: CHARACTERS/CLASS_608_TTL
+  descKey:
+    value: CHARACTERS/CLASS_608_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  armorType:
+    value: 142
+  weaponType:
+    value: 145
+  specs:
+  - {fileID: 1346546713938422551}
+  - {fileID: 765183565098096467}
 --- !u!114 &-5338355903722540116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,9 +403,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 524
-  title: MELEE
+  title: TANK
   nameKey:
-    value: CHARACTERS/SUBROLE_MELEE_TTL
+    value: 
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &-5316411198448944541
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,6 +451,54 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_3_TTL
+--- !u!114 &-4803429474287811624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 708
+  title: "\u0414\u043E\u0437\u043E\u0440\u043D\u044B\u0439"
+  nameKey:
+    value: CHARACTERS/SPEC_708_TTL
+  descKey:
+    value: CHARACTERS/SPEC_708_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  roleId:
+    value: 501
+  subRoleId:
+    value: 524
+  unitParams:
+    health: 575
+    power: 31
+  abilities:
+  - id: 5008
+    title: "\u0423\u0434\u0430\u0440 \u0449\u0438\u0442\u043E\u043C"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5008_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5008_DSC
+    threatId:
+      value: 15
+  - id: 5024
+    title: "\u0411\u043B\u043E\u043A \u0449\u0438\u0442\u043E\u043C"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5024_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5024_DSC
+    threatId:
+      value: 115
 --- !u!114 &-4694587001071973687
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,21 +512,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 701
-  title: "\u041C\u0430\u0433\u0438\u0441\u0442\u0440 \u0441\u0442\u0438\u0445\u0438\u0439"
+  title: "\u0412\u043E\u043B\u0445\u0432 \u0421\u0442\u0438\u0445\u0438\u0439\u043D\u044B\u0439"
   nameKey:
     value: CHARACTERS/SPEC_701_TTL
   descKey:
     value: CHARACTERS/SPEC_701_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 501
   subRoleId:
     value: 521
   unitParams:
     health: 525
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 33
+  abilities:
+  - id: 5001
+    title: "\u041B\u0435\u0434\u044F\u043D\u0430\u044F \u0433\u0440\u043E\u0431\u043D\u0438\u0446\u0430"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5001_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5001_DSC
+    threatId:
+      value: 16
+  - id: 5017
+    title: "\u041A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0446\u0438\u044F
+      \u0441\u0442\u0438\u0445\u0438\u0439"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5017_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5017_DSC
+    threatId:
+      value: 113
 --- !u!114 &-3730586026932445884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,6 +564,37 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_5_TTL
+--- !u!114 &-3575076076589575178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 604
+  title: "\u0411\u0443\u043B\u0430\u0442\u043D\u0438\u043A"
+  nameKey:
+    value: CHARACTERS/CLASS_604_TTL
+  descKey:
+    value: CHARACTERS/CLASS_604_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  armorType:
+    value: 143
+  weaponType:
+    value: 144
+  specs:
+  - {fileID: -6860257373225403384}
+  - {fileID: -4803429474287811624}
 --- !u!114 &-3532688074755841650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,6 +611,37 @@ MonoBehaviour:
   title: ENERGY
   nameKey:
     value: CHARACTERS/RESOURCE_ENERGY_TTL
+--- !u!114 &-3242286529672175049
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a019bca4010641acb509de741fbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 607
+  title: "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440"
+  nameKey:
+    value: CHARACTERS/CLASS_607_TTL
+  descKey:
+    value: CHARACTERS/CLASS_607_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  armorType:
+    value: 142
+  weaponType:
+    value: 147
+  specs:
+  - {fileID: 5088793920472949842}
+  - {fileID: 5721050752461084215}
 --- !u!114 &-2476405077858922527
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,11 +678,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 704
-  title: "\u0421\u0435\u043A\u0442\u0430\u043D\u0442"
+  title: "\u041B\u0438\u0445\u043E\u0434\u0443\u0445"
   nameKey:
     value: CHARACTERS/SPEC_704_TTL
   descKey:
     value: CHARACTERS/SPEC_704_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 502
   subRoleId:
@@ -395,9 +696,24 @@ MonoBehaviour:
   unitParams:
     health: 575
     power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+  abilities:
+  - id: 5004
+    title: "\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F
+      \u0430\u0442\u0430\u043A\u0430"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5004_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5004_DSC
+    threatId:
+      value: 15
+  - id: 5020
+    title: "\u041E\u0431\u043C\u0435\u043D \u0434\u0443\u0448"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5020_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5020_DSC
+    threatId:
+      value: 114
 --- !u!114 &-1085160420808501345
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -411,11 +727,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 601
-  title: "\u0427\u0430\u0440\u043E\u0434\u0435\u0439"
+  title: "\u041A\u043E\u043B\u0434\u0443\u043D"
   nameKey:
     value: CHARACTERS/CLASS_601_TTL
   descKey:
     value: CHARACTERS/CLASS_601_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   armorType:
     value: 141
   weaponType:
@@ -439,6 +761,12 @@ MonoBehaviour:
   title: TANK
   nameKey:
     value: CHARACTERS/ROLE_TANK_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &-55547621386745197
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,21 +780,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 711
-  title: "\u041C\u0435\u0442\u0430\u043C\u043E\u0440\u0444"
+  title: "\u041C\u0435\u0436\u0432\u0435\u0447\u043D\u044B\u0439 \u0421\u0442\u0440\u0430\u043D\u043D\u0438\u043A"
   nameKey:
     value: CHARACTERS/SPEC_711_TTL
   descKey:
     value: CHARACTERS/SPEC_711_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 503
   subRoleId:
     value: 524
   unitParams:
     health: 650
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 27
+  abilities:
+  - id: 5011
+    title: "\u041F\u0435\u0440\u0435\u0445\u043E\u0434 \u043C\u0435\u0436\u0434\u0443
+      \u043C\u0438\u0440\u0430\u043C\u0438"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5011_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5011_DSC
+    threatId:
+      value: 14
+  - id: 5027
+    title: "\u0421\u0432\u044F\u0437\u044C \u0441 \u043C\u0438\u0440\u043E\u043C
+      \u0434\u0435\u043C\u043E\u043D\u043E\u0432"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5027_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5027_DSC
+    threatId:
+      value: 111
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,6 +844,9 @@ MonoBehaviour:
     - {fileID: 7492917005212791002}
     - {fileID: 133220843808419609}
     - {fileID: 59231052814991113}
+    - {fileID: -3575076076589575178}
+    - {fileID: -3242286529672175049}
+    - {fileID: -6452331274015941336}
     roles:
     - {fileID: -8346132011526749932}
     - {fileID: 5335921967913264061}
@@ -537,9 +890,9 @@ MonoBehaviour:
       specId:
         value: 705
     - classId:
-        value: 606
+        value: 608
       specId:
-        value: 712
+        value: 715
   guildBankParams:
     tabs:
     - {fileID: -5316411198448944541}
@@ -968,11 +1321,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 606
-  title: "\u041D\u0435\u043A\u0440\u043E\u043C\u0430\u043D\u0442"
+  title: "\u041F\u0430\u043D\u0434\u0435\u043C\u043E\u0440\u0444"
   nameKey:
     value: CHARACTERS/CLASS_606_TTL
   descKey:
     value: CHARACTERS/CLASS_606_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   armorType:
     value: 141
   weaponType:
@@ -1013,11 +1372,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 605
-  title: "\u0414\u0440\u0443\u0438\u0434"
+  title: "\u0412\u0435\u0434\u0443\u043D\u044C\u044F"
   nameKey:
     value: CHARACTERS/CLASS_605_TTL
   descKey:
     value: CHARACTERS/CLASS_605_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   armorType:
     value: 142
   weaponType:
@@ -1041,6 +1406,54 @@ MonoBehaviour:
   title: 
   defaultNameKey:
     value: GUILD/DEFAULT_RANK_0_TTL
+--- !u!114 &765183565098096467
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 716
+  title: "\u0428\u0435\u043F\u043E\u0442 \u041A\u043B\u0438\u043D\u043A\u0430"
+  nameKey:
+    value: CHARACTERS/SPEC_716_TTL
+  descKey:
+    value: CHARACTERS/SPEC_716_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  roleId:
+    value: 501
+  subRoleId:
+    value: 524
+  unitParams:
+    health: 575
+    power: 31
+  abilities:
+  - id: 5016
+    title: "\u0413\u0430\u0440\u0440\u043E\u0442\u0430"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5016_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5016_DSC
+    threatId:
+      value: 11
+  - id: 5032
+    title: "\u041A\u0440\u0438\u0441\u0442\u0430\u043B\u044C\u043D\u043E\u0435 \u043B\u0435\u0437\u0432\u0438\u0435"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5032_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5032_DSC
+    threatId:
+      value: 111
 --- !u!114 &1183720720073450144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1061,6 +1474,54 @@ MonoBehaviour:
     value: 201
   cellType:
     value: 213
+--- !u!114 &1346546713938422551
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 715
+  title: "\u0422\u0435\u043D\u0435\u0442\u043D\u0438\u043A"
+  nameKey:
+    value: CHARACTERS/SPEC_715_TTL
+  descKey:
+    value: CHARACTERS/SPEC_715_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
+  unitParams:
+    health: 500
+    power: 32
+  abilities:
+  - id: 5015
+    title: "\u041C\u0430\u0441\u0442\u0435\u0440 \u043D\u0435\u0437\u0430\u043C\u0435\u0442\u043D\u043E\u0441\u0442\u0438"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5015_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5015_DSC
+    threatId:
+      value: 13
+  - id: 5031
+    title: "\u0421\u043A\u0440\u044B\u0442\u044C\u0441\u044F \u0432 \u0442\u0435\u043D\u0438"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5031_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5031_DSC
+    threatId:
+      value: 115
 --- !u!114 &2248301654606666036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1074,21 +1535,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 705
-  title: "\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C"
+  title: "\u0420\u0430\u0442\u043D\u0438\u043A \u0421\u0432\u044F\u0449\u0435\u043D\u043D\u044B\u0439"
   nameKey:
     value: CHARACTERS/SPEC_705_TTL
   descKey:
     value: CHARACTERS/SPEC_705_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 501
   subRoleId:
     value: 524
   unitParams:
     health: 550
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 31
+  abilities:
+  - id: 5005
+    title: "\u0421\u0432\u0435\u0440\u043A\u0430\u044E\u0449\u0438\u0439 \u0449\u0438\u0442"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5005_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5005_DSC
+    threatId:
+      value: 11
+  - id: 5021
+    title: "\u041F\u044B\u043B\u0430\u044E\u0449\u0438\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5021_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5021_DSC
+    threatId:
+      value: 112
 --- !u!114 &2841863336987669863
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1102,21 +1583,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 702
-  title: "\u0425\u0440\u0430\u043D\u0438\u0442\u0435\u043B\u044C"
+  title: "\u0417\u0430\u043F\u043E\u0432\u0435\u0434\u043D\u0438\u043A"
   nameKey:
     value: CHARACTERS/SPEC_702_TTL
   descKey:
     value: CHARACTERS/SPEC_702_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 502
   subRoleId:
     value: 522
   unitParams:
     health: 500
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 27
+  abilities:
+  - id: 5002
+    title: "\u0417\u0430\u043F\u043E\u0432\u0435\u0434\u043D\u044B\u0435 \u0440\u0443\u043D\u044B"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5002_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5002_DSC
+    threatId:
+      value: 14
+  - id: 5018
+    title: "\u041C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043E\u0431\u0435\u0440\u0435\u0433"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5018_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5018_DSC
+    threatId:
+      value: 115
 --- !u!114 &3937412005290520608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1133,6 +1634,12 @@ MonoBehaviour:
   title: HEAL
   nameKey:
     value: CHARACTERS/SUBROLE_HEAL_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &4201286608953013207
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1149,6 +1656,12 @@ MonoBehaviour:
   title: RANGED
   nameKey:
     value: CHARACTERS/SUBROLE_RANGED_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
 --- !u!114 &4352505467803637179
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,21 +1675,91 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 703
-  title: "\u041C\u043E\u043B\u0435\u043B\u044C\u043D\u0438\u043A"
+  title: "\u042F\u0440\u0443\u043D "
   nameKey:
     value: CHARACTERS/SPEC_703_TTL
   descKey:
     value: CHARACTERS/SPEC_703_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 502
   subRoleId:
     value: 522
   unitParams:
     health: 550
-    power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+    power: 28
+  abilities:
+  - id: 5003
+    title: "\u0423\u0441\u043F\u043E\u043A\u0430\u0438\u0432\u0430\u044E\u0449\u0438\u0435
+      \u0431\u043B\u0430\u0433\u043E\u0432\u043E\u043D\u0438\u044F"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5003_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5003_DSC
+    threatId:
+      value: 17
+  - id: 5019
+    title: "\u0427\u0442\u0435\u043D\u0438\u0435 \u043C\u043E\u043B\u0438\u0442\u0432\u044B"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5019_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5019_DSC
+    threatId:
+      value: 114
+--- !u!114 &5088793920472949842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 713
+  title: "\u041C\u0435\u0445\u0430\u043D\u0438\u0437\u0430\u0442\u043E\u0440"
+  nameKey:
+    value: CHARACTERS/SPEC_713_TTL
+  descKey:
+    value: CHARACTERS/SPEC_713_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  roleId:
+    value: 503
+  subRoleId:
+    value: 524
+  unitParams:
+    health: 600
+    power: 28
+  abilities:
+  - id: 5013
+    title: "\u0420\u0430\u0434\u0430\u0440"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5013_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5013_DSC
+    threatId:
+      value: 13
+  - id: 5029
+    title: "\u042D\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u0449\u0438\u0442"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5029_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5029_DSC
+    threatId:
+      value: 114
 --- !u!114 &5098217918887357756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1209,6 +1792,60 @@ MonoBehaviour:
   title: HEAL
   nameKey:
     value: CHARACTERS/ROLE_HEAL_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+--- !u!114 &5721050752461084215
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561a88f865909d43a73a85c702ff57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 714
+  title: "\u0411\u0435\u0437\u0443\u043C\u043D\u044B\u0439 \u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440"
+  nameKey:
+    value: CHARACTERS/SPEC_714_TTL
+  descKey:
+    value: CHARACTERS/SPEC_714_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  roleId:
+    value: 501
+  subRoleId:
+    value: 521
+  unitParams:
+    health: 525
+    power: 30
+  abilities:
+  - id: 5014
+    title: "\u0411\u0440\u043E\u0441\u043E\u043A \u043C\u0438\u043D\u044B"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5014_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5014_DSC
+    threatId:
+      value: 15
+  - id: 5030
+    title: "\u0417\u0430\u043A\u0440\u0435\u043F\u0438\u0442\u044C \u0431\u043E\u043C\u0431\u0443"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5030_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5030_DSC
+    threatId:
+      value: 112
 --- !u!114 &5807667443719656722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1222,11 +1859,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 706
-  title: "\u0417\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u043A"
+  title: "\u0421\u0432\u044F\u0442\u043E\u0441\u0442\u0440\u0430\u0436"
   nameKey:
     value: CHARACTERS/SPEC_706_TTL
   descKey:
     value: CHARACTERS/SPEC_706_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   roleId:
     value: 502
   subRoleId:
@@ -1234,9 +1877,23 @@ MonoBehaviour:
   unitParams:
     health: 550
     power: 30
-    resourceParams:
-      maxValue: 100
-      regenValue: 3
+  abilities:
+  - id: 5006
+    title: "\u0421\u0432\u044F\u0449\u0435\u043D\u043D\u0430\u044F \u0441\u043A\u0440\u0438\u0436\u0430\u043B\u044C"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5006_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5006_DSC
+    threatId:
+      value: 12
+  - id: 5022
+    title: "\u0418\u0441\u0446\u0435\u043B\u0435\u043D\u0438\u0435 \u0434\u0443\u0445\u0430"
+    nameKey:
+      value: ABILITIES/CLASS_ABILITY_5022_TTL
+    descKey:
+      value: ABILITIES/CLASS_ABILITY_5022_DSC
+    threatId:
+      value: 113
 --- !u!114 &6159485941193676221
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1293,11 +1950,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 603
-  title: "\u041F\u0430\u043B\u0430\u0434\u0438\u043D"
+  title: "\u0414\u043B\u0430\u043D\u043D\u0438\u043A"
   nameKey:
     value: CHARACTERS/CLASS_603_TTL
   descKey:
     value: CHARACTERS/CLASS_603_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   armorType:
     value: 143
   weaponType:

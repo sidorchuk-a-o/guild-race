@@ -14,9 +14,11 @@ namespace Game.Instances
         [SerializeField] private SquadParams squadParams;
         [SerializeField] private ActiveInstanceParams activeInstanceParams;
         [SerializeField] private ConsumablesParams consumablesParams;
+        [SerializeField] private List<ThreatData> threats;
 
         private Dictionary<int, SeasonData> seasonsCache;
         private Dictionary<int, InstanceData> instancesCache;
+        private Dictionary<ThreatId, ThreatData> threatsCache;
         private Dictionary<InstanceType, InstanceTypeData> instanceTypesCache;
 
         public IReadOnlyList<SeasonData> Seasons => seasons;
@@ -25,6 +27,7 @@ namespace Game.Instances
         public SquadParams SquadParams => squadParams;
         public ActiveInstanceParams ActiveInstanceParams => activeInstanceParams;
         public ConsumablesParams ConsumablesParams => consumablesParams;
+        public IReadOnlyList<ThreatData> Threats => threats;
 
         public SeasonData GetSeason(int id)
         {
@@ -49,6 +52,14 @@ namespace Game.Instances
         {
             instanceTypesCache ??= instanceTypes.ToDictionary(x => (InstanceType)x.Id, x => x);
             instanceTypesCache.TryGetValue(type, out var data);
+
+            return data;
+        }
+
+        public ThreatData GetThreat(ThreatId id)
+        {
+            threatsCache ??= threats.ToDictionary(x => (ThreatId)x.Id, x => x);
+            threatsCache.TryGetValue(id, out var data);
 
             return data;
         }

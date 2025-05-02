@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 namespace Game.Guild
 {
     [GuildEditor(typeof(DefaultCharacterData))]
-    public class DefaultCharacterEditor : EntityEditor
+    public class DefaultCharacterEditor : Editor
     {
         private PropertyElement classIdKey;
         private PropertyElement specIdKey;
@@ -23,6 +23,13 @@ namespace Game.Guild
 
             specIdKey = root.CreateProperty();
             specIdKey.BindProperty("specId", data);
+        }
+
+        public override void BindData(SerializedData data)
+        {
+            base.BindData(data);
+
+            title = DefaultCharacterItem.GetTitle(data);
         }
     }
 }

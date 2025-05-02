@@ -20,9 +20,11 @@ namespace Game.Instances
 
         protected override async void SaveCallback()
         {
-            instancesImporter ??= new(SheetId, "boss-data", "N2:V", typeof(InstanceData));
-            boosUnitsImporter ??= new(SheetId, "boss-units", "A:U", typeof(UnitData));
-            abilitiesImporter ??= new(SheetId, "unit-abilities", "A:Q", typeof(AbilityData));
+            LockWizard();
+
+            instancesImporter ??= new(SheetId, "boss-data", "N2:W", typeof(InstanceData));
+            boosUnitsImporter ??= new(SheetId, "boss-units", "A:N", typeof(UnitData));
+            abilitiesImporter ??= new(SheetId, "unit-abilities", "A:J", typeof(AbilityData));
 
             await instancesImporter.LoadData("ID");
             await boosUnitsImporter.LoadData("ID");
@@ -74,12 +76,14 @@ namespace Game.Instances
             var nameKey = row["Name Key"].LocalizeKeyParse();
             var descKey = row["Desc Key"].LocalizeKeyParse();
             var type = new InstanceType(row["Type ID"].IntParse());
+            var imageRef = row["Image Name"].AddressableFileParse();
 
             instanceData.GetProperty("id").SetValue(id);
             instanceData.GetProperty("title").SetValue(title);
             instanceData.GetProperty("nameKey").SetValue(nameKey);
             instanceData.GetProperty("descKey").SetValue(descKey);
             instanceData.GetProperty("type").SetValue(type);
+            instanceData.GetProperty("imageRef").SetValue(imageRef);
 
             ImportBossUnits(instanceData);
         }
@@ -113,55 +117,18 @@ namespace Game.Instances
             var title = row["Name"].ToUpperFirst();
             var nameKey = row["Name Key"].LocalizeKeyParse();
             var descKey = row["Desc Key"].LocalizeKeyParse();
-            var imageRef = row["Icon Name"].AddressableFileParse();
+            var imageRef = row["Image Name"].AddressableFileParse();
+            var completeTime = row["Timer"].IntParse();
 
             unitData.GetProperty("id").SetValue(id);
             unitData.GetProperty("title").SetValue(title);
             unitData.GetProperty("nameKey").SetValue(nameKey);
             unitData.GetProperty("descKey").SetValue(descKey);
             unitData.GetProperty("imageRef").SetValue(imageRef);
-
-            ImportAbilities(unitData);
+            unitData.GetProperty("completeTime").SetValue(completeTime);
 
             ClassImportWizard.ImportUnitParams(unitData, row);
-        }
-
-        private void ImportAbilities(SerializedData unitData)
-        {
-            var id = unitData.GetProperty("id").GetValue<int>();
-
-            var abilitiesData = unitData.GetProperty("abilities");
-            var abilitiesSaveMeta = new SaveMeta(isSubObject: true, abilitiesData);
-
-            abilitiesImporter.ImportData(abilitiesSaveMeta, CheckAbilityEqual, UpdateAbilityData, onFilterRow: row =>
-            {
-                var unitId = row["Unit ID"].IntParse();
-
-                return id == unitId;
-            });
-        }
-
-        private bool CheckAbilityEqual(SerializedData abilityData, IDataRow row)
-        {
-            var dataId = abilityData.GetProperty("id").GetValue<int>();
-            var rowId = row["ID"].IntParse();
-
-            return Equals(dataId, rowId);
-        }
-
-        private void UpdateAbilityData(SerializedData abilityData, IDataRow row)
-        {
-            var id = row["ID"].IntParse();
-            var title = row["Name"].ToUpperFirst();
-            var nameKey = row["Name Key"].LocalizeKeyParse();
-            var descKey = row["Desc Key"].LocalizeKeyParse();
-            var iconRef = row["Icon Name"].AddressableFileParse();
-
-            abilityData.GetProperty("id").SetValue(id);
-            abilityData.GetProperty("title").SetValue(title);
-            abilityData.GetProperty("nameKey").SetValue(nameKey);
-            abilityData.GetProperty("descKey").SetValue(descKey);
-            abilityData.GetProperty("iconRef").SetValue(iconRef);
+            ClassImportWizard.ImportAbilities(unitData, abilitiesImporter);
         }
     }
 }
