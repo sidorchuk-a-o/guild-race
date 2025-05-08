@@ -6,16 +6,16 @@ namespace Game.Guild
 {
     public class AbilitiesVM : VMCollection<AbilityData, AbilityVM>
     {
-        private readonly InstancesConfig config;
+        private readonly InstancesVMFactory instancesVMF;
 
-        public AbilitiesVM(IReadOnlyCollection<AbilityData> values, InstancesConfig config) : base(values)
+        public AbilitiesVM(IReadOnlyCollection<AbilityData> values, InstancesVMFactory instancesVMF) : base(values)
         {
-            this.config = config;
+            this.instancesVMF = instancesVMF;
         }
 
         protected override AbilityVM Create(AbilityData value)
         {
-            return new AbilityVM(value, config);
+            return new AbilityVM(value, instancesVMF);
         }
     }
 }

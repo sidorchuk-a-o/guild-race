@@ -11,7 +11,7 @@ namespace Game.Instances
         public SquadCandidateVM(SquadCandidateInfo info, InstancesVMFactory instancesVMF)
         {
             CharacterVM = instancesVMF.GuildVMF.GetCharacter(info.CharacterId);
-            ThreatsVM = new ThreatsVM(info.Threads, instancesVMF.InstancesConfig);
+            ThreatsVM = new ThreatsVM(info.Threads, instancesVMF);
         }
 
         protected override void InitSubscribes()

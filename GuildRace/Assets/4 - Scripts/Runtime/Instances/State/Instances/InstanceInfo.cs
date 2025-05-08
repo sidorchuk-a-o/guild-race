@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using AD.Services.Localization;
 
 namespace Game.Instances
@@ -13,13 +14,13 @@ namespace Game.Instances
 
         public UnitInfo[] BossUnits { get; }
 
-        public InstanceInfo(InstanceData data)
+        public InstanceInfo(InstanceData data, IEnumerable<UnitInfo> bossUnits)
         {
             Id = data.Id;
             Type = data.Type;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
-            BossUnits = data.BoosUnits.Select(x => new UnitInfo(x)).ToArray();
+            BossUnits = bossUnits.ToArray();
         }
 
         public UnitInfo GetBossUnit(int id)

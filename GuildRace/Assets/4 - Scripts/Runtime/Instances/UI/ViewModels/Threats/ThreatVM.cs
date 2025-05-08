@@ -9,10 +9,10 @@ namespace Game.Instances
         public ThreatDataVM ThreatDataVM { get; }
         public IReadOnlyReactiveProperty<bool> Resolved { get; }
 
-        public ThreatVM(ThreatInfo info, InstancesConfig instancesConfig)
+        public ThreatVM(ThreatInfo info, InstancesVMFactory instancesVMF)
         {
             Resolved = info.Resolved;
-            ThreatDataVM = new ThreatDataVM(instancesConfig.GetThreat(info.ThreatId));
+            ThreatDataVM = new ThreatDataVM(instancesVMF.InstancesConfig.GetThreat(info.Id));
         }
 
         protected override void InitSubscribes()

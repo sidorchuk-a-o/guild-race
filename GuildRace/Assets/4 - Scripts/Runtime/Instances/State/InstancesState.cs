@@ -47,6 +47,8 @@ namespace Game.Instances
             var instance = seasons.GetInstance(args.InstanceId);
             var bossUnit = instance.GetBossUnit(args.BossUnitId);
 
+            bossUnit.SetInstanceId(id);
+
             SetupInstance = new(id, instance, bossUnit, squad: null);
         }
 
@@ -137,10 +139,17 @@ namespace Game.Instances
             var raidData = seasonData.Instances.FirstOrDefault(x => x.Type == InstanceTypes.raid);
             var dungeonsData = seasonData.Instances.Where(x => x.Type == InstanceTypes.dungeon);
 
-            var raid = new InstanceInfo(raidData);
-            var dungeons = dungeonsData.Select(x => new InstanceInfo(x));
+            var raid = CreateInstance(raidData);
+            var dungeons = dungeonsData.Select(x => CreateInstance(x));
 
             return new SeasonInfo(seasonData, raid, dungeons);
+        }
+
+        private static InstanceInfo CreateInstance(InstanceData data)
+        {
+            var bossUnits = data.BoosUnits.Select(x => new UnitInfo(x));
+
+            return new InstanceInfo(data, bossUnits);
         }
 
         private void CreateDefaultConsumables()

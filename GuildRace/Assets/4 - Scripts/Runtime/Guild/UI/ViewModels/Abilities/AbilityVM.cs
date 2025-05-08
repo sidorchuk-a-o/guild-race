@@ -13,12 +13,12 @@ namespace Game.Guild
         public LocalizeKey DescKey { get; }
         public ThreatDataVM ThreatVM { get; }
 
-        public AbilityVM(AbilityData data, InstancesConfig config)
+        public AbilityVM(AbilityData data, InstancesVMFactory instancesVMF)
         {
             Id = data.Id;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
-            ThreatVM = new ThreatDataVM(config.GetThreat(data.ThreatId));
+            ThreatVM = new ThreatDataVM(instancesVMF.InstancesConfig.GetThreat(data.ThreatId));
         }
 
         protected override void InitSubscribes()

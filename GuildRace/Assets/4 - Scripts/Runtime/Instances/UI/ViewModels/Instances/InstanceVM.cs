@@ -14,13 +14,13 @@ namespace Game.Instances
 
         public UnitsVM BossUnitsVM { get; }
 
-        public InstanceVM(InstanceInfo info, InstancesConfig config)
+        public InstanceVM(InstanceInfo info, InstancesVMFactory instancesVMF)
         {
             Id = info.Id;
             Type = info.Type;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
-            BossUnitsVM = new UnitsVM(info.BossUnits, config);
+            BossUnitsVM = new UnitsVM(info.BossUnits, instancesVMF);
         }
 
         protected override void InitSubscribes()

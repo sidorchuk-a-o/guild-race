@@ -1,4 +1,5 @@
-﻿using AD.Services.Localization;
+﻿using System.Threading;
+using AD.Services.Localization;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
@@ -37,9 +38,9 @@ namespace Game.Inventory
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             parameters.TryGetRouteValue<string>(itemIdKey, out var itemId);
 

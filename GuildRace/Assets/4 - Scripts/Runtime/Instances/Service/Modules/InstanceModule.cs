@@ -36,8 +36,14 @@ namespace Game.Instances
 
         public async UniTask StartSetupInstance(SetupInstanceArgs args)
         {
+            // create
             state.CreateSetupInstance(args);
 
+            // mark as dirty
+            state.MarkAsDirty();
+            guildService.StateMarkAsDirty();
+
+            // setup
             await router.PushAsync(
                 pathKey: RouteKeys.Instances.setupInstance,
                 loadingKey: LoadingScreenKeys.loading);
@@ -47,22 +53,29 @@ namespace Game.Instances
         {
             var bossThreats = state.SetupInstance.BossUnit.GetThreats();
 
-            var candidates = guildService.Characters.Select(x =>
+            var candidates = guildService.Characters.Select(character =>
             {
-                var specData = guildConfig.CharactersParams.GetSpecialization(x.SpecId);
-                var specThreats = specData.GetThreats();
+                var threats = GetCharacterThreats(character, bossThreats);
 
-                var threats = specThreats.Select(t =>
-                {
-                    var threatResolved = bossThreats.Contains(t);
-
-                    return new ThreatInfo(t, threatResolved);
-                });
-
-                return new SquadCandidateInfo(x.Id, threats);
+                return new SquadCandidateInfo(character.Id, threats);
             });
 
             return candidates.ToList();
+        }
+
+        private IEnumerable<ThreatInfo> GetCharacterThreats(CharacterInfo character, ThreatId[] bossThreats)
+        {
+            var specData = guildConfig.CharactersParams.GetSpecialization(character.SpecId);
+            var specThreats = specData.GetThreats();
+
+            var threats = specThreats.Select(t =>
+            {
+                var threatResolved = bossThreats.Contains(t);
+
+                return new ThreatInfo(t, threatResolved);
+            });
+
+            return threats;
         }
 
         public void TryAddCharacterToSquad(string characterId)
@@ -83,14 +96,23 @@ namespace Game.Instances
             }
 
             var setupInstanceId = setupInstance.Id;
+
             var character = guildService.Characters[characterId];
             var characterBag = inventoryService.Factory.CreateGrid(instancesConfig.SquadParams.Bag);
 
+            var bossThreats = setupInstance.BossUnit.GetThreats();
+            var resolvedThreats = GetCharacterThreats(character, bossThreats).Where(x => x.Resolved.Value);
+
             character.SetInstanceId(setupInstanceId);
 
-            var squadUnit = new SquadUnitInfo(characterId, characterBag);
+            var squadUnit = new SquadUnitInfo(characterId, characterBag, resolvedThreats);
 
             setupInstance.AddUnit(squadUnit);
+
+            UpdateThreats();
+
+            // mark as dirty
+            state.MarkAsDirty();
         }
 
         public void TryRemoveCharacterFromSquad(string characterId)
@@ -117,6 +139,29 @@ namespace Game.Instances
             setupInstance.RemoveUnit(squadUnit);
 
             ResetUnitBag(squadUnit.Bag);
+
+            UpdateThreats();
+
+            // mark as dirty
+            state.MarkAsDirty();
+        }
+
+        private void UpdateThreats()
+        {
+            var setupInstance = state.SetupInstance;
+
+            var characters = setupInstance.Squad
+                .Select(x => guildService.Characters[x.CharactedId]);
+
+            var characterSpecs = characters
+                .Select(x => x.SpecId).Distinct()
+                .Select(x => guildConfig.CharactersParams.GetSpecialization(x));
+
+            var resolvedThreats = characterSpecs
+                .SelectMany(x => x.GetThreats())
+                .Distinct();
+
+            setupInstance.ApplyResolveThreats(resolvedThreats);
         }
 
         public async UniTask CompleteSetupAndStartInstance()
@@ -130,6 +175,10 @@ namespace Game.Instances
 
             // upd state
             state.CompleteSetupAndStartInstance();
+
+            // mark as dirty
+            guildService.StateMarkAsDirty();
+            state.MarkAsDirty();
 
             // start
             await router.PushAsync(
@@ -153,6 +202,10 @@ namespace Game.Instances
             // cancel
 
             state.CancelSetupInstance();
+
+            // mark as dirty
+            guildService.StateMarkAsDirty();
+            state.MarkAsDirty();
         }
 
         private void ResetInstanceData(ActiveInstanceInfo instance)
@@ -167,6 +220,10 @@ namespace Game.Instances
 
                 ResetUnitBag(squadUnit.Bag);
             }
+
+            // reset boss
+
+            instance.BossUnit.SetInstanceId(null);
         }
 
         public int StopActiveInstance(string activeInstanceId)

@@ -1,4 +1,5 @@
-﻿using AD.Services.Localization;
+﻿using System.Threading;
+using AD.Services.Localization;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
@@ -26,27 +27,28 @@ namespace Game.Instances
 
         [Header("Boss Unit")]
         [SerializeField] private UIText bossNameText;
+        [SerializeField] private ThreatsContainer bossThreatsContainer;
+        [Space]
         [SerializeField] private UIText completeChanceText;
 
         [Header("Button")]
         [SerializeField] private UIButton backButton;
         [SerializeField] private UIButton startButton;
 
+        private GuildVMFactory guildVMF;
         private InstancesVMFactory instancesVMF;
 
         private ContentTab currentTab;
 
-        private ActiveInstanceVM activeInstanceVM;
+        private ActiveInstanceVM setupInstanceVM;
         private SquadCandidatesVM squadCandidatesVM;
         private GuildBankTabsVM bankTabsVM;
 
         [Inject]
-        public void Inject(InstancesVMFactory instancesVMF, GuildVMFactory guildVMF)
+        public void Inject(GuildVMFactory guildVMF, InstancesVMFactory instancesVMF)
         {
+            this.guildVMF = guildVMF;
             this.instancesVMF = instancesVMF;
-
-            squadCandidatesVM = instancesVMF.GetSquadCandidates();
-            bankTabsVM = guildVMF.GetGuildBankTabs();
         }
 
         private void Awake()
@@ -78,32 +80,26 @@ namespace Game.Instances
             }
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var hasForcedReset = parameters.HasForceReset();
 
-            activeInstanceVM = instancesVMF.GetSetupInstance();
-            activeInstanceVM.AddTo(disp);
+            setupInstanceVM = instancesVMF.GetSetupInstance();
+            setupInstanceVM.AddTo(disp);
 
+            squadCandidatesVM = instancesVMF.GetSquadCandidates();
             squadCandidatesVM.AddTo(disp);
+
+            bankTabsVM = guildVMF.GetGuildBankTabs();
             bankTabsVM.AddTo(disp);
 
             // upd params
-
-            var headerKey = activeInstanceVM.InstanceVM.NameKey;
+            var headerKey = setupInstanceVM.InstanceVM.NameKey;
             var headerData = new UITextData(this.headerKey, headerKey);
 
             headerText.SetTextParams(headerData);
-
-            // boss
-
-            bossNameText.SetTextParams(activeInstanceVM.BossUnitVM.NameKey);
-
-            activeInstanceVM.CompleteChance
-                .Subscribe(x => completeChanceText.SetTextParams(x))
-                .AddTo(disp);
 
             // characters
             squadCandidatesScroll.Init(squadCandidatesVM, true);
@@ -113,12 +109,19 @@ namespace Game.Instances
                 .AddTo(disp);
 
             // guild bank
-
             guildBankContainer.Init(bankTabsVM, disp, hasForcedReset);
 
             // squad
+            squadUnitsContainer.Init(setupInstanceVM, disp);
 
-            squadUnitsContainer.Init(activeInstanceVM, disp);
+            // boss
+            bossNameText.SetTextParams(setupInstanceVM.BossUnitVM.NameKey);
+
+            setupInstanceVM.CompleteChance
+                .Subscribe(x => completeChanceText.SetTextParams(x))
+                .AddTo(disp);
+
+            await bossThreatsContainer.Init(setupInstanceVM.ThreatsVM, disp, ct);
         }
 
         private void SelectTabCallback(ContentTab contentTab)

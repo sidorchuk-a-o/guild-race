@@ -5,7 +5,7 @@ namespace Game.Instances
     public class SquadCandidateInfo
     {
         public string CharacterId { get; }
-        public IThreatCollcetion Threads { get; }
+        public IThreatCollection Threads { get; }
 
         public SquadCandidateInfo(string characterId, IEnumerable<ThreatInfo> threats)
         {

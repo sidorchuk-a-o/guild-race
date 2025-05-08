@@ -2,7 +2,7 @@
 
 namespace Game.Instances
 {
-    public interface IThreatCollcetion : IReadOnlyCollection<ThreatInfo>
+    public interface IThreatCollection : IReadOnlyCollection<ThreatInfo>
     {
     }
 }

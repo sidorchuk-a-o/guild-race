@@ -43,6 +43,11 @@ namespace Game.Guild
             return await Inited();
         }
 
+        public void StateMarkAsDirty()
+        {
+            state.MarkAsDirty();
+        }
+
         // == Guild ==
 
         public void CreateOrUpdateGuild(GuildEM guildEM)

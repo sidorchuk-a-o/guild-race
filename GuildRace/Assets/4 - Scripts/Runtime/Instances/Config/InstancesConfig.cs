@@ -18,6 +18,7 @@ namespace Game.Instances
 
         private Dictionary<int, SeasonData> seasonsCache;
         private Dictionary<int, InstanceData> instancesCache;
+        private Dictionary<int, UnitData> unitsCache;
         private Dictionary<ThreatId, ThreatData> threatsCache;
         private Dictionary<InstanceType, InstanceTypeData> instanceTypesCache;
 
@@ -60,6 +61,18 @@ namespace Game.Instances
         {
             threatsCache ??= threats.ToDictionary(x => (ThreatId)x.Id, x => x);
             threatsCache.TryGetValue(id, out var data);
+
+            return data;
+        }
+
+        public UnitData GetBossUnit(int id)
+        {
+            unitsCache ??= seasons
+                .SelectMany(x => x.Instances)
+                .SelectMany(x => x.BoosUnits)
+                .ToDictionary(x => x.Id, x => x);
+
+            unitsCache.TryGetValue(id, out var data);
 
             return data;
         }

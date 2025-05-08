@@ -19,7 +19,7 @@ namespace Game.Instances
         {
             var bag = inventoryService.Factory.ReadGridSave(bagSM);
 
-            return new SquadUnitInfo(charactedId, bag);
+            return new SquadUnitInfo(charactedId, bag, resolvedThreats: null);
         }
     }
 }

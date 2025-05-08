@@ -1,4 +1,6 @@
-﻿using AD.ToolsCollection;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using AD.ToolsCollection;
 using AD.UI;
 using Game.Inventory;
 using UniRx;
@@ -13,13 +15,15 @@ namespace Game.Instances
         [SerializeField] private GameObject characterItem;
         [SerializeField] private UIButton selectButton;
         [Space]
+        [SerializeField] private UIText nicknameText;
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private ThreatsContainer threatsContainer;
         [SerializeField] private ItemsGridContainer bagContainer;
 
         private readonly CompositeDisp unitDisp = new();
+        private CancellationTokenSource ct;
 
         private InstancesVMFactory instancesVMF;
 
@@ -41,10 +45,15 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        public void SetSquadUnit(SquadUnitVM squadUnitVM, CompositeDisp disp)
+        public async Task SetSquadUnit(SquadUnitVM squadUnitVM, CompositeDisp disp)
         {
             unitDisp.Clear();
             unitDisp.AddTo(disp);
+
+            var token = new CancellationTokenSource();
+
+            ct?.Cancel();
+            ct = token;
 
             SquadUnitVM = squadUnitVM;
 
@@ -60,6 +69,13 @@ namespace Game.Instances
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
                 bagContainer.Init(squadUnitVM.BagVM, unitDisp);
+
+                await threatsContainer.Init(squadUnitVM.ResolvedThreatsVM, unitDisp, token);
+            }
+
+            if (token.IsCancellationRequested)
+            {
+                return;
             }
 
             characterItem.SetActive(hasUnit);

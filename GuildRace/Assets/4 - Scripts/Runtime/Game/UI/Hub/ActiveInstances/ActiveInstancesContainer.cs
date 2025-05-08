@@ -49,9 +49,9 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var hasBack = parameters.HasBackRouteKey();
             var hasForcedReset = parameters.HasForceReset();

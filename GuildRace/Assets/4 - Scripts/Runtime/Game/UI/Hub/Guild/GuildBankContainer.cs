@@ -1,4 +1,5 @@
-﻿using AD.Services.Router;
+﻿using System.Threading;
+using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
@@ -29,9 +30,9 @@ namespace Game.Guild
             recycleSlotVM = craftVMF.GetRecycleSlot();
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var hasForcedReset = parameters.HasForceReset();
 

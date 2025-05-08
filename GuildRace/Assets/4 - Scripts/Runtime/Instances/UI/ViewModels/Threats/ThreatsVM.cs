@@ -4,16 +4,16 @@ namespace Game.Instances
 {
     public class ThreatsVM : VMCollection<ThreatInfo, ThreatVM>
     {
-        private readonly InstancesConfig instancesConfig;
+        private readonly InstancesVMFactory instancesVMF;
 
-        public ThreatsVM(IThreatCollcetion values, InstancesConfig instancesConfig) : base(values)
+        public ThreatsVM(IThreatCollection values, InstancesVMFactory instancesVMF) : base(values)
         {
-            this.instancesConfig = instancesConfig;
+            this.instancesVMF = instancesVMF;
         }
 
         protected override ThreatVM Create(ThreatInfo value)
         {
-            return new ThreatVM(value, instancesConfig);
+            return new ThreatVM(value, instancesVMF);
         }
     }
 }

@@ -12,8 +12,9 @@ namespace Game.Instances
         public string Id { get; }
 
         public InstanceVM InstanceVM { get; }
-
         public UnitVM BossUnitVM { get; }
+
+        public ThreatsVM ThreatsVM { get; }
         public SquadUnitsVM SquadVM { get; }
 
         public IReadOnlyReactiveProperty<string> CompleteChance => completeChance;
@@ -28,6 +29,7 @@ namespace Game.Instances
 
             InstanceVM = instancesVMF.GetInstance(info.Instance);
             BossUnitVM = instancesVMF.GetUnit(info.BossUnit);
+            ThreatsVM = new ThreatsVM(info.Threats, instancesVMF);
             SquadVM = new SquadUnitsVM(info.Instance.Type, info.Squad, instancesVMF);
         }
 
@@ -35,6 +37,7 @@ namespace Game.Instances
         {
             InstanceVM.AddTo(this);
             BossUnitVM.AddTo(this);
+            ThreatsVM.AddTo(this);
             SquadVM.AddTo(this);
 
             info.CompleteChance

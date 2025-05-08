@@ -55,29 +55,32 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             if (parameters.TryGetRouteValue<int>(idKey, out var instanceId))
             {
                 instanceVM = instancesVMF.GetInstance(instanceId);
+                selectedUnitVM = null;
             }
 
             instanceVM.AddTo(disp);
 
+            // params
             headerText.SetTextParams(instanceVM.NameKey);
 
+            // bosses
             bossUnitsScroll.Init(instanceVM.BossUnitsVM, true);
 
-            InitUnitContainer(selectedUnitVM);
-
             bossUnitsScroll.OnSelect
-                .Subscribe(UnitChangedCallback)
+                .Subscribe(x => UnitChangedCallback(x, false))
                 .AddTo(disp);
+
+            UnitChangedCallback(selectedUnitVM, force: true);
         }
 
-        private async void UnitChangedCallback(UnitVM unitVM)
+        private async void UnitChangedCallback(UnitVM unitVM, bool force)
         {
             unitDisp.Clear();
             unitDisp.AddTo(disp);
@@ -99,9 +102,17 @@ namespace Game.Instances
 
             const float duration = 0.1f;
 
-            await UniTask.WhenAll(
-                unitContainer.DOFade(0, duration).ToUniTask(),
-                emptyUnitContainer.DOFade(0, duration).ToUniTask());
+            if (force)
+            {
+                unitContainer.alpha = 0;
+                emptyUnitContainer.alpha = 0;
+            }
+            else
+            {
+                await UniTask.WhenAll(
+                    unitContainer.DOFade(0, duration).ToUniTask(),
+                    emptyUnitContainer.DOFade(0, duration).ToUniTask());
+            }
 
             if (token.IsCancellationRequested)
             {
@@ -114,7 +125,14 @@ namespace Game.Instances
                 ? unitContainer
                 : emptyUnitContainer;
 
-            await showContainer.DOFade(1, duration);
+            if (force)
+            {
+                showContainer.alpha = 1;
+            }
+            else
+            {
+                await showContainer.DOFade(1, duration);
+            }
         }
 
         private void InitUnitContainer(UnitVM unitVM)
@@ -124,6 +142,8 @@ namespace Game.Instances
                 unitVM.SetSelectState(true);
 
                 unitNameText.SetTextParams(unitVM.NameKey);
+
+                startInstanceButton.SetInteractableState(!unitVM.HasInstance);
             }
         }
 

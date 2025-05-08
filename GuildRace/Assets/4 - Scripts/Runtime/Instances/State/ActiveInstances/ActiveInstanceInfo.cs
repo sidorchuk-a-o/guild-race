@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using AD.ToolsCollection;
 using UniRx;
 
 namespace Game.Instances
 {
     public class ActiveInstanceInfo : IEquatable<ActiveInstanceInfo>
     {
+        private readonly ThreatCollection threats;
         private readonly SquadUnitsCollection squad;
         private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
@@ -14,6 +17,8 @@ namespace Game.Instances
 
         public UnitInfo BossUnit { get; }
         public InstanceInfo Instance { get; }
+
+        public IThreatCollection Threats => threats;
         public ISquadUnitsCollection Squad => squad;
 
         public long StartTime { get; private set; }
@@ -27,6 +32,8 @@ namespace Game.Instances
             BossUnit = bossUnit;
 
             this.squad = new(squad);
+
+            threats = new(bossUnit.GetThreats().Select(x => new ThreatInfo(x)));
         }
 
         public void AddUnit(SquadUnitInfo squadUnit)
@@ -37,6 +44,20 @@ namespace Game.Instances
         public void RemoveUnit(SquadUnitInfo squadUnit)
         {
             squad.Remove(squadUnit);
+        }
+
+        public void ApplyResolveThreats(IEnumerable<ThreatId> resolvedThreats)
+        {
+            var resolvedPool = resolvedThreats.ToListPool();
+
+            foreach (var threat in threats)
+            {
+                var resolved = resolvedPool.Contains(threat.Id);
+
+                threat.SetResolvedState(resolved);
+            }
+
+            resolvedPool.ReleaseListPool();
         }
 
         public void SetStartTime(long value)

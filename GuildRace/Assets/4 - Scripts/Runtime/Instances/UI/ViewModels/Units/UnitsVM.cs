@@ -5,16 +5,16 @@ namespace Game.Instances
 {
     public class UnitsVM : VMCollection<UnitInfo, UnitVM>
     {
-        private readonly InstancesConfig config;
+        private readonly InstancesVMFactory instancesVMF;
 
-        public UnitsVM(IReadOnlyCollection<UnitInfo> values, InstancesConfig config) : base(values)
+        public UnitsVM(IReadOnlyCollection<UnitInfo> values, InstancesVMFactory instancesVMF) : base(values)
         {
-            this.config = config;
+            this.instancesVMF = instancesVMF;
         }
 
         protected override UnitVM Create(UnitInfo value)
         {
-            return new UnitVM(value, config);
+            return new UnitVM(value, instancesVMF);
         }
     }
 }

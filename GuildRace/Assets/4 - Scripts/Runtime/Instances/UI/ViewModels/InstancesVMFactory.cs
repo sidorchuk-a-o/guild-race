@@ -10,14 +10,13 @@ namespace Game.Instances
 {
     public class InstancesVMFactory : VMFactory
     {
-        private readonly InstancesConfig instancesConfig;
         private readonly IInstancesService instancesService;
         private readonly IObjectResolver resolver;
 
         private GuildVMFactory guildVMF;
         private InventoryVMFactory inventoryVMF;
 
-        public InstancesConfig InstancesConfig => instancesConfig;
+        public InstancesConfig InstancesConfig { get; }
 
         public GuildVMFactory GuildVMF => guildVMF ??= resolver.Resolve<GuildVMFactory>();
         public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
@@ -28,8 +27,9 @@ namespace Game.Instances
             IObjectResolver resolver)
         {
             this.instancesService = instancesService;
-            this.instancesConfig = instancesConfig;
             this.resolver = resolver;
+
+            InstancesConfig = instancesConfig;
         }
 
         // == Consumables ==
@@ -47,7 +47,7 @@ namespace Game.Instances
         {
             var firstSeason = instancesService.Seasons.FirstOrDefault();
 
-            return new SeasonVM(firstSeason, instancesConfig);
+            return new SeasonVM(firstSeason, this);
         }
 
         // == Instance ==
@@ -61,7 +61,7 @@ namespace Game.Instances
 
         public InstanceVM GetInstance(InstanceInfo instance)
         {
-            return new InstanceVM(instance, instancesConfig);
+            return new InstanceVM(instance, this);
         }
 
         public ActiveInstanceVM GetActiveInstance(string activeInstanceId)
@@ -145,7 +145,7 @@ namespace Game.Instances
 
         public UnitVM GetUnit(UnitInfo unit)
         {
-            return new UnitVM(unit, instancesConfig);
+            return new UnitVM(unit, this);
         }
     }
 }

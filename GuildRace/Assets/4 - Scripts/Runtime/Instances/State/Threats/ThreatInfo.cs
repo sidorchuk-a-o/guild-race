@@ -6,22 +6,22 @@ namespace Game.Instances
     {
         private readonly ReactiveProperty<bool> resolved = new();
 
-        public ThreatId ThreatId { get; }
+        public ThreatId Id { get; }
         public IReadOnlyReactiveProperty<bool> Resolved => resolved;
 
-        public ThreatInfo(ThreatId threatId)
+        public ThreatInfo(ThreatId id)
         {
-            ThreatId = threatId;
+            Id = id;
         }
 
-        public ThreatInfo(ThreatId threatId, bool resolved)
+        public ThreatInfo(ThreatId id, bool resolved)
         {
-            ThreatId = threatId;
+            Id = id;
 
             SetResolvedState(resolved);
         }
 
-        private void SetResolvedState(bool value)
+        public void SetResolvedState(bool value)
         {
             resolved.Value = value;
         }

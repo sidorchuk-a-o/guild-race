@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using AD.Services.Localization;
+using AD.ToolsCollection;
 using Game.Guild;
+using UniRx;
 using UnityEngine.AddressableAssets;
 
 namespace Game.Instances
 {
     public class UnitInfo
     {
+        private readonly ReactiveProperty<string> instanceId = new();
+
         public int Id { get; }
 
         public LocalizeKey NameKey { get; }
@@ -18,6 +21,9 @@ namespace Game.Instances
         public int CompleteTime { get; }
         public UnitParams UnitParams { get; }
         public IReadOnlyCollection<AbilityData> Abilities { get; }
+
+        public bool HasInstance => instanceId.Value.IsValid();
+        public IReadOnlyReactiveProperty<string> InstanceId => instanceId;
 
         public UnitInfo(UnitData data)
         {
@@ -36,6 +42,11 @@ namespace Game.Instances
                 .Select(x => x.ThreatId)
                 .Distinct()
                 .ToArray();
+        }
+
+        public void SetInstanceId(string value)
+        {
+            instanceId.Value = value;
         }
     }
 }

@@ -5,6 +5,7 @@ using AD.UI;
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UniRx;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -35,9 +36,9 @@ namespace Game.Instances
             seasonVM = instancesVMF.GetFirstSeason();
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             seasonVM.AddTo(disp);
 
