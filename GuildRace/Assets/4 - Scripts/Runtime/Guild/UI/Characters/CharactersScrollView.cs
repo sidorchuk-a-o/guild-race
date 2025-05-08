@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class CharactersScrollView : VMScrollView<CharacterVM>
+    public class CharactersScrollView : VMReactiveScrollView<CharacterVM>
     {
         [Header("Prefab")]
         [SerializeField] private RectTransform characterItemPrefab;

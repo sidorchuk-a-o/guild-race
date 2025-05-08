@@ -1,8 +1,8 @@
-﻿using AD.States;
+﻿using System.Collections.Generic;
 
 namespace Game.Craft
 {
-    public interface IVendorsCollection : IReadOnlyReactiveCollectionInfo<VendorInfo>
+    public interface IVendorsCollection : IReadOnlyCollection<VendorInfo>
     {
     }
 }

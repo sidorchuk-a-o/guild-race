@@ -20,7 +20,7 @@ namespace Game.Guild
             id = info.Id;
             nickname = info.Nickname;
             classId = info.ClassId;
-            specId = info.SpecId.Value;
+            specId = info.SpecId;
             instanceId = info.InstanceId.Value;
             guildRankId = info.GuildRankId.Value;
             equipSlotsSM = new(info.EquipSlots, inventoryService.Factory);
@@ -32,12 +32,11 @@ namespace Game.Guild
                 .GetValues(inventoryService.Factory)
                 .Cast<EquipSlotInfo>();
 
-            var info = new CharacterInfo(id, nickname, classId, equipSlots);
+            var info = new CharacterInfo(id, nickname, classId, specId, equipSlots);
 
             info.Init();
             info.SetGuildRank(guildRankId);
             info.SetInstanceId(instanceId);
-            info.SetSpecialization(specId);
 
             return info;
         }

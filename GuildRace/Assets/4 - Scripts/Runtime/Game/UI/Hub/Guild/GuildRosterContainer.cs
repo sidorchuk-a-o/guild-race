@@ -142,6 +142,7 @@ namespace Game.Guild
 
             nicknameText.SetTextParams(characterVM.Nickname);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
+            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
             characterVM.ItemsLevel
                 .Subscribe(x => itemsLevelText.SetTextParams(x))
@@ -149,10 +150,6 @@ namespace Game.Guild
 
             characterVM.GuildRankName
                 .Subscribe(x => guildRankText.SetTextParams(x))
-                .AddTo(characterDisp);
-
-            characterVM.SpecVM
-                .Subscribe(x => specNameText.SetTextParams(x.NameKey))
                 .AddTo(characterDisp);
 
             equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);

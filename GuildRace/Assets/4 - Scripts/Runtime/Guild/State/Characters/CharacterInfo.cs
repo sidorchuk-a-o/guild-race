@@ -2,14 +2,12 @@
 using Game.Inventory;
 using System.Collections.Generic;
 using UniRx;
-using UnityEngine;
 
 namespace Game.Guild
 {
     public class CharacterInfo
     {
         private readonly ReactiveProperty<GuildRankId> guildRankId = new();
-        private readonly ReactiveProperty<SpecializationId> specId = new();
         private readonly ReactiveProperty<int> itemsLevel = new();
         private readonly ReactiveProperty<string> instanceId = new();
 
@@ -19,7 +17,7 @@ namespace Game.Guild
         public string Nickname { get; }
 
         public ClassId ClassId { get; }
-        public IReadOnlyReactiveProperty<SpecializationId> SpecId => specId;
+        public SpecializationId SpecId { get; }
 
         public IReadOnlyReactiveProperty<GuildRankId> GuildRankId => guildRankId;
 
@@ -29,13 +27,19 @@ namespace Game.Guild
         public bool HasInstance => instanceId.Value.IsValid();
         public IReadOnlyReactiveProperty<string> InstanceId => instanceId;
 
-        public CharacterInfo(string id, string nickname, ClassId classId, IEnumerable<EquipSlotInfo> equipSlots)
+        public CharacterInfo(
+            string id,
+            string nickname,
+            ClassId classId,
+            SpecializationId specId,
+            IEnumerable<EquipSlotInfo> equipSlots)
         {
             this.equipSlots = new(equipSlots);
 
             Id = id;
             Nickname = nickname;
             ClassId = classId;
+            SpecId = specId;
         }
 
         public void Init()
@@ -46,11 +50,6 @@ namespace Game.Guild
             }
 
             UpdateItemsLevel();
-        }
-
-        public void SetSpecialization(SpecializationId value)
-        {
-            specId.Value = value;
         }
 
         public void SetGuildRank(GuildRankId value)
@@ -65,19 +64,17 @@ namespace Game.Guild
 
         private void UpdateItemsLevel()
         {
-            var count = 0;
             var level = 0;
 
             foreach (var slot in equipSlots)
             {
                 if (slot.Item.Value is EquipItemInfo equip)
                 {
-                    count++;
                     level += equip.Level;
                 }
             }
 
-            itemsLevel.Value = level / Mathf.Max(1, count);
+            itemsLevel.Value = level / equipSlots.Count;
         }
     }
 }

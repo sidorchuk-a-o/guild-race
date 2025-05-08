@@ -9,11 +9,8 @@ namespace Game.Guild
     public class CharacterVM : ViewModel
     {
         private readonly CharacterInfo info;
-
         private readonly GuildVMFactory guildVMF;
-        private readonly InstancesVMFactory instancesVMF;
 
-        private readonly ReactiveProperty<SpecializationVM> specVM = new();
         private readonly ReactiveProperty<GuildRankVM> guildRankVM = new();
         private readonly ReactiveProperty<string> guildRankName = new();
         private readonly ReactiveProperty<ActiveInstanceVM> instanceVM = new();
@@ -22,8 +19,7 @@ namespace Game.Guild
         public string Nickname { get; }
 
         public ClassVM ClassVM { get; }
-
-        public IReadOnlyReactiveProperty<SpecializationVM> SpecVM => specVM;
+        public SpecializationVM SpecVM { get; }
 
         public IReadOnlyReactiveProperty<string> GuildRankName => guildRankName;
         public IReadOnlyReactiveProperty<GuildRankVM> GuildRankVM => guildRankVM;
@@ -34,32 +30,25 @@ namespace Game.Guild
         public bool HasInstance => InstanceVM.Value != null;
         public IReadOnlyReactiveProperty<ActiveInstanceVM> InstanceVM => instanceVM;
 
-        public CharacterVM(
-            CharacterInfo info,
-            GuildVMFactory guildVMF,
-            InventoryVMFactory inventoryVMF,
-            InstancesVMFactory instancesVMF)
+        public CharacterVM(CharacterInfo info, GuildVMFactory guildVMF)
         {
             this.info = info;
             this.guildVMF = guildVMF;
-            this.instancesVMF = instancesVMF;
 
             Id = info.Id;
             Nickname = info.Nickname;
             ItemsLevel = info.ItemsLevel;
 
             ClassVM = guildVMF.GetClass(info.ClassId);
-            EquiSlotsVM = inventoryVMF.CreateSlots(info.EquipSlots);
+            SpecVM = guildVMF.GetSpecialization(info.SpecId);
+            EquiSlotsVM = guildVMF.InventoryVMF.CreateSlots(info.EquipSlots);
         }
 
         protected override void InitSubscribes()
         {
             ClassVM.AddTo(this);
+            SpecVM.AddTo(this);
             EquiSlotsVM.AddTo(this);
-
-            info.SpecId
-                .Subscribe(SpecializationChangedCallback)
-                .AddTo(this);
 
             info.GuildRankId
                 .Subscribe(GuildRankChangedCallback)
@@ -68,14 +57,6 @@ namespace Game.Guild
             info.InstanceId
                 .Subscribe(InstanceChangedCallback)
                 .AddTo(this);
-        }
-
-        private void SpecializationChangedCallback(SpecializationId specId)
-        {
-            specVM.Value?.ResetSubscribes();
-
-            specVM.Value = guildVMF.GetSpecialization(specId);
-            specVM.Value.AddTo(this);
         }
 
         private void GuildRankChangedCallback(GuildRankId guildRankId)
@@ -93,7 +74,7 @@ namespace Game.Guild
         private void InstanceChangedCallback(string activeInstanceId)
         {
             instanceVM.Value = activeInstanceId.IsValid()
-                ? instancesVMF.GetActiveInstance(activeInstanceId)
+                ? guildVMF.InstancesVMF.GetActiveInstance(activeInstanceId)
                 : null;
         }
     }

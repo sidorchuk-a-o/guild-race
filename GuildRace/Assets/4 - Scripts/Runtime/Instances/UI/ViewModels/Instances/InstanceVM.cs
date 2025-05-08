@@ -1,5 +1,6 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
+using Cysharp.Threading.Tasks;
 
 namespace Game.Instances
 {
@@ -11,16 +12,20 @@ namespace Game.Instances
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
 
-        public InstanceVM(InstanceInfo info)
+        public UnitsVM BossUnitsVM { get; }
+
+        public InstanceVM(InstanceInfo info, InstancesConfig config)
         {
             Id = info.Id;
             Type = info.Type;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
+            BossUnitsVM = new UnitsVM(info.BossUnits, config);
         }
 
         protected override void InitSubscribes()
         {
+            BossUnitsVM.AddTo(this);
         }
     }
 }

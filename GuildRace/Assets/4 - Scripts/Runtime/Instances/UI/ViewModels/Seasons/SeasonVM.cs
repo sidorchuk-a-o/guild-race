@@ -14,15 +14,15 @@ namespace Game.Instances
         public InstanceVM RaidVM { get; }
         public InstancesVM DungeonsVM { get; }
 
-        public SeasonVM(SeasonInfo info)
+        public SeasonVM(SeasonInfo info, InstancesConfig config)
         {
             Id = info.Id;
 
             NameKey = info.NameKey;
             DescKey = info.NameKey;
 
-            RaidVM = new(info.Raid);
-            DungeonsVM = new(info.Dungeons);
+            RaidVM = new(info.Raid, config);
+            DungeonsVM = new(info.Dungeons, config);
         }
 
         protected override void InitSubscribes()

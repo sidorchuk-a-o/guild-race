@@ -1,4 +1,7 @@
-﻿using AD.Services.Router;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
@@ -8,7 +11,6 @@ namespace Game.Instances
     public class InstanceModule
     {
         private readonly InstancesState state;
-
         private readonly GuildConfig guildConfig;
         private readonly InstancesConfig instancesConfig;
 
@@ -32,13 +34,35 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
-        public async UniTask StartSetupInstance(int instanceId)
+        public async UniTask StartSetupInstance(SetupInstanceArgs args)
         {
-            state.CreateSetupInstance(instanceId);
+            state.CreateSetupInstance(args);
 
             await router.PushAsync(
                 pathKey: RouteKeys.Instances.setupInstance,
                 loadingKey: LoadingScreenKeys.loading);
+        }
+
+        public IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates()
+        {
+            var bossThreats = state.SetupInstance.BossUnit.GetThreats();
+
+            var candidates = guildService.Characters.Select(x =>
+            {
+                var specData = guildConfig.CharactersParams.GetSpecialization(x.SpecId);
+                var specThreats = specData.GetThreats();
+
+                var threats = specThreats.Select(t =>
+                {
+                    var threatResolved = bossThreats.Contains(t);
+
+                    return new ThreatInfo(t, threatResolved);
+                });
+
+                return new SquadCandidateInfo(x.Id, threats);
+            });
+
+            return candidates.ToList();
         }
 
         public void TryAddCharacterToSquad(string characterId)
@@ -50,11 +74,23 @@ namespace Game.Instances
                 return;
             }
 
+            var instance = setupInstance.Instance;
+            var squadParams = instancesConfig.SquadParams.GetSquadParams(instance.Type);
+
+            if (setupInstance.Squad.Count >= squadParams.MaxUnitsCount)
+            {
+                return;
+            }
+
             var setupInstanceId = setupInstance.Id;
             var character = guildService.Characters[characterId];
+            var characterBag = inventoryService.Factory.CreateGrid(instancesConfig.SquadParams.Bag);
 
             character.SetInstanceId(setupInstanceId);
-            setupInstance.AddCharacter(characterId);
+
+            var squadUnit = new SquadUnitInfo(characterId, characterBag);
+
+            setupInstance.AddUnit(squadUnit);
         }
 
         public void TryRemoveCharacterFromSquad(string characterId)
@@ -75,8 +111,12 @@ namespace Game.Instances
                 return;
             }
 
+            var squadUnit = setupInstance.Squad.FirstOrDefault(x => x.CharactedId == characterId);
+
             character.SetInstanceId(null);
-            setupInstance.RemoveCharacter(characterId);
+            setupInstance.RemoveUnit(squadUnit);
+
+            ResetUnitBag(squadUnit.Bag);
         }
 
         public async UniTask CompleteSetupAndStartInstance()
@@ -119,25 +159,13 @@ namespace Game.Instances
         {
             // reset characters
 
-            foreach (var characterId in instance.Squad)
+            foreach (var squadUnit in instance.Squad)
             {
-                var character = guildService.Characters[characterId];
+                var character = guildService.Characters[squadUnit.CharactedId];
 
                 character.SetInstanceId(null);
 
-                // TODO: reset bag ...
-
-                //var bagCellType = instancesConfig.SquadParams.Bag.CellType;
-                //var guildTab = guildService.BankTabs.FirstOrDefault(x => x.Grid.CellType == bagCellType);
-
-                //foreach (var item in instance.Bag.Items)
-                //{
-                //    inventoryService.TryPlaceItem(new PlaceInPlacementArgs
-                //    {
-                //        ItemId = item.Id,
-                //        PlacementId = guildTab.Grid.Id
-                //    });
-                //}
+                ResetUnitBag(squadUnit.Bag);
             }
         }
 
@@ -152,6 +180,21 @@ namespace Game.Instances
             // upd state
 
             return state.RemoveActiveInstance(activeInstanceId);
+        }
+
+        private void ResetUnitBag(ItemsGridInfo bag)
+        {
+            var bagCellType = instancesConfig.SquadParams.Bag.CellType;
+            var guildTab = guildService.BankTabs.FirstOrDefault(x => x.Grid.CellType == bagCellType);
+
+            foreach (var item in bag.Items)
+            {
+                inventoryService.TryPlaceItem(new PlaceInPlacementArgs
+                {
+                    ItemId = item.Id,
+                    PlacementId = guildTab.Grid.Id
+                });
+            }
         }
     }
 }

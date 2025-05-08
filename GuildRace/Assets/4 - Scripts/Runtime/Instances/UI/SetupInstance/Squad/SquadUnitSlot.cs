@@ -1,6 +1,6 @@
 ﻿using AD.ToolsCollection;
 using AD.UI;
-using Game.Guild;
+using Game.Inventory;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -17,10 +17,14 @@ namespace Game.Instances
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [SerializeField] private UIText nicknameText;
+        [SerializeField] private ItemsGridContainer bagContainer;
+
+        private readonly CompositeDisp unitDisp = new();
 
         private InstancesVMFactory instancesVMF;
 
-        public CharacterVM CharacterVM { get; private set; }
+        public bool HasUnit => SquadUnitVM != null;
+        public SquadUnitVM SquadUnitVM { get; private set; }
 
         [Inject]
         public void Inject(InstancesVMFactory instancesVMF)
@@ -37,28 +41,35 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        public void SetCharacter(CharacterVM characterVM)
+        public void SetSquadUnit(SquadUnitVM squadUnitVM, CompositeDisp disp)
         {
-            CharacterVM = characterVM;
+            unitDisp.Clear();
+            unitDisp.AddTo(disp);
 
-            var hasCharacter = characterVM != null;
+            SquadUnitVM = squadUnitVM;
 
-            if (hasCharacter)
+            var hasUnit = squadUnitVM != null;
+
+            if (hasUnit)
             {
+                var characterVM = squadUnitVM.CharactedVM;
+
                 nicknameText.SetTextParams(characterVM.Nickname);
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
-                specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
+                specNameText.SetTextParams(characterVM.SpecVM.NameKey);
+
+                bagContainer.Init(squadUnitVM.BagVM, unitDisp);
             }
 
-            characterItem.SetActive(hasCharacter);
+            characterItem.SetActive(hasUnit);
         }
 
         private void SelectCallback()
         {
-            if (CharacterVM != null)
+            if (SquadUnitVM != null)
             {
-                instancesVMF.TryRemoveCharacterFromSquad(CharacterVM.Id);
+                instancesVMF.TryRemoveCharacterFromSquad(SquadUnitVM.CharactedVM.Id);
             }
         }
     }

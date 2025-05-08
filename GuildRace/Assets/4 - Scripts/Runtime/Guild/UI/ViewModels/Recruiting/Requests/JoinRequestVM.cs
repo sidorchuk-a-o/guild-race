@@ -1,5 +1,4 @@
 ﻿using AD.Services.Router;
-using Game.Inventory;
 
 namespace Game.Guild
 {
@@ -10,14 +9,11 @@ namespace Game.Guild
 
         public CharacterVM CharacterVM { get; }
 
-        public JoinRequestVM(
-            JoinRequestInfo info,
-            GuildVMFactory guildVMF,
-            InventoryVMFactory inventoryVMF)
+        public JoinRequestVM(JoinRequestInfo info, GuildVMFactory guildVMF)
         {
             Id = info.Id;
             IsDefault = info.IsDefault;
-            CharacterVM = new CharacterVM(info.Character, guildVMF, inventoryVMF, null);
+            CharacterVM = new CharacterVM(info.Character, guildVMF);
         }
 
         protected override void InitSubscribes()

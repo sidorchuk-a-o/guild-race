@@ -171,7 +171,7 @@ namespace Game.Guild
 
             nicknameText.SetTextParams(characterVM.Nickname);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
-            specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
+            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
             equipSlotsContainer.Init(characterVM.EquiSlotsVM, requestDisp);
 

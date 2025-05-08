@@ -7,6 +7,7 @@ using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using UniRx;
 using VContainer;
 
 namespace Game.Instances
@@ -78,9 +79,14 @@ namespace Game.Instances
 
         // == Instance ==
 
-        public async UniTask StartSetupInstance(int instanceId)
+        public async UniTask StartSetupInstance(SetupInstanceArgs args)
         {
-            await instanceModule.StartSetupInstance(instanceId);
+            await instanceModule.StartSetupInstance(args);
+        }
+
+        public IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates()
+        {
+            return instanceModule.GetSquadCandidates();
         }
 
         public void TryAddCharacterToSquad(string characterId)

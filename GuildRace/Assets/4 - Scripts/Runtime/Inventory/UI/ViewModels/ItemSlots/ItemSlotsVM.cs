@@ -2,7 +2,7 @@
 
 namespace Game.Inventory
 {
-    public class ItemSlotsVM : VMCollection<ItemSlotInfo, ItemSlotVM>
+    public class ItemSlotsVM : VMReactiveCollection<ItemSlotInfo, ItemSlotVM>
     {
         private readonly InventoryVMFactory inventoryVMF;
 

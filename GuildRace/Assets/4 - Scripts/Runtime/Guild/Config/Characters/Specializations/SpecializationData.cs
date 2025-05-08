@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using AD.Services.Localization;
 using AD.ToolsCollection;
+using Game.Instances;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -26,6 +28,14 @@ namespace Game.Guild
         public SubRoleId SubRoleId => subRoleId;
 
         public UnitParams UnitParams => unitParams;
-        public IReadOnlyList<AbilityData> Abilities => abilities;
+        public IReadOnlyCollection<AbilityData> Abilities => abilities;
+
+        public ThreatId[] GetThreats()
+        {
+            return Abilities
+                .Select(x => x.ThreatId)
+                .Distinct()
+                .ToArray();
+        }
     }
 }

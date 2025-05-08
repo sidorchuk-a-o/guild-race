@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 
 namespace Game.Instances
 {
@@ -11,7 +12,8 @@ namespace Game.Instances
 
         ConsumableMechanicHandler GetMechanicHandler(int id);
 
-        UniTask StartSetupInstance(int instanceId);
+        IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates();
+        UniTask StartSetupInstance(SetupInstanceArgs args);
         void TryAddCharacterToSquad(string characterId);
         void TryRemoveCharacterFromSquad(string characterId);
 

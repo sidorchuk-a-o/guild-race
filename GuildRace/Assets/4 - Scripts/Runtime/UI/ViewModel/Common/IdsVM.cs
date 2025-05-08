@@ -2,7 +2,7 @@
 
 namespace Game.Instances
 {
-    public class IdsVM : VMCollection<string, IdVM>
+    public class IdsVM : VMReactiveCollection<string, IdVM>
     {
         public IdsVM(IIdsCollection values) : base(values)
         {

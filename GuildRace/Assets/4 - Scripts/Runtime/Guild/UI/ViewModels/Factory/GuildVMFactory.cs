@@ -43,12 +43,12 @@ namespace Game.Guild
         {
             var character = guildService.Characters[characterId];
 
-            return new CharacterVM(character, this, InventoryVMF, InstancesVMF);
+            return new CharacterVM(character, this);
         }
 
         public CharactersVM GetRoster()
         {
-            return new CharactersVM(guildService.Characters, this, InventoryVMF, InstancesVMF);
+            return new CharactersVM(guildService.Characters, this);
         }
 
         public RecruitingVM GetRecruiting()
@@ -58,7 +58,7 @@ namespace Game.Guild
 
         public JoinRequestsVM GetJoinRequests()
         {
-            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this, InventoryVMF);
+            return new JoinRequestsVM(guildService.RecruitingModule.Requests, this);
         }
 
         public IReadOnlyList<ClassRoleSelectorVM> GetClassRoleSelectors()

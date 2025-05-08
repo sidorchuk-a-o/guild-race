@@ -6,37 +6,47 @@ namespace Game.Instances
 {
     public class ActiveInstanceInfo : IEquatable<ActiveInstanceInfo>
     {
-        private readonly IdsCollection squad;
+        private readonly SquadUnitsCollection squad;
+        private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
 
         public string Id { get; }
+
+        public UnitInfo BossUnit { get; }
         public InstanceInfo Instance { get; }
-        public IIdsCollection Squad => squad;
+        public ISquadUnitsCollection Squad => squad;
 
         public long StartTime { get; private set; }
+        public IReadOnlyReactiveProperty<float> CompleteChance => completeChance;
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete => isReadyToComplete;
 
-        public ActiveInstanceInfo(string id, InstanceInfo inst, IEnumerable<string> squad)
+        public ActiveInstanceInfo(string id, InstanceInfo inst, UnitInfo bossUnit, IEnumerable<SquadUnitInfo> squad)
         {
             Id = id;
             Instance = inst;
+            BossUnit = bossUnit;
 
             this.squad = new(squad);
         }
 
-        public void AddCharacter(string characterId)
+        public void AddUnit(SquadUnitInfo squadUnit)
         {
-            squad.Add(characterId);
+            squad.Add(squadUnit);
         }
 
-        public void RemoveCharacter(string characterId)
+        public void RemoveUnit(SquadUnitInfo squadUnit)
         {
-            squad.Remove(characterId);
+            squad.Remove(squadUnit);
         }
 
         public void SetStartTime(long value)
         {
             StartTime = value;
+        }
+
+        public void SetCompleteChance(float value)
+        {
+            completeChance.Value = value;
         }
 
         public void MarAsReadyToComplete()

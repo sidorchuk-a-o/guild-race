@@ -1,8 +1,8 @@
-﻿using AD.States;
+﻿using System.Collections.Generic;
 
 namespace Game.Craft
 {
-    public interface IRecipesCollection : IReadOnlyReactiveCollectionInfo<RecipeData>
+    public interface IRecipesCollection : IReadOnlyCollection<RecipeData>
     {
     }
 }

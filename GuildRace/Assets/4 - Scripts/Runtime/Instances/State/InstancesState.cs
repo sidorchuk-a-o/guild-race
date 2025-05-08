@@ -41,12 +41,13 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
-        public void CreateSetupInstance(int instanceId)
+        public void CreateSetupInstance(SetupInstanceArgs args)
         {
             var id = GuidUtils.Generate();
-            var instance = seasons.GetInstance(instanceId);
+            var instance = seasons.GetInstance(args.InstanceId);
+            var bossUnit = instance.GetBossUnit(args.BossUnitId);
 
-            SetupInstance = new(id, instance, squad: null);
+            SetupInstance = new(id, instance, bossUnit, squad: null);
         }
 
         public void CancelSetupInstance()
