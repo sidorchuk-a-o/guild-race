@@ -12,7 +12,7 @@ namespace Game.Instances
         [SerializeField] private List<InstanceTypeData> instanceTypes;
         // params
         [SerializeField] private SquadParams squadParams;
-        [SerializeField] private ActiveInstanceParams activeInstanceParams;
+        [SerializeField] private CompleteChanceParams completeChanceParams;
         [SerializeField] private ConsumablesParams consumablesParams;
         [SerializeField] private List<ThreatData> threats;
 
@@ -26,7 +26,7 @@ namespace Game.Instances
         public IReadOnlyList<InstanceTypeData> InstanceTypes => instanceTypes;
 
         public SquadParams SquadParams => squadParams;
-        public ActiveInstanceParams ActiveInstanceParams => activeInstanceParams;
+        public CompleteChanceParams CompleteChanceParams => completeChanceParams;
         public ConsumablesParams ConsumablesParams => consumablesParams;
         public IReadOnlyList<ThreatData> Threats => threats;
 

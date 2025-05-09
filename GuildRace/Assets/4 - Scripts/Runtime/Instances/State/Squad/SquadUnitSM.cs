@@ -1,4 +1,5 @@
-﻿using Game.Inventory;
+﻿using System.Linq;
+using Game.Inventory;
 using Newtonsoft.Json;
 
 namespace Game.Instances
@@ -18,8 +19,9 @@ namespace Game.Instances
         public SquadUnitInfo GetValue(IInventoryService inventoryService)
         {
             var bag = inventoryService.Factory.ReadGridSave(bagSM);
+            var resolvedThreats = Enumerable.Empty<ThreatInfo>();
 
-            return new SquadUnitInfo(charactedId, bag, resolvedThreats: null);
+            return new SquadUnitInfo(charactedId, bag, resolvedThreats);
         }
     }
 }

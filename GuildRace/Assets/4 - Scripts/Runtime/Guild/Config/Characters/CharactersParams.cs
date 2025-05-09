@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Game.Instances;
 using UnityEngine;
 
 namespace Game.Guild
@@ -12,9 +13,11 @@ namespace Game.Guild
         [Space]
         [SerializeField] private List<RoleData> roles;
         [SerializeField] private List<SubRoleData> subRoles;
+        [SerializeField] private List<SubRoleThreatData> subRoleThreats;
 
         private Dictionary<RoleId, RoleData> rolesCache;
         private Dictionary<SubRoleId, SubRoleData> subRolesCache;
+        private Dictionary<SubRoleId, ThreatId> subRoleThreatsCache;
         private Dictionary<ClassId, ClassData> classesCache;
         private Dictionary<SpecializationId, SpecializationData> specsCache;
         private Dictionary<RoleId, List<(ClassData, SpecializationData)>> specByRoleCache;
@@ -75,6 +78,14 @@ namespace Game.Guild
             specByRoleCache.TryGetValue(roleId, out var data);
 
             return data;
+        }
+
+        public ThreatId GetSubRoleThreat(SubRoleId subRoleId)
+        {
+            subRoleThreatsCache ??= subRoleThreats.ToDictionary(x => x.SubRoleId, x => x.ThreatId);
+            subRoleThreatsCache.TryGetValue(subRoleId, out var threatId);
+
+            return threatId;
         }
     }
 }

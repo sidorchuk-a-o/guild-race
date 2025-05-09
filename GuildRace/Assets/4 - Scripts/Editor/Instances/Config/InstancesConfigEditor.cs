@@ -10,7 +10,7 @@ namespace Game.Instances
         private SeasonsList seasonsList;
         private InstanceTypesList instanceTypesList;
         private SquadParamsEditor squadParamsEditor;
-        private ActiveInstanceParamsEditor activeInstanceParamsEditor;
+        private CompleteChanceParamsEditor completeChanceParamsEditor;
         private ConsumablesParamsEditor consumablesParamsEditor;
         private ThreatsList threatsList;
 
@@ -21,7 +21,7 @@ namespace Game.Instances
             tabs.CreateTab("Seasons", CreateSeasonsTab);
             tabs.CreateTab("Common", CreateCommonTab);
             tabs.CreateTabs("Squad Params", CreateSquadParamsTab);
-            tabs.CreateTabs("Active Instance Params", CreateActiveInstanceParamsTab);
+            tabs.CreateTabs("Complete Chance Params", CreateCompleteChanceParamsTab);
             tabs.CreateTabs("Сonsumables Params", CreateСonsumablesParamsTab);
             tabs.CreateTab("Threats", CreateThreatsTab);
         }
@@ -48,10 +48,10 @@ namespace Game.Instances
             squadParamsEditor.CreateTabs(tabs);
         }
 
-        private void CreateActiveInstanceParamsTab(TabsContainer tabs)
+        private void CreateCompleteChanceParamsTab(TabsContainer tabs)
         {
-            activeInstanceParamsEditor = new ActiveInstanceParamsEditor();
-            activeInstanceParamsEditor.CreateTabs(tabs);
+            completeChanceParamsEditor = new CompleteChanceParamsEditor();
+            completeChanceParamsEditor.CreateTabs(tabs);
         }
 
         private void CreateСonsumablesParamsTab(TabsContainer tabs)

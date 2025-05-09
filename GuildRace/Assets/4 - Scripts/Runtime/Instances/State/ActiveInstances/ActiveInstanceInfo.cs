@@ -33,7 +33,7 @@ namespace Game.Instances
 
             this.squad = new(squad);
 
-            threats = new(bossUnit.GetThreats().Select(x => new ThreatInfo(x)));
+            threats = new(bossUnit.Threats.Select(x => new ThreatInfo(x)));
         }
 
         public void AddUnit(SquadUnitInfo squadUnit)
@@ -48,16 +48,17 @@ namespace Game.Instances
 
         public void ApplyResolveThreats(IEnumerable<ThreatId> resolvedThreats)
         {
-            var resolvedPool = resolvedThreats.ToListPool();
+            var threatGroups = resolvedThreats.GroupBy(x => x).ToListPool();
 
             foreach (var threat in threats)
             {
-                var resolved = resolvedPool.Contains(threat.Id);
+                var threatGroup = threatGroups.FirstOrDefault(x => x.Key == threat.Id);
+                var resolveCount = threatGroup == null ? 0 : threatGroup.Count();
 
-                threat.SetResolvedState(resolved);
+                threat.SetResolveCount(resolveCount);
             }
 
-            resolvedPool.ReleaseListPool();
+            threatGroups.ReleaseListPool();
         }
 
         public void SetStartTime(long value)

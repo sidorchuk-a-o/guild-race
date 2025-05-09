@@ -29,13 +29,6 @@ namespace Game.Guild
 
         public UnitParams UnitParams => unitParams;
         public IReadOnlyCollection<AbilityData> Abilities => abilities;
-
-        public ThreatId[] GetThreats()
-        {
-            return Abilities
-                .Select(x => x.ThreatId)
-                .Distinct()
-                .ToArray();
-        }
+        public IEnumerable<ThreatId> Threats => abilities.Select(x => x.ThreatId).Distinct();
     }
 }

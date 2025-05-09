@@ -612,7 +612,7 @@ MonoBehaviour:
       - id: 20017
         title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
         nameKey:
-          value: <none>
+          value: INSTANCES/INSTANCE_UNIT_20017_TTL
         descKey:
           value: <none>
         imageRef:
@@ -629,9 +629,9 @@ MonoBehaviour:
         - id: 1031
           title: "\u041A\u0430\u0441\u043A\u0430\u0434\u043D\u044B\u0439 \u0443\u043A\u0443\u0441"
           nameKey:
-            value: 
+            value: <none>
           descKey:
-            value: 
+            value: <none>
           threatId:
             value: 201
         - id: 1032
@@ -645,17 +645,17 @@ MonoBehaviour:
         - id: 1033
           title: "\u0412\u0441\u043A\u0438\u043F\u0430\u043D\u0438\u0435 \u043A\u0440\u043E\u0432\u0438"
           nameKey:
-            value: 
+            value: <none>
           descKey:
-            value: 
+            value: <none>
           threatId:
             value: 17
         - id: 1034
           title: "\u0420\u0435\u0437\u043E\u043D\u0430\u043D\u0441"
           nameKey:
-            value: 
+            value: <none>
           descKey:
-            value: 
+            value: <none>
           threatId:
             value: 114
       - id: 20018
@@ -764,7 +764,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_302_TTL
       descKey:
-        value: 
+        value: <none>
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 
@@ -1635,8 +1635,44 @@ MonoBehaviour:
     - instanceType:
         value: 252
       maxUnitsCount: 5
-  activeInstanceParams:
-    tempCompeteTime: 30
+  completeChanceParams:
+    parameters:
+    - instanceType:
+        value: 251
+      charactersCountMod: 10
+      resolveThreatMod: 12
+      maxResolveCount: 1
+      consumables:
+      - rarity:
+          value: 121
+        chanceMod: 5
+      - rarity:
+          value: 122
+        chanceMod: 8
+      healthMod:
+        totalMod: 5
+        charactersMod: 180
+      powerMod:
+        totalMod: 3
+        charactersMod: 18
+    - instanceType:
+        value: 252
+      charactersCountMod: 6
+      resolveThreatMod: 4
+      maxResolveCount: 2
+      consumables:
+      - rarity:
+          value: 121
+        chanceMod: 2
+      - rarity:
+          value: 122
+        chanceMod: 3
+      healthMod:
+        totalMod: 5
+        charactersMod: 180
+      powerMod:
+        totalMod: 3
+        charactersMod: 18
   consumablesParams:
     items:
     - {fileID: 3283174283311822006}

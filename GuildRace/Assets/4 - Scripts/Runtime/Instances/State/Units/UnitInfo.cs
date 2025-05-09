@@ -20,7 +20,9 @@ namespace Game.Instances
 
         public int CompleteTime { get; }
         public UnitParams UnitParams { get; }
+
         public IReadOnlyCollection<AbilityData> Abilities { get; }
+        public IReadOnlyCollection<ThreatId> Threats { get; }
 
         public bool HasInstance => instanceId.Value.IsValid();
         public IReadOnlyReactiveProperty<string> InstanceId => instanceId;
@@ -33,15 +35,8 @@ namespace Game.Instances
             ImageRef = data.ImageRef;
             CompleteTime = data.CompleteTime;
             UnitParams = data.UnitParams;
-            Abilities = data.Abilities.ToList();
-        }
-
-        public ThreatId[] GetThreats()
-        {
-            return Abilities
-                .Select(x => x.ThreatId)
-                .Distinct()
-                .ToArray();
+            Abilities = data.Abilities;
+            Threats = data.Threats.ToArray();
         }
 
         public void SetInstanceId(string value)

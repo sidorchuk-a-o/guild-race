@@ -7,6 +7,8 @@ namespace Game.Instances
         private readonly ReactiveProperty<bool> resolved = new();
 
         public ThreatId Id { get; }
+
+        public int ResolveCount { get; private set; }
         public IReadOnlyReactiveProperty<bool> Resolved => resolved;
 
         public ThreatInfo(ThreatId id)
@@ -14,16 +16,17 @@ namespace Game.Instances
             Id = id;
         }
 
-        public ThreatInfo(ThreatId id, bool resolved)
+        public ThreatInfo(ThreatId id, int resolveCount)
         {
             Id = id;
 
-            SetResolvedState(resolved);
+            SetResolveCount(resolveCount);
         }
 
-        public void SetResolvedState(bool value)
+        public void SetResolveCount(int value)
         {
-            resolved.Value = value;
+            ResolveCount = value;
+            resolved.Value = value > 0;
         }
     }
 }

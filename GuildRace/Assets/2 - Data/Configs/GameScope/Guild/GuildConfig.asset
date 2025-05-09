@@ -194,7 +194,7 @@ MonoBehaviour:
   roleId:
     value: 503
   subRoleId:
-    value: 524
+    value: 525
   unitParams:
     health: 625
     power: 28
@@ -337,7 +337,7 @@ MonoBehaviour:
   roleId:
     value: 503
   subRoleId:
-    value: 524
+    value: 525
   unitParams:
     health: 625
     power: 27
@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 524
-  title: TANK
+  title: MELEE
   nameKey:
-    value: 
+    value: CHARACTERS/SUBROLE_MELEE_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -794,7 +794,7 @@ MonoBehaviour:
   roleId:
     value: 503
   subRoleId:
-    value: 524
+    value: 525
   unitParams:
     health: 650
     power: 27
@@ -856,6 +856,28 @@ MonoBehaviour:
     - {fileID: 3937412005290520608}
     - {fileID: -7572584695603090114}
     - {fileID: -5338355903722540116}
+    - {fileID: 8430412534063844418}
+    subRoleThreats:
+    - subRoleId:
+        value: 521
+      threatId:
+        value: 203
+    - subRoleId:
+        value: 522
+      threatId:
+        value: 202
+    - subRoleId:
+        value: 523
+      threatId:
+        value: 202
+    - subRoleId:
+        value: 524
+      threatId:
+        value: 204
+    - subRoleId:
+        value: 525
+      threatId:
+        value: 201
   recruitingParams:
     minRequestCount: 5
     maxRequestCount: 15
@@ -1738,7 +1760,7 @@ MonoBehaviour:
   roleId:
     value: 503
   subRoleId:
-    value: 524
+    value: 525
   unitParams:
     health: 600
     power: 28
@@ -1968,3 +1990,25 @@ MonoBehaviour:
   specs:
   - {fileID: 2248301654606666036}
   - {fileID: 5807667443719656722}
+--- !u!114 &8430412534063844418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68e592bead36504aa1a55cad1ab4bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 525
+  title: TANK
+  nameKey:
+    value: 
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1

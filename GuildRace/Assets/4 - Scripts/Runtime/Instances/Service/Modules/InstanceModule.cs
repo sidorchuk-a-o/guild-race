@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using AD.Services.Router;
+using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using UnityEngine;
+using CharacterInfo = Game.Guild.CharacterInfo;
 
 namespace Game.Instances
 {
     public class InstanceModule
     {
         private readonly InstancesState state;
+
         private readonly GuildConfig guildConfig;
         private readonly InstancesConfig instancesConfig;
 
@@ -51,7 +55,7 @@ namespace Game.Instances
 
         public IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates()
         {
-            var bossThreats = state.SetupInstance.BossUnit.GetThreats();
+            var bossThreats = state.SetupInstance.BossUnit.Threats;
 
             var candidates = guildService.Characters.Select(character =>
             {
@@ -63,16 +67,16 @@ namespace Game.Instances
             return candidates.ToList();
         }
 
-        private IEnumerable<ThreatInfo> GetCharacterThreats(CharacterInfo character, ThreatId[] bossThreats)
+        private IEnumerable<ThreatInfo> GetCharacterThreats(CharacterInfo character, IReadOnlyCollection<ThreatId> bossThreats)
         {
             var specData = guildConfig.CharactersParams.GetSpecialization(character.SpecId);
-            var specThreats = specData.GetThreats();
 
-            var threats = specThreats.Select(t =>
+            var threats = specData.Threats.Select(threat =>
             {
-                var threatResolved = bossThreats.Contains(t);
+                var threatResolved = bossThreats.Contains(threat);
+                var resolveCount = threatResolved ? 1 : 0;
 
-                return new ThreatInfo(t, threatResolved);
+                return new ThreatInfo(threat, resolveCount);
             });
 
             return threats;
@@ -100,7 +104,7 @@ namespace Game.Instances
             var character = guildService.Characters[characterId];
             var characterBag = inventoryService.Factory.CreateGrid(instancesConfig.SquadParams.Bag);
 
-            var bossThreats = setupInstance.BossUnit.GetThreats();
+            var bossThreats = setupInstance.BossUnit.Threats;
             var resolvedThreats = GetCharacterThreats(character, bossThreats).Where(x => x.Resolved.Value);
 
             character.SetInstanceId(setupInstanceId);
@@ -110,8 +114,8 @@ namespace Game.Instances
             setupInstance.AddUnit(squadUnit);
 
             UpdateThreats();
+            UpdateCompleteChance();
 
-            // mark as dirty
             state.MarkAsDirty();
         }
 
@@ -141,8 +145,8 @@ namespace Game.Instances
             ResetUnitBag(squadUnit.Bag);
 
             UpdateThreats();
+            UpdateCompleteChance();
 
-            // mark as dirty
             state.MarkAsDirty();
         }
 
@@ -154,14 +158,86 @@ namespace Game.Instances
                 .Select(x => guildService.Characters[x.CharactedId]);
 
             var characterSpecs = characters
-                .Select(x => x.SpecId).Distinct()
-                .Select(x => guildConfig.CharactersParams.GetSpecialization(x));
+                .Select(x => x.SpecId)
+                .Select(x => guildConfig.CharactersParams.GetSpecialization(x))
+                .ToListPool();
 
-            var resolvedThreats = characterSpecs
-                .SelectMany(x => x.GetThreats())
-                .Distinct();
+            var subRoleThreats = characterSpecs
+                .Select(x => guildConfig.CharactersParams.GetSubRoleThreat(x.SubRoleId));
+
+            var specThreats = characterSpecs
+                .SelectMany(x => x.Threats);
+
+            var resolvedThreats = specThreats.Concat(subRoleThreats);
 
             setupInstance.ApplyResolveThreats(resolvedThreats);
+
+            characterSpecs.ReleaseListPool();
+        }
+
+        private void UpdateCompleteChance()
+        {
+            var setupInstance = state.SetupInstance;
+            var chanceParams = instancesConfig.CompleteChanceParams.GetParams(setupInstance.Instance.Type);
+
+            // squad chance
+            var squadCountChance = setupInstance.Squad.Count * chanceParams.CharactersCountMod;
+
+            // threats chance
+            var resolvedThreatsChance = setupInstance.Threats
+                .Where(x => x.Resolved.Value)
+                .Sum(calcResolvedThreatChance);
+
+            float calcResolvedThreatChance(ThreatInfo threat)
+            {
+                var resolveCount = Mathf.Min(threat.ResolveCount, chanceParams.MaxResolveCount);
+                var resolveChance = resolveCount * chanceParams.ResolveThreatMod;
+
+                return resolveChance;
+            }
+
+            // consumables chance
+
+
+            // squad data
+            var healthMod = chanceParams.HealthMod;
+            var powerMod = chanceParams.PowerMod;
+
+            var squadData = setupInstance.Squad.Aggregate(new SquadData(), (data, unit) =>
+            {
+                var character = guildService.Characters[unit.CharactedId];
+                var specData = guildConfig.CharactersParams.GetSpecialization(character.SpecId);
+
+                var specParams = specData.UnitParams;
+                var equipItems = character.EquipSlots
+                    .Where(x => x.HasItem)
+                    .Select(x => x.Item.Value)
+                    .OfType<EquipItemInfo>()
+                    .ToListPool();
+
+                var equipHealth = equipItems.Sum(x => x.CharacterParams.Health);
+                var equipPower = equipItems.Sum(x => x.CharacterParams.Power);
+
+                data.Health += specParams.Health + equipHealth;
+                data.Power += specParams.Power + equipPower;
+
+                equipItems.ReleaseListPool();
+
+                return data;
+            });
+
+            // health chance
+            var bossHealth = setupInstance.BossUnit.UnitParams.Health;
+            var healthChance = (int)((squadData.Health - bossHealth) / healthMod.CharactersMod) * healthMod.TotalMod;
+
+            // power chance
+            var bossPower = setupInstance.BossUnit.UnitParams.Power;
+            var powerChance = (int)((squadData.Power - bossPower) / powerMod.CharactersMod) * powerMod.TotalMod;
+
+            // chance
+            var chance = squadCountChance + resolvedThreatsChance + healthChance + powerChance;
+
+            setupInstance.SetCompleteChance(chance / 100f);
         }
 
         public async UniTask CompleteSetupAndStartInstance()
@@ -196,11 +272,9 @@ namespace Game.Instances
             }
 
             // reset instance
-
             ResetInstanceData(setupInstance);
 
             // cancel
-
             state.CancelSetupInstance();
 
             // mark as dirty
@@ -211,7 +285,6 @@ namespace Game.Instances
         private void ResetInstanceData(ActiveInstanceInfo instance)
         {
             // reset characters
-
             foreach (var squadUnit in instance.Squad)
             {
                 var character = guildService.Characters[squadUnit.CharactedId];
@@ -222,20 +295,17 @@ namespace Game.Instances
             }
 
             // reset boss
-
             instance.BossUnit.SetInstanceId(null);
         }
 
         public int StopActiveInstance(string activeInstanceId)
         {
             // reset instance
-
             var activeInstance = state.ActiveInstances.GetInstance(activeInstanceId);
 
             ResetInstanceData(activeInstance);
 
             // upd state
-
             return state.RemoveActiveInstance(activeInstanceId);
         }
 
@@ -252,6 +322,12 @@ namespace Game.Instances
                     PlacementId = guildTab.Grid.Id
                 });
             }
+        }
+
+        private class SquadData
+        {
+            public float Health { get; set; }
+            public float Power { get; set; }
         }
     }
 }

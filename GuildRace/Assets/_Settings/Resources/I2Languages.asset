@@ -2481,7 +2481,7 @@ MonoBehaviour:
       - "\u041D\u0430\u0430\u043B"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20018_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20017_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2489,7 +2489,7 @@ MonoBehaviour:
       - "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20019_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20018_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2497,7 +2497,7 @@ MonoBehaviour:
       - "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20020_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20019_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2505,7 +2505,7 @@ MonoBehaviour:
       - "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20021_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20020_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2513,7 +2513,7 @@ MonoBehaviour:
       - "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20022_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20021_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2521,7 +2521,7 @@ MonoBehaviour:
       - "\u0410\u0440\u0438\u043C"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20023_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20022_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2529,7 +2529,7 @@ MonoBehaviour:
       - "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20024_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20023_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2537,7 +2537,7 @@ MonoBehaviour:
       - "\u0413\u0430'\u0420\u0430\u0442"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20025_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20024_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2545,7 +2545,7 @@ MonoBehaviour:
       - "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20026_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20025_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2553,7 +2553,7 @@ MonoBehaviour:
       - "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20027_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20026_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2561,7 +2561,7 @@ MonoBehaviour:
       - "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20028_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20027_TTL
       TermType: 0
       Description: 
       Languages:
@@ -2569,7 +2569,7 @@ MonoBehaviour:
       - "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
       Flags: 0000
       Languages_Touch: []
-    - Term: INSTANCES/INSTANCE_UNIT_20029_TTL
+    - Term: INSTANCES/INSTANCE_UNIT_20028_TTL
       TermType: 0
       Description: 
       Languages:
@@ -5571,7 +5571,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1746255993248
+    Google_LastUpdatedVersion: 1746722808785
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

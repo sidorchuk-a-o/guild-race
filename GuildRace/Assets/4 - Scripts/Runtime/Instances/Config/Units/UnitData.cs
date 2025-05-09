@@ -3,6 +3,7 @@ using AD.ToolsCollection;
 using Game.Guild;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -25,6 +26,8 @@ namespace Game.Instances
 
         public int CompleteTime => completeTime;
         public UnitParams UnitParams => unitParams;
+
         public IReadOnlyList<AbilityData> Abilities => abilities;
+        public IEnumerable<ThreatId> Threats => abilities.Select(x => x.ThreatId).Distinct();
     }
 }

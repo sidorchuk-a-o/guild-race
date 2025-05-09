@@ -5,20 +5,13 @@ namespace Game.Instances
 {
     public class ActiveInstanceModule : IAppTickListener
     {
-        private readonly ActiveInstanceParams activeInstanceParams;
-
         private readonly IInstancesService instancesService;
         private readonly ITimeService time;
 
-        public ActiveInstanceModule(
-            InstancesConfig instancesConfig,
-            IInstancesService instancesService,
-            ITimeService time)
+        public ActiveInstanceModule(IInstancesService instancesService, ITimeService time)
         {
             this.instancesService = instancesService;
             this.time = time;
-
-            activeInstanceParams = instancesConfig.ActiveInstanceParams;
         }
 
         void IAppTickListener.OnTick(float deltaTime)
@@ -31,7 +24,7 @@ namespace Game.Instances
                 }
 
                 var startTime = activeInstance.StartTime;
-                var completeTime = startTime + activeInstanceParams.TempCompeteTime;
+                var completeTime = startTime + activeInstance.BossUnit.CompleteTime;
 
                 if (completeTime >= time.TotalTime)
                 {
