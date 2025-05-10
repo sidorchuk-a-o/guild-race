@@ -12,6 +12,7 @@ namespace Game.Instances
         private SquadParamsEditor squadParamsEditor;
         private CompleteChanceParamsEditor completeChanceParamsEditor;
         private ConsumablesParamsEditor consumablesParamsEditor;
+        private RewardsParamsEditor rewardsParamsEditor;
         private ThreatsList threatsList;
 
         protected override void CreateTabItems(TabsContainer tabs)
@@ -23,6 +24,7 @@ namespace Game.Instances
             tabs.CreateTabs("Squad Params", CreateSquadParamsTab);
             tabs.CreateTabs("Complete Chance Params", CreateCompleteChanceParamsTab);
             tabs.CreateTabs("Сonsumables Params", CreateСonsumablesParamsTab);
+            tabs.CreateTabs("Rewards Params", CreateRewardsParamsTab);
             tabs.CreateTab("Threats", CreateThreatsTab);
         }
 
@@ -58,6 +60,12 @@ namespace Game.Instances
         {
             consumablesParamsEditor = new ConsumablesParamsEditor();
             consumablesParamsEditor.CreateTabs(tabs);
+        }
+
+        private void CreateRewardsParamsTab(TabsContainer tabs)
+        {
+            rewardsParamsEditor = new RewardsParamsEditor();
+            rewardsParamsEditor.CreateTabs(tabs);
         }
 
         private void CreateThreatsTab(VisualElement root, SerializedData data)

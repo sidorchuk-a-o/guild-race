@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AD.ToolsCollection;
 
 namespace Game.Instances
@@ -31,6 +32,11 @@ namespace Game.Instances
         public static Collection<int> CreateConsumableMechanicsViewCollection()
         {
             return Config.ConsumablesParams.CreateKeyViewCollection<ConsumableMechanicHandler, int>("mechanicHandlers");
+        }
+
+        public static Collection<int> CreateRewardMechanicsViewCollection()
+        {
+            return Config.RewardsParams.CreateKeyViewCollection<RewardHandler, int>("rewardHandlers");
         }
 
         public static Collection<int> GetThreatsViewCollection()

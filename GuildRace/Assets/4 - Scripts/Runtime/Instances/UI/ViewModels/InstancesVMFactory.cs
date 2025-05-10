@@ -36,7 +36,7 @@ namespace Game.Instances
 
         public ConsumableMechanicVM GetConsumableMechanic(int mechanicId)
         {
-            var mechanic = instancesService.GetMechanicHandler(mechanicId);
+            var mechanic = instancesService.GetConsumableHandler(mechanicId);
 
             return new ConsumableMechanicVM(mechanic);
         }
@@ -124,9 +124,9 @@ namespace Game.Instances
             instancesService.CancelSetupInstance();
         }
 
-        public int StopActiveInstance(string activeInstanceId)
+        public int CompleteActiveInstance(string activeInstanceId)
         {
-            return instancesService.StopActiveInstance(activeInstanceId);
+            return instancesService.CompleteActiveInstance(activeInstanceId);
         }
 
         public ActiveInstanceVM GetSetupInstance()

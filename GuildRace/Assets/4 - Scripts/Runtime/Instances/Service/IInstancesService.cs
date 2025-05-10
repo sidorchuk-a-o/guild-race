@@ -10,16 +10,17 @@ namespace Game.Instances
 
         ActiveInstanceInfo SetupInstance { get; }
 
-        ConsumableMechanicHandler GetMechanicHandler(int id);
+        RewardHandler GetRewardHandler(int id);
+        ConsumableMechanicHandler GetConsumableHandler(int id);
 
         UniTask StartSetupInstance(SetupInstanceArgs args);
         void CancelSetupInstance();
-        
+
         IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates();
         void TryAddCharacterToSquad(string characterId);
         void TryRemoveCharacterFromSquad(string characterId);
-        
+
         UniTask CompleteSetupAndStartInstance();
-        int StopActiveInstance(string activeInstanceId);
+        int CompleteActiveInstance(string activeInstanceId);
     }
 }

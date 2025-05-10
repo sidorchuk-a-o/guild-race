@@ -4,6 +4,7 @@ using AD.Services;
 using AD.Services.AppEvents;
 using AD.Services.ProtectedTime;
 using AD.Services.Router;
+using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
@@ -19,7 +20,8 @@ namespace Game.Instances
         private readonly InstanceModule instanceModule;
         private readonly ActiveInstanceModule activeInstanceModule;
 
-        private readonly List<ConsumableMechanicHandler> mechanicHandlers;
+        private readonly Dictionary<int, RewardHandler> rewardHandlers;
+        private readonly Dictionary<int, ConsumableMechanicHandler> consumableHandlers;
 
         private readonly IAppEventsService appEvents;
         private readonly IObjectResolver resolver;
@@ -47,32 +49,44 @@ namespace Game.Instances
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
             activeInstanceModule = new(this, state, time);
 
-            mechanicHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToList();
+            rewardHandlers = instancesConfig.RewardsParams.RewardHandlers.ToDictionary(x => x.Id, x => x);
+            consumableHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToDictionary(x => x.Id, x => x);
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
-            InitMechanicHandlers();
+
+            InitHandlers();
 
             appEvents.AddAppTickListener(activeInstanceModule);
 
             return await Inited();
         }
 
-        // == Consumable Mechanics ==
+        // == Handlers ==
 
-        private void InitMechanicHandlers()
+        private void InitHandlers()
         {
-            mechanicHandlers.ForEach(handler =>
+            rewardHandlers.Values.ForEach(handler =>
+            {
+                resolver.Inject(handler);
+            });
+
+            consumableHandlers.Values.ForEach(handler =>
             {
                 resolver.Inject(handler);
             });
         }
 
-        public ConsumableMechanicHandler GetMechanicHandler(int id)
+        public RewardHandler GetRewardHandler(int id)
         {
-            return mechanicHandlers.FirstOrDefault(x => x.Id == id);
+            return rewardHandlers[id];
+        }
+
+        public ConsumableMechanicHandler GetConsumableHandler(int id)
+        {
+            return consumableHandlers[id];
         }
 
         // == Instance ==
@@ -107,9 +121,9 @@ namespace Game.Instances
             instanceModule.CancelSetupInstance();
         }
 
-        public int StopActiveInstance(string activeInstanceId)
+        public int CompleteActiveInstance(string activeInstanceId)
         {
-            return instanceModule.StopActiveInstance(activeInstanceId);
+            return instanceModule.CompleteActiveInstance(activeInstanceId);
         }
 
         // == Dispose ==
@@ -117,6 +131,8 @@ namespace Game.Instances
         public override void Dispose()
         {
             base.Dispose();
+
+            CancelSetupInstance();
 
             appEvents.RemoveAppTickListener(activeInstanceModule);
         }
