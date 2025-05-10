@@ -10,6 +10,7 @@ namespace Game.Instances
     {
         private readonly ThreatCollection threats;
         private readonly SquadUnitsCollection squad;
+        private readonly ReactiveProperty<CompleteResult> completeResult = new();
         private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
 
@@ -22,7 +23,9 @@ namespace Game.Instances
         public ISquadUnitsCollection Squad => squad;
 
         public long StartTime { get; private set; }
+
         public IReadOnlyReactiveProperty<float> CompleteChance => completeChance;
+        public IReadOnlyReactiveProperty<CompleteResult> Result => completeResult;
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete => isReadyToComplete;
 
         public ActiveInstanceInfo(string id, InstanceInfo inst, UnitInfo bossUnit, IEnumerable<SquadUnitInfo> squad)
@@ -69,6 +72,11 @@ namespace Game.Instances
         public void SetCompleteChance(float value)
         {
             completeChance.Value = value;
+        }
+
+        public void SetResult(CompleteResult value)
+        {
+            completeResult.Value = value;
         }
 
         public void MarAsReadyToComplete()

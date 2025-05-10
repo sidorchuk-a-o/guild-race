@@ -11,6 +11,13 @@ namespace Game.Instances
 
         [ES3Serializable] private SeasonsSM seasonsSM;
         [ES3Serializable] private ActiveInstancesSM activeInstancesSM;
+        [ES3Serializable] private int guaranteedCompletedCount;
+
+        public int GuaranteedCompletedCount
+        {
+            get => guaranteedCompletedCount;
+            set => guaranteedCompletedCount = value;
+        }
 
         public void SetSeasons(IEnumerable<SeasonInfo> value)
         {

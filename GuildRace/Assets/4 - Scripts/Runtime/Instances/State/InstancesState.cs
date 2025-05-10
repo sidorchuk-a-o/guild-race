@@ -19,12 +19,14 @@ namespace Game.Instances
 
         private readonly SeasonsCollection seasons = new(null);
         private readonly ActiveInstancesCollection activeInstances = new(null);
+        private int guaranteedCompletedCount;
 
         public override string SaveKey => InstancesStateSM.key;
         public override SaveSource SaveSource => SaveSource.app;
 
         public ISeasonsCollection Seasons => seasons;
         public IActiveInstancesCollection ActiveInstances => activeInstances;
+        public bool HasGuaranteedCompleted => guaranteedCompletedCount > 0;
 
         public ActiveInstanceInfo SetupInstance { get; private set; }
 
@@ -83,11 +85,21 @@ namespace Game.Instances
             return index;
         }
 
+        public void DecrementGuaranteedCompleted()
+        {
+            guaranteedCompletedCount--;
+
+            MarkAsDirty();
+        }
+
         // == Save ==
 
         protected override InstancesStateSM CreateSave()
         {
-            var instancesStateSM = new InstancesStateSM();
+            var instancesStateSM = new InstancesStateSM
+            {
+                GuaranteedCompletedCount = guaranteedCompletedCount
+            };
 
             instancesStateSM.SetSeasons(seasons);
             instancesStateSM.SetActiveInstances(activeInstances, inventoryService);
@@ -99,11 +111,15 @@ namespace Game.Instances
         {
             if (save == null)
             {
+                guaranteedCompletedCount = config.CompleteChanceParams.GuaranteedCompletedCount;
+
                 seasons.AddRange(CreateDefaultSeasons());
                 CreateDefaultConsumables();
 
                 return;
             }
+
+            guaranteedCompletedCount = save.GuaranteedCompletedCount;
 
             seasons.AddRange(save.GetSeasons(config));
             activeInstances.AddRange(save.GetActiveInstances(inventoryService, seasons));

@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using Game.UI;
 using UniRx;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ namespace Game.Instances
         public ThreatsVM ThreatsVM { get; }
         public SquadUnitsVM SquadVM { get; }
 
+        public UIStateVM ResultStateVM { get; }
         public IReadOnlyReactiveProperty<string> CompleteChance => completeChance;
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
 
@@ -31,6 +33,7 @@ namespace Game.Instances
             BossUnitVM = instancesVMF.GetUnit(info.BossUnit);
             ThreatsVM = new ThreatsVM(info.Threats, instancesVMF);
             SquadVM = new SquadUnitsVM(info.Instance.Type, info.Squad, instancesVMF);
+            ResultStateVM = new();
         }
 
         protected override void InitSubscribes()
@@ -39,10 +42,33 @@ namespace Game.Instances
             BossUnitVM.AddTo(this);
             ThreatsVM.AddTo(this);
             SquadVM.AddTo(this);
+            ResultStateVM.AddTo(this);
+
+            info.Result
+                .Subscribe(x => ResultStateVM.SetState(GetResultState(x)))
+                .AddTo(this);
 
             info.CompleteChance
-                .Subscribe(x => completeChance.Value = $"{Mathf.RoundToInt(x * 100)}%")
+                .Subscribe(x => ChanceChangedCallback(x))
                 .AddTo(this);
+        }
+
+        private string GetResultState(CompleteResult result)
+        {
+            return result switch
+            {
+                CompleteResult.Failed => "failed",
+                _ => "default"
+            };
+        }
+
+        private void ChanceChangedCallback(float chance)
+        {
+#if !UNITY_EDITOR
+            chance = Mathf.Max(chance, 0);
+#endif
+
+            completeChance.Value = $"{Mathf.RoundToInt(chance * 100)}%";
         }
     }
 }

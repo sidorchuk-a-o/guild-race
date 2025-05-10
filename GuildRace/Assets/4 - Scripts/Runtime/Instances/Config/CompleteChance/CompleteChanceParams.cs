@@ -8,7 +8,10 @@ namespace Game.Instances
     [Serializable]
     public class CompleteChanceParams
     {
+        [SerializeField] private int guaranteedCompletedCount;
         [SerializeField] private List<CompleteChanceData> parameters;
+
+        public int GuaranteedCompletedCount => guaranteedCompletedCount;
 
         public CompleteChanceData GetParams(InstanceType instanceType)
         {

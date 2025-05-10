@@ -680,7 +680,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 5
         unitParams:
           health: 5184
           power: 170
@@ -1695,6 +1695,7 @@ MonoBehaviour:
         value: 252
       maxUnitsCount: 5
   completeChanceParams:
+    guaranteedCompletedCount: 5
     parameters:
     - instanceType:
         value: 251

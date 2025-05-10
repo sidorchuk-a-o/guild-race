@@ -11,6 +11,7 @@ namespace Game.Instances
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
         private AddressableElement<Sprite> imageRefField;
+        private PropertyElement completeTimeField;
         private UnitParamsElement unitParamsField;
         private AbilitiesList abilitiesList;
 
@@ -36,6 +37,9 @@ namespace Game.Instances
             imageRefField.BindProperty("imageRef", data);
 
             root.CreateHeader("Params");
+
+            completeTimeField = root.CreateProperty();
+            completeTimeField.BindProperty("completeTime", data);
 
             unitParamsField = root.CreateElement<UnitParamsElement>();
             unitParamsField.BindProperty("unitParams", data);

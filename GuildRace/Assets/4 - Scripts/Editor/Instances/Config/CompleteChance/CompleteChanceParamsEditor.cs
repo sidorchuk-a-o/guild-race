@@ -8,6 +8,7 @@ namespace Game.Instances
     /// </summary>
     public class CompleteChanceParamsEditor
     {
+        private PropertyElement guaranteedCompletedCountField;
         private CompleteChancesList completeChancesList;
 
         private SerializedData GetData(SerializedData data)
@@ -18,13 +19,18 @@ namespace Game.Instances
         public void CreateTabs(TabsContainer tabs)
         {
             tabs.CreateTab("Parameters", CreateParamsTab);
+            tabs.content.FlexWidth(40);
         }
 
         private void CreateParamsTab(VisualElement root, SerializedData data)
         {
+            root.CreateHeader("Common");
+            guaranteedCompletedCountField = root.CreateProperty();
+            guaranteedCompletedCountField.BindProperty("guaranteedCompletedCount", GetData(data));
+
+            root.CreateHeader("Parameters");
             completeChancesList = root.CreateElement<CompleteChancesList>();
             completeChancesList.BindProperty("parameters", GetData(data));
-            completeChancesList.FlexWidth(40);
         }
     }
 }
