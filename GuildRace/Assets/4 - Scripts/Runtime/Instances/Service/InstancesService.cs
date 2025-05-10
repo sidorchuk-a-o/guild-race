@@ -1,12 +1,13 @@
-﻿using AD.Services;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AD.Services;
 using AD.Services.AppEvents;
 using AD.Services.ProtectedTime;
 using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
-using System;
-using System.Linq;
+using UniRx;
 using VContainer;
 
 namespace Game.Instances
@@ -14,14 +15,14 @@ namespace Game.Instances
     public class InstancesService : Service, IInstancesService
     {
         private readonly InstancesState state;
-        private readonly InstancesConfig instancesConfig;
 
         private readonly InstanceModule instanceModule;
         private readonly ActiveInstanceModule activeInstanceModule;
 
-        private readonly IGuildService guildService;
-        private readonly IInventoryService inventoryService;
+        private readonly List<ConsumableMechanicHandler> mechanicHandlers;
+
         private readonly IAppEventsService appEvents;
+        private readonly IObjectResolver resolver;
 
         public ISeasonsCollection Seasons => state.Seasons;
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
@@ -38,63 +39,52 @@ namespace Game.Instances
             ITimeService time,
             IObjectResolver resolver)
         {
-            this.instancesConfig = instancesConfig;
-            this.guildService = guildService;
-            this.inventoryService = inventoryService;
             this.appEvents = appEvents;
+            this.resolver = resolver;
 
-            state = new(instancesConfig, time, inventoryService, resolver);
+            state = new(instancesConfig, time, guildService, inventoryService, resolver);
 
-            instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService);
-            activeInstanceModule = new(instancesConfig, this, time);
+            instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
+            activeInstanceModule = new(this, state, time);
+
+            mechanicHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToList();
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
+            InitMechanicHandlers();
 
             appEvents.AddAppTickListener(activeInstanceModule);
-
-            CreateConsumables(); // TODO: TEMP
 
             return await Inited();
         }
 
-        /// <summary>
-        /// TEMP
-        /// </summary>
-        private void CreateConsumables()
+        // == Consumable Mechanics ==
+
+        private void InitMechanicHandlers()
         {
-            var consumablesParams = instancesConfig.ConsumablesParams;
-            var consumablesCellTypes = consumablesParams.GridParams.CellTypes;
-
-            var consumablesBank = guildService.BankTabs
-                .Select(x => x.Grid)
-                .FirstOrDefault(x => consumablesCellTypes.Contains(x.CellType));
-
-            var consumablesItems = consumablesParams.Items
-                .Select(x => inventoryService.Factory.CreateItem(x))
-                .OfType<ConsumablesItemInfo>();
-
-            foreach (var consumables in consumablesItems)
+            mechanicHandlers.ForEach(handler =>
             {
-                consumables.Stack.SetValue(10);
+                resolver.Inject(handler);
+            });
+        }
 
-                var placementArgs = new PlaceInPlacementArgs
-                {
-                    ItemId = consumables.Id,
-                    PlacementId = consumablesBank.Id
-                };
-
-                inventoryService.TryPlaceItem(placementArgs);
-            }
+        public ConsumableMechanicHandler GetMechanicHandler(int id)
+        {
+            return mechanicHandlers.FirstOrDefault(x => x.Id == id);
         }
 
         // == Instance ==
 
-        public async UniTask StartSetupInstance(int instanceId)
+        public async UniTask StartSetupInstance(SetupInstanceArgs args)
         {
-            await instanceModule.StartSetupInstance(instanceId);
+            await instanceModule.StartSetupInstance(args);
+        }
+
+        public IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates()
+        {
+            return instanceModule.GetSquadCandidates();
         }
 
         public void TryAddCharacterToSquad(string characterId)

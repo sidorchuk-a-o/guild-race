@@ -1,12 +1,29 @@
 ﻿using AD.ToolsCollection;
+using UnityEngine.UIElements;
 
 namespace Game.Quests
 {
     /// <summary>
-    /// Item: <see cref="QuestMechanicHandlerData"/>
+    /// Item: <see cref="QuestMechanicHandler"/>
     /// </summary>
     public class QuestMechanicHandlerItem : EntityListItemElement
     {
+        private ItemIdElement idLabel;
+
         protected override IEditorsFactory EditorsFactory => QuestsEditorState.EditorsFactory;
+
+        protected override void CreateItemContentGUI(VisualElement root)
+        {
+            base.CreateItemContentGUI(root);
+
+            idLabel = root.CreateElement<ItemIdElement>();
+        }
+
+        public override void BindData(SerializedData data)
+        {
+            base.BindData(data);
+
+            idLabel.BindData(data);
+        }
     }
 }

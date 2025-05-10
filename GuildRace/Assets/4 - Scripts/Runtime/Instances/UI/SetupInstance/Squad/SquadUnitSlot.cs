@@ -1,6 +1,7 @@
-﻿using AD.ToolsCollection;
+﻿using System.Threading;
+using AD.ToolsCollection;
 using AD.UI;
-using Game.Guild;
+using Game.Inventory;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -13,14 +14,20 @@ namespace Game.Instances
         [SerializeField] private GameObject characterItem;
         [SerializeField] private UIButton selectButton;
         [Space]
+        [SerializeField] private UIText nicknameText;
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private ThreatsContainer threatsContainer;
+        [SerializeField] private ItemsGridContainer bagContainer;
+
+        private readonly CompositeDisp unitDisp = new();
+        private CancellationTokenSource ct;
 
         private InstancesVMFactory instancesVMF;
 
-        public CharacterVM CharacterVM { get; private set; }
+        public bool HasUnit => SquadUnitVM != null;
+        public SquadUnitVM SquadUnitVM { get; private set; }
 
         [Inject]
         public void Inject(InstancesVMFactory instancesVMF)
@@ -37,28 +44,47 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        public void SetCharacter(CharacterVM characterVM)
+        public async void SetSquadUnit(SquadUnitVM squadUnitVM, CompositeDisp disp)
         {
-            CharacterVM = characterVM;
+            unitDisp.Clear();
+            unitDisp.AddTo(disp);
 
-            var hasCharacter = characterVM != null;
+            var token = new CancellationTokenSource();
 
-            if (hasCharacter)
+            ct?.Cancel();
+            ct = token;
+
+            SquadUnitVM = squadUnitVM;
+
+            var hasUnit = squadUnitVM != null;
+
+            if (hasUnit)
             {
+                var characterVM = squadUnitVM.CharactedVM;
+
                 nicknameText.SetTextParams(characterVM.Nickname);
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
-                specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
+                specNameText.SetTextParams(characterVM.SpecVM.NameKey);
+
+                bagContainer.Init(squadUnitVM.BagVM, unitDisp);
+
+                await threatsContainer.Init(squadUnitVM.ResolvedThreatsVM, unitDisp, token);
             }
 
-            characterItem.SetActive(hasCharacter);
+            if (token.IsCancellationRequested)
+            {
+                return;
+            }
+
+            characterItem.SetActive(hasUnit);
         }
 
         private void SelectCallback()
         {
-            if (CharacterVM != null)
+            if (SquadUnitVM != null)
             {
-                instancesVMF.TryRemoveCharacterFromSquad(CharacterVM.Id);
+                instancesVMF.TryRemoveCharacterFromSquad(SquadUnitVM.CharactedVM.Id);
             }
         }
     }

@@ -7,6 +7,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using System.Threading;
 
 namespace Game.Inventory
 {
@@ -36,9 +37,9 @@ namespace Game.Inventory
             inventoryInputs = inputService.InventoryModule;
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             parameters.TryGetRouteValue<StackableContext>(contextKey, out var context);
 

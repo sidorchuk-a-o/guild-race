@@ -18,6 +18,7 @@ namespace Game.Instances
         [Header("Instance")]
         [SerializeField] private CanvasGroup instanceContainer;
         [SerializeField] private UIButton completeInstanceButton;
+        [SerializeField] private UIStates resultState;
         [Space]
         [SerializeField] private UIText instanceNameText;
 
@@ -49,9 +50,9 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var hasBack = parameters.HasBackRouteKey();
             var hasForcedReset = parameters.HasForceReset();
@@ -127,11 +128,21 @@ namespace Game.Instances
 
             instanceNameText.SetTextParams(activeInstanceVM.InstanceVM.NameKey);
 
+            activeInstanceVM.ResultStateVM.Value
+                .Subscribe(resultState.SetState)
+                .AddTo(instanceDisp);
+
             activeInstanceVM.IsReadyToComplete
-                .Subscribe(x => completeInstanceButton.SetInteractableState(x))
+                .Subscribe(ReadyToCompleteChangedCallback)
                 .AddTo(instanceDisp);
 
             await instanceContainer.DOFade(1, duration);
+        }
+
+        private void ReadyToCompleteChangedCallback(bool state)
+        {
+            resultState.SetActive(state);
+            completeInstanceButton.SetInteractableState(state);
         }
 
         private void CompleteInstanceCallback()

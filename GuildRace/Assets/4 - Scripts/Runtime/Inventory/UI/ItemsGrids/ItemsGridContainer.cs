@@ -17,6 +17,9 @@ namespace Game.Inventory
         [SerializeField] private RectTransform highlightArea;
         [SerializeField] private RectTransform pickedItemArea;
 
+        [Header("Cells")]
+        [SerializeField] private int cellSize = 65;
+
         private static readonly Subject<ItemsGridContainer> onInited = new();
         private static readonly Subject<ItemsGridContainer> onInteracted = new();
 
@@ -28,12 +31,14 @@ namespace Game.Inventory
         public static IObservable<ItemsGridContainer> OnInited => onInited;
         public static IObservable<ItemsGridContainer> OnInteracted => onInteracted;
 
+        public int CellSize => cellSize;
+
         public void Init(ItemsGridVM gridVM, CompositeDisp disp)
         {
             ViewModel = gridVM;
 
-            cellsContainer.Init(gridVM);
-            itemsContainer.Init(gridVM, disp);
+            cellsContainer.Init(gridVM, cellSize);
+            itemsContainer.Init(gridVM, cellSize, disp);
 
             UpdateSize();
 
@@ -46,8 +51,8 @@ namespace Game.Inventory
 
             rect.sizeDelta = new Vector2
             {
-                x = ViewModel.Bounds.size.x * RectUtils.CellSize,
-                y = ViewModel.Bounds.size.y * RectUtils.CellSize
+                x = ViewModel.Bounds.size.x * CellSize,
+                y = ViewModel.Bounds.size.y * CellSize
             };
         }
 

@@ -8,8 +8,6 @@ namespace Game.Inventory
     /// </summary>
     public class UIParamsEditor
     {
-        private PropertyElement cellSizeField;
-
         private PickupHandlersList pickupHandlersList;
         private ReleaseHandlersList placeHandlersList;
         private ReleaseHandlersList splitHandlersList;
@@ -25,7 +23,6 @@ namespace Game.Inventory
         {
             tabs.CreateTab("Drag & Drop", CreateDragAndDropTab);
             tabs.CreateTab("Options", CreateOptionsTab);
-            tabs.CreateTab("Grid", CreateGridTab);
         }
 
         private void CreateDragAndDropTab(VisualElement root, SerializedData data)
@@ -58,15 +55,6 @@ namespace Game.Inventory
             optionHandlersList = root.CreateElement<OptionHandlersList>();
             optionHandlersList.BindProperty("optionHandlers", GetData(data));
             optionHandlersList.FlexWidth(33).MarginRight(10);
-        }
-
-        private void CreateGridTab(VisualElement root, SerializedData data)
-        {
-            root.ConvertToColumn();
-
-            cellSizeField = root.CreateProperty();
-            cellSizeField.BindProperty("cellSize", GetData(data));
-            cellSizeField.MaxWidth(25, LengthUnit.Percent).MarginRight(10);
         }
     }
 }

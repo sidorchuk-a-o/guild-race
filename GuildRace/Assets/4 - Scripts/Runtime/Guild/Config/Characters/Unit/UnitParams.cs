@@ -8,10 +8,8 @@ namespace Game.Guild
     {
         [SerializeField] private float health;
         [SerializeField] private float power;
-        [SerializeField] private ResourceParams resourceParams;
 
         public float Health => health;
         public float Power => power;
-        public ResourceParams ResourceParams => resourceParams;
     }
 }

@@ -266,11 +266,10 @@ namespace Game.Guild
 
             CreateEquipItems(equipSlots, classData);
 
-            var character = new CharacterInfo(id, nickname, classData.Id, equipSlots);
+            var character = new CharacterInfo(id, nickname, classData.Id, specData.Id, equipSlots);
 
             character.Init();
             character.SetGuildRank(recruitRank.Id);
-            character.SetSpecialization(specData.Id);
 
             return new JoinRequestInfo(character, createdTime);
         }

@@ -1,16 +1,15 @@
 ﻿using AD.ToolsCollection;
-using System.Collections.Generic;
 
 namespace Game.Inventory
 {
-    public class ItemsGridsList : ListElement<ItemsGridData, ItemsGridItem>
+    public abstract class ItemsGridsList<TData> : ListElement<TData, ItemsGridItem>
+        where TData : ItemsGridData
     {
-        protected override List<Header> Headers => new()
+        public override void BindData(SerializedData data)
         {
-            new Header("RowSize", 80),
-            new Header("RowCount", 80),
-            new Header("Category", 168),
-            new Header("Cell Type")
-        };
+            showCloneButton = false;
+
+            base.BindData(data);
+        }
     }
 }

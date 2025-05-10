@@ -1,10 +1,7 @@
 ﻿using AD.ToolsCollection;
-using Game.Guild;
 using System.Collections.Generic;
-using System.Linq;
 using UniRx;
 using UnityEngine;
-using VContainer;
 
 namespace Game.Instances
 {
@@ -12,14 +9,7 @@ namespace Game.Instances
     {
         [SerializeField] private List<SquadUnitSlot> unitSlots;
 
-        private GuildVMFactory guildVMF;
-        private IdsVM squadVM;
-
-        [Inject]
-        public void Inject(GuildVMFactory guildVMF)
-        {
-            this.guildVMF = guildVMF;
-        }
+        private SquadUnitsVM squadVM;
 
         public void Init(ActiveInstanceVM activeInstanceVM, CompositeDisp disp)
         {
@@ -30,34 +20,45 @@ namespace Game.Instances
                 .AddTo(disp);
 
             squadVM.ObserveRemove()
-                .Subscribe(x => RemoveCharacterCallback(x.Value))
+                .Subscribe(x => RemoveCharacterCallback(x.Value, disp))
                 .AddTo(disp);
+
+            for (var i = 0; i < unitSlots.Count; i++)
+            {
+                var slot = unitSlots[i];
+                var squadUnitVM = squadVM.ElementAtOrDefault(i);
+
+                slot.SetSquadUnit(squadUnitVM, disp);
+                slot.SetActive(i < squadVM.MaxUnitsCount);
+            }
         }
 
         private void AddCharacterCallback(int index, CompositeDisp disp)
         {
-            var characterId = squadVM[index];
-            var characterVM = guildVMF.GetCharacter(characterId.Value);
-
-            characterVM.AddTo(disp);
+            var squadUnitVM = squadVM[index];
 
             foreach (var unitSlot in unitSlots)
             {
-                if (unitSlot.CharacterVM == null)
+                if (unitSlot.HasUnit == false)
                 {
-                    unitSlot.SetCharacter(characterVM);
+                    unitSlot.SetSquadUnit(squadUnitVM, disp);
 
                     break;
                 }
             }
         }
 
-        private void RemoveCharacterCallback(IdVM characterIdVM)
+        private void RemoveCharacterCallback(SquadUnitVM squadUnitVM, CompositeDisp disp)
         {
-            var characterId = characterIdVM.Value;
-            var unitSlot = unitSlots.FirstOrDefault(x => x.CharacterVM.Id == characterId);
+            foreach (var unitSlot in unitSlots)
+            {
+                if (unitSlot.HasUnit && unitSlot.SquadUnitVM.Id == squadUnitVM.Id)
+                {
+                    unitSlot.SetSquadUnit(null, disp);
 
-            unitSlot.SetCharacter(null);
+                    break;
+                }
+            }
         }
     }
 }

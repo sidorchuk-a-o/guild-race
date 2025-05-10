@@ -4,6 +4,7 @@ using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Game.Guild
 {
@@ -11,6 +12,7 @@ namespace Game.Guild
     {
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private LocalizeKey descKey;
+        [SerializeField] private AssetReference iconRef;
         [Space]
         [SerializeField] private EquipType armorType;
         [SerializeField] private EquipType weaponType;
@@ -21,6 +23,7 @@ namespace Game.Guild
 
         public LocalizeKey NameKey => nameKey;
         public LocalizeKey DescKey => descKey;
+        public AssetReference IconRef => iconRef;
 
         public EquipType ArmorType => armorType;
         public EquipType WeaponType => weaponType;

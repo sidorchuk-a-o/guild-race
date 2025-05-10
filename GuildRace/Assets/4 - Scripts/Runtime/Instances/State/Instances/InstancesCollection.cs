@@ -1,9 +1,8 @@
-﻿using AD.States;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Game.Instances
 {
-    public class InstancesCollection : ReactiveCollectionInfo<InstanceInfo>, IInstancesCollection
+    public class InstancesCollection : List<InstanceInfo>, IInstancesCollection
     {
         public InstancesCollection(IEnumerable<InstanceInfo> values) : base(values)
         {

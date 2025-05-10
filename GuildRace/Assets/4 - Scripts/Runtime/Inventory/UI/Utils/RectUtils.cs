@@ -4,27 +4,21 @@ namespace Game.Inventory
 {
     public static class RectUtils
     {
-        private static UIParams parameters;
-
-        public static int CellSize => parameters.CellSize;
-
-        public static void Init(UIParams parameters)
-        {
-            RectUtils.parameters = parameters;
-        }
-
         public static PositionOnGrid GetPositionOnGrid(
             in Vector2 cursorPosition,
-            RectTransform gridTransform,
+            ItemsGridContainer gridContainer,
             ItemVM itemVM)
         {
+            var cellSize = gridContainer.CellSize;
+            var gridTransform = gridContainer.transform as RectTransform;
+
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 rect: gridTransform,
                 screenPoint: cursorPosition,
                 cam: null,
                 localPoint: out var positionInGrid);
 
-            var cursorOnGrid = GetCellPosition(positionInGrid);
+            var cursorOnGrid = GetCellPosition(positionInGrid, cellSize);
 
             if (itemVM == null)
             {
@@ -38,10 +32,10 @@ namespace Game.Inventory
             {
                 var itemSize = itemVM.BoundsVM.Size;
 
-                positionInGrid.x -= (itemSize.x - 1f) * CellSize / 2f;
-                positionInGrid.y += (itemSize.y - 1f) * CellSize / 2f;
+                positionInGrid.x -= (itemSize.x - 1f) * cellSize / 2f;
+                positionInGrid.y += (itemSize.y - 1f) * cellSize / 2f;
 
-                var itemOnGrid = GetCellPosition(positionInGrid);
+                var itemOnGrid = GetCellPosition(positionInGrid, cellSize);
 
                 return new()
                 {
@@ -51,12 +45,12 @@ namespace Game.Inventory
             }
         }
 
-        private static Vector3Int GetCellPosition(in Vector2 positionInGrid)
+        private static Vector3Int GetCellPosition(in Vector2 positionInGrid, int cellSize)
         {
             return new()
             {
-                x = Mathf.FloorToInt(positionInGrid.x / CellSize),
-                y = Mathf.FloorToInt(-positionInGrid.y / CellSize)
+                x = Mathf.FloorToInt(positionInGrid.x / cellSize),
+                y = Mathf.FloorToInt(-positionInGrid.y / cellSize)
             };
         }
 
@@ -71,12 +65,12 @@ namespace Game.Inventory
             return localPosition;
         }
 
-        public static void ApplyItemBounds(this Transform transform, in BoundsInt itemBounds)
+        public static void ApplyItemBounds(this Transform transform, in BoundsInt itemBounds, int cellSize)
         {
-            ApplyItemBounds(transform as RectTransform, itemBounds);
+            ApplyItemBounds(transform as RectTransform, itemBounds, cellSize);
         }
 
-        public static void ApplyItemBounds(this RectTransform rect, in BoundsInt itemBounds)
+        public static void ApplyItemBounds(this RectTransform rect, in BoundsInt itemBounds, int cellSize)
         {
             if (rect == null)
             {
@@ -85,25 +79,25 @@ namespace Game.Inventory
 
             rect.sizeDelta = new Vector2
             {
-                x = itemBounds.size.x * CellSize,
-                y = itemBounds.size.y * CellSize
+                x = itemBounds.size.x * cellSize,
+                y = itemBounds.size.y * cellSize
             };
 
             rect.anchoredPosition = new Vector2
             {
-                x = itemBounds.x * CellSize,
-                y = -itemBounds.y * CellSize
+                x = itemBounds.x * cellSize,
+                y = -itemBounds.y * cellSize
             };
 
             rect.ForceUpdateRectTransforms();
         }
 
-        public static void ApplyItemSize(this Transform transform, in Vector3Int itemSize)
+        public static void ApplyItemSize(this Transform transform, in Vector3Int itemSize, int cellSize)
         {
-            ApplyItemSize(transform as RectTransform, itemSize);
+            ApplyItemSize(transform as RectTransform, itemSize, cellSize);
         }
 
-        public static void ApplyItemSize(this RectTransform rect, in Vector3Int itemSize)
+        public static void ApplyItemSize(this RectTransform rect, in Vector3Int itemSize, int cellSize)
         {
             if (rect == null)
             {
@@ -112,8 +106,8 @@ namespace Game.Inventory
 
             rect.sizeDelta = new Vector2
             {
-                x = itemSize.x * CellSize,
-                y = itemSize.y * CellSize
+                x = itemSize.x * cellSize,
+                y = itemSize.y * cellSize
             };
 
             rect.ForceUpdateRectTransforms();

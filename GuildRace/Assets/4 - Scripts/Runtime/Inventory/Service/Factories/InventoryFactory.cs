@@ -1,7 +1,9 @@
 ﻿using AD.ToolsCollection;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Android.Gradle.Manifest;
 using VContainer;
+using static UnityEngine.Analytics.IAnalytic;
 
 namespace Game.Inventory
 {
@@ -12,7 +14,7 @@ namespace Game.Inventory
 
         private readonly Dictionary<string, ItemsFactory> itemsFactories;
         private readonly Dictionary<string, ItemSlotsFactory> slotsFactories;
-        private readonly ItemsGridsFactory itemsGridsFactory;
+        private readonly Dictionary<string, ItemsGridsFactory> gridsFactories;
 
         public InventoryFactory(InventoryState state, InventoryConfig config, IObjectResolver resolver)
         {
@@ -21,6 +23,7 @@ namespace Game.Inventory
 
             var itemsParams = config.ItemsParams;
             var slotsParams = config.ItemSlotsParams;
+            var gridsParams = config.ItemsGridParams;
 
             itemsFactories = itemsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
             itemsFactories.ForEach(x =>
@@ -38,7 +41,13 @@ namespace Game.Inventory
                 x.Value.Init(state, config, this);
             });
 
-            itemsGridsFactory = new(state, config, this);
+            gridsFactories = gridsParams.Factories.ToDictionary(x => x.DataType.Name, x => x);
+            gridsFactories.ForEach(x =>
+            {
+                resolver.Inject(x.Value);
+
+                x.Value.Init(state, config, this);
+            });
         }
 
         // == Items ==
@@ -217,7 +226,9 @@ namespace Game.Inventory
 
         public ItemsGridInfo CreateGrid(ItemsGridData data)
         {
-            return itemsGridsFactory.CreateGrid(data);
+            var gridsFactory = GetGridsFactory(data);
+
+            return gridsFactory.CreateGrid(data);
         }
 
         public ItemsGridInfo RemoveGrid(string gridId)
@@ -227,29 +238,58 @@ namespace Game.Inventory
 
         public ItemsGridSM CreateGridSave(ItemsGridInfo info)
         {
-            return itemsGridsFactory.CreateGridSave(info);
+            var gridData = GetGridData(info.DataId);
+            var gridsFactory = GetGridsFactory(gridData);
+
+            return gridsFactory.CreateGridSave(info);
         }
 
         public ItemsGridInfo ReadGridSave(ItemsGridSM save)
         {
-            return itemsGridsFactory.ReadGridSave(save);
+            var gridData = GetGridData(save.DataId);
+            var gridsFactory = GetGridsFactory(gridData);
+
+            return gridsFactory.ReadGridSave(save);
         }
 
-        // == Items Grids ==
+        private ItemsGridData GetGridData(int gridId)
+        {
+            return config.GetGrid(gridId);
+        }
+
+        private ItemsGridsFactory GetGridsFactory(ItemsGridData gridData)
+        {
+            if (gridData == null)
+            {
+                return null;
+            }
+
+            var typeName = gridData.GetType().Name;
+
+            gridsFactories.TryGetValue(typeName, out var factory);
+
+            return factory;
+        }
+
+        // == Grids ==
 
         public IItemsGridsCollection CreateItemsGrids(IEnumerable<ItemsGridData> grids)
         {
-            return itemsGridsFactory.CreateItemsGrids(grids);
+            var values = grids.Select(CreateGrid);
+
+            return new ItemsGridsCollection(values);
         }
 
-        public ItemsGridsSM CreateItemsGridsSave(IItemsGridsCollection values)
+        public ItemsGridsSM CreateItemsGridsSave(IItemsGridsCollection grids)
         {
-            return itemsGridsFactory.CreateItemsGridsSave(values);
+            return new ItemsGridsSM(grids, this);
         }
 
         public IItemsGridsCollection ReadItemsGridsSave(ItemsGridsSM save)
         {
-            return itemsGridsFactory.ReadItemsGridsSave(save);
+            var values = save.GetCollection(this);
+
+            return new ItemsGridsCollection(values);
         }
     }
 }

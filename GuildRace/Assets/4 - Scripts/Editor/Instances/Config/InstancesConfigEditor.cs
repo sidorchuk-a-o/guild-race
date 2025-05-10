@@ -10,8 +10,9 @@ namespace Game.Instances
         private SeasonsList seasonsList;
         private InstanceTypesList instanceTypesList;
         private SquadParamsEditor squadParamsEditor;
-        private ActiveInstanceParamsEditor activeInstanceParamsEditor;
+        private CompleteChanceParamsEditor completeChanceParamsEditor;
         private ConsumablesParamsEditor consumablesParamsEditor;
+        private ThreatsList threatsList;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -20,8 +21,9 @@ namespace Game.Instances
             tabs.CreateTab("Seasons", CreateSeasonsTab);
             tabs.CreateTab("Common", CreateCommonTab);
             tabs.CreateTabs("Squad Params", CreateSquadParamsTab);
-            tabs.CreateTabs("Active Instance Params", CreateActiveInstanceParamsTab);
+            tabs.CreateTabs("Complete Chance Params", CreateCompleteChanceParamsTab);
             tabs.CreateTabs("Сonsumables Params", CreateСonsumablesParamsTab);
+            tabs.CreateTab("Threats", CreateThreatsTab);
         }
 
         private void CreateSeasonsTab(VisualElement root, SerializedData data)
@@ -46,16 +48,23 @@ namespace Game.Instances
             squadParamsEditor.CreateTabs(tabs);
         }
 
-        private void CreateActiveInstanceParamsTab(TabsContainer tabs)
+        private void CreateCompleteChanceParamsTab(TabsContainer tabs)
         {
-            activeInstanceParamsEditor = new ActiveInstanceParamsEditor();
-            activeInstanceParamsEditor.CreateTabs(tabs);
+            completeChanceParamsEditor = new CompleteChanceParamsEditor();
+            completeChanceParamsEditor.CreateTabs(tabs);
         }
 
         private void CreateСonsumablesParamsTab(TabsContainer tabs)
         {
             consumablesParamsEditor = new ConsumablesParamsEditor();
             consumablesParamsEditor.CreateTabs(tabs);
+        }
+
+        private void CreateThreatsTab(VisualElement root, SerializedData data)
+        {
+            threatsList = root.CreateElement<ThreatsList>();
+            threatsList.FlexWidth(33).MarginRight(10);
+            threatsList.BindProperty("threats", data);
         }
 
         // == Menu ==

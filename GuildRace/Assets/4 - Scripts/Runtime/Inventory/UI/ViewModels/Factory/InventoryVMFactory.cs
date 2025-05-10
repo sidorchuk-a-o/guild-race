@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using VContainer;
 
 namespace Game.Inventory
 {
@@ -14,6 +15,7 @@ namespace Game.Inventory
     {
         private readonly InventoryConfig inventoryConfig;
         private readonly IInventoryService inventoryService;
+        private readonly IObjectResolver resolver;
 
         private readonly GameObject poolsContainer;
         private readonly PoolContainer<Sprite> spritesPool;
@@ -24,11 +26,13 @@ namespace Game.Inventory
 
         public InventoryVMFactory(
             InventoryConfig inventoryConfig,
+            IInventoryService inventoryService,
             IPoolsService pools,
-            IInventoryService inventoryService)
+            IObjectResolver resolver)
         {
             this.inventoryConfig = inventoryConfig;
             this.inventoryService = inventoryService;
+            this.resolver = resolver;
 
             if (poolsContainer == null)
             {
@@ -43,11 +47,13 @@ namespace Game.Inventory
         public void SetItemsFactories(IReadOnlyList<ItemsVMFactory> itemsFactories)
         {
             itemsFactoriesDict = itemsFactories.ToDictionary(x => x.InfoType, x => x);
+            itemsFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
         public void SetItemSlotsFactories(IReadOnlyList<ItemSlotsVMFactory> slotsFactories)
         {
             slotsFactoriesDict = slotsFactories.ToDictionary(x => x.InfoType, x => x);
+            slotsFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
         // == Items ==

@@ -1,8 +1,8 @@
-﻿using AD.States;
+﻿using System.Collections.Generic;
 
 namespace Game.Guild
 {
-    public interface IGuildBankTabsCollection : IReadOnlyReactiveCollectionInfo<GuildBankTabInfo>
+    public interface IGuildBankTabsCollection : IReadOnlyCollection<GuildBankTabInfo>
     {
     }
 }

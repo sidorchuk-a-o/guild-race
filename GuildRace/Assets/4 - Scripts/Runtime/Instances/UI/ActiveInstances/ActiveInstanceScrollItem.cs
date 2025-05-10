@@ -14,11 +14,13 @@ namespace Game.Instances
     {
         [Header("Instance")]
         [SerializeField] private UIText instanceNameText;
+        [SerializeField] private UIText bossNameText;
         [SerializeField] private GameObject readyToCompleteIndicator;
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
             instanceNameText.SetTextParams(ViewModel.InstanceVM.NameKey);
+            bossNameText.SetTextParams(ViewModel.BossUnitVM.NameKey);
 
             ViewModel.IsReadyToComplete
                 .Subscribe(x => readyToCompleteIndicator.SetActive(x))

@@ -11,6 +11,7 @@ namespace Game.Guild
         private PropertyElement roleIdField;
         private PropertyElement subRoleIdField;
         private UnitParamsElement unitParamsField;
+        private AbilitiesList abilitiesList;
 
         protected override void CreateSimpleContentGUI(VisualElement root)
         {
@@ -29,6 +30,10 @@ namespace Game.Guild
             root.CreateHeader("Params");
 
             unitParamsField = root.CreateElement<UnitParamsElement>();
+
+            root.CreateHeader("Abilities");
+
+            abilitiesList = root.CreateElement<AbilitiesList>();
         }
 
         public override void BindData(SerializedData data)
@@ -39,6 +44,7 @@ namespace Game.Guild
             roleIdField.BindProperty("roleId", data);
             subRoleIdField.BindProperty("subRoleId", data);
             unitParamsField.BindProperty("unitParams", data);
+            abilitiesList.BindProperty("abilities", data);
         }
     }
 }

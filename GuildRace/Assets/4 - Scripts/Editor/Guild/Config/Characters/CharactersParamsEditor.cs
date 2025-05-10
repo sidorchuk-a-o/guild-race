@@ -8,9 +8,10 @@ namespace Game.Guild
     /// </summary>
     public class CharactersParamsEditor
     {
+        private ClassesList classesList;
         private RolesList rolesList;
         private SubRolesList subRolesList;
-        private ClassesList classesList;
+        private SubRoleThreatsList subRoleThreatsList;
 
         private static SerializedData GetData(SerializedData data)
         {
@@ -40,6 +41,11 @@ namespace Game.Guild
 
             subRolesList = root.CreateElement<SubRolesList>();
             subRolesList.BindProperty("subRoles", GetData(data));
+
+            root.CreateHeader("Sub Roles - Threats");
+
+            subRoleThreatsList = root.CreateElement<SubRoleThreatsList>();
+            subRoleThreatsList.BindProperty("subRoleThreats", GetData(data));
         }
     }
 }

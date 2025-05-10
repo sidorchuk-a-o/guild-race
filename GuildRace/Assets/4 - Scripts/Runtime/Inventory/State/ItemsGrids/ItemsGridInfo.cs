@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Inventory
 {
-    public class ItemsGridInfo : IPlacementContainer
+    public abstract class ItemsGridInfo : IPlacementContainer
     {
         private readonly ItemsCollection items;
 
@@ -27,7 +27,7 @@ namespace Game.Inventory
             CellType = data.CellType;
         }
 
-        public bool CheckPossibilityOfPlacement(ItemInfo item, in Vector3Int positionOnGrid)
+        public virtual bool CheckPossibilityOfPlacement(ItemInfo item, in Vector3Int positionOnGrid)
         {
             if (!item.CheckGridParams(this))
             {
@@ -49,7 +49,7 @@ namespace Game.Inventory
             return true;
         }
 
-        public bool TryPlaceItem(ItemInfo item, in Vector3Int positionOnGrid)
+        public virtual bool TryPlaceItem(ItemInfo item, in Vector3Int positionOnGrid)
         {
             if (!item.CheckGridParams(this))
             {
@@ -78,7 +78,7 @@ namespace Game.Inventory
             return item.CheckGridParams(this);
         }
 
-        public bool CheckPossibilityOfPlacement(ItemInfo item)
+        public virtual bool CheckPossibilityOfPlacement(ItemInfo item)
         {
             if (!item.CheckGridParams(this))
             {
@@ -132,7 +132,7 @@ namespace Game.Inventory
             return false;
         }
 
-        public bool TryPlaceItem(ItemInfo item)
+        public virtual bool TryPlaceItem(ItemInfo item)
         {
             if (PlaceItem(item))
             {
@@ -188,7 +188,7 @@ namespace Game.Inventory
             return true;
         }
 
-        public bool TryRemoveItem(ItemInfo item)
+        public virtual bool TryRemoveItem(ItemInfo item)
         {
             if (items.Contains(item))
             {

@@ -1,11 +1,13 @@
 ﻿using AD.Services.Localization;
 using AD.ToolsCollection;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Instances
 {
-    public class SeasonData : ScriptableEntity<int>
+    [Serializable]
+    public class SeasonData : Entity<int>
     {
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private List<InstanceData> instances;

@@ -1,6 +1,6 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
-using UnityEngine.AddressableAssets;
+using Cysharp.Threading.Tasks;
 
 namespace Game.Instances
 {
@@ -12,19 +12,20 @@ namespace Game.Instances
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
 
-        public AssetReference UIRef { get; }
+        public UnitsVM BossUnitsVM { get; }
 
-        public InstanceVM(InstanceInfo info)
+        public InstanceVM(InstanceInfo info, InstancesVMFactory instancesVMF)
         {
             Id = info.Id;
             Type = info.Type;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
-            UIRef = info.UIRef;
+            BossUnitsVM = new UnitsVM(info.BossUnits, instancesVMF);
         }
 
         protected override void InitSubscribes()
         {
+            BossUnitsVM.AddTo(this);
         }
     }
 }

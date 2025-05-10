@@ -58,9 +58,9 @@ namespace Game.Guild
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var hasBack = parameters.HasBackRouteKey();
             var hasForcedReset = parameters.HasForceReset();
@@ -142,6 +142,7 @@ namespace Game.Guild
 
             nicknameText.SetTextParams(characterVM.Nickname);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
+            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
             characterVM.ItemsLevel
                 .Subscribe(x => itemsLevelText.SetTextParams(x))
@@ -149,10 +150,6 @@ namespace Game.Guild
 
             characterVM.GuildRankName
                 .Subscribe(x => guildRankText.SetTextParams(x))
-                .AddTo(characterDisp);
-
-            characterVM.SpecVM
-                .Subscribe(x => specNameText.SetTextParams(x.NameKey))
                 .AddTo(characterDisp);
 
             equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);

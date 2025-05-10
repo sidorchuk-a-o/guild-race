@@ -6,8 +6,6 @@ namespace Game.Instances
     {
         public override void BindData(SerializedData data)
         {
-            headerTitle = "Instances";
-
             showAddButton = false;
             showCloneButton = false;
             showRemoveButton = false;

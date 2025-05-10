@@ -223,13 +223,15 @@ namespace Game.Inventory
 
         private void UpdateDragPreview()
         {
+            const int defaultCellSize = 65;
+
             if (selectedGridContainer != null)
             {
                 pickedGridPreview.SetParent(selectedGridContainer.PickedItemArea);
-                pickedGridPreview.ShowItem(selectedItemVM, iconStaticOn: true);
+                pickedGridPreview.ShowItem(selectedItemVM, iconStaticOn: true, selectedGridContainer.CellSize);
             }
 
-            pickedItemPreview.ShowItem(selectedItemVM, iconStaticOn: false);
+            pickedItemPreview.ShowItem(selectedItemVM, iconStaticOn: false, defaultCellSize);
         }
 
         private void UpdateItemSlots()
@@ -390,11 +392,10 @@ namespace Game.Inventory
 
             var selectedItem = pickupResult?.SelectedItemVM;
             var cursorPosition = inventoryInputs.CursorPosition;
-            var gridTransform = selectedGridContainer.transform as RectTransform;
 
             var positionOnGrid = RectUtils.GetPositionOnGrid(
                 cursorPosition: cursorPosition,
-                gridTransform: gridTransform,
+                gridContainer: selectedGridContainer,
                 itemVM: selectedItem);
 
             return positionOnGrid;

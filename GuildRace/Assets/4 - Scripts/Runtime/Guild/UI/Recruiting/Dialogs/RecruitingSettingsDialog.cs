@@ -3,6 +3,7 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -34,9 +35,9 @@ namespace Game.Guild
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             recruitingVM.AddTo(disp);
 

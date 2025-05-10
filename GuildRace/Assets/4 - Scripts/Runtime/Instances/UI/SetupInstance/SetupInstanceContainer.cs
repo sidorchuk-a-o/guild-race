@@ -1,17 +1,13 @@
-﻿using AD.Services.Localization;
+﻿using System.Threading;
+using AD.Services.Localization;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
-using Game.Inventory;
-using System.Collections.Generic;
-using System.Linq;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 using VContainer;
-using VContainer.Unity;
 
 namespace Game.Instances
 {
@@ -21,37 +17,38 @@ namespace Game.Instances
         [SerializeField] private UIText headerText;
         [SerializeField] private LocalizeKey headerKey;
 
-        [Header("Squad")]
-        [SerializeField] private CharactersTabsContainer charactersContainer;
-        [SerializeField] private SquadRolesCountersContainer rolesCountersContainer;
-        [SerializeField] private Transform squadContainerRoot;
-        [SerializeField] private List<SquadContainerParams> squadContainers;
-
-        [Header("Bag")]
+        [Header("Tabs")]
+        [SerializeField] private ContentTab[] contentTabs;
+        [SerializeField] private SquadCandidatesScrollView squadCandidatesScroll;
         [SerializeField] private GuildBankTabsContainer guildBankContainer;
-        [SerializeField] private ItemsGridContainer squadBagContainer;
+
+        [Header("Squad")]
+        [SerializeField] private SquadUnitsContainer squadUnitsContainer;
+
+        [Header("Boss Unit")]
+        [SerializeField] private UIText bossNameText;
+        [SerializeField] private ThreatsContainer bossThreatsContainer;
+        [Space]
+        [SerializeField] private UIText completeChanceText;
 
         [Header("Button")]
         [SerializeField] private UIButton backButton;
         [SerializeField] private UIButton startButton;
 
+        private GuildVMFactory guildVMF;
         private InstancesVMFactory instancesVMF;
-        private IObjectResolver resolver;
 
-        private ActiveInstanceVM activeInstanceVM;
+        private ContentTab currentTab;
 
+        private ActiveInstanceVM setupInstanceVM;
+        private SquadCandidatesVM squadCandidatesVM;
         private GuildBankTabsVM bankTabsVM;
-        private IReadOnlyList<RoleTabVM> roleTabsVM;
-
-        private SquadUnitsContainer squadUnitsContainer;
 
         [Inject]
-        public void Inject(InstancesVMFactory instancesVMF, GuildVMFactory guildVMF, IObjectResolver resolver)
+        public void Inject(GuildVMFactory guildVMF, InstancesVMFactory instancesVMF)
         {
+            this.guildVMF = guildVMF;
             this.instancesVMF = instancesVMF;
-            this.resolver = resolver;
-
-            bankTabsVM = guildVMF.GetGuildBankTabs();
         }
 
         private void Awake()
@@ -63,60 +60,97 @@ namespace Game.Instances
             startButton.OnClick
                 .Subscribe(StartCallback)
                 .AddTo(this);
+
+            for (var i = 0; i < contentTabs.Length; i++)
+            {
+                var contentTab = contentTabs[i];
+
+                contentTab.OnClick
+                    .Subscribe(SelectTabCallback)
+                    .AddTo(this);
+
+                var firstTab = i == 0;
+
+                if (firstTab)
+                {
+                    currentTab = contentTab;
+                }
+
+                contentTab.SetContentState(firstTab);
+            }
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var hasForcedReset = parameters.HasForceReset();
 
-            activeInstanceVM = instancesVMF.GetSetupInstance();
-            activeInstanceVM.AddTo(disp);
+            setupInstanceVM = instancesVMF.GetSetupInstance();
+            setupInstanceVM.AddTo(disp);
+
+            squadCandidatesVM = instancesVMF.GetSquadCandidates();
+            squadCandidatesVM.AddTo(disp);
+
+            bankTabsVM = guildVMF.GetGuildBankTabs();
+            bankTabsVM.AddTo(disp);
 
             // upd params
-
-            var headerKey = activeInstanceVM.InstanceVM.NameKey;
+            var headerKey = setupInstanceVM.InstanceVM.NameKey;
             var headerData = new UITextData(this.headerKey, headerKey);
 
             headerText.SetTextParams(headerData);
 
             // characters
+            squadCandidatesScroll.Init(squadCandidatesVM, true);
 
-            roleTabsVM = instancesVMF.GetCharactersByRoles();
-            roleTabsVM.ForEach(tab => tab.AddTo(disp));
-
-            charactersContainer.Init(roleTabsVM, activeInstanceVM, disp);
-            rolesCountersContainer.Init(activeInstanceVM, disp);
-
-            SpawnSquadContainer(disp);
+            squadCandidatesScroll.OnSelect
+                .Subscribe(SelectCharacterCallback)
+                .AddTo(disp);
 
             // guild bank
-
-            bankTabsVM.AddTo(disp);
-
             guildBankContainer.Init(bankTabsVM, disp, hasForcedReset);
-            squadBagContainer.Init(activeInstanceVM.BagVM, disp);
+
+            // squad
+            squadUnitsContainer.Init(setupInstanceVM, disp);
+
+            // boss
+            bossNameText.SetTextParams(setupInstanceVM.BossUnitVM.NameKey);
+
+            setupInstanceVM.CompleteChance
+                .Subscribe(x => completeChanceText.SetTextParams(x))
+                .AddTo(disp);
+
+            await bossThreatsContainer.Init(setupInstanceVM.ThreatsVM, disp, ct);
         }
 
-        private void SpawnSquadContainer(CompositeDisp disp)
+        private void SelectTabCallback(ContentTab contentTab)
         {
-            var instanceType = activeInstanceVM.InstanceVM.Type;
-            var containerParams = squadContainers.FirstOrDefault(x => x.Type == instanceType);
+            if (currentTab == contentTab)
+            {
+                return;
+            }
 
-            var prefab = containerParams.SquadPrefab;
+            currentTab.SetContentState(false);
+            currentTab = contentTab;
+            currentTab.SetContentState(true);
+        }
 
-            squadUnitsContainer = Instantiate(prefab, squadContainerRoot);
-            squadUnitsContainer.transform.SetAsFirstSibling();
-
-            resolver.InjectGameObject(squadUnitsContainer.gameObject);
-
-            squadUnitsContainer.Init(activeInstanceVM, disp);
+        private void SelectCharacterCallback(SquadCandidateVM squadCandidateVM)
+        {
+            if (squadCandidateVM.CharacterVM.HasInstance)
+            {
+                instancesVMF.TryRemoveCharacterFromSquad(squadCandidateVM.CharacterVM.Id);
+            }
+            else
+            {
+                instancesVMF.TryAddCharacterToSquad(squadCandidateVM.CharacterVM.Id);
+            }
         }
 
         private void BackCallback()
         {
-            Router.Back(LoadingScreenKeys.loading);
+            Router.Push(RouteKeys.Hub.selectInstance, LoadingScreenKeys.loading);
         }
 
         private async void StartCallback()
@@ -139,8 +173,6 @@ namespace Game.Instances
             base.DisableElement();
 
             instancesVMF.CancelSetupInstance();
-
-            Destroy(squadUnitsContainer.gameObject);
         }
     }
 }

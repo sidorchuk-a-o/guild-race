@@ -8,7 +8,8 @@ namespace Game.Inventory
     /// <summary>
     /// Item: <see cref="ItemsGridData"/>
     /// </summary>
-    public class ItemsGridElement : Element
+    public class ItemsGridElement<TData> : Element
+        where TData : ItemsGridData
     {
         private Label m_Label;
 
@@ -53,10 +54,12 @@ namespace Game.Inventory
 
         private void TryCreateGrid(SerializedData data)
         {
+            var dataType = GetType().GenericTypeArguments[0];
+
             if (data.GetValue() == null)
             {
                 var saveMeta = new SaveMeta(isSubObject: true, data);
-                var gridData = DataFactory.Create<ItemsGridData>(saveMeta);
+                var gridData = DataFactory.Create(dataType, saveMeta);
 
                 data.SetValue(gridData);
             }

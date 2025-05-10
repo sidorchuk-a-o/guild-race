@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Instances
 {
-    public class ActiveInstancesScrollView : VMScrollView<ActiveInstanceVM>
+    public class ActiveInstancesScrollView : VMReactiveScrollView<ActiveInstanceVM>
     {
         [SerializeField] private RectTransform instanceItemPrefab;
 

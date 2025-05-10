@@ -7,7 +7,6 @@ namespace Game.Instances
     public class SquadEditor : Editor
     {
         private PropertyElement maxUnitsCountField;
-        private SquadRolesList rolesList;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -21,9 +20,6 @@ namespace Game.Instances
         {
             maxUnitsCountField = root.CreateProperty();
             maxUnitsCountField.BindProperty("maxUnitsCount", data);
-
-            rolesList = root.CreateElement<SquadRolesList>();
-            rolesList.BindProperty("roles", data);
         }
 
         public override void BindData(SerializedData data)

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
@@ -69,9 +70,9 @@ namespace Game.Guild
             }
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             var emblemEM = new EmblemEM
             {

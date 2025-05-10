@@ -3,7 +3,6 @@ using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
-using System.Collections.Generic;
 using System.Linq;
 using VContainer;
 
@@ -11,34 +10,35 @@ namespace Game.Instances
 {
     public class InstancesVMFactory : VMFactory
     {
-        private readonly GuildConfig guildConfig;
-        private readonly InstancesConfig instancesConfig;
-
-        private readonly IRouterService router;
         private readonly IInstancesService instancesService;
-        private readonly IGuildService guildService;
         private readonly IObjectResolver resolver;
 
         private GuildVMFactory guildVMF;
         private InventoryVMFactory inventoryVMF;
 
-        public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
+        public InstancesConfig InstancesConfig { get; }
+
         public GuildVMFactory GuildVMF => guildVMF ??= resolver.Resolve<GuildVMFactory>();
+        public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
 
         public InstancesVMFactory(
-            IRouterService router,
-            IInstancesService instancesService,
-            IGuildService guildService,
             InstancesConfig instancesConfig,
-            GuildConfig guildConfig,
+            IInstancesService instancesService,
             IObjectResolver resolver)
         {
-            this.router = router;
             this.instancesService = instancesService;
-            this.guildService = guildService;
-            this.instancesConfig = instancesConfig;
-            this.guildConfig = guildConfig;
             this.resolver = resolver;
+
+            InstancesConfig = instancesConfig;
+        }
+
+        // == Consumables ==
+
+        public ConsumableMechanicVM GetConsumableMechanic(int mechanicId)
+        {
+            var mechanic = instancesService.GetMechanicHandler(mechanicId);
+
+            return new ConsumableMechanicVM(mechanic);
         }
 
         // == Season ==
@@ -47,7 +47,7 @@ namespace Game.Instances
         {
             var firstSeason = instancesService.Seasons.FirstOrDefault();
 
-            return new SeasonVM(firstSeason);
+            return new SeasonVM(firstSeason, this);
         }
 
         // == Instance ==
@@ -61,7 +61,7 @@ namespace Game.Instances
 
         public InstanceVM GetInstance(InstanceInfo instance)
         {
-            return new InstanceVM(instance);
+            return new InstanceVM(instance, this);
         }
 
         public ActiveInstanceVM GetActiveInstance(string activeInstanceId)
@@ -74,23 +74,13 @@ namespace Game.Instances
             var activeInstance = FindActiveInstance(activeInstanceId);
 
             return activeInstance != null
-                ? new ActiveInstanceVM(activeInstance, this, InventoryVMF)
+                ? new ActiveInstanceVM(activeInstance, this)
                 : null;
         }
 
         public ActiveInstancesVM GetActiveInstances()
         {
-            return new ActiveInstancesVM(instancesService.ActiveInstances, this, InventoryVMF);
-        }
-
-        public SquadRolesCountersVM GetRolesCounters(string activeInstanceId)
-        {
-            var activeInstance = FindActiveInstance(activeInstanceId);
-
-            var instanceType = activeInstance.Instance.Type;
-            var squadData = instancesConfig.SquadParams.GetSquadParams(instanceType);
-
-            return new SquadRolesCountersVM(squadData, activeInstance, GuildVMF);
+            return new ActiveInstancesVM(instancesService.ActiveInstances, this);
         }
 
         private ActiveInstanceInfo FindActiveInstance(string activeInstanceId)
@@ -109,9 +99,9 @@ namespace Game.Instances
 
         // == Setup Instance ==
 
-        public async UniTask StartSetupInstance(int instanceId)
+        public async UniTask StartSetupInstance(SetupInstanceArgs args)
         {
-            await instancesService.StartSetupInstance(instanceId);
+            await instancesService.StartSetupInstance(args);
         }
 
         public void TryAddCharacterToSquad(string characterId)
@@ -143,49 +133,19 @@ namespace Game.Instances
         {
             var activeInstance = instancesService.SetupInstance;
 
-            return new ActiveInstanceVM(activeInstance, this, InventoryVMF);
+            return new ActiveInstanceVM(activeInstance, this);
         }
 
-        // == Characters ==
-
-        public IReadOnlyList<RoleTabVM> GetCharactersByRoles()
+        public SquadCandidatesVM GetSquadCandidates()
         {
-            var roles = guildConfig.CharactersParams.Roles;
-            var characters = guildService.Characters;
+            var candidates = instancesService.GetSquadCandidates();
 
-            var charactersByRole = characters
-                .GroupBy(GetCharacterRole)
-                .Select(x => (roleId: x.Key, characters: CreateCollection(x)))
-                .ToListPool();
-
-            var roleTabsVM = roles
-                .Select(role => GetRoleTab(role, charactersByRole))
-                .ToList();
-
-            charactersByRole.ReleaseListPool();
-
-            return roleTabsVM;
+            return new SquadCandidatesVM(candidates, this);
         }
 
-        private RoleId GetCharacterRole(CharacterInfo info)
+        public UnitVM GetUnit(UnitInfo unit)
         {
-            var charactersParams = guildConfig.CharactersParams;
-            var specData = charactersParams.GetSpecialization(info.SpecId.Value);
-
-            return specData.RoleId;
-        }
-
-        private static CharactersCollection CreateCollection(IEnumerable<CharacterInfo> characters)
-        {
-            return new CharactersCollection(characters.OrderBy(x => x.HasInstance));
-        }
-
-        private RoleTabVM GetRoleTab(RoleData role, List<(RoleId roleId, CharactersCollection characters)> charactersByRole)
-        {
-            var characters = charactersByRole.FirstOrDefault(x => x.roleId == role.Id).characters;
-            var charactersVM = new CharactersVM(characters ?? new(null), GuildVMF, InventoryVMF, this);
-
-            return new RoleTabVM(role, charactersVM);
+            return new UnitVM(unit, this);
         }
     }
 }

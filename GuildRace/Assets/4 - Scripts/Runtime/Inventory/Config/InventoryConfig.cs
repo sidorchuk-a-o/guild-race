@@ -32,11 +32,6 @@ namespace Game.Inventory
 
         public UIParams UIParams => uiParams;
 
-        private void OnEnable()
-        {
-            uiParams.OnEnable();
-        }
-
         public ItemData GetItem(int id)
         {
             itemsCache ??= items.ToDictionary(x => x.Id, x => x);

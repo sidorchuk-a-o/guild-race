@@ -1,5 +1,6 @@
-﻿using AD.Services.Localization;
-using UnityEngine.AddressableAssets;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AD.Services.Localization;
 
 namespace Game.Instances
 {
@@ -11,17 +12,20 @@ namespace Game.Instances
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
 
-        public AssetReference MapRef { get; }
-        public AssetReference UIRef { get; }
+        public UnitInfo[] BossUnits { get; }
 
-        public InstanceInfo(InstanceData data)
+        public InstanceInfo(InstanceData data, IEnumerable<UnitInfo> bossUnits)
         {
             Id = data.Id;
             Type = data.Type;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
-            MapRef = data.MapRef;
-            UIRef = data.UIRef;
+            BossUnits = bossUnits.ToArray();
+        }
+
+        public UnitInfo GetBossUnit(int id)
+        {
+            return BossUnits.FirstOrDefault(x => x.Id == id);
         }
     }
 }

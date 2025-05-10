@@ -22,16 +22,16 @@ namespace Game.Inventory
             disp.Clear();
         }
 
-        public void ShowItem(ItemVM itemVM, bool iconStaticOn)
+        public void ShowItem(ItemVM itemVM, bool iconStaticOn, int cellSize)
         {
             if (iconStaticOn)
             {
-                transform.ApplyItemBounds(itemVM.BoundsVM.Value);
+                transform.ApplyItemBounds(itemVM.BoundsVM.Value, cellSize);
             }
             else
             {
                 itemVM.BoundsVM.ObserveValue()
-                    .Subscribe(x => transform.ApplyItemSize(x.size))
+                    .Subscribe(x => transform.ApplyItemSize(x.size, cellSize))
                     .AddTo(disp);
             }
 

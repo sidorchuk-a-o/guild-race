@@ -15,10 +15,12 @@ namespace Game.Craft
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "craft-data";
-        public override string SheetRange => "A2:D";
+        public override string SheetRange => "A2:F";
 
         protected override async void SaveCallback()
         {
+            LockWizard();
+
             recipeImporter ??= new(SheetId, "craft", "A:P", typeof(RecipeData));
 
             await recipeImporter.LoadData("ID");
@@ -32,9 +34,11 @@ namespace Game.Craft
 
             var nameKey = row["Name Key"].LocalizeKeyParse();
             var descKey = row["Desc Key"].LocalizeKeyParse();
+            var iconRef = row["Icon Name"].AddressableFileParse();
 
             vendorData.GetProperty("nameKey").SetValue(nameKey);
             vendorData.GetProperty("descKey").SetValue(descKey);
+            vendorData.GetProperty("iconRef").SetValue(iconRef);
 
             ImportRecipes(vendorData);
         }

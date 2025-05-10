@@ -68,12 +68,12 @@ namespace Game.Guild
         [MenuItem("Game Services/Game/Guild")]
         public static GuildConfigEditor GoToEditor()
         {
-            return GoToEditor<GuildConfigEditor>(width: 500);
+            return GoToEditor<GuildConfigEditor>(width: 500, height: 750);
         }
 
         public static GuildConfigEditor GoToEditor(GuildConfig config)
         {
-            return GoToEditor<GuildConfigEditor>(config, width: 500);
+            return GoToEditor<GuildConfigEditor>(config, width: 500, height: 750);
         }
     }
 }

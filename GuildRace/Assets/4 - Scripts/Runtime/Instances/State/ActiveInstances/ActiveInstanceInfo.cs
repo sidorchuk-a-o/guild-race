@@ -1,50 +1,82 @@
-﻿using Game.Inventory;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using AD.ToolsCollection;
 using UniRx;
 
 namespace Game.Instances
 {
     public class ActiveInstanceInfo : IEquatable<ActiveInstanceInfo>
     {
-        private readonly IdsCollection squad;
+        private readonly ThreatCollection threats;
+        private readonly SquadUnitsCollection squad;
+        private readonly ReactiveProperty<CompleteResult> completeResult = new();
+        private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
 
         public string Id { get; }
+
+        public UnitInfo BossUnit { get; }
         public InstanceInfo Instance { get; }
 
-        public ItemsGridInfo Bag { get; }
-        public IIdsCollection Squad => squad;
+        public IThreatCollection Threats => threats;
+        public ISquadUnitsCollection Squad => squad;
 
         public long StartTime { get; private set; }
+
+        public IReadOnlyReactiveProperty<float> CompleteChance => completeChance;
+        public IReadOnlyReactiveProperty<CompleteResult> Result => completeResult;
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete => isReadyToComplete;
 
-        public ActiveInstanceInfo(
-            string id,
-            InstanceInfo inst,
-            ItemsGridInfo bag,
-            IEnumerable<string> squad)
+        public ActiveInstanceInfo(string id, InstanceInfo inst, UnitInfo bossUnit, IEnumerable<SquadUnitInfo> squad)
         {
             Id = id;
             Instance = inst;
-            Bag = bag;
+            BossUnit = bossUnit;
 
             this.squad = new(squad);
+
+            threats = new(bossUnit.Threats.Select(x => new ThreatInfo(x)));
         }
 
-        public void AddCharacter(string characterId)
+        public void AddUnit(SquadUnitInfo squadUnit)
         {
-            squad.Add(characterId);
+            squad.Add(squadUnit);
         }
 
-        public void RemoveCharacter(string characterId)
+        public void RemoveUnit(SquadUnitInfo squadUnit)
         {
-            squad.Remove(characterId);
+            squad.Remove(squadUnit);
+        }
+
+        public void ApplyResolveThreats(IEnumerable<ThreatId> resolvedThreats)
+        {
+            var threatGroups = resolvedThreats.GroupBy(x => x).ToListPool();
+
+            foreach (var threat in threats)
+            {
+                var threatGroup = threatGroups.FirstOrDefault(x => x.Key == threat.Id);
+                var resolveCount = threatGroup == null ? 0 : threatGroup.Count();
+
+                threat.SetResolveCount(resolveCount);
+            }
+
+            threatGroups.ReleaseListPool();
         }
 
         public void SetStartTime(long value)
         {
             StartTime = value;
+        }
+
+        public void SetCompleteChance(float value)
+        {
+            completeChance.Value = value;
+        }
+
+        public void SetResult(CompleteResult value)
+        {
+            completeResult.Value = value;
         }
 
         public void MarAsReadyToComplete()

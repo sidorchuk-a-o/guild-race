@@ -24,13 +24,10 @@ namespace Game.Guild
         {
             nicknameText.SetTextParams(ViewModel.Nickname);
             classNameText.SetTextParams(ViewModel.ClassVM.NameKey);
+            specNameText.SetTextParams(ViewModel.SpecVM.NameKey);
 
             ViewModel.ItemsLevel
                 .Subscribe(x => itemsLevelText.SetTextParams(x))
-                .AddTo(disp);
-
-            ViewModel.SpecVM
-                .Subscribe(x => specNameText.SetTextParams(x.NameKey))
                 .AddTo(disp);
 
             if (guildRankText)

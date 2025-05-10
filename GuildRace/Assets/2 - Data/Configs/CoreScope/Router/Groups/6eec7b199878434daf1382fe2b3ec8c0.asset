@@ -131,6 +131,33 @@ MonoBehaviour:
   title: Hub
   routes:
   - {fileID: -1523697382088787619}
+--- !u!114 &71003467469975860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: SelectInstance
+  m_EditorClassIdentifier: 
+  id: e97c497eb0974668a785bf5efc25439e
+  title: SelectInstance
+  path: SelectInstance
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 4f40dd57df964c73b96fdd89445ed0ad
+    title: default
+    asset:
+      m_AssetGUID: 5e686cd55de35e14080d0f5484587a55
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
 --- !u!114 &618499627384911689
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,7 +184,9 @@ MonoBehaviour:
       m_SubObjectGUID: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
-  children: []
+  children:
+  - {fileID: 71003467469975860}
+  - {fileID: 5793868098388492597}
 --- !u!114 &941076224696289187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,6 +236,33 @@ MonoBehaviour:
     title: default
     asset:
       m_AssetGUID: c80f8865f713b5749bca6e993b2e5c6a
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &5793868098388492597
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: SelectBoss
+  m_EditorClassIdentifier: 
+  id: 9c2466edba7e4b07b38fca42de83a4d6
+  title: SelectBoss
+  path: SelectBoss
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 27bccdbe69634eefba6b73a9c146f09e
+    title: default
+    asset:
+      m_AssetGUID: f514723b62c0626489727f0a653d9a7a
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 

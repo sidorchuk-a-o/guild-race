@@ -9,7 +9,7 @@ namespace Game.Instances
     /// </summary>
     public class SquadParamsEditor
     {
-        private ItemsGridElement bagEditor;
+        private ItemsGridElement<UnitBagData> bagEditor;
         private SquadsList squadsList;
 
         private SerializedData GetData(SerializedData data)
@@ -30,10 +30,10 @@ namespace Game.Instances
             squadsList.FlexWidth(33).MarginRight(10);
             squadsList.BindProperty("squads", GetData(data));
 
-            bagEditor = root.CreateElement<ItemsGridElement>();
+            bagEditor = root.CreateElement<ItemsGridElement<UnitBagData>>();
             bagEditor.FlexWidth(33).MarginRight(10);
             bagEditor.BindProperty("bag", GetData(data));
-            bagEditor.label = "Squad Bag Params";
+            bagEditor.label = "Unit Bag Params";
         }
     }
 }

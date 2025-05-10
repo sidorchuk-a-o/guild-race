@@ -47,9 +47,9 @@ namespace Game.Craft
                 .AddTo(this);
         }
 
-        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp)
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(parameters, disp);
+            await base.Init(parameters, disp, ct);
 
             vendorsTabsContainer.Init(disp);
 

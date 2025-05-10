@@ -2,7 +2,7 @@
 
 namespace Game.Quests
 {
-    public class QuestsVM : VMCollection<QuestInfo, QuestVM>
+    public class QuestsVM : VMReactiveCollection<QuestInfo, QuestVM>
     {
         private readonly QuestsVMFactory questsVMF;
 

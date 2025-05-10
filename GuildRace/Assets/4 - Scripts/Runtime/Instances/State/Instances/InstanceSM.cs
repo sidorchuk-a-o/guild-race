@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Linq;
+using Newtonsoft.Json;
 
 namespace Game.Instances
 {
@@ -6,17 +7,32 @@ namespace Game.Instances
     public class InstanceSM
     {
         [ES3Serializable] private int id;
+        [ES3Serializable] private UnitSM[] unitsSM;
 
         public InstanceSM(InstanceInfo info)
         {
             id = info.Id;
+            unitsSM = info.BossUnits.Select(x => new UnitSM(x)).ToArray();
         }
 
-        public InstanceInfo GetValue(InstancesConfig config)
+        public InstanceInfo GetValue(InstancesConfig instanceConfig)
         {
-            var data = config.GetInstance(id);
+            var data = instanceConfig.GetInstance(id);
 
-            return new(data);
+            var bossUnits = data.BoosUnits
+                .Select(x => GetUnit(x, instanceConfig))
+                .Where(x => x != null);
+
+            return new(data, bossUnits);
+        }
+
+        private UnitInfo GetUnit(UnitData data, InstancesConfig instanceConfig)
+        {
+            var unitSM = unitsSM.FirstOrDefault(x => x.Id == data.Id);
+
+            return unitSM != null
+                ? unitSM.GetValue(data)
+                : new UnitInfo(data);
         }
     }
 }

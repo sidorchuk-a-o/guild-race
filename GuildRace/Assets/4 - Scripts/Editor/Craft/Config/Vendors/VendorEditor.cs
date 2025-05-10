@@ -1,4 +1,5 @@
 ﻿using AD.ToolsCollection;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Game.Craft
@@ -8,6 +9,7 @@ namespace Game.Craft
     {
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
+        private AddressableElement<Sprite> iconRefField;
         private RecipesList recipesList;
 
         protected override void CreateTabItems(TabsContainer tabs)
@@ -27,6 +29,9 @@ namespace Game.Craft
 
             descKeyField = root.CreateProperty();
             descKeyField.BindProperty("descKey", data);
+
+            iconRefField = root.CreateAddressable<Sprite>();
+            iconRefField.BindProperty("iconRef", data);
 
             root.CreateHeader("Recipes");
 

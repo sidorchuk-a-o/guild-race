@@ -61,7 +61,7 @@ namespace Game.Guild
             nicknameText.SetTextParams(characterVM.Nickname);
             itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
-            specNameText.SetTextParams(characterVM.SpecVM.Value.NameKey);
+            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
             declineButton.SetInteractableState(ViewModel.IsDefault == false);
 

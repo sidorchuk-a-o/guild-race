@@ -9,9 +9,9 @@ namespace Game.Inventory
 
         protected InventoryState State { get; private set; }
         protected InventoryConfig Config { get; private set; }
-        protected InventoryFactory InventoryFactory { get; private set; }
+        protected IInventoryFactory InventoryFactory { get; private set; }
 
-        public void Init(InventoryState state, InventoryConfig config, InventoryFactory inventoryFactory)
+        public void Init(InventoryState state, InventoryConfig config, IInventoryFactory inventoryFactory)
         {
             State = state;
             Config = config;
@@ -38,6 +38,11 @@ namespace Game.Inventory
 
         public ItemSlotInfo ReadSave(ItemSlotSM save)
         {
+            if (save == null)
+            {
+                return null;
+            }
+
             var data = Config.GetSlot(save.DataId);
             var info = ReadSave(data, save);
 

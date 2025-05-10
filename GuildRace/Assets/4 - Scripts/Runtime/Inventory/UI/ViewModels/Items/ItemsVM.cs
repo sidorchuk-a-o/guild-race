@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Inventory
 {
-    public class ItemsVM : VMCollection<ItemInfo, ItemVM>
+    public class ItemsVM : VMReactiveCollection<ItemInfo, ItemVM>
     {
         private readonly InventoryVMFactory inventoryVMF;
 

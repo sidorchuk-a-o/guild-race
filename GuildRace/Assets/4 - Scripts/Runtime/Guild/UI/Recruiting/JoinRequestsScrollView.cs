@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Guild
 {
-    public class JoinRequestsScrollView : VMScrollView<JoinRequestVM>
+    public class JoinRequestsScrollView : VMReactiveScrollView<JoinRequestVM>
     {
         [Header("Prefab")]
         [SerializeField] private RectTransform requestItemPrefab;

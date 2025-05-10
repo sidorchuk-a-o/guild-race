@@ -9,16 +9,11 @@ namespace Game.Guild
     {
         private PropertyElement healthField;
         private PropertyElement powerField;
-        private ResourceParamsElement resourceParamsField;
 
         protected override void CreateElementGUI(Element root)
         {
             healthField = root.CreateProperty();
             powerField = root.CreateProperty();
-
-            root.CreateSpace();
-
-            resourceParamsField = root.CreateElement<ResourceParamsElement>();
         }
 
         public override void BindData(SerializedData data)
@@ -27,7 +22,6 @@ namespace Game.Guild
 
             healthField.BindProperty("health", data);
             powerField.BindProperty("power", data);
-            resourceParamsField.BindProperty("resourceParams", data);
         }
     }
 }

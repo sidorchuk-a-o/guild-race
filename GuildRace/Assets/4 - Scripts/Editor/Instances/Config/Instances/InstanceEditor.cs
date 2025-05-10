@@ -10,12 +10,9 @@ namespace Game.Instances
         private PropertyElement typeField;
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
-
-        private AddressableElement<GameObject> mapRefField;
-        private AddressableElement<GameObject> uiRefField;
+        private AddressableElement<Sprite> imageRefField;
 
         private UnitsList boosUnitsList;
-        private UnitsList trashUnitsList;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -40,25 +37,14 @@ namespace Game.Instances
             descKeyField = root.CreateProperty();
             descKeyField.BindProperty("descKey", data);
 
-            root.CreateHeader("Map Logic");
-
-            mapRefField = root.CreateAddressable<GameObject>();
-            mapRefField.BindProperty("mapRef", data);
-
-            uiRefField = root.CreateAddressable<GameObject>();
-            uiRefField.BindProperty("uiRef", data);
+            imageRefField = root.CreateAddressable<Sprite>();
+            imageRefField.BindProperty("imageRef", data);
 
             root.CreateHeader("Boos Units");
 
             boosUnitsList = root.CreateElement<UnitsList>();
             boosUnitsList.BindProperty("boosUnits", data);
             boosUnitsList.headerTitle = string.Empty;
-
-            root.CreateHeader("Trash Units");
-
-            trashUnitsList = root.CreateElement<UnitsList>();
-            trashUnitsList.BindProperty("trashUnits", data);
-            trashUnitsList.headerTitle = string.Empty;
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using VContainer;
 
 namespace Game.Inventory
 {
@@ -10,17 +9,9 @@ namespace Game.Inventory
     {
         [SerializeField] private GridCell cellPrefab;
 
-        private UIParams config;
-
         private readonly List<GridCell> cells = new();
 
-        [Inject]
-        public void Inject(InventoryConfig config)
-        {
-            this.config = config.UIParams;
-        }
-
-        public void Init(ItemsGridVM gridVM)
+        public void Init(ItemsGridVM gridVM, int cellSize)
         {
             var i = 0;
 
@@ -48,8 +39,8 @@ namespace Game.Inventory
 
                         cellRect.anchoredPosition = new()
                         {
-                            x = w * config.CellSize,
-                            y = -h * config.CellSize
+                            x = w * cellSize,
+                            y = -h * cellSize
                         };
 
                         cell.SetActive(true);
