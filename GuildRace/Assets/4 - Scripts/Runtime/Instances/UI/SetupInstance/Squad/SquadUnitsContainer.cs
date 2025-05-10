@@ -26,8 +26,9 @@ namespace Game.Instances
             for (var i = 0; i < unitSlots.Count; i++)
             {
                 var slot = unitSlots[i];
+                var squadUnitVM = squadVM.ElementAtOrDefault(i);
 
-                slot.SetSquadUnit(null, disp);
+                slot.SetSquadUnit(squadUnitVM, disp);
                 slot.SetActive(i < squadVM.MaxUnitsCount);
             }
         }

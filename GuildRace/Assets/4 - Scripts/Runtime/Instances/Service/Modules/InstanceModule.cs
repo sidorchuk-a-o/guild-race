@@ -6,6 +6,7 @@ using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using UniRx;
 using UnityEngine;
 using CharacterInfo = Game.Guild.CharacterInfo;
 
@@ -21,6 +22,9 @@ namespace Game.Instances
         private readonly IRouterService router;
         private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
+        private readonly IInstancesService instancesService;
+
+        private readonly Dictionary<string, CompositeDisp> unitBagDispCache = new();
 
         public InstanceModule(
             InstancesState state,
@@ -28,7 +32,8 @@ namespace Game.Instances
             InstancesConfig instancesConfig,
             IRouterService router,
             IGuildService guildService,
-            IInventoryService inventoryService)
+            IInventoryService inventoryService,
+            IInstancesService instancesService)
         {
             this.state = state;
             this.guildConfig = guildConfig;
@@ -36,6 +41,7 @@ namespace Game.Instances
             this.router = router;
             this.guildService = guildService;
             this.inventoryService = inventoryService;
+            this.instancesService = instancesService;
         }
 
         public async UniTask StartSetupInstance(SetupInstanceArgs args)
@@ -117,6 +123,17 @@ namespace Game.Instances
             UpdateCompleteChance();
 
             state.MarkAsDirty();
+
+            // bag
+            var unitBag = squadUnit.Bag;
+            var unitBagDisp = new CompositeDisp();
+
+            unitBag.Items
+                .ObserveCountChanged()
+                .Subscribe(UpdateCompleteChance)
+                .AddTo(unitBagDisp);
+
+            unitBagDispCache[unitBag.Id] = unitBagDisp;
         }
 
         public void TryRemoveCharacterFromSquad(string characterId)
@@ -196,15 +213,13 @@ namespace Game.Instances
                 return resolveChance;
             }
 
-            // consumables chance
-
-
             // squad data
             var healthMod = chanceParams.HealthMod;
             var powerMod = chanceParams.PowerMod;
 
-            var squadData = setupInstance.Squad.Aggregate(new SquadData(), (data, unit) =>
+            var squadData = setupInstance.Squad.Aggregate(new SquadChanceParams(setupInstance), (data, unit) =>
             {
+                // character
                 var character = guildService.Characters[unit.CharactedId];
                 var specData = guildConfig.CharactersParams.GetSpecialization(character.SpecId);
 
@@ -223,6 +238,18 @@ namespace Game.Instances
 
                 equipItems.ReleaseListPool();
 
+                // Consumables
+                var consumableItems = unit.Bag.Items
+                    .OfType<ConsumablesItemInfo>();
+
+                foreach (var consumableItem in consumableItems)
+                {
+                    var mechanicId = consumableItem.MechanicId;
+                    var mechanicHandler = instancesService.GetMechanicHandler(mechanicId);
+
+                    mechanicHandler.Invoke(consumableItem, data);
+                }
+
                 return data;
             });
 
@@ -235,7 +262,7 @@ namespace Game.Instances
             var powerChance = (int)((squadData.Power - bossPower) / powerMod.CharactersMod) * powerMod.TotalMod;
 
             // chance
-            var chance = squadCountChance + resolvedThreatsChance + healthChance + powerChance;
+            var chance = squadCountChance + resolvedThreatsChance + healthChance + powerChance + squadData.ConsumableChance;
 
             setupInstance.SetCompleteChance(chance / 100f);
         }
@@ -311,6 +338,11 @@ namespace Game.Instances
 
         private void ResetUnitBag(ItemsGridInfo bag)
         {
+            if (unitBagDispCache.Remove(bag.Id, out var disp))
+            {
+                disp.Clear();
+            }
+
             var bagCellType = instancesConfig.SquadParams.Bag.CellType;
             var guildTab = guildService.BankTabs.FirstOrDefault(x => x.Grid.CellType == bagCellType);
 
@@ -322,12 +354,6 @@ namespace Game.Instances
                     PlacementId = guildTab.Grid.Id
                 });
             }
-        }
-
-        private class SquadData
-        {
-            public float Health { get; set; }
-            public float Power { get; set; }
         }
     }
 }

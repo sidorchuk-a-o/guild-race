@@ -4,8 +4,6 @@ namespace Game.Instances
 {
     public abstract class ConsumableMechanicHandler : ScriptableEntity<int>
     {
-        public virtual void Init()
-        {
-        }
+        public abstract void Invoke(ConsumablesItemInfo item, SquadChanceParams squadParams);
     }
 }

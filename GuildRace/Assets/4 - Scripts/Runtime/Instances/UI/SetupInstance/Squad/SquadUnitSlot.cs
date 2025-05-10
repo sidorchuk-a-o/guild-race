@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using System.Threading.Tasks;
 using AD.ToolsCollection;
 using AD.UI;
 using Game.Inventory;
@@ -45,7 +44,7 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        public async Task SetSquadUnit(SquadUnitVM squadUnitVM, CompositeDisp disp)
+        public async void SetSquadUnit(SquadUnitVM squadUnitVM, CompositeDisp disp)
         {
             unitDisp.Clear();
             unitDisp.AddTo(disp);

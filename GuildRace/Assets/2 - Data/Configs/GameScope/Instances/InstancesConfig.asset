@@ -48,7 +48,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -87,7 +87,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 202
   mechanicId: 101
@@ -145,7 +145,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -184,7 +184,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 5
+    size: 1
   type:
     value: 203
   mechanicId: 104
@@ -223,7 +223,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -261,7 +261,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -300,7 +300,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 202
   mechanicId: 102
@@ -339,7 +339,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -377,7 +377,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -416,7 +416,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -454,7 +454,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -492,7 +492,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -531,7 +531,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -570,7 +570,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -1645,7 +1645,7 @@ MonoBehaviour:
       consumables:
       - rarity:
           value: 121
-        chanceMod: 5
+        chanceMod: 4
       - rarity:
           value: 122
         chanceMod: 8
@@ -1666,7 +1666,7 @@ MonoBehaviour:
         chanceMod: 2
       - rarity:
           value: 122
-        chanceMod: 3
+        chanceMod: 4
       healthMod:
         totalMod: 5
         charactersMod: 180
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2041,7 +2041,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2080,7 +2080,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2119,7 +2119,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 202
   mechanicId: 102
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 202
   mechanicId: 101
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2236,7 +2236,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2275,7 +2275,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2352,7 +2352,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2391,7 +2391,7 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103
@@ -2468,7 +2468,7 @@ MonoBehaviour:
   rarity:
     value: 121
   stack:
-    size: 20
+    size: 4
   type:
     value: 201
   mechanicId: 103

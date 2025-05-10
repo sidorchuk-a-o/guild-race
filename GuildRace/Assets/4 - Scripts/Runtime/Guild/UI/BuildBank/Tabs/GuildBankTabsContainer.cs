@@ -35,6 +35,8 @@ namespace Game.Guild
             this.tabsVM = tabsVM;
             this.disp = disp;
 
+            currentTabVM = tabsVM[tabs[0].CellType];
+
             InitTabButtons(disp);
             UpdateCurrentTabView();
         }
@@ -62,7 +64,6 @@ namespace Game.Guild
             gridDisp.Clear();
             gridDisp.AddTo(disp);
 
-            currentTabVM ??= tabsVM[tabs[0].CellType];
             currentTabVM.SetSelectState(true);
 
             gridContainer.Init(currentTabVM.GridVM, gridDisp);

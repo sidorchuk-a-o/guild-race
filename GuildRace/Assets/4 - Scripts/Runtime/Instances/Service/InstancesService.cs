@@ -44,7 +44,7 @@ namespace Game.Instances
 
             state = new(instancesConfig, time, guildService, inventoryService, resolver);
 
-            instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService);
+            instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
             activeInstanceModule = new(this, time);
 
             mechanicHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToList();
@@ -67,8 +67,6 @@ namespace Game.Instances
             mechanicHandlers.ForEach(handler =>
             {
                 resolver.Inject(handler);
-
-                handler.Init();
             });
         }
 
