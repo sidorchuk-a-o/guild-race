@@ -1,41 +1,40 @@
 ﻿using AD.ToolsCollection;
-using System.Collections.Generic;
-using System.Linq;
+using System;
 
 namespace Game.Inventory
 {
-    public class ItemsGridsFactory
+    public abstract class ItemsGridsFactory : ScriptableData
     {
-        private readonly InventoryState state;
-        private readonly InventoryConfig config;
-        private readonly IInventoryFactory inventoryFactory;
+        public abstract Type DataType { get; }
 
-        public ItemsGridsFactory(InventoryState state, InventoryConfig config, IInventoryFactory inventoryFactory)
+        protected InventoryState State { get; private set; }
+        protected InventoryConfig Config { get; private set; }
+        protected IInventoryFactory InventoryFactory { get; private set; }
+
+        public void Init(InventoryState state, InventoryConfig config, IInventoryFactory inventoryFactory)
         {
-            this.state = state;
-            this.config = config;
-            this.inventoryFactory = inventoryFactory;
+            State = state;
+            Config = config;
+            InventoryFactory = inventoryFactory;
         }
+
+        // == Info ==
 
         public ItemsGridInfo CreateGrid(ItemsGridData data)
         {
             var id = GuidUtils.Generate();
-            var info = new ItemsGridInfo(id, data);
+            var info = CreateInfo(id, data);
 
-            state.AddGrid(info);
+            State.AddGrid(info);
 
             return info;
         }
 
-        public ItemsGridSM CreateGridSave(ItemsGridInfo info)
-        {
-            if (info == null)
-            {
-                return null;
-            }
+        protected abstract ItemsGridInfo CreateInfo(string id, ItemsGridData data);
 
-            return new ItemsGridSM(info, inventoryFactory);
-        }
+        // == Save ==
+
+        public abstract ItemsGridSM CreateGridSave(ItemsGridInfo info);
 
         public ItemsGridInfo ReadGridSave(ItemsGridSM save)
         {
@@ -44,30 +43,14 @@ namespace Game.Inventory
                 return null;
             }
 
-            var info = save.GetValue(config, inventoryFactory);
+            var data = Config.GetGrid(save.DataId);
+            var info = ReadSave(data, save);
 
-            state.AddGrid(info);
+            State.AddGrid(info);
 
             return info;
         }
 
-        public IItemsGridsCollection CreateItemsGrids(IEnumerable<ItemsGridData> grids)
-        {
-            var values = grids.Select(CreateGrid);
-
-            return new ItemsGridsCollection(values);
-        }
-
-        public ItemsGridsSM CreateItemsGridsSave(IItemsGridsCollection grids)
-        {
-            return new ItemsGridsSM(grids, inventoryFactory);
-        }
-
-        public IItemsGridsCollection ReadItemsGridsSave(ItemsGridsSM save)
-        {
-            var values = save.GetCollection(inventoryFactory);
-
-            return new ItemsGridsCollection(values);
-        }
+        protected abstract ItemsGridInfo ReadSave(ItemsGridData data, ItemsGridSM save);
     }
 }

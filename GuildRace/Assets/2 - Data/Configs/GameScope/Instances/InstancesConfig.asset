@@ -113,6 +113,26 @@ MonoBehaviour:
     value: 203
   cellType:
     value: 214
+--- !u!114 &-6227213298107060851
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28302ec26498c724ea5fdf3921a08278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 859933945
+  title: 
+  rowSize: 2
+  rowCount: 1
+  category:
+    value: 203
+  cellType:
+    value: 214
 --- !u!114 &-6064010414650307704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1666,7 +1686,7 @@ MonoBehaviour:
     nameKey:
       value: INSTANCES/INSTANCE_RAID_TTL
   squadParams:
-    bag: {fileID: -6809558547493564753}
+    bag: {fileID: -6227213298107060851}
     squads:
     - instanceType:
         value: 251

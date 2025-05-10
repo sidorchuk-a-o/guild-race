@@ -3,13 +3,12 @@
 namespace Game.Inventory
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class ItemsGridSM
+    public abstract class ItemsGridSM
     {
-        [ES3Serializable] private string id;
-        [ES3Serializable] private int dataId;
-        [ES3Serializable] private ItemsSM itemsSM;
+        [ES3Serializable] protected string id;
+        [ES3Serializable] protected int dataId;
+        [ES3Serializable] protected ItemsSM itemsSM;
 
-        public string Id => id;
         public int DataId => dataId;
 
         public ItemsGridSM(ItemsGridInfo info, IInventoryFactory inventoryFactory)
@@ -17,14 +16,6 @@ namespace Game.Inventory
             id = info.Id;
             dataId = info.DataId;
             itemsSM = new(info.Items, inventoryFactory);
-        }
-
-        public ItemsGridInfo GetValue(InventoryConfig config, IInventoryFactory inventoryFactory)
-        {
-            var data = config.GetGrid(dataId);
-            var items = itemsSM.GetCollection(inventoryFactory);
-
-            return new ItemsGridInfo(id, data, items);
         }
     }
 }

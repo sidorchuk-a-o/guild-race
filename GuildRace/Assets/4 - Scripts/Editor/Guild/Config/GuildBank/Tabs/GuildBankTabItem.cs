@@ -13,7 +13,7 @@ namespace Game.Guild
     {
         private LocalizeKeyElement nameKeyField;
         private AddressableElement<Sprite> iconRefField;
-        private ItemsGridElement gridEditor;
+        private ItemsGridElement<ItemsGridBaseData> gridEditor;
 
         protected override void CreateItemContentGUI(VisualElement root)
         {
@@ -28,7 +28,7 @@ namespace Game.Guild
 
             iconRefField = root.CreateAddressable<Sprite>();
 
-            gridEditor = root.CreateElement<ItemsGridElement>();
+            gridEditor = root.CreateElement<ItemsGridElement<ItemsGridBaseData>>();
             gridEditor.label = "Bank Grid Params";
         }
 

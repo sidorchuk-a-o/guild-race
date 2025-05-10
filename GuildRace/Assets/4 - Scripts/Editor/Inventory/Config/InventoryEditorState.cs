@@ -12,6 +12,7 @@ namespace Game.Inventory
 
         private InventoryEditorsFactory editorsFactory;
         private ItemSlotEditorsFactory itemSlotEditorsFactory;
+        private ItemsGridEditorsFactory itemGridEditorsFactory;
 
         private ItemVMEditorsFactory itemVMEditorsFactory;
         private ItemSlotVMEditorsFactory itemSlotVMEditorsFactory;
@@ -28,6 +29,7 @@ namespace Game.Inventory
 
         public static InventoryEditorsFactory EditorsFactory => instance.editorsFactory ??= new();
         public static ItemSlotEditorsFactory ItemSlotEditorsFactory => instance.itemSlotEditorsFactory ??= new();
+        public static ItemsGridEditorsFactory ItemsGridEditorsFactory => instance.itemGridEditorsFactory ??= new();
         public static ItemVMEditorsFactory ItemVMEditorsFactory => instance.itemVMEditorsFactory ??= new();
         public static ItemSlotVMEditorsFactory ItemSlotVMEditorsFactory => instance.itemSlotVMEditorsFactory ??= new();
         public static PickupHandlerEditorsFactory PickupHandlersFactory => instance.pickupHandlersFactory ??= new();

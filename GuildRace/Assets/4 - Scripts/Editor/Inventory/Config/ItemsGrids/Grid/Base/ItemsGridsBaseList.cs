@@ -2,12 +2,11 @@
 
 namespace Game.Inventory
 {
-    public abstract class ItemsGridsList<TData> : ListElement<TData, ItemsGridItem>
-        where TData : ItemsGridData
+    public class ItemsGridsBaseList : ItemsGridsList<ItemsGridBaseData>
     {
         public override void BindData(SerializedData data)
         {
-            showCloneButton = false;
+            wizardType = typeof(ItemsGridBaseCreateWizard);
 
             base.BindData(data);
         }

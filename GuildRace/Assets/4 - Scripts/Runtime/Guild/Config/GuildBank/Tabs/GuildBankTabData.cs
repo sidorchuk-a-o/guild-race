@@ -10,10 +10,10 @@ namespace Game.Guild
     {
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private AssetReference iconRef;
-        [SerializeField] private ItemsGridData grid;
+        [SerializeField] private ItemsGridBaseData grid;
 
         public LocalizeKey NameKey => nameKey;
         public AssetReference IconRef => iconRef;
-        public ItemsGridData Grid => grid;
+        public ItemsGridBaseData Grid => grid;
     }
 }

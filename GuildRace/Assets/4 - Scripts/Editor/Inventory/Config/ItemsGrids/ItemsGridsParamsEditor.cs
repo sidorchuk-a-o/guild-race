@@ -10,6 +10,7 @@ namespace Game.Inventory
     {
         private ItemsGridCategoriesList categoriesList;
         private ItemsGridCellTypesList cellTypesList;
+        private ItemsGridsFactoriesList factoriesList;
 
         private SerializedData GetData(SerializedData data)
         {
@@ -23,13 +24,19 @@ namespace Game.Inventory
 
         private void CreateParamsTab(VisualElement root, SerializedData data)
         {
+            root.ConvertToRow();
+
             categoriesList = root.CreateElement<ItemsGridCategoriesList>();
             categoriesList.BindProperty("categories", GetData(data));
-            categoriesList.MaxWidth(33, LengthUnit.Percent);
+            categoriesList.FlexWidth(33).MarginRight(10);
 
             cellTypesList = root.CreateElement<ItemsGridCellTypesList>();
             cellTypesList.BindProperty("cellTypes", GetData(data));
-            cellTypesList.MaxWidth(33, LengthUnit.Percent);
+            cellTypesList.FlexWidth(33).MarginRight(10);
+
+            factoriesList = root.CreateElement<ItemsGridsFactoriesList>();
+            factoriesList.BindProperty("factories", GetData(data));
+            factoriesList.FlexWidth(33);
         }
     }
 }

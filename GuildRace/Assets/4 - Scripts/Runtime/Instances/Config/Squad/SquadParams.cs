@@ -1,5 +1,4 @@
-﻿using Game.Inventory;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,12 +8,12 @@ namespace Game.Instances
     [Serializable]
     public class SquadParams
     {
-        [SerializeField] private ItemsGridData bag;
+        [SerializeField] private UnitBagData bag;
         [SerializeField] private List<SquadData> squads;
 
         private Dictionary<InstanceType, SquadData> squadsCache;
 
-        public ItemsGridData Bag => bag;
+        public UnitBagData Bag => bag;
 
         public SquadData GetSquadParams(InstanceType type)
         {

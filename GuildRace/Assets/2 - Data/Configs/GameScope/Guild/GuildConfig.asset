@@ -86,6 +86,29 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+--- !u!114 &-8224386084414745612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 76a316b6cee0434f9598fcdd0612587b
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_EQUIPS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: 7533387911246978051}
 --- !u!114 &-8197956687249327810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,29 +167,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
---- !u!114 &-7000185162162723182
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: b308069c091c43c0869ad35aab855f4d
-  title: 
-  nameKey:
-    value: GUILD_BANK/BANK_CONSUMABLES_TAB_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  grid: {fileID: 76776547799289294}
 --- !u!114 &-6860257373225403384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,29 +412,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
---- !u!114 &-5316411198448944541
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 82700d18a00948a99b952dc0be1d0098
-  title: 
-  nameKey:
-    value: GUILD_BANK/BANK_EQUIPS_TAB_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  grid: {fileID: -8197956687249327810}
 --- !u!114 &-5064181589344827625
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -642,29 +619,6 @@ MonoBehaviour:
   specs:
   - {fileID: 5088793920472949842}
   - {fileID: 5721050752461084215}
---- !u!114 &-2476405077858922527
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: bfa3fb0c87cc47d2a1ca5a33c1b61218
-  title: 
-  nameKey:
-    value: GUILD_BANK/BANK_REAGENTS_TAB_TTL
-  iconRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  grid: {fileID: 1183720720073450144}
 --- !u!114 &-2469804027384436182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -767,6 +721,29 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+--- !u!114 &-63486359305734761
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6a3caf3a56f34b1a9fb9b4c062eccc8e
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_CONSUMABLES_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: 3070511002199702621}
 --- !u!114 &-55547621386745197
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -917,9 +894,9 @@ MonoBehaviour:
         value: 715
   guildBankParams:
     tabs:
-    - {fileID: -5316411198448944541}
-    - {fileID: -2476405077858922527}
-    - {fileID: -7000185162162723182}
+    - {fileID: -8224386084414745612}
+    - {fileID: -63486359305734761}
+    - {fileID: 7860252133517938155}
   emblemParams:
     symbols:
     - m_AssetGUID: f7bbd536b3831584f8699f579aa366bf
@@ -1640,6 +1617,26 @@ MonoBehaviour:
       value: ABILITIES/CLASS_ABILITY_5018_DSC
     threatId:
       value: 115
+--- !u!114 &3070511002199702621
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72327f93ac6e42049ab9dae1e8c2c1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 58132353
+  title: 
+  rowSize: 8
+  rowCount: 11
+  category:
+    value: 201
+  cellType:
+    value: 214
 --- !u!114 &3937412005290520608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1990,6 +1987,49 @@ MonoBehaviour:
   specs:
   - {fileID: 2248301654606666036}
   - {fileID: 5807667443719656722}
+--- !u!114 &7533387911246978051
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72327f93ac6e42049ab9dae1e8c2c1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2060599779
+  title: 
+  rowSize: 8
+  rowCount: 11
+  category:
+    value: 201
+  cellType:
+    value: 212
+--- !u!114 &7860252133517938155
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182c3079eebf1384dafd34d5d3353ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: b60e7ef52c624774a65c3c58784d9d4c
+  title: 
+  nameKey:
+    value: GUILD_BANK/BANK_REAGENTS_TAB_TTL
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  grid: {fileID: 9188635615454857971}
 --- !u!114 &8430412534063844418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2012,3 +2052,23 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
+--- !u!114 &9188635615454857971
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72327f93ac6e42049ab9dae1e8c2c1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 331941892
+  title: 
+  rowSize: 8
+  rowCount: 11
+  category:
+    value: 201
+  cellType:
+    value: 213
