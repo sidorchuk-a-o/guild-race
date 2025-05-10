@@ -120,12 +120,9 @@ namespace Game.Inventory
                 return;
             }
 
-            var cursorPosition = inventoryInputs.CursorPosition;
-            var gridTransform = selectedGridContainer.transform as RectTransform;
-
             var positionOnGrid = RectUtils.GetPositionOnGrid(
-                cursorPosition: cursorPosition,
-                gridTransform: gridTransform,
+                cursorPosition: inventoryInputs.CursorPosition,
+                gridContainer: selectedGridContainer,
                 itemVM: selectedItemVM);
 
             UpdateHighlight(positionOnGrid);
@@ -133,11 +130,17 @@ namespace Game.Inventory
 
         private void UpdateHighlighterParent()
         {
+            const int defaultCellSize = 65;
+
             var parent = selectedGridVM != null
                 ? selectedGridContainer.HighlightArea
                 : highlighterDefaultParent;
 
-            highlighter.SetParent(parent);
+            var cellSize = selectedGridVM != null
+                ? selectedGridContainer.CellSize
+                : defaultCellSize;
+
+            highlighter.SetParent(parent, cellSize);
         }
 
         private void UpdateHighlight()

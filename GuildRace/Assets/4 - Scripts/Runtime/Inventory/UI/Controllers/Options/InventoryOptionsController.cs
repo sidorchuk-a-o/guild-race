@@ -179,12 +179,9 @@ namespace Game.Inventory
 
             if (selectedGridVM != null)
             {
-                var cursorPosition = inventoryInputs.CursorPosition;
-                var gridTransform = selectedGridContainer.transform as RectTransform;
-
                 var positionOnGrid = RectUtils.GetPositionOnGrid(
-                    cursorPosition: cursorPosition,
-                    gridTransform: gridTransform,
+                    cursorPosition: inventoryInputs.CursorPosition,
+                    gridContainer: selectedGridContainer,
                     itemVM: null);
 
                 return selectedGridVM.GetItem(positionOnGrid.Cursor);

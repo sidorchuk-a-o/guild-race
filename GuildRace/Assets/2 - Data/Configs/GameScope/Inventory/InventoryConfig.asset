@@ -3056,6 +3056,7 @@ MonoBehaviour:
   - {fileID: 5170631395212109203, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: -5135041722633170205, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   - {fileID: 2699701626808027002, guid: b373453171fbb5c4ab35f151583f9f55, type: 2}
+  - {fileID: -6064010414650307704, guid: a4754f5879a74514ab6ecf03bff1dc36, type: 2}
   itemSlots:
   - {fileID: 9180415984051115598}
   - {fileID: -4706629457753465657}
@@ -3099,7 +3100,6 @@ MonoBehaviour:
     - id: 214
       title: Consumables
   uiParams:
-    cellSize: 65
     pickupHandlers:
     - {fileID: 6301772883194522219}
     - {fileID: -605515206725505437}

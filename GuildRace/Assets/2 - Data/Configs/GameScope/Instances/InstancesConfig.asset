@@ -113,6 +113,45 @@ MonoBehaviour:
     value: 203
   cellType:
     value: 214
+--- !u!114 &-6064010414650307704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa618c1776e57644a9fbd669506a9a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3029
+  title: "\u0420\u0443\u043D\u0430 \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F
+    \u0434\u0443\u0448\u0438"
+  slot:
+    value: 0
+  size:
+    width: 1
+    height: 1
+  nameKey:
+    value: 
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
+  descKey:
+    value: 
+  rarity:
+    value: 122
+  stack:
+    size: 1
+  type:
+    value: 203
+  mechanicId: 104
+  mechanicParams:
+  - 5
 --- !u!114 &-5270412850753509173
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,8 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3028
-  title: "\u0420\u0443\u043D\u0430 \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F
-    \u0434\u0443\u0448\u0438"
+  title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
+    \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0439 \u0431\u0440\u043E\u043D\u0438"
   slot:
     value: 0
   size:
@@ -184,12 +223,12 @@ MonoBehaviour:
   rarity:
     value: 122
   stack:
-    size: 1
+    size: 4
   type:
-    value: 203
-  mechanicId: 104
+    value: 201
+  mechanicId: 103
   mechanicParams:
-  - 5
+  - 115
 --- !u!114 &-5019856845528501837
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1703,6 +1742,7 @@ MonoBehaviour:
     - {fileID: -1781602698460361114}
     - {fileID: 5170631395212109203}
     - {fileID: -5135041722633170205}
+    - {fileID: -6064010414650307704}
     types:
     - id: 201
       title: "\u041E\u0442\u0432\u0430\u0440"
