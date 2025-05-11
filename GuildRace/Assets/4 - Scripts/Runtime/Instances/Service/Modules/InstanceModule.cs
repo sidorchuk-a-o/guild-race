@@ -365,7 +365,9 @@ namespace Game.Instances
 
         private void TakeRewards(ActiveInstanceInfo instance)
         {
-            if (instance.Result.Value != CompleteResult.Completed)
+            var instanceResult = instance.Result.Value;
+
+            if (instanceResult == CompleteResult.None)
             {
                 return;
             }
@@ -373,11 +375,14 @@ namespace Game.Instances
             var bossId = instance.BossUnit.Id;
             var bossRewards = instancesConfig.GetUnitRewards(bossId);
 
-            foreach (var reward in bossRewards)
+            foreach (var rewardGroup in bossRewards.GroupBy(x => x.MechanicId))
             {
-                var rewardHandler = instancesService.GetRewardHandler(reward.MechanicId);
+                var rewards = rewardGroup.ToListPool();
+                var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
 
-                rewardHandler.ApplyReward(reward);
+                rewardHandler.ApplyRewards(rewards, instanceResult);
+
+                rewards.ReleaseListPool();
             }
         }
     }

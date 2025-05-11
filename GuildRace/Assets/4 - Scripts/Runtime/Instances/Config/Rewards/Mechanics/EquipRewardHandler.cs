@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using AD.ToolsCollection;
 using Game.Guild;
 using Game.Inventory;
@@ -21,8 +22,25 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
-        public override void ApplyReward(InstanceRewardData reward)
+        public override void ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
+            if (result != CompleteResult.Completed)
+            {
+                return;
+            }
+
+            var randomReward = rewards.RandomValue();
+
+            ApplyReward(randomReward, result);
+        }
+
+        public override void ApplyReward(InstanceRewardData reward, CompleteResult result)
+        {
+            if (result != CompleteResult.Completed)
+            {
+                return;
+            }
+
             var equipCellTypes = inventoryConfig.EquipsParams.GridParams.CellTypes;
             var equipBank = guildService.BankTabs.FirstOrDefault(x =>
             {

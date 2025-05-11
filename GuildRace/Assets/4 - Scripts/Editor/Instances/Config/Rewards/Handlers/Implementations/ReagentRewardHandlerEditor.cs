@@ -8,6 +8,22 @@ namespace Game.Instances
     [InstancesEditor(typeof(ReagentRewardHandler))]
     public class ReagentRewardHandlerEditor : RewardHandlerEditor
     {
+        private PropertyElement failedModField;
+
+        protected override void CreateSimpleContentGUI(VisualElement root)
+        {
+            base.CreateSimpleContentGUI(root);
+
+            failedModField = root.CreateProperty();
+        }
+
+        public override void BindData(SerializedData data)
+        {
+            base.BindData(data);
+
+            failedModField.BindProperty("failedMod", data);
+        }
+
         public override void CreateParamsEditor(VisualElement root, List<string> rewardParams)
         {
             root.ConvertToRow();

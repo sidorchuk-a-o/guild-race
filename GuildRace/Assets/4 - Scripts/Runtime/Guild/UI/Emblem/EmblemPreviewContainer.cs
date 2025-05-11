@@ -81,16 +81,16 @@ namespace Game.Guild
             materialToken = token;
 
             var materialAsset = emblemParams.GetDivision(backgroundIndex);
-            var material = await materialPool.RentAsync(materialAsset);
+            var materialSource = await materialPool.RentAsync(materialAsset);
 
             if (token.IsCancellationRequested)
             {
                 return;
             }
 
-            backgroundImage.material = new(material);
+            backgroundImage.material = new Material(materialSource);
 
-            BackgroundColorsCount = GetBackgroundColorCount(material.shader);
+            BackgroundColorsCount = GetBackgroundColorCount(materialSource.shader);
         }
 
         public void SetBackgroundColor(int index, int colorIndex)

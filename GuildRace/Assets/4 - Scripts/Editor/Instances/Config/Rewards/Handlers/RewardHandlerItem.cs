@@ -10,6 +10,8 @@ namespace Game.Instances
     {
         private ItemIdElement idLabel;
 
+        protected override IEditorsFactory EditorsFactory => InstancesEditorState.EditorsFactory;
+
         protected override void CreateItemContentGUI(VisualElement root)
         {
             base.CreateItemContentGUI(root);
