@@ -57,7 +57,8 @@ namespace Game.Craft
             if (save == null)
             {
                 vendors.AddRange(GetDefaultVendors());
-                CreateDefaultReagents();
+
+                //CreateDefaultReagents();
 
                 return;
             }

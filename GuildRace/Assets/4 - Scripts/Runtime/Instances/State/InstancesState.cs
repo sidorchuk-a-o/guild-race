@@ -112,9 +112,9 @@ namespace Game.Instances
             if (save == null)
             {
                 guaranteedCompletedCount = config.CompleteChanceParams.GuaranteedCompletedCount;
-
                 seasons.AddRange(CreateDefaultSeasons());
-                CreateDefaultConsumables();
+
+                //CreateDefaultConsumables();
 
                 return;
             }

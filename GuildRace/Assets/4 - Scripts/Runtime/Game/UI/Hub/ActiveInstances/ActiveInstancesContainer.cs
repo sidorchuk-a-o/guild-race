@@ -152,7 +152,7 @@ namespace Game.Instances
                 return;
             }
 
-            var index = instancesVMF.StopActiveInstance(activeInstanceVM.Id);
+            var index = instancesVMF.CompleteActiveInstance(activeInstanceVM.Id);
             var switchToInstanceVM = activeInstancesVM.NearbyOrDefault(index);
 
             activeInstanceVM = null;

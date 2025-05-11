@@ -245,7 +245,7 @@ namespace Game.Instances
                 foreach (var consumableItem in consumableItems)
                 {
                     var mechanicId = consumableItem.MechanicId;
-                    var mechanicHandler = instancesService.GetMechanicHandler(mechanicId);
+                    var mechanicHandler = instancesService.GetConsumableHandler(mechanicId);
 
                     mechanicHandler.Invoke(consumableItem, data);
                 }
@@ -301,12 +301,32 @@ namespace Game.Instances
             // reset instance
             ResetInstanceData(setupInstance);
 
+            // revert items
+            foreach (var squadUnit in setupInstance.Squad)
+            {
+                ResetUnitBag(squadUnit.Bag);
+            }
+
             // cancel
             state.CancelSetupInstance();
 
             // mark as dirty
             guildService.StateMarkAsDirty();
             state.MarkAsDirty();
+        }
+
+        public int CompleteActiveInstance(string activeInstanceId)
+        {
+            // reset instance
+            var activeInstance = state.ActiveInstances.GetInstance(activeInstanceId);
+
+            ResetInstanceData(activeInstance);
+
+            // take rewards
+            TakeRewards(activeInstance);
+
+            // upd state
+            return state.RemoveActiveInstance(activeInstanceId);
         }
 
         private void ResetInstanceData(ActiveInstanceInfo instance)
@@ -317,23 +337,10 @@ namespace Game.Instances
                 var character = guildService.Characters[squadUnit.CharactedId];
 
                 character.SetInstanceId(null);
-
-                ResetUnitBag(squadUnit.Bag);
             }
 
             // reset boss
             instance.BossUnit.SetInstanceId(null);
-        }
-
-        public int StopActiveInstance(string activeInstanceId)
-        {
-            // reset instance
-            var activeInstance = state.ActiveInstances.GetInstance(activeInstanceId);
-
-            ResetInstanceData(activeInstance);
-
-            // upd state
-            return state.RemoveActiveInstance(activeInstanceId);
         }
 
         private void ResetUnitBag(ItemsGridInfo bag)
@@ -353,6 +360,29 @@ namespace Game.Instances
                     ItemId = item.Id,
                     PlacementId = guildTab.Grid.Id
                 });
+            }
+        }
+
+        private void TakeRewards(ActiveInstanceInfo instance)
+        {
+            var instanceResult = instance.Result.Value;
+
+            if (instanceResult == CompleteResult.None)
+            {
+                return;
+            }
+
+            var bossId = instance.BossUnit.Id;
+            var bossRewards = instancesConfig.GetUnitRewards(bossId);
+
+            foreach (var rewardGroup in bossRewards.GroupBy(x => x.MechanicId))
+            {
+                var rewards = rewardGroup.ToListPool();
+                var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
+
+                rewardHandler.ApplyRewards(rewards, instanceResult);
+
+                rewards.ReleaseListPool();
             }
         }
     }

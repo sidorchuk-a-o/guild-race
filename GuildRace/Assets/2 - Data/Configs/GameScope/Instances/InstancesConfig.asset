@@ -133,6 +133,20 @@ MonoBehaviour:
     value: 203
   cellType:
     value: 214
+--- !u!114 &-6101505597154529459
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c9933a351389b49819d941650a0c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 302
+  title: Equips
 --- !u!114 &-6064010414650307704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1784,6 +1798,1066 @@ MonoBehaviour:
       cellTypes:
       - value: 211
       - value: 214
+  rewardsParams:
+    rewards:
+    - id: 1001
+      title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+      unitId: 20017
+      mechanicId: 302
+      mechanicParams:
+      - 10011
+      - 1
+    - id: 1002
+      title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20026
+      mechanicId: 302
+      mechanicParams:
+      - 10011
+      - 1
+    - id: 1003
+      title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+      unitId: 20020
+      mechanicId: 302
+      mechanicParams:
+      - 10013
+      - 1
+    - id: 1004
+      title: "\u0413\u0430'\u0420\u0430\u0442"
+      unitId: 20023
+      mechanicId: 302
+      mechanicParams:
+      - 10013
+      - 1
+    - id: 1005
+      title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+      unitId: 20024
+      mechanicId: 302
+      mechanicParams:
+      - 10015
+      - 1
+    - id: 1006
+      title: "\u0410\u0440\u0438\u043C"
+      unitId: 20021
+      mechanicId: 302
+      mechanicParams:
+      - 10015
+      - 1
+    - id: 1007
+      title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+      unitId: 20027
+      mechanicId: 302
+      mechanicParams:
+      - 10017
+      - 1
+    - id: 1008
+      title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20018
+      mechanicId: 302
+      mechanicParams:
+      - 10017
+      - 1
+    - id: 1009
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 302
+      mechanicParams:
+      - 10019
+      - 1
+    - id: 1010
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
+      mechanicId: 302
+      mechanicParams:
+      - 10019
+      - 1
+    - id: 1011
+      title: "\u0413\u0430'\u0420\u0430\u0442"
+      unitId: 20023
+      mechanicId: 302
+      mechanicParams:
+      - 10021
+      - 1
+    - id: 1012
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 302
+      mechanicParams:
+      - 10021
+      - 1
+    - id: 1013
+      title: "\u0413\u0430'\u0420\u0430\u0442"
+      unitId: 20023
+      mechanicId: 302
+      mechanicParams:
+      - 10023
+      - 1
+    - id: 1014
+      title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+      unitId: 20020
+      mechanicId: 302
+      mechanicParams:
+      - 10023
+      - 1
+    - id: 1015
+      title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20026
+      mechanicId: 302
+      mechanicParams:
+      - 10025
+      - 1
+    - id: 1016
+      title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+      unitId: 20017
+      mechanicId: 302
+      mechanicParams:
+      - 10025
+      - 1
+    - id: 1017
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 302
+      mechanicParams:
+      - 10027
+      - 1
+    - id: 1018
+      title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+      unitId: 20027
+      mechanicId: 302
+      mechanicParams:
+      - 10028
+      - 1
+    - id: 1019
+      title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+      unitId: 20022
+      mechanicId: 302
+      mechanicParams:
+      - 10029
+      - 1
+    - id: 1020
+      title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+      unitId: 20024
+      mechanicId: 302
+      mechanicParams:
+      - 10030
+      - 1
+    - id: 1021
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 302
+      mechanicParams:
+      - 10031
+      - 1
+    - id: 1022
+      title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+      unitId: 20022
+      mechanicId: 302
+      mechanicParams:
+      - 10031
+      - 1
+    - id: 1023
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
+      mechanicId: 302
+      mechanicParams:
+      - 10033
+      - 1
+    - id: 1024
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 302
+      mechanicParams:
+      - 10033
+      - 1
+    - id: 1025
+      title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+      unitId: 20017
+      mechanicId: 302
+      mechanicParams:
+      - 10035
+      - 1
+    - id: 1026
+      title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20026
+      mechanicId: 302
+      mechanicParams:
+      - 10035
+      - 1
+    - id: 1027
+      title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+      unitId: 20020
+      mechanicId: 302
+      mechanicParams:
+      - 10037
+      - 1
+    - id: 1028
+      title: "\u0410\u0440\u0438\u043C"
+      unitId: 20021
+      mechanicId: 302
+      mechanicParams:
+      - 10037
+      - 1
+    - id: 1029
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 302
+      mechanicParams:
+      - 10039
+      - 1
+    - id: 1030
+      title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20018
+      mechanicId: 302
+      mechanicParams:
+      - 10040
+      - 1
+    - id: 1031
+      title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20018
+      mechanicId: 302
+      mechanicParams:
+      - 10041
+      - 1
+    - id: 1032
+      title: "\u0410\u0440\u0438\u043C"
+      unitId: 20021
+      mechanicId: 302
+      mechanicParams:
+      - 10042
+      - 1
+    - id: 1033
+      title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+      unitId: 20024
+      mechanicId: 302
+      mechanicParams:
+      - 10043
+      - 1
+    - id: 1034
+      title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+      unitId: 20027
+      mechanicId: 302
+      mechanicParams:
+      - 10044
+      - 1
+    - id: 1035
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
+      mechanicId: 302
+      mechanicParams:
+      - 10045
+      - 1
+    - id: 1036
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 302
+      mechanicParams:
+      - 10046
+      - 1
+    - id: 1037
+      title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+      unitId: 20022
+      mechanicId: 302
+      mechanicParams:
+      - 10047
+      - 1
+    - id: 1038
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 302
+      mechanicParams:
+      - 10048
+      - 1
+    - id: 1039
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 302
+      mechanicParams:
+      - 10049
+      - 1
+    - id: 1040
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 302
+      mechanicParams:
+      - 10050
+      - 1
+    - id: 1041
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 302
+      mechanicParams:
+      - 10051
+      - 1
+    - id: 1042
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 302
+      mechanicParams:
+      - 10052
+      - 1
+    - id: 1043
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 302
+      mechanicParams:
+      - 10053
+      - 1
+    - id: 1044
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10054
+      - 1
+    - id: 1045
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 302
+      mechanicParams:
+      - 10055
+      - 1
+    - id: 1046
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 302
+      mechanicParams:
+      - 10056
+      - 1
+    - id: 1047
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 302
+      mechanicParams:
+      - 10057
+      - 1
+    - id: 1048
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 302
+      mechanicParams:
+      - 10058
+      - 1
+    - id: 1049
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 302
+      mechanicParams:
+      - 10059
+      - 1
+    - id: 1050
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10060
+      - 1
+    - id: 1051
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 302
+      mechanicParams:
+      - 10061
+      - 1
+    - id: 1052
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 302
+      mechanicParams:
+      - 10062
+      - 1
+    - id: 1053
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 302
+      mechanicParams:
+      - 10063
+      - 1
+    - id: 1054
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 302
+      mechanicParams:
+      - 10064
+      - 1
+    - id: 1055
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 302
+      mechanicParams:
+      - 10065
+      - 1
+    - id: 1056
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10066
+      - 1
+    - id: 1057
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10067
+      - 1
+    - id: 1058
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10068
+      - 1
+    - id: 1059
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 302
+      mechanicParams:
+      - 10069
+      - 1
+    - id: 1060
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 302
+      mechanicParams:
+      - 10070
+      - 1
+    - id: 1061
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 302
+      mechanicParams:
+      - 10071
+      - 1
+    - id: 1062
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 302
+      mechanicParams:
+      - 10072
+      - 1
+    - id: 1063
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 302
+      mechanicParams:
+      - 10073
+      - 1
+    - id: 1064
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10074
+      - 1
+    - id: 1065
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 302
+      mechanicParams:
+      - 10075
+      - 1
+    - id: 1066
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 302
+      mechanicParams:
+      - 10076
+      - 1
+    - id: 1067
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 302
+      mechanicParams:
+      - 10077
+      - 1
+    - id: 1068
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 302
+      mechanicParams:
+      - 10078
+      - 1
+    - id: 1069
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 302
+      mechanicParams:
+      - 10079
+      - 1
+    - id: 1070
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10080
+      - 1
+    - id: 1071
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 302
+      mechanicParams:
+      - 10081
+      - 1
+    - id: 1072
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 302
+      mechanicParams:
+      - 10082
+      - 1
+    - id: 1073
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 302
+      mechanicParams:
+      - 10083
+      - 1
+    - id: 1074
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 302
+      mechanicParams:
+      - 10084
+      - 1
+    - id: 1075
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 302
+      mechanicParams:
+      - 10085
+      - 1
+    - id: 1076
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 302
+      mechanicParams:
+      - 10067
+      - 1
+    - id: 1077
+      title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+      unitId: 20017
+      mechanicId: 303
+      mechanicParams:
+      - 1008
+      - 3
+    - id: 1078
+      title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20018
+      mechanicId: 303
+      mechanicParams:
+      - 1002
+      - 3
+    - id: 1079
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 303
+      mechanicParams:
+      - 1001
+      - 3
+    - id: 1080
+      title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+      unitId: 20020
+      mechanicId: 303
+      mechanicParams:
+      - 1010
+      - 3
+    - id: 1081
+      title: "\u0410\u0440\u0438\u043C"
+      unitId: 20021
+      mechanicId: 303
+      mechanicParams:
+      - 1004
+      - 3
+    - id: 1082
+      title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+      unitId: 20022
+      mechanicId: 303
+      mechanicParams:
+      - 1005
+      - 3
+    - id: 1083
+      title: "\u0413\u0430'\u0420\u0430\u0442"
+      unitId: 20023
+      mechanicId: 303
+      mechanicParams:
+      - 1003
+      - 3
+    - id: 1084
+      title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+      unitId: 20024
+      mechanicId: 303
+      mechanicParams:
+      - 1001
+      - 3
+    - id: 1085
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 303
+      mechanicParams:
+      - 1004
+      - 3
+    - id: 1086
+      title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20026
+      mechanicId: 303
+      mechanicParams:
+      - 1005
+      - 3
+    - id: 1087
+      title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+      unitId: 20027
+      mechanicId: 303
+      mechanicParams:
+      - 1008
+      - 3
+    - id: 1088
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
+      mechanicId: 303
+      mechanicParams:
+      - 1007
+      - 3
+    - id: 1089
+      title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+      unitId: 20017
+      mechanicId: 303
+      mechanicParams:
+      - 1010
+      - 3
+    - id: 1090
+      title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20018
+      mechanicId: 303
+      mechanicParams:
+      - 1006
+      - 3
+    - id: 1091
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 303
+      mechanicParams:
+      - 1013
+      - 3
+    - id: 1092
+      title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+      unitId: 20020
+      mechanicId: 303
+      mechanicParams:
+      - 1007
+      - 3
+    - id: 1093
+      title: "\u0410\u0440\u0438\u043C"
+      unitId: 20021
+      mechanicId: 303
+      mechanicParams:
+      - 1009
+      - 3
+    - id: 1094
+      title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+      unitId: 20022
+      mechanicId: 303
+      mechanicParams:
+      - 1011
+      - 3
+    - id: 1095
+      title: "\u0413\u0430'\u0420\u0430\u0442"
+      unitId: 20023
+      mechanicId: 303
+      mechanicParams:
+      - 1006
+      - 3
+    - id: 1096
+      title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+      unitId: 20024
+      mechanicId: 303
+      mechanicParams:
+      - 1013
+      - 3
+    - id: 1097
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 303
+      mechanicParams:
+      - 1009
+      - 3
+    - id: 1098
+      title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20026
+      mechanicId: 303
+      mechanicParams:
+      - 1002
+      - 3
+    - id: 1099
+      title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+      unitId: 20027
+      mechanicId: 303
+      mechanicParams:
+      - 1003
+      - 3
+    - id: 1100
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
+      mechanicId: 303
+      mechanicParams:
+      - 1011
+      - 3
+    - id: 1101
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 303
+      mechanicParams:
+      - 1008
+      - 3
+    - id: 1102
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 303
+      mechanicParams:
+      - 1003
+      - 3
+    - id: 1103
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 303
+      mechanicParams:
+      - 1008
+      - 3
+    - id: 1104
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 303
+      mechanicParams:
+      - 1001
+      - 3
+    - id: 1105
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 303
+      mechanicParams:
+      - 1002
+      - 3
+    - id: 1106
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 303
+      mechanicParams:
+      - 1001
+      - 3
+    - id: 1107
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 303
+      mechanicParams:
+      - 1002
+      - 3
+    - id: 1108
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 303
+      mechanicParams:
+      - 1005
+      - 3
+    - id: 1109
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 303
+      mechanicParams:
+      - 1003
+      - 3
+    - id: 1110
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 303
+      mechanicParams:
+      - 1007
+      - 3
+    - id: 1111
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 303
+      mechanicParams:
+      - 1007
+      - 3
+    - id: 1112
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 303
+      mechanicParams:
+      - 1011
+      - 3
+    - id: 1113
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 303
+      mechanicParams:
+      - 1011
+      - 3
+    - id: 1114
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 303
+      mechanicParams:
+      - 1010
+      - 3
+    - id: 1115
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 303
+      mechanicParams:
+      - 1005
+      - 3
+    - id: 1116
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 303
+      mechanicParams:
+      - 1010
+      - 3
+    - id: 1117
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 303
+      mechanicParams:
+      - 1009
+      - 3
+    - id: 1118
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 303
+      mechanicParams:
+      - 1009
+      - 3
+    - id: 1119
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 303
+      mechanicParams:
+      - 1006
+      - 3
+    - id: 1120
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 303
+      mechanicParams:
+      - 1006
+      - 3
+    - id: 1121
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 303
+      mechanicParams:
+      - 1004
+      - 3
+    - id: 1122
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 303
+      mechanicParams:
+      - 1013
+      - 3
+    - id: 1123
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 303
+      mechanicParams:
+      - 1004
+      - 3
+    - id: 1124
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 303
+      mechanicParams:
+      - 1013
+      - 3
+    - id: 1125
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 303
+      mechanicParams:
+      - 1012
+      - 3
+    - id: 1126
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 303
+      mechanicParams:
+      - 1012
+      - 3
+    - id: 1127
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 303
+      mechanicParams:
+      - 1012
+      - 3
+    - id: 1128
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 303
+      mechanicParams:
+      - 1012
+      - 3
+    - id: 1129
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 303
+      mechanicParams:
+      - 1012
+      - 3
+    - id: 1130
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 303
+      mechanicParams:
+      - 1012
+      - 3
+    - id: 1131
+      title: "\u0411\u0443\u0440\u0435\u043A"
+      unitId: 20011
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 1000
+    - id: 1132
+      title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
+      unitId: 20012
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 1050
+    - id: 1133
+      title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
+      unitId: 20013
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 1100
+    - id: 1134
+      title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
+      unitId: 20014
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 1150
+    - id: 1135
+      title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
+        \u0417\u0430\u0432\u0435\u0442\u0430"
+      unitId: 20015
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 1250
+    - id: 1136
+      title: "\u041D\u0430\u0430\u043B"
+      unitId: 20016
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 1500
+    - id: 1137
+      title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
+      unitId: 20017
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1138
+      title: "\u041A\u043E\u0440\u0437\u0430 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20018
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1139
+      title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
+      unitId: 20019
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1140
+      title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
+      unitId: 20020
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1141
+      title: "\u0410\u0440\u0438\u043C"
+      unitId: 20021
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1142
+      title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
+      unitId: 20022
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1143
+      title: "\u0413\u0430'\u0420\u0430\u0442"
+      unitId: 20023
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1144
+      title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
+      unitId: 20024
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1145
+      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
+      unitId: 20025
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1146
+      title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
+      unitId: 20026
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1147
+      title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
+      unitId: 20027
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    - id: 1148
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
+      mechanicId: 301
+      mechanicParams:
+      - 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      - 750
+    rewardHandlers:
+    - {fileID: 1984360723365391841}
+    - {fileID: -6101505597154529459}
+    - {fileID: 6202720598890601376}
   threats:
   - id: 11
     title: "\u041C\u043E\u0449\u043D\u043E\u0435 \u043A\u043E\u043B\u0434\u0443\u043D\u0441\u0442\u0432\u043E"
@@ -2031,6 +3105,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 103
   title: "\u041F\u0435\u0440\u0435\u043A\u0440\u044B\u0442\u044C \u0443\u0433\u0440\u043E\u0437\u0443"
+--- !u!114 &1984360723365391841
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994917b59fe54274aa4a33cbecdb0676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 301
+  title: Currency
+  failedMod: 0.3
 --- !u!114 &2197165542769726586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2381,6 +3470,21 @@ MonoBehaviour:
   mechanicId: 103
   mechanicParams:
   - 17
+--- !u!114 &6202720598890601376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcb251afdcff2c48a9b01a97c94b483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 303
+  title: Reagents
+  failedMod: 0.5
 --- !u!114 &6580333437868225501
 MonoBehaviour:
   m_ObjectHideFlags: 1

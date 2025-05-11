@@ -100,6 +100,7 @@ namespace Game.Instances
 
             var mechanicEditor = InstancesEditorState.EditorsFactory.CreateEditor(mechanicData.GetType()) as ConsumableMechanicHandlerEditor;
 
+            mechanicParamsContainer.Clear();
             mechanicEditor.CreateParamsEditor(mechanicParamsContainer, mechanicParams);
         }
     }
