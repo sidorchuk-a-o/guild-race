@@ -44,13 +44,17 @@ namespace Game.Instances
 
                 activeInstance.BossUnit.IncreaseCompletedCount();
 
-                state.DecrementGuaranteedCompleted();
+                if (activeInstance.Instance.Type == InstanceTypes.dungeon)
+                {
+                    state.DecrementGuaranteedCompleted();
+                }
             }
         }
 
         private CompleteResult CalcResult(ActiveInstanceInfo instance)
         {
-            if (state.HasGuaranteedCompleted)
+            if (state.HasGuaranteedCompleted &&
+                instance.Instance.Type == InstanceTypes.dungeon)
             {
                 return CompleteResult.Completed;
             }
