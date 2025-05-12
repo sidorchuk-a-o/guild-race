@@ -42,7 +42,7 @@ namespace Game.Instances
 
             if (isReadyToComplete)
             {
-                activeInstance.MarAsReadyToComplete();
+                activeInstance.MarkAsReadyToComplete();
             }
 
             return activeInstance;

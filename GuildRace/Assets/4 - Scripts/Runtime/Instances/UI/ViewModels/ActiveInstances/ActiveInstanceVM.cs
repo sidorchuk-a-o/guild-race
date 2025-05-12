@@ -30,7 +30,7 @@ namespace Game.Instances
             IsReadyToComplete = info.IsReadyToComplete;
 
             InstanceVM = instancesVMF.GetInstance(info.Instance);
-            BossUnitVM = instancesVMF.GetUnit(info.BossUnit);
+            BossUnitVM = new UnitVM(info.BossUnit, info.Instance.Id, instancesVMF);
             ThreatsVM = new ThreatsVM(info.Threats, instancesVMF);
             SquadVM = new SquadUnitsVM(info.Instance.Type, info.Squad, instancesVMF);
             ResultStateVM = new();

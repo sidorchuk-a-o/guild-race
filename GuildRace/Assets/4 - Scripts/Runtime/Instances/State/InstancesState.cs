@@ -5,6 +5,8 @@ using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using Game.Weekly;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using VContainer;
@@ -16,6 +18,7 @@ namespace Game.Instances
         private readonly ITimeService time;
         private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
+        private readonly IWeeklyService weeklyService;
 
         private readonly SeasonsCollection seasons = new(null);
         private readonly ActiveInstancesCollection activeInstances = new(null);
@@ -30,17 +33,22 @@ namespace Game.Instances
 
         public ActiveInstanceInfo SetupInstance { get; private set; }
 
+        public DateTime LastResetDay { get; private set; }
+        public int LastResetWeek { get; private set; }
+
         public InstancesState(
             InstancesConfig config,
             ITimeService time,
             IGuildService guildService,
             IInventoryService inventoryService,
+            IWeeklyService weeklyService,
             IObjectResolver resolver)
             : base(config, resolver)
         {
             this.time = time;
             this.guildService = guildService;
             this.inventoryService = inventoryService;
+            this.weeklyService = weeklyService;
         }
 
         public void CreateSetupInstance(SetupInstanceArgs args)
@@ -92,12 +100,24 @@ namespace Game.Instances
             MarkAsDirty();
         }
 
+        public void SetResetDay(DateTime value)
+        {
+            LastResetDay = value;
+        }
+
+        public void SetResetWeek(int value)
+        {
+            LastResetWeek = value;
+        }
+
         // == Save ==
 
         protected override InstancesStateSM CreateSave()
         {
             var instancesStateSM = new InstancesStateSM
             {
+                LastResetDay = LastResetDay,
+                LastResetWeek = LastResetWeek,
                 GuaranteedCompletedCount = guaranteedCompletedCount
             };
 
@@ -114,11 +134,16 @@ namespace Game.Instances
                 guaranteedCompletedCount = config.CompleteChanceParams.GuaranteedCompletedCount;
                 seasons.AddRange(CreateDefaultSeasons());
 
+                LastResetDay = DateTime.Now;
+                LastResetWeek = weeklyService.CurrentWeek;
+
                 //CreateDefaultConsumables();
 
                 return;
             }
 
+            LastResetDay = save.LastResetDay;
+            LastResetWeek = save.LastResetWeek;
             guaranteedCompletedCount = save.GuaranteedCompletedCount;
 
             seasons.AddRange(save.GetSeasons(config));

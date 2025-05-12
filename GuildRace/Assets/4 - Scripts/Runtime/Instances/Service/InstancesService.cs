@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AD.Services;
 using AD.Services.AppEvents;
@@ -8,6 +9,7 @@ using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using Game.Weekly;
 using UniRx;
 using VContainer;
 
@@ -22,7 +24,8 @@ namespace Game.Instances
 
         private readonly Dictionary<int, RewardHandler> rewardHandlers;
         private readonly Dictionary<int, ConsumableMechanicHandler> consumableHandlers;
-
+        private readonly InstancesConfig instancesConfig;
+        private readonly IWeeklyService weeklyService;
         private readonly IAppEventsService appEvents;
         private readonly IObjectResolver resolver;
 
@@ -36,16 +39,18 @@ namespace Game.Instances
             InstancesConfig instancesConfig,
             IGuildService guildService,
             IInventoryService inventoryService,
+            IWeeklyService weeklyService,
             IRouterService router,
             IAppEventsService appEvents,
             ITimeService time,
             IObjectResolver resolver)
         {
+            this.instancesConfig = instancesConfig;
+            this.weeklyService = weeklyService;
             this.appEvents = appEvents;
             this.resolver = resolver;
 
-            state = new(instancesConfig, time, guildService, inventoryService, resolver);
-
+            state = new(instancesConfig, time, guildService, inventoryService, weeklyService, resolver);
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
             activeInstanceModule = new(this, state, time);
 
@@ -58,6 +63,7 @@ namespace Game.Instances
             state.Init();
 
             InitHandlers();
+            TryResetUnitsCooldown();
 
             appEvents.AddAppTickListener(activeInstanceModule);
 
@@ -124,6 +130,62 @@ namespace Game.Instances
         public int CompleteActiveInstance(string activeInstanceId)
         {
             return instanceModule.CompleteActiveInstance(activeInstanceId);
+        }
+
+        // == Unit Cooldown ==
+
+        private void TryResetUnitsCooldown()
+        {
+            foreach (var cooldownParams in instancesConfig.UnitCooldownParams)
+            {
+                if (cooldownParams.IsWeeklyReset)
+                {
+                    var currentWeek = weeklyService.CurrentWeek;
+                    var lastResetWeek = state.LastResetWeek;
+
+                    if (lastResetWeek == currentWeek)
+                    {
+                        continue;
+                    }
+
+                    state.SetResetWeek(currentWeek);
+                }
+                else
+                {
+                    var currentDate = DateTime.Today;
+                    var lastResetData = state.LastResetDay;
+                    var daysDelta = (currentDate - lastResetData).TotalDays;
+
+                    if (daysDelta <= 0)
+                    {
+                        continue;
+                    }
+
+                    state.SetResetDay(currentDate);
+                }
+
+                var instanceType = cooldownParams.InstanceType;
+
+                var bossUnits = state.Seasons
+                    .SelectMany(x => x.GetInstances())
+                    .Where(x => x.Type == instanceType)
+                    .SelectMany(x => x.BossUnits);
+
+                foreach (var bossUnit in bossUnits)
+                {
+                    bossUnit.ResetCompletedCount();
+                }
+            }
+        }
+
+        public bool CheckUnitCooldown(int unitId, int instanceId)
+        {
+            var unit = Seasons.GetBossUnit(unitId);
+            var instance = Seasons.GetInstance(instanceId);
+            var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
+
+            return cooldownPatams != null
+                && cooldownPatams.MaxCompletedCount <= unit.CompletedCount;
         }
 
         // == Dispose ==

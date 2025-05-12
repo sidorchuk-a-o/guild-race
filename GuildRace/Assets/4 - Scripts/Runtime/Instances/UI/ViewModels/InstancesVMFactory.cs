@@ -3,6 +3,7 @@ using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using System;
 using System.Linq;
 using VContainer;
 
@@ -143,9 +144,19 @@ namespace Game.Instances
             return new SquadCandidatesVM(candidates, this);
         }
 
-        public UnitVM GetUnit(UnitInfo unit)
+        public int GetMaxCompletedCount(int instanceId)
         {
-            return new UnitVM(unit, this);
+            var instance = instancesService.Seasons.GetInstance(instanceId);
+            var cooldownParams = InstancesConfig.GetUnitCooldown(instance.Type);
+
+            return cooldownParams != null
+                ? cooldownParams.MaxCompletedCount
+                : 0;
+        }
+
+        public bool CheckUnitCooldown(int unitId, int instanceId)
+        {
+            return instancesService.CheckUnitCooldown(unitId, instanceId);
         }
     }
 }

@@ -2858,6 +2858,11 @@ MonoBehaviour:
     - {fileID: 1984360723365391841}
     - {fileID: -6101505597154529459}
     - {fileID: 6202720598890601376}
+  unitCooldownParams:
+  - instanceType:
+      value: 252
+    maxCompletedCount: 2
+    isWeeklyReset: 1
   threats:
   - id: 11
     title: "\u041C\u043E\u0449\u043D\u043E\u0435 \u043A\u043E\u043B\u0434\u0443\u043D\u0441\u0442\u0432\u043E"

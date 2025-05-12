@@ -25,7 +25,11 @@ namespace Game.Instances
         public bool HasInstance => InstanceVM.Value != null;
         public IReadOnlyReactiveProperty<ActiveInstanceVM> InstanceVM => instanceVM;
 
-        public UnitVM(UnitInfo info, InstancesVMFactory instancesVMF)
+        public bool WaitResetCooldown { get; }
+        public int CompletedCount { get; }
+        public int MaxCompletedCount { get; }
+
+        public UnitVM(UnitInfo info, int instanceId, InstancesVMFactory instancesVMF)
         {
             this.info = info;
             this.instancesVMF = instancesVMF;
@@ -35,6 +39,10 @@ namespace Game.Instances
             DescKey = info.DescKey;
             imageRef = info.ImageRef;
             AbilitiesVM = new AbilitiesVM(info.Abilities, instancesVMF);
+
+            CompletedCount = info.CompletedCount;
+            MaxCompletedCount = instancesVMF.GetMaxCompletedCount(instanceId);
+            WaitResetCooldown = instancesVMF.CheckUnitCooldown(info.Id, instanceId);
         }
 
         protected override void InitSubscribes()

@@ -9,6 +9,7 @@ namespace Game.Instances
     {
         private SeasonsList seasonsList;
         private InstanceTypesList instanceTypesList;
+        private UnitCooldownParamsList unitCooldownParamsList;
         private SquadParamsEditor squadParamsEditor;
         private CompleteChanceParamsEditor completeChanceParamsEditor;
         private ConsumablesParamsEditor consumablesParamsEditor;
@@ -42,6 +43,10 @@ namespace Game.Instances
             instanceTypesList = root.CreateElement<InstanceTypesList>();
             instanceTypesList.FlexWidth(33).MarginRight(10);
             instanceTypesList.BindProperty("instanceTypes", data);
+
+            unitCooldownParamsList = root.CreateElement<UnitCooldownParamsList>();
+            unitCooldownParamsList.FlexWidth(33).MarginRight(10);
+            unitCooldownParamsList.BindProperty("unitCooldownParams", data);
         }
 
         private void CreateSquadParamsTab(TabsContainer tabs)

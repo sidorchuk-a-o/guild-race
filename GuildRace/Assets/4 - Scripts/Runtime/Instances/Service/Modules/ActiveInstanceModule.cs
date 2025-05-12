@@ -10,7 +10,10 @@ namespace Game.Instances
         private readonly InstancesState state;
         private readonly ITimeService time;
 
-        public ActiveInstanceModule(IInstancesService instancesService, InstancesState state, ITimeService time)
+        public ActiveInstanceModule(
+            IInstancesService instancesService,
+            InstancesState state,
+            ITimeService time)
         {
             this.instancesService = instancesService;
             this.state = state;
@@ -37,7 +40,9 @@ namespace Game.Instances
                 var result = CalcResult(activeInstance);
 
                 activeInstance.SetResult(result);
-                activeInstance.MarAsReadyToComplete();
+                activeInstance.MarkAsReadyToComplete();
+
+                activeInstance.BossUnit.IncreaseCompletedCount();
 
                 state.DecrementGuaranteedCompleted();
             }

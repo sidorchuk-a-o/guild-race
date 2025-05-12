@@ -143,7 +143,7 @@ namespace Game.Instances
 
                 unitNameText.SetTextParams(unitVM.NameKey);
 
-                startInstanceButton.SetInteractableState(!unitVM.HasInstance);
+                startInstanceButton.SetInteractableState(!unitVM.HasInstance && !unitVM.WaitResetCooldown);
             }
         }
 
