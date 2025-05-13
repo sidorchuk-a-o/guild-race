@@ -30,5 +30,15 @@ namespace Game.Instances
 
             return Dungeons.FirstOrDefault(x => x.Id == instanceId);
         }
+
+        public IEnumerable<InstanceInfo> GetInstances()
+        {
+            yield return Raid;
+
+            foreach (var instance in Dungeons)
+            {
+                yield return instance;
+            }
+        }
     }
 }

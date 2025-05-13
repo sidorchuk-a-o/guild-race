@@ -1,5 +1,8 @@
-﻿using AD.ToolsCollection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AD.ToolsCollection;
 using AD.UI;
+using Cysharp.Threading.Tasks;
 using Game.Inventory;
 using UniRx;
 using UnityEngine;
@@ -10,12 +13,17 @@ namespace Game.Craft
 {
     public class RecycleSlotContainer : ItemSlotContainer
     {
-        [Header("Reagent Preview")]
-        [SerializeField] private Image reagentIconImage;
-        [SerializeField] private UIText reagentNameText;
-        [SerializeField] private UIText reagentCountText;
+        [Header("Currency Preview")]
+        [SerializeField] private GameObject currencyContainer;
+        [SerializeField] private Image currencyIconImage;
+        [SerializeField] private UIText currencyAmountText;
+
+        [Header("Reagents Preview")]
+        [SerializeField] private GameObject reagentsContainer;
+        [SerializeField] private RecycleReagentItem reagentItemPrefab;
 
         private readonly CompositeDisp disp = new();
+        private readonly List<RecycleReagentItem> reagentItems = new();
 
         private CraftVMFactory craftVMF;
 
@@ -32,14 +40,46 @@ namespace Game.Craft
 
             var recyclingVM = craftVMF.GetRecyclingParams(itemVM.Id);
 
-            if (recyclingVM != null)
+            recyclingVM.AddTo(disp);
+
+            if (recyclingVM is RecyclingReagentResultVM recyclingReagentVM)
             {
-                recyclingVM.AddTo(disp);
+                currencyAmountText.SetTextParams(recyclingReagentVM.Amount);
+                currencyIconImage.sprite = await recyclingReagentVM.CurrencyVM.LoadIcon();
 
-                reagentIconImage.sprite = await recyclingVM.ReagentVM.LoadIcon();
+                currencyContainer.SetActive(true);
+            }
 
-                reagentNameText.SetTextParams(recyclingVM.ReagentVM.NameKey);
-                reagentCountText.SetTextParams(recyclingVM.RecyclingResult);
+            if (recyclingVM is RecyclingItemResultVM recyclingItemVM)
+            {
+                var reagentsVM = recyclingItemVM.ReagentsVM;
+                var count = Mathf.Max(reagentsVM.Count, reagentItems.Count);
+
+                for (var i = 0; i < count; i++)
+                {
+                    var reagentVM = recyclingItemVM.ReagentsVM.ElementAtOrDefault(i);
+                    var reagentItem = reagentItems.ElementAtOrDefault(i);
+
+                    if (reagentItem == null)
+                    {
+                        reagentItem = Instantiate(reagentItemPrefab, reagentsContainer.transform);
+
+                        reagentItems.Add(reagentItem);
+                    }
+
+                    if (reagentVM != null)
+                    {
+                        reagentItem.SetActive(true);
+
+                        await reagentItem.Init(reagentVM);
+                    }
+                    else
+                    {
+                        reagentItem.SetActive(false);
+                    }
+                }
+
+                reagentsContainer.SetActive(true);
             }
 
             base.ShowPickupPreview(itemVM, state);
@@ -48,6 +88,9 @@ namespace Game.Craft
         public override void ResetPickupPreview()
         {
             base.ResetPickupPreview();
+
+            currencyContainer.SetActive(false);
+            reagentsContainer.SetActive(false);
 
             disp.Clear();
         }

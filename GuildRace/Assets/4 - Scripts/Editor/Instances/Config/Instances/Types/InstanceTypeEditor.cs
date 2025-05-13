@@ -14,7 +14,6 @@ namespace Game.Instances
             base.CreateTabItems(tabs);
 
             tabs.CreateTab("Params", CreateCommonTab);
-
             tabs.content.Width(50, LengthUnit.Percent);
         }
 

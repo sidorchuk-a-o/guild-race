@@ -5,12 +5,12 @@ using UnityEngine;
 namespace Game.Craft
 {
     [Serializable]
-    public class RecyclingRarityModData
+    public class RecyclingItemData
     {
         [SerializeField] private Rarity rarity;
-        [SerializeField] private int value;
+        [SerializeField] private float percent;
 
         public Rarity Rarity => rarity;
-        public int Value => value;
+        public float Percent => percent;
     }
 }

@@ -15,6 +15,7 @@ namespace Game.Instances
         [SerializeField] private CompleteChanceParams completeChanceParams;
         [SerializeField] private ConsumablesParams consumablesParams;
         [SerializeField] private RewardsParams rewardsParams;
+        [SerializeField] private List<UnitCooldownParams> unitCooldownParams;
         [SerializeField] private List<ThreatData> threats;
 
         private Dictionary<int, SeasonData> seasonsCache;
@@ -32,6 +33,7 @@ namespace Game.Instances
         public ConsumablesParams ConsumablesParams => consumablesParams;
         public RewardsParams RewardsParams => rewardsParams;
         public IReadOnlyList<ThreatData> Threats => threats;
+        public List<UnitCooldownParams> UnitCooldownParams => unitCooldownParams;
 
         public SeasonData GetSeason(int id)
         {
@@ -89,6 +91,11 @@ namespace Game.Instances
             unitRewardsCache.TryGetValue(unitId, out var data);
 
             return data;
+        }
+
+        public UnitCooldownParams GetUnitCooldown(InstanceType instanceType)
+        {
+            return unitCooldownParams.FirstOrDefault(x => x.InstanceType == instanceType);
         }
     }
 }

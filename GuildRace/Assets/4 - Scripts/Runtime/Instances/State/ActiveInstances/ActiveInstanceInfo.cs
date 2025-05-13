@@ -79,7 +79,7 @@ namespace Game.Instances
             completeResult.Value = value;
         }
 
-        public void MarAsReadyToComplete()
+        public void MarkAsReadyToComplete()
         {
             isReadyToComplete.Value = true;
         }

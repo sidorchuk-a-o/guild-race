@@ -1,20 +1,19 @@
 ﻿using AD.Services.Router;
-using Game.Inventory;
 
 namespace Game.Craft
 {
     public class RecipesVM : VMCollection<RecipeData, RecipeVM>
     {
-        private readonly InventoryVMFactory inventoryVMF;
+        private readonly CraftVMFactory craftVMF;
 
-        public RecipesVM(IRecipesCollection values, InventoryVMFactory inventoryVMF) : base(values)
+        public RecipesVM(IRecipesCollection values, CraftVMFactory craftVMF) : base(values)
         {
-            this.inventoryVMF = inventoryVMF;
+            this.craftVMF = craftVMF;
         }
 
         protected override RecipeVM Create(RecipeData value)
         {
-            return new RecipeVM(value, inventoryVMF);
+            return new RecipeVM(value, craftVMF);
         }
     }
 }

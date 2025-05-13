@@ -10,7 +10,10 @@ namespace Game.Instances
         private readonly InstancesState state;
         private readonly ITimeService time;
 
-        public ActiveInstanceModule(IInstancesService instancesService, InstancesState state, ITimeService time)
+        public ActiveInstanceModule(
+            IInstancesService instancesService,
+            InstancesState state,
+            ITimeService time)
         {
             this.instancesService = instancesService;
             this.state = state;
@@ -37,15 +40,21 @@ namespace Game.Instances
                 var result = CalcResult(activeInstance);
 
                 activeInstance.SetResult(result);
-                activeInstance.MarAsReadyToComplete();
+                activeInstance.MarkAsReadyToComplete();
 
-                state.DecrementGuaranteedCompleted();
+                activeInstance.BossUnit.IncreaseCompletedCount();
+
+                if (activeInstance.Instance.Type == InstanceTypes.dungeon)
+                {
+                    state.DecrementGuaranteedCompleted();
+                }
             }
         }
 
         private CompleteResult CalcResult(ActiveInstanceInfo instance)
         {
-            if (state.HasGuaranteedCompleted)
+            if (state.HasGuaranteedCompleted &&
+                instance.Instance.Type == InstanceTypes.dungeon)
             {
                 return CompleteResult.Completed;
             }

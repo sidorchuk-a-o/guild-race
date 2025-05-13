@@ -1,5 +1,7 @@
-﻿using Game.Inventory;
+﻿using AD.ToolsCollection;
+using Game.Inventory;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Game.Instances
@@ -12,11 +14,25 @@ namespace Game.Instances
         [ES3Serializable] private SeasonsSM seasonsSM;
         [ES3Serializable] private ActiveInstancesSM activeInstancesSM;
         [ES3Serializable] private int guaranteedCompletedCount;
+        [ES3Serializable] private long lastResetDay;
+        [ES3Serializable] private int lastResetWeek;
 
         public int GuaranteedCompletedCount
         {
             get => guaranteedCompletedCount;
             set => guaranteedCompletedCount = value;
+        }
+
+        public DateTime LastResetDay
+        {
+            get => lastResetDay.FromUnixTimestamp();
+            set => lastResetDay = value.ToUnixTimestamp();
+        }
+
+        public int LastResetWeek
+        {
+            get => lastResetWeek;
+            set => lastResetWeek = value;
         }
 
         public void SetSeasons(IEnumerable<SeasonInfo> value)

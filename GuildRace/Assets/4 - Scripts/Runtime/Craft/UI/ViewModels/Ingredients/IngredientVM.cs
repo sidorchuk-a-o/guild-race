@@ -8,9 +8,9 @@ namespace Game.Craft
         public ItemDataVM ReagentVM { get; }
         public int Count { get; }
 
-        public IngredientVM(IngredientData data, InventoryVMFactory inventoryVMF)
+        public IngredientVM(IngredientData data, CraftVMFactory craftVMF)
         {
-            ReagentVM = inventoryVMF.CreateItemData(data.ReagentId);
+            ReagentVM = craftVMF.InventoryVMF.CreateItemData(data.ReagentId);
             Count = data.Count;
         }
 

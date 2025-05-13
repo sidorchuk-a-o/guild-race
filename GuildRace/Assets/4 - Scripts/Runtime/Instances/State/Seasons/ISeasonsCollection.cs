@@ -6,5 +6,6 @@ namespace Game.Instances
     {
         SeasonInfo GetSeason(int id);
         InstanceInfo GetInstance(int id);
+        UnitInfo GetBossUnit(int id);
     }
 }

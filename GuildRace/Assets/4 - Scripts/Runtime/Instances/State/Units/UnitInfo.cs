@@ -21,6 +21,9 @@ namespace Game.Instances
         public int CompleteTime { get; }
         public UnitParams UnitParams { get; }
 
+        public int CompletedCount { get; private set; }
+        public int TotalCompletedCount { get; private set; }
+
         public IReadOnlyCollection<AbilityData> Abilities { get; }
         public IReadOnlyCollection<ThreatId> Threats { get; }
 
@@ -42,6 +45,23 @@ namespace Game.Instances
         public void SetInstanceId(string value)
         {
             instanceId.Value = value;
+        }
+
+        public void SetCompletedCountData(int totalCount, int currentCount)
+        {
+            TotalCompletedCount = totalCount;
+            CompletedCount = currentCount;
+        }
+
+        public void IncreaseCompletedCount()
+        {
+            TotalCompletedCount++;
+            CompletedCount++;
+        }
+
+        public void ResetCompletedCount()
+        {
+            CompletedCount = 0;
         }
     }
 }

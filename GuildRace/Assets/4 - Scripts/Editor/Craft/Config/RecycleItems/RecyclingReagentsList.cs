@@ -2,7 +2,7 @@
 
 namespace Game.Craft
 {
-    public class RecyclingRarityModsList : ListElement<RecyclingRarityModData, RecyclingRarityModItem>
+    public class RecyclingReagentsList : ListElement<RecyclingReagentData, RecyclingReagentItem>
     {
         public override void BindData(SerializedData data)
         {

@@ -10,7 +10,7 @@ namespace Game.Craft
 
         public override bool CheckPossibilityOfPlacement(ItemInfo itemInfo)
         {
-            return itemInfo is not ReagentItemInfo;
+            return true;
         }
     }
 }

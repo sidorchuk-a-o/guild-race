@@ -22,5 +22,7 @@ namespace Game.Instances
 
         UniTask CompleteSetupAndStartInstance();
         int CompleteActiveInstance(string activeInstanceId);
+
+        bool CheckUnitCooldown(int unitId, int instanceId);
     }
 }

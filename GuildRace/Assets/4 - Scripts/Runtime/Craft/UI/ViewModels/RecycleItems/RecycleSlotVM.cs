@@ -4,8 +4,8 @@ namespace Game.Craft
 {
     public class RecycleSlotVM : ItemSlotVM
     {
-        public RecycleSlotVM(RecycleSlotInfo info, InventoryVMFactory inventoryVMF)
-            : base(info, inventoryVMF)
+        public RecycleSlotVM(RecycleSlotInfo info, CraftVMFactory craftVMF)
+            : base(info, craftVMF.InventoryVMF)
         {
         }
     }

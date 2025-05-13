@@ -7,6 +7,8 @@ namespace Game.Instances
     {
         [ES3Serializable] private int id;
         [ES3Serializable] private string instanceId;
+        [ES3Serializable] private int totalCompletedCount;
+        [ES3Serializable] private int completedCount;
 
         public int Id => id;
 
@@ -14,6 +16,8 @@ namespace Game.Instances
         {
             id = info.Id;
             instanceId = info.InstanceId.Value;
+            totalCompletedCount = info.TotalCompletedCount;
+            completedCount = info.CompletedCount;
         }
 
         public UnitInfo GetValue(UnitData data)
@@ -21,6 +25,7 @@ namespace Game.Instances
             var info = new UnitInfo(data);
 
             info.SetInstanceId(instanceId);
+            info.SetCompletedCountData(totalCompletedCount, completedCount);
 
             return info;
         }
