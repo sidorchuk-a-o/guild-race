@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 
 namespace Game.Instances
@@ -9,6 +10,7 @@ namespace Game.Instances
         IActiveInstancesCollection ActiveInstances { get; }
 
         ActiveInstanceInfo SetupInstance { get; }
+        IObservable<ActiveInstanceInfo> OnInstanceCompleted { get; }
 
         RewardHandler GetRewardHandler(int id);
         ConsumableMechanicHandler GetConsumableHandler(int id);

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Game.Quests
 {
@@ -9,6 +10,7 @@ namespace Game.Quests
         [ES3Serializable] private int dataId;
         [ES3Serializable] private int progress;
         [ES3Serializable] private bool isRewarded;
+        [ES3Serializable] private Dictionary<string, string> data;
 
         public QuestSM(QuestInfo info)
         {
@@ -16,21 +18,27 @@ namespace Game.Quests
             dataId = info.DataId;
             progress = info.ProgressCounter.Value;
             isRewarded = info.IsRewarded.Value;
+            data = new(info.Data);
         }
 
         public QuestInfo GetValue(QuestsConfig config)
         {
-            var data = config.GetQuest(dataId);
-            var info = new QuestInfo(id, data);
+            var questData = config.GetQuest(dataId);
+            var quest = new QuestInfo(id, questData);
 
-            info.SetProgress(progress);
+            quest.SetProgress(progress);
 
             if (isRewarded)
             {
-                info.MarkAsRewarded();
+                quest.MarkAsRewarded();
             }
 
-            return info;
+            foreach (var value in data)
+            {
+                quest.AddData(value.Key, value.Value);
+            }
+
+            return quest;
         }
     }
 }

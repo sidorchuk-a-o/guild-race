@@ -10,6 +10,7 @@ namespace Game.Quests
         private readonly ReactiveProperty<int> progress = new();
         private readonly ReactiveProperty<bool> isCompleted = new();
         private readonly ReactiveProperty<bool> isRewarded = new();
+        private readonly Dictionary<string, string> data = new();
 
         public string Id { get; }
         public int DataId { get; }
@@ -21,6 +22,7 @@ namespace Game.Quests
 
         public int RequiredProgress { get; }
         public IReadOnlyReactiveProperty<int> ProgressCounter => progress;
+        public IReadOnlyDictionary<string, string> Data => data;
 
         public IReadOnlyReactiveProperty<bool> IsCompleted => isCompleted;
         public IReadOnlyReactiveProperty<bool> IsRewarded => isRewarded;
@@ -47,6 +49,16 @@ namespace Game.Quests
 
             progress.Value = newProgress;
             isCompleted.Value = newProgress >= RequiredProgress;
+        }
+
+        public void AddData(string key, string value)
+        {
+            data[key] = value;
+        }
+
+        public void RemoveData(string key)
+        {
+            data.Remove(key);
         }
 
         public void MarkAsRewarded()

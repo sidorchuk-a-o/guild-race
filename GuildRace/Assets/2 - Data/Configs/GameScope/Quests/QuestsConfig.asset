@@ -435,7 +435,7 @@ MonoBehaviour:
     groupId:
       value: 12
     mechanicId: 22
-    requiredProgress: 1
+    requiredProgress: 3
     mechanicParams:
     - 301
     reward:
@@ -449,7 +449,7 @@ MonoBehaviour:
     groupId:
       value: 12
     mechanicId: 22
-    requiredProgress: 1
+    requiredProgress: 3
     mechanicParams:
     - 302
     reward:
@@ -463,7 +463,7 @@ MonoBehaviour:
     groupId:
       value: 12
     mechanicId: 22
-    requiredProgress: 1
+    requiredProgress: 3
     mechanicParams:
     - 303
     reward:
@@ -477,7 +477,7 @@ MonoBehaviour:
     groupId:
       value: 12
     mechanicId: 22
-    requiredProgress: 1
+    requiredProgress: 3
     mechanicParams:
     - 304
     reward:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
     mechanicId: 26
     requiredProgress: 3
     mechanicParams:
-    - 3028
+    - 3029
     reward:
       key:
         value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c

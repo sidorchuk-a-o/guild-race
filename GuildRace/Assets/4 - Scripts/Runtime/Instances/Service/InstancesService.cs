@@ -24,6 +24,7 @@ namespace Game.Instances
 
         private readonly Dictionary<int, RewardHandler> rewardHandlers;
         private readonly Dictionary<int, ConsumableMechanicHandler> consumableHandlers;
+
         private readonly InstancesConfig instancesConfig;
         private readonly IWeeklyService weeklyService;
         private readonly IAppEventsService appEvents;
@@ -33,6 +34,7 @@ namespace Game.Instances
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
 
         public ActiveInstanceInfo SetupInstance => state.SetupInstance;
+        public IObservable<ActiveInstanceInfo> OnInstanceCompleted => activeInstanceModule.OnInstanceCompleted;
 
         public InstancesService(
             GuildConfig guildConfig,
