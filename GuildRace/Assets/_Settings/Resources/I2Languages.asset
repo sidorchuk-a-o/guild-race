@@ -5509,7 +5509,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u041E\u0441\u043B\u0430\u0431\u043B\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430"
+      - "\u041E\u0441\u043B\u0430\u0431\u043B\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430:
+        {[0]}"
       Flags: 0000
       Languages_Touch: []
     - Term: QUESTS/QUEST_MECHANIC_25_TTL
@@ -5587,7 +5588,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1747117969093
+    Google_LastUpdatedVersion: 1747119846491
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
