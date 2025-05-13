@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using AD.Services.Store;
 using Game.Guild;
 using Game.Inventory;
 using System;
@@ -9,34 +10,38 @@ namespace Game.Craft
 {
     public class CraftVMFactory : VMFactory
     {
+        private readonly StoreConfig storeConfig;
         private readonly CraftConfig craftConfig;
 
         private readonly ICraftService craftService;
         private readonly IGuildService guildService;
 
-        private readonly InventoryVMFactory inventoryVMF;
+        public InventoryVMFactory InventoryVMF { get; }
 
         public CraftVMFactory(
+            StoreConfig storeConfig,
             CraftConfig craftConfig,
             ICraftService craftService,
             IGuildService guildService,
             InventoryVMFactory inventoryVMF)
         {
+            this.storeConfig = storeConfig;
             this.craftConfig = craftConfig;
             this.craftService = craftService;
             this.guildService = guildService;
-            this.inventoryVMF = inventoryVMF;
+
+            InventoryVMF = inventoryVMF;
         }
 
         public VendorsVM GetVendors()
         {
-            return new VendorsVM(craftService.Vendors, inventoryVMF);
+            return new VendorsVM(craftService.Vendors, this);
         }
 
         public ItemDataVM GetRecipeProduct(int recipeId)
         {
             var recipeData = craftConfig.GetRecipe(recipeId);
-            var itemDataVM = inventoryVMF.CreateItemData(recipeData.ProductItemId);
+            var itemDataVM = InventoryVMF.CreateItemData(recipeData.ProductItemId);
 
             return itemDataVM;
         }
@@ -50,7 +55,7 @@ namespace Game.Craft
                 .Where(x => reagentCellTypes.Contains(x.Grid.CellType))
                 .Select(x => x.Grid);
 
-            return inventoryVMF.CreateItemCounter(reagentId, reagentGrids);
+            return InventoryVMF.CreateItemCounter(reagentId, reagentGrids);
         }
 
         public IReadOnlyList<IngredientVM> GetRecipeIngredients(int recipeId)
@@ -58,7 +63,7 @@ namespace Game.Craft
             var recipeData = craftConfig.GetRecipe(recipeId);
 
             var ingredientsVM = recipeData.Ingredients
-                .Select(x => new IngredientVM(x, inventoryVMF))
+                .Select(x => new IngredientVM(x, this))
                 .ToList();
 
             return ingredientsVM;
@@ -71,16 +76,28 @@ namespace Game.Craft
 
         // == Recycle Items ==
 
+        public CurrencyVM GetCurrency(CurrencyKey currencyKey)
+        {
+            var data = storeConfig.Currencies.FirstOrDefault(x => x.Key == currencyKey);
+
+            return new CurrencyVM(data);
+        }
+
         public RecycleSlotVM GetRecycleSlot()
         {
-            return new RecycleSlotVM(craftService.RecycleSlot, inventoryVMF);
+            return new RecycleSlotVM(craftService.RecycleSlot, this);
         }
 
         public RecyclingResultVM GetRecyclingParams(string itemId)
         {
-            var data = craftService.GetRecyclingResult(itemId);
+            var result = craftService.GetRecyclingResult(itemId);
 
-            return data != null ? new RecyclingResultVM(data, inventoryVMF) : null;
+            return result switch
+            {
+                RecyclingItemResult item => new RecyclingItemResultVM(item, this),
+                RecyclingReagentResult reagent => new RecyclingReagentResultVM(reagent, this),
+                _ => throw new NotImplementedException()
+            };
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Game.Craft
         public int Id { get; }
         public ItemDataVM ProductVM { get; }
 
-        public RecipeVM(RecipeData data, InventoryVMFactory inventoryVMF)
+        public RecipeVM(RecipeData data, CraftVMFactory craftVMF)
         {
             Id = data.Id;
-            ProductVM = inventoryVMF.CreateItemData(data.ProductItemId);
+            ProductVM = craftVMF.InventoryVMF.CreateItemData(data.ProductItemId);
         }
 
         protected override void InitSubscribes()

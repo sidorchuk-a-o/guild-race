@@ -1,4 +1,5 @@
 ﻿using AD.Services;
+using AD.Services.Store;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
@@ -21,6 +22,7 @@ namespace Game.Craft
 
         private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
+        private readonly IStoreService storeService;
 
         private readonly Subject<CraftingResult> onCraftingComplete = new();
 
@@ -34,6 +36,7 @@ namespace Game.Craft
             InventoryConfig inventoryConfig,
             IGuildService guildService,
             IInventoryService inventoryService,
+            IStoreService storeService,
             IObjectResolver resolver)
         {
             this.craftConfig = craftConfig;
@@ -41,7 +44,7 @@ namespace Game.Craft
 
             this.guildService = guildService;
             this.inventoryService = inventoryService;
-
+            this.storeService = storeService;
             state = new(craftConfig, guildService, inventoryService, resolver);
         }
 
@@ -65,37 +68,50 @@ namespace Game.Craft
 
         private void StartRecycleProcess(ItemInfo item)
         {
-            var recyclingParams = GetRecyclingResult(item.Id);
+            var result = GetRecyclingResult(item.Id);
 
-            // create reagent
-            var newItemId = recyclingParams.ReagentId;
-            var newItem = inventoryService.Factory.CreateItem(newItemId);
-
-            if (newItem is not ReagentItemInfo reagentItem)
+            if (result is RecyclingReagentResult recyclingReagent)
             {
-                return;
+                var amount = new CurrencyAmount(recyclingReagent.Currency, recyclingReagent.Amount);
+
+                storeService.CurrenciesModule.AddCurrency(amount);
             }
 
-            // find bank tab
-            var reagentsParams = craftConfig.ReagentsParams;
-            var reagentCellTypes = reagentsParams.GridParams.CellTypes;
-
-            var reagentsBank = guildService.BankTabs
-                .Select(x => x.Grid)
-                .FirstOrDefault(x => reagentCellTypes.Contains(x.CellType));
-
-            // place in bank
-            var reagentCount = recyclingParams.Count;
-
-            reagentItem.Stack.SetValue(reagentCount);
-
-            var placementArgs = new PlaceInPlacementArgs
+            if (result is RecyclingItemResult recyclingItem)
             {
-                ItemId = reagentItem.Id,
-                PlacementId = reagentsBank.Id
-            };
+                // find bank tab
+                var reagentsParams = craftConfig.ReagentsParams;
+                var reagentCellTypes = reagentsParams.GridParams.CellTypes;
 
-            inventoryService.TryPlaceItem(placementArgs);
+                var reagentsBank = guildService.BankTabs
+                    .Select(x => x.Grid)
+                    .FirstOrDefault(x => reagentCellTypes.Contains(x.CellType));
+
+                foreach (var reagentData in recyclingItem.Reagents)
+                {
+                    // create reagent
+                    var newItemId = reagentData.ReagentId;
+                    var newItem = inventoryService.Factory.CreateItem(newItemId);
+
+                    if (newItem is not ReagentItemInfo reagentItem)
+                    {
+                        return;
+                    }
+
+                    // place in bank
+                    var reagentCount = reagentData.Count;
+
+                    reagentItem.Stack.SetValue(reagentCount);
+
+                    var placementArgs = new PlaceInPlacementArgs
+                    {
+                        ItemId = reagentItem.Id,
+                        PlacementId = reagentsBank.Id
+                    };
+
+                    inventoryService.TryPlaceItem(placementArgs);
+                }
+            }
 
             // remove item
             var removeArgs = new RemoveFromSlotArgs
@@ -108,31 +124,49 @@ namespace Game.Craft
 
         public RecyclingResult GetRecyclingResult(string itemId)
         {
-            const float recyclePercent = .3f;
-
             var item = inventoryService.GetItem(itemId);
-
-            if (item is ReagentItemInfo)
-            {
-                return null;
-            }
-
-            var recipe = craftConfig.GetRecipeByItem(item.DataId)
-                      ?? GetNearbyRecipe(item.DataId);
-
-            var ingredient = recipe.Ingredients[0];
+            var recyclingParams = craftConfig.RecyclingParams;
 
             var stack = GetStack(item);
             var rarity = GetRarity(item);
-            var rariryMod = craftConfig.RecyclingParams.GetRarityMod(rarity);
 
-            var recyclingResult = Mathf.CeilToInt(ingredient.Count * recyclePercent) * rariryMod.Value * stack;
-
-            return new RecyclingResult
+            if (item is ReagentItemInfo)
             {
-                ReagentId = ingredient.ReagentId,
-                Count = recyclingResult
-            };
+                var reagentMod = recyclingParams.GetRecyclingReagent(rarity);
+
+                return new RecyclingReagentResult
+                {
+                    Currency = reagentMod.CurrencyKey,
+                    Amount = reagentMod.Amount * stack
+                };
+            }
+            else
+            {
+                var recipe = craftConfig.GetRecipeByItem(item.DataId)
+                          ?? GetNearbyRecipe(item.DataId);
+
+                var ignoreReagents = recyclingParams.IgnoreReagents;
+                var ingredients = recipe.Ingredients.Where(x => !ignoreReagents.Contains(x.ReagentId));
+
+                var itemMod = recyclingParams.GetRecyclingItem(rarity);
+
+                var reagents = ingredients.Select(ingredient =>
+                {
+                    var reagentId = ingredient.ReagentId;
+                    var recyclingResult = Mathf.CeilToInt(ingredient.Count * itemMod.Percent) * stack;
+
+                    return new RecyclingItemInfo
+                    {
+                        ReagentId = reagentId,
+                        Count = recyclingResult
+                    };
+                });
+
+                return new RecyclingItemResult
+                {
+                    Reagents = reagents.ToList()
+                };
+            }
         }
 
         private RecipeData GetNearbyRecipe(int dataId)

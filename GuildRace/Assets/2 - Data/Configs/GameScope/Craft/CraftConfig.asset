@@ -925,13 +925,25 @@ MonoBehaviour:
       - value: 213
   recyclingParams:
     recycleSlot: {fileID: -2555708873099936188}
-    rarityMods:
+    recyclingItems:
     - rarity:
         value: 121
-      value: 1
+      percent: 0.3
     - rarity:
         value: 122
-      value: 2
+      percent: 0.5
+    recyclingReagents:
+    - rarity:
+        value: 121
+      currencyKey:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      amount: 50
+    - rarity:
+        value: 122
+      currencyKey:
+        value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+      amount: 100
+    ignoreReagents: f4030000
 --- !u!114 &612348295938896457
 MonoBehaviour:
   m_ObjectHideFlags: 1

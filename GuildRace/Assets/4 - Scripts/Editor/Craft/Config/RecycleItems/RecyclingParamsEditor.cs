@@ -1,4 +1,5 @@
 ﻿using AD.ToolsCollection;
+using Game.Inventory;
 using UnityEngine.UIElements;
 
 namespace Game.Craft
@@ -9,7 +10,9 @@ namespace Game.Craft
     public class RecyclingParamsEditor
     {
         private RecycleSlotElement recycleSlotEditor;
-        private RecyclingRarityModsList rarityModsList;
+        private RecyclingItemsList recyclingItemsList;
+        private RecyclingReagentsList recyclingReagentsList;
+        private ItemByIdList ignoreReagentsList;
 
         private SerializedData GetData(SerializedData data)
         {
@@ -29,10 +32,20 @@ namespace Game.Craft
             recycleSlotEditor = root.CreateElement<RecycleSlotElement>();
             recycleSlotEditor.BindProperty("recycleSlot", GetData(data));
 
-            root.CreateHeader("Rarity Mods");
+            root.CreateHeader("Recycling Items");
 
-            rarityModsList = root.CreateElement<RecyclingRarityModsList>();
-            rarityModsList.BindProperty("rarityMods", GetData(data));
+            recyclingItemsList = root.CreateElement<RecyclingItemsList>();
+            recyclingItemsList.BindProperty("recyclingItems", GetData(data));
+
+            root.CreateHeader("Recycling Reagents");
+
+            recyclingReagentsList = root.CreateElement<RecyclingReagentsList>();
+            recyclingReagentsList.BindProperty("recyclingReagents", GetData(data));
+
+            root.CreateHeader("Ignore Reagents");
+
+            ignoreReagentsList = root.CreateElement<ItemByIdList>();
+            ignoreReagentsList.BindProperty("ignoreReagents", GetData(data));
         }
     }
 }
