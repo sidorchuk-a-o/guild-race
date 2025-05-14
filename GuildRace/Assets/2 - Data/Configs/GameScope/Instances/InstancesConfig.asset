@@ -1001,7 +1001,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_303_TTL
       descKey:
-        value: 
+        value: <none>
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 
@@ -1164,7 +1164,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_304_TTL
       descKey:
-        value: 
+        value: <none>
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 

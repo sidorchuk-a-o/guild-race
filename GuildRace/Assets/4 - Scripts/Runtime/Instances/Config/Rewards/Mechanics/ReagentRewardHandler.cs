@@ -26,12 +26,14 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
-        public override void ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
+        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
-            rewards.ForEach(reward => ApplyReward(reward, result));
+            return rewards
+                .Select(reward => ApplyReward(reward, result))
+                .OfType<RewardResult>();
         }
 
-        public override void ApplyReward(InstanceRewardData reward, CompleteResult result)
+        public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
         {
             var reagentCellTypes = craftConfig.ReagentsParams.GridParams.CellTypes;
             var reagentBank = guildService.BankTabs.FirstOrDefault(x =>
@@ -41,7 +43,7 @@ namespace Game.Instances
 
             if (reagentBank == null)
             {
-                return;
+                return null;
             }
 
             var reagentId = reward.MechanicParams[0].IntParse();
@@ -61,6 +63,13 @@ namespace Game.Instances
                 PlacementId = reagentBank.Grid.Id,
                 ItemId = reagentItem.Id
             });
+
+            return new ReagentRewardResult
+            {
+                ItemId = reagentItem.Id,
+                ItemDataId = reagentItem.DataId,
+                Count = reagentCount
+            };
         }
     }
 }

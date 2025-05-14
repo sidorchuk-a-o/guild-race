@@ -24,7 +24,10 @@ namespace Game.Instances
         private readonly IInventoryService inventoryService;
         private readonly IInstancesService instancesService;
 
+        private readonly Subject<IEnumerable<RewardResult>> onRewardsReceived = new();
         private readonly Dictionary<string, CompositeDisp> unitBagDispCache = new();
+
+        public IObservable<IEnumerable<RewardResult>> OnRewardsReceived => onRewardsReceived;
 
         public InstanceModule(
             InstancesState state,
@@ -322,8 +325,8 @@ namespace Game.Instances
 
             ResetInstanceData(activeInstance);
 
-            // take rewards
-            TakeRewards(activeInstance);
+            // rewards
+            ReceiveRewards(activeInstance);
 
             // upd state
             return state.RemoveActiveInstance(activeInstanceId);
@@ -363,8 +366,9 @@ namespace Game.Instances
             }
         }
 
-        private void TakeRewards(ActiveInstanceInfo instance)
+        private void ReceiveRewards(ActiveInstanceInfo instance)
         {
+            var rewardResults = new List<RewardResult>();
             var instanceResult = instance.Result.Value;
 
             if (instanceResult == CompleteResult.None)
@@ -380,9 +384,15 @@ namespace Game.Instances
                 var rewards = rewardGroup.ToListPool();
                 var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
 
-                rewardHandler.ApplyRewards(rewards, instanceResult);
+                var groupResult = rewardHandler.ApplyRewards(rewards, instanceResult);
 
+                rewardResults.AddRange(groupResult);
                 rewards.ReleaseListPool();
+            }
+
+            if (rewardResults.Any())
+            {
+                onRewardsReceived.OnNext(rewardResults);
             }
         }
     }

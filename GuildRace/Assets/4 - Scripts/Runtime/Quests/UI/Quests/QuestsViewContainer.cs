@@ -20,11 +20,14 @@ namespace Game.Quests
                 var item = items[i];
                 var questVM = questsVM[i];
 
-                item.Init(questVM, disp);
+                if (questVM != null)
+                {
+                    item.Init(questVM, disp);
 
-                item.OnSelect
-                    .Subscribe(onSelect.OnNext)
-                    .AddTo(disp);
+                    item.OnSelect
+                        .Subscribe(onSelect.OnNext)
+                        .AddTo(disp);
+                }
             }
         }
     }

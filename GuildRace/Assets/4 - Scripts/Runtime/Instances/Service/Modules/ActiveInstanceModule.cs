@@ -1,6 +1,8 @@
-﻿using AD.Services.AppEvents;
+﻿using System;
+using AD.Services.AppEvents;
 using AD.Services.ProtectedTime;
 using AD.ToolsCollection;
+using UniRx;
 
 namespace Game.Instances
 {
@@ -9,6 +11,10 @@ namespace Game.Instances
         private readonly IInstancesService instancesService;
         private readonly InstancesState state;
         private readonly ITimeService time;
+
+        private readonly Subject<ActiveInstanceInfo> onInstanceCompleted = new();
+
+        public IObservable<ActiveInstanceInfo> OnInstanceCompleted => onInstanceCompleted;
 
         public ActiveInstanceModule(
             IInstancesService instancesService,
@@ -47,6 +53,11 @@ namespace Game.Instances
                 if (activeInstance.Instance.Type == InstanceTypes.dungeon)
                 {
                     state.DecrementGuaranteedCompleted();
+                }
+
+                if (result == CompleteResult.Completed)
+                {
+                    onInstanceCompleted.OnNext(activeInstance);
                 }
             }
         }

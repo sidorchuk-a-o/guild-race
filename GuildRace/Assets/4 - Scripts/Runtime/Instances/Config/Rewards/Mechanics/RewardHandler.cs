@@ -5,7 +5,7 @@ namespace Game.Instances
 {
     public abstract class RewardHandler : ScriptableEntity<int>
     {
-        public abstract void ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result);
-        public abstract void ApplyReward(InstanceRewardData reward, CompleteResult result);
+        public abstract IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result);
+        public abstract RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result);
     }
 }
