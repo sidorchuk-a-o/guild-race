@@ -5562,7 +5562,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u041D\u0430\u043A\u043E\u043F\u0438\u0442\u044C {[0]} {[1]}"
+      - "\u0414\u043E\u0431\u044B\u0442\u044C {[0]} {[1]}"
       Flags: 0000
       Languages_Touch: []
     - Term: QUESTS/QUEST_MECHANIC_26_DSC
@@ -5588,7 +5588,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1747119846491
+    Google_LastUpdatedVersion: 1747200359540
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

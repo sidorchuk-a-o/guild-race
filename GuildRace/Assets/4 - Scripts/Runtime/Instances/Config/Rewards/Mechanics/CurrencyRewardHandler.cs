@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using AD.Services.Store;
 using AD.ToolsCollection;
 using UnityEngine;
@@ -18,12 +19,12 @@ namespace Game.Instances
             this.storeService = storeService;
         }
 
-        public override void ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
+        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
-            rewards.ForEach(x => ApplyReward(x, result));
+            return rewards.Select(x => ApplyReward(x, result));
         }
 
-        public override void ApplyReward(InstanceRewardData reward, CompleteResult result)
+        public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
         {
             var currencyKey = new CurrencyKey(reward.MechanicParams[0]);
             var currencyValue = reward.MechanicParams[1].IntParse();
@@ -36,6 +37,12 @@ namespace Game.Instances
             var amount = new CurrencyAmount(currencyKey, currencyValue);
 
             storeService.CurrenciesModule.AddCurrency(amount);
+
+            return new CurrencyRewardResult
+            {
+                CurrencyKey = currencyKey,
+                CurrencyValue = currencyValue
+            };
         }
     }
 }

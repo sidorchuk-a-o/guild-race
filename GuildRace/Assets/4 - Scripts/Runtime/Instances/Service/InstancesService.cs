@@ -34,7 +34,9 @@ namespace Game.Instances
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
 
         public ActiveInstanceInfo SetupInstance => state.SetupInstance;
+
         public IObservable<ActiveInstanceInfo> OnInstanceCompleted => activeInstanceModule.OnInstanceCompleted;
+        public IObservable<IEnumerable<RewardResult>> OnRewardsReceived => instanceModule.OnRewardsReceived;
 
         public InstancesService(
             GuildConfig guildConfig,

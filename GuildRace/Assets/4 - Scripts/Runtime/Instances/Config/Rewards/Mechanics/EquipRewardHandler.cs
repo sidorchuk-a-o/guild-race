@@ -22,23 +22,29 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
-        public override void ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
+        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
             if (result != CompleteResult.Completed)
             {
-                return;
+                yield break;
             }
 
             var randomReward = rewards.RandomValue();
+            var rewardResult = ApplyReward(randomReward, result);
 
-            ApplyReward(randomReward, result);
+            if (rewardResult == null)
+            {
+                yield break;
+            }
+
+            yield return rewardResult;
         }
 
-        public override void ApplyReward(InstanceRewardData reward, CompleteResult result)
+        public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
         {
             if (result != CompleteResult.Completed)
             {
-                return;
+                return null;
             }
 
             var equipCellTypes = inventoryConfig.EquipsParams.GridParams.CellTypes;
@@ -49,7 +55,7 @@ namespace Game.Instances
 
             if (equipBank == null)
             {
-                return;
+                return null;
             }
 
             var equipId = reward.MechanicParams[0].IntParse();
@@ -60,6 +66,12 @@ namespace Game.Instances
                 PlacementId = equipBank.Grid.Id,
                 ItemId = equipItem.Id
             });
+
+            return new EquipRewardResult
+            {
+                ItemId = equipItem.Id,
+                ItemDataId = equipItem.DataId
+            };
         }
     }
 }
