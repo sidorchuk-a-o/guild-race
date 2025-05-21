@@ -29,6 +29,7 @@ namespace Game.Instances
 
         private ActiveInstancesVM activeInstancesVM;
 
+        private string lastActiveInstanceId;
         private ActiveInstanceVM activeInstanceVM;
         private ActiveInstanceVM switchToInstanceVM;
 
@@ -82,7 +83,7 @@ namespace Game.Instances
                 return;
             }
 
-            SelectActiveInstance(activeInstancesVM.FirstOrDefault());
+            SelectActiveInstance(activeInstanceVM ?? activeInstancesVM.FirstOrDefault());
         }
 
         private void InstanceSelectCallback(ActiveInstanceVM activeInstanceVM)
@@ -114,6 +115,16 @@ namespace Game.Instances
             instanceToken?.Cancel();
             instanceToken = token;
 
+            if (selected &&
+                lastActiveInstanceId.IsValid() &&
+                lastActiveInstanceId == activeInstanceVM.Id)
+            {
+                updateInstance();
+                return;
+            }
+
+            lastActiveInstanceId = activeInstanceVM?.Id;
+
             instanceContainer.DOKill();
             instanceContainer.interactable = selected;
 
@@ -126,17 +137,22 @@ namespace Game.Instances
                 return;
             }
 
-            instanceNameText.SetTextParams(activeInstanceVM.InstanceVM.NameKey);
-
-            activeInstanceVM.ResultStateVM.Value
-                .Subscribe(resultState.SetState)
-                .AddTo(instanceDisp);
-
-            activeInstanceVM.IsReadyToComplete
-                .Subscribe(ReadyToCompleteChangedCallback)
-                .AddTo(instanceDisp);
+            updateInstance();
 
             await instanceContainer.DOFade(1, duration);
+
+            void updateInstance()
+            {
+                instanceNameText.SetTextParams(activeInstanceVM.InstanceVM.NameKey);
+
+                activeInstanceVM.ResultStateVM.Value
+                    .Subscribe(resultState.SetState)
+                    .AddTo(instanceDisp);
+
+                activeInstanceVM.IsReadyToComplete
+                    .Subscribe(ReadyToCompleteChangedCallback)
+                    .AddTo(instanceDisp);
+            }
         }
 
         private void ReadyToCompleteChangedCallback(bool state)

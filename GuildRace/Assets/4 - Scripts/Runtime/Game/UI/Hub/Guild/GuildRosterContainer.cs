@@ -35,6 +35,7 @@ namespace Game.Guild
 
         private GuildVMFactory guildVMF;
 
+        private string lastCharacterId;
         private CharacterVM characterVM;
         private CharacterVM switchToCharacterVM;
 
@@ -94,7 +95,7 @@ namespace Game.Guild
                 return;
             }
 
-            SelectCharacter(charactersVM.FirstOrDefault());
+            SelectCharacter(characterVM ?? charactersVM.FirstOrDefault());
         }
 
         private void CharacterSelectCallback(CharacterVM characterVM)
@@ -104,11 +105,6 @@ namespace Game.Guild
 
         private void SelectCharacter(CharacterVM characterVM)
         {
-            if (this.characterVM == characterVM)
-            {
-                return;
-            }
-
             this.characterVM?.SetSelectState(false);
 
             this.characterVM = characterVM;
@@ -128,6 +124,16 @@ namespace Game.Guild
             characterToken?.Cancel();
             characterToken = token;
 
+            if (selected &&
+                lastCharacterId.IsValid() &&
+                lastCharacterId == characterVM.Id)
+            {
+                updateCharacter();
+                return;
+            }
+
+            lastCharacterId = characterVM?.Id;
+
             characterContainer.DOKill();
             characterContainer.interactable = selected;
 
@@ -140,21 +146,26 @@ namespace Game.Guild
                 return;
             }
 
-            nicknameText.SetTextParams(characterVM.Nickname);
-            classNameText.SetTextParams(characterVM.ClassVM.NameKey);
-            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
-
-            characterVM.ItemsLevel
-                .Subscribe(x => itemsLevelText.SetTextParams(x))
-                .AddTo(characterDisp);
-
-            characterVM.GuildRankName
-                .Subscribe(x => guildRankText.SetTextParams(x))
-                .AddTo(characterDisp);
-
-            equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);
+            updateCharacter();
 
             await characterContainer.DOFade(1, duration);
+
+            void updateCharacter()
+            {
+                nicknameText.SetTextParams(characterVM.Nickname);
+                classNameText.SetTextParams(characterVM.ClassVM.NameKey);
+                specNameText.SetTextParams(characterVM.SpecVM.NameKey);
+
+                characterVM.ItemsLevel
+                    .Subscribe(x => itemsLevelText.SetTextParams(x))
+                    .AddTo(characterDisp);
+
+                characterVM.GuildRankName
+                    .Subscribe(x => guildRankText.SetTextParams(x))
+                    .AddTo(characterDisp);
+
+                equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);
+            }
         }
 
         private void RemoveCharacterCallback()

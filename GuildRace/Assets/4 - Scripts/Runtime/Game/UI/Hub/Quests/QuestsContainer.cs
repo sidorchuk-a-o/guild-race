@@ -33,6 +33,7 @@ namespace Game.Quests
 
         private QuestsVMFactory questsVMF;
 
+        private string lastQuestId;
         private QuestVM questVM;
         private QuestsVM[] questsVMs;
 
@@ -86,11 +87,6 @@ namespace Game.Quests
 
         private void SelectQuest(QuestVM questVM)
         {
-            if (this.questVM == questVM)
-            {
-                return;
-            }
-
             this.questVM?.SetSelectState(false);
 
             this.questVM = questVM;
@@ -110,6 +106,22 @@ namespace Game.Quests
             questToken?.Cancel();
             questToken = token;
 
+            if (hasQuest == false &&
+                lastQuestId.IsValid() == false)
+            {
+                return;
+            }
+
+            if (hasQuest &&
+                lastQuestId.IsValid() &&
+                lastQuestId == questVM.Id)
+            {
+                updateQuest();
+                return;
+            }
+
+            lastQuestId = questVM?.Id;
+
             questContainer.DOKill();
             emptyQuestContainer.DOKill();
 
@@ -127,31 +139,36 @@ namespace Game.Quests
                 return;
             }
 
-            if (hasQuest)
-            {
-                nameText.SetTextParams(questVM.NameKey);
-                descText.SetTextParams(questVM.DescKey);
-
-                rewardAmountText.SetTextParams((long)questVM.Reward.Value);
-
-                progressContainer.Init(questVM, disp);
-
-                questVM.IsCompleted
-                    .SilentSubscribe(UpdateButtons)
-                    .AddTo(disp);
-
-                questVM.IsRewarded
-                    .SilentSubscribe(UpdateButtons)
-                    .AddTo(disp);
-
-                UpdateButtons();
-            }
+            updateQuest();
 
             var showContainer = hasQuest
                 ? questContainer
                 : emptyQuestContainer;
 
             await showContainer.DOFade(1, duration);
+
+            void updateQuest()
+            {
+                if (hasQuest)
+                {
+                    nameText.SetTextParams(questVM.NameKey);
+                    descText.SetTextParams(questVM.DescKey);
+
+                    rewardAmountText.SetTextParams((long)questVM.Reward.Value);
+
+                    progressContainer.Init(questVM, disp);
+
+                    questVM.IsCompleted
+                        .SilentSubscribe(UpdateButtons)
+                        .AddTo(disp);
+
+                    questVM.IsRewarded
+                        .SilentSubscribe(UpdateButtons)
+                        .AddTo(disp);
+
+                    UpdateButtons();
+                }
+            }
         }
 
         private void UpdateButtons()

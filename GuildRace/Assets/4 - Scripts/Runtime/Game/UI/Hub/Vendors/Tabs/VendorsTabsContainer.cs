@@ -53,7 +53,7 @@ namespace Game.Craft
 
             InitVendorTabs(disp);
 
-            SelectTab(null);
+            SelectTab(vendorVM.Value);
 
             recipesScroll.OnSelect
                 .Subscribe(SelectRecipeCallback)
@@ -95,7 +95,7 @@ namespace Game.Craft
 
             recipesScroll.Init(vendorVM.Value.RecipesVM, forcedReset: true);
 
-            SetRecipe(null);
+            SetRecipe(recipeVM.Value);
         }
 
         private void SelectRecipeCallback(RecipeVM recipeVM)

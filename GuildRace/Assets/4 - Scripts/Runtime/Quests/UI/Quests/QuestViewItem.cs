@@ -18,6 +18,8 @@ namespace Game.Quests
 
         [Header("Buttons")]
         [SerializeField] private UIButton selectButton;
+        [SerializeField] private string unselectedStateKey = "default";
+        [SerializeField] private string selectedStateKey = "selected";
 
         private QuestVM questVM;
 
@@ -49,6 +51,22 @@ namespace Game.Quests
             questVM.IsRewarded
                 .Subscribe(x => rewardedIndicator.SetActive(x))
                 .AddTo(disp);
+
+            questVM.IsSelected
+                .Subscribe(SelectedStateChanged)
+                .AddTo(disp);
+        }
+
+        private void SelectedStateChanged(bool state)
+        {
+            if (selectButton != null)
+            {
+                var stateKey = state
+                    ? selectedStateKey
+                    : unselectedStateKey;
+
+                selectButton.SetState(stateKey);
+            }
         }
     }
 }

@@ -32,6 +32,7 @@ namespace Game.Guild
         private readonly CompositeDisp requestDisp = new();
         private CancellationTokenSource requestToken;
 
+        private string lastRequestId;
         private JoinRequestVM joinRequestVM;
         private JoinRequestsVM joinRequestsVM;
 
@@ -88,7 +89,7 @@ namespace Game.Guild
                 return;
             }
 
-            SelectRequest(joinRequestsVM.FirstOrDefault());
+            SelectRequest(joinRequestVM ?? joinRequestsVM.FirstOrDefault());
         }
 
         private void AddRequestCallback(VMAddEvent args)
@@ -132,11 +133,6 @@ namespace Game.Guild
 
         private void SelectRequest(JoinRequestVM joinRequestVM)
         {
-            if (this.joinRequestVM == joinRequestVM)
-            {
-                return;
-            }
-
             this.joinRequestVM?.SetSelectState(false);
 
             this.joinRequestVM = joinRequestVM;
@@ -150,36 +146,52 @@ namespace Game.Guild
             requestDisp.Clear();
             requestDisp.AddTo(disp);
 
+            var hasRequest = joinRequestVM != null;
             var token = new CancellationTokenSource();
 
             requestToken?.Cancel();
             requestToken = token;
 
+            if (hasRequest &&
+                lastRequestId.IsValid() &&
+                lastRequestId == joinRequestVM.Id)
+            {
+                updateCharacter();
+                return;
+            }
+
+            lastRequestId = joinRequestVM.Id;
+
             characterContainer.DOKill();
-            characterContainer.interactable = joinRequestVM != null;
+            characterContainer.interactable = hasRequest;
 
             const float duration = 0.1f;
 
             await characterContainer.DOFade(0, duration);
 
-            if (joinRequestVM == null || token.IsCancellationRequested)
+            if (hasRequest == false || token.IsCancellationRequested)
             {
                 return;
             }
 
-            var characterVM = joinRequestVM.CharacterVM;
-
-            nicknameText.SetTextParams(characterVM.Nickname);
-            classNameText.SetTextParams(characterVM.ClassVM.NameKey);
-            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
-
-            equipSlotsContainer.Init(characterVM.EquiSlotsVM, requestDisp);
-
-            characterVM.ItemsLevel
-                .Subscribe(x => itemsLevelText.SetTextParams(x))
-                .AddTo(requestDisp);
+            updateCharacter();
 
             await characterContainer.DOFade(1, duration);
+
+            void updateCharacter()
+            {
+                var characterVM = joinRequestVM.CharacterVM;
+
+                nicknameText.SetTextParams(characterVM.Nickname);
+                classNameText.SetTextParams(characterVM.ClassVM.NameKey);
+                specNameText.SetTextParams(characterVM.SpecVM.NameKey);
+
+                equipSlotsContainer.Init(characterVM.EquiSlotsVM, requestDisp);
+
+                characterVM.ItemsLevel
+                    .Subscribe(x => itemsLevelText.SetTextParams(x))
+                    .AddTo(requestDisp);
+            }
         }
 
         private void SettingsButtonCallback()

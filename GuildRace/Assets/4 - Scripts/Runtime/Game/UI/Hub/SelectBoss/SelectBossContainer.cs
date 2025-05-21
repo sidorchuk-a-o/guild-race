@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
@@ -16,6 +17,7 @@ namespace Game.Instances
 
         [Header("Header")]
         [SerializeField] private UIText headerText;
+        [SerializeField] private UIButton backButton;
 
         [Header("Boss Units")]
         [SerializeField] private UnitsScrollView bossUnitsScroll;
@@ -52,6 +54,10 @@ namespace Game.Instances
 
             startInstanceButton.OnClick
                 .Subscribe(StartSetupInstanceCallback)
+                .AddTo(this);
+
+            backButton.OnClick
+                .Subscribe(BackClickCallback)
                 .AddTo(this);
         }
 
@@ -154,6 +160,11 @@ namespace Game.Instances
                 InstanceId = instanceVM.Id,
                 BossUnitId = selectedUnitVM.Id
             });
+        }
+
+        private void BackClickCallback()
+        {
+            Router.Push(RouteKeys.Hub.selectInstance);
         }
     }
 }

@@ -540,10 +540,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6037269979517711087}
     m_Modifications:
-    - target: {fileID: 1819111818582051995, guid: 1b42567a7e5618e4bb328eb6d3989078, type: 3}
-      propertyPath: m_text
-      value: "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B"
-      objectReference: {fileID: 0}
     - target: {fileID: 6305781560700319711, guid: 1b42567a7e5618e4bb328eb6d3989078, type: 3}
       propertyPath: localizeKey.value
       value: GUILD/EMBLEM_PARAMS_TTL

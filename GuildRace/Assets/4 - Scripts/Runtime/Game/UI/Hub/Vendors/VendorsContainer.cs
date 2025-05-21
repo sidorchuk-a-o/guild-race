@@ -29,6 +29,7 @@ namespace Game.Craft
         private readonly CompositeDisp recipeDisp = new();
         private CancellationTokenSource recipeToken;
 
+        private int? lastRecipeId;
         private CraftVMFactory craftVMF;
 
         [Inject]
@@ -69,6 +70,22 @@ namespace Game.Craft
             recipeToken?.Cancel();
             recipeToken = token;
 
+            if (hasRecipe == false &&
+                lastRecipeId.HasValue == false)
+            {
+                await updateRecipe();
+                return;
+            }
+
+            if (hasRecipe &&
+                lastRecipeId.HasValue &&
+                lastRecipeId.Value == recipeVM.Id)
+            {
+                return;
+            }
+
+            lastRecipeId = recipeVM?.Id;
+
             recipeContainer.DOKill();
             emptyRecipeContainer.DOKill();
 
@@ -86,31 +103,36 @@ namespace Game.Craft
                 return;
             }
 
-            if (hasRecipe)
-            {
-                counterContainer.Init(recipeDisp);
-
-                await UniTask.WhenAll(
-                    productContainer.Init(recipeVM, token, recipeDisp),
-                    ingredientsContainer.Init(recipeVM, token, recipeDisp));
-
-                if (token.IsCancellationRequested)
-                {
-                    return;
-                }
-
-                recipeNameText.SetTextParams(recipeVM.ProductVM.NameKey);
-
-                ingredientsContainer.IsAvailablle
-                    .Subscribe(startCraftingButton.SetInteractableState)
-                    .AddTo(recipeDisp);
-            }
+            await updateRecipe();
 
             var showContainer = hasRecipe
                 ? recipeContainer
                 : emptyRecipeContainer;
 
             await showContainer.DOFade(1, duration);
+
+            async UniTask updateRecipe()
+            {
+                if (hasRecipe)
+                {
+                    counterContainer.Init(recipeDisp);
+
+                    await UniTask.WhenAll(
+                        productContainer.Init(recipeVM, token, recipeDisp),
+                        ingredientsContainer.Init(recipeVM, token, recipeDisp));
+
+                    if (token.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
+                    recipeNameText.SetTextParams(recipeVM.ProductVM.NameKey);
+
+                    ingredientsContainer.IsAvailablle
+                        .Subscribe(startCraftingButton.SetInteractableState)
+                        .AddTo(recipeDisp);
+                }
+            }
         }
 
         private void StartCraftingCallback()
