@@ -160,7 +160,7 @@ namespace Game.Guild
                 return;
             }
 
-            lastRequestId = joinRequestVM.Id;
+            lastRequestId = joinRequestVM?.Id;
 
             characterContainer.DOKill();
             characterContainer.interactable = hasRequest;

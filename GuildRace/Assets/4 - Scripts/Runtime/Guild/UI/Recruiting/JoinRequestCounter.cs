@@ -1,9 +1,6 @@
-﻿using AD.Services.Router;
-using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
+﻿using AD.ToolsCollection;
 using Game.Components;
-using UniRx;
+using Game.UI;
 using UnityEngine;
 using VContainer;
 
@@ -11,8 +8,7 @@ namespace Game.Guild
 {
     public class JoinRequestCounter : GameComponent<JoinRequestCounter>
     {
-        [SerializeField] private GameObject viewRoot;
-        [SerializeField] private UIText counterText;
+        [SerializeField] private CounterComponent counter;
 
         private JoinRequestsVM joinRequestsVM;
 
@@ -22,32 +18,13 @@ namespace Game.Guild
             joinRequestsVM = guildVMF.GetJoinRequests();
         }
 
-        protected override void Awake()
-        {
-            base.Awake();
-
-            viewRoot.SetActive(false);
-        }
-
         protected override void InitSubscribes(CompositeDisp disp)
         {
             base.InitSubscribes(disp);
 
             joinRequestsVM.AddTo(disp);
 
-            joinRequestsVM
-                .ObserveCountChanged()
-                .Subscribe(CountChangedCallback)
-                .AddTo(disp);
-
-            CountChangedCallback(joinRequestsVM.Count);
-        }
-
-        private void CountChangedCallback(int count)
-        {
-            viewRoot.SetActive(count > 0);
-
-            counterText.SetTextParams(count);
+            counter.Init(joinRequestsVM.ObserveCountChanged(), joinRequestsVM.Count, disp);
         }
     }
 }

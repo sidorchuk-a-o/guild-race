@@ -27,7 +27,7 @@ namespace Game.Guild
             GuildName = guildService.Name;
             EmblemVM = new(guildService.Emblem, guildConfig.EmblemParams);
 
-            PlayerNickname = new ReactiveProperty<string>("< NICKNAME >");
+            PlayerNickname = new ReactiveProperty<string>("Player Nickname");
             PlayerRank = guildService.GuildRanks.GuildMaster.Name;
         }
 
