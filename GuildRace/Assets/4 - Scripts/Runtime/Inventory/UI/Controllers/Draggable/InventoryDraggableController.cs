@@ -132,6 +132,11 @@ namespace Game.Inventory
 
         private void ItemSlotInteractedCallback(ItemSlotContainer itemSlot)
         {
+            if (itemSlot && itemSlot.IsReadOnly)
+            {
+                return;
+            }
+
             selectedSlotVM = itemSlot?.ViewModel;
         }
 

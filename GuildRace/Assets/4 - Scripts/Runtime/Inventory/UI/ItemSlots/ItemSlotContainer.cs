@@ -9,12 +9,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using VContainer;
+using UnityEngine.AddressableAssets;
 
 namespace Game.Inventory
 {
     public class ItemSlotContainer : UIComponent<ItemSlotContainer>, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private ItemSlot slot;
+        [SerializeField] private AssetReference itemInSlotRef;
 
         [Header("Item Preview")]
         [SerializeField] private ItemPreviewContainer itemPreview;
@@ -22,6 +24,9 @@ namespace Game.Inventory
         [Header("Pickup Process")]
         [SerializeField] private UIStates pickupStates;
         [SerializeField] private Image pickupPreviewImage;
+
+        [Header("Params")]
+        [SerializeField] private bool isReadOnly;
 
         private static readonly Subject<ItemSlotContainer> onInited = new();
         private static readonly Subject<ItemSlotContainer> onInteracted = new();
@@ -36,6 +41,7 @@ namespace Game.Inventory
         public static IObservable<ItemSlotContainer> OnInteracted => onInteracted;
 
         public ItemSlot Slot => slot;
+        public bool IsReadOnly => isReadOnly;
 
         public bool HasItem => ViewModel.HasItem;
         public ItemSlotVM ViewModel { get; private set; }
@@ -69,16 +75,22 @@ namespace Game.Inventory
             itemDisp.Clear();
             itemDisp.AddTo(disp);
 
-            if (itemVM != null)
+            var hasItem = item != null;
+            var hasVM = itemVM != null;
+
+            if (hasVM)
             {
-                var itemGO = await inventoryVMF.RentItemInSlotAsync(itemVM);
+                if (!hasItem)
+                {
+                    var itemGO = await inventoryVMF.RentItemInSlotAsync(itemInSlotRef);
 
-                item = itemGO.GetComponent<ItemInSlotComponent>();
+                    item = itemGO.GetComponent<ItemInSlotComponent>();
+                }
+
                 item.Init(itemVM, disp);
-
                 itemPreview.PlaceItem(item);
             }
-            else if (item != null)
+            else if (hasItem)
             {
                 itemPreview.RemoveItem();
                 inventoryVMF.ReturnItem(item);

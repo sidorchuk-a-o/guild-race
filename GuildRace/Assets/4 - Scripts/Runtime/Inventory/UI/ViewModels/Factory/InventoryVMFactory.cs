@@ -213,6 +213,11 @@ namespace Game.Inventory
             return objectsPool.RentAsync(factory.ItemInSlotRef);
         }
 
+        public UniTask<GameObject> RentItemInSlotAsync(AssetReference itemRef)
+        {
+            return objectsPool.RentAsync(itemRef);
+        }
+
         public UniTask PreloadIconsAsync(AssetReference assetRef)
         {
             return spritesPool.PreloadAsync(assetRef, preloadCount: 1, threshold: 1);

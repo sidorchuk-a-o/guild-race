@@ -1,9 +1,9 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.ProtectedTime;
+using AD.Services.Router;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
-using System;
 using System.Linq;
 using VContainer;
 
@@ -17,6 +17,7 @@ namespace Game.Instances
         private GuildVMFactory guildVMF;
         private InventoryVMFactory inventoryVMF;
 
+        public ITimeService TimeService { get; }
         public InstancesConfig InstancesConfig { get; }
 
         public GuildVMFactory GuildVMF => guildVMF ??= resolver.Resolve<GuildVMFactory>();
@@ -25,11 +26,13 @@ namespace Game.Instances
         public InstancesVMFactory(
             InstancesConfig instancesConfig,
             IInstancesService instancesService,
+            ITimeService timeService, 
             IObjectResolver resolver)
         {
             this.instancesService = instancesService;
             this.resolver = resolver;
 
+            TimeService = timeService;
             InstancesConfig = instancesConfig;
         }
 
