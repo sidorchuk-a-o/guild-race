@@ -5,6 +5,7 @@ using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
+using UniRx;
 using UnityEngine;
 
 namespace Game.Instances
@@ -13,10 +14,15 @@ namespace Game.Instances
     {
         [Header("Unit")]
         [SerializeField] private UIText nameText;
+        [SerializeField] private GameObject hourglassContainer;
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
             nameText.SetTextParams(ViewModel.NameKey);
+
+            ViewModel.InstanceVM
+                .Subscribe(_ => hourglassContainer.SetActive(ViewModel.HasInstance))
+                .AddTo(disp);
         }
     }
 }
