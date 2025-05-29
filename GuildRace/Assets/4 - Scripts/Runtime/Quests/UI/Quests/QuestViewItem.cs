@@ -15,6 +15,7 @@ namespace Game.Quests
         [SerializeField] private UIText progressText;
         [SerializeField] private GameObject completedIndicator;
         [SerializeField] private GameObject rewardedIndicator;
+        [SerializeField] private CanvasGroup canvasGroup;
 
         [Header("Buttons")]
         [SerializeField] private UIButton selectButton;
@@ -45,16 +46,29 @@ namespace Game.Quests
                 .AddTo(disp);
 
             questVM.IsCompleted
-                .Subscribe(x => completedIndicator.SetActive(x))
+                .SilentSubscribe(UpdateState)
                 .AddTo(disp);
 
             questVM.IsRewarded
-                .Subscribe(x => rewardedIndicator.SetActive(x))
+                .SilentSubscribe(UpdateState)
                 .AddTo(disp);
 
             questVM.IsSelected
                 .Subscribe(SelectedStateChanged)
                 .AddTo(disp);
+
+            UpdateState();
+        }
+
+        private void UpdateState()
+        {
+            var isCompleted = questVM.IsCompleted.Value;
+            var isRewarded = questVM.IsRewarded.Value;
+
+            completedIndicator.SetActive(isCompleted && !isRewarded);
+            rewardedIndicator.SetActive(isRewarded);
+
+            canvasGroup.alpha = isRewarded ? 0.1f : 1;
         }
 
         private void SelectedStateChanged(bool state)

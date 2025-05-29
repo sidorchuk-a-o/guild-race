@@ -24,7 +24,7 @@ namespace Game.Instances
 
             activeInstancesVM.AddTo(disp);
 
-            counter.Init(activeInstancesVM.ObserveCountChanged(), activeInstancesVM.Count, disp);
+            counter.Init(activeInstancesVM.CompletedCount, disp);
         }
     }
 }
