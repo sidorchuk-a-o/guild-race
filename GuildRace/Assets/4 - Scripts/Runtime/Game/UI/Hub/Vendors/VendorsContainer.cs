@@ -73,7 +73,6 @@ namespace Game.Craft
             if (hasRecipe == false &&
                 lastRecipeId.HasValue == false)
             {
-                await updateRecipe();
                 return;
             }
 
@@ -81,6 +80,7 @@ namespace Game.Craft
                 lastRecipeId.HasValue &&
                 lastRecipeId.Value == recipeVM.Id)
             {
+                await updateRecipe();
                 return;
             }
 
@@ -115,7 +115,7 @@ namespace Game.Craft
             {
                 if (hasRecipe)
                 {
-                    counterContainer.Init(recipeDisp);
+                    counterContainer.Init(recipeVM, recipeDisp);
 
                     await UniTask.WhenAll(
                         productContainer.Init(recipeVM, token, recipeDisp),

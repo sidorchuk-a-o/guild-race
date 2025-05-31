@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading;
 using UniRx;
 using UnityEngine;
-using VContainer;
 
 namespace Game.Craft
 {
@@ -16,22 +15,15 @@ namespace Game.Craft
 
         private readonly ReactiveProperty<bool> isAvailablle = new();
 
-        private CraftVMFactory craftVMF;
-        private IReadOnlyList<IngredientVM> ingridientsVM;
+        private RecipeVM recipeVM;
 
         public IReadOnlyReactiveProperty<bool> IsAvailablle => isAvailablle;
 
-        [Inject]
-        public void Inject(CraftVMFactory craftVMF)
-        {
-            this.craftVMF = craftVMF;
-        }
-
         private void Awake()
         {
-            foreach (var item in ingredientItems)
+            foreach (var ingridientVM in ingredientItems)
             {
-                item.IsAvailable
+                ingridientVM.IsAvailable
                     .SilentSubscribe(UpdateAvailableState)
                     .AddTo(this);
             }
@@ -39,8 +31,7 @@ namespace Game.Craft
 
         public async UniTask Init(RecipeVM recipeVM, CancellationTokenSource token, CompositeDisp disp)
         {
-            ingridientsVM = craftVMF.GetRecipeIngredients(recipeVM.Id);
-            ingridientsVM.ForEach(x => x.AddTo(disp));
+            this.recipeVM = recipeVM;
 
             await InitIngredientItems(token, disp);
 
@@ -57,7 +48,7 @@ namespace Game.Craft
         private async UniTask InitIngredientItems(CancellationTokenSource token, CompositeDisp disp)
         {
             var itemsCount = ingredientItems.Count;
-            var ingridientsCount = ingridientsVM.Count;
+            var ingridientsCount = recipeVM.IngridientsVM.Count;
             var craftingCount = counterContainer.Count.Value;
 
             // update active state
@@ -70,7 +61,7 @@ namespace Game.Craft
             }
 
             // init tasks
-            var initItemsTasks = ingridientsVM.Select((ingridientVM, i) =>
+            var initItemsTasks = recipeVM.IngridientsVM.Select((ingridientVM, i) =>
             {
                 var item = ingredientItems[i];
 
@@ -88,13 +79,19 @@ namespace Game.Craft
             {
                 ingredientItem.SetCraftingCount(count);
             }
+
+            UpdateAvailableState();
         }
 
         private void UpdateAvailableState()
         {
-            isAvailablle.Value = ingredientItems
+            var hasCraft = counterContainer.Count.Value > 0;
+
+            var ingredientsAvailable = ingredientItems
                 .Where(x => x.isActiveAndEnabled)
                 .All(x => x.IsAvailable.Value);
+
+            isAvailablle.Value = ingredientsAvailable && hasCraft;
         }
     }
 }

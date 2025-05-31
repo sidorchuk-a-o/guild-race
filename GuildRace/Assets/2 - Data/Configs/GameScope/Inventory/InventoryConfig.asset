@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 146
-  title: Staff
+  title: Fists
   nameKey:
     value: INVENTORY/FISTS_WEAPON_TTL
 --- !u!114 &-8928354529463672314
@@ -107,7 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10034
-  title: Plate shoulders 25
+  title: "\u041F\u0430\u0440\u0430\u0434\u043D\u044B\u0439 \u043D\u0430\u043F\u043B\u0435\u0447
+    \u043A\u043D\u044F\u0436\u0435\u0441\u043A\u043E\u0433\u043E \u043F\u043E\u0441\u043B\u0430\u043D\u043D\u0438\u043A\u0430"
   slot:
     value: 182
   size:
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10093
-  title: Leather shoulders 10
+  title: "\u0427\u0435\u0448\u0443\u0439\u0447\u0430\u0442\u044B\u0435 \u0449\u0438\u0442\u043A\u0438"
   slot:
     value: 182
   size:
@@ -225,7 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10061
-  title: Plate chest 30
+  title: "\u0418\u0437\u044B\u0441\u043A\u0430\u043D\u043D\u044B\u0439 \u0437\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439
+    \u0434\u043E\u0441\u043F\u0435\u0445"
   slot:
     value: 183
   size:
@@ -332,7 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10055
-  title: Leather shoulders 30
+  title: "\u041C\u0430\u043D\u0442\u0438\u044F \u0438\u0437 \u0441\u043F\u0443\u0442\u0430\u043D\u043D\u044B\u0445
+    \u0442\u0435\u043D\u0435\u0439"
   slot:
     value: 182
   size:
@@ -402,7 +405,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10076
-  title: Leather hands 35
+  title: "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
+    \u0441\u043B\u0435\u0434\u043E\u043F\u044B\u0442\u043E\u0432 \u0441 \u043E\u0440\u043D\u0430\u043C\u0435\u043D\u0442\u043E\u043C"
   slot:
     value: 184
   size:
@@ -507,7 +511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10013
-  title: Cloth shoulders 20
+  title: "\u041D\u0430\u0440\u0430\u043C\u043D\u0438\u043A \u0431\u043E\u0435\u0432\u043E\u0433\u043E
+    \u043C\u0430\u0433\u0430"
   slot:
     value: 182
   size:
@@ -625,7 +630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10020
-  title: Cloth legs 25
+  title: "\u041A\u0438\u043B\u0442 \u0441\u043E \u0441\u043A\u0440\u044B\u0442\u044B\u043C\u0438
+    \u043A\u0430\u0440\u043C\u0430\u043D\u0430\u043C\u0438"
   slot:
     value: 185
   size:
@@ -660,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10101
-  title: Plate legs 10
+  title: "\u0411\u0440\u043E\u043D\u0435\u0449\u0438\u0442\u043A\u0438 \u043E\u0440\u0443\u0436\u0435\u043D\u043E\u0441\u0446\u0430"
   slot:
     value: 185
   size:
@@ -695,7 +701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10035
-  title: Plate chest 20
+  title: "\u0411\u043E\u0435\u0432\u0430\u044F \u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430
+    \u0438\u0441\u043A\u0443\u0441\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B"
   slot:
     value: 183
   size:
@@ -748,7 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10135
-  title: Fists weapon 10
+  title: "\u041A\u0430\u043C\u0435\u043D\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
   slot:
     value: 186
   size:
@@ -764,7 +771,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 10
   type:
-    value: 147
+    value: 146
   rarity:
     value: 121
   characterParams:
@@ -783,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10011
-  title: Cloth head 20
+  title: "\u0422\u044E\u0440\u0431\u0430\u043D \u0441\u043E\u0432\u0435\u0442\u043D\u0438\u043A\u0430"
   slot:
     value: 181
   size:
@@ -818,7 +825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10083
-  title: Swordshield weapon 30
+  title: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u041F\u0443\u0442\u0438"
   slot:
     value: 186
   size:
@@ -853,7 +860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10067
-  title: Fists weapon 40
+  title: "\u041A\u043B\u0438\u043D\u043A\u0438 \u0441 \u0436\u0438\u0434\u043A\u0438\u043C
+    \u0441\u0435\u0440\u0434\u0435\u0447\u043D\u0438\u043A\u043E\u043C"
   slot:
     value: 186
   size:
@@ -869,7 +877,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 40
   type:
-    value: 147
+    value: 146
   rarity:
     value: 122
   characterParams:
@@ -888,7 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10050
-  title: Cloth shoulders 30
+  title: "\u041D\u0430\u043A\u0438\u0434\u043A\u0430 \u043F\u0440\u0438\u0434\u0432\u043E\u0440\u043D\u043E\u0433\u043E"
   slot:
     value: 182
   size:
@@ -923,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10086
-  title: Fists weapon 40
+  title: "\u0422\u0435\u043D\u0435\u0432\u0430\u044F \u043F\u0435\u0447\u0430\u0442\u044C"
   slot:
     value: 186
   size:
@@ -939,7 +947,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 40
   type:
-    value: 147
+    value: 146
   rarity:
     value: 122
   characterParams:
@@ -958,7 +966,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10060
-  title: Plate shoulders 40
+  title: "\u0427\u0435\u043A\u0430\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u0438\u0440\u0441\u043A\u0438\u0435
+    \u0449\u0438\u0442\u043A\u0438"
   slot:
     value: 182
   size:
@@ -993,7 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10065
-  title: Daggers weapon 35
+  title: "\u0417\u0430\u043F\u0440\u0435\u0442\u043D\u0430\u044F \u0447\u0435\u0440\u0442\u0430"
   slot:
     value: 186
   size:
@@ -1028,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10033
-  title: Plate shoulders 25
+  title: "\u041E\u043F\u043B\u0435\u0447\u044C\u0435 \u0414\u043E\u0431\u043B\u0435\u0441\u0442\u0438"
   slot:
     value: 182
   size:
@@ -1063,7 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10089
-  title: Cloth chest 10
+  title: "\u041F\u043B\u043E\u0442\u043D\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
   slot:
     value: 183
   size:
@@ -1098,7 +1107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10051
-  title: Cloth chest 30
+  title: "\u0422\u0443\u043D\u0438\u043A\u0430 \u043F\u0440\u0435\u0434\u0430\u0442\u0435\u043B\u044F"
   slot:
     value: 183
   size:
@@ -1133,7 +1142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10133
-  title: Daggers weapon 10
+  title: "\u0417\u0430\u0442\u0443\u043F\u043B\u0435\u043D\u043D\u044B\u0435 \u043B\u0435\u0437\u0432\u0438\u044F"
   slot:
     value: 186
   size:
@@ -1168,7 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10017
-  title: Cloth hands 20
+  title: "\u0420\u0438\u0442\u0443\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
   slot:
     value: 184
   size:
@@ -1221,7 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10021
-  title: Leather head 25
+  title: "\u0417\u043C\u0435\u0438\u043D\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
   slot:
     value: 181
   size:
@@ -1292,7 +1301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10079
-  title: Plate shoulders 30
+  title: "\u0420\u0430\u0441\u043A\u043E\u043B\u043E\u0442\u044B\u0439 \u043D\u0430\u043F\u043B\u0435\u0447"
   slot:
     value: 182
   size:
@@ -1327,7 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10046
-  title: Daggers weapon 25
+  title: "\u041A\u043E\u0441\u0442\u044F\u043D\u044B\u0435 \u0448\u0438\u043F\u044B"
   slot:
     value: 186
   size:
@@ -1362,7 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10026
-  title: Leather chest 20
+  title: "\u041E\u0441\u043E\u0431\u044B\u0439 \u0436\u0438\u043B\u0435\u0442 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
   slot:
     value: 183
   size:
@@ -1417,7 +1426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10031
-  title: Plate head 25
+  title: "\u042D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0449\u0438\u0442\u043E\u043A"
   slot:
     value: 181
   size:
@@ -1464,7 +1474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10134
-  title: Staff weapon 10
+  title: "\u0422\u0440\u043E\u0441\u0442\u044C \u0443\u0447\u0435\u043D\u0438\u043A\u0430"
   slot:
     value: 186
   size:
@@ -1480,7 +1490,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 10
   type:
-    value: 146
+    value: 147
   rarity:
     value: 121
   characterParams:
@@ -1534,7 +1544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10058
-  title: Leather legs 35
+  title: "\u041F\u043E\u043D\u043E\u0436\u0438 \u0440\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442\u0430"
   slot:
     value: 185
   size:
@@ -1569,7 +1579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10015
-  title: Cloth chest 20
+  title: "\u041C\u0430\u043D\u0442\u0438\u044F \u0438\u0437\u043C\u0435\u043D\u043D\u0438\u043A\u0430"
   slot:
     value: 183
   size:
@@ -1578,7 +1588,7 @@ MonoBehaviour:
   nameKey:
     value: EQUIPS/10015
   iconRef:
-    m_AssetGUID: 5d83ac27bdda45f458d0a76935d5ccb6
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1604,7 +1614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10023
-  title: Leather shoulders 20
+  title: "\u041D\u0430\u043F\u043B\u0435\u0447 \u0431\u0435\u0437\u0443\u043C\u043D\u043E\u0433\u043E
+    \u043F\u0440\u0438\u043D\u0446\u0430"
   slot:
     value: 182
   size:
@@ -1639,7 +1650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10048
-  title: Fists weapon 25
+  title: "\u0428\u0438\u043F\u0430\u0441\u0442\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
   slot:
     value: 186
   size:
@@ -1655,7 +1666,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 25
   type:
-    value: 147
+    value: 146
   rarity:
     value: 122
   characterParams:
@@ -1780,7 +1791,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10038
-  title: Plate hands 20
+  title: "\u0417\u0430\u0445\u0432\u0430\u0442\u044B \u0441\u0442\u0430\u0440\u0448\u0435\u0433\u043E
+    \u043A\u0430\u0440\u0430\u0443\u043B\u044C\u043D\u043E\u0433\u043E"
   slot:
     value: 184
   size:
@@ -1815,7 +1827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10096
-  title: Leather legs 10
+  title: "\u0428\u0442\u0430\u043D\u044B \u0440\u0430\u0431\u043E\u0447\u0435\u0433\u043E"
   slot:
     value: 185
   size:
@@ -1885,7 +1897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10040
-  title: Plate legs 20
+  title: "\u0411\u043E\u0433\u0430\u0442\u044B\u0440\u0441\u043A\u0438\u0435 \u043D\u0430\u0433\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438"
   slot:
     value: 185
   size:
@@ -1956,7 +1968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10092
-  title: Leather head 10
+  title: "\u041C\u0430\u0441\u043A\u0430 \u043C\u0441\u0442\u0438\u0442\u0435\u043B\u044F"
   slot:
     value: 181
   size:
@@ -2027,7 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10056
-  title: Leather chest 30
+  title: "\u041C\u0430\u0441\u043A\u0438\u0440\u043E\u0432\u043A\u0430 \u043B\u0435\u0441\u043E\u0432\u0438\u043A\u0430"
   slot:
     value: 183
   size:
@@ -2132,7 +2144,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 30
   type:
-    value: 147
+    value: 146
   rarity:
     value: 121
   characterParams:
@@ -2151,7 +2163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10069
-  title: Cloth shoulders 35
+  title: "\u041E\u0441\u043A\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u0430\u044F
+    \u043C\u0430\u043D\u0442\u0438\u044F"
   slot:
     value: 182
   size:
@@ -2186,7 +2199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10081
-  title: Plate hands 35
+  title: "\u0414\u0443\u044D\u043B\u044C\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
   slot:
     value: 184
   size:
@@ -2221,7 +2234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10029
-  title: Leather legs 25
+  title: "\u041F\u043E\u043D\u043E\u0436\u0438 \u043C\u044F\u0441\u043D\u0438\u043A\u0430"
   slot:
     value: 185
   size:
@@ -2268,7 +2281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10098
-  title: Plate shoulders 10
+  title: "\u042D\u043F\u043E\u043B\u0435\u0442\u044B \u0445\u0440\u0430\u043C\u043E\u0432\u043D\u0438\u043A\u0430"
   slot:
     value: 182
   size:
@@ -2303,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10019
-  title: Cloth legs 25
+  title: "\u0418\u0437\u044B\u0441\u043A\u0430\u043D\u043D\u044B\u0435 \u043A\u044E\u043B\u043E\u0442\u044B"
   slot:
     value: 185
   size:
@@ -2338,7 +2351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10068
-  title: Cloth head 40
+  title: "\u041A\u043B\u043E\u0431\u0443\u043A \u0444\u0430\u0440\u043C\u0430\u0446\u0435\u0432\u0442\u0430"
   slot:
     value: 181
   size:
@@ -2373,7 +2386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10016
-  title: Cloth chest 20
+  title: "\u041F\u043E\u0432\u0440\u0435\u0436\u0434\u0435\u043D\u043D\u0430\u044F
+    \u0440\u043E\u0431\u0430 \u043A\u043E\u043B\u0434\u0443\u043D\u0430"
   slot:
     value: 183
   size:
@@ -2408,7 +2422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10132
-  title: Swordshield weapon 10
+  title: "\u0417\u0430\u0449\u0438\u0442\u043D\u0438\u043A \u0441\u0435\u043C\u044C\u0438"
   slot:
     value: 186
   size:
@@ -2443,7 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 144
-  title: Swordshield
+  title: Sword and Shield
   nameKey:
     value: INVENTORY/SWORD_SHIELD_WEAPON_TTL
 --- !u!114 &-995771998939256200
@@ -2459,7 +2473,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10073
-  title: Leather head 30
+  title: "\u041A\u0430\u043F\u044E\u0448\u043E\u043D \u0441\u043A\u043E\u0440\u0431\u043D\u043E\u0433\u043E
+    \u0441\u043B\u0435\u0434\u043E\u043F\u044B\u0442\u0430"
   slot:
     value: 181
   size:
@@ -2494,7 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10041
-  title: Swordshield weapon 20
+  title: "\u0413\u043B\u0430\u0441 \u0412\u0435\u0441\u0442\u043D\u0438\u043A\u0430"
   slot:
     value: 186
   size:
@@ -2600,7 +2615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10027
-  title: Leather hands 25
+  title: "\u0417\u0430\u0445\u0432\u0430\u0442\u044B \u044F\u0440\u043E\u0441\u0442\u0438"
   slot:
     value: 184
   size:
@@ -2695,7 +2710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10062
-  title: Plate hands 30
+  title: "\u0423\u043A\u0440\u0430\u0448\u0435\u043D\u043D\u044B\u0435 \u0431\u043E\u0435\u0432\u044B\u0435
+    \u043A\u0440\u0430\u0433\u0438"
   slot:
     value: 184
   size:
@@ -3134,7 +3150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10052
-  title: Cloth hands 35
+  title: "\u0420\u0443\u043A\u0430\u0432\u0438\u0446\u044B \u043C\u0438\u0441\u0442\u0438\u043A\u0430"
   slot:
     value: 184
   size:
@@ -3185,7 +3201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10064
-  title: Swordshield weapon 35
+  title: "\u0421\u0442\u0435\u043D\u0430 \u041F\u0440\u0435\u0434\u043A\u043E\u0432"
   slot:
     value: 186
   size:
@@ -3220,7 +3236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10054
-  title: Leather head 40
+  title: "\u041C\u0430\u0441\u043A\u0430 \u0437\u0430\u0441\u0442\u044B\u0432\u0448\u0435\u0433\u043E
+    \u0434\u044B\u043C\u0430"
   slot:
     value: 181
   size:
@@ -3255,7 +3272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10072
-  title: Cloth legs 30
+  title: "\u041E\u0434\u0435\u044F\u043D\u0438\u0435 \u0441\u043B\u0443\u0436\u0438\u0442\u0435\u043B\u044F
+    \u0445\u0440\u0430\u043C\u0430"
   slot:
     value: 185
   size:
@@ -3326,7 +3344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10077
-  title: Leather legs 30
+  title: "\u041F\u043E\u043D\u043E\u0436\u0438 \u043A\u043E\u043C\u0430\u043D\u0434\u0438\u0440\u0430
+    \u0441\u0442\u0440\u0435\u043B\u043A\u043E\u0432"
   slot:
     value: 185
   size:
@@ -3414,7 +3433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10049
-  title: Cloth head 30
+  title: "\u041F\u0438\u0440\u0430\u0442\u0441\u043A\u0430\u044F \u0431\u0430\u043D\u0434\u0430\u043D\u0430"
   slot:
     value: 181
   size:
@@ -3449,7 +3468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10071
-  title: Cloth hands 30
+  title: "\u0418\u043D\u043A\u0440\u0443\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
+    \u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u043A\u0443\u043F\u0446\u0430"
   slot:
     value: 184
   size:
@@ -3484,7 +3504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10084
-  title: Daggers weapon 30
+  title: "\u0420\u0435\u0437\u0430\u043A \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u0430"
   slot:
     value: 186
   size:
@@ -3535,7 +3555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10087
-  title: Cloth head 10
+  title: "\u0422\u043A\u0430\u043D\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
   slot:
     value: 181
   size:
@@ -3570,7 +3590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10063
-  title: Plate legs 30
+  title: "\u041F\u043E\u043D\u043E\u0436\u0438 \u0442\u044E\u0440\u0435\u043C\u0449\u0438\u043A\u0430"
   slot:
     value: 185
   size:
@@ -3605,7 +3625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10032
-  title: Plate head 25
+  title: "\u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0433\u0430\u0442\u044B\u0439
+    \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
   slot:
     value: 181
   size:
@@ -3675,7 +3696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10014
-  title: Cloth shoulders 20
+  title: "\u041E\u043F\u043B\u0435\u0447\u044C\u0435 \u043D\u0435\u043A\u0440\u043E\u043C\u0430\u043D\u0442\u0430"
   slot:
     value: 182
   size:
@@ -3762,7 +3783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10047
-  title: Staff weapon 25
+  title: "\u041F\u043E\u0441\u043E\u0445 \u0422\u0440\u0438\u0443\u043C\u0444\u0430"
   slot:
     value: 186
   size:
@@ -3778,7 +3799,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 25
   type:
-    value: 146
+    value: 147
   rarity:
     value: 122
   characterParams:
@@ -3814,7 +3835,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 30
   type:
-    value: 146
+    value: 147
   rarity:
     value: 121
   characterParams:
@@ -3881,7 +3902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10082
-  title: Plate legs 35
+  title: "\u041D\u043E\u0436\u043D\u044B\u0435 \u043B\u0430\u0442\u044B \u043A\u043E\u043F\u0435\u0439\u0449\u0438\u043A\u0430"
   slot:
     value: 185
   size:
@@ -3916,7 +3937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10045
-  title: Swordshield weapon 25
+  title: "\u0428\u0435\u043F\u0447\u0443\u0449\u0438\u0439 \u043F\u0430\u043B\u0430\u0447"
   slot:
     value: 186
   size:
@@ -3951,7 +3972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10099
-  title: Plate chest 10
+  title: "\u041F\u043E\u043C\u044F\u0442\u044B\u0435 \u0434\u043E\u0441\u043F\u0435\u0445"
   slot:
     value: 183
   size:
@@ -3986,7 +4007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10066
-  title: Staff weapon 40
+  title: "\u042F\u0440\u043E\u0432\u0438\u0442"
   slot:
     value: 186
   size:
@@ -4002,7 +4023,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 40
   type:
-    value: 146
+    value: 147
   rarity:
     value: 122
   characterParams:
@@ -4021,7 +4042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10100
-  title: Plate hands 10
+  title: "\u0423\u0442\u044F\u0436\u0435\u043B\u0435\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
   slot:
     value: 184
   size:
@@ -4167,7 +4188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10030
-  title: Leather legs 20
+  title: "\u041D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438
+    \u043D\u0430\u0435\u0437\u0434\u043D\u0438\u043A\u0430"
   slot:
     value: 185
   size:
@@ -4202,7 +4224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10043
-  title: Staff weapon 20
+  title: "\u0411\u043E\u0435\u0432\u043E\u0439 \u0436\u0435\u0437\u043B \u043D\u0435\u043E\u0444\u0438\u0442\u0430"
   slot:
     value: 186
   size:
@@ -4218,7 +4240,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 20
   type:
-    value: 146
+    value: 147
   rarity:
     value: 121
   characterParams:
@@ -4237,7 +4259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10057
-  title: Leather hands 30
+  title: "\u041F\u043E\u043B\u0443\u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438
+    \u0432\u044B\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u0421\u043A\u0432\u0435\u0440\u043D\u043E\u0439"
   slot:
     value: 184
   size:
@@ -4272,7 +4295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10070
-  title: Cloth chest 35
+  title: "\u0418\u043D\u0444\u0435\u0440\u043D\u0430\u043B\u044C\u043D\u0430\u044F
+    \u0440\u043E\u0431\u0430"
   slot:
     value: 183
   size:
@@ -4343,7 +4367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10044
-  title: Fists weapon 20
+  title: "\u041A\u0443\u043B\u0430\u043A\u0438 \u043C\u0430\u0440\u043E\u0434\u0435\u0440\u0430"
   slot:
     value: 186
   size:
@@ -4359,7 +4383,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 20
   type:
-    value: 147
+    value: 146
   rarity:
     value: 121
   characterParams:
@@ -4394,7 +4418,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 20
   type:
-    value: 146
+    value: 147
   rarity:
     value: 121
   characterParams:
@@ -4413,7 +4437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10059
-  title: Plate head 35
+  title: "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+    \u0432\u0437\u043E\u0440"
   slot:
     value: 181
   size:
@@ -4448,7 +4473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10094
-  title: Leather chest 10
+  title: "\u041F\u043E\u043D\u043E\u0436\u0438 \u043D\u043E\u0432\u0438\u0447\u043A\u0430"
   slot:
     value: 183
   size:
@@ -4518,7 +4543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10042
-  title: Daggers weapon 20
+  title: "\u041A\u043E\u0433\u0442\u0438 \u0438\u0437 \u041D\u0438\u043E\u0442\u043A\u0443\u0434\u0430"
   slot:
     value: 186
   size:
@@ -4553,7 +4578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10095
-  title: Leather hands 10
+  title: "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u0438\u0437 \u0431\u0440\u043E\u043D\u0435\u043A\u043E\u0440\u044B"
   slot:
     value: 184
   size:
@@ -4588,7 +4613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10053
-  title: Cloth legs 35
+  title: "\u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438
+    \u043F\u0440\u0438\u043D\u0446\u0430-\u043A\u043E\u043D\u0441\u043E\u0440\u0442\u0430"
   slot:
     value: 185
   size:
@@ -4623,7 +4649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10039
-  title: Plate legs 25
+  title: "\u0414\u043E\u0441\u043F\u0435\u0445\u0438 \u0432\u0441\u0430\u0434\u043D\u0438\u043A\u0430
+    \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u043A\u043E\u0432"
   slot:
     value: 185
   size:
@@ -4658,7 +4685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10091
-  title: Cloth legs 10
+  title: "\u0420\u0430\u0431\u043E\u0447\u0438\u0435 \u0431\u0440\u044E\u043A\u0438"
   slot:
     value: 185
   size:
@@ -4693,7 +4720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 147
-  title: Fists
+  title: Staff
   nameKey:
     value: INVENTORY/STAVES_WEAPON_TTL
 --- !u!114 &5192041196401389597
@@ -4725,7 +4752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10025
-  title: Leather chest 20
+  title: "\u041A\u0443\u0440\u0442\u043A\u0430 \u0434\u0438\u0432\u0435\u0440\u0441\u0430\u043D\u0442\u0430"
   slot:
     value: 183
   size:
@@ -4760,7 +4787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10037
-  title: Plate hands 20
+  title: "\u041F\u043B\u0435\u0442\u0435\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
   slot:
     value: 184
   size:
@@ -4795,7 +4822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10018
-  title: Cloth hands 20
+  title: "\u0412\u044B\u0441\u043E\u043A\u0438\u0435 \u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438
+    \u0432\u0438\u043D\u043E\u0447\u0435\u0440\u043F\u0438\u044F"
   slot:
     value: 184
   size:
@@ -4842,7 +4870,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10080
-  title: Plate chest 40
+  title: "\u0413\u0440\u0430\u0432\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
+    \u0434\u043E\u0441\u043F\u0435\u0445 \u043C\u0430\u0441\u0442\u0435\u0440\u0430"
   slot:
     value: 183
   size:
@@ -4911,7 +4940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10090
-  title: Cloth hands 10
+  title: "\u041E\u0431\u0440\u0435\u0437\u0430\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
   slot:
     value: 184
   size:
@@ -4982,7 +5011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10097
-  title: Plate head 10
+  title: "\u041A\u0430\u0441\u043A\u0430 \u0441\u0442\u0440\u0430\u0436\u043D\u0438\u043A\u0430"
   slot:
     value: 181
   size:
@@ -5068,7 +5097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10022
-  title: Leather head 25
+  title: "\u042D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+    \u0448\u043B\u0435\u043C"
   slot:
     value: 181
   size:
@@ -5151,7 +5181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10036
-  title: Plate chest 20
+  title: "\u0427\u0435\u0448\u0443\u0439\u0447\u0430\u0442\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445
+    \u0434\u0432\u043E\u0440\u044F\u043D\u0438\u043D\u0430"
   slot:
     value: 183
   size:
@@ -5198,7 +5229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10075
-  title: Leather chest 35
+  title: "\u041C\u0443\u043D\u0434\u0438\u0440 \u043D\u0430\u0435\u043C\u043D\u0438\u043A\u0430"
   slot:
     value: 183
   size:
@@ -5233,7 +5264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10024
-  title: Leather shoulders 20
+  title: "\u0420\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u0447\u044C\u0438 \u043D\u0430\u043F\u043B\u0435\u0447\u043D\u044B\u0435
+    \u0449\u0438\u0442\u043A\u0438"
   slot:
     value: 182
   size:
@@ -5268,7 +5300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10085
-  title: Staff weapon 30
+  title: "\u041D\u0435\u0431\u0435\u0441\u043D\u0430\u044F \u0432\u0441\u043F\u044B\u0448\u043A\u0430"
   slot:
     value: 186
   size:
@@ -5284,7 +5316,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 30
   type:
-    value: 146
+    value: 147
   rarity:
     value: 121
   characterParams:
@@ -5378,7 +5410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10028
-  title: Leather hands 20
+  title: "\u0420\u0443\u043A\u0430\u0432\u0438\u0446\u044B \u043B\u043E\u0432\u0446\u0430"
   slot:
     value: 184
   size:
@@ -5413,7 +5445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10074
-  title: Leather shoulders 40
+  title: "\u041E\u0431\u043B\u0430\u0447\u0435\u043D\u0438\u0435 \u0432\u0430\u0440\u0432\u0430\u0440\u0430"
   slot:
     value: 182
   size:
@@ -5448,7 +5480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10088
-  title: Cloth shoulders 10
+  title: "\u041D\u0430\u043A\u0438\u0434\u043A\u0430 \u043E\u0442 \u0432\u0435\u0442\u0440\u0430"
   slot:
     value: 182
   size:
@@ -5483,7 +5515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10078
-  title: Plate head 30
+  title: "\u041F\u043E\u043D\u043E\u0436\u0438 \u0431\u0440\u0430\u0432\u043E\u0433\u043E
+    \u0434\u0440\u0443\u0436\u0438\u043D\u043D\u0438\u043A\u0430"
   slot:
     value: 181
   size:
@@ -5518,7 +5551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10012
-  title: Cloth head 20
+  title: "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u043F\u043E\u0432\u044F\u0437\u043A\u0430
+    \u0438\u0437 \u043C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0442\u043A\u0430\u043D\u0438"
   slot:
     value: 181
   size:
@@ -5590,7 +5624,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   level: 20
   type:
-    value: 147
+    value: 146
   rarity:
     value: 121
   characterParams:

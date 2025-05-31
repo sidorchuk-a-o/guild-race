@@ -25,7 +25,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 521
   unitParams:
@@ -77,9 +77,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 501
-  title: DPS
+  title: Tank
   nameKey:
-    value: CHARACTERS/ROLE_DPS_TTL
+    value: CHARACTERS/ROLE_501_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -158,9 +158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 523
-  title: SUPPORT
+  title: Support
   nameKey:
-    value: CHARACTERS/SUBROLE_SUPPORT_TTL
+    value: CHARACTERS/SUBROLE_523_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 503
+    value: 501
   subRoleId:
     value: 525
   unitParams:
@@ -256,7 +256,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 521
   unitParams:
@@ -306,7 +306,7 @@ MonoBehaviour:
   armorType:
     value: 141
   weaponType:
-    value: 146
+    value: 147
   specs:
   - {fileID: 4352505467803637179}
   - {fileID: -2469804027384436182}
@@ -335,7 +335,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 503
+    value: 501
   subRoleId:
     value: 525
   unitParams:
@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 524
-  title: MELEE
+  title: Melee
   nameKey:
-    value: CHARACTERS/SUBROLE_MELEE_TTL
+    value: CHARACTERS/SUBROLE_524_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -453,7 +453,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 524
   unitParams:
@@ -501,7 +501,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 521
   unitParams:
@@ -615,7 +615,7 @@ MonoBehaviour:
   armorType:
     value: 142
   weaponType:
-    value: 147
+    value: 146
   specs:
   - {fileID: 5088793920472949842}
   - {fileID: 5721050752461084215}
@@ -695,7 +695,7 @@ MonoBehaviour:
   armorType:
     value: 141
   weaponType:
-    value: 146
+    value: 147
   specs:
   - {fileID: -4694587001071973687}
   - {fileID: 2841863336987669863}
@@ -712,9 +712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 503
-  title: TANK
+  title: DPS
   nameKey:
-    value: CHARACTERS/ROLE_TANK_TTL
+    value: CHARACTERS/ROLE_503_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -769,7 +769,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 503
+    value: 501
   subRoleId:
     value: 525
   unitParams:
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   armorType:
     value: 142
   weaponType:
-    value: 147
+    value: 146
   specs:
   - {fileID: -6689499474866927032}
   - {fileID: -6539849637681063960}
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 524
   unitParams:
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 521
   unitParams:
@@ -1546,7 +1546,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 524
   unitParams:
@@ -1650,9 +1650,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 522
-  title: HEAL
+  title: Healer
   nameKey:
-    value: CHARACTERS/SUBROLE_HEAL_TTL
+    value: CHARACTERS/SUBROLE_522_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -1672,9 +1672,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 521
-  title: RANGED
+  title: Ranged
   nameKey:
-    value: CHARACTERS/SUBROLE_RANGED_TTL
+    value: CHARACTERS/SUBROLE_521_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -1755,7 +1755,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 503
+    value: 501
   subRoleId:
     value: 525
   unitParams:
@@ -1808,9 +1808,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 502
-  title: HEAL
+  title: Healer
   nameKey:
-    value: CHARACTERS/ROLE_HEAL_TTL
+    value: CHARACTERS/ROLE_502_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -1842,7 +1842,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   roleId:
-    value: 501
+    value: 503
   subRoleId:
     value: 521
   unitParams:
@@ -2043,9 +2043,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 525
-  title: TANK
+  title: Tank
   nameKey:
-    value: 
+    value: CHARACTERS/SUBROLE_525_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 

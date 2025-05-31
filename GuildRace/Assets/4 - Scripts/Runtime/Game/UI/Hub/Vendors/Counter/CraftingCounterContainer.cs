@@ -11,12 +11,16 @@ namespace Game.Craft
         [SerializeField] private UIText countText;
         [SerializeField] private List<IncreaseButton> increaseButtons;
 
+        private RecipeVM recipeVM;
+
         private readonly ReactiveProperty<int> count = new();
 
         public IReadOnlyReactiveProperty<int> Count => count;
 
-        public void Init(CompositeDisp disp)
+        public void Init(RecipeVM recipeVM, CompositeDisp disp)
         {
+            this.recipeVM = recipeVM;
+
             foreach (var button in increaseButtons)
             {
                 button.OnClick
@@ -24,7 +28,7 @@ namespace Game.Craft
                     .AddTo(disp);
             }
 
-            SetCount(1);
+            ResetCount();
         }
 
         public void ResetCount()
@@ -44,7 +48,7 @@ namespace Game.Craft
 
         private void SetCount(int newValue)
         {
-            count.Value = Mathf.Clamp(newValue, 1, 500);
+            count.Value = Mathf.Clamp(newValue, 0, recipeVM.AvailableCount.Value);
 
             countText.SetTextParams(count.Value);
         }

@@ -86,9 +86,7 @@ namespace Game.Inventory
 
         public ItemCounterVM CreateItemCounter(int itemDataId, IEnumerable<ItemsGridInfo> itemsGrids)
         {
-            var counter = new ItemCounter(itemDataId, itemsGrids);
-
-            return new ItemCounterVM(counter, this);
+            return new ItemCounterVM(itemDataId, itemsGrids, this);
         }
 
         // == Slots ==

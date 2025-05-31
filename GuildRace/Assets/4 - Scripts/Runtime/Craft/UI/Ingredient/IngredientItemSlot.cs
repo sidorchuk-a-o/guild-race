@@ -1,12 +1,10 @@
 ﻿using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
-using Game.Inventory;
 using System.Threading;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
-using VContainer;
 
 namespace Game.Craft
 {
@@ -20,19 +18,10 @@ namespace Game.Craft
 
         private readonly ReactiveProperty<bool> isAvailable = new();
 
-        private CraftVMFactory craftVMF;
-
         private IngredientVM ingredientVM;
-        private ItemCounterVM reagentCounterVM;
         private int ingridientsCount;
 
         public IReadOnlyReactiveProperty<bool> IsAvailable => isAvailable;
-
-        [Inject]
-        public void Inject(CraftVMFactory craftVMF)
-        {
-            this.craftVMF = craftVMF;
-        }
 
         public async UniTask Init(
             IngredientVM ingredientVM,
@@ -53,10 +42,7 @@ namespace Game.Craft
             iconImage.sprite = sprite;
 
             // reagent
-            reagentCounterVM = craftVMF.GetReagentItemCounter(ingredientVM.ReagentVM.Id);
-            reagentCounterVM.AddTo(disp);
-
-            reagentCounterVM.Count
+            ingredientVM.ReagentCounterVM.Count
                 .SilentSubscribe(UpdateView)
                 .AddTo(disp);
 
@@ -79,13 +65,13 @@ namespace Game.Craft
 
         private void UpdateAvailableState()
         {
-            isAvailable.Value = reagentCounterVM.Count.Value >= ingridientsCount;
+            isAvailable.Value = ingredientVM.ReagentCounterVM.Count.Value >= ingridientsCount;
         }
 
         private void UpdateCountText()
         {
             var format = IsAvailable.Value ? countFormat : countErrorFormat;
-            var countStr = string.Format(format, reagentCounterVM.Count.Value, ingridientsCount);
+            var countStr = string.Format(format, ingredientVM.ReagentCounterVM.Count.Value, ingridientsCount);
 
             countText.SetTextParams(countStr);
         }
