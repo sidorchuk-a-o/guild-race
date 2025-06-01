@@ -24,6 +24,8 @@ namespace Game.Guild
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [Space]
+        [SerializeField] private ClassContainer classContainer;
+        [SerializeField] private AbilitiesContainer abilitiesContainer;
         [SerializeField] private ItemSlotsContainer equipSlotsContainer;
 
         [Header("Settings")]
@@ -186,6 +188,8 @@ namespace Game.Guild
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
+                classContainer.Init(characterVM, token);
+                abilitiesContainer.Init(characterVM.SpecVM.AbilitiesVM, token);
                 equipSlotsContainer.Init(characterVM.EquiSlotsVM, requestDisp);
 
                 characterVM.ItemsLevel

@@ -30,7 +30,7 @@ namespace Game.Guild
             }
         }
 
-        public void Init(GuildBankTabsVM tabsVM, CompositeDisp disp, bool forcedReset)
+        public void Init(GuildBankTabsVM tabsVM, CompositeDisp disp)
         {
             this.tabsVM = tabsVM;
             this.disp = disp;

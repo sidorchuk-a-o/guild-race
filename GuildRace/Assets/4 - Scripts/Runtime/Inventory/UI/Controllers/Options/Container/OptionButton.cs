@@ -45,7 +45,7 @@ namespace Game.Inventory
             Key = option.Key;
 
             titleText.SetTextParams(option.TitleKey);
-            iconImage.sprite = await inventoryVMF.RentSprite(option.IconRef);
+            iconImage.sprite = await inventoryVMF.RentImage(option.IconRef);
         }
 
         private void OnClickCallback()

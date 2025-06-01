@@ -22,14 +22,14 @@ namespace Game.Craft
             this.craftVMF = craftVMF;
         }
 
-        public async UniTask Init(RecipeVM recipeVM, CancellationTokenSource token, CompositeDisp disp)
+        public async UniTask Init(RecipeVM recipeVM, CompositeDisp disp, CancellationTokenSource ct)
         {
             productVM = craftVMF.GetRecipeProduct(recipeVM.Id);
             productVM.AddTo(disp);
 
             var sprite = await productVM.LoadIcon();
 
-            if (token.IsCancellationRequested)
+            if (ct.IsCancellationRequested)
             {
                 return;
             }

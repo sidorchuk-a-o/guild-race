@@ -118,8 +118,8 @@ namespace Game.Craft
                     counterContainer.Init(recipeVM, recipeDisp);
 
                     await UniTask.WhenAll(
-                        productContainer.Init(recipeVM, token, recipeDisp),
-                        ingredientsContainer.Init(recipeVM, token, recipeDisp));
+                        productContainer.Init(recipeVM, recipeDisp, token),
+                        ingredientsContainer.Init(recipeVM, recipeDisp, token));
 
                     if (token.IsCancellationRequested)
                     {

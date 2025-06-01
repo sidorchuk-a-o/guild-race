@@ -34,7 +34,7 @@ namespace Game.Guild
 
         public UniTask<Sprite> LoadIcon()
         {
-            return inventoryVMF.RentSprite(info.IconRef);
+            return inventoryVMF.RentImage(info.IconRef);
         }
     }
 }

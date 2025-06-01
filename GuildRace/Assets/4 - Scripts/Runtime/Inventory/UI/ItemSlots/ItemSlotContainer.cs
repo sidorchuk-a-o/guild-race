@@ -82,7 +82,7 @@ namespace Game.Inventory
             {
                 if (!hasItem)
                 {
-                    var itemGO = await inventoryVMF.RentItemInSlotAsync(itemInSlotRef);
+                    var itemGO = await inventoryVMF.RentObjectAsync(itemInSlotRef);
 
                     item = itemGO.GetComponent<ItemInSlotComponent>();
                 }

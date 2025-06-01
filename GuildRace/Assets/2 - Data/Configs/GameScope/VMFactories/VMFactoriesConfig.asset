@@ -30,12 +30,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  itemInSlotRef:
-    m_AssetGUID: 17275d8adde4b5a40a51c3b2e5af6d76
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
 --- !u!114 &-7747619364179239090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,12 +90,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  itemInSlotRef:
-    m_AssetGUID: 95f44bdfaa5ab8f459241570a9832453
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
 --- !u!114 &1258740967233688229
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,12 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemInGridRef:
     m_AssetGUID: 837c7a95a5f2c6b40b24934f661cd30e
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  itemInSlotRef:
-    m_AssetGUID: 0892000102395c0458b7be27cea73a7a
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 

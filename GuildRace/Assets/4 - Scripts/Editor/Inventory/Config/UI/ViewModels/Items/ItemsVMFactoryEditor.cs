@@ -10,7 +10,6 @@ namespace Game.Inventory
     public abstract class ItemsVMFactoryEditor : Editor
     {
         private AddressableElement<GameObject> itemInGridRefField;
-        private AddressableElement<GameObject> itemInSlotRefField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -21,9 +20,6 @@ namespace Game.Inventory
         {
             itemInGridRefField = root.CreateAddressable<GameObject>();
             itemInGridRefField.BindProperty("itemInGridRef", data);
-
-            itemInSlotRefField = root.CreateAddressable<GameObject>();
-            itemInSlotRefField.BindProperty("itemInSlotRef", data);
         }
     }
 }

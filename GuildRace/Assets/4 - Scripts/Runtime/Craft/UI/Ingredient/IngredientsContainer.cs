@@ -29,13 +29,13 @@ namespace Game.Craft
             }
         }
 
-        public async UniTask Init(RecipeVM recipeVM, CancellationTokenSource token, CompositeDisp disp)
+        public async UniTask Init(RecipeVM recipeVM, CompositeDisp disp, CancellationTokenSource ct)
         {
             this.recipeVM = recipeVM;
 
-            await InitIngredientItems(token, disp);
+            await InitIngredientItems(disp, ct);
 
-            if (token.IsCancellationRequested)
+            if (ct.IsCancellationRequested)
             {
                 return;
             }
@@ -45,7 +45,7 @@ namespace Game.Craft
                 .AddTo(disp);
         }
 
-        private async UniTask InitIngredientItems(CancellationTokenSource token, CompositeDisp disp)
+        private async UniTask InitIngredientItems(CompositeDisp disp, CancellationTokenSource ct)
         {
             var itemsCount = ingredientItems.Count;
             var ingridientsCount = recipeVM.IngridientsVM.Count;
@@ -65,7 +65,7 @@ namespace Game.Craft
             {
                 var item = ingredientItems[i];
 
-                return item.Init(ingridientVM, craftingCount, token, disp);
+                return item.Init(ingridientVM, craftingCount, ct, disp);
             });
 
             await UniTask.WhenAll(initItemsTasks);

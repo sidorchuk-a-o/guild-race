@@ -41,7 +41,7 @@ namespace Game.Guild
             recycleSlotVM.AddTo(disp);
 
             charactersScroll.Init(charactersVM, hasForcedReset);
-            bankTabsContainer.Init(bankTabsVM, disp, hasForcedReset);
+            bankTabsContainer.Init(bankTabsVM, disp);
             recycleSlot.Init(recycleSlotVM, disp);
         }
     }

@@ -1,10 +1,14 @@
-﻿using AD.Services.ProtectedTime;
+﻿using AD.Services.Pools;
+using AD.Services.ProtectedTime;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
 using System.Linq;
+using System.Threading;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 using VContainer;
 
 namespace Game.Instances
@@ -13,6 +17,8 @@ namespace Game.Instances
     {
         private readonly IInstancesService instancesService;
         private readonly IObjectResolver resolver;
+
+        private readonly PoolContainer<Sprite> imagesPool;
 
         private GuildVMFactory guildVMF;
         private InventoryVMFactory inventoryVMF;
@@ -26,7 +32,8 @@ namespace Game.Instances
         public InstancesVMFactory(
             InstancesConfig instancesConfig,
             IInstancesService instancesService,
-            ITimeService timeService, 
+            IPoolsService poolsService,
+            ITimeService timeService,
             IObjectResolver resolver)
         {
             this.instancesService = instancesService;
@@ -34,6 +41,20 @@ namespace Game.Instances
 
             TimeService = timeService;
             InstancesConfig = instancesConfig;
+
+            imagesPool = poolsService.CreateAssetPool<Sprite>();
+        }
+
+        public UniTask<Sprite> LoadImage(AssetReference imageRef, CancellationTokenSource ct)
+        {
+            return imagesPool.RentAsync(imageRef, token: ct.Token);
+        }
+
+        // == Threats ==
+
+        public ThreatDataVM GetThreat(ThreatId threatId)
+        {
+            return new ThreatDataVM(InstancesConfig.GetThreat(threatId), this);
         }
 
         // == Consumables ==

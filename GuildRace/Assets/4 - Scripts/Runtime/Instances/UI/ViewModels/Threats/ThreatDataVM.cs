@@ -1,37 +1,37 @@
 ﻿using System.Threading;
 using AD.Services.Localization;
 using AD.Services.Router;
-using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
-using UniRx;
 using UnityEngine;
 
 namespace Game.Instances
 {
     public class ThreatDataVM : ViewModel
     {
-        private readonly AddressableSprite iconRef;
+        private readonly ThreatData data;
+        private readonly InstancesVMFactory instancesVMF;
 
         public ThreatId Id { get; }
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
 
-        public ThreatDataVM(ThreatData data)
+        public ThreatDataVM(ThreatData data, InstancesVMFactory instancesVMF)
         {
+            this.data = data;
+            this.instancesVMF = instancesVMF;
+
             Id = data.Id;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
-            iconRef = data.IconRef;
         }
 
         protected override void InitSubscribes()
         {
-            iconRef.AddTo(this);
         }
 
         public async UniTask<Sprite> LoadIcon(CancellationTokenSource ct)
         {
-            return await iconRef.LoadAsync(ct.Token);
+            return await instancesVMF.LoadImage(data.IconRef, ct);
         }
     }
 }

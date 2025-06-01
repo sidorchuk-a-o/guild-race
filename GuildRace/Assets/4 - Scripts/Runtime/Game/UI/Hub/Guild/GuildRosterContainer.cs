@@ -27,7 +27,10 @@ namespace Game.Guild
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [SerializeField] private UIText guildRankText;
+        [SerializeField] private UIDropdown guildRankDropdown;
         [Space]
+        [SerializeField] private ClassContainer classContainer;
+        [SerializeField] private AbilitiesContainer abilitiesContainer;
         [SerializeField] private ItemSlotsContainer equipSlotsContainer;
 
         private readonly CompositeDisp characterDisp = new();
@@ -51,9 +54,6 @@ namespace Game.Guild
 
         private void Awake()
         {
-            characterContainer.alpha = 0;
-            characterContainer.interactable = false;
-
             removeButton.OnClick
                 .Subscribe(RemoveCharacterCallback)
                 .AddTo(this);
@@ -95,7 +95,16 @@ namespace Game.Guild
                 return;
             }
 
+            InitGuildRankDropdown();
+
             SelectCharacter(characterVM ?? charactersVM.FirstOrDefault());
+        }
+
+        private void InitGuildRankDropdown()
+        {
+            var guildRankOptions = guildVMF.GetGuildRanksOptions();
+
+            guildRankDropdown.SetOptions(guildRankOptions);
         }
 
         private void CharacterSelectCallback(CharacterVM characterVM)
@@ -118,13 +127,13 @@ namespace Game.Guild
             characterDisp.Clear();
             characterDisp.AddTo(disp);
 
-            var selected = characterVM != null;
+            var hasCharacter = characterVM != null;
             var token = new CancellationTokenSource();
 
             characterToken?.Cancel();
             characterToken = token;
 
-            if (selected &&
+            if (hasCharacter &&
                 lastCharacterId.IsValid() &&
                 lastCharacterId == characterVM.Id)
             {
@@ -135,13 +144,13 @@ namespace Game.Guild
             lastCharacterId = characterVM?.Id;
 
             characterContainer.DOKill();
-            characterContainer.interactable = selected;
+            characterContainer.interactable = hasCharacter;
 
             const float duration = 0.1f;
 
             await characterContainer.DOFade(0, duration);
 
-            if (selected == false || token.IsCancellationRequested)
+            if (hasCharacter == false || token.IsCancellationRequested)
             {
                 return;
             }
@@ -156,6 +165,10 @@ namespace Game.Guild
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
+                classContainer.Init(characterVM, token);
+                abilitiesContainer.Init(characterVM.SpecVM.AbilitiesVM, token);
+                equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);
+
                 characterVM.ItemsLevel
                     .Subscribe(x => itemsLevelText.SetTextParams(x))
                     .AddTo(characterDisp);
@@ -164,7 +177,13 @@ namespace Game.Guild
                     .Subscribe(x => guildRankText.SetTextParams(x))
                     .AddTo(characterDisp);
 
-                equipSlotsContainer.Init(characterVM.EquiSlotsVM, characterDisp);
+                var guildRankId = characterVM.GuildRankVM.Value.Id;
+                var guildRankIndex = guildVMF.GetGuildRankIndex(guildRankId);
+                guildRankDropdown.SetValue(guildRankIndex - 1);
+
+                guildRankDropdown.Value
+                    .SilentSubscribe(index => guildVMF.UpdateGuildRank(characterVM.Id, index + 1))
+                    .AddTo(characterDisp);
             }
         }
 

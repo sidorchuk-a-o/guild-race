@@ -5,6 +5,7 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using VContainer;
@@ -203,19 +204,6 @@ namespace Game.Inventory
             return objectsPool.RentAsync(factory.ItemInGridRef);
         }
 
-        public UniTask<GameObject> RentItemInSlotAsync(ItemVM itemVM)
-        {
-            var type = itemVM.InfoType;
-            var factory = itemsFactoriesDict[type];
-
-            return objectsPool.RentAsync(factory.ItemInSlotRef);
-        }
-
-        public UniTask<GameObject> RentItemInSlotAsync(AssetReference itemRef)
-        {
-            return objectsPool.RentAsync(itemRef);
-        }
-
         public UniTask PreloadIconsAsync(AssetReference assetRef)
         {
             return spritesPool.PreloadAsync(assetRef, preloadCount: 1, threshold: 1);
@@ -226,14 +214,14 @@ namespace Game.Inventory
             return objectsPool.PreloadAsync(assetRef, preloadCount, threshold);
         }
 
-        public UniTask<GameObject> RentObjectAsync(AssetReference objectRef)
+        public UniTask<GameObject> RentObjectAsync(AssetReference objectRef, CancellationToken token = default)
         {
-            return objectsPool.RentAsync(objectRef);
+            return objectsPool.RentAsync(objectRef, token: token);
         }
 
-        public UniTask<Sprite> RentSprite(AssetReference iconRef)
+        public UniTask<Sprite> RentImage(AssetReference iconRef, CancellationToken token = default)
         {
-            return spritesPool.RentAsync(iconRef);
+            return spritesPool.RentAsync(iconRef, token: token);
         }
 
         public void ReturnItems<TComponent>(IEnumerable<TComponent> instances)
