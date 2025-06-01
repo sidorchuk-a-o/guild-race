@@ -143,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   containerOffset: 4
   optionsContainer: {fileID: 6053937330518090232}
+  contextMenuOn: 0
+  fastContextMenuOn: 0
 --- !u!114 &5522647417102335241
 MonoBehaviour:
   m_ObjectHideFlags: 0
