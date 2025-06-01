@@ -1,4 +1,5 @@
 ﻿using AD.UI;
+using Game.UI;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ namespace Game.Guild
     {
         [SerializeField] private Image iconImage;
         [SerializeField] private UIText nameText;
+
+        [Header("Tooltip")]
+        [SerializeField] private TooltipComponent tooltip;
 
         public async void Init(AbilityVM abilityVM, CancellationTokenSource ct)
         {
@@ -21,6 +25,8 @@ namespace Game.Guild
 
             iconImage.sprite = icon;
             nameText.SetTextParams(abilityVM.NameKey);
+
+            tooltip.Init(abilityVM);
         }
     }
 }

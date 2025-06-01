@@ -15,6 +15,7 @@ namespace Game.Guild
         public LocalizeKey NameKey { get; }
 
         public RoleVM RoleVM { get; }
+        public SubRoleVM SubRoleVM { get; }
         public AbilitiesVM AbilitiesVM { get; }
 
         public SpecializationVM(SpecializationData data, GuildVMFactory guildVMF)
@@ -26,18 +27,20 @@ namespace Game.Guild
             NameKey = data.NameKey;
 
             RoleVM = guildVMF.GetRole(data.RoleId);
+            SubRoleVM = guildVMF.GetSubRole(data.SubRoleId);
             AbilitiesVM = new AbilitiesVM(data.Abilities, guildVMF.InstancesVMF);
         }
 
         protected override void InitSubscribes()
         {
             RoleVM.AddTo(this);
+            SubRoleVM.AddTo(this);
             AbilitiesVM.AddTo(this);
         }
 
-        public UniTask<Sprite> LoadIcon(CancellationToken token)
+        public UniTask<Sprite> LoadIcon(CancellationTokenSource ct)
         {
-            return guildVMF.RentImage(data.IconRef, token);
+            return guildVMF.RentImage(data.IconRef, ct);
         }
     }
 }

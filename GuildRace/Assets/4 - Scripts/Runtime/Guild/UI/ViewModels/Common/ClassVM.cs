@@ -27,9 +27,9 @@ namespace Game.Guild
         {
         }
 
-        public UniTask<Sprite> LoadIcon(CancellationToken token)
+        public UniTask<Sprite> LoadIcon(CancellationTokenSource ct)
         {
-            return guildVMF.RentImage(data.IconRef, token);
+            return guildVMF.RentImage(data.IconRef, ct);
         }
     }
 }

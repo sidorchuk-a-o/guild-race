@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Game.Guild
 {
-    public class SpecItem : MonoBehaviour
+    public class SubRoleItem : MonoBehaviour
     {
         [SerializeField] private Image iconImage;
         [SerializeField] private UIText nameText;
@@ -14,9 +14,9 @@ namespace Game.Guild
         [Header("Tooltip")]
         [SerializeField] private TooltipComponent tooltip;
 
-        public async void Init(SpecializationVM specVM, CancellationTokenSource ct)
+        public async void Init(SubRoleVM subRoleVM, CancellationTokenSource ct)
         {
-            var icon = await specVM.LoadIcon(ct);
+            var icon = await subRoleVM.LoadIcon(ct);
 
             if (ct.IsCancellationRequested)
             {
@@ -24,9 +24,9 @@ namespace Game.Guild
             }
 
             iconImage.sprite = icon;
-            nameText.SetTextParams(specVM.NameKey);
+            nameText.SetTextParams(subRoleVM.NameKey);
 
-            tooltip.Init(specVM);
+            tooltip.Init(subRoleVM);
         }
     }
 }

@@ -42,9 +42,9 @@ namespace Game.Guild
             imagesPool = poolsService.CreateAssetPool<Sprite>();
         }
 
-        public UniTask<Sprite> RentImage(AssetReference imageRef, CancellationToken token)
+        public UniTask<Sprite> RentImage(AssetReference imageRef, CancellationTokenSource ct)
         {
-            return imagesPool.RentAsync(imageRef, token: token);
+            return imagesPool.RentAsync(imageRef, token: ct.Token);
         }
 
         // == View Models ==
@@ -87,14 +87,14 @@ namespace Game.Guild
         {
             var roleData = guildConfig.CharactersParams.GetRole(roleId);
 
-            return new RoleVM(roleData);
+            return new RoleVM(roleData, this);
         }
 
-        public SubRoleVM GetRole(SubRoleId subRoleId)
+        public SubRoleVM GetSubRole(SubRoleId subRoleId)
         {
             var subRoleData = guildConfig.CharactersParams.GetSubRole(subRoleId);
 
-            return new SubRoleVM(subRoleData);
+            return new SubRoleVM(subRoleData, this);
         }
 
         public ClassVM GetClass(ClassId classId)
