@@ -86,9 +86,9 @@ namespace Game.UI
 
             tooltipContainer.SetParent(transform);
 
-            UpdateContainerPosition(tooltipContainer);
-
             await tooltipContainer.Init(viewModel, tooltipDisp, token);
+
+            await UniTask.Yield(token.Token);
 
             if (token.IsCancellationRequested)
             {
@@ -97,6 +97,8 @@ namespace Game.UI
             }
 
             // show
+            UpdateContainerPosition(tooltipContainer);
+
             await tooltipContainer.Show(token);
 
             if (token.IsCancellationRequested)
@@ -142,7 +144,7 @@ namespace Game.UI
             var cursorPosition = uiInput.CursorPosition;
             var tooltipRect = container.transform as RectTransform;
 
-            var offset = tooltipRect.sizeDelta / 2 + new Vector2(20, -100);
+            var offset = tooltipRect.sizeDelta / 2 + new Vector2(20, -tooltipRect.sizeDelta.y * .3f);
 
             tooltipRect.position = cursorPosition - offset;
             tooltipRect.ClampPositionToParent();

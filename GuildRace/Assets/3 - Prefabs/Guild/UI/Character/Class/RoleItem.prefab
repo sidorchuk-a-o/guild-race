@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 730310880678369783}
-  - component: {fileID: 1520858545361107472}
+  - component: {fileID: 4369471635290362621}
   m_Layer: 5
-  m_Name: SubRoleItem
+  m_Name: RoleItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 680, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1520858545361107472
+--- !u!114 &4369471635290362621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7402878527151286171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0402c3f3b64271f45ae3aece0f33c0e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 63298f73a79b7b348b79cea66b137802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   iconImage: {fileID: 6005971982609134448}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sub Role Name Text
+  m_text: Role Name Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55330c2ea25a5d4429c792ca05f80bff, type: 2}
   m_sharedMaterial: {fileID: 3962322636112910027, guid: 55330c2ea25a5d4429c792ca05f80bff, type: 2}

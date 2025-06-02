@@ -57,6 +57,13 @@ namespace Game.Inventory
             slotsFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
+        public EquipTypeVM GetEquipType(EquipType type)
+        {
+            var data = inventoryConfig.EquipsParams.GetType(type);
+
+            return new EquipTypeVM(data);
+        }
+
         // == Items ==
 
         public ItemDataVM CreateItemData(int id)

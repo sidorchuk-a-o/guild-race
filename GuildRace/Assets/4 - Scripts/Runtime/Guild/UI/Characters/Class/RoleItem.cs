@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Game.Guild
 {
-    public class SubRoleItem : MonoBehaviour
+    public class RoleItem : MonoBehaviour
     {
         [SerializeField] private Image iconImage;
         [SerializeField] private UIText nameText;
@@ -14,7 +14,7 @@ namespace Game.Guild
         [Header("Tooltip")]
         [SerializeField] private TooltipComponent tooltip;
 
-        public async void Init(SubRoleVM subRoleVM, CancellationTokenSource ct)
+        public async void Init(RoleVM subRoleVM, CancellationTokenSource ct)
         {
             var icon = await subRoleVM.LoadIcon(ct);
 

@@ -2868,7 +2868,7 @@ MonoBehaviour:
   - id: 11
     title: "\u041C\u043E\u0449\u043D\u043E\u0435 \u043A\u043E\u043B\u0434\u0443\u043D\u0441\u0442\u0432\u043E"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_11_NAME
     descKey:
       value: ABILITIES/THREAT_11_DSC
     iconRef:
@@ -2881,7 +2881,7 @@ MonoBehaviour:
     title: "\u041E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439
       \u044D\u0444\u0444\u0435\u043A\u0442"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_12_NAME
     descKey:
       value: ABILITIES/THREAT_12_DSC
     iconRef:
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   - id: 13
     title: "\u041B\u043E\u0432\u0443\u0448\u043A\u0430"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_13_NAME
     descKey:
       value: ABILITIES/THREAT_13_DSC
     iconRef:
@@ -2905,7 +2905,7 @@ MonoBehaviour:
   - id: 14
     title: "\u0410\u0442\u0430\u043A\u0430 \u043F\u043E \u043E\u0431\u043B\u0430\u0441\u0442\u0438"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_14_NAME
     descKey:
       value: ABILITIES/THREAT_14_DSC
     iconRef:
@@ -2917,7 +2917,7 @@ MonoBehaviour:
   - id: 15
     title: "\u042D\u043B\u0438\u0442\u043D\u044B\u0439 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_15_NAME
     descKey:
       value: ABILITIES/THREAT_15_DSC
     iconRef:
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   - id: 16
     title: "\u0421\u043A\u043E\u0440\u043E\u0445\u043E\u0434"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_16_NAME
     descKey:
       value: ABILITIES/THREAT_16_DSC
     iconRef:
@@ -2941,7 +2941,7 @@ MonoBehaviour:
   - id: 17
     title: "\u042F\u0440\u043E\u0441\u0442\u044C"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_17_NAME
     descKey:
       value: ABILITIES/THREAT_17_DSC
     iconRef:
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   - id: 111
     title: "\u0411\u044B\u0441\u0442\u0440\u044B\u0439 \u0431\u043E\u0439"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_111_NAME
     descKey:
       value: ABILITIES/THREAT_111_DSC
     iconRef:
@@ -2965,7 +2965,7 @@ MonoBehaviour:
   - id: 112
     title: "\u041F\u0440\u0438\u0441\u043F\u0435\u0448\u043D\u0438\u043A\u0438"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_112_NAME
     descKey:
       value: ABILITIES/THREAT_112_DSC
     iconRef:
@@ -2977,7 +2977,7 @@ MonoBehaviour:
   - id: 113
     title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u0430\u044F \u0443\u0433\u0440\u043E\u0437\u0430"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_113_NAME
     descKey:
       value: ABILITIES/THREAT_113_DSC
     iconRef:
@@ -2989,7 +2989,7 @@ MonoBehaviour:
   - id: 114
     title: "\u0423\u0440\u043E\u043D \u043F\u043E \u0433\u0440\u0443\u043F\u043F\u0435"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_114_NAME
     descKey:
       value: ABILITIES/THREAT_114_DSC
     iconRef:
@@ -3001,7 +3001,7 @@ MonoBehaviour:
   - id: 115
     title: "\u0421\u0438\u043B\u044C\u043D\u044B\u0439 \u0443\u0434\u0430\u0440"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_115_NAME
     descKey:
       value: ABILITIES/THREAT_115_DSC
     iconRef:
@@ -3013,7 +3013,7 @@ MonoBehaviour:
   - id: 201
     title: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u0442\u0430\u043D\u043A\u0430"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_201_NAME
     descKey:
       value: ABILITIES/THREAT_201_DSC
     iconRef:
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   - id: 202
     title: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043B\u0435\u043A\u0430\u0440\u044F"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_202_NAME
     descKey:
       value: ABILITIES/THREAT_202_DSC
     iconRef:
@@ -3037,7 +3037,7 @@ MonoBehaviour:
   - id: 203
     title: "\u0414\u0430\u043B\u044C\u043D\u0438\u0439 \u0431\u043E\u0439"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_203_NAME
     descKey:
       value: ABILITIES/THREAT_203_DSC
     iconRef:
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   - id: 204
     title: "\u0411\u043B\u0438\u0436\u043D\u0438\u0439 \u0431\u043E\u0439"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_204_NAME
     descKey:
       value: ABILITIES/THREAT_204_DSC
     iconRef:

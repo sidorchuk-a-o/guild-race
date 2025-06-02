@@ -13,6 +13,7 @@ namespace Game.Guild
 
         public SpecializationId Id { get; }
         public LocalizeKey NameKey { get; }
+        public LocalizeKey DescKey { get; }
 
         public RoleVM RoleVM { get; }
         public SubRoleVM SubRoleVM { get; }
@@ -25,6 +26,7 @@ namespace Game.Guild
 
             Id = data.Id;
             NameKey = data.NameKey;
+            DescKey = data.DescKey;
 
             RoleVM = guildVMF.GetRole(data.RoleId);
             SubRoleVM = guildVMF.GetSubRole(data.SubRoleId);

@@ -1,4 +1,5 @@
 ﻿using AD.UI;
+using Cysharp.Threading.Tasks;
 using Game.UI;
 using System.Threading;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Game.Guild
         [Header("Tooltip")]
         [SerializeField] private TooltipComponent tooltip;
 
-        public async void Init(SpecializationVM specVM, CancellationTokenSource ct)
+        public async UniTask Init(SpecializationVM specVM, CancellationTokenSource ct)
         {
             var icon = await specVM.LoadIcon(ct);
 
