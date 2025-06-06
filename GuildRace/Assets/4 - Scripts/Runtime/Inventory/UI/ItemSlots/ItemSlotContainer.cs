@@ -8,15 +8,15 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using VContainer;
 using UnityEngine.AddressableAssets;
+using VContainer;
 
 namespace Game.Inventory
 {
     public class ItemSlotContainer : UIComponent<ItemSlotContainer>, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private ItemSlot slot;
-        [SerializeField] private AssetReference itemInSlotRef;
+        [SerializeField] private ItemSlotsUIParams slotParams;
 
         [Header("Item Preview")]
         [SerializeField] private ItemPreviewContainer itemPreview;
@@ -82,7 +82,8 @@ namespace Game.Inventory
             {
                 if (!hasItem)
                 {
-                    var itemGO = await inventoryVMF.RentObjectAsync(itemInSlotRef);
+                    var itemParams = slotParams.GetParams(itemVM.ItemType);
+                    var itemGO = await inventoryVMF.RentObjectAsync(itemParams.ItemInSlotRef);
 
                     item = itemGO.GetComponent<ItemInSlotComponent>();
                 }
@@ -97,6 +98,14 @@ namespace Game.Inventory
 
                 item = null;
             }
+        }
+
+        public AssetReference GetTooltipRef()
+        {
+            var itemType = item.ViewModel.ItemType;
+            var itemParams = slotParams.GetParams(itemType);
+
+            return itemParams.ItemTooltipRef;
         }
 
         // == Pickup Preview ==

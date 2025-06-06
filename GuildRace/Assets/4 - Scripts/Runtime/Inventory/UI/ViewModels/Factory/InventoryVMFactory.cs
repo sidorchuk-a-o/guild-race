@@ -64,6 +64,13 @@ namespace Game.Inventory
             return new EquipTypeVM(data);
         }
 
+        public EquipGroupVM GetEquipGroup(EquipGroup group)
+        {
+            var data = inventoryConfig.EquipsParams.GetGroup(group);
+
+            return new EquipGroupVM(data, this);
+        }
+
         // == Items ==
 
         public ItemDataVM CreateItemData(int id)
@@ -98,6 +105,13 @@ namespace Game.Inventory
         }
 
         // == Slots ==
+
+        public ItemSlotDataVM GetSlotData(ItemSlot slot)
+        {
+            var data = inventoryConfig.GetSlot(slot);
+
+            return new ItemSlotDataVM(data);
+        }
 
         public ItemSlotVM CreateSlot(string id)
         {
@@ -202,14 +216,6 @@ namespace Game.Inventory
         }
 
         // == Pools ==
-
-        public UniTask<GameObject> RentItemInGridAsync(ItemVM itemVM)
-        {
-            var type = itemVM.InfoType;
-            var factory = itemsFactoriesDict[type];
-
-            return objectsPool.RentAsync(factory.ItemInGridRef);
-        }
 
         public UniTask PreloadIconsAsync(AssetReference assetRef)
         {

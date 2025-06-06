@@ -6,14 +6,16 @@
 
         public Rarity Rarity { get; }
         public EquipType Type { get; }
+        public EquipGroup Group { get; }
 
         public CharacterParams CharacterParams { get; }
 
-        public EquipItemInfo(string id, EquipItemData data) : base(id, data)
+        public EquipItemInfo(string id, EquipItemData data, ItemType itemType) : base(id, data, itemType)
         {
             Level = data.Level;
             Rarity = data.Rarity;
             Type = data.Type;
+            Group = data.Group;
             CharacterParams = data.CharacterParams;
         }
 

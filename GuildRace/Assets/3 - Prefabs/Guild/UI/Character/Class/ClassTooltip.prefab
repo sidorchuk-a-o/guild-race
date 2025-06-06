@@ -1220,19 +1220,7 @@ PrefabInstance:
     - target: {fileID: 332789721558133051, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e513429c9f1d6d24d80b07766cf85995, type: 3}
-    - target: {fileID: 332789721558133051, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
-      propertyPath: m_Color.b
-      value: 0.24000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 332789721558133051, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
-      propertyPath: m_Color.g
-      value: 0.36137933
-      objectReference: {fileID: 0}
-    - target: {fileID: 332789721558133051, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
-      propertyPath: m_Color.r
-      value: 0.8
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 563ece24c830e1d4984aa6e004b740d3, type: 3}
     - target: {fileID: 2634578440717301463, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
       propertyPath: m_text
       value: Weapon Type Text
@@ -1709,7 +1697,7 @@ PrefabInstance:
     - target: {fileID: 332789721558133051, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ecb8a023cc14f6c4ea16405a25c4bab7, type: 3}
+      objectReference: {fileID: 21300000, guid: f4ca2fdb187e6004aa3ad3f03d7a88c4, type: 3}
     - target: {fileID: 2634578440717301463, guid: fbac318dfcbc5444d9da9da4eb74faec, type: 3}
       propertyPath: m_text
       value: Armor Type Text

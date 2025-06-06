@@ -15,7 +15,7 @@ namespace Game.Instances
         public int MechanicId { get; }
         public IReadOnlyList<string> MechanicParams { get; }
 
-        public ConsumablesItemInfo(string id, ConsumablesItemData data) : base(id, data)
+        public ConsumablesItemInfo(string id, ConsumablesItemData data, ItemType itemType) : base(id, data, itemType)
         {
             DescKey = data.DescKey;
             Stack = new(data.Stack);

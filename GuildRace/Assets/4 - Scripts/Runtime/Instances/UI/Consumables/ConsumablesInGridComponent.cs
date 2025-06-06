@@ -1,7 +1,6 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
-using Cysharp.Threading.Tasks;
 using Game.Inventory;
 using UniRx;
 using UnityEngine;

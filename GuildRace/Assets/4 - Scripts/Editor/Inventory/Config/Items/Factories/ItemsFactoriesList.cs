@@ -1,6 +1,7 @@
 ﻿using AD.ToolsCollection;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 
 namespace Game.Inventory
 {
@@ -53,7 +54,13 @@ namespace Game.Inventory
 
                 foreach (var type in newTypes)
                 {
-                    DataFactory.Create(type, saveMeta);
+                    var factory = DataFactory.Create(type, saveMeta);
+
+                    var title = type.Name
+                        .Clear("Factory")
+                        .SplitByUpper();
+
+                    factory.SetValue("title", title);
                 }
 
                 data.MarkAsDirty();

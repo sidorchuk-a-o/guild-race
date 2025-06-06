@@ -6,7 +6,7 @@ namespace Game.Craft
     {
         public ItemStackInfo Stack { get; }
 
-        public ReagentItemInfo(string id, ReagentItemData data) : base(id, data)
+        public ReagentItemInfo(string id, ReagentItemData data, ItemType itemType) : base(id, data, itemType)
         {
             Stack = new(data.Stack);
         }

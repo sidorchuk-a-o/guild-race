@@ -18,10 +18,12 @@ namespace Game.Inventory
             var level = row["Level"].IntParse();
             var rarity = new Rarity(row["Rarity ID"].IntParse());
             var type = new EquipType(row["Type ID"].IntParse());
+            var group = new EquipGroup(row["Group ID"].IntParse());
 
             data.GetProperty("level").SetValue(level);
             data.GetProperty("rarity").SetValue(rarity);
             data.GetProperty("type").SetValue(type);
+            data.GetProperty("group").SetValue(group);
 
             var power = row["AP"].FloatParse();
             var health = row["HP"].FloatParse();

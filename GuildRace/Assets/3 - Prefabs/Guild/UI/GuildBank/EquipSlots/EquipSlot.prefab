@@ -185,6 +185,13 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  itemTooltipRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  slotParams: {fileID: 11400000, guid: 257c62fdc1f6dc648b03c877cd8a8941, type: 2}
   itemPreview: {fileID: 3734784496841587830}
   pickupStates: {fileID: 3930252377574105866}
   pickupPreviewImage: {fileID: 8647519091182363028}

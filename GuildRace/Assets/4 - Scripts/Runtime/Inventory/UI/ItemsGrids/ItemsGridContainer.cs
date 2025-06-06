@@ -4,6 +4,7 @@ using System;
 using UniRx;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.AddressableAssets;
 
 namespace Game.Inventory
 {
@@ -17,8 +18,8 @@ namespace Game.Inventory
         [SerializeField] private RectTransform highlightArea;
         [SerializeField] private RectTransform pickedItemArea;
 
-        [Header("Cells")]
-        [SerializeField] private int cellSize = 65;
+        [Header("Params")]
+        [SerializeField] private ItemsGridUIParams gridParams;
 
         private static readonly Subject<ItemsGridContainer> onInited = new();
         private static readonly Subject<ItemsGridContainer> onInteracted = new();
@@ -31,14 +32,14 @@ namespace Game.Inventory
         public static IObservable<ItemsGridContainer> OnInited => onInited;
         public static IObservable<ItemsGridContainer> OnInteracted => onInteracted;
 
-        public int CellSize => cellSize;
+        public int CellSize => gridParams.CellSize;
 
         public void Init(ItemsGridVM gridVM, CompositeDisp disp)
         {
             ViewModel = gridVM;
 
-            cellsContainer.Init(gridVM, cellSize);
-            itemsContainer.Init(gridVM, cellSize, disp);
+            cellsContainer.Init(gridVM, CellSize);
+            itemsContainer.Init(gridVM, gridParams, disp);
 
             UpdateSize();
 
@@ -54,6 +55,14 @@ namespace Game.Inventory
                 x = ViewModel.Bounds.size.x * CellSize,
                 y = ViewModel.Bounds.size.y * CellSize
             };
+        }
+
+        public AssetReference GetItemTooltip(ItemVM itemVM)
+        {
+            var itemType = itemVM.ItemType;
+            var itemParams = gridParams.GetParams(itemType);
+
+            return itemParams.ItemTooltipRef;
         }
 
         // == IPointer ==

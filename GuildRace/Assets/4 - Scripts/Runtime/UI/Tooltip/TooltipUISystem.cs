@@ -112,6 +112,9 @@ namespace Game.UI
 
         private async void CloseTooltip()
         {
+            tooltipDisp?.Clear();
+            tooltipToken?.Cancel();
+
             if (currentTooltip == null)
             {
                 return;
@@ -120,9 +123,6 @@ namespace Game.UI
             var tooltip = currentTooltip;
 
             currentTooltip = null;
-
-            tooltipDisp?.Clear();
-            tooltipToken?.Cancel();
 
             await tooltip.Hide();
 

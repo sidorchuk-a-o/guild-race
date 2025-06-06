@@ -3,8 +3,9 @@ using System;
 
 namespace Game.Inventory
 {
-    public abstract class ItemsFactory : ScriptableData
+    public abstract class ItemsFactory : ScriptableEntity<int>
     {
+        public ItemType ItemType => Id;
         public abstract Type DataType { get; }
 
         protected InventoryState InventoryState { get; private set; }

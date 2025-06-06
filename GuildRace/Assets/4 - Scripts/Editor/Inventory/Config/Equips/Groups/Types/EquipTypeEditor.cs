@@ -7,7 +7,7 @@ namespace Game.Inventory
     [InventoryEditor(typeof(EquipTypeData))]
     public class EquipTypeEditor : EntityEditor
     {
-        private KeyElement<string> nameKeyField;
+        private LocalizeKeyElement nameKeyField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -20,8 +20,9 @@ namespace Game.Inventory
 
         private void CreateCommonTab(VisualElement root, SerializedData data)
         {
-            nameKeyField = root.CreateKey<LocalizeKey, string>();
+            nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.BindProperty("nameKey", data);
+            nameKeyField.previewOn = true;
         }
     }
 }
