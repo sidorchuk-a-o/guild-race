@@ -651,6 +651,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8007917536398643416}
     m_Modifications:
+    - target: {fileID: 6011420742712023199, guid: 5bc0a1f5622f8ca468e0d5754bcc3901, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011420742712023199, guid: 5bc0a1f5622f8ca468e0d5754bcc3901, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011420742712023199, guid: 5bc0a1f5622f8ca468e0d5754bcc3901, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011420742712023199, guid: 5bc0a1f5622f8ca468e0d5754bcc3901, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6909423980981641104, guid: 5bc0a1f5622f8ca468e0d5754bcc3901, type: 3}
       propertyPath: m_Name
       value: Highlighter

@@ -391,4 +391,4 @@ MonoBehaviour:
   itemsContainer: {fileID: 667012544978977450}
   highlightArea: {fileID: 6714525137119507923}
   pickedItemArea: {fileID: 6605237921712937727}
-  cellSize: 65
+  gridParams: {fileID: 0}
