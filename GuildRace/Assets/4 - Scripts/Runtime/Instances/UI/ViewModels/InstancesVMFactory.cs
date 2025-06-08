@@ -5,6 +5,8 @@ using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using UnityEngine;
@@ -18,10 +20,14 @@ namespace Game.Instances
         private readonly IInstancesService instancesService;
         private readonly IObjectResolver resolver;
 
+        private readonly GameObject poolsContainer;
         private readonly PoolContainer<Sprite> imagesPool;
+        private readonly PoolContainer<GameObject> objectsPool;
 
         private GuildVMFactory guildVMF;
         private InventoryVMFactory inventoryVMF;
+
+        private Dictionary<Type, ConsumableMechanicVMFactory> mechanicFactoriesDict;
 
         public ITimeService TimeService { get; }
         public InstancesConfig InstancesConfig { get; }
@@ -42,12 +48,52 @@ namespace Game.Instances
             TimeService = timeService;
             InstancesConfig = instancesConfig;
 
-            imagesPool = poolsService.CreateAssetPool<Sprite>();
+            if (poolsContainer == null)
+            {
+                poolsContainer = new("--- Instances Pools ---");
+                poolsContainer.DontDestroyOnLoad();
+
+                imagesPool = poolsService.CreateAssetPool<Sprite>();
+                objectsPool = poolsService.CreatePrefabPool<GameObject>(poolsContainer.transform);
+            }
         }
+
+        // == Pools ==
 
         public UniTask<Sprite> LoadImage(AssetReference imageRef, CancellationTokenSource ct)
         {
             return imagesPool.RentAsync(imageRef, token: ct.Token);
+        }
+
+        public UniTask<GameObject> RentObjectAsync(AssetReference objectRef, CancellationToken token = default)
+        {
+            return objectsPool.RentAsync(objectRef, token: token);
+        }
+
+        public void ReturnObject<TComponent>(TComponent instance) where TComponent : Component
+        {
+            ReturnObject(instance.gameObject);
+        }
+
+        public void ReturnObject(GameObject instance)
+        {
+            objectsPool.Return(instance);
+        }
+
+        // == Consumables ==
+
+        public void SetConsumableMechanicFactories(List<ConsumableMechanicVMFactory> mechanicFactories)
+        {
+            mechanicFactoriesDict = mechanicFactories.ToDictionary(x => x.Type, x => x);
+            mechanicFactoriesDict.ForEach(x => resolver.Inject(x.Value));
+        }
+
+        public ConsumableMechanicVM GetConsumableMechanic(ConsumablesItemInfo info)
+        {
+            var handler = instancesService.GetConsumableHandler(info.MechanicId);
+            var factory = mechanicFactoriesDict[handler.GetType()];
+
+            return factory.GetValue(info, handler, this);
         }
 
         // == Threats ==
@@ -55,15 +101,6 @@ namespace Game.Instances
         public ThreatDataVM GetThreat(ThreatId threatId)
         {
             return new ThreatDataVM(InstancesConfig.GetThreat(threatId), this);
-        }
-
-        // == Consumables ==
-
-        public ConsumableMechanicVM GetConsumableMechanic(int mechanicId)
-        {
-            var mechanic = instancesService.GetConsumableHandler(mechanicId);
-
-            return new ConsumableMechanicVM(mechanic);
         }
 
         // == Season ==

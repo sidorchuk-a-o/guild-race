@@ -47,6 +47,13 @@ namespace Game.Guild
             return imagesPool.RentAsync(imageRef, token: ct.Token);
         }
 
+        public ItemCounterVM CreateItemCounter(int itemDataId)
+        {
+            var bankGrids = guildService.BankTabs.Select(x => x.Grid);
+
+            return InventoryVMF.CreateItemCounter(itemDataId, bankGrids);
+        }
+
         // == View Models ==
 
         public GuildVM GetGuild()

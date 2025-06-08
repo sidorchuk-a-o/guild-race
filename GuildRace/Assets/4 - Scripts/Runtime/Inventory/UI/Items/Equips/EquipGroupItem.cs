@@ -18,7 +18,11 @@ namespace Game.Inventory
             if (ct.IsCancellationRequested) return;
 
             iconImage.sprite = icon;
-            nameText.SetTextParams(equipGroupVM.NameKey);
+
+            if (nameText)
+            {
+                nameText.SetTextParams(equipGroupVM.NameKey);
+            }
         }
     }
 }

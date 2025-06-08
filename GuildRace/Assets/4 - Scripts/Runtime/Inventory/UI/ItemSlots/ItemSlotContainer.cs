@@ -102,6 +102,11 @@ namespace Game.Inventory
 
         public AssetReference GetTooltipRef()
         {
+            if (item == null)
+            {
+                return null;
+            }
+
             var itemType = item.ViewModel.ItemType;
             var itemParams = slotParams.GetParams(itemType);
 

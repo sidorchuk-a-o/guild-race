@@ -8,6 +8,7 @@ namespace Game.Craft
     {
         private readonly ReagentItemInfo info;
 
+        public RarityDataVM RarityVM { get; }
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
 
@@ -17,12 +18,14 @@ namespace Game.Craft
 
             StackVM = new(info.Stack);
             StackableStateVM = new();
+            RarityVM = inventoryVMF.GetRarity(info.Rarity);
         }
 
         protected override void InitSubscribes()
         {
             base.InitSubscribes();
 
+            RarityVM.AddTo(this);
             StackVM.AddTo(this);
             StackableStateVM.AddTo(this);
         }

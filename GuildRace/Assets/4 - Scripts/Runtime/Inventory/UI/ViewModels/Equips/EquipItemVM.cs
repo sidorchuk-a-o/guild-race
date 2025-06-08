@@ -5,8 +5,8 @@ namespace Game.Inventory
     public class EquipItemVM : ItemVM
     {
         public int Level { get; }
-        public Rarity Rarity { get; }
 
+        public RarityDataVM RarityVM { get; }
         public EquipTypeVM TypeVM { get; }
         public EquipGroupVM GroupVM { get; }
         public ItemSlotDataVM SlotVM { get; }
@@ -16,8 +16,8 @@ namespace Game.Inventory
         public EquipItemVM(EquipItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
             Level = info.Level;
-            Rarity = info.Rarity;
 
+            RarityVM = inventoryVMF.GetRarity(info.Rarity);
             SlotVM = inventoryVMF.GetSlotData(info.Slot);
             TypeVM = inventoryVMF.GetEquipType(info.Type);
             GroupVM = inventoryVMF.GetEquipGroup(info.Group);
@@ -28,6 +28,7 @@ namespace Game.Inventory
         {
             base.InitSubscribes();
 
+            RarityVM.AddTo(this);
             SlotVM.AddTo(this);
             TypeVM.AddTo(this);
             GroupVM.AddTo(this);

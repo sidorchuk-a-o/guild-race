@@ -10,9 +10,13 @@ namespace Game.Inventory
     {
         [Header("Equips")]
         [SerializeField] private UIText levelText;
+        [Space]
         [SerializeField] private EquipGroupItem equipGroupItem;
         [SerializeField] private EquipTypeItem equipTypeItem;
         [SerializeField] private ItemSlotItem slotItem;
+        [Space]
+        [SerializeField] private RarityComponent rarityComponent;
+        [SerializeField] private TooltipItemStackComponent stackComponent;
 
         public override async UniTask Init(ItemVM itemVM, CompositeDisp disp, CancellationTokenSource ct)
         {
@@ -26,6 +30,8 @@ namespace Game.Inventory
 
             slotItem.Init(equipVM.SlotVM);
             equipTypeItem.Init(equipVM.TypeVM);
+            rarityComponent.Init(equipVM.RarityVM);
+            stackComponent.Init(equipVM, disp);
 
             await equipGroupItem.Init(equipVM.GroupVM, ct);
         }

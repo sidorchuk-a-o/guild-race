@@ -8,6 +8,7 @@ namespace Game.Inventory
     public class RarityEditor : EntityEditor
     {
         private LocalizeKeyElement nameKeyField;
+        private PropertyElement colorField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -23,6 +24,9 @@ namespace Game.Inventory
             nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.BindProperty("nameKey", data);
             nameKeyField.previewOn = true;
+
+            colorField = root.CreateProperty();
+            colorField.BindProperty("color", data);
         }
     }
 }

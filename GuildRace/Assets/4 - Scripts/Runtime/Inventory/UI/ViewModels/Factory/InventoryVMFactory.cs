@@ -3,9 +3,9 @@ using AD.Services.Router;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using VContainer;
@@ -69,6 +69,13 @@ namespace Game.Inventory
             var data = inventoryConfig.EquipsParams.GetGroup(group);
 
             return new EquipGroupVM(data, this);
+        }
+
+        public RarityDataVM GetRarity(Rarity rarity)
+        {
+            var data = inventoryConfig.ItemsParams.GetRarity(rarity);
+
+            return new RarityDataVM(data);
         }
 
         // == Items ==

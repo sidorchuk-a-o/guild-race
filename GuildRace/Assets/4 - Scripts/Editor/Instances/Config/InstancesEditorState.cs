@@ -35,6 +35,11 @@ namespace Game.Instances
             return Config.ConsumablesParams.CreateKeyViewCollection<ConsumableMechanicHandler, int>("mechanicHandlers");
         }
 
+        public static Collection<int> CreateConsumableMechanicsCollection()
+        {
+            return Config.ConsumablesParams.CreateKeyCollection<ConsumableMechanicHandler, int>("mechanicHandlers");
+        }
+
         public static Collection<int> CreateRewardMechanicsViewCollection()
         {
             return Config.RewardsParams.CreateKeyViewCollection<RewardHandler, int>("rewardHandlers");

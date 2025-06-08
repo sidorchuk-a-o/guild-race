@@ -3714,6 +3714,7 @@ MonoBehaviour:
   title: Rare
   nameKey:
     value: INVENTORY/RARE_RARITY_TTL
+  color: {r: 0.2, g: 0.50407237, b: 0.8, a: 1}
 --- !u!114 &1146862404774681540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4317,6 +4318,7 @@ MonoBehaviour:
   title: Common
   nameKey:
     value: INVENTORY/COMMON_RARITY_TTL
+  color: {r: 0.27058816, g: 0.8, b: 0.2, a: 1}
 --- !u!114 &3225340754304345197
 MonoBehaviour:
   m_ObjectHideFlags: 1
