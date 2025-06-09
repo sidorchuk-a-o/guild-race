@@ -4,12 +4,14 @@ using AD.UI;
 using Game.Inventory;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Instances
 {
     public class ConsumablesInGridComponent : ItemInGridComponent
     {
         [Header("Stack")]
+        [SerializeField] private Image rarityImage;
         [SerializeField] private UIStates stackableStates;
         [SerializeField] private ItemStackComponent itemStackComponent;
 
@@ -23,6 +25,7 @@ namespace Game.Instances
                 .Subscribe(stackableStates.SetState)
                 .AddTo(disp);
 
+            rarityImage.color = consumablesVM.RarityVM.Color;
             itemStackComponent.Init(consumablesVM.StackVM, disp);
         }
     }

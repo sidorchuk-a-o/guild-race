@@ -104,13 +104,7 @@ namespace Game.Inventory
 
             await tooltipContainer.Init(itemVM, tooltipDisp, token);
 
-            if (token.IsCancellationRequested)
-            {
-                tooltipsPool.Return(tooltipGO);
-                return;
-            }
-
-            await UniTask.Yield(token.Token);
+            await UniTask.Yield();
 
             if (token.IsCancellationRequested)
             {

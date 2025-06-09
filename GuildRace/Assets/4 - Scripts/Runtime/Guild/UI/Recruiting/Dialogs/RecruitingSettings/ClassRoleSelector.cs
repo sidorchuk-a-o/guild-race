@@ -1,13 +1,17 @@
-﻿using AD.ToolsCollection;
+﻿using System.Threading;
+using AD.ToolsCollection;
 using AD.UI;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Guild
 {
     public class ClassRoleSelector : MonoBehaviour
     {
         [Header("Role")]
+        [SerializeField] private Image roleIconImage;
         [SerializeField] private UIText roleNameText;
 
         [Header("Selector")]
@@ -15,7 +19,7 @@ namespace Game.Guild
         [SerializeField] private string unselectedStateKey = "default";
         [SerializeField] private string selectedStateKey = "selected";
 
-        private ClassRoleSelectorVM classRoleSelectorVM;
+        private ClassRoleSelectorVM selectorVM;
 
         private void Awake()
         {
@@ -24,13 +28,18 @@ namespace Game.Guild
                 .AddTo(this);
         }
 
-        public void Init(ClassRoleSelectorVM classRoleSelectorVM, CompositeDisp disp)
+        public async UniTask Init(ClassRoleSelectorVM selectorVM, CompositeDisp disp, CancellationTokenSource ct)
         {
-            this.classRoleSelectorVM = classRoleSelectorVM;
+            this.selectorVM = selectorVM;
 
-            roleNameText.SetTextParams(classRoleSelectorVM.RoleVM.NameKey);
+            var roleIcon = await selectorVM.RoleVM.LoadIcon(ct);
 
-            classRoleSelectorVM.IsSelected
+            if (ct.IsCancellationRequested) return;
+
+            roleIconImage.sprite = roleIcon;
+            roleNameText.SetTextParams(selectorVM.RoleVM.NameKey);
+
+            selectorVM.IsSelected
                 .Subscribe(SelectorStateChanged)
                 .AddTo(disp);
         }
@@ -42,7 +51,7 @@ namespace Game.Guild
 
         private void SelectorClickCallback()
         {
-            classRoleSelectorVM.SwitchSelectState();
+            selectorVM.SwitchSelectState();
         }
     }
 }

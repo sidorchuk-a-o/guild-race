@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Pool;
 using VContainer;
 
 namespace Game.Guild
@@ -45,6 +46,7 @@ namespace Game.Guild
                 .Subscribe(RecruitingStateChanged)
                 .AddTo(disp);
 
+            var tasks = ListPool<UniTask>.Get();
             var classRoleSelectorsVM = recruitingVM.ClassRoleSelectorsVM;
 
             for (var i = 0; i < classRoleSelectorsVM.Count; i++)
@@ -52,8 +54,12 @@ namespace Game.Guild
                 var classRoleSelectorVM = classRoleSelectorsVM[i];
                 var classRoleSelector = classRoleSelectors[i];
 
-                classRoleSelector.Init(classRoleSelectorVM, disp);
+                tasks.Add(classRoleSelector.Init(classRoleSelectorVM, disp, ct));
             }
+
+            await UniTask.WhenAll(tasks);
+
+            tasks.ReleaseListPool();
         }
 
         private void RecruitingStateChanged(bool state)

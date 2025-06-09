@@ -443,6 +443,24 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: GUILD/HAS_INSTANCE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0412 \u043F\u043E\u0445\u043E\u0434\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD/HAS_SQUAD_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0412 \u0433\u0440\u0443\u043F\u043F\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: GUILD_BANK/BANK_EQUIPS_TAB_TTL
       TermType: 0
       Description: 
@@ -2275,7 +2293,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u041F\u043E\u043C\u044F\u0442\u044B\u0435 \u0434\u043E\u0441\u043F\u0435\u0445"
+      - "\u041F\u043E\u043C\u044F\u0442\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -7488,7 +7506,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1749305884106
+    Google_LastUpdatedVersion: 1749469825345
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

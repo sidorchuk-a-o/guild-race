@@ -18,6 +18,11 @@ namespace Game.Inventory
 
         private ItemVM itemVM;
 
+        private void OnEnable()
+        {
+            iconImage.SetActive(itemVM != null);
+        }
+
         private void OnDisable()
         {
             iconImage.SetActive(false);
@@ -27,12 +32,17 @@ namespace Game.Inventory
         {
             this.itemVM = itemVM;
 
+            iconImage.SetActive(false);
+
+            if (itemVM == null)
+            {
+                return;
+            }
+
             if (loadingIndicator != null)
             {
                 loadingIndicator.SetActive(true);
             }
-
-            iconImage.SetActive(false);
 
             // upd rect
             if (iconStaticOn)

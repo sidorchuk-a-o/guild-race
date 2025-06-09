@@ -177,6 +177,10 @@ namespace Game.Guild
                     .Subscribe(x => guildRankText.SetTextParams(x))
                     .AddTo(characterDisp);
 
+                characterVM.InstanceVM
+                    .Subscribe(x => removeButton.SetInteractableState(!characterVM.HasInstance))
+                    .AddTo(characterDisp);
+
                 var guildRankId = characterVM.GuildRankVM.Value.Id;
                 var guildRankIndex = guildVMF.GetGuildRankIndex(guildRankId);
                 guildRankDropdown.SetValue(guildRankIndex - 1);
