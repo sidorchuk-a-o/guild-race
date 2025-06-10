@@ -33,7 +33,7 @@ namespace Game.Craft
             this.craftVMF = craftVMF;
         }
 
-        public override async void ShowPickupPreview(ItemVM itemVM, string state)
+        public override async void ShowPickupPreview(ItemVM itemVM, PickupResult pickupResult)
         {
             disp.Clear();
             disp.AddTo(this);
@@ -82,7 +82,7 @@ namespace Game.Craft
                 reagentsContainer.SetActive(true);
             }
 
-            base.ShowPickupPreview(itemVM, state);
+            base.ShowPickupPreview(itemVM, pickupResult);
         }
 
         public override void ResetPickupPreview()

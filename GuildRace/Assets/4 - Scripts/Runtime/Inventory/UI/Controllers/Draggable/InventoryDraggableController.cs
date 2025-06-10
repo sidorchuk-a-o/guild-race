@@ -12,9 +12,6 @@ namespace Game.Inventory
 {
     public class InventoryDraggableController : MonoBehaviour
     {
-        private const string slotErrorState = "slotError";
-        private const string slotReadyState = "slotReady";
-        private const string slotPreviewState = "slotPreview";
         private const string placeReadyState = "placeReady";
         private const string stackReadyState = "stackReady";
 
@@ -254,16 +251,7 @@ namespace Game.Inventory
 
         private void UpdateItemSlot(ItemSlotContainer itemSlot)
         {
-            var checkPreview = pickupResult.Context.SelectedSlotVM == itemSlot.ViewModel;
-            var checkPlacement = itemSlot.ViewModel.CheckPossibilityOfPlacement(selectedItemVM);
-
-            var state = checkPreview
-                ? slotPreviewState
-                : checkPlacement
-                    ? slotReadyState
-                    : slotErrorState;
-
-            itemSlot.ShowPickupPreview(selectedItemVM, state);
+            itemSlot.ShowPickupPreview(selectedItemVM, pickupResult);
         }
 
         private void UpdatePlacementContainers()

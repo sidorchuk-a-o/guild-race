@@ -24,6 +24,9 @@ namespace Game.Inventory
         [Header("Pickup Process")]
         [SerializeField] private UIStates pickupStates;
         [SerializeField] private Image pickupPreviewImage;
+        [SerializeField] private string errorState = "slotError";
+        [SerializeField] private string readyState = "slotReady";
+        [SerializeField] private string previewState = "slotPreview";
 
         [Header("Params")]
         [SerializeField] private bool isReadOnly;
@@ -115,9 +118,18 @@ namespace Game.Inventory
 
         // == Pickup Preview ==
 
-        public virtual async void ShowPickupPreview(ItemVM itemVM, string state)
+        public virtual async void ShowPickupPreview(ItemVM itemVM, PickupResult pickupResult)
         {
-            if (pickupPreviewImage)
+            var checkPreview = pickupResult.Context.SelectedSlotVM == ViewModel;
+            var checkPlacement = ViewModel.CheckPossibilityOfPlacement(itemVM);
+
+            var state = checkPreview
+                ? previewState
+                : checkPlacement
+                    ? readyState
+                    : errorState;
+
+            if (pickupPreviewImage && checkPreview)
             {
                 pickupPreviewImage.sprite = await itemVM.LoadIcon();
             }

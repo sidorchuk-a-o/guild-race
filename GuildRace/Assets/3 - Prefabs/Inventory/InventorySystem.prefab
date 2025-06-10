@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolRoot: {fileID: 976697396114952759}
+  draggableController: {fileID: 5217644400215470101}
 --- !u!114 &5812245562392875237
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,9 @@ namespace Game.Inventory
     {
         [SerializeField] private Transform poolRoot;
 
+        [Header("Draggable")]
+        [SerializeField] private InventoryDraggableController draggableController;
+
         private IInventoryInputModule inputModule;
         private PoolContainer<GameObject> tooltipsPool;
 
@@ -44,13 +47,33 @@ namespace Game.Inventory
             ItemsGridContainer.OnInteracted
                 .Subscribe(ItemsGridInteractedCallback)
                 .AddTo(disp);
+
+            draggableController.OnPickupItem
+                .Subscribe(PickupItemCallback)
+                .AddTo(disp);
+
+            draggableController.OnReleaseItem
+                .Subscribe(ReleaseItemCallback)
+                .AddTo(disp);
+        }
+
+        private void PickupItemCallback()
+        {
+            TryCloseTooltip();
+
+            enabled = false;
+        }
+
+        private void ReleaseItemCallback()
+        {
+            enabled = true;
         }
 
         private void ItemSlotInteractedCallback(ItemSlotContainer itemSlot)
         {
             TryCloseTooltip();
 
-            if (itemSlot && itemSlot.HasItem)
+            if (enabled && itemSlot && itemSlot.HasItem)
             {
                 var itemVM = itemSlot.ViewModel.ItemVM.Value;
                 var tooltipRef = itemSlot.GetTooltipRef();

@@ -66,7 +66,7 @@ namespace Game.Craft
                 .Subscribe(StartRecycleProcess);
         }
 
-        private void StartRecycleProcess(ItemInfo item)
+        private async void StartRecycleProcess(ItemInfo item)
         {
             var result = GetRecyclingResult(item.Id);
 
@@ -113,13 +113,9 @@ namespace Game.Craft
                 }
             }
 
-            // remove item
-            var removeArgs = new RemoveFromSlotArgs
-            {
-                ItemId = item.Id
-            };
+            await UniTask.Yield();
 
-            inventoryService.TryRemoveItem(removeArgs);
+            state.RecycleSlot.TryRemoveItem();
         }
 
         public RecyclingResult GetRecyclingResult(string itemId)
