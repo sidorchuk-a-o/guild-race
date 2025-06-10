@@ -6,10 +6,10 @@ namespace Game.Instances
     {
         public ThreatDataVM ThreatVM { get; }
 
-        public ThreatConsumableVM(ConsumablesItemInfo info, ThreatConsumableHandler handler, InstancesVMFactory instancesVMF)
-            : base(info, handler, instancesVMF)
+        public ThreatConsumableVM(ConsumablesItemData data, ThreatConsumableHandler handler, InstancesVMFactory instancesVMF)
+            : base(data, handler, instancesVMF)
         {
-            ThreatVM = instancesVMF.GetThreat(handler.GetThreat(info));
+            ThreatVM = instancesVMF.GetThreat(handler.GetThreat(data));
         }
 
         protected override void InitSubscribes()

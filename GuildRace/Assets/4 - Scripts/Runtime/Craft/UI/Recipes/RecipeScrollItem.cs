@@ -20,7 +20,7 @@ namespace Game.Craft
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
-            var icon = await ViewModel.ProductVM.LoadIcon();
+            var icon = await ViewModel.ProductVM.LoadIcon(ct);
 
             if (ct.IsCancellationRequested)
             {

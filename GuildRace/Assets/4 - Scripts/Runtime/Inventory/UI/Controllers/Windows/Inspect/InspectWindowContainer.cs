@@ -11,7 +11,7 @@ namespace Game.Inventory
 
         protected override async void InitWindow(CompositeDisp disp)
         {
-            iconImage.sprite = await CurrentItemVM.LoadIcon();
+            iconImage.sprite = await ItemVM.LoadIcon();
         }
     }
 }

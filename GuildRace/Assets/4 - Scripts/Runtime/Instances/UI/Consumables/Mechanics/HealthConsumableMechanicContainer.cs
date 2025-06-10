@@ -9,16 +9,16 @@ namespace Game.Instances
     {
         private HealthConsumableVM mechanicVM;
 
-        public override async UniTask Init(ConsumablesItemVM consumableVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(ConsumablesDataVM dataVM, CompositeDisp disp, CancellationTokenSource ct)
         {
-            mechanicVM = consumableVM.MechanicVM as HealthConsumableVM;
+            mechanicVM = dataVM.MechanicVM as HealthConsumableVM;
 
-            await base.Init(consumableVM, disp, ct);
+            await base.Init(dataVM, disp, ct);
         }
 
         protected override UITextData GetDesc()
         {
-            return new(consumableVM.DescKey, mechanicVM.Health);
+            return new(dataVM.DescKey, mechanicVM.Health);
         }
     }
 }

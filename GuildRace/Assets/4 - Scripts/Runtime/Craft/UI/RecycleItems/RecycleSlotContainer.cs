@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AD.ToolsCollection;
-using AD.UI;
+﻿using System.Linq;
+using System.Threading;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using AD.UI;
+using AD.ToolsCollection;
 using Game.Inventory;
 using UniRx;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace Game.Craft
         [SerializeField] private RecycleReagentItem reagentItemPrefab;
 
         private readonly CompositeDisp disp = new();
+        private CancellationTokenSource previewToken;
+
         private readonly List<RecycleReagentItem> reagentItems = new();
 
         private CraftVMFactory craftVMF;
@@ -35,10 +38,14 @@ namespace Game.Craft
 
         public override async void ShowPickupPreview(ItemVM itemVM, PickupResult pickupResult)
         {
+            var token = new CancellationTokenSource();
+            var recyclingVM = craftVMF.GetRecyclingParams(itemVM.Id);
+
             disp.Clear();
             disp.AddTo(this);
 
-            var recyclingVM = craftVMF.GetRecyclingParams(itemVM.Id);
+            previewToken?.Cancel();
+            previewToken = token;
 
             recyclingVM.AddTo(disp);
 
@@ -71,7 +78,9 @@ namespace Game.Craft
                     {
                         reagentItem.SetActive(true);
 
-                        await reagentItem.Init(reagentVM);
+                        await reagentItem.Init(reagentVM, token);
+
+                        if (token.IsCancellationRequested) return;
                     }
                     else
                     {
@@ -93,6 +102,7 @@ namespace Game.Craft
             reagentsContainer.SetActive(false);
 
             disp.Clear();
+            previewToken?.Cancel();
         }
     }
 }

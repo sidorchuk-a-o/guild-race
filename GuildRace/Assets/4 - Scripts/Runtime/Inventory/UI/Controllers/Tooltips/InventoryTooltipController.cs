@@ -48,6 +48,10 @@ namespace Game.Inventory
                 .Subscribe(ItemsGridInteractedCallback)
                 .AddTo(disp);
 
+            InventoryTooltipComponent.OnInteracted
+                .Subscribe(TooltipComponentInteractedCallback)
+                .AddTo(this);
+
             draggableController.OnPickupItem
                 .Subscribe(PickupItemCallback)
                 .AddTo(disp);
@@ -78,7 +82,7 @@ namespace Game.Inventory
                 var itemVM = itemSlot.ViewModel.ItemVM.Value;
                 var tooltipRef = itemSlot.GetTooltipRef();
 
-                OpenTooltip(itemVM, tooltipRef);
+                OpenTooltip(new(itemVM), tooltipRef);
             }
         }
 
@@ -90,14 +94,27 @@ namespace Game.Inventory
             selectedGridContainer = itemsGrid;
         }
 
-        private async void OpenTooltip(ItemVM itemVM, AssetReference tooltipRef)
+        private void TooltipComponentInteractedCallback(InventoryTooltipComponent tooltipComponent)
+        {
+            TryCloseTooltip();
+
+            if (enabled && tooltipComponent)
+            {
+                var dataVM = tooltipComponent.DataVM;
+                var tooltipRef = tooltipComponent.TooltipRef;
+
+                OpenTooltip(new(dataVM), tooltipRef);
+            }
+        }
+
+        private async void OpenTooltip(TooltipContext context, AssetReference tooltipRef)
         {
             tooltipDisp?.Clear();
             tooltipToken?.Cancel();
 
             var token = new CancellationTokenSource();
 
-            if (itemVM == null || tooltipRef?.RuntimeKeyIsValid() == false)
+            if (context == null || tooltipRef?.RuntimeKeyIsValid() == false)
             {
                 return;
             }
@@ -125,7 +142,7 @@ namespace Game.Inventory
 
             tooltipContainer.SetParent(transform);
 
-            await tooltipContainer.Init(itemVM, tooltipDisp, token);
+            await tooltipContainer.Init(context, tooltipDisp, token);
 
             await UniTask.Yield();
 
@@ -189,19 +206,19 @@ namespace Game.Inventory
                     gridContainer: selectedGridContainer,
                     itemVM: null);
 
-                var newItemVM = selectedGridVM?.GetItem(positionOnGrid.Cursor);
+                var itemVM = selectedGridVM?.GetItem(positionOnGrid.Cursor);
 
-                if (newItemVM != highlightedItemVM)
+                if (itemVM != highlightedItemVM)
                 {
                     TryCloseTooltip();
 
-                    highlightedItemVM = newItemVM;
+                    highlightedItemVM = itemVM;
 
-                    if (newItemVM != null)
+                    if (itemVM != null)
                     {
-                        var tooltipRef = selectedGridContainer.GetItemTooltip(newItemVM);
+                        var tooltipRef = selectedGridContainer.GetItemTooltip(itemVM);
 
-                        OpenTooltip(newItemVM, tooltipRef);
+                        OpenTooltip(new(itemVM), tooltipRef);
                     }
                 }
             }

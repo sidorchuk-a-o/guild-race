@@ -88,12 +88,12 @@ namespace Game.Instances
             mechanicFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
-        public ConsumableMechanicVM GetConsumableMechanic(ConsumablesItemInfo info)
+        public ConsumableMechanicVM GetConsumableMechanic(ConsumablesItemData data)
         {
-            var handler = instancesService.GetConsumableHandler(info.MechanicId);
+            var handler = instancesService.GetConsumableHandler(data.MechanicId);
             var factory = mechanicFactoriesDict[handler.GetType()];
 
-            return factory.GetValue(info, handler, this);
+            return factory.GetValue(data, handler, this);
         }
 
         // == Threats ==

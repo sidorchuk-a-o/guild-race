@@ -22,9 +22,10 @@ namespace Game.Inventory
             canvasGroup.alpha = 0;
         }
 
-        public virtual async UniTask Init(ItemVM itemVM, CompositeDisp disp, CancellationTokenSource ct)
+        public virtual async UniTask Init(TooltipContext context, CompositeDisp disp, CancellationTokenSource ct)
         {
-            var icon = await itemVM.LoadIcon();
+            var dataVM = context.DataVM;
+            var icon = await dataVM.LoadIcon(ct);
 
             if (ct.IsCancellationRequested)
             {
@@ -32,7 +33,7 @@ namespace Game.Inventory
             }
 
             iconImage.sprite = icon;
-            nameText.SetTextParams(itemVM.NameKey);
+            nameText.SetTextParams(dataVM.NameKey);
         }
 
         public async UniTask Show(CancellationTokenSource ct)

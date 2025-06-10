@@ -1,5 +1,4 @@
-﻿using AD.Services.Localization;
-using AD.Services.Router;
+﻿using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.UI;
 using System.Collections.Generic;
@@ -16,9 +15,9 @@ namespace Game.Inventory
         protected readonly InventoryVMFactory inventoryVMF;
 
         public string Id { get; }
+
         public int DataId { get; }
-        public LocalizeKey NameKey { get; }
-        public ItemType ItemType { get; }
+        public ItemDataVM DataVM { get; }
 
         public ItemBoundsVM BoundsVM { get; }
         public UIStateVM HighlightStateVM { get; }
@@ -32,9 +31,8 @@ namespace Game.Inventory
 
             Id = info.Id;
             DataId = info.DataId;
-            NameKey = info.NameKey;
-            ItemType = info.ItemType;
 
+            DataVM = inventoryVMF.CreateItemData(DataId);
             BoundsVM = new(info.Bounds);
             HighlightStateVM = new();
 
@@ -43,6 +41,7 @@ namespace Game.Inventory
 
         protected override void InitSubscribes()
         {
+            DataVM.AddTo(this);
             BoundsVM.AddTo(this);
             HighlightStateVM.AddTo(this);
         }

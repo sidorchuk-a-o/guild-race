@@ -47,7 +47,7 @@ namespace Game.Inventory
 
         public void SetItemsFactories(IReadOnlyList<ItemsVMFactory> itemsFactories)
         {
-            itemsFactoriesDict = itemsFactories.ToDictionary(x => x.InfoType, x => x);
+            itemsFactoriesDict = itemsFactories.ToDictionary(x => x.DataType, x => x);
             itemsFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
@@ -80,16 +80,17 @@ namespace Game.Inventory
 
         // == Items ==
 
-        public ItemDataVM CreateItemData(int id)
+        public ItemDataVM CreateItemData(int dataId)
         {
-            var data = inventoryConfig.GetItem(id);
+            var data = inventoryConfig.GetItem(dataId);
+            var factory = itemsFactoriesDict[data.GetType()];
 
-            return new ItemDataVM(data, this);
+            return factory.Create(data, this);
         }
 
-        public ItemVM CreateItem(string id)
+        public ItemVM CreateItem(string itemId)
         {
-            var info = inventoryService.GetItem(id);
+            var info = inventoryService.GetItem(itemId);
 
             return CreateItem(info);
         }
@@ -101,7 +102,7 @@ namespace Game.Inventory
                 return null;
             }
 
-            var factory = itemsFactoriesDict[info.GetType()];
+            var factory = itemsFactoriesDict[info.DataType];
 
             return factory.Create(info, this);
         }

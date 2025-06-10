@@ -115,7 +115,11 @@ namespace Game.Craft
 
             await UniTask.Yield();
 
-            state.RecycleSlot.TryRemoveItem();
+            inventoryService.TryDiscardItem(new DiscardItemArgs
+            {
+                ItemId = item.Id,
+                SlotId = state.RecycleSlot.Id
+            });
         }
 
         public RecyclingResult GetRecyclingResult(string itemId)

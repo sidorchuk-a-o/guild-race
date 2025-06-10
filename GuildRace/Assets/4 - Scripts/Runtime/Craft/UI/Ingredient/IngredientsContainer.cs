@@ -65,7 +65,7 @@ namespace Game.Craft
             {
                 var item = ingredientItems[i];
 
-                return item.Init(ingridientVM, craftingCount, ct, disp);
+                return item.Init(ingridientVM, craftingCount, disp, ct);
             });
 
             await UniTask.WhenAll(initItemsTasks);

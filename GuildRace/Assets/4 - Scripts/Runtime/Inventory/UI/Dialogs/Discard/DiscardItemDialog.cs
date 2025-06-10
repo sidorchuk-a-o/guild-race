@@ -46,7 +46,7 @@ namespace Game.Inventory
 
             var itemVM = inventoryVMF.CreateItem(itemId);
 
-            dialogText.SetTextParams(new(dialogKey, itemVM.NameKey));
+            dialogText.SetTextParams(new(dialogKey, itemVM.DataVM.NameKey));
         }
     }
 }

@@ -14,6 +14,8 @@ namespace Game.Inventory
 
         public string Id { get; }
         public int DataId { get; }
+
+        public Type DataType { get; }
         public ItemType ItemType { get; }
 
         public LocalizeKey NameKey { get; }
@@ -33,6 +35,7 @@ namespace Game.Inventory
         {
             Id = id;
             DataId = data.Id;
+            DataType = data.GetType();
             ItemType = data.ItemType;
             NameKey = data.NameKey;
             IconRef = data.IconRef;

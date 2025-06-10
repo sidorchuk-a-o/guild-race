@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2156565279062137170}
+  - component: {fileID: 3113920708649274172}
   - component: {fileID: 8671525362446506943}
   m_Layer: 5
   m_Name: ProductContainer
@@ -37,6 +38,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 160}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3113920708649274172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2342047503244096266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fdd0c2979ba5f41b10d9b9ebb317b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipParams: {fileID: 11400000, guid: b3fa40c85e80bbd4d9e6d906a293611f, type: 2}
 --- !u!114 &8671525362446506943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconImage: {fileID: 4236294074087528423}
+  tooltipComponent: {fileID: 3113920708649274172}
 --- !u!1 &6259634138413830810
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -14,16 +14,16 @@ namespace Game.Instances
             this.instancesConfig = instancesConfig;
         }
 
-        public ThreatId GetThreat(ConsumablesItemInfo item)
+        public ThreatId GetThreat(ConsumablesItemData data)
         {
-            return (ThreatId)item.MechanicParams[0].IntParse();
+            return (ThreatId)data.MechanicParams[0].IntParse();
         }
 
         public override void Invoke(ConsumablesItemInfo item, SquadChanceParams squadParams)
         {
             var setupInstance = squadParams.SetupInstance;
 
-            var resolvedThreadId = GetThreat(item);
+            var resolvedThreadId = (ThreatId)item.MechanicParams[0].IntParse();
             var checkThreat = setupInstance.BossUnit.Threats.Contains(resolvedThreadId);
 
             if (checkThreat)

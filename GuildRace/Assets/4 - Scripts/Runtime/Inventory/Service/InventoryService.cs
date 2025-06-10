@@ -503,6 +503,11 @@ namespace Game.Inventory
                 });
             }
 
+            if (removeResult)
+            {
+                state.RemoveItem(discardArgs.ItemId);
+            }
+
             return removeResult;
         }
     }

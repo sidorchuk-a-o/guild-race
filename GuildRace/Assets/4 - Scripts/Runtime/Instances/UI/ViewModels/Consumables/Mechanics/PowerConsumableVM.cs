@@ -4,10 +4,10 @@
     {
         public int Power { get; }
 
-        public PowerConsumableVM(ConsumablesItemInfo info, PowerConsumableHandler handler, InstancesVMFactory instancesVMF) 
-            : base(info, handler, instancesVMF)
+        public PowerConsumableVM(ConsumablesItemData data, PowerConsumableHandler handler, InstancesVMFactory instancesVMF) 
+            : base(data, handler, instancesVMF)
         {
-            Power = handler.GetPower(info);
+            Power = handler.GetPower(data);
         }
     }
 }

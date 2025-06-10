@@ -15,7 +15,7 @@ namespace Game.Inventory
 
             var equipVM = itemVM as EquipItemVM;
 
-            rarityImage.color = equipVM.RarityVM.Color;
+            rarityImage.color = equipVM.DataVM.RarityVM.Color;
         }
     }
 }

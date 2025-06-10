@@ -18,22 +18,22 @@ namespace Game.Inventory
         [SerializeField] private RarityComponent rarityComponent;
         [SerializeField] private TooltipItemStackComponent stackComponent;
 
-        public override async UniTask Init(ItemVM itemVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(TooltipContext context, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(itemVM, disp, ct);
+            await base.Init(context, disp, ct);
 
             if (ct.IsCancellationRequested) return;
 
-            var equipVM = itemVM as EquipItemVM;
+            var dataVM = context.DataVM as EquipDataVM;
 
-            levelText.SetTextParams(equipVM.Level);
+            levelText.SetTextParams(dataVM.Level);
 
-            slotItem.Init(equipVM.SlotVM);
-            equipTypeItem.Init(equipVM.TypeVM);
-            rarityComponent.Init(equipVM.RarityVM);
-            stackComponent.Init(equipVM, disp);
+            slotItem.Init(dataVM.SlotVM);
+            equipTypeItem.Init(dataVM.TypeVM);
+            rarityComponent.Init(dataVM.RarityVM);
+            stackComponent.Init(context, disp);
 
-            await equipGroupItem.Init(equipVM.GroupVM, ct);
+            await equipGroupItem.Init(dataVM.GroupVM, ct);
         }
     }
 }

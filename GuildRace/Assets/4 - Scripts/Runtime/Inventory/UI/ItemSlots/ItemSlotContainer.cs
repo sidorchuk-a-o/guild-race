@@ -17,6 +17,7 @@ namespace Game.Inventory
     {
         [SerializeField] private ItemSlot slot;
         [SerializeField] private ItemSlotsUIParams slotParams;
+        [SerializeField] private ItemsTooltipUIParams tooltipParams;
 
         [Header("Item Preview")]
         [SerializeField] private ItemPreviewContainer itemPreview;
@@ -85,7 +86,7 @@ namespace Game.Inventory
             {
                 if (!hasItem)
                 {
-                    var itemParams = slotParams.GetParams(itemVM.ItemType);
+                    var itemParams = slotParams.GetParams(itemVM.DataVM.ItemType);
                     var itemGO = await inventoryVMF.RentObjectAsync(itemParams.ItemInSlotRef);
 
                     item = itemGO.GetComponent<ItemInSlotComponent>();
@@ -110,10 +111,10 @@ namespace Game.Inventory
                 return null;
             }
 
-            var itemType = item.ViewModel.ItemType;
-            var itemParams = slotParams.GetParams(itemType);
+            var itemType = item.ViewModel.DataVM.ItemType;
+            var itemParams = tooltipParams.GetParams(itemType);
 
-            return itemParams.ItemTooltipRef;
+            return itemParams.TooltipRef;
         }
 
         // == Pickup Preview ==

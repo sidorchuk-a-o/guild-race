@@ -75,7 +75,7 @@ namespace Game.Inventory
             {
                 if (!hasItem)
                 {
-                    var itemType = itemVM.ItemType;
+                    var itemType = itemVM.DataVM.ItemType;
                     var itemParams = gridParams.GetParams(itemType);
 
                     var itemGO = await inventoryVMF.RentObjectAsync(itemParams.ItemInGridRef);

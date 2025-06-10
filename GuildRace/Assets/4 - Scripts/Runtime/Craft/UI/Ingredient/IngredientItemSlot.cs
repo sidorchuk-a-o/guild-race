@@ -23,18 +23,14 @@ namespace Game.Craft
 
         public IReadOnlyReactiveProperty<bool> IsAvailable => isAvailable;
 
-        public async UniTask Init(
-            IngredientVM ingredientVM,
-            int craftingCount,
-            CancellationTokenSource token,
-            CompositeDisp disp)
+        public async UniTask Init(IngredientVM ingredientVM, int craftingCount, CompositeDisp disp, CancellationTokenSource ct)
         {
             this.ingredientVM = ingredientVM;
 
             // icon
-            var sprite = await ingredientVM.ReagentVM.LoadIcon();
+            var sprite = await ingredientVM.ReagentVM.LoadIcon(ct);
 
-            if (token.IsCancellationRequested)
+            if (ct.IsCancellationRequested)
             {
                 return;
             }

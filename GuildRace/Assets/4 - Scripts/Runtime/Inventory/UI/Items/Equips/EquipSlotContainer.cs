@@ -29,12 +29,12 @@ namespace Game.Inventory
             if (!checkPreview && checkPlacement)
             {
                 var newEquip = itemVM as EquipItemVM;
-                var newLevel = newEquip.Level;
+                var newLevel = newEquip.DataVM.Level;
 
                 if (HasItem)
                 {
                     var currEquip = ViewModel.ItemVM.Value as EquipItemVM;
-                    var currLevel = currEquip.Level;
+                    var currLevel = currEquip.DataVM.Level;
 
                     newLevel -= currLevel;
                 }

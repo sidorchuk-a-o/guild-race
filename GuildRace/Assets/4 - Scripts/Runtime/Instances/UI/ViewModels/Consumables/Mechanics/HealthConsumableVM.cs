@@ -4,10 +4,10 @@
     {
         public int Health { get; }
 
-        public HealthConsumableVM(ConsumablesItemInfo info, HealthConsumableHandler handler, InstancesVMFactory instancesVMF) 
-            : base(info, handler, instancesVMF)
+        public HealthConsumableVM(ConsumablesItemData data, HealthConsumableHandler handler, InstancesVMFactory instancesVMF) 
+            : base(data, handler, instancesVMF)
         {
-            Health = handler.GetHealth(info);
+            Health = handler.GetHealth(data);
         }
     }
 }

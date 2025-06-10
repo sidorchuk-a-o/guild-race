@@ -9,7 +9,7 @@ namespace Game.Inventory
     public class ItemsGridUIParams : ScriptableData
     {
         [SerializeField] private int cellSize = 65;
-        [SerializeField] private List<ItemGridUIParams> itemsParams;
+        [SerializeField] private List<ItemGridUIParams> parameters;
 
         private Dictionary<ItemType, ItemGridUIParams> paramsCache;
 
@@ -17,7 +17,7 @@ namespace Game.Inventory
 
         public ItemGridUIParams GetParams(ItemType itemType)
         {
-            paramsCache ??= itemsParams.ToDictionary(x => x.ItemType, x => x);
+            paramsCache ??= parameters.ToDictionary(x => x.ItemType, x => x);
             paramsCache.TryGetValue(itemType, out var data);
 
             return data;

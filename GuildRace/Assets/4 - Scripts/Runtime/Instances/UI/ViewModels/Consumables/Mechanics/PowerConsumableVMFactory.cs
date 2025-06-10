@@ -6,9 +6,9 @@ namespace Game.Instances
     {
         public override Type Type { get; } = typeof(PowerConsumableHandler);
 
-        public override ConsumableMechanicVM GetValue(ConsumablesItemInfo info, ConsumableMechanicHandler handler, InstancesVMFactory instancesVMF)
+        public override ConsumableMechanicVM GetValue(ConsumablesItemData data, ConsumableMechanicHandler handler, InstancesVMFactory instancesVMF)
         {
-            return new PowerConsumableVM(info, handler as PowerConsumableHandler, instancesVMF);
+            return new PowerConsumableVM(data, handler as PowerConsumableHandler, instancesVMF);
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Game.Inventory;
-using System;
+﻿using System;
+using Game.Inventory;
 using VContainer;
 
 namespace Game.Instances
@@ -8,7 +8,7 @@ namespace Game.Instances
     {
         private InstancesVMFactory instancesVMF;
 
-        public override Type InfoType { get; } = typeof(ConsumablesItemInfo);
+        public override Type DataType { get; } = typeof(ConsumablesItemData);
 
         [Inject]
         public void Inject(InstancesVMFactory instancesVMF)
@@ -19,6 +19,11 @@ namespace Game.Instances
         public override ItemVM Create(ItemInfo itemInfo, InventoryVMFactory inventoryVMF)
         {
             return new ConsumablesItemVM(itemInfo as ConsumablesItemInfo, instancesVMF);
+        }
+
+        public override ItemDataVM Create(ItemData data, InventoryVMFactory inventoryVMF)
+        {
+            return new ConsumablesDataVM(data as ConsumablesItemData, instancesVMF);
         }
     }
 }

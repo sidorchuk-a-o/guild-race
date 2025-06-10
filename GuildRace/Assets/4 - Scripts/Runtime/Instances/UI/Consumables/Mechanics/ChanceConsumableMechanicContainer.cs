@@ -11,13 +11,13 @@ namespace Game.Instances
         [Header("Chance Params")]
         [SerializeField] private UIText chanceText;
 
-        private ChanceConsumableVM mechanicVM;
-
-        public override async UniTask Init(ConsumablesItemVM consumableVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(ConsumablesDataVM dataVM, CompositeDisp disp, CancellationTokenSource ct)
         {
-            mechanicVM = consumableVM.MechanicVM as ChanceConsumableVM;
+            await base.Init(dataVM, disp, ct);
 
-            await base.Init(consumableVM, disp, ct);
+            if (ct.IsCancellationRequested) return;
+
+            var mechanicVM = dataVM.MechanicVM as ChanceConsumableVM;
 
             chanceText.SetTextParams(new(chanceText.LocalizeKey, mechanicVM.Chance));
         }

@@ -12,16 +12,16 @@ namespace Game.Craft
         [SerializeField] private RarityComponent rarityComponent;
         [SerializeField] private TooltipItemStackComponent stackComponent;
 
-        public override async UniTask Init(ItemVM itemVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(TooltipContext context, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(itemVM, disp, ct);
+            await base.Init(context, disp, ct);
 
             if (ct.IsCancellationRequested) return;
 
-            var reagentVM = itemVM as ReagentItemVM;
+            var dataVM = context.DataVM as ReagentDataVM;
 
-            rarityComponent.Init(reagentVM.RarityVM);
-            stackComponent.Init(reagentVM, disp);
+            stackComponent.Init(context, disp);
+            rarityComponent.Init(dataVM.RarityVM);
         }
     }
 }

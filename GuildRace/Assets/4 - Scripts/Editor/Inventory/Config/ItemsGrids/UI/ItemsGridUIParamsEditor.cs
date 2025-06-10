@@ -7,18 +7,18 @@ namespace Game.Inventory
     public class ItemsGridUIParamsEditor : MonoEditor
     {
         private PropertyElement cellSizeField;
-        private ItemGridUIParamsList itemsParamsList;
+        private ItemGridUIParamsList parametersList;
 
         public override void CreateGUI(VisualElement root)
         {
             cellSizeField = root.CreateProperty();
-            itemsParamsList = root.CreateElement<ItemGridUIParamsList>();
+            parametersList = root.CreateElement<ItemGridUIParamsList>();
         }
 
         public override void BindData(SerializedData data)
         {
             cellSizeField.BindProperty("cellSize", data);
-            itemsParamsList.BindProperty("itemsParams", data);
+            parametersList.BindProperty("parameters", data);
         }
     }
 }

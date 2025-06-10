@@ -12,6 +12,9 @@ namespace Game.Craft
     {
         [SerializeField] private Image iconImage;
 
+        [Header("Tooltip")]
+        [SerializeField] private InventoryTooltipComponent tooltipComponent;
+
         private CraftVMFactory craftVMF;
 
         private ItemDataVM productVM;
@@ -27,7 +30,7 @@ namespace Game.Craft
             productVM = craftVMF.GetRecipeProduct(recipeVM.Id);
             productVM.AddTo(disp);
 
-            var sprite = await productVM.LoadIcon();
+            var sprite = await productVM.LoadIcon(ct);
 
             if (ct.IsCancellationRequested)
             {
@@ -35,6 +38,7 @@ namespace Game.Craft
             }
 
             iconImage.sprite = sprite;
+            tooltipComponent.Init(productVM);
         }
     }
 }
