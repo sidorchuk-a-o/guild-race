@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using AD.ToolsCollection;
 using Game.UI;
 using UniRx;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace Game.Instances
         public ThreatsVM ThreatsVM { get; }
         public SquadUnitsVM SquadVM { get; }
 
+        public TimerVM TimerVM { get; }
         public UIStateVM ResultStateVM { get; }
         public IReadOnlyReactiveProperty<string> CompleteChance => completeChance;
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
@@ -33,7 +35,13 @@ namespace Game.Instances
             BossUnitVM = new UnitVM(info.BossUnit, info.Instance.Id, instancesVMF);
             ThreatsVM = new ThreatsVM(info.Threats, instancesVMF);
             SquadVM = new SquadUnitsVM(info.Instance.Type, info.Squad, instancesVMF);
-            ResultStateVM = new();
+            ResultStateVM = new UIStateVM();
+
+
+            var startTime = info.StartTime;
+            var completeTime = startTime + info.BossUnit.CompleteTime;
+
+            TimerVM = new TimerVM(completeTime, instancesVMF.TimeService);
         }
 
         protected override void InitSubscribes()
@@ -42,6 +50,7 @@ namespace Game.Instances
             BossUnitVM.AddTo(this);
             ThreatsVM.AddTo(this);
             SquadVM.AddTo(this);
+            TimerVM.AddTo(this);
             ResultStateVM.AddTo(this);
 
             info.Result

@@ -4,10 +4,12 @@ namespace Game.Craft
 {
     public class ReagentItemInfo : ItemInfo, IStackableItem
     {
+        public Rarity Rarity { get; }
         public ItemStackInfo Stack { get; }
 
-        public ReagentItemInfo(string id, ReagentItemData data) : base(id, data)
+        public ReagentItemInfo(string id, ReagentItemData data, ItemType itemType) : base(id, data, itemType)
         {
+            Rarity = data.Rarity;
             Stack = new(data.Stack);
         }
 

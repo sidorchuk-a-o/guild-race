@@ -13,7 +13,7 @@ namespace Game.Inventory
     {
         private readonly List<ItemInGridComponent> items = new();
 
-        private int cellSize;
+        private ItemsGridUIParams gridParams;
 
         private InventoryVMFactory inventoryVMF;
         private ItemsVM itemsVM;
@@ -24,9 +24,9 @@ namespace Game.Inventory
             this.inventoryVMF = inventoryVMF;
         }
 
-        public async void Init(ItemsGridVM gridVM, int cellSize, CompositeDisp disp)
+        public async void Init(ItemsGridVM gridVM, ItemsGridUIParams gridParams, CompositeDisp disp)
         {
-            this.cellSize = cellSize;
+            this.gridParams = gridParams;
 
             itemsVM = gridVM.ItemsVM;
 
@@ -75,7 +75,10 @@ namespace Game.Inventory
             {
                 if (!hasItem)
                 {
-                    var itemGO = await inventoryVMF.RentItemInGridAsync(itemVM);
+                    var itemType = itemVM.ItemType;
+                    var itemParams = gridParams.GetParams(itemType);
+
+                    var itemGO = await inventoryVMF.RentObjectAsync(itemParams.ItemInGridRef);
 
                     item = itemGO.GetComponent<ItemInGridComponent>();
                     item.SetParent(transform);
@@ -86,7 +89,7 @@ namespace Game.Inventory
                 var itemRect = item.transform as RectTransform;
                 var itemBounds = itemVM.BoundsVM.Value;
 
-                itemRect.ApplyItemBounds(itemBounds, cellSize);
+                itemRect.ApplyItemBounds(itemBounds, gridParams.CellSize);
 
                 item.Init(itemVM, disp);
             }

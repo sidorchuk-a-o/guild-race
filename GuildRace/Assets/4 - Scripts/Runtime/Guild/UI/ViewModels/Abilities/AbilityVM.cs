@@ -18,7 +18,7 @@ namespace Game.Guild
             Id = data.Id;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
-            ThreatVM = new ThreatDataVM(instancesVMF.InstancesConfig.GetThreat(data.ThreatId));
+            ThreatVM = instancesVMF.GetThreat(data.ThreatId);
         }
 
         protected override void InitSubscribes()

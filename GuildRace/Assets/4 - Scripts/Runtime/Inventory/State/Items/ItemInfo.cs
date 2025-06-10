@@ -14,6 +14,7 @@ namespace Game.Inventory
 
         public string Id { get; }
         public int DataId { get; }
+        public ItemType ItemType { get; }
 
         public LocalizeKey NameKey { get; }
         public AssetReference IconRef { get; }
@@ -28,7 +29,7 @@ namespace Game.Inventory
 
         public IReadOnlyReactiveProperty<bool> IsRemoved => isRemoved;
 
-        public ItemInfo(string id, ItemData data)
+        public ItemInfo(string id, ItemData data, ItemType itemType)
         {
             Id = id;
             DataId = data.Id;
@@ -36,6 +37,7 @@ namespace Game.Inventory
             IconRef = data.IconRef;
             Bounds = new(data.Size);
             Slot = data.Slot;
+            ItemType = itemType;
         }
 
         public void SetGridParams(GridParamsForItems gridParams)

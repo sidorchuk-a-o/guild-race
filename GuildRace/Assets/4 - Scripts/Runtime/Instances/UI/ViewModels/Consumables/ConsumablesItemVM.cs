@@ -8,24 +8,23 @@ namespace Game.Instances
     public class ConsumablesItemVM : ItemVM, IStackableItemVM
     {
         private readonly ConsumablesItemInfo info;
-        private readonly ConsumableMechanicVM mechanicVM;
 
-        public Rarity Rarity { get; }
         public LocalizeKey DescKey { get; }
+        public RarityDataVM RarityVM { get; }
+        public ConsumableMechanicVM MechanicVM { get; }
 
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
 
-        public ConsumablesItemVM(ConsumablesItemInfo info, InstancesVMFactory instancesVMF, InventoryVMFactory inventoryVMF)
-            : base(info, inventoryVMF)
+        public ConsumablesItemVM(ConsumablesItemInfo info, InstancesVMFactory instancesVMF)
+            : base(info, instancesVMF.InventoryVMF)
         {
             this.info = info;
 
-            mechanicVM = instancesVMF.GetConsumableMechanic(info.MechanicId);
-
-            Rarity = info.Rarity;
             DescKey = info.DescKey;
 
+            MechanicVM = instancesVMF.GetConsumableMechanic(info);
+            RarityVM = instancesVMF.InventoryVMF.GetRarity(info.Rarity);
             StackVM = new(info.Stack);
             StackableStateVM = new();
         }

@@ -100,5 +100,13 @@ namespace Game.Guild
         {
             recruitingModule.SetClassRoleSelectorState(roleId, isEnabled);
         }
+
+        public void UpdateGuildRank(string characterId, int rankIndex)
+        {
+            var character = state.Characters[id: characterId];
+            var guildRank = state.GuildRanks[index: rankIndex];
+
+            character.SetGuildRank(guildRank.Id);
+        }
     }
 }

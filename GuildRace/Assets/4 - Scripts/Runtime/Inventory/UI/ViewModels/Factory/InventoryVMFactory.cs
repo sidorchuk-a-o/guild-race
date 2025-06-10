@@ -3,8 +3,9 @@ using AD.Services.Router;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using VContainer;
@@ -56,6 +57,27 @@ namespace Game.Inventory
             slotsFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
+        public EquipTypeVM GetEquipType(EquipType type)
+        {
+            var data = inventoryConfig.EquipsParams.GetType(type);
+
+            return new EquipTypeVM(data);
+        }
+
+        public EquipGroupVM GetEquipGroup(EquipGroup group)
+        {
+            var data = inventoryConfig.EquipsParams.GetGroup(group);
+
+            return new EquipGroupVM(data, this);
+        }
+
+        public RarityDataVM GetRarity(Rarity rarity)
+        {
+            var data = inventoryConfig.ItemsParams.GetRarity(rarity);
+
+            return new RarityDataVM(data);
+        }
+
         // == Items ==
 
         public ItemDataVM CreateItemData(int id)
@@ -86,12 +108,17 @@ namespace Game.Inventory
 
         public ItemCounterVM CreateItemCounter(int itemDataId, IEnumerable<ItemsGridInfo> itemsGrids)
         {
-            var counter = new ItemCounter(itemDataId, itemsGrids);
-
-            return new ItemCounterVM(counter, this);
+            return new ItemCounterVM(itemDataId, itemsGrids, this);
         }
 
         // == Slots ==
+
+        public ItemSlotDataVM GetSlotData(ItemSlot slot)
+        {
+            var data = inventoryConfig.GetSlot(slot);
+
+            return new ItemSlotDataVM(data);
+        }
 
         public ItemSlotVM CreateSlot(string id)
         {
@@ -197,22 +224,6 @@ namespace Game.Inventory
 
         // == Pools ==
 
-        public UniTask<GameObject> RentItemInGridAsync(ItemVM itemVM)
-        {
-            var type = itemVM.InfoType;
-            var factory = itemsFactoriesDict[type];
-
-            return objectsPool.RentAsync(factory.ItemInGridRef);
-        }
-
-        public UniTask<GameObject> RentItemInSlotAsync(ItemVM itemVM)
-        {
-            var type = itemVM.InfoType;
-            var factory = itemsFactoriesDict[type];
-
-            return objectsPool.RentAsync(factory.ItemInSlotRef);
-        }
-
         public UniTask PreloadIconsAsync(AssetReference assetRef)
         {
             return spritesPool.PreloadAsync(assetRef, preloadCount: 1, threshold: 1);
@@ -223,14 +234,14 @@ namespace Game.Inventory
             return objectsPool.PreloadAsync(assetRef, preloadCount, threshold);
         }
 
-        public UniTask<GameObject> RentObjectAsync(AssetReference objectRef)
+        public UniTask<GameObject> RentObjectAsync(AssetReference objectRef, CancellationToken token = default)
         {
-            return objectsPool.RentAsync(objectRef);
+            return objectsPool.RentAsync(objectRef, token: token);
         }
 
-        public UniTask<Sprite> RentSprite(AssetReference iconRef)
+        public UniTask<Sprite> RentImage(AssetReference iconRef, CancellationToken token = default)
         {
-            return spritesPool.RentAsync(iconRef);
+            return spritesPool.RentAsync(iconRef, token: token);
         }
 
         public void ReturnItems<TComponent>(IEnumerable<TComponent> instances)

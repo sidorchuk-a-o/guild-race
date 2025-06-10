@@ -23,7 +23,7 @@ namespace Game.Quests
         {
             base.Init();
 
-            state = new WeeklyQuestsState(questsConfig, weeklyService, resolver);
+            state = new WeeklyQuestsState(questsConfig, resolver);
             state.Init();
 
             TryUpdateQuests();

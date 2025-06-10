@@ -168,7 +168,7 @@ MonoBehaviour:
     width: 1
     height: 1
   nameKey:
-    value: 
+    value: CRAFT/CONSUME_3029_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -176,7 +176,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   descKey:
-    value: 
+    value: CRAFT/CONSUME_3029_DSC
   rarity:
     value: 122
   stack:
@@ -672,7 +672,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_301_TTL
       descKey:
-        value: <none>
+        value: 
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 
@@ -687,14 +687,14 @@ MonoBehaviour:
         nameKey:
           value: INSTANCES/INSTANCE_UNIT_20017_TTL
         descKey:
-          value: <none>
+          value: 
         imageRef:
           m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 5
+        completeTime: 90
         unitParams:
           health: 5184
           power: 170
@@ -702,33 +702,33 @@ MonoBehaviour:
         - id: 1031
           title: "\u041A\u0430\u0441\u043A\u0430\u0434\u043D\u044B\u0439 \u0443\u043A\u0443\u0441"
           nameKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1031_TTL
           descKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1031_DSC
           threatId:
             value: 201
         - id: 1032
           title: "\u0423\u0434\u0430\u0440 \u0432\u043E\u0437\u043C\u0435\u0437\u0434\u0438\u044F"
           nameKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1032_TTL
           descKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1032_DSC
           threatId:
             value: 14
         - id: 1033
           title: "\u0412\u0441\u043A\u0438\u043F\u0430\u043D\u0438\u0435 \u043A\u0440\u043E\u0432\u0438"
           nameKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1033_TTL
           descKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1033_DSC
           threatId:
             value: 17
         - id: 1034
           title: "\u0420\u0435\u0437\u043E\u043D\u0430\u043D\u0441"
           nameKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1034_TTL
           descKey:
-            value: <none>
+            value: ABILITIES/ABILITY_1034_DSC
           threatId:
             value: 114
       - id: 20018
@@ -743,7 +743,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 100
         unitParams:
           health: 5472
           power: 170
@@ -752,35 +752,35 @@ MonoBehaviour:
           title: "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F
             \u0446\u0435\u043F\u043D\u0430\u044F \u0440\u0435\u0430\u043A\u0446\u0438\u044F"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1035_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1035_DSC
           threatId:
             value: 114
         - id: 1036
           title: "\u0413\u043E\u0440\u044F\u0447\u0438\u0439 \u0440\u0435\u043C\u043E\u043D\u0442"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1036_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1036_DSC
           threatId:
             value: 111
         - id: 1037
           title: "\u0420\u0430\u0437\u0431\u043E\u0440\u0447\u0438\u0432\u0430\u044F
             \u0434\u0435\u0442\u043E\u043D\u0430\u0446\u0438\u044F"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1037_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1037_DSC
           threatId:
             value: 204
         - id: 1038
           title: "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0435
             \u0434\u0432\u043E\u0439\u043D\u0438\u043A\u0438"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1038_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1038_DSC
           threatId:
             value: 15
       - id: 20019
@@ -795,7 +795,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 120
         unitParams:
           health: 6087
           power: 182
@@ -803,33 +803,33 @@ MonoBehaviour:
         - id: 1039
           title: "\u0422\u0435\u043C\u043D\u044B\u0439 \u043A\u0430\u0442\u0430\u043A\u043B\u0438\u0437\u043C"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1039_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1039_DSC
           threatId:
             value: 11
         - id: 1040
           title: "\u0417\u0435\u0440\u043A\u0430\u043B\u043E \u0414\u0443\u0448\u0438"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1040_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1040_DSC
           threatId:
             value: 113
         - id: 1041
           title: "\u041F\u043E\u0446\u0435\u043B\u0443\u0439 \u043F\u0443\u0441\u0442\u043E\u0442\u044B"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1041_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1041_DSC
           threatId:
             value: 202
         - id: 1042
           title: "\u0427\u0435\u0440\u043D\u044B\u0439 \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1042_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1042_DSC
           threatId:
             value: 13
     - id: 302
@@ -837,7 +837,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_302_TTL
       descKey:
-        value: <none>
+        value: 
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 
@@ -867,33 +867,33 @@ MonoBehaviour:
         - id: 1043
           title: "\u041A\u0430\u043C\u043D\u0435\u043F\u0430\u0434"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1043_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1043_DSC
           threatId:
             value: 14
         - id: 1044
           title: "\u041A\u043E\u0433\u043E\u0442\u044C \u0437\u0430\u0431\u044B\u0442\u044C\u044F"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1044_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1044_DSC
           threatId:
             value: 203
         - id: 1045
           title: "\u0420\u044B\u0432\u043E\u043A"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1045_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1045_DSC
           threatId:
             value: 16
         - id: 1046
           title: "\u0427\u0443\u043C\u043D\u043E\u0435 \u043E\u0431\u043B\u0430\u043A\u043E"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1046_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1046_DSC
           threatId:
             value: 17
       - id: 20021
@@ -916,34 +916,34 @@ MonoBehaviour:
         - id: 1047
           title: "\u041A\u0440\u043E\u0432\u0430\u0432\u0430\u044F \u0436\u0430\u0442\u0432\u0430"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1047_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1047_DSC
           threatId:
             value: 11
         - id: 1048
           title: "\u0421\u043A\u043E\u0432\u044B\u0432\u0430\u044E\u0449\u0438\u0439
             \u0441\u0442\u0440\u0430\u0445"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1048_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1048_DSC
           threatId:
             value: 12
         - id: 1049
           title: "\u0422\u0435\u043C\u043D\u044B\u0439 \u0440\u0438\u0442\u0443\u0430\u043B"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1049_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1049_DSC
           threatId:
             value: 203
         - id: 1050
           title: "\u041F\u0440\u043E\u0449\u0435\u043D\u0438\u0435 \u043C\u0430\u0441\u0442\u0435\u0440\u0430"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1050_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1050_DSC
           threatId:
             value: 111
       - id: 20022
@@ -966,33 +966,33 @@ MonoBehaviour:
         - id: 1051
           title: "\u041F\u043B\u044F\u0441\u043A\u0430 \u043C\u0435\u0440\u0442\u0432\u0435\u0446\u043E\u0432"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1051_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1051_DSC
           threatId:
             value: 202
         - id: 1052
           title: "\u0425\u043E\u0440\u043E\u0432\u043E\u0434 \u0442\u0435\u043D\u0435\u0439"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1052_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1052_DSC
           threatId:
             value: 15
         - id: 1053
           title: "\u0420\u0438\u0442\u0443\u0430\u043B \u0420\u043E\u043A\u0430"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1053_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1053_DSC
           threatId:
             value: 115
         - id: 1054
           title: "\u0424\u0430\u043D\u0442\u043E\u043C\u043D\u044B\u0439 \u0440\u0430\u0437\u0433\u043E\u043D"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1054_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1054_DSC
           threatId:
             value: 112
     - id: 303
@@ -1001,7 +1001,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_303_TTL
       descKey:
-        value: <none>
+        value: 
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 
@@ -1023,7 +1023,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 90
         unitParams:
           health: 5472
           power: 170
@@ -1032,33 +1032,33 @@ MonoBehaviour:
           title: "\u042F\u0440\u043E\u0441\u0442\u044C \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0433\u043E
             \u0432\u0437\u0434\u043E\u0445\u0430"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1055_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1055_DSC
           threatId:
             value: 15
         - id: 1056
           title: "\u0417\u0435\u0440\u043A\u0430\u043B\u044C\u043D\u044B\u0439 \u043E\u0431\u043C\u0430\u043D"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1056_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1056_DSC
           threatId:
             value: 13
         - id: 1057
           title: "\u041F\u043E\u0431\u0435\u0433 \u0432 \u0411\u0435\u0437\u0434\u043D\u0443"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1057_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1057_DSC
           threatId:
             value: 16
         - id: 1058
           title: "\u0428\u0451\u043F\u043E\u0442 \u0432 \u0441\u043F\u0438\u043D\u0443"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1058_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1058_DSC
           threatId:
             value: 113
       - id: 20024
@@ -1073,7 +1073,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 100
         unitParams:
           health: 5760
           power: 170
@@ -1081,33 +1081,33 @@ MonoBehaviour:
         - id: 1059
           title: "\u041F\u0440\u0435\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1059_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1059_DSC
           threatId:
             value: 16
         - id: 1060
           title: "\u041A\u0430\u043F\u043A\u0430\u043D \u0421\u043A\u0432\u0435\u0440\u043D\u044B"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1060_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1060_DSC
           threatId:
             value: 13
         - id: 1061
           title: "\u0420\u0435\u0436\u0438\u043C \u043B\u0438\u043A\u0432\u0438\u0434\u0430\u0446\u0438\u0438"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1061_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1061_DSC
           threatId:
             value: 202
         - id: 1062
           title: "\u041F\u0440\u0435\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1062_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1062_DSC
           threatId:
             value: 12
       - id: 20025
@@ -1122,7 +1122,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 120
         unitParams:
           health: 6087
           power: 182
@@ -1130,33 +1130,33 @@ MonoBehaviour:
         - id: 1063
           title: "\u042F\u0434\u043E\u0432\u0438\u0442\u044B\u0439 \u044D\u043A\u0441\u0442\u0430\u0437"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1063_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1063_DSC
           threatId:
             value: 17
         - id: 1064
           title: "\u042F\u0434\u043E\u0432\u0438\u0442\u043E\u0435 \u0436\u0430\u043B\u043E"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1064_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1064_DSC
           threatId:
             value: 12
         - id: 1065
           title: "\u0422\u0430\u043D\u0435\u0446 \u0448\u0438\u043F\u043E\u0432"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1065_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1065_DSC
           threatId:
             value: 115
         - id: 1066
           title: "\u0422\u0435\u043D\u0435\u0432\u044B\u0435 \u043F\u043B\u0435\u0442\u043E\u0447\u043D\u0438\u043A\u0438"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1066_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1066_DSC
           threatId:
             value: 112
     - id: 304
@@ -1164,7 +1164,7 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_304_TTL
       descKey:
-        value: <none>
+        value: 
       imageRef:
         m_AssetGUID: 
         m_SubObjectName: 
@@ -1186,7 +1186,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 90
         unitParams:
           health: 5760
           power: 170
@@ -1194,33 +1194,33 @@ MonoBehaviour:
         - id: 1067
           title: "\u0422\u0430\u043D\u0446\u0443\u044E\u0449\u0438\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1067_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1067_DSC
           threatId:
             value: 204
         - id: 1068
           title: "\u041E\u0433\u043D\u0435\u043D\u043D\u044B\u0439 \u0441\u043A\u0432\u043E\u0437\u043D\u044F\u043A"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1068_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1068_DSC
           threatId:
             value: 204
         - id: 1069
           title: "\u041F\u0435\u0441\u043E\u0447\u043D\u044B\u0435 \u0447\u0430\u0441\u044B"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1069_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1069_DSC
           threatId:
             value: 13
         - id: 1070
           title: "\u041F\u043E\u043A\u0440\u043E\u0432 \u0422\u044C\u043C\u044B"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1070_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1070_DSC
           threatId:
             value: 113
       - id: 20027
@@ -1235,7 +1235,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 100
         unitParams:
           health: 5760
           power: 170
@@ -1243,34 +1243,34 @@ MonoBehaviour:
         - id: 1071
           title: "\u0421\u043E\u0437\u044B\u0432 \u043F\u043E\u0434\u043C\u0430\u0441\u0442\u0435\u0440\u0438\u0439"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1071_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1071_DSC
           threatId:
             value: 112
         - id: 1072
           title: "\u0422\u043B\u0435\u044E\u0449\u0435\u0435 \u043F\u0440\u0435\u0432\u043E\u0441\u0445\u043E\u0434\u0441\u0442\u0432\u043E"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1072_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1072_DSC
           threatId:
             value: 115
         - id: 1073
           title: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0440\u0443\u0431\u0435\u0436"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1073_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1073_DSC
           threatId:
             value: 17
         - id: 1074
           title: "\u0420\u0430\u0437\u043E\u0440\u0432\u0430\u043D\u043D\u0430\u044F
             \u0434\u0443\u0448\u0430"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1074_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1074_DSC
           threatId:
             value: 111
       - id: 20028
@@ -1286,7 +1286,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 120
         unitParams:
           health: 6087
           power: 182
@@ -1294,33 +1294,33 @@ MonoBehaviour:
         - id: 1075
           title: "\u0411\u0440\u043E\u0441\u043E\u043A \u0443\u0433\u043B\u0435\u0439"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1075_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1075_DSC
           threatId:
             value: 14
         - id: 1076
           title: "\u0416\u0433\u0443\u0447\u0438\u0439 \u0433\u0430\u0440\u043F\u0443\u043D"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1076_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1076_DSC
           threatId:
             value: 11
         - id: 1077
           title: "\u0413\u043D\u0435\u0432 \u0442\u0438\u0442\u0430\u043D\u0430"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1077_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1077_DSC
           threatId:
             value: 201
         - id: 1078
           title: "\u041F\u043E\u0434\u0440\u044B\u0432 \u041A\u0443\u0437\u043D\u0438"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1078_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1078_DSC
           threatId:
             value: 114
     - id: 305
@@ -1339,7 +1339,7 @@ MonoBehaviour:
         value: 252
       boosUnits:
       - id: 20011
-        title: "\u0411\u0443\u0440\u0435\u043A"
+        title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
         nameKey:
           value: INSTANCES/INSTANCE_UNIT_20011_TTL
         descKey:
@@ -1350,7 +1350,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 180
         unitParams:
           health: 9665
           power: 322
@@ -1390,7 +1390,8 @@ MonoBehaviour:
           threatId:
             value: 111
         - id: 1005
-          title: "\u0417\u0430\u0440\u044F\u0434\u043A\u0430"
+          title: "\u041E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+            \u0437\u0430\u0440\u044F\u0434"
           nameKey:
             value: ABILITIES/ABILITY_1005_TTL
           descKey:
@@ -1409,7 +1410,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 180
         unitParams:
           health: 10202
           power: 322
@@ -1423,8 +1424,7 @@ MonoBehaviour:
           threatId:
             value: 15
         - id: 1007
-          title: "\u0420\u0430\u0437\u043C\u0430\u0448\u0438\u0441\u0442\u044B\u0439
-            \u0443\u0434\u0430\u0440"
+          title: "\u0420\u0430\u0437\u0440\u044B\u0432 \u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438"
           nameKey:
             value: ABILITIES/ABILITY_1007_TTL
           descKey:
@@ -1432,7 +1432,7 @@ MonoBehaviour:
           threatId:
             value: 201
         - id: 1008
-          title: "\u041F\u043E\u0437\u0432\u0430\u0442\u044C \u043F\u043E\u0434\u043C\u043E\u0433\u0443"
+          title: "\u0421\u0442\u0440\u0430\u0436\u0430! \u041D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C!"
           nameKey:
             value: ABILITIES/ABILITY_1008_TTL
           descKey:
@@ -1440,8 +1440,7 @@ MonoBehaviour:
           threatId:
             value: 112
         - id: 1009
-          title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u0438\u0435
-            \u0441\u0442\u0440\u0430\u0436\u0438"
+          title: "\u041F\u043B\u0430\u043C\u0435\u043D\u043D\u0430\u044F \u0440\u0435\u0447\u044C"
           nameKey:
             value: ABILITIES/ABILITY_1009_TTL
           descKey:
@@ -1449,7 +1448,8 @@ MonoBehaviour:
           threatId:
             value: 17
         - id: 1010
-          title: "\u041A\u0440\u043E\u0432\u0430\u0432\u044B\u0439 \u0430\u043B\u0442\u0430\u0440\u044C"
+          title: "\u041D\u0435\u0442\u0435\u0440\u043F\u0438\u043C\u043E\u0441\u0442\u044C
+            \u043A \u0441\u043B\u0430\u0431\u044B\u043C"
           nameKey:
             value: ABILITIES/ABILITY_1010_TTL
           descKey:
@@ -1468,13 +1468,14 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 180
         unitParams:
           health: 10739
           power: 322
         abilities:
         - id: 1011
-          title: "\u0412\u0437\u0440\u044B\u0432\u043D\u044B\u0435 \u043B\u043E\u0432\u0443\u0448\u043A\u0438"
+          title: "\u0412\u0437\u0440\u044B\u0432\u043E\u043E\u043F\u0430\u0441\u043D\u044B\u0435
+            \u043B\u043E\u0432\u0443\u0448\u043A\u0438"
           nameKey:
             value: ABILITIES/ABILITY_1011_TTL
           descKey:
@@ -1482,7 +1483,7 @@ MonoBehaviour:
           threatId:
             value: 14
         - id: 1012
-          title: "\u041F\u0440\u0438\u043A\u0440\u0435\u043F\u0438\u0442\u044C \"\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u0435\u043A\""
+          title: "\u0410 \u0432\u043E\u0442 \u0438 \u043F\u043E\u0434\u0430\u0440\u043E\u0447\u0435\u043A!"
           nameKey:
             value: ABILITIES/ABILITY_1012_TTL
           descKey:
@@ -1526,7 +1527,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 240
         unitParams:
           health: 11153
           power: 346
@@ -1586,7 +1587,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 240
         unitParams:
           health: 11381
           power: 346
@@ -1628,9 +1629,9 @@ MonoBehaviour:
         - id: 1025
           title: "\u0422\u043E\u043A\u0441\u0438\u0447\u043D\u044B\u0439 \u0442\u0443\u043C\u0430\u043D"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1025_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1025_DSC
           threatId:
             value: 202
       - id: 20016
@@ -1645,7 +1646,7 @@ MonoBehaviour:
           m_SubObjectGUID: 
           m_SubObjectType: 
           m_EditorAssetChanged: 1
-        completeTime: 0
+        completeTime: 300
         unitParams:
           health: 12069
           power: 370
@@ -1653,41 +1654,41 @@ MonoBehaviour:
         - id: 1026
           title: "\u0421\u0442\u0440\u0430\u0436\u0438 \u0411\u0435\u0437\u043C\u043E\u043B\u0432\u0438\u044F"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1026_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1026_DSC
           threatId:
             value: 112
         - id: 1027
           title: "\u0422\u0435\u043C\u043D\u044B\u0439 \u043E\u0431\u0435\u043B\u0438\u0441\u043A"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1027_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1027_DSC
           threatId:
             value: 111
         - id: 1028
           title: "\u041E\u0431\u0440\u0430\u0442\u043D\u0430\u044F \u0440\u0435\u0430\u043A\u0446\u0438\u044F"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1028_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1028_DSC
           threatId:
             value: 202
         - id: 1029
           title: "\u041B\u0443\u0447 \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043D\u0438\u044F"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1029_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1029_DSC
           threatId:
             value: 11
         - id: 1030
           title: "\u0420\u043E\u0439 \u0434\u0435\u043C\u043E\u043D\u043E\u0432"
           nameKey:
-            value: 
+            value: ABILITIES/ABILITY_1030_TTL
           descKey:
-            value: 
+            value: ABILITIES/ABILITY_1030_DSC
           threatId:
             value: 15
   instanceTypes:
@@ -1812,7 +1813,7 @@ MonoBehaviour:
       unitId: 20026
       mechanicId: 302
       mechanicParams:
-      - 10011
+      - 10012
       - 1
     - id: 1003
       title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
@@ -1826,7 +1827,7 @@ MonoBehaviour:
       unitId: 20023
       mechanicId: 302
       mechanicParams:
-      - 10013
+      - 10014
       - 1
     - id: 1005
       title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
@@ -1840,7 +1841,7 @@ MonoBehaviour:
       unitId: 20021
       mechanicId: 302
       mechanicParams:
-      - 10015
+      - 10016
       - 1
     - id: 1007
       title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
@@ -1854,7 +1855,7 @@ MonoBehaviour:
       unitId: 20018
       mechanicId: 302
       mechanicParams:
-      - 10017
+      - 10018
       - 1
     - id: 1009
       title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
@@ -1869,7 +1870,7 @@ MonoBehaviour:
       unitId: 20028
       mechanicId: 302
       mechanicParams:
-      - 10019
+      - 10020
       - 1
     - id: 1011
       title: "\u0413\u0430'\u0420\u0430\u0442"
@@ -1883,7 +1884,7 @@ MonoBehaviour:
       unitId: 20025
       mechanicId: 302
       mechanicParams:
-      - 10021
+      - 10022
       - 1
     - id: 1013
       title: "\u0413\u0430'\u0420\u0430\u0442"
@@ -1897,7 +1898,7 @@ MonoBehaviour:
       unitId: 20020
       mechanicId: 302
       mechanicParams:
-      - 10023
+      - 10024
       - 1
     - id: 1015
       title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
@@ -1911,7 +1912,7 @@ MonoBehaviour:
       unitId: 20017
       mechanicId: 302
       mechanicParams:
-      - 10025
+      - 10026
       - 1
     - id: 1017
       title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
@@ -1953,7 +1954,7 @@ MonoBehaviour:
       unitId: 20022
       mechanicId: 302
       mechanicParams:
-      - 10031
+      - 10032
       - 1
     - id: 1023
       title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
@@ -1968,7 +1969,7 @@ MonoBehaviour:
       unitId: 20019
       mechanicId: 302
       mechanicParams:
-      - 10033
+      - 10034
       - 1
     - id: 1025
       title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
@@ -1982,7 +1983,7 @@ MonoBehaviour:
       unitId: 20026
       mechanicId: 302
       mechanicParams:
-      - 10035
+      - 10036
       - 1
     - id: 1027
       title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
@@ -1996,7 +1997,7 @@ MonoBehaviour:
       unitId: 20021
       mechanicId: 302
       mechanicParams:
-      - 10037
+      - 10038
       - 1
     - id: 1029
       title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
@@ -2070,7 +2071,7 @@ MonoBehaviour:
       - 10048
       - 1
     - id: 1039
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 302
       mechanicParams:
@@ -2113,7 +2114,7 @@ MonoBehaviour:
       - 10054
       - 1
     - id: 1045
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 302
       mechanicParams:
@@ -2156,7 +2157,7 @@ MonoBehaviour:
       - 10060
       - 1
     - id: 1051
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 302
       mechanicParams:
@@ -2242,7 +2243,7 @@ MonoBehaviour:
       - 10072
       - 1
     - id: 1063
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 302
       mechanicParams:
@@ -2285,7 +2286,7 @@ MonoBehaviour:
       - 10078
       - 1
     - id: 1069
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 302
       mechanicParams:
@@ -2328,7 +2329,7 @@ MonoBehaviour:
       - 10084
       - 1
     - id: 1075
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 302
       mechanicParams:
@@ -2339,7 +2340,7 @@ MonoBehaviour:
       unitId: 20016
       mechanicId: 302
       mechanicParams:
-      - 10067
+      - 10086
       - 1
     - id: 1077
       title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
@@ -2512,33 +2513,33 @@ MonoBehaviour:
       - 1011
       - 3
     - id: 1101
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 303
       mechanicParams:
       - 1008
-      - 3
+      - 5
     - id: 1102
       title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
       unitId: 20012
       mechanicId: 303
       mechanicParams:
       - 1003
-      - 3
+      - 5
     - id: 1103
       title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
       unitId: 20013
       mechanicId: 303
       mechanicParams:
       - 1008
-      - 3
+      - 5
     - id: 1104
       title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
       unitId: 20014
       mechanicId: 303
       mechanicParams:
       - 1001
-      - 3
+      - 5
     - id: 1105
       title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
         \u0417\u0430\u0432\u0435\u0442\u0430"
@@ -2546,42 +2547,42 @@ MonoBehaviour:
       mechanicId: 303
       mechanicParams:
       - 1002
-      - 3
+      - 5
     - id: 1106
       title: "\u041D\u0430\u0430\u043B"
       unitId: 20016
       mechanicId: 303
       mechanicParams:
       - 1001
-      - 3
+      - 5
     - id: 1107
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 303
       mechanicParams:
       - 1002
-      - 3
+      - 5
     - id: 1108
       title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
       unitId: 20012
       mechanicId: 303
       mechanicParams:
       - 1005
-      - 3
+      - 5
     - id: 1109
       title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
       unitId: 20013
       mechanicId: 303
       mechanicParams:
       - 1003
-      - 3
+      - 5
     - id: 1110
       title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
       unitId: 20014
       mechanicId: 303
       mechanicParams:
       - 1007
-      - 3
+      - 5
     - id: 1111
       title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
         \u0417\u0430\u0432\u0435\u0442\u0430"
@@ -2589,42 +2590,42 @@ MonoBehaviour:
       mechanicId: 303
       mechanicParams:
       - 1007
-      - 3
+      - 5
     - id: 1112
       title: "\u041D\u0430\u0430\u043B"
       unitId: 20016
       mechanicId: 303
       mechanicParams:
       - 1011
-      - 3
+      - 5
     - id: 1113
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 303
       mechanicParams:
       - 1011
-      - 3
+      - 5
     - id: 1114
       title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
       unitId: 20012
       mechanicId: 303
       mechanicParams:
       - 1010
-      - 3
+      - 5
     - id: 1115
       title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
       unitId: 20013
       mechanicId: 303
       mechanicParams:
       - 1005
-      - 3
+      - 5
     - id: 1116
       title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
       unitId: 20014
       mechanicId: 303
       mechanicParams:
       - 1010
-      - 3
+      - 5
     - id: 1117
       title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
         \u0417\u0430\u0432\u0435\u0442\u0430"
@@ -2632,42 +2633,42 @@ MonoBehaviour:
       mechanicId: 303
       mechanicParams:
       - 1009
-      - 3
+      - 5
     - id: 1118
       title: "\u041D\u0430\u0430\u043B"
       unitId: 20016
       mechanicId: 303
       mechanicParams:
       - 1009
-      - 3
+      - 5
     - id: 1119
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 303
       mechanicParams:
       - 1006
-      - 3
+      - 5
     - id: 1120
       title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
       unitId: 20012
       mechanicId: 303
       mechanicParams:
       - 1006
-      - 3
+      - 5
     - id: 1121
       title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
       unitId: 20013
       mechanicId: 303
       mechanicParams:
       - 1004
-      - 3
+      - 5
     - id: 1122
       title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
       unitId: 20014
       mechanicId: 303
       mechanicParams:
       - 1013
-      - 3
+      - 5
     - id: 1123
       title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
         \u0417\u0430\u0432\u0435\u0442\u0430"
@@ -2675,59 +2676,59 @@ MonoBehaviour:
       mechanicId: 303
       mechanicParams:
       - 1004
-      - 3
+      - 5
     - id: 1124
       title: "\u041D\u0430\u0430\u043B"
       unitId: 20016
       mechanicId: 303
       mechanicParams:
       - 1013
-      - 3
+      - 5
     - id: 1125
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 303
       mechanicParams:
-      - 1012
-      - 3
+      - '#N/A'
+      - 2
     - id: 1126
       title: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
       unitId: 20012
       mechanicId: 303
       mechanicParams:
-      - 1012
-      - 3
+      - '#N/A'
+      - 2
     - id: 1127
       title: "\u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440 \u0423\u0440\u0442"
       unitId: 20013
       mechanicId: 303
       mechanicParams:
-      - 1012
-      - 3
+      - '#N/A'
+      - 2
     - id: 1128
       title: "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
       unitId: 20014
       mechanicId: 303
       mechanicParams:
-      - 1012
-      - 3
+      - '#N/A'
+      - 2
     - id: 1129
       title: "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
         \u0417\u0430\u0432\u0435\u0442\u0430"
       unitId: 20015
       mechanicId: 303
       mechanicParams:
-      - 1012
-      - 3
+      - '#N/A'
+      - 2
     - id: 1130
       title: "\u041D\u0430\u0430\u043B"
       unitId: 20016
       mechanicId: 303
       mechanicParams:
-      - 1012
-      - 3
+      - '#N/A'
+      - 2
     - id: 1131
-      title: "\u0411\u0443\u0440\u0435\u043A"
+      title: "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       unitId: 20011
       mechanicId: 301
       mechanicParams:
@@ -2867,9 +2868,9 @@ MonoBehaviour:
   - id: 11
     title: "\u041C\u043E\u0449\u043D\u043E\u0435 \u043A\u043E\u043B\u0434\u0443\u043D\u0441\u0442\u0432\u043E"
     nameKey:
-      value: <none>
+      value: ABILITIES/THREAT_11_NAME
     descKey:
-      value: <none>
+      value: ABILITIES/THREAT_11_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2880,9 +2881,9 @@ MonoBehaviour:
     title: "\u041E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439
       \u044D\u0444\u0444\u0435\u043A\u0442"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_12_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_12_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2892,9 +2893,9 @@ MonoBehaviour:
   - id: 13
     title: "\u041B\u043E\u0432\u0443\u0448\u043A\u0430"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_13_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_13_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2904,9 +2905,9 @@ MonoBehaviour:
   - id: 14
     title: "\u0410\u0442\u0430\u043A\u0430 \u043F\u043E \u043E\u0431\u043B\u0430\u0441\u0442\u0438"
     nameKey:
-      value: <none>
+      value: ABILITIES/THREAT_14_NAME
     descKey:
-      value: <none>
+      value: ABILITIES/THREAT_14_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2916,9 +2917,9 @@ MonoBehaviour:
   - id: 15
     title: "\u042D\u043B\u0438\u0442\u043D\u044B\u0439 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A"
     nameKey:
-      value: <none>
+      value: ABILITIES/THREAT_15_NAME
     descKey:
-      value: <none>
+      value: ABILITIES/THREAT_15_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2928,9 +2929,9 @@ MonoBehaviour:
   - id: 16
     title: "\u0421\u043A\u043E\u0440\u043E\u0445\u043E\u0434"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_16_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_16_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2940,9 +2941,9 @@ MonoBehaviour:
   - id: 17
     title: "\u042F\u0440\u043E\u0441\u0442\u044C"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_17_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_17_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2952,9 +2953,9 @@ MonoBehaviour:
   - id: 111
     title: "\u0411\u044B\u0441\u0442\u0440\u044B\u0439 \u0431\u043E\u0439"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_111_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_111_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2964,9 +2965,9 @@ MonoBehaviour:
   - id: 112
     title: "\u041F\u0440\u0438\u0441\u043F\u0435\u0448\u043D\u0438\u043A\u0438"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_112_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_112_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2976,9 +2977,9 @@ MonoBehaviour:
   - id: 113
     title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u0430\u044F \u0443\u0433\u0440\u043E\u0437\u0430"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_113_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_113_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -2988,9 +2989,9 @@ MonoBehaviour:
   - id: 114
     title: "\u0423\u0440\u043E\u043D \u043F\u043E \u0433\u0440\u0443\u043F\u043F\u0435"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_114_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_114_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -3000,9 +3001,9 @@ MonoBehaviour:
   - id: 115
     title: "\u0421\u0438\u043B\u044C\u043D\u044B\u0439 \u0443\u0434\u0430\u0440"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_115_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_115_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -3012,9 +3013,9 @@ MonoBehaviour:
   - id: 201
     title: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u0442\u0430\u043D\u043A\u0430"
     nameKey:
-      value: <none>
+      value: ABILITIES/THREAT_201_NAME
     descKey:
-      value: <none>
+      value: ABILITIES/THREAT_201_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -3024,9 +3025,9 @@ MonoBehaviour:
   - id: 202
     title: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043B\u0435\u043A\u0430\u0440\u044F"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_202_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_202_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -3036,9 +3037,9 @@ MonoBehaviour:
   - id: 203
     title: "\u0414\u0430\u043B\u044C\u043D\u0438\u0439 \u0431\u043E\u0439"
     nameKey:
-      value: 
+      value: ABILITIES/THREAT_203_NAME
     descKey:
-      value: 
+      value: ABILITIES/THREAT_203_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -3048,9 +3049,9 @@ MonoBehaviour:
   - id: 204
     title: "\u0411\u043B\u0438\u0436\u043D\u0438\u0439 \u0431\u043E\u0439"
     nameKey:
-      value: <none>
+      value: ABILITIES/THREAT_204_NAME
     descKey:
-      value: <none>
+      value: ABILITIES/THREAT_204_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 

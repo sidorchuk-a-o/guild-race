@@ -34,7 +34,7 @@ namespace Game.Inventory
         {
             if (sprite == null)
             {
-                sprite = await inventoryVMF.RentSprite(data.IconRef);
+                sprite = await inventoryVMF.RentImage(data.IconRef);
             }
 
             return sprite;

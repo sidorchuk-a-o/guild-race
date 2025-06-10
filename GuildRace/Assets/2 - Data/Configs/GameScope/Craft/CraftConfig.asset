@@ -835,12 +835,12 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
-  - id: 104
+  - id: 105
     title: "\u041D\u0430\u0447\u0435\u0440\u0442\u0430\u0442\u0435\u043B\u044C"
     nameKey:
-      value: CRAFT/CRAFTER_104_TTL
+      value: CRAFT/CRAFTER_105_TTL
     descKey:
-      value: CRAFT/CRAFTER_104_DSC
+      value: CRAFT/CRAFTER_105_DSC
     iconRef:
       m_AssetGUID: 
       m_SubObjectName: 
@@ -995,7 +995,7 @@ MonoBehaviour:
     width: 1
     height: 1
   nameKey:
-    value: 
+    value: CRAFT/REAGENT_1013_TTL
   iconRef:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1012
-  title: RAID1_CATALYST_NAME
+  title: "\u041A\u0430\u0442\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440 \u043C\u0430\u043D\u044B"
   slot:
     value: 0
   size:

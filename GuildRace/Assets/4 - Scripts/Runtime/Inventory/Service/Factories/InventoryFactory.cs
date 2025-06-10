@@ -1,9 +1,7 @@
 ﻿using AD.ToolsCollection;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Android.Gradle.Manifest;
 using VContainer;
-using static UnityEngine.Analytics.IAnalytic;
 
 namespace Game.Inventory
 {

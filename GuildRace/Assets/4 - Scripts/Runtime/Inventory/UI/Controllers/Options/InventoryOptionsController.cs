@@ -16,6 +16,10 @@ namespace Game.Inventory
         [SerializeField] private float containerOffset;
         [SerializeField] private OptionsContainer optionsContainer;
 
+        [Header("Params")]
+        [SerializeField] private bool contextMenuOn = true;
+        [SerializeField] private bool fastContextMenuOn = true;
+
         private Dictionary<OptionKey, OptionHandler> optionsHandlers;
 
         private IInventoryInputModule inventoryInputs;
@@ -45,13 +49,19 @@ namespace Game.Inventory
         {
             optionsContainer.Init();
 
-            inventoryInputs.OnOpenContextMenu
-                .Subscribe(OpenContextMenuCallback)
-                .AddTo(disp);
+            if (contextMenuOn)
+            {
+                inventoryInputs.OnOpenContextMenu
+                    .Subscribe(OpenContextMenuCallback)
+                    .AddTo(disp);
+            }
 
-            inventoryInputs.OnFastContextMenu
-                .Subscribe(FastContextMenuCallback)
-                .AddTo(disp);
+            if (fastContextMenuOn)
+            {
+                inventoryInputs.OnFastContextMenu
+                    .Subscribe(FastContextMenuCallback)
+                    .AddTo(disp);
+            }
 
             inventoryInputs.OnTryEquipItem
                 .Subscribe(x => { })

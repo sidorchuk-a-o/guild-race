@@ -13,9 +13,9 @@ namespace Game.Instances
             stackSM = new(info.Stack);
         }
 
-        public ConsumablesItemInfo GetValue(ConsumablesItemData data)
+        public ConsumablesItemInfo GetValue(ConsumablesItemData data, ConsumablesItemsFactory consumablesIF)
         {
-            var info = new ConsumablesItemInfo(id, data);
+            var info = new ConsumablesItemInfo(id, data, consumablesIF.ItemType);
 
             stackSM.ApplyValues(info.Stack);
             boundsSM.ApplyValues(info.Bounds);

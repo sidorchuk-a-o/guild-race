@@ -9,6 +9,7 @@ namespace Game.Inventory
         protected override void UpdateScriptFiles()
         {
             UpdateScriptFile(GetOptionKeyScriptData());
+            UpdateScriptFile(GetItemTypesScriptData());
         }
 
         private static KeyScriptData<string> GetOptionKeyScriptData() => new()
@@ -16,6 +17,13 @@ namespace Game.Inventory
             KeyTypeName = nameof(OptionKey),
             NamespaceValue = "Game.Inventory",
             GetCollection = InventoryEditorState.CreateOptionsCollection
+        };
+
+        private KeyScriptData<int> GetItemTypesScriptData() => new()
+        {
+            KeyTypeName = nameof(ItemType),
+            NamespaceValue = "Game.Inventory",
+            GetCollection = InventoryEditorState.CreateItemTypesCollection
         };
     }
 }

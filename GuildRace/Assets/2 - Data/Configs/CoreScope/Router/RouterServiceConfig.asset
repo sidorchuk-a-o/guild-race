@@ -63,7 +63,7 @@ MonoBehaviour:
       m_EditorAssetChanged: 0
     contentLifetime:
       isOn: 1
-      value: 120
+      value: 500
   - id: c38b631c114048f2985caa6e0e90bc64
     title: Dialogs
     isRouteLayer: 1

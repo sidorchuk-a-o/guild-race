@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AD.ToolsCollection;
 
 namespace Game.Instances
@@ -8,6 +7,8 @@ namespace Game.Instances
     {
         private InstancesConfig config;
         private InstancesEditorsFactory editorsFactory;
+
+        private InstancesScriptGenerator scriptGenerator = new();
 
         public static InstancesConfig Config => FindAsset(ref instance.config);
         public static InstancesEditorsFactory EditorsFactory => instance.editorsFactory ??= new();
@@ -32,6 +33,11 @@ namespace Game.Instances
         public static Collection<int> CreateConsumableMechanicsViewCollection()
         {
             return Config.ConsumablesParams.CreateKeyViewCollection<ConsumableMechanicHandler, int>("mechanicHandlers");
+        }
+
+        public static Collection<int> CreateConsumableMechanicsCollection()
+        {
+            return Config.ConsumablesParams.CreateKeyCollection<ConsumableMechanicHandler, int>("mechanicHandlers");
         }
 
         public static Collection<int> CreateRewardMechanicsViewCollection()

@@ -9,9 +9,15 @@ Shader "Custom/UITextureBlend"
         _Blend ("Blend Amount", Range(0, 1)) = 1.0
         _Brightness ("Brightness", Range(0, 2)) = 1.0
         
-        // Новые параметры
         _OverlayScale ("Overlay Scale", Vector) = (1,1,0,0)
         _OverlayOffset ("Overlay Offset", Vector) = (0,0,0,0)
+        
+        [Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp ("Stencil Comparison", Int) = 8
+        _Stencil ("Stencil ID", Int) = 0
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilOp ("Stencil Operation", Int) = 0
+        _StencilWriteMask ("Stencil Write Mask", Int) = 255
+        _StencilReadMask ("Stencil Read Mask", Int) = 255
+        _ColorMask ("Color Mask", Int) = 15
     }
 
     SubShader
@@ -25,10 +31,21 @@ Shader "Custom/UITextureBlend"
             "CanUseSpriteAtlas"="True"
         }
 
+        Stencil
+        {
+            Ref [_Stencil]
+            Comp [_StencilComp]
+            Pass [_StencilOp]
+            ReadMask [_StencilReadMask]
+            WriteMask [_StencilWriteMask]
+        }
+
         Cull Off
         Lighting Off
         ZWrite Off
+        ZTest [unity_GUIZTestMode]
         Blend SrcAlpha OneMinusSrcAlpha
+        ColorMask [_ColorMask]
 
         Pass
         {
@@ -36,6 +53,7 @@ Shader "Custom/UITextureBlend"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
+            #include "UnityUI.cginc"
 
             struct appdata_t
             {
@@ -50,6 +68,7 @@ Shader "Custom/UITextureBlend"
                 float2 uvOverlay : TEXCOORD1;
                 float4 vertex : SV_POSITION;
                 float4 color : COLOR;
+                float4 worldPosition : TEXCOORD2;
             };
 
             sampler2D _MainTex;
@@ -60,11 +79,13 @@ Shader "Custom/UITextureBlend"
             fixed4 _Color1;
             float _Blend;
             float _Brightness;
+            float4 _ClipRect;
 
             v2f vert (appdata_t v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
+                o.worldPosition = v.vertex;
                 
                 // Основные UV
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
@@ -78,7 +99,16 @@ Shader "Custom/UITextureBlend"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 sprite = tex2D(_MainTex, i.uv) * i.color;
+                // Проверка маски
+                half4 color = tex2D(_MainTex, i.uv) * i.color;
+                color.a *= UnityGet2DClipping(i.worldPosition.xy, _ClipRect);
+                
+                // Если пиксель отсечен маской, возвращаем прозрачный цвет
+                #ifdef UNITY_UI_CLIP_RECT
+                clip(color.a - 0.001);
+                #endif
+                
+                fixed4 sprite = color;
                 fixed4 overlay = tex2D(_OverlayTex, i.uvOverlay) * _Brightness;
                 float alphaEdge = smoothstep(0, 0.1, sprite.a);
 

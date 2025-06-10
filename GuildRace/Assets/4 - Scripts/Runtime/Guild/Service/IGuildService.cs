@@ -23,6 +23,7 @@ namespace Game.Guild
         int AcceptJoinRequest(string requestId);
         int DeclineJoinRequest(string requestId);
         void SetClassRoleSelectorState(RoleId roleId, bool isEnabled);
+        void UpdateGuildRank(string characterId, int rankIndex);
 
         void StateMarkAsDirty();
     }

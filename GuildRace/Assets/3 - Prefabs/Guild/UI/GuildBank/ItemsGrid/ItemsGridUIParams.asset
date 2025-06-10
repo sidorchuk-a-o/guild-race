@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609b8d779c82bb04d8c92b8c8f4fd38e, type: 3}
+  m_Name: ItemsGridUIParams
+  m_EditorClassIdentifier: 
+  cellSize: 65
+  itemsParams:
+  - itemType:
+      value: 1735200667
+    itemInGridRef:
+      m_AssetGUID: 837c7a95a5f2c6b40b24934f661cd30e
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    itemTooltipRef:
+      m_AssetGUID: 205d874c6d6470d4eb74aa9692be71e4
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - itemType:
+      value: 1760217255
+    itemInGridRef:
+      m_AssetGUID: 1c5107e71b130ec4cafe6c3c342adb42
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    itemTooltipRef:
+      m_AssetGUID: bac34ad2a194d804098d26fe324a6ba7
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - itemType:
+      value: 1460037363
+    itemInGridRef:
+      m_AssetGUID: eb5d7d75703369044998b7ef879c7c28
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    itemTooltipRef:
+      m_AssetGUID: fa0008c5d9e15c344a948a73234ef910
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0

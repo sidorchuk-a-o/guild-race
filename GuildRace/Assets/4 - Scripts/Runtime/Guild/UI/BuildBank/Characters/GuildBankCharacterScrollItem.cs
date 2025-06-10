@@ -1,13 +1,16 @@
 ﻿using AD.ToolsCollection;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Inventory;
-using System.Threading;
+using UniRx;
 using UnityEngine;
 
 namespace Game.Guild
 {
     public class GuildBankCharacterScrollItem : CharacterScrollItem
     {
+        [SerializeField] private GameObject hasInstanceBlock;
+
         [Header("Equip Slots")]
         [SerializeField] private ItemSlotsContainer equipSlotsContainer;
 
@@ -16,6 +19,10 @@ namespace Game.Guild
             await base.Init(disp, ct);
 
             equipSlotsContainer.Init(ViewModel.EquiSlotsVM, disp);
+
+            ViewModel.InstanceVM
+                .Subscribe(x => hasInstanceBlock.SetActive(ViewModel.HasInstance))
+                .AddTo(disp);
         }
     }
 }

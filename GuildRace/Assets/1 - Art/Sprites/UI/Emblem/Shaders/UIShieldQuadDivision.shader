@@ -13,6 +13,13 @@ Shader "Custom/UIShieldQuadDivision"
         _RotationAngle ("Rotation Angle", Range(0, 360)) = 0
         _Blend ("Overlay Blend", Range(0, 1)) = 0.5
         _Brightness ("Overlay Brightness", Range(0, 2)) = 1.0
+        
+        [Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp ("Stencil Comparison", Int) = 8
+        _Stencil ("Stencil ID", Int) = 0
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilOp ("Stencil Operation", Int) = 0
+        _StencilWriteMask ("Stencil Write Mask", Int) = 255
+        _StencilReadMask ("Stencil Read Mask", Int) = 255
+        _ColorMask ("Color Mask", Int) = 15
     }
 
     SubShader
@@ -22,11 +29,23 @@ Shader "Custom/UIShieldQuadDivision"
             "Queue"="Transparent"
             "RenderType"="Transparent"
             "PreviewType"="Plane"
+            "CanUseSpriteAtlas"="True"
+        }
+
+        Stencil
+        {
+            Ref [_Stencil]
+            Comp [_StencilComp]
+            Pass [_StencilOp]
+            ReadMask [_StencilReadMask]
+            WriteMask [_StencilWriteMask]
         }
 
         Blend SrcAlpha OneMinusSrcAlpha
         ZWrite Off
         Cull Off
+        ZTest [unity_GUIZTestMode]
+        ColorMask [_ColorMask]
 
         Pass
         {
@@ -34,18 +53,22 @@ Shader "Custom/UIShieldQuadDivision"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
+            #include "UnityUI.cginc"
             #define PI 3.14159265359
 
             struct appdata
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                float4 color : COLOR;
             };
 
             struct v2f
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                float4 color : COLOR;
+                float4 worldPosition : TEXCOORD1;
             };
 
             sampler2D _MainTex;
@@ -58,17 +81,27 @@ Shader "Custom/UIShieldQuadDivision"
             float _RotationAngle;
             float _Blend;
             float _Brightness;
+            float4 _ClipRect;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
+                o.worldPosition = v.vertex;
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.color = v.color;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
+                // Clip rect masking
+                half4 color = tex2D(_MainTex, i.uv) * i.color;
+                color.a *= UnityGet2DClipping(i.worldPosition.xy, _ClipRect);
+                #ifdef UNITY_UI_CLIP_RECT
+                clip(color.a - 0.001);
+                #endif
+
                 // Поворот UV координат
                 float2 centeredUV = i.uv - 0.5;
                 float angleRad = radians(_RotationAngle);
@@ -80,7 +113,7 @@ Shader "Custom/UIShieldQuadDivision"
 
                 // Определение секторов
                 bool left = rotatedUV.x < 0.5;
-                bool top = rotatedUV.y < 0.5;
+                bool top = rotatedUV.y > 0.5;
                 
                 fixed4 sectorColor;
                 if(top) {
@@ -90,7 +123,7 @@ Shader "Custom/UIShieldQuadDivision"
                 }
 
                 // Смешивание с текстурами
-                fixed4 texColor = tex2D(_MainTex, i.uv);
+                fixed4 texColor = color;
                 fixed4 overlay = tex2D(_OverlayTex, i.uv) * _Brightness;
                 
                 fixed4 finalColor = lerp(sectorColor * texColor, overlay, _Blend * texColor.a);

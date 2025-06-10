@@ -1,20 +1,15 @@
-﻿using Game.Weekly;
-using VContainer;
+﻿using VContainer;
 
 namespace Game.Quests
 {
     public class WeeklyQuestsState : QuestsGroupState<WeeklyQuestsSM>
     {
-        private readonly IWeeklyService weeklyService;
-
         public override string SaveKey => WeeklyQuestsSM.key;
 
         public int LastResetWeek { get; private set; }
 
-        public WeeklyQuestsState(QuestsConfig questsConfig, IWeeklyService weeklyService, IObjectResolver resolver)
-            : base(questsConfig, resolver)
+        public WeeklyQuestsState(QuestsConfig questsConfig, IObjectResolver resolver) : base(questsConfig, resolver)
         {
-            this.weeklyService = weeklyService;
         }
 
         public void SetResetWeek(int value)
@@ -37,13 +32,10 @@ namespace Game.Quests
         {
             base.ReadSave(save);
 
-            if (save == null)
+            if (save != null)
             {
-                LastResetWeek = weeklyService.CurrentWeek;
-                return;
+                LastResetWeek = save.LastResetWeek;
             }
-
-            LastResetWeek = save.LastResetWeek;
         }
     }
 }

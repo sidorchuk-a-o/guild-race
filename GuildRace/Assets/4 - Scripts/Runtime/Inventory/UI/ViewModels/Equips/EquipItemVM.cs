@@ -5,17 +5,22 @@ namespace Game.Inventory
     public class EquipItemVM : ItemVM
     {
         public int Level { get; }
-        public Rarity Rarity { get; }
-        public EquipType Type { get; }
-        public ItemSlot Slot { get; }
+
+        public RarityDataVM RarityVM { get; }
+        public EquipTypeVM TypeVM { get; }
+        public EquipGroupVM GroupVM { get; }
+        public ItemSlotDataVM SlotVM { get; }
+
         public CharacterParamsVM CharacterParamsVM { get; }
 
         public EquipItemVM(EquipItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
             Level = info.Level;
-            Rarity = info.Rarity;
-            Type = info.Type;
-            Slot = info.Slot;
+
+            RarityVM = inventoryVMF.GetRarity(info.Rarity);
+            SlotVM = inventoryVMF.GetSlotData(info.Slot);
+            TypeVM = inventoryVMF.GetEquipType(info.Type);
+            GroupVM = inventoryVMF.GetEquipGroup(info.Group);
             CharacterParamsVM = new CharacterParamsVM(info.CharacterParams);
         }
 
@@ -23,6 +28,10 @@ namespace Game.Inventory
         {
             base.InitSubscribes();
 
+            RarityVM.AddTo(this);
+            SlotVM.AddTo(this);
+            TypeVM.AddTo(this);
+            GroupVM.AddTo(this);
             CharacterParamsVM.AddTo(this);
         }
     }

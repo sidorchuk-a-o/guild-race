@@ -19,6 +19,8 @@ namespace Game.Guild
         [Space]
         [SerializeField] private UIText nicknameText;
         [SerializeField] private UIText guildRankText;
+        [Space]
+        [SerializeField] private UIText instanceStateText;
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
@@ -28,6 +30,10 @@ namespace Game.Guild
 
             ViewModel.ItemsLevel
                 .Subscribe(x => itemsLevelText.SetTextParams(x))
+                .AddTo(disp);
+
+            ViewModel.InstanceVM
+                .Subscribe(x => instanceStateText.SetActive(ViewModel.HasInstance))
                 .AddTo(disp);
 
             if (guildRankText)

@@ -12,7 +12,7 @@ namespace Game.Instances
         public ThreatVM(ThreatInfo info, InstancesVMFactory instancesVMF)
         {
             Resolved = info.Resolved;
-            ThreatDataVM = new ThreatDataVM(instancesVMF.InstancesConfig.GetThreat(info.Id));
+            ThreatDataVM = instancesVMF.GetThreat(info.Id);
         }
 
         protected override void InitSubscribes()

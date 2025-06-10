@@ -15,15 +15,30 @@ namespace Game.Instances
         [Header("Instance")]
         [SerializeField] private UIText instanceNameText;
         [SerializeField] private UIText bossNameText;
-        [SerializeField] private GameObject readyToCompleteIndicator;
+        [SerializeField] private UIStates resultState;
+        [Space]
+        [SerializeField] private GameObject timerContainer;
+        [SerializeField] private UIText timerText;
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
             instanceNameText.SetTextParams(ViewModel.InstanceVM.NameKey);
             bossNameText.SetTextParams(ViewModel.BossUnitVM.NameKey);
 
+            ViewModel.ResultStateVM.Value
+                .Subscribe(resultState.SetState)
+                .AddTo(disp);
+
             ViewModel.IsReadyToComplete
-                .Subscribe(x => readyToCompleteIndicator.SetActive(x))
+                .Subscribe(resultState.SetActive)
+                .AddTo(disp);
+
+            ViewModel.IsReadyToComplete
+                .Subscribe(x => timerContainer.SetActive(!x))
+                .AddTo(disp);
+
+            ViewModel.TimerVM.Value
+                .Subscribe(x => timerText.SetTextParams(x))
                 .AddTo(disp);
         }
     }

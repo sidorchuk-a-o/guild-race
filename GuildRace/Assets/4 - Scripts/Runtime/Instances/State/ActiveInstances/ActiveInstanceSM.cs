@@ -15,6 +15,7 @@ namespace Game.Instances
         [ES3Serializable] private long startTime;
         [ES3Serializable] private float completeChance;
         [ES3Serializable] private bool isReadyToComplete;
+        [ES3Serializable] private CompleteResult result;
 
         public ActiveInstanceSM(ActiveInstanceInfo info, IInventoryService inventoryService)
         {
@@ -24,6 +25,7 @@ namespace Game.Instances
             startTime = info.StartTime;
             completeChance = info.CompleteChance.Value;
             isReadyToComplete = info.IsReadyToComplete.Value;
+            result = info.Result.Value;
 
             squadSM = info.Squad
                 .Select(x => new SquadUnitSM(x, inventoryService))
@@ -37,6 +39,7 @@ namespace Game.Instances
             var squad = squadSM.Select(x => x.GetValue(inventoryService));
             var activeInstance = new ActiveInstanceInfo(id, instance, bossUnit, squad);
 
+            activeInstance.SetResult(result);
             activeInstance.SetStartTime(startTime);
             activeInstance.SetCompleteChance(completeChance);
 

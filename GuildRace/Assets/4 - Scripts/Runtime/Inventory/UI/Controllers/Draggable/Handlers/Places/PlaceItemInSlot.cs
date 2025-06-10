@@ -13,10 +13,28 @@ namespace Game.Inventory
 
         protected override async UniTask Process(ReleaseResult result)
         {
-            var selectedItemVM = result.Context.PickupResult.SelectedItemVM;
+            var pickupResult = result.Context.PickupResult;
+
+            var selectedItemVM = pickupResult.SelectedItemVM;
             var selectedSlotVM = result.Context.SelectedSlotVM;
 
+            var prevItem = selectedSlotVM.ItemVM.Value;
+            var prevContainer = pickupResult.Context.SelectedGridVM;
+            var prevPosition = pickupResult.Bounds.position;
+
             result.Placed = selectedSlotVM.TryAddItem(selectedItemVM);
+
+            if (result.Placed && prevItem != null)
+            {
+                var prevPlaced = prevContainer.TryPlaceItem(prevItem, prevPosition);
+
+                if (prevPlaced == false)
+                {
+                    prevPlaced = prevContainer.TryPlaceItem(prevItem);
+                }
+
+                result.Placed = prevPlaced;
+            }
         }
     }
 }

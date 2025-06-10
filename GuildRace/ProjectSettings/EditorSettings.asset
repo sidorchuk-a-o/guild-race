@@ -8,7 +8,7 @@ EditorSettings:
   m_LineEndingsForNewScripts: 2
   m_DefaultBehaviorMode: 1
   m_PrefabRegularEnvironment: {fileID: 102900000, guid: 7bb49c79838ce6f479e25b9935bc514e, type: 3}
-  m_PrefabUIEnvironment: {fileID: 102900000, guid: b393765f948e24a48abd7c6c2d7768a9, type: 3}
+  m_PrefabUIEnvironment: {fileID: 102900000, guid: cdfe19110fb6a444aab7d35c2f68b8fa, type: 3}
   m_SpritePackerMode: 5
   m_SpritePackerCacheSize: 10
   m_SpritePackerPaddingPower: 1

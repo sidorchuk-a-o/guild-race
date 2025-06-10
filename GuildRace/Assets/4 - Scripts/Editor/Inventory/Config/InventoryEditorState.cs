@@ -25,6 +25,8 @@ namespace Game.Inventory
         private SerializedData slotsCacheData;
         private SerializedData gridsCacheData;
 
+        private readonly InventoryScriptGenerator scriptGenerator = new();
+
         public static InventoryConfig Config => FindAsset(ref instance.config);
 
         public static InventoryEditorsFactory EditorsFactory => instance.editorsFactory ??= new();
@@ -113,6 +115,11 @@ namespace Game.Inventory
         }
 
         // == Collections ==
+
+        public static Collection<int> CreateItemTypesCollection()
+        {
+            return Config.CreateKeyCollection<ItemsFactory, int>("itemsParams.factories");
+        }
 
         public static Collection<int> GetRaritiesCollection()
         {

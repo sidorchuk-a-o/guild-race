@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Game.UI;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using UniRx;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -15,12 +16,12 @@ namespace Game.Inventory
         private readonly ItemInfo info;
         protected readonly InventoryVMFactory inventoryVMF;
 
-        private Sprite sprite;
-
         public string Id { get; }
         public int DataId { get; }
         public LocalizeKey NameKey { get; }
+
         public Type InfoType { get; }
+        public ItemType ItemType { get; }
 
         public ItemBoundsVM BoundsVM { get; }
         public UIStateVM HighlightStateVM { get; }
@@ -35,7 +36,9 @@ namespace Game.Inventory
             Id = info.Id;
             DataId = info.DataId;
             NameKey = info.NameKey;
+
             InfoType = info.GetType();
+            ItemType = info.ItemType;
 
             BoundsVM = new(info.Bounds);
             HighlightStateVM = new();
@@ -68,14 +71,9 @@ namespace Game.Inventory
 
         // == Icon ==
 
-        public async UniTask<Sprite> LoadIcon()
+        public async UniTask<Sprite> LoadIcon(CancellationToken token = default)
         {
-            if (sprite == null)
-            {
-                sprite = await inventoryVMF.RentSprite(info.IconRef);
-            }
-
-            return sprite;
+            return await inventoryVMF.RentImage(info.IconRef, token);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Game.Inventory
 
         public virtual bool CheckPossibilityOfPlacement(ItemInfo itemInfo)
         {
-            return !HasItem && itemInfo.CheckSlotParams(this);
+            return itemInfo.CheckSlotParams(this);
         }
 
         public virtual bool TryAddItem(ItemInfo item)

@@ -109,7 +109,7 @@ namespace Game.Instances
                 .AddTo(disp);
 
             // guild bank
-            guildBankContainer.Init(bankTabsVM, disp, hasForcedReset);
+            guildBankContainer.Init(bankTabsVM, disp);
 
             // squad
             squadUnitsContainer.Init(setupInstanceVM, disp);

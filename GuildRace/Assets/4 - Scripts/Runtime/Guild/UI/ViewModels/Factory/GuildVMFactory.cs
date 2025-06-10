@@ -1,15 +1,22 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.Pools;
+using AD.Services.Router;
 using Game.Instances;
 using Game.Inventory;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 using VContainer;
+using static TMPro.TMP_Dropdown;
 
 namespace Game.Guild
 {
     public class GuildVMFactory : VMFactory
     {
         private readonly GuildConfig guildConfig;
+        private readonly PoolContainer<Sprite> imagesPool;
 
         private readonly IGuildService guildService;
         private readonly IObjectResolver resolver;
@@ -25,11 +32,26 @@ namespace Game.Guild
         public GuildVMFactory(
             GuildConfig guildConfig,
             IGuildService guildService,
+            IPoolsService poolsService,
             IObjectResolver resolver)
         {
             this.guildConfig = guildConfig;
             this.guildService = guildService;
             this.resolver = resolver;
+
+            imagesPool = poolsService.CreateAssetPool<Sprite>();
+        }
+
+        public UniTask<Sprite> RentImage(AssetReference imageRef, CancellationTokenSource ct)
+        {
+            return imagesPool.RentAsync(imageRef, token: ct.Token);
+        }
+
+        public ItemCounterVM CreateItemCounter(int itemDataId)
+        {
+            var bankGrids = guildService.BankTabs.Select(x => x.Grid);
+
+            return InventoryVMF.CreateItemCounter(itemDataId, bankGrids);
         }
 
         // == View Models ==
@@ -72,21 +94,21 @@ namespace Game.Guild
         {
             var roleData = guildConfig.CharactersParams.GetRole(roleId);
 
-            return new RoleVM(roleData);
+            return new RoleVM(roleData, this);
         }
 
-        public SubRoleVM GetRole(SubRoleId subRoleId)
+        public SubRoleVM GetSubRole(SubRoleId subRoleId)
         {
             var subRoleData = guildConfig.CharactersParams.GetSubRole(subRoleId);
 
-            return new SubRoleVM(subRoleData);
+            return new SubRoleVM(subRoleData, this);
         }
 
         public ClassVM GetClass(ClassId classId)
         {
             var classData = guildConfig.CharactersParams.GetClass(classId);
 
-            return new ClassVM(classData);
+            return new ClassVM(classData, this);
         }
 
         public SpecializationVM GetSpecialization(SpecializationId specId)
@@ -101,6 +123,30 @@ namespace Game.Guild
             var guildRank = guildService.GuildRanks[guildRankId];
 
             return new GuildRankVM(guildRank);
+        }
+
+        public GuildRanksVM GetGuildRanks()
+        {
+            var guildRanks = guildService.GuildRanks;
+
+            return new GuildRanksVM(guildRanks);
+        }
+
+        public List<OptionData> GetGuildRanksOptions()
+        {
+            return guildService.GuildRanks.Skip(1)
+                .Select(x => new OptionData(x.Name.Value))
+                .ToList();
+        }
+
+        public int GetGuildRankIndex(GuildRankId rankId)
+        {
+            return guildService.GuildRanks.FindIndex(x => x.Id == rankId);
+        }
+
+        public void UpdateGuildRank(string characterId, int rankIndex)
+        {
+            guildService.UpdateGuildRank(characterId, rankIndex);
         }
 
         // == Bank ==

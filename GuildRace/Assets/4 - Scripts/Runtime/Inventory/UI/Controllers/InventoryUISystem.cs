@@ -14,6 +14,7 @@ namespace Game.Inventory
         [SerializeField] private InventoryHighlightController highlightController;
         [SerializeField] private InventoryOptionsController optionsController;
         [SerializeField] private InventoryWindowsController windowsController;
+        [SerializeField] private InventoryTooltipController tooltipController;
         [SerializeField] private InventoryScrollController scrollController;
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
@@ -24,6 +25,7 @@ namespace Game.Inventory
             highlightController.Init(disp);
             optionsController.Init(disp);
             windowsController.Init(disp);
+            tooltipController.Init(disp);
             scrollController.Init(disp);
         }
     }

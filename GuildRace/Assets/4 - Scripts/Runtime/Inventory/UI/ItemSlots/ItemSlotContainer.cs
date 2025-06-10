@@ -8,6 +8,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.AddressableAssets;
 using VContainer;
 
 namespace Game.Inventory
@@ -15,6 +16,7 @@ namespace Game.Inventory
     public class ItemSlotContainer : UIComponent<ItemSlotContainer>, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private ItemSlot slot;
+        [SerializeField] private ItemSlotsUIParams slotParams;
 
         [Header("Item Preview")]
         [SerializeField] private ItemPreviewContainer itemPreview;
@@ -22,6 +24,12 @@ namespace Game.Inventory
         [Header("Pickup Process")]
         [SerializeField] private UIStates pickupStates;
         [SerializeField] private Image pickupPreviewImage;
+        [SerializeField] private string errorState = "slotError";
+        [SerializeField] private string readyState = "slotReady";
+        [SerializeField] private string previewState = "slotPreview";
+
+        [Header("Params")]
+        [SerializeField] private bool isReadOnly;
 
         private static readonly Subject<ItemSlotContainer> onInited = new();
         private static readonly Subject<ItemSlotContainer> onInteracted = new();
@@ -36,6 +44,7 @@ namespace Game.Inventory
         public static IObservable<ItemSlotContainer> OnInteracted => onInteracted;
 
         public ItemSlot Slot => slot;
+        public bool IsReadOnly => isReadOnly;
 
         public bool HasItem => ViewModel.HasItem;
         public ItemSlotVM ViewModel { get; private set; }
@@ -69,16 +78,23 @@ namespace Game.Inventory
             itemDisp.Clear();
             itemDisp.AddTo(disp);
 
-            if (itemVM != null)
+            var hasItem = item != null;
+            var hasVM = itemVM != null;
+
+            if (hasVM)
             {
-                var itemGO = await inventoryVMF.RentItemInSlotAsync(itemVM);
+                if (!hasItem)
+                {
+                    var itemParams = slotParams.GetParams(itemVM.ItemType);
+                    var itemGO = await inventoryVMF.RentObjectAsync(itemParams.ItemInSlotRef);
 
-                item = itemGO.GetComponent<ItemInSlotComponent>();
+                    item = itemGO.GetComponent<ItemInSlotComponent>();
+                }
+
                 item.Init(itemVM, disp);
-
                 itemPreview.PlaceItem(item);
             }
-            else if (item != null)
+            else if (hasItem)
             {
                 itemPreview.RemoveItem();
                 inventoryVMF.ReturnItem(item);
@@ -87,11 +103,33 @@ namespace Game.Inventory
             }
         }
 
+        public AssetReference GetTooltipRef()
+        {
+            if (item == null)
+            {
+                return null;
+            }
+
+            var itemType = item.ViewModel.ItemType;
+            var itemParams = slotParams.GetParams(itemType);
+
+            return itemParams.ItemTooltipRef;
+        }
+
         // == Pickup Preview ==
 
-        public virtual async void ShowPickupPreview(ItemVM itemVM, string state)
+        public virtual async void ShowPickupPreview(ItemVM itemVM, PickupResult pickupResult)
         {
-            if (pickupPreviewImage)
+            var checkPreview = pickupResult.Context.SelectedSlotVM == ViewModel;
+            var checkPlacement = ViewModel.CheckPossibilityOfPlacement(itemVM);
+
+            var state = checkPreview
+                ? previewState
+                : checkPlacement
+                    ? readyState
+                    : errorState;
+
+            if (pickupPreviewImage && checkPreview)
             {
                 pickupPreviewImage.sprite = await itemVM.LoadIcon();
             }

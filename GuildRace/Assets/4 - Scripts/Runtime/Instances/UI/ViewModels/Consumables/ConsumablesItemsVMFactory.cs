@@ -18,7 +18,7 @@ namespace Game.Instances
 
         public override ItemVM Create(ItemInfo itemInfo, InventoryVMFactory inventoryVMF)
         {
-            return new ConsumablesItemVM(itemInfo as ConsumablesItemInfo, instancesVMF, inventoryVMF);
+            return new ConsumablesItemVM(itemInfo as ConsumablesItemInfo, instancesVMF);
         }
     }
 }
