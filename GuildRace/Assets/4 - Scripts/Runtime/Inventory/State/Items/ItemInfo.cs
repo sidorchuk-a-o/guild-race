@@ -29,15 +29,15 @@ namespace Game.Inventory
 
         public IReadOnlyReactiveProperty<bool> IsRemoved => isRemoved;
 
-        public ItemInfo(string id, ItemData data, ItemType itemType)
+        public ItemInfo(string id, ItemData data)
         {
             Id = id;
             DataId = data.Id;
+            ItemType = data.ItemType;
             NameKey = data.NameKey;
             IconRef = data.IconRef;
             Bounds = new(data.Size);
             Slot = data.Slot;
-            ItemType = itemType;
         }
 
         public void SetGridParams(GridParamsForItems gridParams)

@@ -19,6 +19,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1002_TTL
   iconRef:
@@ -50,6 +52,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1003_TTL
   iconRef:
@@ -81,6 +85,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1004_TTL
   iconRef:
@@ -113,6 +119,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1007_TTL
   iconRef:
@@ -144,6 +152,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1008_TTL
   iconRef:
@@ -175,6 +185,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1001_TTL
   iconRef:
@@ -206,6 +218,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1011_TTL
   iconRef:
@@ -237,6 +251,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1010_TTL
   iconRef:
@@ -963,6 +979,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1009_TTL
   iconRef:
@@ -994,6 +1012,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1013_TTL
   iconRef:
@@ -1025,6 +1045,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1006_TTL
   iconRef:
@@ -1056,6 +1078,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1012_TTL
   iconRef:
@@ -1087,6 +1111,8 @@ MonoBehaviour:
   size:
     width: 1
     height: 1
+  itemType:
+    value: 1760217255
   nameKey:
     value: CRAFT/REAGENT_1005_TTL
   iconRef:

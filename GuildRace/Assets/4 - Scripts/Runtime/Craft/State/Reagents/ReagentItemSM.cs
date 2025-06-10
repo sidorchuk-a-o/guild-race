@@ -15,7 +15,7 @@ namespace Game.Craft
 
         public ReagentItemInfo GetValue(ReagentItemData data, ReagentItemsFactory reagentIF)
         {
-            var info = new ReagentItemInfo(id, data, reagentIF.ItemType);
+            var info = new ReagentItemInfo(id, data);
 
             stackSM.ApplyValues(info.Stack);
             boundsSM.ApplyValues(info.Bounds);

@@ -1,4 +1,5 @@
-﻿using AD.Services.Localization;
+﻿using System.Linq;
+using AD.Services.Localization;
 using AD.ToolsCollection;
 
 namespace Game.Inventory
@@ -25,6 +26,12 @@ namespace Game.Inventory
             data.GetProperty("slot").SetValue(slot);
             data.GetProperty("iconRef").SetValue(iconRef);
             data.GetProperty("nameKey").SetValue(nameKey);
+
+            var dataType = data.DataType;
+            var itemsParams = InventoryEditorState.Config.ItemsParams;
+            var dataFactory = itemsParams.Factories.FirstOrDefault(x => x.DataType == dataType);
+
+            data.GetProperty("itemType").SetValue(dataFactory.ItemType);
         }
     }
 }

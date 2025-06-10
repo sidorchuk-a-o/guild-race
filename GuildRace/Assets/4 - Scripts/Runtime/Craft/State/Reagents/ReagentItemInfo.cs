@@ -7,7 +7,7 @@ namespace Game.Craft
         public Rarity Rarity { get; }
         public ItemStackInfo Stack { get; }
 
-        public ReagentItemInfo(string id, ReagentItemData data, ItemType itemType) : base(id, data, itemType)
+        public ReagentItemInfo(string id, ReagentItemData data) : base(id, data)
         {
             Rarity = data.Rarity;
             Stack = new(data.Stack);

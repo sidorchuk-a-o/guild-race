@@ -11,7 +11,7 @@ namespace Game.Inventory
 
         public EquipItemInfo GetValue(EquipItemData data, EquipItemsFactory equipIF)
         {
-            var info = new EquipItemInfo(id, data, equipIF.ItemType);
+            var info = new EquipItemInfo(id, data);
 
             boundsSM.ApplyValues(info.Bounds);
 

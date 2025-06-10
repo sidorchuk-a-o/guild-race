@@ -10,7 +10,7 @@
 
         public CharacterParams CharacterParams { get; }
 
-        public EquipItemInfo(string id, EquipItemData data, ItemType itemType) : base(id, data, itemType)
+        public EquipItemInfo(string id, EquipItemData data) : base(id, data)
         {
             Level = data.Level;
             Rarity = data.Rarity;

@@ -19,7 +19,7 @@ namespace Game.Instances
         protected override ItemInfo CreateInfo(string id, ItemData data)
         {
             var consumablesData = data as ConsumablesItemData;
-            var consumables = new ConsumablesItemInfo(id, consumablesData, ItemType);
+            var consumables = new ConsumablesItemInfo(id, consumablesData);
 
             consumables.SetGridParams(config.ConsumablesParams.GridParams);
 

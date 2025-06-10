@@ -2,7 +2,6 @@
 using AD.Services.Router;
 using Cysharp.Threading.Tasks;
 using Game.UI;
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using UniRx;
@@ -19,8 +18,6 @@ namespace Game.Inventory
         public string Id { get; }
         public int DataId { get; }
         public LocalizeKey NameKey { get; }
-
-        public Type InfoType { get; }
         public ItemType ItemType { get; }
 
         public ItemBoundsVM BoundsVM { get; }
@@ -36,8 +33,6 @@ namespace Game.Inventory
             Id = info.Id;
             DataId = info.DataId;
             NameKey = info.NameKey;
-
-            InfoType = info.GetType();
             ItemType = info.ItemType;
 
             BoundsVM = new(info.Bounds);
