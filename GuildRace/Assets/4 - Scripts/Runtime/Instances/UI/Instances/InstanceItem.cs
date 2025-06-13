@@ -1,17 +1,18 @@
-﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-
+﻿using System.Threading;
+using Cysharp.Threading.Tasks;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
-using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace Game.Instances
 {
     public class InstanceItem : MonoBehaviour
     {
+        [SerializeField] private Image image;
         [SerializeField] private UIText nameText;
         [SerializeField] private UIButton button;
 
@@ -31,10 +32,15 @@ namespace Game.Instances
                 .AddTo(this);
         }
 
-        public async UniTask Init(InstanceVM instanceVM)
+        public async UniTask Init(InstanceVM instanceVM, CancellationTokenSource ct)
         {
             this.instanceVM = instanceVM;
 
+            var sprite = await instanceVM.LoadImage(ct);
+
+            if (ct.IsCancellationRequested) return;
+
+            image.sprite = sprite;
             nameText.SetTextParams(instanceVM.NameKey);
         }
 

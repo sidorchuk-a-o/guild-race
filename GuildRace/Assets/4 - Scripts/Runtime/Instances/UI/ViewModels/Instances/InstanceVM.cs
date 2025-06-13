@@ -1,11 +1,16 @@
-﻿using AD.Services.Localization;
+﻿using System.Threading;
+using AD.Services.Localization;
 using AD.Services.Router;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace Game.Instances
 {
     public class InstanceVM : ViewModel
     {
+        private readonly InstanceInfo info;
+        private readonly InstancesVMFactory instancesVMF;
+
         public int Id { get; }
 
         public InstanceType Type { get; }
@@ -16,6 +21,9 @@ namespace Game.Instances
 
         public InstanceVM(InstanceInfo info, InstancesVMFactory instancesVMF)
         {
+            this.info = info;
+            this.instancesVMF = instancesVMF;
+
             Id = info.Id;
             Type = info.Type;
             NameKey = info.NameKey;
@@ -26,6 +34,11 @@ namespace Game.Instances
         protected override void InitSubscribes()
         {
             BossUnitsVM.AddTo(this);
+        }
+
+        public async UniTask<Sprite> LoadImage(CancellationTokenSource ct)
+        {
+            return await instancesVMF.LoadImage(info.ImageRef, ct);
         }
     }
 }

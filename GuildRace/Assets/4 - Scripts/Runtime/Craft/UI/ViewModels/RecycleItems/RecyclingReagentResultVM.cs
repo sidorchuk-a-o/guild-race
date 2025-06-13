@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using AD.Services.Store;
 using Cysharp.Threading.Tasks;
 
 namespace Game.Craft
@@ -6,12 +7,10 @@ namespace Game.Craft
     public class RecyclingReagentResultVM : RecyclingResultVM
     {
         public CurrencyVM CurrencyVM { get; set; }
-        public int Amount { get; set; }
 
         public RecyclingReagentResultVM(RecyclingReagentResult data, CraftVMFactory craftVMF)
         {
-            CurrencyVM = craftVMF.GetCurrency(data.Currency);
-            Amount = data.Amount;
+            CurrencyVM = craftVMF.StoreVMF.GetCurrency(data.Amount);
         }
 
         protected override void InitSubscribes()

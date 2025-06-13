@@ -19,7 +19,7 @@ namespace Game.Instances
             Id = info.Id;
 
             NameKey = info.NameKey;
-            DescKey = info.NameKey;
+            DescKey = info.DescKey;
 
             RaidVM = new(info.Raid, instancesVMF);
             DungeonsVM = new(info.Dungeons, instancesVMF);

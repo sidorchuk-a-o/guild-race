@@ -72,7 +72,7 @@ namespace Game.Craft
 
             if (result is RecyclingReagentResult recyclingReagent)
             {
-                var amount = new CurrencyAmount(recyclingReagent.Currency, recyclingReagent.Amount);
+                var amount = recyclingReagent.Amount;
 
                 storeService.CurrenciesModule.AddCurrency(amount);
             }
@@ -136,8 +136,7 @@ namespace Game.Craft
 
                 return new RecyclingReagentResult
                 {
-                    Currency = reagentMod.CurrencyKey,
-                    Amount = reagentMod.Amount * stack
+                    Amount = new(reagentMod.CurrencyKey, reagentMod.Amount * stack)
                 };
             }
             else

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AD.Services.Localization;
+using UnityEngine.AddressableAssets;
 
 namespace Game.Instances
 {
@@ -11,6 +12,7 @@ namespace Game.Instances
         public InstanceType Type { get; }
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
+        public AssetReference ImageRef { get; }
 
         public UnitInfo[] BossUnits { get; }
 
@@ -20,6 +22,7 @@ namespace Game.Instances
             Type = data.Type;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
+            ImageRef = data.ImageRef;
             BossUnits = bossUnits.ToArray();
         }
 

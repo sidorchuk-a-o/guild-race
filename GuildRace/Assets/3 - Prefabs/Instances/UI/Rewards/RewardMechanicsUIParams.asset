@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9582aeb136875b409d8b8b96abdfb2b, type: 3}
+  m_Name: RewardMechanicsUIParams
+  m_EditorClassIdentifier: 
+  mechanicParams:
+  - mechanicId: 301
+    itemRef:
+      m_AssetGUID: d61b3779240c8614f95e4b61292d9ad2
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - mechanicId: 302
+    itemRef:
+      m_AssetGUID: bb585132461ecb24984d2541ac389a96
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - mechanicId: 303
+    itemRef:
+      m_AssetGUID: 0fd51ce38f2506d48b4c77792f159c27
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0

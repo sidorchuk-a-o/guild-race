@@ -19,6 +19,14 @@ namespace Game.Instances
             this.storeService = storeService;
         }
 
+        public CurrencyAmount GetCurrencyAmount(InstanceRewardData reward)
+        {
+            var currencyKey = new CurrencyKey(reward.MechanicParams[0]);
+            var currencyValue = reward.MechanicParams[1].IntParse();
+
+            return new CurrencyAmount(currencyKey, currencyValue);
+        }
+
         public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
             return rewards.Select(x => ApplyReward(x, result));
@@ -26,22 +34,18 @@ namespace Game.Instances
 
         public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
         {
-            var currencyKey = new CurrencyKey(reward.MechanicParams[0]);
-            var currencyValue = reward.MechanicParams[1].IntParse();
+            var amount = GetCurrencyAmount(reward);
 
             if (result != CompleteResult.Completed)
             {
-                currencyValue = Mathf.RoundToInt(currencyValue * failedMod);
+                amount *= failedMod;
             }
-
-            var amount = new CurrencyAmount(currencyKey, currencyValue);
 
             storeService.CurrenciesModule.AddCurrency(amount);
 
             return new CurrencyRewardResult
             {
-                CurrencyKey = currencyKey,
-                CurrencyValue = currencyValue
+                Amount = amount
             };
         }
     }

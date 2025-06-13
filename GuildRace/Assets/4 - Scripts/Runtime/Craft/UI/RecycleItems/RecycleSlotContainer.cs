@@ -51,8 +51,10 @@ namespace Game.Craft
 
             if (recyclingVM is RecyclingReagentResultVM recyclingReagentVM)
             {
-                currencyAmountText.SetTextParams(recyclingReagentVM.Amount);
-                currencyIconImage.sprite = await recyclingReagentVM.CurrencyVM.LoadIcon();
+                var currencyVM = recyclingReagentVM.CurrencyVM;
+
+                currencyAmountText.SetTextParams(new(currencyVM.Amount.Value));
+                currencyIconImage.sprite = await currencyVM.LoadIcon();
 
                 currencyContainer.SetActive(true);
             }

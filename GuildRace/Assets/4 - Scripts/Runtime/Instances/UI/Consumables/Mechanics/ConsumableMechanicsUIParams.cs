@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Game.Instances
 {
-    [CreateAssetMenu(fileName = "ConsumableMechanicsUIParams", menuName = "Inventory/UI/Consumable Mechanic Params", order = 100)]
+    [CreateAssetMenu(fileName = "ConsumableMechanicsUIParams", menuName = "Instances/UI/Consumable Mechanic Params", order = 100)]
     public class ConsumableMechanicsUIParams : ScriptableData
     {
         [SerializeField] private List<ConsumableMechanicUIParams> mechanicParams;

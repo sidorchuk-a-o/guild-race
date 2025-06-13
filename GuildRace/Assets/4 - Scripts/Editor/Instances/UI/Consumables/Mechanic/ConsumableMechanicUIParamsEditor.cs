@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.Instances
 {
     [InstancesEditor(typeof(ConsumableMechanicUIParams))]
-    public class ItemSlotUIParamsEditor : Element
+    public class ConsumableMechanicUIParamsEditor : Element
     {
         private AddressableElement<GameObject> containerRefField;
 

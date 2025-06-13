@@ -1,13 +1,14 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
+using Cysharp.Threading.Tasks;
+using AD.UI;
+using DG.Tweening;
 using AD.Services.Router;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
-using DG.Tweening;
 using UniRx;
 using UnityEngine;
 using VContainer;
+using UnityEngine.UI;
+using Game.Guild;
 
 namespace Game.Instances
 {
@@ -21,17 +22,15 @@ namespace Game.Instances
 
         [Header("Boss Units")]
         [SerializeField] private UnitsScrollView bossUnitsScroll;
-        [Space]
-        [SerializeField] private CanvasGroup emptyUnitContainer;
         [SerializeField] private CanvasGroup unitContainer;
         [Space]
-        [SerializeField] private UIButton startInstanceButton;
-
-        [Header("Empty Unit")]
-        [SerializeField] private UIText instanceNameText;
-
-        [Header("Selected Unit")]
         [SerializeField] private UIText unitNameText;
+        [SerializeField] private UIText unitDescText;
+        [SerializeField] private Image unitImage;
+        [SerializeField] private AbilitiesContainer unitAbilities;
+        [SerializeField] private RewardsContainer unitRewardContainer;
+        [Space]
+        [SerializeField] private UIButton startInstanceButton;
 
         private readonly CompositeDisp unitDisp = new();
         private CancellationTokenSource unitToken;
@@ -49,9 +48,6 @@ namespace Game.Instances
 
         private void Awake()
         {
-            unitContainer.alpha = 0;
-            unitContainer.interactable = false;
-
             startInstanceButton.OnClick
                 .Subscribe(StartSetupInstanceCallback)
                 .AddTo(this);
@@ -83,7 +79,10 @@ namespace Game.Instances
                 .Subscribe(x => UnitChangedCallback(x, false))
                 .AddTo(disp);
 
-            UnitChangedCallback(selectedUnitVM, force: true);
+            // select unit
+            var targetUnit = selectedUnitVM ?? instanceVM.BossUnitsVM.FirstOrDefault();
+
+            UnitChangedCallback(targetUnit, force: true);
         }
 
         private async void UnitChangedCallback(UnitVM unitVM, bool force)
@@ -101,23 +100,17 @@ namespace Game.Instances
             unitToken = token;
 
             unitContainer.DOKill();
-            emptyUnitContainer.DOKill();
-
             unitContainer.interactable = hasUnit;
-            emptyUnitContainer.interactable = !hasUnit;
 
             const float duration = 0.1f;
 
             if (force)
             {
                 unitContainer.alpha = 0;
-                emptyUnitContainer.alpha = 0;
             }
             else
             {
-                await UniTask.WhenAll(
-                    unitContainer.DOFade(0, duration).ToUniTask(),
-                    emptyUnitContainer.DOFade(0, duration).ToUniTask());
+                await unitContainer.DOFade(0, duration);
             }
 
             if (token.IsCancellationRequested)
@@ -125,29 +118,36 @@ namespace Game.Instances
                 return;
             }
 
-            InitUnitContainer(unitVM);
-
-            var showContainer = hasUnit
-                ? unitContainer
-                : emptyUnitContainer;
+            await updateUnit(unitVM, token);
 
             if (force)
             {
-                showContainer.alpha = 1;
+                unitContainer.alpha = 1;
             }
             else
             {
-                await showContainer.DOFade(1, duration);
+                await unitContainer.DOFade(1, duration);
             }
-        }
 
-        private void InitUnitContainer(UnitVM unitVM)
-        {
-            if (unitVM != null)
+            async UniTask updateUnit(UnitVM unitVM, CancellationTokenSource ct)
             {
+                if (unitVM == null)
+                {
+                    return;
+                }
+
+                var image = await unitVM.LoadImage(ct);
+
+                if (ct.IsCancellationRequested) return;
+
                 unitVM.SetSelectState(true);
 
+                unitImage.sprite = image;
                 unitNameText.SetTextParams(unitVM.NameKey);
+                unitDescText.SetTextParams(unitVM.DescKey);
+
+                unitAbilities.Init(unitVM.AbilitiesVM, ct);
+                unitRewardContainer.Init(unitVM.RewardsVM, ct);
 
                 startInstanceButton.SetInteractableState(!unitVM.HasInstance && !unitVM.WaitResetCooldown);
             }

@@ -21,6 +21,7 @@ namespace Game.Instances
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
         public AbilitiesVM AbilitiesVM { get; }
+        public InstanceRewardsVM RewardsVM { get; }
 
         public bool HasInstance => InstanceVM.Value != null;
         public IReadOnlyReactiveProperty<ActiveInstanceVM> InstanceVM => instanceVM;
@@ -37,7 +38,8 @@ namespace Game.Instances
             Id = info.Id;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
-            AbilitiesVM = new AbilitiesVM(info.Abilities, instancesVMF);
+            AbilitiesVM = new(info.Abilities, instancesVMF);
+            RewardsVM = instancesVMF.GetRewards(Id);
 
             CompletedCount = info.CompletedCount;
             MaxCompletedCount = instancesVMF.GetMaxCompletedCount(instanceId);
@@ -47,6 +49,7 @@ namespace Game.Instances
         protected override void InitSubscribes()
         {
             AbilitiesVM.AddTo(this);
+            RewardsVM.AddTo(this);
 
             info.InstanceId
                 .Subscribe(InstanceChangedCallback)

@@ -26,6 +26,16 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
+        public int GetReagentId(InstanceRewardData reward)
+        {
+            return reward.MechanicParams[0].IntParse();
+        }
+
+        public int GetReagentCount(InstanceRewardData reward)
+        {
+            return reward.MechanicParams[1].IntParse();
+        }
+
         public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
             return rewards
@@ -46,8 +56,8 @@ namespace Game.Instances
                 return null;
             }
 
-            var reagentId = reward.MechanicParams[0].IntParse();
-            var reagentCount = reward.MechanicParams[1].IntParse();
+            var reagentId = GetReagentId(reward);
+            var reagentCount = GetReagentCount(reward);
 
             if (result != CompleteResult.Completed)
             {

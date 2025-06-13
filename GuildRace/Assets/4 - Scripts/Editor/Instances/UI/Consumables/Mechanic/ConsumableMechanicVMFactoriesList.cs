@@ -10,7 +10,7 @@ namespace Game.Instances
         {
             UpdateFactoriesList(data);
 
-            headerTitle = "Items Factories";
+            headerTitle = "Consumable Factories";
 
             reorderable = false;
             showAddButton = false;
