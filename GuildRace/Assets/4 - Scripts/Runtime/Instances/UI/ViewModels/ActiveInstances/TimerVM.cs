@@ -7,17 +7,26 @@ namespace Game.Instances
 {
     public class TimerVM : ViewModel
     {
+        private readonly long startTime;
+        private readonly long timerTime;
         private readonly long completeTime;
-        private readonly ReactiveProperty<string> value = new();
-
         private readonly ITimeService timeService;
 
-        public IReadOnlyReactiveProperty<string> Value => value;
+        private readonly ReactiveProperty<float> progress = new();
+        private readonly ReactiveProperty<long> timeLeft = new();
+        private readonly ReactiveProperty<string> timeLeftStr = new();
 
-        public TimerVM(long completeTime, ITimeService timeService)
+        public IReadOnlyReactiveProperty<float> Progress => progress;
+        public IReadOnlyReactiveProperty<long> TimeLeft => timeLeft;
+        public IReadOnlyReactiveProperty<string> TimeLeftStr => timeLeftStr;
+
+        public TimerVM(long startTime, long timerTime, ITimeService timeService)
         {
-            this.completeTime = completeTime;
+            this.startTime = startTime;
+            this.timerTime = timerTime;
             this.timeService = timeService;
+
+            completeTime = startTime + timerTime;
         }
 
         protected override void InitSubscribes()
@@ -33,7 +42,13 @@ namespace Game.Instances
                 ? completeTime - timeService.TotalTime
                 : 0;
 
-            value.Value = timeLeft.SecondsToDDHHMMSS();
+            var timeLeftStr = timeLeft.SecondsToDDHHMMSS();
+
+            var progress = 1 - (float)timeLeft / timerTime;
+
+            this.progress.Value = progress;
+            this.timeLeft.Value = timeLeft;
+            this.timeLeftStr.Value = timeLeftStr;
         }
     }
 }

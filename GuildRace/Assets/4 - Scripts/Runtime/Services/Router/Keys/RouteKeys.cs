@@ -20,6 +20,7 @@ namespace AD.Services.Router
             public static readonly RouteKey selectInstance = new("e97c497eb0974668a785bf5efc25439e");
             public static readonly RouteKey selectBoss = new("9c2466edba7e4b07b38fca42de83a4d6");
             public static readonly RouteKey activeInstances = new("2b0e5656d63c4b7b88009e2b3ce52dc5");
+            public static readonly RouteKey instanceRewards = new("8fd0df8348db4389a5dd48bb48cf9fd2");
             public static readonly RouteKey vendors = new("11d1048181b44ab88943a094f1b8871e");
             public static readonly RouteKey quests = new("180f07bff28e4415a08a52deb9e48c22");
         }

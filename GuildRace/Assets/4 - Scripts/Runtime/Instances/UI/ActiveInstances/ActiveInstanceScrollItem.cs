@@ -37,7 +37,7 @@ namespace Game.Instances
                 .Subscribe(x => timerContainer.SetActive(!x))
                 .AddTo(disp);
 
-            ViewModel.TimerVM.Value
+            ViewModel.TimerVM.TimeLeftStr
                 .Subscribe(x => timerText.SetTextParams(x))
                 .AddTo(disp);
         }

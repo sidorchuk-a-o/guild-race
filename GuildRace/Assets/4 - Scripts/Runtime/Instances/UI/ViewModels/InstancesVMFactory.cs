@@ -123,6 +123,14 @@ namespace Game.Instances
             return new InstanceRewardsVM(rewards, this);
         }
 
+        public InstanceRewardsVM GetRewards(IReadOnlyList<RewardResult> result)
+        {
+            var rewardIds = result.Select(x => x.RewardId);
+            var rewards = InstancesConfig.GetRewards(rewardIds);
+
+            return new InstanceRewardsVM(rewards.ToList(), this);
+        }
+
         // == Threats ==
 
         public ThreatDataVM GetThreat(ThreatId threatId)
@@ -221,6 +229,13 @@ namespace Game.Instances
         public ActiveInstanceVM GetSetupInstance()
         {
             var activeInstance = instancesService.SetupInstance;
+
+            return new ActiveInstanceVM(activeInstance, this);
+        }
+
+        public ActiveInstanceVM GetCompletedInstance()
+        {
+            var activeInstance = instancesService.CompletedInstance;
 
             return new ActiveInstanceVM(activeInstance, this);
         }

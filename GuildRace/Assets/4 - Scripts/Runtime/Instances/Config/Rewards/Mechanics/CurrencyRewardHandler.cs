@@ -45,7 +45,8 @@ namespace Game.Instances
 
             return new CurrencyRewardResult
             {
-                Amount = amount
+                Amount = amount,
+                RewardId = reward.Id
             };
         }
     }

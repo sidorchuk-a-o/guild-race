@@ -14,14 +14,16 @@ namespace Game.Instances
         [SerializeField] private float failedMod = 0.5f;
 
         private CraftConfig craftConfig;
+        private InventoryConfig inventoryConfig;
 
         private IGuildService guildService;
         private IInventoryService inventoryService;
 
         [Inject]
-        public void Inject(CraftConfig craftConfig, IGuildService guildService, IInventoryService inventoryService)
+        public void Inject(CraftConfig craftConfig, InventoryConfig inventoryConfig, IGuildService guildService, IInventoryService inventoryService)
         {
             this.craftConfig = craftConfig;
+            this.inventoryConfig = inventoryConfig;
             this.guildService = guildService;
             this.inventoryService = inventoryService;
         }
@@ -57,28 +59,40 @@ namespace Game.Instances
             }
 
             var reagentId = GetReagentId(reward);
-            var reagentCount = GetReagentCount(reward);
+            var totalReagentCount = GetReagentCount(reward);
 
             if (result != CompleteResult.Completed)
             {
-                reagentCount = Mathf.RoundToInt(reagentCount * failedMod);
+                totalReagentCount = Mathf.RoundToInt(totalReagentCount * failedMod);
             }
 
-            var reagentItem = inventoryService.Factory.CreateItem(reagentId) as ReagentItemInfo;
+            var reagentData = inventoryConfig.GetItem(reagentId) as IStackable;
+            var itemsCount = Mathf.CeilToInt(totalReagentCount / (float)reagentData.Stack.Size);
+            var itemIds = new List<string>(itemsCount);
 
-            reagentItem.Stack.SetValue(reagentCount);
-
-            inventoryService.TryPlaceItem(new PlaceInPlacementArgs
+            for (var i = 0; i < itemsCount; i++)
             {
-                PlacementId = reagentBank.Grid.Id,
-                ItemId = reagentItem.Id
-            });
+                var reagentItem = inventoryService.Factory.CreateItem(reagentId) as ReagentItemInfo;
+                var reagentCount = Mathf.Min(totalReagentCount, reagentItem.Stack.Size);
+
+                reagentItem.Stack.SetValue(reagentCount);
+                totalReagentCount -= reagentCount;
+
+                itemIds.Add(reagentItem.Id);
+
+                inventoryService.TryPlaceItem(new PlaceInPlacementArgs
+                {
+                    PlacementId = reagentBank.Grid.Id,
+                    ItemId = reagentItem.Id
+                });
+            }
 
             return new ReagentRewardResult
             {
-                ItemId = reagentItem.Id,
-                ItemDataId = reagentItem.DataId,
-                Count = reagentCount
+                ItemIds = itemIds,
+                ItemDataId = reagentId,
+                Count = totalReagentCount,
+                RewardId = reward.Id
             };
         }
     }

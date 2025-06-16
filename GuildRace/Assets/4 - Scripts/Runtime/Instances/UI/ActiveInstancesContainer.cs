@@ -6,6 +6,7 @@ using DG.Tweening;
 using System.Threading;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace Game.Instances
@@ -15,12 +16,19 @@ namespace Game.Instances
         [Header("Instances")]
         [SerializeField] private ActiveInstancesScrollView activeInstancesScroll;
 
-        [Header("Instance")]
+        [Header("Instance & Boss")]
         [SerializeField] private CanvasGroup instanceContainer;
-        [SerializeField] private UIButton completeInstanceButton;
-        [SerializeField] private UIStates resultState;
+        [SerializeField] private CanvasGroup emptyInstanceContainer;
         [Space]
+        [SerializeField] private Image bossImage;
+        [SerializeField] private UIText bossNameText;
         [SerializeField] private UIText instanceNameText;
+        [SerializeField] private GameObject progressContainer;
+        [SerializeField] private Slider progressSlider;
+        [SerializeField] private UIText progressTimerText;
+        [Space]
+        [SerializeField] private UIStates resultState;
+        [SerializeField] private UIButton completeInstanceButton;
 
         private readonly CompositeDisp instanceDisp = new();
         private CancellationTokenSource instanceToken;
@@ -115,34 +123,55 @@ namespace Game.Instances
             instanceToken?.Cancel();
             instanceToken = token;
 
+            if (selected == false &&
+                lastActiveInstanceId.IsNullOrEmpty())
+            {
+                return;
+            }
+
             if (selected &&
                 lastActiveInstanceId.IsValid() &&
                 lastActiveInstanceId == activeInstanceVM.Id)
             {
-                updateInstance();
+                await updateInstance();
                 return;
             }
 
             lastActiveInstanceId = activeInstanceVM?.Id;
 
             instanceContainer.DOKill();
+            emptyInstanceContainer.DOKill();
+
             instanceContainer.interactable = selected;
+            emptyInstanceContainer.interactable = !selected;
 
             const float duration = 0.1f;
 
-            await instanceContainer.DOFade(0, duration);
+            await UniTask.WhenAll(
+                instanceContainer.DOFade(0, duration).ToUniTask(),
+                emptyInstanceContainer.DOFade(0, duration).ToUniTask());
 
             if (selected == false || token.IsCancellationRequested)
             {
                 return;
             }
 
-            updateInstance();
+            await updateInstance();
 
-            await instanceContainer.DOFade(1, duration);
+            var showContainer = selected
+                ? instanceContainer
+                : emptyInstanceContainer;
 
-            void updateInstance()
+            await showContainer.DOFade(1, duration);
+
+            async UniTask updateInstance()
             {
+                var image = await activeInstanceVM.BossUnitVM.LoadImage(token);
+
+                if (token.IsCancellationRequested) return;
+
+                bossImage.sprite = image;
+                bossNameText.SetTextParams(activeInstanceVM.BossUnitVM.NameKey);
                 instanceNameText.SetTextParams(activeInstanceVM.InstanceVM.NameKey);
 
                 activeInstanceVM.ResultStateVM.Value
@@ -152,16 +181,30 @@ namespace Game.Instances
                 activeInstanceVM.IsReadyToComplete
                     .Subscribe(ReadyToCompleteChangedCallback)
                     .AddTo(instanceDisp);
+
+                activeInstanceVM.TimerVM.TimeLeftStr
+                    .Subscribe(TimerChangedCallback)
+                    .AddTo(instanceDisp);
             }
+        }
+
+        private void TimerChangedCallback()
+        {
+            var timerVM = activeInstanceVM.TimerVM;
+
+            progressSlider.value = timerVM.Progress.Value;
+            progressTimerText.SetTextParams(timerVM.TimeLeftStr.Value);
         }
 
         private void ReadyToCompleteChangedCallback(bool state)
         {
             resultState.SetActive(state);
             completeInstanceButton.SetInteractableState(state);
+
+            progressContainer.SetActive(!state);
         }
 
-        private void CompleteInstanceCallback()
+        private async void CompleteInstanceCallback()
         {
             if (activeInstanceVM == null)
             {
@@ -171,6 +214,10 @@ namespace Game.Instances
             var index = instancesVMF.CompleteActiveInstance(activeInstanceVM.Id);
             var switchToInstanceVM = activeInstancesVM.NearbyOrDefault(index);
 
+            // show rewards
+            await Router.PushAsync(RouteKeys.Hub.instanceRewards);
+
+            // switch instance
             activeInstanceVM = null;
 
             SelectActiveInstance(switchToInstanceVM);

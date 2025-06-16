@@ -25,6 +25,7 @@ namespace Game.Instances
         private Dictionary<ThreatId, ThreatData> threatsCache;
         private Dictionary<InstanceType, InstanceTypeData> instanceTypesCache;
         private Dictionary<int, IReadOnlyCollection<InstanceRewardData>> unitRewardsCache;
+        private Dictionary<int, InstanceRewardData> rewardsCache;
 
         public IReadOnlyList<SeasonData> Seasons => seasons;
         public IReadOnlyList<InstanceTypeData> InstanceTypes => instanceTypes;
@@ -104,6 +105,15 @@ namespace Game.Instances
             unitRewardsCache.TryGetValue(unitId, out var data);
 
             return data;
+        }
+
+        public IEnumerable<InstanceRewardData> GetRewards(IEnumerable<int> rewardIds)
+        {
+            rewardsCache ??= rewardsParams.Rewards.ToDictionary(x => x.Id, x => x);
+
+            return rewardIds
+                .Select(x => rewardsCache[x])
+                .Where(x => x != null);
         }
 
         public UnitCooldownParams GetUnitCooldown(InstanceType instanceType)

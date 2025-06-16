@@ -23,6 +23,7 @@ namespace Game.Instances
         public ISquadUnitsCollection Squad => squad;
 
         public long StartTime { get; private set; }
+        public IReadOnlyList<RewardResult> Rewards { get; private set; }
 
         public IReadOnlyReactiveProperty<float> CompleteChance => completeChance;
         public IReadOnlyReactiveProperty<CompleteResult> Result => completeResult;
@@ -82,6 +83,11 @@ namespace Game.Instances
         public void MarkAsReadyToComplete()
         {
             isReadyToComplete.Value = true;
+        }
+
+        public void SetRewards(IEnumerable<RewardResult> rewards)
+        {
+            Rewards = rewards.ToList();
         }
 
         // == IEquatable ==

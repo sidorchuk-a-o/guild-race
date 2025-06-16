@@ -34,6 +34,7 @@ namespace Game.Instances
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
 
         public ActiveInstanceInfo SetupInstance => state.SetupInstance;
+        public ActiveInstanceInfo CompletedInstance => state.CompletedInstance;
 
         public IObservable<ActiveInstanceInfo> OnInstanceCompleted => activeInstanceModule.OnInstanceCompleted;
         public IObservable<IEnumerable<RewardResult>> OnRewardsReceived => instanceModule.OnRewardsReceived;

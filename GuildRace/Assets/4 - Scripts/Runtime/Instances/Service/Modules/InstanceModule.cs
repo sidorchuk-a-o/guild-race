@@ -329,6 +329,8 @@ namespace Game.Instances
             ReceiveRewards(activeInstance);
 
             // upd state
+            state.SetCompletedInstance(activeInstanceId);
+
             return state.RemoveActiveInstance(activeInstanceId);
         }
 
@@ -392,6 +394,8 @@ namespace Game.Instances
 
             if (rewardResults.Any())
             {
+                instance.SetRewards(rewardResults);
+
                 onRewardsReceived.OnNext(rewardResults);
             }
         }

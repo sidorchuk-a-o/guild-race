@@ -10,6 +10,7 @@ namespace Game.Instances
         IActiveInstancesCollection ActiveInstances { get; }
 
         ActiveInstanceInfo SetupInstance { get; }
+        ActiveInstanceInfo CompletedInstance { get; }
 
         IObservable<ActiveInstanceInfo> OnInstanceCompleted { get; }
         IObservable<IEnumerable<RewardResult>> OnRewardsReceived { get; }

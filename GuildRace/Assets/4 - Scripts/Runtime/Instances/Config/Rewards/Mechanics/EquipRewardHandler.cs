@@ -75,7 +75,8 @@ namespace Game.Instances
             return new EquipRewardResult
             {
                 ItemId = equipItem.Id,
-                ItemDataId = equipItem.DataId
+                ItemDataId = equipItem.DataId,
+                RewardId = reward.Id
             };
         }
     }
