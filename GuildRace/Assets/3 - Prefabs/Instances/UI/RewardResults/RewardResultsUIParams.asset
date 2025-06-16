@@ -15,21 +15,21 @@ MonoBehaviour:
   mechanicParams:
   - mechanicId: 301
     itemRef:
-      m_AssetGUID: d61b3779240c8614f95e4b61292d9ad2
+      m_AssetGUID: 5502cdf7735e9b8448c604a7b46529c9
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
   - mechanicId: 302
     itemRef:
-      m_AssetGUID: bb585132461ecb24984d2541ac389a96
+      m_AssetGUID: 8b7af8c69d48e874394c1a7388df95d3
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
   - mechanicId: 303
     itemRef:
-      m_AssetGUID: 0fd51ce38f2506d48b4c77792f159c27
+      m_AssetGUID: 4379076f3a3af05438f24eb1cc26f807
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 
