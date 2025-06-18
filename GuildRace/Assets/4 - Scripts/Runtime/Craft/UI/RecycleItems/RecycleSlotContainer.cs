@@ -53,7 +53,7 @@ namespace Game.Craft
             {
                 var currencyVM = recyclingReagentVM.CurrencyVM;
 
-                currencyAmountText.SetTextParams(new(currencyVM.Amount.Value));
+                currencyAmountText.SetTextParams(new(currencyVM.AmountStr.Value));
                 currencyIconImage.sprite = await currencyVM.LoadIcon();
 
                 currencyContainer.SetActive(true);

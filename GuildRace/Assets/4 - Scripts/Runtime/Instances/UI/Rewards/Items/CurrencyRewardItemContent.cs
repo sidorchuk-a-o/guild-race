@@ -22,7 +22,7 @@ namespace Game.Instances
             if (ct.IsCancellationRequested) return;
 
             iconImage.sprite = icon;
-            amountText.SetTextParams(new(currencyVM.Amount.Value));
+            amountText.SetTextParams(new(currencyVM.AmountStr.Value));
         }
     }
 }
