@@ -1,12 +1,13 @@
 ﻿using System.Threading;
-using AD.Services.Localization;
-using AD.Services.Router;
-using AD.ToolsCollection;
-using AD.UI;
 using Cysharp.Threading.Tasks;
+using AD.UI;
+using AD.Services.Router;
+using AD.Services.Localization;
+using AD.ToolsCollection;
 using Game.Guild;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace Game.Instances
@@ -26,10 +27,11 @@ namespace Game.Instances
         [SerializeField] private SquadUnitsContainer squadUnitsContainer;
 
         [Header("Boss Unit")]
-        [SerializeField] private UIText bossNameText;
+        [SerializeField] private Image bossImage;
         [SerializeField] private ThreatsContainer bossThreatsContainer;
-        [Space]
         [SerializeField] private UIText completeChanceText;
+        [SerializeField] private UIText chanceLabelText;
+        [SerializeField] private Gradient chanceGradient;
 
         [Header("Button")]
         [SerializeField] private UIButton backButton;
@@ -96,8 +98,9 @@ namespace Game.Instances
             bankTabsVM.AddTo(disp);
 
             // upd params
-            var headerKey = setupInstanceVM.InstanceVM.NameKey;
-            var headerData = new UITextData(this.headerKey, headerKey);
+            var instanceName = setupInstanceVM.InstanceVM.NameKey;
+            var bossName = setupInstanceVM.BossUnitVM.NameKey;
+            var headerData = new UITextData(headerKey, instanceName, bossName);
 
             headerText.SetTextParams(headerData);
 
@@ -114,14 +117,30 @@ namespace Game.Instances
             // squad
             squadUnitsContainer.Init(setupInstanceVM, disp);
 
-            // boss
-            bossNameText.SetTextParams(setupInstanceVM.BossUnitVM.NameKey);
-
-            setupInstanceVM.CompleteChance
-                .Subscribe(x => completeChanceText.SetTextParams(x))
+            setupInstanceVM.CompleteChanceStr
+                .Subscribe(CompleteChanceChangedCallback)
                 .AddTo(disp);
 
+            // boss
+            var image = await setupInstanceVM.BossUnitVM.LoadImage(ct);
+
+            if (ct.IsCancellationRequested) return;
+
+            bossImage.sprite = image;
+
             await bossThreatsContainer.Init(setupInstanceVM.ThreatsVM, disp, ct);
+        }
+
+        private void CompleteChanceChangedCallback()
+        {
+            var chance = setupInstanceVM.CompleteChance.Value;
+            var chanceColor = chanceGradient.Evaluate(chance);
+
+            startButton.SetInteractableState(chance > 0);
+            completeChanceText.SetTextParams(setupInstanceVM.CompleteChanceStr.Value);
+
+            chanceLabelText.SetColor(chanceColor);
+            completeChanceText.SetColor(chanceColor);
         }
 
         private void SelectTabCallback(ContentTab contentTab)

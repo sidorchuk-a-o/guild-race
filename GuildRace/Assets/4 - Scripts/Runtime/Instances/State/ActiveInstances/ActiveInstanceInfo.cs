@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using AD.ToolsCollection;
 using UniRx;
+using UnityEngine;
 
 namespace Game.Instances
 {
@@ -72,7 +74,9 @@ namespace Game.Instances
 
         public void SetCompleteChance(float value)
         {
-            completeChance.Value = value;
+            this.LogMsg($"Complete Chance: {Mathf.RoundToInt(value * 100f)}%");
+
+            completeChance.Value = Mathf.Max(value, 0);
         }
 
         public void SetResult(CompleteResult value)

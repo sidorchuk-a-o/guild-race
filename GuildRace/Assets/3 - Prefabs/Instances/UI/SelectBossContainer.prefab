@@ -3654,7 +3654,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 744099708921734088, guid: ba256157eb8cccd4dabd91276ce2d91a, type: 3}
       propertyPath: m_text
-      value: Start Instance Button
+      value: Setup Instance Button
       objectReference: {fileID: 0}
     - target: {fileID: 744099708921734088, guid: ba256157eb8cccd4dabd91276ce2d91a, type: 3}
       propertyPath: m_sharedMaterial
@@ -3702,7 +3702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3550341038840007377, guid: ba256157eb8cccd4dabd91276ce2d91a, type: 3}
       propertyPath: localizeKey.value
-      value: INSTANCES/START_INSTANCE_BTN
+      value: INSTANCES/SETUP_INSTANCE_BTN
       objectReference: {fileID: 0}
     - target: {fileID: 3958239116736840920, guid: ba256157eb8cccd4dabd91276ce2d91a, type: 3}
       propertyPath: m_SizeDelta.x

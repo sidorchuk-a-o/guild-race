@@ -1,11 +1,10 @@
 ﻿using System.Threading;
+using Cysharp.Threading.Tasks;
+using AD.UI;
 using AD.Services.Router;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 using VContainer;
 
 namespace Game.Instances
@@ -17,15 +16,16 @@ namespace Game.Instances
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
+        [SerializeField] private UIText guildRankText;
         [Space]
         [SerializeField] private ThreatsContainer threatsContainer;
 
         [Header("Instance")]
         [SerializeField] private GameObject instanceContainer;
         [Space]
-        [SerializeField] private Image backgroundImage;
-        [SerializeField] private Color otherInstanceColor;
-        [SerializeField] private Color currentInstanceColor;
+        [SerializeField] private UIStates blockState;
+        [SerializeField] private string hasInstanceKey = "hasInstance";
+        [SerializeField] private string hasGroupKey = "hasGroup";
 
         private ActiveInstanceVM activeInstanceVM;
 
@@ -46,6 +46,7 @@ namespace Game.Instances
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
             specNameText.SetTextParams(characterVM.SpecVM.NameKey);
             itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
+            guildRankText.SetTextParams(characterVM.GuildRankName.Value);
 
             // instance
             ViewModel.CharacterVM.InstanceVM
@@ -60,12 +61,9 @@ namespace Game.Instances
         {
             var hasInstance = instanceVM != null;
             var sameInstance = hasInstance && instanceVM.Id == activeInstanceVM.Id;
+            var stateName = hasInstance ? sameInstance ? hasGroupKey : hasInstanceKey : "default";
 
-            instanceContainer.SetActive(hasInstance);
-
-            backgroundImage.color = sameInstance
-                ? currentInstanceColor
-                : otherInstanceColor;
+            blockState.SetState(stateName);
         }
     }
 }

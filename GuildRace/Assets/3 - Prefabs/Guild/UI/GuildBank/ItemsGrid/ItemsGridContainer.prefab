@@ -101,7 +101,8 @@ PrefabInstance:
       value: ItemsGridContainer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2948241746478149519, guid: 9a6be6aba2e90f143aff8f5576d85ed7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6be6aba2e90f143aff8f5576d85ed7, type: 3}

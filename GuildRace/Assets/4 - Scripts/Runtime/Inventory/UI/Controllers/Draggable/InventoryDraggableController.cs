@@ -1,5 +1,6 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
+using Game.UI;
 using Game.Input;
 using Cysharp.Threading.Tasks;
 using System;
@@ -10,7 +11,7 @@ using VContainer;
 
 namespace Game.Inventory
 {
-    public class InventoryDraggableController : MonoBehaviour
+    public class InventoryDraggableController : UIComponent<InventoryDraggableController>
     {
         private const string placeReadyState = "placeReady";
         private const string stackReadyState = "stackReady";
@@ -60,8 +61,10 @@ namespace Game.Inventory
             rollbackHandlers.ForEach(resolver.Inject);
         }
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             previewDefaultParent = pickedGridPreview.transform.parent;
         }
 

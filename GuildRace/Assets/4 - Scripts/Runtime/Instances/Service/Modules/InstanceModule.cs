@@ -197,6 +197,49 @@ namespace Game.Instances
 
         private void UpdateCompleteChance()
         {
+            var chance = CalcChance();
+            var setupInstance = state.SetupInstance;
+
+            setupInstance.SetCompleteChance(chance);
+        }
+
+        public float CalcChanceDiff(AddItemArgs args)
+        {
+            var setupInstance = state.SetupInstance;
+
+            if (setupInstance == null)
+            {
+                return 0f;
+            }
+
+            var currentChance = setupInstance.CompleteChance.Value;
+
+            var newChance = args.CharacterId.IsNullOrEmpty()
+                ? CalcMaxSquadChance(args)
+                : CalcChance(args);
+
+            return newChance - currentChance;
+        }
+
+        private float CalcMaxSquadChance(AddItemArgs args)
+        {
+            if (state.SetupInstance.Squad.IsNullOrEmpty())
+            {
+                return 0f;
+            }
+
+            return state.SetupInstance.Squad.Max(x =>
+            {
+                return CalcChance(new AddItemArgs
+                {
+                    CharacterId = x.CharactedId,
+                    ConsumablesId = args.ConsumablesId
+                });
+            });
+        }
+
+        private float CalcChance(AddItemArgs args = null)
+        {
             var setupInstance = state.SetupInstance;
             var chanceParams = instancesConfig.CompleteChanceParams.GetParams(setupInstance.Instance.Type);
 
@@ -220,7 +263,7 @@ namespace Game.Instances
             var healthMod = chanceParams.HealthMod;
             var powerMod = chanceParams.PowerMod;
 
-            var squadData = setupInstance.Squad.Aggregate(new SquadChanceParams(setupInstance), (data, unit) =>
+            var squadData = setupInstance.Squad.Aggregate(new SquadChanceParams(setupInstance), (chanceParams, unit) =>
             {
                 // character
                 var character = guildService.Characters[unit.CharactedId];
@@ -236,8 +279,8 @@ namespace Game.Instances
                 var equipHealth = equipItems.Sum(x => x.CharacterParams.Health);
                 var equipPower = equipItems.Sum(x => x.CharacterParams.Power);
 
-                data.Health += specParams.Health + equipHealth;
-                data.Power += specParams.Power + equipPower;
+                chanceParams.Health += specParams.Health + equipHealth;
+                chanceParams.Power += specParams.Power + equipPower;
 
                 equipItems.ReleaseListPool();
 
@@ -250,10 +293,25 @@ namespace Game.Instances
                     var mechanicId = consumableItem.MechanicId;
                     var mechanicHandler = instancesService.GetConsumableHandler(mechanicId);
 
-                    mechanicHandler.Invoke(consumableItem, data);
+                    mechanicHandler.Invoke(consumableItem, chanceParams);
                 }
 
-                return data;
+                // Args
+                if (args != null && character.Id == args.CharacterId)
+                {
+                    var item = inventoryService.GetItem(args.ConsumablesId);
+                    var consumableItem = item as ConsumablesItemInfo;
+
+                    if (unit.Bag.CheckPossibilityOfPlacement(item))
+                    {
+                        var mechanicId = consumableItem.MechanicId;
+                        var mechanicHandler = instancesService.GetConsumableHandler(mechanicId);
+
+                        mechanicHandler.Invoke(consumableItem, chanceParams);
+                    }
+                }
+
+                return chanceParams;
             });
 
             // health chance
@@ -265,9 +323,7 @@ namespace Game.Instances
             var powerChance = (int)((squadData.Power - bossPower) / powerMod.CharactersMod) * powerMod.TotalMod;
 
             // chance
-            var chance = squadCountChance + resolvedThreatsChance + healthChance + powerChance + squadData.ConsumableChance;
-
-            setupInstance.SetCompleteChance(chance / 100f);
+            return (squadCountChance + resolvedThreatsChance + healthChance + powerChance + squadData.ConsumableChance) / 100f;
         }
 
         public async UniTask CompleteSetupAndStartInstance()

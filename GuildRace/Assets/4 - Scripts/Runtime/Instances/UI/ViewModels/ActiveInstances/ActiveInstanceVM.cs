@@ -9,7 +9,7 @@ namespace Game.Instances
     public class ActiveInstanceVM : ViewModel
     {
         private readonly ActiveInstanceInfo info;
-        private readonly ReactiveProperty<string> completeChance = new();
+        private readonly ReactiveProperty<string> completeChanceStr = new();
 
         public string Id { get; }
 
@@ -21,7 +21,9 @@ namespace Game.Instances
 
         public TimerVM TimerVM { get; }
         public UIStateVM ResultStateVM { get; }
-        public IReadOnlyReactiveProperty<string> CompleteChance => completeChance;
+        public IReadOnlyReactiveProperty<float> CompleteChance { get; }
+        public IReadOnlyReactiveProperty<string> CompleteChanceStr => completeChanceStr;
+
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
 
         public InstanceRewardsVM RewardsVM { get; }
@@ -37,6 +39,7 @@ namespace Game.Instances
             BossUnitVM = new(info.BossUnit, info.Instance.Id, instancesVMF);
             ThreatsVM = new(info.Threats, instancesVMF);
             SquadVM = new(info.Instance.Type, info.Squad, instancesVMF);
+            CompleteChance = info.CompleteChance;
             RewardsVM = GetRewards(info, instancesVMF);
             ResultStateVM = new();
 
@@ -83,11 +86,7 @@ namespace Game.Instances
 
         private void ChanceChangedCallback(float chance)
         {
-#if !UNITY_EDITOR
-            chance = Mathf.Max(chance, 0);
-#endif
-
-            completeChance.Value = $"{Mathf.RoundToInt(chance * 100)}%";
+            completeChanceStr.Value = $"{Mathf.RoundToInt(chance * 100)}%";
         }
     }
 }

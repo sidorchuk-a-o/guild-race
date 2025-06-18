@@ -29,5 +29,6 @@ namespace Game.Instances
         int CompleteActiveInstance(string activeInstanceId);
 
         bool CheckUnitCooldown(int unitId, int instanceId);
+        float CalcChanceDiff(AddItemArgs args);
     }
 }

@@ -137,6 +137,11 @@ namespace Game.Instances
             return instanceModule.CompleteActiveInstance(activeInstanceId);
         }
 
+        public float CalcChanceDiff(AddItemArgs args)
+        {
+            return instanceModule.CalcChanceDiff(args);
+        }
+
         // == Unit Cooldown ==
 
         private void TryResetUnitsCooldown()

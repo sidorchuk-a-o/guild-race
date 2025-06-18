@@ -45,7 +45,7 @@ namespace Game.UI
 
         public void UpdateBackground()
         {
-            if (image.sprite == null) return;
+            if (image == null || image.sprite == null) return;
 
             var spriteAspect = image.sprite.rect.width / image.sprite.rect.height;
             var rectAspect = rectTransform.rect.width / rectTransform.rect.height;
@@ -79,5 +79,5 @@ namespace Game.UI
 
             image.preserveAspect = true;
         }
-    } 
+    }
 }

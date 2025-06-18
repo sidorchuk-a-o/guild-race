@@ -12,6 +12,7 @@ namespace Game.Instances
         [Header("Consumables")]
         [SerializeField] private RarityComponent rarityComponent;
         [SerializeField] private TooltipItemStackComponent stackComponent;
+        [SerializeField] private ConsumableChanceDiffComponent consumableChanceDiffComponent;
         [Space]
         [SerializeField] private RectTransform mechanicContainerRoot;
         [SerializeField] private ConsumableMechanicsUIParams mechanicsUIParams;
@@ -35,6 +36,11 @@ namespace Game.Instances
 
             stackComponent.Init(context, disp);
             rarityComponent.Init(dataVM.RarityVM);
+
+            if (consumableChanceDiffComponent)
+            {
+                consumableChanceDiffComponent.Init(context);
+            }
 
             if (mechanicContainer)
             {

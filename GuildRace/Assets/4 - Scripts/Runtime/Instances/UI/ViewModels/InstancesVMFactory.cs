@@ -261,5 +261,12 @@ namespace Game.Instances
         {
             return instancesService.CheckUnitCooldown(unitId, instanceId);
         }
+
+        public int CalcChanceDiff(AddItemArgs args)
+        {
+            var diff = instancesService.CalcChanceDiff(args);
+
+            return Mathf.RoundToInt(Mathf.Max(0, diff * 100f));
+        }
     }
 }
