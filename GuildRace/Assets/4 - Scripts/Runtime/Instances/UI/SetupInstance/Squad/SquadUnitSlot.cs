@@ -1,7 +1,7 @@
-﻿using System.Threading;
+﻿using AD.UI;
 using AD.ToolsCollection;
-using AD.UI;
 using Game.Inventory;
+using System.Threading;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -19,6 +19,7 @@ namespace Game.Instances
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [SerializeField] private ThreatsContainer threatsContainer;
+        [SerializeField] private ChanceDiffContainer chanceDiffContainer;
         [SerializeField] private ItemsGridContainer bagContainer;
 
         private readonly CompositeDisp unitDisp = new();
@@ -68,6 +69,7 @@ namespace Game.Instances
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
                 bagContainer.Init(squadUnitVM.BagVM, unitDisp);
+                chanceDiffContainer.Init(squadUnitVM, unitDisp);
 
                 await threatsContainer.Init(squadUnitVM.ResolvedThreatsVM, unitDisp, token);
             }
@@ -78,6 +80,8 @@ namespace Game.Instances
             }
 
             characterItem.SetActive(hasUnit);
+
+            SubscribeToDraggableController(unitDisp);
         }
 
         private void SelectCallback()
@@ -86,6 +90,29 @@ namespace Game.Instances
             {
                 instancesVMF.TryRemoveCharacterFromSquad(SquadUnitVM.CharactedVM.Id);
             }
+        }
+
+        private void SubscribeToDraggableController(CompositeDisp disp)
+        {
+            var draggableController = InventoryDraggableController.GetComponent();
+
+            draggableController.OnPickupItem
+                .Subscribe(OnPickupItemCallback)
+                .AddTo(disp);
+
+            draggableController.OnReleaseItem
+                .Subscribe(OnReleaseItemCallback)
+                .AddTo(disp);
+        }
+
+        private void OnPickupItemCallback()
+        {
+            threatsContainer.SetActive(false);
+        }
+
+        private void OnReleaseItemCallback()
+        {
+            threatsContainer.SetActive(true);
         }
     }
 }

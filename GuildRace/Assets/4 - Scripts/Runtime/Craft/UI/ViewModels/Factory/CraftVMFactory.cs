@@ -10,27 +10,27 @@ namespace Game.Craft
 {
     public class CraftVMFactory : VMFactory
     {
-        private readonly StoreConfig storeConfig;
         private readonly CraftConfig craftConfig;
 
         private readonly ICraftService craftService;
         private readonly IGuildService guildService;
 
         public InventoryVMFactory InventoryVMF { get; }
+        public StoreVMFactory StoreVMF { get; }
 
         public CraftVMFactory(
-            StoreConfig storeConfig,
             CraftConfig craftConfig,
             ICraftService craftService,
             IGuildService guildService,
-            InventoryVMFactory inventoryVMF)
+            InventoryVMFactory inventoryVMF,
+            StoreVMFactory storeVMF)
         {
-            this.storeConfig = storeConfig;
             this.craftConfig = craftConfig;
             this.craftService = craftService;
             this.guildService = guildService;
 
             InventoryVMF = inventoryVMF;
+            StoreVMF = storeVMF;
         }
 
         public VendorsVM GetVendors()
@@ -75,13 +75,6 @@ namespace Game.Craft
         }
 
         // == Recycle Items ==
-
-        public CurrencyVM GetCurrency(CurrencyKey currencyKey)
-        {
-            var data = storeConfig.Currencies.FirstOrDefault(x => x.Key == currencyKey);
-
-            return new CurrencyVM(data);
-        }
 
         public RecycleSlotVM GetRecycleSlot()
         {

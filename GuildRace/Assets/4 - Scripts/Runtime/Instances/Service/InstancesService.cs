@@ -34,6 +34,7 @@ namespace Game.Instances
         public IActiveInstancesCollection ActiveInstances => state.ActiveInstances;
 
         public ActiveInstanceInfo SetupInstance => state.SetupInstance;
+        public ActiveInstanceInfo CompletedInstance => state.CompletedInstance;
 
         public IObservable<ActiveInstanceInfo> OnInstanceCompleted => activeInstanceModule.OnInstanceCompleted;
         public IObservable<IEnumerable<RewardResult>> OnRewardsReceived => instanceModule.OnRewardsReceived;
@@ -134,6 +135,11 @@ namespace Game.Instances
         public int CompleteActiveInstance(string activeInstanceId)
         {
             return instanceModule.CompleteActiveInstance(activeInstanceId);
+        }
+
+        public float CalcChanceDiff(AddItemArgs args)
+        {
+            return instanceModule.CalcChanceDiff(args);
         }
 
         // == Unit Cooldown ==

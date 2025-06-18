@@ -6,16 +6,16 @@ namespace Game.Inventory
     [UnityEditor.CustomEditor(typeof(ItemSlotsUIParams))]
     public class ItemSlotsUIParamsEditor : MonoEditor
     {
-        private ItemSlotUIParamsList slotsParamsList;
+        private ItemSlotUIParamsList parametersList;
 
         public override void CreateGUI(VisualElement root)
         {
-            slotsParamsList = root.CreateElement<ItemSlotUIParamsList>();
+            parametersList = root.CreateElement<ItemSlotUIParamsList>();
         }
 
         public override void BindData(SerializedData data)
         {
-            slotsParamsList.BindProperty("slotsParams", data);
+            parametersList.BindProperty("parameters", data);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
 using AD.ToolsCollection;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using UniRx;
@@ -13,7 +14,6 @@ namespace Game.Instances
         private readonly UnitInfo info;
         private readonly InstancesVMFactory instancesVMF;
 
-        private readonly AddressableSprite imageRef;
         private readonly ReactiveProperty<ActiveInstanceVM> instanceVM = new();
 
         public int Id { get; }
@@ -21,6 +21,7 @@ namespace Game.Instances
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
         public AbilitiesVM AbilitiesVM { get; }
+        public InstanceRewardsVM RewardsVM { get; }
 
         public bool HasInstance => InstanceVM.Value != null;
         public IReadOnlyReactiveProperty<ActiveInstanceVM> InstanceVM => instanceVM;
@@ -37,8 +38,8 @@ namespace Game.Instances
             Id = info.Id;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
-            imageRef = info.ImageRef;
-            AbilitiesVM = new AbilitiesVM(info.Abilities, instancesVMF);
+            AbilitiesVM = new(info.Abilities, instancesVMF);
+            RewardsVM = instancesVMF.GetRewards(Id);
 
             CompletedCount = info.CompletedCount;
             MaxCompletedCount = instancesVMF.GetMaxCompletedCount(instanceId);
@@ -47,17 +48,17 @@ namespace Game.Instances
 
         protected override void InitSubscribes()
         {
-            imageRef.AddTo(this);
             AbilitiesVM.AddTo(this);
+            RewardsVM.AddTo(this);
 
             info.InstanceId
                 .Subscribe(InstanceChangedCallback)
                 .AddTo(this);
         }
 
-        public async UniTask<Sprite> LoadImage()
+        public async UniTask<Sprite> LoadImage(CancellationTokenSource ct)
         {
-            return await imageRef.LoadAsync();
+            return await instancesVMF.LoadImage(info.ImageRef, ct);
         }
 
         private void InstanceChangedCallback(string activeInstanceId)

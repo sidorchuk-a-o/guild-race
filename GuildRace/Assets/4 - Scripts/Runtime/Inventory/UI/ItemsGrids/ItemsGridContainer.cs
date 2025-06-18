@@ -20,6 +20,7 @@ namespace Game.Inventory
 
         [Header("Params")]
         [SerializeField] private ItemsGridUIParams gridParams;
+        [SerializeField] private ItemsTooltipUIParams tooltipParams;
 
         private static readonly Subject<ItemsGridContainer> onInited = new();
         private static readonly Subject<ItemsGridContainer> onInteracted = new();
@@ -59,10 +60,10 @@ namespace Game.Inventory
 
         public AssetReference GetItemTooltip(ItemVM itemVM)
         {
-            var itemType = itemVM.ItemType;
-            var itemParams = gridParams.GetParams(itemType);
+            var itemType = itemVM.DataVM.ItemType;
+            var itemParams = tooltipParams.GetParams(itemType);
 
-            return itemParams.ItemTooltipRef;
+            return itemParams.TooltipRef;
         }
 
         // == IPointer ==

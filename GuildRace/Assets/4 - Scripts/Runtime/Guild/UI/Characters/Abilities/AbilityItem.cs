@@ -24,7 +24,11 @@ namespace Game.Guild
             }
 
             iconImage.sprite = icon;
-            nameText.SetTextParams(abilityVM.NameKey);
+
+            if (nameText)
+            {
+                nameText.SetTextParams(abilityVM.NameKey);
+            }
 
             tooltip.Init(abilityVM);
         }

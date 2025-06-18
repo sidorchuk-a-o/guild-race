@@ -1,6 +1,7 @@
 ﻿using AD.Services.Pools;
 using AD.Services.ProtectedTime;
 using AD.Services.Router;
+using AD.Services.Store;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
@@ -25,14 +26,17 @@ namespace Game.Instances
         private readonly PoolContainer<GameObject> objectsPool;
 
         private GuildVMFactory guildVMF;
+        private StoreVMFactory storeVMF;
         private InventoryVMFactory inventoryVMF;
 
         private Dictionary<Type, ConsumableMechanicVMFactory> mechanicFactoriesDict;
+        private Dictionary<Type, RewardVMFactory> rewardFactoriesDict;
 
         public ITimeService TimeService { get; }
         public InstancesConfig InstancesConfig { get; }
 
         public GuildVMFactory GuildVMF => guildVMF ??= resolver.Resolve<GuildVMFactory>();
+        public StoreVMFactory StoreVMF => storeVMF ??= resolver.Resolve<StoreVMFactory>();
         public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
 
         public InstancesVMFactory(
@@ -82,18 +86,49 @@ namespace Game.Instances
 
         // == Consumables ==
 
-        public void SetConsumableMechanicFactories(List<ConsumableMechanicVMFactory> mechanicFactories)
+        public void SetConsumableMechanicFactories(IReadOnlyList<ConsumableMechanicVMFactory> mechanicFactories)
         {
             mechanicFactoriesDict = mechanicFactories.ToDictionary(x => x.Type, x => x);
             mechanicFactoriesDict.ForEach(x => resolver.Inject(x.Value));
         }
 
-        public ConsumableMechanicVM GetConsumableMechanic(ConsumablesItemInfo info)
+        public ConsumableMechanicVM GetConsumableMechanic(ConsumablesItemData data)
         {
-            var handler = instancesService.GetConsumableHandler(info.MechanicId);
+            var handler = instancesService.GetConsumableHandler(data.MechanicId);
             var factory = mechanicFactoriesDict[handler.GetType()];
 
-            return factory.GetValue(info, handler, this);
+            return factory.GetValue(data, handler, this);
+        }
+
+        // == Rewards ==
+
+        public void SetRewardFactories(IReadOnlyList<RewardVMFactory> rewardsFactories)
+        {
+            rewardFactoriesDict = rewardsFactories.ToDictionary(x => x.Type, x => x);
+            rewardFactoriesDict.ForEach(x => resolver.Inject(x.Value));
+        }
+
+        public RewardMechanicVM GetRewardMechanic(InstanceRewardData data)
+        {
+            var handler = instancesService.GetRewardHandler(data.MechanicId);
+            var factory = rewardFactoriesDict[handler.GetType()];
+
+            return factory.GetValue(data, handler, this);
+        }
+
+        public InstanceRewardsVM GetRewards(int unitId)
+        {
+            var rewards = InstancesConfig.GetUnitRewards(unitId);
+
+            return new InstanceRewardsVM(rewards, this);
+        }
+
+        public InstanceRewardsVM GetRewards(IReadOnlyList<RewardResult> result)
+        {
+            var rewardIds = result.Select(x => x.RewardId);
+            var rewards = InstancesConfig.GetRewards(rewardIds);
+
+            return new InstanceRewardsVM(rewards.ToList(), this);
         }
 
         // == Threats ==
@@ -198,6 +233,13 @@ namespace Game.Instances
             return new ActiveInstanceVM(activeInstance, this);
         }
 
+        public ActiveInstanceVM GetCompletedInstance()
+        {
+            var activeInstance = instancesService.CompletedInstance;
+
+            return new ActiveInstanceVM(activeInstance, this);
+        }
+
         public SquadCandidatesVM GetSquadCandidates()
         {
             var candidates = instancesService.GetSquadCandidates();
@@ -218,6 +260,13 @@ namespace Game.Instances
         public bool CheckUnitCooldown(int unitId, int instanceId)
         {
             return instancesService.CheckUnitCooldown(unitId, instanceId);
+        }
+
+        public int CalcChanceDiff(AddItemArgs args)
+        {
+            var diff = instancesService.CalcChanceDiff(args);
+
+            return Mathf.RoundToInt(Mathf.Max(0, diff * 100f));
         }
     }
 }

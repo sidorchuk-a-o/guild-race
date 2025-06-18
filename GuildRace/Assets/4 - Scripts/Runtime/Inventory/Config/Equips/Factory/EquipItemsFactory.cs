@@ -9,7 +9,7 @@ namespace Game.Inventory
         protected override ItemInfo CreateInfo(string id, ItemData data)
         {
             var equipData = data as EquipItemData;
-            var equip = new EquipItemInfo(id, equipData, ItemType);
+            var equip = new EquipItemInfo(id, equipData);
 
             equip.SetGridParams(InventoryConfig.EquipsParams.GridParams);
 

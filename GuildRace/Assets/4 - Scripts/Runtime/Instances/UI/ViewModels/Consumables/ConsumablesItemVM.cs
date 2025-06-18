@@ -1,5 +1,4 @@
-﻿using AD.Services.Localization;
-using AD.Services.Router;
+﻿using AD.Services.Router;
 using Game.Inventory;
 using Game.UI;
 
@@ -9,30 +8,27 @@ namespace Game.Instances
     {
         private readonly ConsumablesItemInfo info;
 
-        public LocalizeKey DescKey { get; }
-        public RarityDataVM RarityVM { get; }
-        public ConsumableMechanicVM MechanicVM { get; }
-
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
+
+        public new ConsumablesDataVM DataVM { get; }
 
         public ConsumablesItemVM(ConsumablesItemInfo info, InstancesVMFactory instancesVMF)
             : base(info, instancesVMF.InventoryVMF)
         {
             this.info = info;
 
-            DescKey = info.DescKey;
-
-            MechanicVM = instancesVMF.GetConsumableMechanic(info);
-            RarityVM = instancesVMF.InventoryVMF.GetRarity(info.Rarity);
             StackVM = new(info.Stack);
             StackableStateVM = new();
+
+            DataVM = instancesVMF.InventoryVMF.CreateItemData(DataId) as ConsumablesDataVM;
         }
 
         protected override void InitSubscribes()
         {
             base.InitSubscribes();
 
+            DataVM.AddTo(this);
             StackVM.AddTo(this);
             StackableStateVM.AddTo(this);
         }

@@ -32,6 +32,7 @@ namespace Game.Instances
         public bool HasGuaranteedCompleted => guaranteedCompletedCount > 0;
 
         public ActiveInstanceInfo SetupInstance { get; private set; }
+        public ActiveInstanceInfo CompletedInstance { get; private set; }
 
         public DateTime LastResetDay { get; private set; }
         public int LastResetWeek { get; private set; }
@@ -75,6 +76,13 @@ namespace Game.Instances
             SetupInstance = null;
 
             MarkAsDirty(true);
+        }
+
+        public void SetCompletedInstance(string activeInstanceId)
+        {
+            var activeInstance = activeInstances.GetInstance(activeInstanceId);
+
+            CompletedInstance = activeInstance;
         }
 
         public int RemoveActiveInstance(string activeInstanceId)

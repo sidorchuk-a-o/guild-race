@@ -7,7 +7,7 @@ namespace Game.Instances
 {
     public class SquadUnitVM : ViewModel
     {
-        public string Id { get; }
+        public string CharactedId { get; }
         public CharacterVM CharactedVM { get; }
 
         public ItemsGridVM BagVM { get; }
@@ -15,9 +15,9 @@ namespace Game.Instances
 
         public SquadUnitVM(SquadUnitInfo info, InstancesVMFactory instancesVMF)
         {
-            Id = info.CharactedId;
-
+            CharactedId = info.CharactedId;
             CharactedVM = instancesVMF.GuildVMF.GetCharacter(info.CharactedId);
+
             BagVM = instancesVMF.InventoryVMF.CreateItemsGrid(info.Bag);
             ResolvedThreatsVM = new ThreatsVM(info.ResolvedThreats, instancesVMF);
         }

@@ -16,13 +16,13 @@ namespace Game.Instances
 
         public override string SheetId => "185chfmtv9Q6kwfZp5aEcVKDK0s9oAtXJbDfOPk1Nkd0";
         public override string SheetName => "boss-data";
-        public override string SheetRange => "F2:H";
+        public override string SheetRange => "F2:I";
 
         protected override async void SaveCallback()
         {
             LockWizard();
 
-            instancesImporter ??= new(SheetId, "boss-data", "N2:W", typeof(InstanceData));
+            instancesImporter ??= new(SheetId, "boss-data", "O2:X", typeof(InstanceData));
             boosUnitsImporter ??= new(SheetId, "boss-units", "A:N", typeof(UnitData));
             abilitiesImporter ??= new(SheetId, "unit-abilities", "A:J", typeof(AbilityData));
 
@@ -37,10 +37,11 @@ namespace Game.Instances
         {
             base.UpdateData(seasonData, row);
 
-            // name key
             var nameKey = row["Name Key"].LocalizeKeyParse();
+            var descKey = row["Desc Key"].LocalizeKeyParse();
 
             seasonData.GetProperty("nameKey").SetValue(nameKey);
+            seasonData.GetProperty("descKey").SetValue(descKey);
 
             // instances
             ImportInstances(seasonData);

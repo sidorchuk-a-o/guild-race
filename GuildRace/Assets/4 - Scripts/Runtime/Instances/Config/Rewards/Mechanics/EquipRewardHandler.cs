@@ -22,6 +22,11 @@ namespace Game.Instances
             this.inventoryService = inventoryService;
         }
 
+        public int GetEquipId(InstanceRewardData reward)
+        {
+            return reward.MechanicParams[0].IntParse();
+        }
+
         public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
         {
             if (result != CompleteResult.Completed)
@@ -58,7 +63,7 @@ namespace Game.Instances
                 return null;
             }
 
-            var equipId = reward.MechanicParams[0].IntParse();
+            var equipId = GetEquipId(reward);
             var equipItem = inventoryService.Factory.CreateItem(equipId);
 
             inventoryService.TryPlaceItem(new PlaceInPlacementArgs
@@ -70,7 +75,8 @@ namespace Game.Instances
             return new EquipRewardResult
             {
                 ItemId = equipItem.Id,
-                ItemDataId = equipItem.DataId
+                ItemDataId = equipItem.DataId,
+                RewardId = reward.Id
             };
         }
     }

@@ -4,10 +4,10 @@
     {
         public int Chance { get; }
 
-        public ChanceConsumableVM(ConsumablesItemInfo info, ChanceConsumableHandler handler, InstancesVMFactory instancesVMF) 
-            : base(info, handler, instancesVMF)
+        public ChanceConsumableVM(ConsumablesItemData data, ChanceConsumableHandler handler, InstancesVMFactory instancesVMF) 
+            : base(data, handler, instancesVMF)
         {
-            Chance = handler.GetChance(info);
+            Chance = handler.GetChance(data);
         }
     }
 }

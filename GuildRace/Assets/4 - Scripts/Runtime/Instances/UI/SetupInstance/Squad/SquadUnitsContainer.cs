@@ -52,7 +52,7 @@ namespace Game.Instances
         {
             foreach (var unitSlot in unitSlots)
             {
-                if (unitSlot.HasUnit && unitSlot.SquadUnitVM.Id == squadUnitVM.Id)
+                if (unitSlot.HasUnit && unitSlot.SquadUnitVM.CharactedId == squadUnitVM.CharactedId)
                 {
                     unitSlot.SetSquadUnit(null, disp);
 

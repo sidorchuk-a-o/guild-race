@@ -7,9 +7,6 @@ namespace Game.Instances
     {
         public abstract Type Type { get; }
 
-        public abstract ConsumableMechanicVM GetValue(
-            ConsumablesItemInfo info,
-            ConsumableMechanicHandler handler,
-            InstancesVMFactory instancesVMF);
+        public abstract ConsumableMechanicVM GetValue(ConsumablesItemData data, ConsumableMechanicHandler handler, InstancesVMFactory instancesVMF);
     }
 }

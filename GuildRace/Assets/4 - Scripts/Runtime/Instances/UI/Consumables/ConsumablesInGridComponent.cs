@@ -25,7 +25,7 @@ namespace Game.Instances
                 .Subscribe(stackableStates.SetState)
                 .AddTo(disp);
 
-            rarityImage.color = consumablesVM.RarityVM.Color;
+            rarityImage.color = consumablesVM.DataVM.RarityVM.Color;
             itemStackComponent.Init(consumablesVM.StackVM, disp);
         }
     }

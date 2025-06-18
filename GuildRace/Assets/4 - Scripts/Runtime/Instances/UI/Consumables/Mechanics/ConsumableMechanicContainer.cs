@@ -1,4 +1,6 @@
-﻿using System.Threading;
+﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+
+using System.Threading;
 using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
@@ -10,20 +12,18 @@ namespace Game.Instances
     {
         [SerializeField] private UIText descText;
 
-        protected ConsumablesItemVM consumableVM;
-        private ConsumableMechanicVM mechanicVM;
+        protected ConsumablesDataVM dataVM;
 
-        public virtual async UniTask Init(ConsumablesItemVM consumableVM, CompositeDisp disp, CancellationTokenSource ct)
+        public virtual async UniTask Init(ConsumablesDataVM dataVM, CompositeDisp disp, CancellationTokenSource ct)
         {
-            this.consumableVM = consumableVM;
-            mechanicVM = consumableVM.MechanicVM;
+            this.dataVM = dataVM;
 
             descText.SetTextParams(GetDesc());
         }
 
         protected virtual UITextData GetDesc()
         {
-            return consumableVM.DescKey;
+            return dataVM.DescKey;
         }
     }
 }

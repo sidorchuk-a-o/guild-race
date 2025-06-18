@@ -19,7 +19,7 @@ namespace Game.Craft
         protected override ItemInfo CreateInfo(string id, ItemData data)
         {
             var reagentData = data as ReagentItemData;
-            var reagent = new ReagentItemInfo(id, reagentData, ItemType);
+            var reagent = new ReagentItemInfo(id, reagentData);
 
             reagent.SetGridParams(config.ReagentsParams.GridParams);
 

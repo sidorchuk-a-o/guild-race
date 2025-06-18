@@ -1,19 +1,19 @@
 ﻿using AD.Services.Localization;
 using AD.Services.Router;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Game.Inventory
 {
-    public class ItemDataVM : ViewModel
+    public abstract class ItemDataVM : ViewModel
     {
         private readonly ItemData data;
         private readonly InventoryVMFactory inventoryVMF;
 
-        private Sprite sprite;
-
         public int Id { get; }
         public LocalizeKey NameKey { get; }
+        public ItemType ItemType { get; }
 
         public ItemDataVM(ItemData data, InventoryVMFactory inventoryVMF)
         {
@@ -22,6 +22,7 @@ namespace Game.Inventory
 
             Id = data.Id;
             NameKey = data.NameKey;
+            ItemType = data.ItemType;
         }
 
         protected override void InitSubscribes()
@@ -30,14 +31,9 @@ namespace Game.Inventory
 
         // == Icon ==
 
-        public async UniTask<Sprite> LoadIcon()
+        public async UniTask<Sprite> LoadIcon(CancellationTokenSource ct)
         {
-            if (sprite == null)
-            {
-                sprite = await inventoryVMF.RentImage(data.IconRef);
-            }
-
-            return sprite;
+            return await inventoryVMF.RentImage(data.IconRef, ct.Token);
         }
     }
 }

@@ -10,15 +10,13 @@ namespace Game.Instances
         [Header("Threat Params")]
         [SerializeField] private ThreatDataItem threatItem;
 
-        private ThreatConsumableVM mechanicVM;
-
-        public override async UniTask Init(ConsumablesItemVM consumableVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(ConsumablesDataVM dataVM, CompositeDisp disp, CancellationTokenSource ct)
         {
-            mechanicVM = consumableVM.MechanicVM as ThreatConsumableVM;
-
-            await base.Init(consumableVM, disp, ct);
+            await base.Init(dataVM, disp, ct);
 
             if (ct.IsCancellationRequested) return;
+
+            var mechanicVM = dataVM.MechanicVM as ThreatConsumableVM;
 
             await threatItem.Init(mechanicVM.ThreatVM, disp, ct);
         }

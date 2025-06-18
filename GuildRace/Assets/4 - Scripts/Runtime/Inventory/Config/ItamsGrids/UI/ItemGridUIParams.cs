@@ -9,10 +9,8 @@ namespace Game.Inventory
     {
         [SerializeField] private ItemType itemType;
         [SerializeField] private AssetReference itemInGridRef;
-        [SerializeField] private AssetReference itemTooltipRef;
 
         public ItemType ItemType => itemType;
         public AssetReference ItemInGridRef => itemInGridRef;
-        public AssetReference ItemTooltipRef => itemTooltipRef;
     }
 }

@@ -4,14 +4,14 @@ namespace Game.Instances
 {
     public class HealthConsumableHandler : ConsumableMechanicHandler
     {
-        public int GetHealth(ConsumablesItemInfo item)
+        public int GetHealth(ConsumablesItemData data)
         {
-            return item.MechanicParams[0].IntParse();
+            return data.MechanicParams[0].IntParse();
         }
 
         public override void Invoke(ConsumablesItemInfo item, SquadChanceParams squadParams)
         {
-            var health = GetHealth(item);
+            var health = item.MechanicParams[0].IntParse();
 
             squadParams.Health += health * item.Stack.Value / item.Stack.Size;
         }

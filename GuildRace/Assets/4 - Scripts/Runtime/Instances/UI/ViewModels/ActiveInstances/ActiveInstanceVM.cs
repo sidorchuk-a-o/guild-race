@@ -9,7 +9,7 @@ namespace Game.Instances
     public class ActiveInstanceVM : ViewModel
     {
         private readonly ActiveInstanceInfo info;
-        private readonly ReactiveProperty<string> completeChance = new();
+        private readonly ReactiveProperty<string> completeChanceStr = new();
 
         public string Id { get; }
 
@@ -21,8 +21,12 @@ namespace Game.Instances
 
         public TimerVM TimerVM { get; }
         public UIStateVM ResultStateVM { get; }
-        public IReadOnlyReactiveProperty<string> CompleteChance => completeChance;
+        public IReadOnlyReactiveProperty<float> CompleteChance { get; }
+        public IReadOnlyReactiveProperty<string> CompleteChanceStr => completeChanceStr;
+
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
+
+        public InstanceRewardsVM RewardsVM { get; }
 
         public ActiveInstanceVM(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
         {
@@ -32,16 +36,24 @@ namespace Game.Instances
             IsReadyToComplete = info.IsReadyToComplete;
 
             InstanceVM = instancesVMF.GetInstance(info.Instance);
-            BossUnitVM = new UnitVM(info.BossUnit, info.Instance.Id, instancesVMF);
-            ThreatsVM = new ThreatsVM(info.Threats, instancesVMF);
-            SquadVM = new SquadUnitsVM(info.Instance.Type, info.Squad, instancesVMF);
-            ResultStateVM = new UIStateVM();
-
+            BossUnitVM = new(info.BossUnit, info.Instance.Id, instancesVMF);
+            ThreatsVM = new(info.Threats, instancesVMF);
+            SquadVM = new(info.Instance.Type, info.Squad, instancesVMF);
+            CompleteChance = info.CompleteChance;
+            RewardsVM = GetRewards(info, instancesVMF);
+            ResultStateVM = new();
 
             var startTime = info.StartTime;
-            var completeTime = startTime + info.BossUnit.CompleteTime;
+            var timerTime = info.BossUnit.CompleteTime;
 
-            TimerVM = new TimerVM(completeTime, instancesVMF.TimeService);
+            TimerVM = new TimerVM(startTime, timerTime, instancesVMF.TimeService);
+        }
+
+        private InstanceRewardsVM GetRewards(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
+        {
+            return info.Rewards != null
+                ? instancesVMF.GetRewards(info.Rewards)
+                : null;
         }
 
         protected override void InitSubscribes()
@@ -51,6 +63,7 @@ namespace Game.Instances
             ThreatsVM.AddTo(this);
             SquadVM.AddTo(this);
             TimerVM.AddTo(this);
+            RewardsVM?.AddTo(this);
             ResultStateVM.AddTo(this);
 
             info.Result
@@ -73,11 +86,7 @@ namespace Game.Instances
 
         private void ChanceChangedCallback(float chance)
         {
-#if !UNITY_EDITOR
-            chance = Mathf.Max(chance, 0);
-#endif
-
-            completeChance.Value = $"{Mathf.RoundToInt(chance * 100)}%";
+            completeChanceStr.Value = $"{Mathf.RoundToInt(chance * 100)}%";
         }
     }
 }

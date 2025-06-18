@@ -20,7 +20,7 @@ namespace Game.Inventory
 
         public static IObservable<WindowContainer> OnClosed => onClosed;
 
-        public ItemVM CurrentItemVM { get; private set; }
+        public ItemVM ItemVM { get; private set; }
         protected InventoryVMFactory InventoryVMF { get; private set; }
 
         [Inject]
@@ -46,12 +46,12 @@ namespace Game.Inventory
             windowDisp.Clear();
             windowDisp.AddTo(disp);
 
-            CurrentItemVM = InventoryVMF.CreateItem(itemId);
-            CurrentItemVM.AddTo(windowDisp);
+            ItemVM = InventoryVMF.CreateItem(itemId);
+            ItemVM.AddTo(windowDisp);
 
-            headerContainer.Title.SetTextParams(CurrentItemVM.NameKey);
+            headerContainer.Title.SetTextParams(ItemVM.DataVM.NameKey);
 
-            CurrentItemVM.IsRemoved
+            ItemVM.IsRemoved
                 .SilentSubscribe(ItemRemovedCallback)
                 .AddTo(windowDisp);
 

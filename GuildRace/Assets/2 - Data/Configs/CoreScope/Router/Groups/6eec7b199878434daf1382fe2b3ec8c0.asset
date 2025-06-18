@@ -75,7 +75,7 @@ MonoBehaviour:
   - id: 415989ec0cdb487298479647f350a277
     title: default
     asset:
-      m_AssetGUID: 45de087c7bd71aa4eaa4f42fe20b204d
+      m_AssetGUID: b3025289897854a469ad5aa1c77f2208
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 
@@ -113,6 +113,7 @@ MonoBehaviour:
   - {fileID: -8652000242002374250}
   - {fileID: 618499627384911689}
   - {fileID: -5429601353496565382}
+  - {fileID: 8467977470284476441}
   - {fileID: 941076224696289187}
   - {fileID: 3754611210617734579}
 --- !u!114 &11400000
@@ -263,6 +264,33 @@ MonoBehaviour:
     title: default
     asset:
       m_AssetGUID: f514723b62c0626489727f0a653d9a7a
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &8467977470284476441
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: InstanceRewards
+  m_EditorClassIdentifier: 
+  id: 8fd0df8348db4389a5dd48bb48cf9fd2
+  title: InstanceRewards
+  path: InstanceRewards
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 8ee872473592400799f1c2fe381d8745
+    title: default
+    asset:
+      m_AssetGUID: 45de087c7bd71aa4eaa4f42fe20b204d
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 

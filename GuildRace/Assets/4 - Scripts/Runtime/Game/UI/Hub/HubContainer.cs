@@ -4,6 +4,7 @@ using AD.ToolsCollection;
 using AD.UI;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
+using Game.Store;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -18,6 +19,8 @@ namespace Game
         [Space]
         [SerializeField] private UIText playerNicknameText;
         [SerializeField] private UIText playerGuildRankText;
+        [Space]
+        [SerializeField] private CurrenciesContainer currenciesContainer;
 
         private GuildVM guildVM;
 
@@ -32,6 +35,8 @@ namespace Game
             await base.Init(parameters, disp, ct);
 
             guildVM.AddTo(disp);
+
+            currenciesContainer.Init(disp, ct);
 
             await emblemContainer.Init(guildVM.EmblemVM);
 

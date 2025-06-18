@@ -9,16 +9,16 @@ namespace Game.Instances
     {
         private PowerConsumableVM mechanicVM;
 
-        public override async UniTask Init(ConsumablesItemVM consumableVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(ConsumablesDataVM dataVM, CompositeDisp disp, CancellationTokenSource ct)
         {
-            mechanicVM = consumableVM.MechanicVM as PowerConsumableVM;
+            mechanicVM = dataVM.MechanicVM as PowerConsumableVM;
 
-            await base.Init(consumableVM, disp, ct);
+            await base.Init(dataVM, disp, ct);
         }
 
         protected override UITextData GetDesc()
         {
-            return new(consumableVM.DescKey, mechanicVM.Power);
+            return new(dataVM.DescKey, mechanicVM.Power);
         }
     }
 }

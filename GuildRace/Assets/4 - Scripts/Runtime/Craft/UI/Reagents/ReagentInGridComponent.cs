@@ -24,7 +24,7 @@ namespace Game.Craft
                 .Subscribe(stackableStates.SetState)
                 .AddTo(disp);
 
-            rarityImage.color = reagentVM.RarityVM.Color;
+            rarityImage.color = reagentVM.DataVM.RarityVM.Color;
             itemStackComponent.Init(reagentVM.StackVM, disp);
         }
     }

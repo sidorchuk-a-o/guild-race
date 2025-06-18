@@ -10,7 +10,7 @@ namespace Game.Quests
 {
     public class QuestProgressContainer : MonoBehaviour
     {
-        [SerializeField] private UIText headerText;
+        [SerializeField] private GameObject headerContainer;
         [Space]
         [SerializeField] private Slider slider;
         [SerializeField] private UIText counterText;
@@ -19,7 +19,7 @@ namespace Game.Quests
         {
             var isActive = questVM.RequiredProgress > 1;
 
-            headerText.SetActive(isActive);
+            headerContainer.SetActive(isActive);
             gameObject.SetActive(isActive);
 
             if (isActive == false)

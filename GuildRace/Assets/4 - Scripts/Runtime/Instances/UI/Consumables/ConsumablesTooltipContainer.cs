@@ -12,6 +12,7 @@ namespace Game.Instances
         [Header("Consumables")]
         [SerializeField] private RarityComponent rarityComponent;
         [SerializeField] private TooltipItemStackComponent stackComponent;
+        [SerializeField] private ConsumableChanceDiffComponent consumableChanceDiffComponent;
         [Space]
         [SerializeField] private RectTransform mechanicContainerRoot;
         [SerializeField] private ConsumableMechanicsUIParams mechanicsUIParams;
@@ -25,16 +26,21 @@ namespace Game.Instances
             this.instancesVMF = instancesVMF;
         }
 
-        public override async UniTask Init(ItemVM itemVM, CompositeDisp disp, CancellationTokenSource ct)
+        public override async UniTask Init(TooltipContext context, CompositeDisp disp, CancellationTokenSource ct)
         {
-            await base.Init(itemVM, disp, ct);
+            await base.Init(context, disp, ct);
 
             if (ct.IsCancellationRequested) return;
 
-            var consumableVM = itemVM as ConsumablesItemVM;
+            var dataVM = context.DataVM as ConsumablesDataVM;
 
-            stackComponent.Init(consumableVM, disp);
-            rarityComponent.Init(consumableVM.RarityVM);
+            stackComponent.Init(context, disp);
+            rarityComponent.Init(dataVM.RarityVM);
+
+            if (consumableChanceDiffComponent)
+            {
+                consumableChanceDiffComponent.Init(context);
+            }
 
             if (mechanicContainer)
             {
@@ -42,7 +48,7 @@ namespace Game.Instances
                 mechanicContainer = null;
             }
 
-            var mechanicParams = mechanicsUIParams.GetParams(consumableVM.MechanicVM.Id);
+            var mechanicParams = mechanicsUIParams.GetParams(dataVM.MechanicVM.Id);
             var mechanicContainerGO = await instancesVMF.RentObjectAsync(mechanicParams.ContainerRef);
 
             if (ct.IsCancellationRequested)
@@ -56,7 +62,7 @@ namespace Game.Instances
             mechanicContainer.SetParent(transform);
             mechanicContainer.transform.SetSiblingIndex(mechanicContainerRoot.GetSiblingIndex());
 
-            await mechanicContainer.Init(consumableVM, disp, ct);
+            await mechanicContainer.Init(dataVM, disp, ct);
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Game.Instances
     {
         public int Id { get; }
         public LocalizeKey NameKey { get; }
+        public LocalizeKey DescKey { get; }
 
         public InstanceInfo Raid { get; }
         public IInstancesCollection Dungeons { get; }
@@ -16,6 +17,7 @@ namespace Game.Instances
         {
             Id = data.Id;
             NameKey = data.NameKey;
+            DescKey = data.DescKey;
 
             Raid = raid;
             Dungeons = new InstancesCollection(dungeons);

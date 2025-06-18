@@ -8,9 +8,10 @@ namespace Game.Craft
     {
         private readonly ReagentItemInfo info;
 
-        public RarityDataVM RarityVM { get; }
         public ItemStackVM StackVM { get; }
         public UIStateVM StackableStateVM { get; }
+
+        public new ReagentDataVM DataVM { get; }
 
         public ReagentItemVM(ReagentItemInfo info, InventoryVMFactory inventoryVMF) : base(info, inventoryVMF)
         {
@@ -18,14 +19,15 @@ namespace Game.Craft
 
             StackVM = new(info.Stack);
             StackableStateVM = new();
-            RarityVM = inventoryVMF.GetRarity(info.Rarity);
+
+            DataVM = inventoryVMF.CreateItemData(info.DataId) as ReagentDataVM;
         }
 
         protected override void InitSubscribes()
         {
             base.InitSubscribes();
 
-            RarityVM.AddTo(this);
+            DataVM.AddTo(this);
             StackVM.AddTo(this);
             StackableStateVM.AddTo(this);
         }

@@ -45,15 +45,15 @@ namespace Game.Instances
             headerText.SetTextParams(new(headerKey, seasonVM.NameKey));
             seasonDescText.SetTextParams(seasonVM.DescKey);
 
-            await InitInstances();
+            await InitInstances(ct);
         }
 
-        private async UniTask InitInstances()
+        private async UniTask InitInstances(CancellationTokenSource ct)
         {
             var tasks = ListPool<UniTask>.Get();
 
-            tasks.Add(raidItem.Init(seasonVM.RaidVM));
-            tasks.AddRange(dungeonItems.Select((x, i) => x.Init(seasonVM.DungeonsVM[i])));
+            tasks.Add(raidItem.Init(seasonVM.RaidVM, ct));
+            tasks.AddRange(dungeonItems.Select((x, i) => x.Init(seasonVM.DungeonsVM[i], ct)));
 
             await UniTask.WhenAll(tasks);
 

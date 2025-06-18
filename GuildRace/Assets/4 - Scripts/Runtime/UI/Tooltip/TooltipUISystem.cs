@@ -88,7 +88,7 @@ namespace Game.UI
 
             await tooltipContainer.Init(viewModel, tooltipDisp, token);
 
-            await UniTask.Yield(token.Token);
+            await UniTask.Yield();
 
             if (token.IsCancellationRequested)
             {

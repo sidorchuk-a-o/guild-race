@@ -49,11 +49,11 @@ namespace Game.Inventory
             {
                 var saveMeta = new SaveMeta(isSubObject, data);
 
-                foreach (var itemType in newItemTypes)
+                foreach (var (option, value) in newItemTypes)
                 {
                     var newItem = DataFactory.Create(typeof(ItemSlotUIParams), saveMeta);
 
-                    newItem.SetValue("itemType", (ItemType)itemType.value);
+                    newItem.SetValue("itemType", (ItemType)value);
                 }
 
                 data.MarkAsDirty();

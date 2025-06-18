@@ -1,7 +1,7 @@
-﻿using AD.ToolsCollection;
+﻿using System.Threading;
 using Cysharp.Threading.Tasks;
+using AD.ToolsCollection;
 using Game.Inventory;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -11,6 +11,9 @@ namespace Game.Craft
     public class ProductContainer : MonoBehaviour
     {
         [SerializeField] private Image iconImage;
+
+        [Header("Tooltip")]
+        [SerializeField] private InventoryTooltipComponent tooltipComponent;
 
         private CraftVMFactory craftVMF;
 
@@ -27,7 +30,7 @@ namespace Game.Craft
             productVM = craftVMF.GetRecipeProduct(recipeVM.Id);
             productVM.AddTo(disp);
 
-            var sprite = await productVM.LoadIcon();
+            var sprite = await productVM.LoadIcon(ct);
 
             if (ct.IsCancellationRequested)
             {
@@ -35,6 +38,7 @@ namespace Game.Craft
             }
 
             iconImage.sprite = sprite;
+            tooltipComponent.Init(productVM);
         }
     }
 }

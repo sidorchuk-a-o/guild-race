@@ -1,7 +1,8 @@
 ﻿using AD.ToolsCollection;
 using AD.UI;
-using Cysharp.Threading.Tasks;
 using System.Threading;
+using Cysharp.Threading.Tasks;
+using Game.Inventory;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,11 +11,17 @@ namespace Game.Craft
 {
     public class IngredientItemSlot : MonoBehaviour
     {
+        [Header("Reagent")]
         [SerializeField] private Image iconImage;
-        [Space]
         [SerializeField] private UIText countText;
-        [SerializeField] private string countFormat = "{0} / <b><size=+4>{1}</size></b>";
-        [SerializeField] private string countErrorFormat = "<color=#D92121>{0}</color> / <b><size=+4>{1}</size></b>";
+        [SerializeField] private Image rarityImage;
+        [Space]
+        [SerializeField] private InventoryTooltipComponent tooltipComponent;
+
+        [Header("Craft")]
+        [SerializeField] private UIText craftCountText;
+        [SerializeField] private string craftCountFormat = "{0} / <b><size=+4>{1}</size></b>";
+        [SerializeField] private string craftCountErrorFormat = "<color=#D92121>{0}</color> / <b><size=+4>{1}</size></b>";
 
         private readonly ReactiveProperty<bool> isAvailable = new();
 
@@ -23,23 +30,23 @@ namespace Game.Craft
 
         public IReadOnlyReactiveProperty<bool> IsAvailable => isAvailable;
 
-        public async UniTask Init(
-            IngredientVM ingredientVM,
-            int craftingCount,
-            CancellationTokenSource token,
-            CompositeDisp disp)
+        public async UniTask Init(IngredientVM ingredientVM, int craftingCount, CompositeDisp disp, CancellationTokenSource ct)
         {
             this.ingredientVM = ingredientVM;
 
             // icon
-            var sprite = await ingredientVM.ReagentVM.LoadIcon();
+            var reagentVM = ingredientVM.ReagentVM;
+            var sprite = await reagentVM.LoadIcon(ct);
 
-            if (token.IsCancellationRequested)
+            if (ct.IsCancellationRequested)
             {
                 return;
             }
 
             iconImage.sprite = sprite;
+            rarityImage.color = reagentVM.RarityVM.Color;
+            countText.SetTextParams(ingredientVM.Count);
+            tooltipComponent.Init(reagentVM);
 
             // reagent
             ingredientVM.ReagentCounterVM.Count
@@ -70,10 +77,10 @@ namespace Game.Craft
 
         private void UpdateCountText()
         {
-            var format = IsAvailable.Value ? countFormat : countErrorFormat;
+            var format = IsAvailable.Value ? craftCountFormat : craftCountErrorFormat;
             var countStr = string.Format(format, ingredientVM.ReagentCounterVM.Count.Value, ingridientsCount);
 
-            countText.SetTextParams(countStr);
+            craftCountText.SetTextParams(countStr);
         }
     }
 }

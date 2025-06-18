@@ -4,14 +4,14 @@ namespace Game.Instances
 {
     public class ChanceConsumableHandler : ConsumableMechanicHandler
     {
-        public int GetChance(ConsumablesItemInfo item)
+        public int GetChance(ConsumablesItemData data)
         {
-            return item.MechanicParams[0].IntParse();
+            return data.MechanicParams[0].IntParse();
         }
 
         public override void Invoke(ConsumablesItemInfo item, SquadChanceParams squadParams)
         {
-            var chance = GetChance(item);
+            var chance = item.MechanicParams[0].IntParse();
 
             squadParams.ConsumableChance += chance;
         }

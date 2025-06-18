@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: gridParams
       value: 
       objectReference: {fileID: 11400000, guid: 0d7225fb5451b6a4a9324de57bb25ee3, type: 2}
+    - target: {fileID: 1008375820773713277, guid: 9a6be6aba2e90f143aff8f5576d85ed7, type: 3}
+      propertyPath: tooltipParams
+      value: 
+      objectReference: {fileID: 11400000, guid: b3fa40c85e80bbd4d9e6d906a293611f, type: 2}
     - target: {fileID: 3443337779575621380, guid: 9a6be6aba2e90f143aff8f5576d85ed7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -97,7 +101,8 @@ PrefabInstance:
       value: ItemsGridContainer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2948241746478149519, guid: 9a6be6aba2e90f143aff8f5576d85ed7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6be6aba2e90f143aff8f5576d85ed7, type: 3}

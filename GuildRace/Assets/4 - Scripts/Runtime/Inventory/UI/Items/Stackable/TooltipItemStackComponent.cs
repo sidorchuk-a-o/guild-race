@@ -22,9 +22,9 @@ namespace Game.Inventory
             this.guildVMF = guildVMF;
         }
 
-        public void Init(ItemVM itemVM, CompositeDisp disp)
+        public void Init(TooltipContext context, CompositeDisp disp)
         {
-            if (itemVM is IStackableItemVM stackableItemVM)
+            if (context.ItemVM is IStackableItemVM stackableItemVM)
             {
                 stackVM = stackableItemVM.StackVM;
                 stackVM.ObserveChanged()
@@ -32,7 +32,7 @@ namespace Game.Inventory
                     .AddTo(disp);
             }
 
-            counterVM = guildVMF.CreateItemCounter(itemVM.DataId);
+            counterVM = guildVMF.CreateItemCounter(context.DataVM.Id);
             counterVM.AddTo(disp);
 
             counterVM.Count

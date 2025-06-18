@@ -8,6 +8,7 @@ namespace Game.Instances
     public class SeasonEditor : EntityEditor
     {
         private LocalizeKeyElement nameKeyField;
+        private LocalizeKeyElement descKeyField;
         private InstancesList instancesList;
 
         protected override void CreateTabItems(TabsContainer tabs)
@@ -26,6 +27,10 @@ namespace Game.Instances
             nameKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
             nameKeyField.BindProperty("nameKey", data);
             nameKeyField.previewOn = true;
+
+            descKeyField = root.CreateKey<LocalizeKey, string>() as LocalizeKeyElement;
+            descKeyField.BindProperty("descKey", data);
+            descKeyField.previewOn = true;
 
             root.CreateHeader("Instances");
 

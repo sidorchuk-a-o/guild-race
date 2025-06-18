@@ -7,12 +7,10 @@ namespace Game.Inventory
     public class ItemSlotUIParamsEditor : Element
     {
         private AddressableElement<GameObject> itemInSlotRefField;
-        private AddressableElement<GameObject> itemTooltipRefField;
 
         protected override void CreateElementGUI(Element root)
         {
             itemInSlotRefField = root.CreateAddressable<GameObject>();
-            itemTooltipRefField = root.CreateAddressable<GameObject>();
         }
 
         public override void BindData(SerializedData data)
@@ -20,7 +18,6 @@ namespace Game.Inventory
             base.BindData(data);
 
             itemInSlotRefField.BindProperty("itemInSlotRef", data);
-            itemTooltipRefField.BindProperty("itemTooltipRef", data);
         }
     }
 }
