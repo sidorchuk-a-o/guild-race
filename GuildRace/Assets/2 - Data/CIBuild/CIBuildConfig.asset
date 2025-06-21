@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b681520f6d27f6546980da25f6f74b9d, type: 2}
   - {fileID: 11400000, guid: 86f88b9e731605e438ea0238f8097c53, type: 2}
   - {fileID: 11400000, guid: 14bbe028a848a6e44999a7aaea018e80, type: 2}
-  buildOptionsType: AD.ContinuousIntegration.BuildOptions, AD.Core.Editor, Version=0.0.0.0,
+  buildOptionsType: AD.Yandex.YandexBuildOptions, AD.YandexGame.Editor, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null

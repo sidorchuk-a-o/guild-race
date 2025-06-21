@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   installers:
+  - {fileID: 11400000, guid: d0d63775726c6ef4e8bab6d457efd7df, type: 2}
   - {fileID: 11400000, guid: 0993ec21873134f4797a605178ecfb62, type: 2}
   - {fileID: 11400000, guid: c55ef3d0e83306e4ebbb3f26c999bb0d, type: 2}
   - {fileID: 11400000, guid: f207630debaf74c42b98e04a52541c9f, type: 2}

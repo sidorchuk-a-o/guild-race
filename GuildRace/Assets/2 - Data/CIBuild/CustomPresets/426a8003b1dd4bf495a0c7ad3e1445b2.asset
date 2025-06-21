@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4276b7ca3d764dddbd37c170d8461bf2
   title: Setup Splash Screen Settings
-  enableSplashScreen: 1
+  enableSplashScreen: 0
   enableUnityLogo: 0
 --- !u!114 &-5785803508509684008
 MonoBehaviour:
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 426a8003b1dd4bf495a0c7ad3e1445b2
   m_EditorClassIdentifier: 
   id: 426a8003b1dd4bf495a0c7ad3e1445b2
-  title: web_debug
+  title: yandex_debug
   isDefault: 0
   targetPlatform: 6
   buildSteps:
@@ -81,10 +81,27 @@ MonoBehaviour:
   - {fileID: 8164860962254544531}
   - {fileID: 7955726413595353729}
   - {fileID: -6557891761046138378}
+  - {fileID: 732589907880523787}
   - {fileID: 5042416502549561538}
   - {fileID: -1360293705116687730}
   - {fileID: -5785803508509684008}
+  - {fileID: 6429371528230052858}
   - {fileID: 8435994611861546833}
+--- !u!114 &732589907880523787
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207d74ed82e58a44f86283c99331009a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 39dfc49c94584ccca2c4e28247153adf
+  title: Yandex Game / Setup Yandex Game Settings
+  debugOn: 1
 --- !u!114 &5042416502549561538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,12 +118,27 @@ MonoBehaviour:
   title: Web GL / Setup Scripting Settings
   compilerConfiguration: 2
   codeGeneration: 1
-  wasmOptimization: 3
+  wasmOptimization: 4
   strippingLevel: 4
   totalMemoty: 32
   compressionFormat: 0
+  decompressionFallback: 0
   debugSymbolsMode: 2
   exceptionSupport: 3
+--- !u!114 &6429371528230052858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a209c21535a4419e2fddcf85de503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 85c1cd1f1de04535b2d7887cde1402f8
+  title: Yandex Game / Restore Yandex Game Settings
 --- !u!114 &6612237508588584429
 MonoBehaviour:
   m_ObjectHideFlags: 1

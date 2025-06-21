@@ -1,3 +1,6 @@
 [submodule "GuildRace/Assets/_Submodules/GameCore"]
 	path = GuildRace/Assets/_Submodules/GameCore
 	url = git@gitlab.com:almans-draft/submodules/gamecore.git
+[submodule "GuildRace/Assets/_Submodules/YandexGame"]
+	path = GuildRace/Assets/_Submodules/YandexGame
+	url = git@gitlab.com:almans-draft/submodules/yandex-game.git
