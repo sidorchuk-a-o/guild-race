@@ -20,3 +20,55 @@ MonoBehaviour:
   compressionType: 1
   singleFileOn: 1
   saveSources: []
+  saveProviders:
+  - {fileID: 7627287051017269390}
+  - {fileID: 7135650784407478463}
+  - {fileID: 8604653553323779106}
+--- !u!114 &7135650784407478463
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b854db66dcabb4880055bd6685d193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: f558fe57c3e641a4879f3a602ce69a41
+  title: Local
+  isEnabled: 1
+  isDebug: 1
+--- !u!114 &7627287051017269390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e7f2e1acdcce64ab76bd6d094b45b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5cf01258a01e4a9b985b98696f1d2557
+  title: Yandex Cloud
+  isEnabled: 1
+  isDebug: 0
+--- !u!114 &8604653553323779106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a5d982162da5408d2d88a7f80aaf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5319cf5f6db242b4a079a6725316f7d9
+  title: Editor
+  isEnabled: 1
+  isDebug: 1

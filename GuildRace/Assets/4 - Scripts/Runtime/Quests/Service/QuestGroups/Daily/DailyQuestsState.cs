@@ -17,7 +17,7 @@ namespace Game.Quests
         {
             LastResetDate = value;
 
-            MarkAsDirty();
+            MarkAsDirty(true);
         }
 
         // == Save ==

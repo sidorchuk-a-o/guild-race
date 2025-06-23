@@ -86,6 +86,8 @@ crashlytics-build.properties
 #Yandex Game
 **/Assets/YandexGame/WorkingData/Editor
 **/Assets/YandexGame/WorkingData/Editor.meta
+**/Assets/PluginYourGames/Editor/SavesEditorYG2.json
+**/Assets/PluginYourGames/Editor/SavesEditorYG2.json.meta
 
 #Samples
 **/Assets/Samples

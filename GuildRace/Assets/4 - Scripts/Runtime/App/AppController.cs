@@ -1,5 +1,6 @@
 ﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
+using AD.Yandex;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 
@@ -17,6 +18,8 @@ namespace Game
             this.LogMsg("Launch Game");
 
             await AppScope.Resolve<IGameService>().StartGame();
+
+            AppScope.Resolve<IYandexGameService>().GameReady();
 
             this.LogMsg("Game Launched");
         }

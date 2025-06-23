@@ -33,6 +33,7 @@ MonoBehaviour:
     - ACTk.Runtime
     - AD.Core
     - AD.ToolsCollection
+    - AD.YandexGame
     - Coffee.SoftMaskForUGUI
     - Coffee.UIParticle
     - DOTween.Modules
@@ -47,6 +48,7 @@ MonoBehaviour:
     - nl.jeffreylanters.web-requests
     - OSA.Core
     - OSA.Utilities
+    - PluginYourGames
     - UIEffect
     - UniRx
     - UniTask

@@ -340,7 +340,7 @@ namespace Game.Instances
 
             // mark as dirty
             guildService.StateMarkAsDirty();
-            state.MarkAsDirty();
+            state.MarkAsDirty(true);
 
             // start
             await router.PushAsync(
