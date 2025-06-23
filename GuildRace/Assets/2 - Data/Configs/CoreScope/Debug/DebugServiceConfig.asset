@@ -28,6 +28,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   writingLogInFile: 0
+  shortLog: 1
   receiveInfoLogs: 1
   receiveWarningLogs: 1
   receiveErrorLogs: 1
