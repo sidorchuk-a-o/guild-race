@@ -14,6 +14,10 @@ namespace Game.Inventory
         public override string SaveKey => InventorySM.key;
         public override SaveSource SaveSource => SaveSource.app;
 
+        public IReadOnlyCollection<ItemInfo> Items => items.Values;
+        public IReadOnlyCollection<ItemSlotInfo> ItemSlots => itemSlots.Values;
+        public IReadOnlyCollection<ItemsGridInfo> ItemsGrids => itemsGrids.Values;
+
         public InventoryState(InventoryConfig config, IObjectResolver resolver) : base(config, resolver)
         {
         }

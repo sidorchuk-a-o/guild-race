@@ -33,4 +33,13 @@ MonoBehaviour:
   - value: 0
     typeAssembly: Game.Input.InventoryInputModule, Game, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Instances.ActiveInstanceModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Input.InstancesInputModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Input.UIInputModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   exitByBackPress: 0

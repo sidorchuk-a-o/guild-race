@@ -7,6 +7,10 @@ namespace Game.Inventory
     {
         IInventoryFactory Factory { get; }
 
+        IReadOnlyCollection<ItemInfo> Items { get; }
+        IReadOnlyCollection<ItemSlotInfo> ItemSlots { get; }
+        IReadOnlyCollection<ItemsGridInfo> ItemsGrids { get; }
+
         ItemInfo GetItem(string id);
         ItemSlotInfo GetSlot(string id);
         ItemsGridInfo GetGrid(string id);

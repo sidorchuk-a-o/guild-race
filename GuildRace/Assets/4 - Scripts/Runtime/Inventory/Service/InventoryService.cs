@@ -14,6 +14,9 @@ namespace Game.Inventory
         private readonly InventoryFactory factory;
 
         public IInventoryFactory Factory => factory;
+        public IReadOnlyCollection<ItemInfo> Items => state.Items;
+        public IReadOnlyCollection<ItemSlotInfo> ItemSlots => state.ItemSlots;
+        public IReadOnlyCollection<ItemsGridInfo> ItemsGrids => state.ItemsGrids;
 
         public InventoryService(InventoryConfig config, IObjectResolver resolver)
         {

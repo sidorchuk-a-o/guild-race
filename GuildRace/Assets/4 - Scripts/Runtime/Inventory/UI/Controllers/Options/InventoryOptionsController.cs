@@ -157,7 +157,7 @@ namespace Game.Inventory
 
             var context = CreateOptionContext(selectedItemVM);
 
-            StartOptionProcess(OptionKeys.Common.discard, context);
+            StartOptionProcess(OptionKeys.Common.Discard, context);
         }
 
         private async void StartOptionProcess(OptionKey optionKey, OptionContext context)

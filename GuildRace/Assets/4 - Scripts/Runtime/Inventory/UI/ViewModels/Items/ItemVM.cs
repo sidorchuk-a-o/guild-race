@@ -50,15 +50,15 @@ namespace Game.Inventory
 
         public virtual OptionKey GetFastOptionKey()
         {
-            return OptionKeys.Common.inspect;
+            return OptionKeys.Common.Inspect;
         }
 
         public virtual List<OptionKey> GetOptionKeysPool()
         {
             var options = ListPool<OptionKey>.Get();
 
-            options.Add(OptionKeys.Common.inspect);
-            options.Add(OptionKeys.Common.discard);
+            options.Add(OptionKeys.Common.Inspect);
+            options.Add(OptionKeys.Common.Discard);
 
             return options;
         }
