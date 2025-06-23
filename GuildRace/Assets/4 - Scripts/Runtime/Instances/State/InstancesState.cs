@@ -105,7 +105,7 @@ namespace Game.Instances
         {
             guaranteedCompletedCount--;
 
-            MarkAsDirty();
+            MarkAsDirty(true);
         }
 
         public void SetResetDay(DateTime value)

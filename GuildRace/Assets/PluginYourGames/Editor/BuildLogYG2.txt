@@ -1,0 +1,3 @@
+Build path: D:/Repositories/AlmansDraft/Games/guild-race/GuildRace/Build/Guild Race 0 Debug
+Build number: 1
+PluginYG version: 2.0032

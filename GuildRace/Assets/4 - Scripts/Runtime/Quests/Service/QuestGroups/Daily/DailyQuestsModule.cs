@@ -56,7 +56,7 @@ namespace Game.Quests
 
             if (result)
             {
-                state.MarkAsDirty();
+                state.MarkAsDirty(true);
             }
 
             return result;

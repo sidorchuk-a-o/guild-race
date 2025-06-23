@@ -48,7 +48,7 @@ namespace Game.Guild
 
             SaveEmblem(guildEM.Emblem);
 
-            MarkAsDirty();
+            MarkAsDirty(true);
         }
 
         // == Emblem ==
@@ -65,7 +65,7 @@ namespace Game.Guild
             Emblem.SetBackground(emblemEM.Background);
             Emblem.SetBackgroundColors(emblemEM.BackgroundColors);
 
-            MarkAsDirty();
+            MarkAsDirty(true);
         }
 
         // == Character ==
@@ -79,7 +79,7 @@ namespace Game.Guild
 
             characters.Add(info);
 
-            MarkAsDirty();
+            MarkAsDirty(true);
         }
 
         public int RemoveCharacter(string characterId)
@@ -88,7 +88,7 @@ namespace Game.Guild
 
             characters.RemoveAt(index);
 
-            MarkAsDirty();
+            MarkAsDirty(true);
 
             return index;
         }
