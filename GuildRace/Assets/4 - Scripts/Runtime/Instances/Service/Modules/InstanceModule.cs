@@ -345,6 +345,7 @@ namespace Game.Instances
             // start
             await router.PushAsync(
                 pathKey: RouteKeys.Hub.activeInstances,
+                loadingKey: LoadingScreenKeys.loading,
                 parameters: RouteParams.FirstRoute);
         }
 
