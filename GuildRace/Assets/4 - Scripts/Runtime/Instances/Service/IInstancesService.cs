@@ -28,6 +28,7 @@ namespace Game.Instances
         UniTask CompleteSetupAndStartInstance();
         int CompleteActiveInstance(string activeInstanceId);
 
+        void SetBossTimeState(bool state);
         bool CheckUnitCooldown(int unitId, int instanceId);
         float CalcChanceDiff(AddItemArgs args);
     }

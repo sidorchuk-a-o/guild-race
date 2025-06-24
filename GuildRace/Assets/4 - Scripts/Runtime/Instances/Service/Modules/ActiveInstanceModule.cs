@@ -14,6 +14,8 @@ namespace Game.Instances
 
         private readonly Subject<ActiveInstanceInfo> onInstanceCompleted = new();
 
+        private bool bossTimeOn = true;
+
         public IObservable<ActiveInstanceInfo> OnInstanceCompleted => onInstanceCompleted;
 
         public ActiveInstanceModule(
@@ -24,6 +26,11 @@ namespace Game.Instances
             this.instancesService = instancesService;
             this.state = state;
             this.time = time;
+        }
+
+        public void SetBossTimeState(bool state)
+        {
+            bossTimeOn = state;
         }
 
         void IAppTickListener.OnTick(float deltaTime)
@@ -38,7 +45,11 @@ namespace Game.Instances
                 var startTime = activeInstance.StartTime;
                 var completeTime = startTime + activeInstance.BossUnit.CompleteTime;
 
+#if UNITY_EDITOR || DEBUG_ENABLED
+                if (completeTime >= time.TotalTime && bossTimeOn)
+#else
                 if (completeTime >= time.TotalTime)
+#endif
                 {
                     continue;
                 }
