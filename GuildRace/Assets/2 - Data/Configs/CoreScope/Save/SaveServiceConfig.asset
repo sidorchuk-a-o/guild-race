@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc1aa0938cac9148bd28cef79c7c9eb, type: 3}
   m_Name: SaveServiceConfig
   m_EditorClassIdentifier: 
-  location: 1
+  location: 0
   directory: 0
   path: main.state
   password: 6JOOmZUhVUZmdMn2
@@ -39,7 +39,7 @@ MonoBehaviour:
   id: f558fe57c3e641a4879f3a602ce69a41
   title: Local
   isEnabled: 1
-  isDebug: 1
+  isDebug: 0
 --- !u!114 &7627287051017269390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5cf01258a01e4a9b985b98696f1d2557
   title: Yandex Cloud
-  isEnabled: 1
+  isEnabled: 0
   isDebug: 0
 --- !u!114 &8604653553323779106
 MonoBehaviour:
@@ -71,4 +71,4 @@ MonoBehaviour:
   id: 5319cf5f6db242b4a079a6725316f7d9
   title: Editor
   isEnabled: 1
-  isDebug: 1
+  isDebug: 0
