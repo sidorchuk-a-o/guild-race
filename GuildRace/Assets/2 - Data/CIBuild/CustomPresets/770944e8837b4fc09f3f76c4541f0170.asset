@@ -95,9 +95,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 770944e8837b4fc09f3f76c4541f0170
   title: yandex_release
+  isDebug: 0
   isDefault: 0
   targetPlatform: 6
   buildSteps:
+  - {fileID: 6030362927420310062}
   - {fileID: 2823972838794254455}
   - {fileID: 4021475440023702441}
   - {fileID: -3270685337444918432}
@@ -185,6 +187,22 @@ MonoBehaviour:
   title: Overrides / Asset Import Overrides
   textureCompression: 0
   textureSize: 0
+--- !u!114 &6030362927420310062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a5325cb1c0d944486eed5cf221d82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: aa935a8aa12b4857beed5c59d7bb1064
+  title: Setup Debug Step
+  enabled: 0
+  define: DEBUG_ENABLED
 --- !u!114 &7025537128104776404
 MonoBehaviour:
   m_ObjectHideFlags: 1

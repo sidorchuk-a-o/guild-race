@@ -73,9 +73,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 426a8003b1dd4bf495a0c7ad3e1445b2
   title: yandex_debug
+  isDebug: 1
   isDefault: 0
   targetPlatform: 6
   buildSteps:
+  - {fileID: 509849051369505453}
   - {fileID: 6612237508588584429}
   - {fileID: -5428916809766908398}
   - {fileID: 8164860962254544531}
@@ -87,6 +89,22 @@ MonoBehaviour:
   - {fileID: -5785803508509684008}
   - {fileID: 6429371528230052858}
   - {fileID: 8435994611861546833}
+--- !u!114 &509849051369505453
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a5325cb1c0d944486eed5cf221d82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 135e8a31e79d4ad6bcab6d1a563e7412
+  title: Setup Debug Step
+  enabled: 1
+  define: DEBUG_ENABLED
 --- !u!114 &732589907880523787
 MonoBehaviour:
   m_ObjectHideFlags: 1

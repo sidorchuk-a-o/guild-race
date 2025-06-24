@@ -75,6 +75,11 @@ namespace Game.Instances
             return await Inited();
         }
 
+        public void SetBossTimeState(bool state)
+        {
+            activeInstanceModule.SetBossTimeState(state);
+        }
+
         // == Handlers ==
 
         private void InitHandlers()

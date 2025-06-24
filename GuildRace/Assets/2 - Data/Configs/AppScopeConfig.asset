@@ -35,8 +35,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ba3205a89d22c44b5ffbf974bedd4f, type: 3}
   m_Name: AppScopeConfig
   m_EditorClassIdentifier: 
-  gameScope: {fileID: -4987631307121609593}
-  coreScope: {fileID: 3015155927279485400}
+  installers:
+  - {fileID: 11400000, guid: 6b8bf5c4985ff0941aaa948bf59b4bef, type: 2}
+  - {fileID: 11400000, guid: a1ce6d180f9bbd14d8387f5024653f58, type: 2}
+  - {fileID: 11400000, guid: 2986275f340a989488ac06a4aa827361, type: 2}
+  - {fileID: 11400000, guid: d0d63775726c6ef4e8bab6d457efd7df, type: 2}
+  - {fileID: 11400000, guid: 60573fb7f8234f94d8f97ac10e3c0e77, type: 2}
+  - {fileID: 11400000, guid: 8fe6e2fecaf6b3e448c45116f7dc4a56, type: 2}
+  - {fileID: 11400000, guid: c68d96f58cf10aa4aa3bd5231fd3bc01, type: 2}
+  - {fileID: 11400000, guid: 74dcd21414abe6048a5bca0f29706c35, type: 2}
+  - {fileID: 11400000, guid: fec0fa7d28ec1b84bad9bdbac8e2e06b, type: 2}
+  - {fileID: 11400000, guid: 6315f26c093efc34cb1026dd83411949, type: 2}
+  - {fileID: 11400000, guid: 75a0d7024137ad542b423a6e5670f50b, type: 2}
+  - {fileID: 11400000, guid: 585e519317723fb4ea31fc4bff6905fe, type: 2}
+  - {fileID: 11400000, guid: c55ef3d0e83306e4ebbb3f26c999bb0d, type: 2}
+  - {fileID: 11400000, guid: 0993ec21873134f4797a605178ecfb62, type: 2}
+  - {fileID: 11400000, guid: f207630debaf74c42b98e04a52541c9f, type: 2}
+  - {fileID: 11400000, guid: 7ff3c547036672e4e87f65de22233f74, type: 2}
+  - {fileID: 11400000, guid: a5ea84e26db345440988f276d61699cf, type: 2}
+  - {fileID: 11400000, guid: 1536029b9c4d5d64c84b38bf5924cec6, type: 2}
+  - {fileID: 11400000, guid: 694e09a126f3d824ba82ccf45a482cfa, type: 2}
+  - {fileID: 11400000, guid: d3c63278869ccfb4d8ad25ed38a950bc, type: 2}
+  - {fileID: 11400000, guid: 5ce9c25ecc133fd4fb2561b08c1819c3, type: 2}
 --- !u!114 &3015155927279485400
 MonoBehaviour:
   m_ObjectHideFlags: 1
