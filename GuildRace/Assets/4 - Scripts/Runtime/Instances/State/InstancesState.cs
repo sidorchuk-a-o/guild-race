@@ -185,8 +185,8 @@ namespace Game.Instances
 
         private static SeasonInfo CreateSeason(SeasonData seasonData)
         {
-            var raidData = seasonData.Instances.FirstOrDefault(x => x.Type == InstanceTypes.raid);
-            var dungeonsData = seasonData.Instances.Where(x => x.Type == InstanceTypes.dungeon);
+            var raidData = seasonData.Instances.FirstOrDefault(x => x.Type == InstanceTypes.Raid);
+            var dungeonsData = seasonData.Instances.Where(x => x.Type == InstanceTypes.Dungeon);
 
             var raid = CreateInstance(raidData);
             var dungeons = dungeonsData.Select(x => CreateInstance(x));

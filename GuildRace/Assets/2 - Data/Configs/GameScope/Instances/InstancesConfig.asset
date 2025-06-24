@@ -693,7 +693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seasons:
   - id: 11
-    title: Season 1
+    title: "\u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+      \u0441\u0435\u0437\u043E\u043D\u0430"
     nameKey:
       value: INSTANCES/SEASON_1_TTL
     descKey:
@@ -704,9 +705,9 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_301_TTL
       descKey:
-        value: 
+        value: <none>
       imageRef:
-        m_AssetGUID: 249421553d71f914d8c3e9176a76836e
+        m_AssetGUID: 
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -721,7 +722,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20017_DSC
         imageRef:
-          m_AssetGUID: 6a27bae3419047b40a3b5274d22dc929
+          m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -770,7 +771,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20018_DSC
         imageRef:
-          m_AssetGUID: 6db2b27b47542264aa14da8f9909a2b0
+          m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -822,7 +823,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20019_DSC
         imageRef:
-          m_AssetGUID: 1de866f78e4839b469f6755efff8c5b5
+          m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -871,7 +872,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: c27155a869a969b45a5fb95dadb6308f
+        m_AssetGUID: 
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -886,7 +887,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20020_DSC
         imageRef:
-          m_AssetGUID: 43442c9ae588017439d567cf36b33476
+          m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -935,7 +936,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20021_DSC
         imageRef:
-          m_AssetGUID: 68b0d78d084b5eb44b7e4ae722e8d929
+          m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -985,7 +986,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20022_DSC
         imageRef:
-          m_AssetGUID: bacbd2261da67f9429196514731fc53a
+          m_AssetGUID: 
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1035,7 +1036,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: ed2504e6aa0b9f54dba32d567938a0a2
+        m_AssetGUID: 
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -1198,7 +1199,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: d35c15cb16c291040b703fa27dacf517
+        m_AssetGUID: 
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -1362,7 +1363,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: b70eea773b415104fb60173785a5c1ca
+        m_AssetGUID: 
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -2894,7 +2895,7 @@ MonoBehaviour:
   unitCooldownParams:
   - instanceType:
       value: 252
-    maxCompletedCount: 2
+    maxCompletedCount: 5
     isWeeklyReset: 1
   threats:
   - id: 11
@@ -3159,7 +3160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 301
   title: Currency
-  failedMod: 0.3
+  failedMod: 0.15
 --- !u!114 &2197165542769726586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3542,7 +3543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 303
   title: Reagents
-  failedMod: 0.5
+  failedMod: 0.3
 --- !u!114 &6580333437868225501
 MonoBehaviour:
   m_ObjectHideFlags: 1

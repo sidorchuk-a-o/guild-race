@@ -61,7 +61,7 @@ namespace Game.Instances
 
                 activeInstance.BossUnit.IncreaseCompletedCount();
 
-                if (activeInstance.Instance.Type == InstanceTypes.dungeon)
+                if (activeInstance.Instance.Type == InstanceTypes.Dungeon)
                 {
                     state.DecrementGuaranteedCompleted();
                 }
@@ -76,7 +76,7 @@ namespace Game.Instances
         private CompleteResult CalcResult(ActiveInstanceInfo instance)
         {
             if (state.HasGuaranteedCompleted &&
-                instance.Instance.Type == InstanceTypes.dungeon)
+                instance.Instance.Type == InstanceTypes.Dungeon)
             {
                 return CompleteResult.Completed;
             }
