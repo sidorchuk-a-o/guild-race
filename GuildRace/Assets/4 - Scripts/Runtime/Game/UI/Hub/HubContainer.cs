@@ -17,7 +17,7 @@ namespace Game
         [SerializeField] private EmblemContainer emblemContainer;
         [SerializeField] private UIText guildNameText;
         [Space]
-        [SerializeField] private UIText playerNicknameText;
+        [SerializeField] private UIText playerNameText;
         [SerializeField] private UIText playerGuildRankText;
         [Space]
         [SerializeField] private CurrenciesContainer currenciesContainer;
@@ -44,8 +44,8 @@ namespace Game
                 .Subscribe(x => guildNameText.SetTextParams(x))
                 .AddTo(disp);
 
-            guildVM.PlayerNickname
-                .Subscribe(x => playerNicknameText.SetTextParams(x))
+            guildVM.PlayerName
+                .Subscribe(x => playerNameText.SetTextParams(x))
                 .AddTo(disp);
 
             guildVM.PlayerRank

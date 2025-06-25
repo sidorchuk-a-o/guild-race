@@ -103,11 +103,20 @@ MonoBehaviour:
       Description: 
       Languages:
       - Guild Name
-      - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
+      - "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0433\u0438\u043B\u0438\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
-    - Term: GUILD/GUILD_NAME_PHR
+    - Term: GUILD/PLAYER_NAME_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0412\u0430\u0448\u0435 \u0438\u043C\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD/NAME_PHR
       TermType: 0
       Description: 
       Languages:
@@ -7643,7 +7652,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1750845244166
+    Google_LastUpdatedVersion: 1750857199016
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

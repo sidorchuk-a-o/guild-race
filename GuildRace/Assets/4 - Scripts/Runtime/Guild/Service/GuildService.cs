@@ -14,7 +14,8 @@ namespace Game.Guild
         private readonly RecruitingModule recruitingModule;
 
         public bool GuildExists => state.IsExists;
-        public IReadOnlyReactiveProperty<string> Name => state.Name;
+        public IReadOnlyReactiveProperty<string> GuildName => state.GuildName;
+        public IReadOnlyReactiveProperty<string> PlayerName => state.PlayerName;
         public EmblemInfo Emblem => state.Emblem;
 
         public ICharactersCollection Characters => state.Characters;

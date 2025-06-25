@@ -11,7 +11,8 @@ namespace Game.Guild
     public class CreateGuildContainer : UIContainer
     {
         [Header("Guild")]
-        [SerializeField] private UIInputField nameField;
+        [SerializeField] private UIInputField playerNameField;
+        [SerializeField] private UIInputField guildNameField;
         [SerializeField] private UIButton createButton;
 
         [Header("Emblem")]
@@ -27,8 +28,12 @@ namespace Game.Guild
 
         private void Awake()
         {
-            nameField.Value
-                .Subscribe(NameValueChanged)
+            guildNameField.Value
+                .Subscribe(UpdateCreateButtonState)
+                .AddTo(this);
+
+            playerNameField.Value
+                .Subscribe(UpdateCreateButtonState)
                 .AddTo(this);
 
             createButton.OnClick
@@ -36,16 +41,20 @@ namespace Game.Guild
                 .AddTo(this);
         }
 
-        private void NameValueChanged(string value)
+        private void UpdateCreateButtonState()
         {
-            createButton.SetInteractableState(value.IsValid());
+            var hasGuildName = guildNameField.Value.Value.IsValid();
+            var hasPlayerName = playerNameField.Value.Value.IsValid();
+
+            createButton.SetInteractableState(hasPlayerName && hasGuildName);
         }
 
         private void CreateCallback()
         {
             var guildEM = new GuildEM
             {
-                Name = nameField.Value.Value,
+                GuildName = guildNameField.Value.Value,
+                PlayerName = playerNameField.Value.Value,
                 Emblem = emblemParamsContainer.EmblemEM
             };
 

@@ -14,7 +14,7 @@ namespace Game.Guild
         public IReadOnlyReactiveProperty<string> GuildName { get; }
         public EmblemVM EmblemVM { get; }
 
-        public IReadOnlyReactiveProperty<string> PlayerNickname { get; }
+        public IReadOnlyReactiveProperty<string> PlayerName { get; }
         public IReadOnlyReactiveProperty<string> PlayerRank { get; }
 
         public IReadOnlyReactiveProperty<bool> RosterIsFull => rosterIsFull;
@@ -24,10 +24,10 @@ namespace Game.Guild
             this.guildConfig = guildConfig;
             this.guildService = guildService;
 
-            GuildName = guildService.Name;
+            GuildName = guildService.GuildName;
             EmblemVM = new(guildService.Emblem, guildConfig.EmblemParams);
 
-            PlayerNickname = new ReactiveProperty<string>("Player Nickname");
+            PlayerName = guildService.PlayerName;
             PlayerRank = guildService.GuildRanks.GuildMaster.Name;
         }
 

@@ -5,7 +5,8 @@ namespace Game.Guild
     public interface IGuildService
     {
         bool GuildExists { get; }
-        IReadOnlyReactiveProperty<string> Name { get; }
+        IReadOnlyReactiveProperty<string> GuildName { get; }
+        IReadOnlyReactiveProperty<string> PlayerName { get; }
         EmblemInfo Emblem { get; }
 
         ICharactersCollection Characters { get; }

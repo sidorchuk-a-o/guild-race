@@ -193,6 +193,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3888800870606628235}
     m_Modifications:
     - target: {fileID: 1819111818582051995, guid: 1b42567a7e5618e4bb328eb6d3989078, type: 3}
+      propertyPath: m_text
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819111818582051995, guid: 1b42567a7e5618e4bb328eb6d3989078, type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
@@ -441,6 +445,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 19c24cf31680dda4e96e9c3ab573e7ce, type: 3}
+    - target: {fileID: 6923440327628734172, guid: 0da5ebd724f532a45b3aeea80ea282eb, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8806553275053252236, guid: 0da5ebd724f532a45b3aeea80ea282eb, type: 3}
       propertyPath: m_SizeDelta.x
       value: -10
@@ -740,6 +748,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3888800870606628235}
     m_Modifications:
     - target: {fileID: 1819111818582051995, guid: 1b42567a7e5618e4bb328eb6d3989078, type: 3}
+      propertyPath: m_text
+      value: Name Label
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819111818582051995, guid: 1b42567a7e5618e4bb328eb6d3989078, type: 3}
       propertyPath: m_fontColor.b
       value: 0.9025
       objectReference: {fileID: 0}
@@ -957,6 +969,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 19c24cf31680dda4e96e9c3ab573e7ce, type: 3}
+    - target: {fileID: 6923440327628734172, guid: 0da5ebd724f532a45b3aeea80ea282eb, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8806553275053252236, guid: 0da5ebd724f532a45b3aeea80ea282eb, type: 3}
       propertyPath: m_SizeDelta.x
       value: -10
