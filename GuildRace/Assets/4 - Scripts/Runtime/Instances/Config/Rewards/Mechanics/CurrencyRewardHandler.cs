@@ -27,16 +27,16 @@ namespace Game.Instances
             return new CurrencyAmount(currencyKey, currencyValue);
         }
 
-        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
+        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, ActiveInstanceInfo instance)
         {
-            return rewards.Select(x => ApplyReward(x, result));
+            return rewards.Select(x => ApplyReward(x, instance));
         }
 
-        public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
+        public override RewardResult ApplyReward(InstanceRewardData reward, ActiveInstanceInfo instance)
         {
             var amount = GetCurrencyAmount(reward);
 
-            if (result != CompleteResult.Completed)
+            if (instance.Result.Value != CompleteResult.Completed)
             {
                 amount *= failedMod;
             }

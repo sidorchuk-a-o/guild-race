@@ -443,7 +443,7 @@ namespace Game.Instances
                 var rewards = rewardGroup.ToListPool();
                 var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
 
-                var groupResult = rewardHandler.ApplyRewards(rewards, instanceResult);
+                var groupResult = rewardHandler.ApplyRewards(rewards, instance);
 
                 rewardResults.AddRange(groupResult);
                 rewards.ReleaseListPool();

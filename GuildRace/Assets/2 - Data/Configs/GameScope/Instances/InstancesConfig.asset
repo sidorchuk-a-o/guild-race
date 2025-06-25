@@ -151,6 +151,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 302
   title: Equips
+  parameters:
+  - instanceType:
+      value: 252
+    guaranteedCount: 2
+    chanceCount: 1
+    chance: 0.4
+  - instanceType:
+      value: 251
+    guaranteedCount: 1
+    chanceCount: 0
+    chance: 0
 --- !u!114 &-6064010414650307704
 MonoBehaviour:
   m_ObjectHideFlags: 1

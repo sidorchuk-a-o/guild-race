@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AD.Services.Store;
 using AD.ToolsCollection;
 using UnityEngine.UIElements;
@@ -24,6 +25,8 @@ namespace Game.Instances
             failedModField.BindProperty("failedMod", data);
         }
 
+        // == Params Editor ==
+
         public override void CreateParamsEditor(VisualElement root, List<string> rewardParams)
         {
             root.ConvertToRow();
@@ -41,6 +44,22 @@ namespace Game.Instances
 
             currencyKeyElement.value = currencyKey;
             currencyLabel.text = currencyValue;
+        }
+
+        // == Parse Params ==
+
+        public override async Task ParseAndApplyParams(SerializedData data, string sheetParams, string sheetId)
+        {
+            var importer = sheetParams.ParseImporter(sheetId);
+
+            await importer.LoadData("Failed Mod");
+
+            importer.ImportData((i, row) =>
+            {
+                var failedMod = row["Failed Mod"].FloatParse();
+
+                data.GetProperty("failedMod").SetValue(failedMod);
+            });
         }
     }
 }

@@ -3,12 +3,15 @@ using System.Linq;
 using AD.ToolsCollection;
 using Game.Guild;
 using Game.Inventory;
+using UnityEngine;
 using VContainer;
 
 namespace Game.Instances
 {
     public class EquipRewardHandler : RewardHandler
     {
+        [SerializeField] private List<EquipRewardParams> parameters;
+
         private InventoryConfig inventoryConfig;
 
         private IGuildService guildService;
@@ -27,27 +30,37 @@ namespace Game.Instances
             return reward.MechanicParams[0].IntParse();
         }
 
-        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
+        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, ActiveInstanceInfo instance)
         {
-            if (result != CompleteResult.Completed)
+            if (instance.Result.Value != CompleteResult.Completed)
             {
                 yield break;
             }
 
-            var randomReward = rewards.RandomValue();
-            var rewardResult = ApplyReward(randomReward, result);
+            var rewardsParams = parameters.FirstOrDefault(x => x.InstanceType == instance.Instance.Type);
 
-            if (rewardResult == null)
+            var guaranteedRewards = rewards
+                .RandomValues(rewardsParams.GuaranteedCount);
+
+            var chanceRewards = rewards
+                .RandomValues(rewardsParams.ChanceCount)
+                .Where(x => RandUtils.CheckChance(rewardsParams.Chance));
+
+            var filteredRewards = guaranteedRewards.Concat(chanceRewards)
+                .Select(x => ApplyReward(x, instance))
+                .Where(x => x != null);
+
+            foreach (var reward in filteredRewards)
             {
-                yield break;
+                yield return reward;
             }
 
-            yield return rewardResult;
+            yield break;
         }
 
-        public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
+        public override RewardResult ApplyReward(InstanceRewardData reward, ActiveInstanceInfo instance)
         {
-            if (result != CompleteResult.Completed)
+            if (instance.Result.Value != CompleteResult.Completed)
             {
                 return null;
             }

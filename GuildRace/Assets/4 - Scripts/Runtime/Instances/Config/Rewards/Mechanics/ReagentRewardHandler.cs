@@ -38,14 +38,14 @@ namespace Game.Instances
             return reward.MechanicParams[1].IntParse();
         }
 
-        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, CompleteResult result)
+        public override IEnumerable<RewardResult> ApplyRewards(IReadOnlyList<InstanceRewardData> rewards, ActiveInstanceInfo instance)
         {
             return rewards
-                .Select(reward => ApplyReward(reward, result))
+                .Select(reward => ApplyReward(reward, instance))
                 .OfType<RewardResult>();
         }
 
-        public override RewardResult ApplyReward(InstanceRewardData reward, CompleteResult result)
+        public override RewardResult ApplyReward(InstanceRewardData reward, ActiveInstanceInfo instance)
         {
             var reagentCellTypes = craftConfig.ReagentsParams.GridParams.CellTypes;
             var reagentBank = guildService.BankTabs.FirstOrDefault(x =>
@@ -61,7 +61,7 @@ namespace Game.Instances
             var reagentId = GetReagentId(reward);
             var totalReagentCount = GetReagentCount(reward);
 
-            if (result != CompleteResult.Completed)
+            if (instance.Result.Value != CompleteResult.Completed)
             {
                 totalReagentCount = Mathf.RoundToInt(totalReagentCount * failedMod);
             }
