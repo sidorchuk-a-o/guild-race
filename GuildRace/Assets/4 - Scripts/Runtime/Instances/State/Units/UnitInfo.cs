@@ -11,6 +11,8 @@ namespace Game.Instances
     public class UnitInfo
     {
         private readonly ReactiveProperty<string> instanceId = new();
+        private readonly ReactiveProperty<int> completedCount = new();
+        private readonly ReactiveProperty<int> triesCount = new();
 
         public int Id { get; }
 
@@ -21,8 +23,9 @@ namespace Game.Instances
         public int CompleteTime { get; }
         public UnitParams UnitParams { get; }
 
-        public int CompletedCount { get; private set; }
         public int TotalCompletedCount { get; private set; }
+        public IReadOnlyReactiveProperty<int> CompletedCount => completedCount;
+        public IReadOnlyReactiveProperty<int> TriesCount => triesCount;
 
         public IReadOnlyCollection<AbilityData> Abilities { get; }
         public IReadOnlyCollection<ThreatId> Threats { get; }
@@ -47,21 +50,32 @@ namespace Game.Instances
             instanceId.Value = value;
         }
 
-        public void SetCompletedCountData(int totalCount, int currentCount)
+        public void SetCompletedCount(int totalCount, int count)
         {
             TotalCompletedCount = totalCount;
-            CompletedCount = currentCount;
+            completedCount.Value = count;
         }
 
         public void IncreaseCompletedCount()
         {
             TotalCompletedCount++;
-            CompletedCount++;
+            completedCount.Value++;
         }
 
-        public void ResetCompletedCount()
+        public void SetTriesCount(int value)
         {
-            CompletedCount = 0;
+            triesCount.Value = value;
+        }
+
+        public void IncreaseTriesCount()
+        {
+            triesCount.Value++;
+        }
+
+        public void ResetCompletedState()
+        {
+            triesCount.Value = 0;
+            completedCount.Value = 0;
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Game.Instances
         [SerializeField] private AbilitiesContainer unitAbilities;
         [SerializeField] private RewardsContainer unitRewardContainer;
         [Space]
+        [SerializeField] private UIText triesCountText;
         [SerializeField] private UIButton startInstanceButton;
 
         private readonly CompositeDisp unitDisp = new();
@@ -149,7 +150,30 @@ namespace Game.Instances
                 unitAbilities.Init(unitVM.AbilitiesVM, ct);
                 unitRewardContainer.Init(unitVM.RewardsVM, ct);
 
-                startInstanceButton.SetInteractableState(!unitVM.HasInstance && !unitVM.WaitResetCooldown);
+                unitVM.InstanceVM
+                    .SilentSubscribe(updateStartButtonState)
+                    .AddTo(unitDisp);
+
+                unitVM.TriesCount
+                    .SilentSubscribe(updateStartButtonState)
+                    .AddTo(unitDisp);
+
+                unitVM.CompletedCount
+                    .SilentSubscribe(updateStartButtonState)
+                    .AddTo(unitDisp);
+
+                updateStartButtonState();
+
+                void updateStartButtonState()
+                {
+                    startInstanceButton.SetInteractableState(!unitVM.HasInstance && unitVM.HasTries);
+
+                    var maxTriesCount = unitVM.CooldownParams.MaxTriesCount;
+                    var triesCount = maxTriesCount - unitVM.TriesCount.Value;
+
+                    triesCountText.SetActive(unitVM.HasTries && maxTriesCount > 0);
+                    triesCountText.SetTextParams(new(triesCountText.LocalizeKey, triesCount, maxTriesCount));
+                }
             }
         }
 

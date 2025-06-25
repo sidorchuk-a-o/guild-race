@@ -188,19 +188,27 @@ namespace Game.Instances
 
                 foreach (var bossUnit in bossUnits)
                 {
-                    bossUnit.ResetCompletedCount();
+                    bossUnit.ResetCompletedState();
                 }
             }
         }
 
-        public bool CheckUnitCooldown(int unitId, int instanceId)
+        public bool HasBossTries(int unitId, int instanceId)
         {
             var unit = Seasons.GetBossUnit(unitId);
             var instance = Seasons.GetInstance(instanceId);
             var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
 
-            return cooldownPatams != null
-                && cooldownPatams.MaxCompletedCount <= unit.CompletedCount;
+            var triesCount = unit.TriesCount.Value;
+            var maxTriesCount = cooldownPatams.MaxTriesCount;
+
+            var completedCount = unit.CompletedCount.Value;
+            var maxCompletedCount = cooldownPatams.MaxCompletedCount;
+
+            var hasTries = maxTriesCount <= 0 || maxTriesCount > 0 && triesCount < maxTriesCount;
+            var isCompleted = maxCompletedCount > 0 && completedCount >= maxCompletedCount;
+
+            return hasTries && !isCompleted;
         }
 
         // == Dispose ==

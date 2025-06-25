@@ -2768,6 +2768,16 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: INSTANCES/TRIES_COUNT_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u043F\u043E\u043F\u044B\u0442\u043E\u043A:
+        {[0]} / {[1]}"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: INSTANCES/INSTANCES_LIST_TTL
       TermType: 0
       Description: 
@@ -7633,7 +7643,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1750255483517
+    Google_LastUpdatedVersion: 1750845244166
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

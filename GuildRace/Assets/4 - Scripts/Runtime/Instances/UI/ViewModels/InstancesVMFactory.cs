@@ -247,19 +247,16 @@ namespace Game.Instances
             return new SquadCandidatesVM(candidates, this);
         }
 
-        public int GetMaxCompletedCount(int instanceId)
+        public UnitCooldownParams GetCooldownParams(int instanceId)
         {
             var instance = instancesService.Seasons.GetInstance(instanceId);
-            var cooldownParams = InstancesConfig.GetUnitCooldown(instance.Type);
 
-            return cooldownParams != null
-                ? cooldownParams.MaxCompletedCount
-                : 0;
+            return InstancesConfig.GetUnitCooldown(instance.Type);
         }
 
-        public bool CheckUnitCooldown(int unitId, int instanceId)
+        public bool HasBossTries(int unitId, int instanceId)
         {
-            return instancesService.CheckUnitCooldown(unitId, instanceId);
+            return instancesService.HasBossTries(unitId, instanceId);
         }
 
         public int CalcChanceDiff(AddItemArgs args)
