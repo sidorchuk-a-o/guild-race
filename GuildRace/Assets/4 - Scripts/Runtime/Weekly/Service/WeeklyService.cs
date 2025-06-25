@@ -1,7 +1,6 @@
 ﻿using AD.Services;
 using Cysharp.Threading.Tasks;
 using System;
-using UnityEngine;
 using VContainer;
 
 namespace Game.Weekly
@@ -12,6 +11,7 @@ namespace Game.Weekly
         private readonly WeeklyState state;
 
         public int CurrentWeek => state.CurrentWeek;
+        public int CurrentDayOfWeek => state.CurrentDayOfWeek;
 
         public WeeklyService(WeeklyConfig config, IObjectResolver resolver)
         {
@@ -32,14 +32,17 @@ namespace Game.Weekly
         private void TryResetWeek()
         {
             var currentDay = (DateTime.Today - new DateTime(2024, 1, 1)).TotalDays;
-            var currentWeek = Mathf.RoundToInt((float)currentDay / config.DaysCount);
+            var currentWeek = (int)currentDay / config.DaysCount;
 
-            if (currentWeek == state.CurrentWeek)
+            if (currentWeek != state.CurrentWeek)
             {
-                return;
+                state.SetWeek(currentWeek);
             }
 
-            state.SetWeek(currentWeek);
+            var firstDayOfWeek = currentWeek * config.DaysCount;
+            var currentDayOfWeek = (int)currentDay - firstDayOfWeek;
+
+            state.SetDayOfWeek(currentDayOfWeek);
         }
     }
 }

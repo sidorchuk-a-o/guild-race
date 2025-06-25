@@ -10,6 +10,7 @@ namespace Game.Weekly
         public override SaveSource SaveSource => SaveSource.app;
 
         public int CurrentWeek { get; private set; }
+        public int CurrentDayOfWeek { get; private set; }
 
         public WeeklyState(WeeklyConfig config, IObjectResolver resolver) : base(config, resolver)
         {
@@ -20,6 +21,11 @@ namespace Game.Weekly
             CurrentWeek = value;
 
             MarkAsDirty();
+        }
+
+        public void SetDayOfWeek(int value)
+        {
+            CurrentDayOfWeek = value;
         }
 
         // == Save ==
