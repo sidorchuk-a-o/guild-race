@@ -19,13 +19,14 @@ namespace Game.Guild
 
         private GuildBankTabsVM tabsVM;
         private GuildBankTabVM currentTabVM;
+        private ItemsGridCellType currentCellType;
 
         private void Awake()
         {
             foreach (var tab in tabs)
             {
                 tab.OnClick
-                    .Subscribe(SeletTabCallback)
+                    .Subscribe(x => SeletTabCallback(x, tab))
                     .AddTo(this);
             }
         }
@@ -35,7 +36,8 @@ namespace Game.Guild
             this.tabsVM = tabsVM;
             this.disp = disp;
 
-            currentTabVM = tabsVM[tabs[0].CellType];
+            currentCellType ??= tabs[0].CellType;
+            currentTabVM = tabsVM[currentCellType];
 
             InitTabButtons(disp);
             UpdateCurrentTabView();
@@ -51,9 +53,11 @@ namespace Game.Guild
             }
         }
 
-        private void SeletTabCallback(GuildBankTabVM tabVM)
+        private void SeletTabCallback(GuildBankTabVM tabVM, GuildBankTab tab)
         {
             currentTabVM?.SetSelectState(false);
+
+            currentCellType = tab.CellType;
             currentTabVM = tabVM;
 
             UpdateCurrentTabView();
