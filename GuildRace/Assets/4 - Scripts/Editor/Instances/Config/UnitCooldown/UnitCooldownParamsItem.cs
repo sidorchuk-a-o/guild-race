@@ -9,6 +9,7 @@ namespace Game.Instances
     public class UnitCooldownParamsItem : ListItemElement
     {
         private PropertyElement instanceTypeField;
+        private PropertyElement maxTriesCountField;
         private PropertyElement maxCompletedCountField;
         private PropertyElement isWeeklyResetField;
 
@@ -19,6 +20,7 @@ namespace Game.Instances
             base.CreateItemContentGUI(root);
 
             instanceTypeField = root.CreateProperty();
+            maxTriesCountField = root.CreateProperty();
             maxCompletedCountField = root.CreateProperty();
             isWeeklyResetField = root.CreateProperty();
         }
@@ -28,6 +30,7 @@ namespace Game.Instances
             base.BindData(data);
 
             instanceTypeField.BindProperty("instanceType", data);
+            maxTriesCountField.BindProperty("maxTriesCount", data);
             maxCompletedCountField.BindProperty("maxCompletedCount", data);
             isWeeklyResetField.BindProperty("isWeeklyReset", data);
         }

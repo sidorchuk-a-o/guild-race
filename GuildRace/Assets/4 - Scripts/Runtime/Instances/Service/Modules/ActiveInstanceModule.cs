@@ -59,7 +59,7 @@ namespace Game.Instances
                 activeInstance.SetResult(result);
                 activeInstance.MarkAsReadyToComplete();
 
-                activeInstance.BossUnit.IncreaseCompletedCount();
+                activeInstance.BossUnit.IncreaseTriesCount();
 
                 if (activeInstance.Instance.Type == InstanceTypes.Dungeon)
                 {
@@ -68,6 +68,8 @@ namespace Game.Instances
 
                 if (result == CompleteResult.Completed)
                 {
+                    activeInstance.BossUnit.IncreaseCompletedCount();
+
                     onInstanceCompleted.OnNext(activeInstance);
                 }
             }
