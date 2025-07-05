@@ -1,4 +1,4 @@
-Authorization v1.021
+Authorization v1.022
 EnvirData v1.002
 Flags v1.001
 InterstitialAdv v1.002
