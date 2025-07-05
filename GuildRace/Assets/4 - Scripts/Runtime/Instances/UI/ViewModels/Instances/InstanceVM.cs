@@ -28,7 +28,7 @@ namespace Game.Instances
             Type = info.Type;
             NameKey = info.NameKey;
             DescKey = info.DescKey;
-            BossUnitsVM = new UnitsVM(info.BossUnits, info.Id, instancesVMF);
+            BossUnitsVM = new UnitsVM(info.BossUnits, instancesVMF);
         }
 
         protected override void InitSubscribes()

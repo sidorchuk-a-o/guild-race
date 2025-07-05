@@ -193,10 +193,10 @@ namespace Game.Instances
             }
         }
 
-        public bool HasBossTries(int unitId, int instanceId)
+        public bool HasBossTries(int unitId)
         {
             var unit = Seasons.GetBossUnit(unitId);
-            var instance = Seasons.GetInstance(instanceId);
+            var instance = instancesConfig.GetBossInstance(unitId);
             var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
 
             var triesCount = unit.TriesCount.Value;

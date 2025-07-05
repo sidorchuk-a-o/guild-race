@@ -36,7 +36,7 @@ namespace Game.Instances
             IsReadyToComplete = info.IsReadyToComplete;
 
             InstanceVM = instancesVMF.GetInstance(info.Instance);
-            BossUnitVM = new(info.BossUnit, info.Instance.Id, instancesVMF);
+            BossUnitVM = new(info.BossUnit, instancesVMF);
             ThreatsVM = new(info.Threats, instancesVMF);
             SquadVM = new(info.Instance.Type, info.Squad, instancesVMF);
             CompleteChance = info.CompleteChance;

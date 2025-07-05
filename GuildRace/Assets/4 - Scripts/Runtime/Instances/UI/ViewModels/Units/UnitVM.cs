@@ -12,10 +12,9 @@ namespace Game.Instances
     public class UnitVM : ViewModel
     {
         private readonly UnitInfo info;
-        private readonly int instanceId;
         private readonly InstancesVMFactory instancesVMF;
 
-        private readonly ReactiveProperty<ActiveInstanceVM> instanceVM = new();
+        private readonly ReactiveProperty<ActiveInstanceVM> activeInstanceVM = new();
 
         public int Id { get; }
 
@@ -24,18 +23,17 @@ namespace Game.Instances
         public AbilitiesVM AbilitiesVM { get; }
         public InstanceRewardsVM RewardsVM { get; }
 
-        public bool HasInstance => InstanceVM.Value != null;
-        public IReadOnlyReactiveProperty<ActiveInstanceVM> InstanceVM => instanceVM;
+        public bool HasActiveInstance => ActiveInstanceVM.Value != null;
+        public IReadOnlyReactiveProperty<ActiveInstanceVM> ActiveInstanceVM => activeInstanceVM;
 
         public bool HasTries { get; private set; }
         public IReadOnlyReactiveProperty<int> CompletedCount { get; }
         public IReadOnlyReactiveProperty<int> TriesCount { get; }
         public UnitCooldownParams CooldownParams { get; }
 
-        public UnitVM(UnitInfo info, int instanceId, InstancesVMFactory instancesVMF)
+        public UnitVM(UnitInfo info, InstancesVMFactory instancesVMF)
         {
             this.info = info;
-            this.instanceId = instanceId;
             this.instancesVMF = instancesVMF;
 
             Id = info.Id;
@@ -46,7 +44,7 @@ namespace Game.Instances
 
             TriesCount = info.TriesCount;
             CompletedCount = info.CompletedCount;
-            CooldownParams = instancesVMF.GetCooldownParams(instanceId);
+            CooldownParams = instancesVMF.GetCooldownParams(Id);
         }
 
         protected override void InitSubscribes()
@@ -76,14 +74,14 @@ namespace Game.Instances
 
         private void InstanceChangedCallback(string activeInstanceId)
         {
-            instanceVM.Value = activeInstanceId.IsValid()
+            activeInstanceVM.Value = activeInstanceId.IsValid()
                 ? instancesVMF.GetActiveInstance(activeInstanceId)
                 : null;
         }
 
         private void UpdateHasTriesState()
         {
-            HasTries = instancesVMF.HasBossTries(Id, instanceId);
+            HasTries = instancesVMF.HasBossTries(Id);
         }
     }
 }

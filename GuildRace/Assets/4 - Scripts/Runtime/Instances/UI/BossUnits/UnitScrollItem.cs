@@ -20,8 +20,8 @@ namespace Game.Instances
         {
             nameText.SetTextParams(ViewModel.NameKey);
 
-            ViewModel.InstanceVM
-                .Subscribe(_ => hourglassContainer.SetActive(ViewModel.HasInstance))
+            ViewModel.ActiveInstanceVM
+                .Subscribe(_ => hourglassContainer.SetActive(ViewModel.HasActiveInstance))
                 .AddTo(disp);
         }
     }

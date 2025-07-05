@@ -150,7 +150,7 @@ namespace Game.Instances
                 unitAbilities.Init(unitVM.AbilitiesVM, ct);
                 unitRewardContainer.Init(unitVM.RewardsVM, ct);
 
-                unitVM.InstanceVM
+                unitVM.ActiveInstanceVM
                     .SilentSubscribe(updateStartButtonState)
                     .AddTo(unitDisp);
 
@@ -166,7 +166,7 @@ namespace Game.Instances
 
                 void updateStartButtonState()
                 {
-                    startInstanceButton.SetInteractableState(!unitVM.HasInstance && unitVM.HasTries);
+                    startInstanceButton.SetInteractableState(!unitVM.HasActiveInstance && unitVM.HasTries);
 
                     var maxTriesCount = unitVM.CooldownParams.MaxTriesCount;
                     var triesCount = maxTriesCount - unitVM.TriesCount.Value;

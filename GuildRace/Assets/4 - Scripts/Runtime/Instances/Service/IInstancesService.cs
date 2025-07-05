@@ -29,7 +29,7 @@ namespace Game.Instances
         int CompleteActiveInstance(string activeInstanceId);
 
         void SetBossTimeState(bool state);
-        bool HasBossTries(int unitId, int instanceId);
+        bool HasBossTries(int unitId);
         float CalcChanceDiff(AddItemArgs args);
     }
 }

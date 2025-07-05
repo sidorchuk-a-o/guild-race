@@ -6616,6 +6616,15 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: CRAFT/REAGENT_SOURCE
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - '{[0]} - {[1]}'
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: CRAFT/
       TermType: 0
       Description: 
@@ -7680,7 +7689,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1750865054228
+    Google_LastUpdatedVersion: 1751714844988
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
