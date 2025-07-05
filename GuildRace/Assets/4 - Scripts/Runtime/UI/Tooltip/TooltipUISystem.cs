@@ -85,6 +85,7 @@ namespace Game.UI
             var tooltipContainer = tooltipGO.GetComponent<TooltipContainer>();
 
             tooltipContainer.SetParent(transform);
+            tooltipContainer.transform.localScale = Vector3.one;
 
             await tooltipContainer.Init(viewModel, tooltipDisp, token);
 

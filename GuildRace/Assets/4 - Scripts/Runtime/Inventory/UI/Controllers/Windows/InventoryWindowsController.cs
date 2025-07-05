@@ -82,6 +82,7 @@ namespace Game.Inventory
             var activeWindowIndex = windowsParentRect.childCount - 1;
 
             windowRT.SetParent(windowsParentRect);
+            windowRT.transform.localScale = Vector3.one;
             windowRT.SetAsLastSibling();
 
             if (activeWindowIndex >= 0)

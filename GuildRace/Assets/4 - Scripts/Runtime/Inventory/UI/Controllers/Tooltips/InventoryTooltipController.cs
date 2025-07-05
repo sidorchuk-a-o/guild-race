@@ -141,6 +141,7 @@ namespace Game.Inventory
             var tooltipContainer = tooltipGO.GetComponent<ItemTooltipContainer>();
 
             tooltipContainer.SetParent(transform);
+            tooltipContainer.transform.localScale = Vector3.one;
 
             await tooltipContainer.Init(context, tooltipDisp, token);
 
