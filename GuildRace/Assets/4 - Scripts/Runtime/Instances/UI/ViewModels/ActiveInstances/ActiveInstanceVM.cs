@@ -86,7 +86,15 @@ namespace Game.Instances
 
         private void ChanceChangedCallback(float chance)
         {
+#if !UNITY_EDITOR
+            chance = Mathf.Max(chance, 0);
+#endif
+
             completeChanceStr.Value = $"{Mathf.RoundToInt(chance * 100)}%";
+
+#if UNITY_EDITOR
+            completeChanceStr.Value += " <i><size=12>(debug)</size></i>";
+#endif
         }
     }
 }

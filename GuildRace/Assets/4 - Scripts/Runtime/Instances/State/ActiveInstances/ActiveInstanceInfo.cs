@@ -76,7 +76,7 @@ namespace Game.Instances
         {
             this.LogMsg($"Complete Chance: {Mathf.RoundToInt(value * 100f)}%");
 
-            completeChance.Value = Mathf.Max(value, 0);
+            completeChance.Value = value;
         }
 
         public void SetResult(CompleteResult value)

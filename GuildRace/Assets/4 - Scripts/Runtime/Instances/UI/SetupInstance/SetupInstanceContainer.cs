@@ -2,7 +2,6 @@
 using Cysharp.Threading.Tasks;
 using AD.UI;
 using AD.Services.Router;
-using AD.Services.Localization;
 using AD.ToolsCollection;
 using Game.Guild;
 using UniRx;
@@ -16,7 +15,6 @@ namespace Game.Instances
     {
         [Header("Header")]
         [SerializeField] private UIText headerText;
-        [SerializeField] private LocalizeKey headerKey;
 
         [Header("Tabs")]
         [SerializeField] private ContentTab[] contentTabs;
@@ -100,7 +98,7 @@ namespace Game.Instances
             // upd params
             var instanceName = setupInstanceVM.InstanceVM.NameKey;
             var bossName = setupInstanceVM.BossUnitVM.NameKey;
-            var headerData = new UITextData(headerKey, instanceName, bossName);
+            var headerData = new UITextData(headerText.LocalizeKey, instanceName, bossName);
 
             headerText.SetTextParams(headerData);
 
