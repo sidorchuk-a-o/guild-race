@@ -60,6 +60,7 @@ namespace Game.Instances
             mechanicContainer = mechanicContainerGO.GetComponent<ConsumableMechanicContainer>();
 
             mechanicContainer.SetParent(transform);
+            mechanicContainer.transform.localScale = Vector3.one;
             mechanicContainer.transform.SetSiblingIndex(mechanicContainerRoot.GetSiblingIndex());
 
             await mechanicContainer.Init(dataVM, disp, ct);

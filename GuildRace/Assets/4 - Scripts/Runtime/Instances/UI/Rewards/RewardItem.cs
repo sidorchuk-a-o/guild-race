@@ -39,6 +39,7 @@ namespace Game.Instances
             itemContent.SetParent(transform);
 
             var rect = itemContent.transform as RectTransform;
+            rect.transform.localScale = Vector3.one;
             rect.anchoredPosition = Vector2.zero;
             rect.SetAsLastSibling();
 

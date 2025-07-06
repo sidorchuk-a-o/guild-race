@@ -123,12 +123,24 @@ namespace Game.Instances
             return new InstanceRewardsVM(rewards, this);
         }
 
+        public InstanceRewardsVM GetRewardsByParam(string param)
+        {
+            var rewards = InstancesConfig.RewardsParams.Rewards
+                .Where(x => x.MechanicParams.Contains(param))
+                .ToList();
+
+            return new InstanceRewardsVM(rewards, this);
+        }
+
         public InstanceRewardsVM GetRewards(IReadOnlyList<RewardResult> result)
         {
             var rewardIds = result.Select(x => x.RewardId);
-            var rewards = InstancesConfig.GetRewards(rewardIds);
 
-            return new InstanceRewardsVM(rewards.ToList(), this);
+            var rewards = InstancesConfig
+                .GetRewards(rewardIds)
+                .ToList();
+
+            return new InstanceRewardsVM(rewards, this);
         }
 
         // == Threats ==
@@ -247,16 +259,31 @@ namespace Game.Instances
             return new SquadCandidatesVM(candidates, this);
         }
 
-        public UnitCooldownParams GetCooldownParams(int instanceId)
+        public UnitCooldownParams GetCooldownParams(int bossId)
         {
-            var instance = instancesService.Seasons.GetInstance(instanceId);
+            var instance = InstancesConfig.GetBossInstance(bossId);
 
             return InstancesConfig.GetUnitCooldown(instance.Type);
         }
 
-        public bool HasBossTries(int unitId, int instanceId)
+        public UnitVM GetBossUnit(int unitId)
         {
-            return instancesService.HasBossTries(unitId, instanceId);
+            var unit = instancesService.Seasons.GetBossUnit(unitId);
+
+            return new UnitVM(unit, this);
+        }
+
+        public InstanceVM GetBossInstance(int unitId)
+        {
+            var instanceData = InstancesConfig.GetBossInstance(unitId);
+            var instance = instancesService.Seasons.GetInstance(instanceData.Id);
+
+            return new InstanceVM(instance, this);
+        }
+
+        public bool HasBossTries(int unitId)
+        {
+            return instancesService.HasBossTries(unitId);
         }
 
         public int CalcChanceDiff(AddItemArgs args)

@@ -11,6 +11,7 @@ namespace Game.Craft
         [Header("Reagent")]
         [SerializeField] private RarityComponent rarityComponent;
         [SerializeField] private TooltipItemStackComponent stackComponent;
+        [SerializeField] private ReagentSourceContainer sourceContainer;
 
         public override async UniTask Init(TooltipContext context, CompositeDisp disp, CancellationTokenSource ct)
         {
@@ -22,6 +23,7 @@ namespace Game.Craft
 
             stackComponent.Init(context, disp);
             rarityComponent.Init(dataVM.RarityVM);
+            sourceContainer.Init(dataVM, disp);
         }
     }
 }

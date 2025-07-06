@@ -82,6 +82,7 @@ namespace Game.Inventory
 
                     item = itemGO.GetComponent<ItemInGridComponent>();
                     item.SetParent(transform);
+                    item.transform.localScale = Vector3.one;
 
                     items.Add(item);
                 }

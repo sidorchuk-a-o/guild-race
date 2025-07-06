@@ -16,6 +16,7 @@ namespace Game.Store
         [Space]
         [SerializeField] private Image iconImage;
         [SerializeField] private UIText amountText;
+        [SerializeField] private CurrencyChangedContainer changedContainer;
 
         private CurrencyVM currencyVM;
 
@@ -34,6 +35,7 @@ namespace Game.Store
             if (ct.IsCancellationRequested) return;
 
             iconImage.sprite = icon;
+            changedContainer.Init(currencyVM, disp);
 
             currencyVM.AmountStr
                 .Subscribe(x => amountText.SetTextParams(x))

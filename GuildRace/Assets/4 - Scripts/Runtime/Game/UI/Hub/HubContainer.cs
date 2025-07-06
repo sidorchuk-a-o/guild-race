@@ -5,6 +5,7 @@ using AD.UI;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Store;
+using Game.Weekly;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -17,9 +18,10 @@ namespace Game
         [SerializeField] private EmblemContainer emblemContainer;
         [SerializeField] private UIText guildNameText;
         [Space]
-        [SerializeField] private UIText playerNicknameText;
+        [SerializeField] private UIText playerNameText;
         [SerializeField] private UIText playerGuildRankText;
         [Space]
+        [SerializeField] private WeeklyItem weeklyItem;
         [SerializeField] private CurrenciesContainer currenciesContainer;
 
         private GuildVM guildVM;
@@ -36,6 +38,7 @@ namespace Game
 
             guildVM.AddTo(disp);
 
+            weeklyItem.Init(disp);
             currenciesContainer.Init(disp, ct);
 
             await emblemContainer.Init(guildVM.EmblemVM);
@@ -44,8 +47,8 @@ namespace Game
                 .Subscribe(x => guildNameText.SetTextParams(x))
                 .AddTo(disp);
 
-            guildVM.PlayerNickname
-                .Subscribe(x => playerNicknameText.SetTextParams(x))
+            guildVM.PlayerName
+                .Subscribe(x => playerNameText.SetTextParams(x))
                 .AddTo(disp);
 
             guildVM.PlayerRank

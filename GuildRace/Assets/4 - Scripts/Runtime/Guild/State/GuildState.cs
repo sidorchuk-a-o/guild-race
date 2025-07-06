@@ -12,7 +12,9 @@ namespace Game.Guild
 {
     public class GuildState : ServiceState<GuildConfig, GuildSM>
     {
-        private readonly ReactiveProperty<string> name = new();
+        private readonly ReactiveProperty<string> guildName = new();
+        private readonly ReactiveProperty<string> playerName = new();
+
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
         private readonly GuildBankTabsCollection bankTabs = new(null);
@@ -23,8 +25,9 @@ namespace Game.Guild
         public override string SaveKey => GuildSM.key;
         public override SaveSource SaveSource => SaveSource.app;
 
-        public bool IsExists => name.IsValid();
-        public IReadOnlyReactiveProperty<string> Name => name;
+        public bool IsExists => guildName.IsValid();
+        public IReadOnlyReactiveProperty<string> GuildName => guildName;
+        public IReadOnlyReactiveProperty<string> PlayerName => playerName;
         public EmblemInfo Emblem { get; private set; }
 
         public ICharactersCollection Characters => characters;
@@ -44,7 +47,8 @@ namespace Game.Guild
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
         {
-            name.Value = guildEM.Name;
+            guildName.Value = guildEM.GuildName;
+            playerName.Value = guildEM.PlayerName;
 
             SaveEmblem(guildEM.Emblem);
 
@@ -99,7 +103,8 @@ namespace Game.Guild
         {
             var guildSM = new GuildSM
             {
-                Name = Name.Value,
+                GuildName = GuildName.Value,
+                PlayerName = PlayerName.Value,
                 GuildRanks = GuildRanks,
                 Emblem = Emblem
             };
@@ -121,7 +126,8 @@ namespace Game.Guild
                 return;
             }
 
-            name.Value = save.Name;
+            guildName.Value = save.GuildName;
+            playerName.Value = save.PlayerName;
             Emblem = save.Emblem;
 
             guildRanks.AddRange(save.GuildRanks);

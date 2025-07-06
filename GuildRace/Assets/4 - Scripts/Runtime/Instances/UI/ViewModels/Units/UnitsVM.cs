@@ -5,18 +5,16 @@ namespace Game.Instances
 {
     public class UnitsVM : VMCollection<UnitInfo, UnitVM>
     {
-        private readonly int instanceId;
         private readonly InstancesVMFactory instancesVMF;
 
-        public UnitsVM(IReadOnlyCollection<UnitInfo> values, int instanceId, InstancesVMFactory instancesVMF) : base(values)
+        public UnitsVM(IReadOnlyCollection<UnitInfo> values, InstancesVMFactory instancesVMF) : base(values)
         {
-            this.instanceId = instanceId;
             this.instancesVMF = instancesVMF;
         }
 
         protected override UnitVM Create(UnitInfo value)
         {
-            return new UnitVM(value, instanceId, instancesVMF);
+            return new UnitVM(value, instancesVMF);
         }
     }
 }

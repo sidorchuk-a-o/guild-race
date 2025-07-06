@@ -91,6 +91,8 @@ namespace Game.Inventory
                 buttons.Add(button);
 
                 button.SetParent(transform);
+                button.transform.localScale = Vector3.one;
+
                 button.Init(optionData);
 
                 buttonGO.name = $"{nameof(OptionButton)} ({optionData.Title})";

@@ -9,16 +9,23 @@ namespace Game.Guild
     {
         public const string key = "guild";
 
-        [ES3Serializable] private string name;
+        [ES3Serializable] private string guildName;
+        [ES3Serializable] private string playerName;
         [ES3Serializable] private CharactersSM charactersSM;
         [ES3Serializable] private GuildRanksSM guildRanksSM;
         [ES3Serializable] private GuildBankTabsSM guildBankTabsSM;
         [ES3Serializable] private EmblemSM emblemSM;
 
-        public string Name
+        public string GuildName
         {
-            get => name;
-            set => name = value;
+            get => guildName;
+            set => guildName = value;
+        }
+
+        public string PlayerName
+        {
+            get => playerName;
+            set => playerName = value;
         }
 
         public EmblemInfo Emblem
