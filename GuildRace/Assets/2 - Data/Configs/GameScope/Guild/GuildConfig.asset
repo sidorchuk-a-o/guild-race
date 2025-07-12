@@ -856,25 +856,25 @@ MonoBehaviour:
       threatId:
         value: 201
   recruitingParams:
-    minRequestCount: 5
-    maxRequestCount: 15
-    requestLifetime: 3600
-    minNextRequestTime: 15
-    maxNextRequestTime: 120
+    minRequestCount: 2
+    maxRequestCount: 5
+    requestLifetime: 600
+    minNextRequestTime: 300
+    maxNextRequestTime: 900
     weightSelectedRole: 60
     weightUnselectedRole: 15
     minEquipLevel: 10
     characterGroupsWeights: 0f0000001e0000003c000000
     firstPhase:
-      minEquipCount: 4
+      minEquipCount: 5
       maxEquipCount: 5
       minEquipLevel: 10
-      maxEquipLevel: 5
+      maxEquipLevel: 3
     lastPhase:
       minEquipCount: 1
-      maxEquipCount: 2
+      maxEquipCount: 1
       minEquipLevel: 5
-      maxEquipLevel: 10
+      maxEquipLevel: 5
     defaultCharacters:
     - classId:
         value: 605
