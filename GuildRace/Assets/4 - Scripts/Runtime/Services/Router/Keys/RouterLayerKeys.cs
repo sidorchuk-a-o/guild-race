@@ -7,6 +7,6 @@ namespace AD.Services.Router
     public static class RouterLayerKeys
     {
         public static readonly RouterLayerKey LoadingScreens = new("f934348f96d942ad84d26678cbcd0594");
-        public static readonly RouterLayerKey Narrative = new("519cba7fe1594d369c11577befa78ae3");
+        public static readonly RouterLayerKey Tutorial = new("519cba7fe1594d369c11577befa78ae3");
     }
 }

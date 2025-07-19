@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197666177703566478}
   - component: {fileID: -2484950100736784007}
+  - component: {fileID: 5941976050464612204}
   m_Layer: 5
   m_Name: CreateGuildContainer
   m_TagString: Untagged
@@ -211,6 +212,25 @@ MonoBehaviour:
   guildNameField: {fileID: 5777456984103602886}
   createButton: {fileID: 7593005156382280950}
   emblemParamsContainer: {fileID: 8159710586038990229}
+--- !u!114 &5941976050464612204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793457634446767181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9812f210c9d82854aa5391a62d3df261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreParentGroup: 0
+  containerRef:
+    m_AssetGUID: edaae6ce2fa0b0946bffff7a0148ff57
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!1 &4393076993702867976
 GameObject:
   m_ObjectHideFlags: 0
