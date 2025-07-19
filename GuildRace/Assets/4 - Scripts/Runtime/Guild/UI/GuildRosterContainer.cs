@@ -208,7 +208,7 @@ namespace Game.Guild
                 switchToCharacterVM = charactersVM.NearbyOrDefault(index);
             });
 
-            Router.Push(RouteKeys.Guild.removeCharacter, parameters: parameters);
+            Router.Push(RouteKeys.Guild.RemoveCharacter, parameters: parameters);
         }
     }
 }

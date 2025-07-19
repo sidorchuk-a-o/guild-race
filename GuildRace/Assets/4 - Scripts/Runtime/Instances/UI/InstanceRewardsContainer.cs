@@ -44,7 +44,7 @@ namespace Game.Instances
 
         private void TakeRewardCallback()
         {
-            Router.Push(RouteKeys.Hub.activeInstances);
+            Router.Push(RouteKeys.Hub.ActiveInstances);
         }
     }
 }

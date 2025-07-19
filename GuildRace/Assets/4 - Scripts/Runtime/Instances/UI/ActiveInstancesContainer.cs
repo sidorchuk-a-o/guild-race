@@ -215,7 +215,7 @@ namespace Game.Instances
             var switchToInstanceVM = activeInstancesVM.NearbyOrDefault(index);
 
             // show rewards
-            await Router.PushAsync(RouteKeys.Hub.instanceRewards);
+            await Router.PushAsync(RouteKeys.Hub.InstanceRewards);
 
             // switch instance
             activeInstanceVM = null;

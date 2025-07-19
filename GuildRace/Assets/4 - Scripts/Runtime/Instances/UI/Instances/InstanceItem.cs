@@ -50,7 +50,7 @@ namespace Game.Instances
 
             parameters[SelectBossContainer.idKey] = instanceVM.Id;
 
-            await router.PushAsync(RouteKeys.Hub.selectBoss, parameters: parameters);
+            await router.PushAsync(RouteKeys.Hub.SelectBoss, parameters: parameters);
         }
     }
 }
