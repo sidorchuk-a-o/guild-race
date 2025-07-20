@@ -31,7 +31,6 @@ namespace Game.Tutorial
             var tutorialContainer = container.GetComponent<TutorialContainer>();
             var tapToCloseContainer = rootCanvas.GetComponent<TapToCloseContainer>();
 
-            tutorialContainer.SetId(containerId);
             tapToCloseContainer.SetContainerId(containerId);
 
             return tutorialContainer;

@@ -61,7 +61,7 @@ namespace Game.Guild
             guildVMF.CreateOrUpdateGuild(guildEM);
 
             Router.Push(
-                pathKey: RouteKeys.Hub.Roster,
+                pathKey: RouteKeys.Hub.Recruiting,
                 loadingKey: LoadingScreenKeys.Loading,
                 parameters: RouteParams.FirstRoute);
         }

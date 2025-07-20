@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2725190293531024348, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: m_Name
-      value: CreateGuildTutorial
+      value: GuildRecruitingTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 3270393467000694694, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -44,9 +44,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4032788473056939209, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
+    - target: {fileID: 4279734905451503583, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
+      propertyPath: localizeKey.value
+      value: TUTORIAL/WELCOME_TTL
       objectReference: {fileID: 0}
     - target: {fileID: 4409103327289788130, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -106,11 +106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862264847568162697, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: descKey.value
-      value: TUTORIAL/WELCOME_DSC
+      value: TUTORIAL/GUILD_RECRUTING_DSC
       objectReference: {fileID: 0}
     - target: {fileID: 5862264847568162697, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: titleKey.value
-      value: TUTORIAL/WELCOME_TTL
+      value: TUTORIAL/GUILD_RECRUTING_TTL
       objectReference: {fileID: 0}
     - target: {fileID: 6338605849972655620, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: m_Pivot.x
@@ -191,6 +191,10 @@ PrefabInstance:
     - target: {fileID: 6338605849972655620, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013549439845206079, guid: 60da823fec88bd94ba663759a0b6a9a0, type: 3}
+      propertyPath: localizeKey.value
+      value: TUTORIAL/WELCOME_DSC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

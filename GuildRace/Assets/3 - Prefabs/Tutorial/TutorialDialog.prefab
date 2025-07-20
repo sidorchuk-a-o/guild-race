@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 6905810431249036687}
   - component: {fileID: 6138153455876518087}
   - component: {fileID: 8347117568819210035}
+  - component: {fileID: 3167542711620926452}
   m_Layer: 0
   m_Name: TutorialDialog
   m_TagString: Untagged
@@ -417,6 +418,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &3167542711620926452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849907785457018624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c934ec57cf386ed4a985eb9b49727861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 6905810431249036687}
+  rectTransform: {fileID: 6712637313262301887}
 --- !u!1 &8718967016842439293
 GameObject:
   m_ObjectHideFlags: 0
