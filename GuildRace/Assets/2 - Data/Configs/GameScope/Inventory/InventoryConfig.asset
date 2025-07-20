@@ -1339,9 +1339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 182
-  title: Shoulders
+  title: Boots
   nameKey:
-    value: INVENTORY/SHOULDERS_EQUIP_TTL
+    value: INVENTORY/BOOTS_EQUIP_TTL
   equipGroup:
     value: 111
 --- !u!114 &-4706465094894642045

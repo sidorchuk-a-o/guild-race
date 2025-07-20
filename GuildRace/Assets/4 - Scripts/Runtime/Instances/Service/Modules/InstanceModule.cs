@@ -52,6 +52,8 @@ namespace Game.Instances
             // create
             state.CreateSetupInstance(args);
 
+            UpdateCompleteChance();
+
             // mark as dirty
             state.MarkAsDirty();
             guildService.StateMarkAsDirty();
