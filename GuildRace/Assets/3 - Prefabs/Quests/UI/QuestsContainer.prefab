@@ -880,6 +880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197666177703566478}
+  - component: {fileID: 5703751800528968914}
   - component: {fileID: 6405642750458457021}
   m_Layer: 5
   m_Name: QuestsContainer
@@ -909,6 +910,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1556, y: 944}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5703751800528968914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793457634446767181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9812f210c9d82854aa5391a62d3df261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreParentGroup: 0
+  containerRef:
+    m_AssetGUID: 98f32b98dcb083e458bf95125f5e5508
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!114 &6405642750458457021
 MonoBehaviour:
   m_ObjectHideFlags: 0

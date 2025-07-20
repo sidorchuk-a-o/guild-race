@@ -200,7 +200,7 @@ namespace Game.Guild
 
         private void SettingsButtonCallback()
         {
-            Router.Push(RouteKeys.Guild.recruitingSettings);
+            Router.Push(RouteKeys.Guild.RecruitingSettings);
         }
     }
 }

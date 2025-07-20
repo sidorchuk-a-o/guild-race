@@ -41,7 +41,7 @@ namespace Game.Inventory
                 completeTask.TrySetResult();
             });
 
-            var dialogKey = RouteKeys.Inventory.discardItemDialog;
+            var dialogKey = RouteKeys.Inventory.DiscardItemDialog;
 
             router.Push(dialogKey, parameters: parameters);
 

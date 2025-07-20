@@ -167,7 +167,7 @@ namespace Game.Instances
 
         private void BackCallback()
         {
-            Router.Push(RouteKeys.Hub.selectInstance, LoadingScreenKeys.loading);
+            Router.Push(RouteKeys.Hub.SelectInstance, LoadingScreenKeys.Loading);
         }
 
         private async void StartCallback()

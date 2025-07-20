@@ -83,7 +83,7 @@ namespace Game.Guild
                 guildVMF.AcceptJoinRequest(ViewModel.Id);
             });
 
-            router.Push(RouteKeys.Guild.acceptJointRequest, parameters: parameters);
+            router.Push(RouteKeys.Guild.AcceptJointRequest, parameters: parameters);
         }
 
         private void DeclineCallback()
@@ -95,7 +95,7 @@ namespace Game.Guild
                 guildVMF.DeclineJoinRequest(ViewModel.Id);
             });
 
-            router.Push(RouteKeys.Guild.declineJointRequest, parameters: parameters);
+            router.Push(RouteKeys.Guild.DeclineJointRequest, parameters: parameters);
         }
     }
 }

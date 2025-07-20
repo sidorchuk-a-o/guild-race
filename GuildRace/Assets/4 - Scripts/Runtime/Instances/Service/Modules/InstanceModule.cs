@@ -58,8 +58,8 @@ namespace Game.Instances
 
             // setup
             await router.PushAsync(
-                pathKey: RouteKeys.Instances.setupInstance,
-                loadingKey: LoadingScreenKeys.loading);
+                pathKey: RouteKeys.Instances.SetupInstance,
+                loadingKey: LoadingScreenKeys.Loading);
         }
 
         public IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates()
@@ -344,8 +344,8 @@ namespace Game.Instances
 
             // start
             await router.PushAsync(
-                pathKey: RouteKeys.Hub.activeInstances,
-                loadingKey: LoadingScreenKeys.loading,
+                pathKey: RouteKeys.Hub.ActiveInstances,
+                loadingKey: LoadingScreenKeys.Loading,
                 parameters: RouteParams.FirstRoute);
         }
 
