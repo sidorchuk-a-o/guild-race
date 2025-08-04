@@ -128,15 +128,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 25
+  level: 20
   type:
     value: 143
   group:
     value: 111
   rarity:
-    value: 122
+    value: 121
   characterParams:
-    health: 315
+    health: 292
     power: 0
 --- !u!114 &-8826924889863600484
 MonoBehaviour:
@@ -709,15 +709,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 25
+  level: 20
   type:
     value: 141
   group:
     value: 111
   rarity:
-    value: 122
+    value: 121
   characterParams:
-    health: 315
+    health: 292
     power: 0
 --- !u!114 &-6887878195513756772
 MonoBehaviour:
@@ -788,15 +788,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 20
+  level: 25
   type:
     value: 143
   group:
     value: 111
   rarity:
-    value: 121
+    value: 122
   characterParams:
-    health: 292
+    health: 315
     power: 0
 --- !u!114 &-6806210110799492770
 MonoBehaviour:
@@ -1339,9 +1339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 182
-  title: Shoulders
+  title: Boots
   nameKey:
-    value: INVENTORY/SHOULDERS_EQUIP_TTL
+    value: INVENTORY/BOOTS_EQUIP_TTL
   equipGroup:
     value: 111
 --- !u!114 &-4706465094894642045
@@ -1373,15 +1373,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 25
+  level: 20
   type:
     value: 142
   group:
     value: 111
   rarity:
-    value: 122
+    value: 121
   characterParams:
-    health: 315
+    health: 292
     power: 0
 --- !u!114 &-4649489801524151643
 MonoBehaviour:
@@ -1530,15 +1530,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 20
+  level: 25
   type:
     value: 142
   group:
     value: 111
   rarity:
-    value: 121
+    value: 122
   characterParams:
-    health: 292
+    health: 315
     power: 0
 --- !u!114 &-4086103811589660623
 MonoBehaviour:
@@ -2723,9 +2723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 144
-  title: Sword and Shield
+  title: Sword
   nameKey:
-    value: INVENTORY/SWORD_SHIELD_WEAPON_TTL
+    value: INVENTORY/SWORD_WEAPON_TTL
 --- !u!114 &-995771998939256200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3985,15 +3985,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 25
+  level: 20
   type:
     value: 143
   group:
     value: 111
   rarity:
-    value: 122
+    value: 121
   characterParams:
-    health: 315
+    health: 292
     power: 0
 --- !u!114 &1424568110847715213
 MonoBehaviour:
@@ -5307,15 +5307,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 20
+  level: 25
   type:
     value: 141
   group:
     value: 111
   rarity:
-    value: 121
+    value: 122
   characterParams:
-    health: 292
+    health: 315
     power: 0
 --- !u!114 &5803818987983749537
 MonoBehaviour:
@@ -5604,15 +5604,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 25
+  level: 20
   type:
     value: 142
   group:
     value: 111
   rarity:
-    value: 122
+    value: 121
   characterParams:
-    health: 315
+    health: 292
     power: 0
 --- !u!114 &7177038604739249802
 MonoBehaviour:
@@ -6101,15 +6101,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 20
+  level: 25
   type:
     value: 141
   group:
     value: 111
   rarity:
-    value: 121
+    value: 122
   characterParams:
-    health: 292
+    health: 315
     power: 0
 --- !u!114 &9113102958087313022
 MonoBehaviour:
@@ -6208,7 +6208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10127
-  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u0430\u044F
+  title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
     \u043A\u0430\u0441\u043A\u0430"
   slot:
     value: 181

@@ -2591,7 +2591,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u0430\u044F
+      - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
         \u043A\u0430\u0441\u043A\u0430"
       - 
       Flags: 000000
@@ -7687,7 +7687,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1752308661991
+    Google_LastUpdatedVersion: 1752566463756
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

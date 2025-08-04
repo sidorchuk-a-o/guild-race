@@ -704,8 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seasons:
   - id: 11
-    title: "\u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
-      \u0441\u0435\u0437\u043E\u043D\u0430"
+    title: "\u0421\u0435\u0437\u043E\u043D \u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0439"
     nameKey:
       value: INSTANCES/SEASON_1_TTL
     descKey:
@@ -716,9 +715,9 @@ MonoBehaviour:
       nameKey:
         value: INSTANCES/INSTANCE_301_TTL
       descKey:
-        value: <none>
+        value: 
       imageRef:
-        m_AssetGUID: 
+        m_AssetGUID: aa1795eca34eef042a15f81b2704afdc
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -733,7 +732,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20017_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 49e6599221e80a246919f05f12191677
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -782,7 +781,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20018_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 55b1083f50baba74d8cb02b2e33abf6b
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -834,7 +833,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20019_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 9f26905386f853f4dbaf2457fa89268f
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -883,7 +882,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: 
+        m_AssetGUID: 3841889e0aabd4143b7fb9b4e36e862b
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -898,7 +897,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20020_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 2a31884042aabbe479fda5a8aa2fca27
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -947,7 +946,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20021_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 8f11a7043fb6bf54b9c84dc188712834
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -997,7 +996,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20022_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 64c2edca7983c3c4ba3ceef3ac63731a
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1047,7 +1046,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: 
+        m_AssetGUID: f6a8c5a03c3d2204e90f8002c769db87
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -1062,7 +1061,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20023_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 52a20dacde2e0bc4aab65d7962ceaf1b
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1112,7 +1111,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20024_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 204505d2d87fd0147a725d6496128466
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1161,7 +1160,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20025_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 6ca3e32c46c929648972a40113d234fd
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1210,7 +1209,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: 
+        m_AssetGUID: 3ab36f99744d7a64fb785950d21286c7
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -1225,7 +1224,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20026_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: b192db0232a0d5e43a347f444c09f1ec
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1274,7 +1273,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20027_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: d5cc3a80955397444b5209f20fe5666d
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1325,7 +1324,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20028_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 071b3530f89cfd84dac561e02f413ef6
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1374,7 +1373,7 @@ MonoBehaviour:
       descKey:
         value: 
       imageRef:
-        m_AssetGUID: 
+        m_AssetGUID: a63f5f96ddd25114c9013b52afc836de
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -1389,7 +1388,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20011_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 38cf535c521558f4ba386a87012535f2
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1449,7 +1448,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20012_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 5583bdbc49d730b48b62aafaed449019
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1507,7 +1506,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20013_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 9c6e09122a5f00c48b0cd773005c1579
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1566,7 +1565,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20014_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 438b9664665be0f4db9c34556ed4abd9
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1626,7 +1625,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20015_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: 2345221d02776424098231b5ed40081f
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1685,7 +1684,7 @@ MonoBehaviour:
         descKey:
           value: INSTANCES/INSTANCE_UNIT_20016_DSC
         imageRef:
-          m_AssetGUID: 
+          m_AssetGUID: e4aaafb464e798748a4fce88a310ad6d
           m_SubObjectName: 
           m_SubObjectGUID: 
           m_SubObjectType: 
@@ -1850,14 +1849,14 @@ MonoBehaviour:
       unitId: 20017
       mechanicId: 302
       mechanicParams:
-      - 10011
+      - 10036
       - 1
     - id: 1002
       title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
       unitId: 20026
       mechanicId: 302
       mechanicParams:
-      - 10012
+      - 10020
       - 1
     - id: 1003
       title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
@@ -1871,21 +1870,21 @@ MonoBehaviour:
       unitId: 20023
       mechanicId: 302
       mechanicParams:
-      - 10014
+      - 10016
       - 1
     - id: 1005
       title: "\u0418\u0433\u0430\u043D \u0411\u0435\u0440\u0441\u043A"
       unitId: 20024
       mechanicId: 302
       mechanicParams:
-      - 10015
+      - 10024
       - 1
     - id: 1006
       title: "\u0410\u0440\u0438\u043C"
       unitId: 20021
       mechanicId: 302
       mechanicParams:
-      - 10016
+      - 10014
       - 1
     - id: 1007
       title: "\u0413\u0430\u043B\u043B\u043E\u0440\u0438\u0445"
@@ -1899,7 +1898,7 @@ MonoBehaviour:
       unitId: 20018
       mechanicId: 302
       mechanicParams:
-      - 10018
+      - 10021
       - 1
     - id: 1009
       title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
@@ -1914,21 +1913,21 @@ MonoBehaviour:
       unitId: 20028
       mechanicId: 302
       mechanicParams:
-      - 10020
+      - 10012
       - 1
     - id: 1011
       title: "\u0413\u0430'\u0420\u0430\u0442"
       unitId: 20023
       mechanicId: 302
       mechanicParams:
-      - 10021
+      - 10044
       - 1
     - id: 1012
       title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
       unitId: 20025
       mechanicId: 302
       mechanicParams:
-      - 10022
+      - 10026
       - 1
     - id: 1013
       title: "\u0413\u0430'\u0420\u0430\u0442"
@@ -1942,7 +1941,7 @@ MonoBehaviour:
       unitId: 20020
       mechanicId: 302
       mechanicParams:
-      - 10024
+      - 10030
       - 1
     - id: 1015
       title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
@@ -1956,7 +1955,7 @@ MonoBehaviour:
       unitId: 20017
       mechanicId: 302
       mechanicParams:
-      - 10026
+      - 10028
       - 1
     - id: 1017
       title: "\u0418\u043D\u0433\u0440\u0438\u0434 \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430"
@@ -1970,7 +1969,7 @@ MonoBehaviour:
       unitId: 20027
       mechanicId: 302
       mechanicParams:
-      - 10028
+      - 10022
       - 1
     - id: 1019
       title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
@@ -1984,21 +1983,21 @@ MonoBehaviour:
       unitId: 20024
       mechanicId: 302
       mechanicParams:
-      - 10030
+      - 10041
       - 1
     - id: 1021
       title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
       unitId: 20025
       mechanicId: 302
       mechanicParams:
-      - 10031
+      - 10018
       - 1
     - id: 1022
       title: "\u041A\u0430\u0440\u0433 \u0420\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442"
       unitId: 20022
       mechanicId: 302
       mechanicParams:
-      - 10032
+      - 10035
       - 1
     - id: 1023
       title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
@@ -2013,21 +2012,21 @@ MonoBehaviour:
       unitId: 20019
       mechanicId: 302
       mechanicParams:
-      - 10034
+      - 10031
       - 1
     - id: 1025
       title: "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
       unitId: 20017
       mechanicId: 302
       mechanicParams:
-      - 10035
+      - 10032
       - 1
     - id: 1026
       title: "\u0420\u0438\u0430\u0440\u0434\u043E\u043D \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
       unitId: 20026
       mechanicId: 302
       mechanicParams:
-      - 10036
+      - 10011
       - 1
     - id: 1027
       title: "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
@@ -2044,8 +2043,9 @@ MonoBehaviour:
       - 10038
       - 1
     - id: 1029
-      title: "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
-      unitId: 20025
+      title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446
+        \u0424\u0435\u043D\u0438\u0442"
+      unitId: 20028
       mechanicId: 302
       mechanicParams:
       - 10039
@@ -2062,7 +2062,7 @@ MonoBehaviour:
       unitId: 20018
       mechanicId: 302
       mechanicParams:
-      - 10041
+      - 10015
       - 1
     - id: 1032
       title: "\u0410\u0440\u0438\u043C"
@@ -2083,7 +2083,7 @@ MonoBehaviour:
       unitId: 20027
       mechanicId: 302
       mechanicParams:
-      - 10044
+      - 10034
       - 1
     - id: 1035
       title: "\u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043A\u0443\u0437\u043D\u0435\u0446

@@ -19,7 +19,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_712_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 087b4586ecf990a438302a2846fca3b9
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -81,7 +81,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/ROLE_501_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 87f8093c4e176df4a9714972f6000da8
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -162,7 +162,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/SUBROLE_523_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 6cb710529c15f944bb4df585a932aa28
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -186,7 +186,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_707_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 18a947e076fe61c4ebb8d73b5ee04814
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -250,7 +250,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_709_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: bf853f2f4523eb041b69c780f4e6a811
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -298,7 +298,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_602_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 24b0753f0b0795d4f9c4165b58b8cbd1
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -329,7 +329,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_710_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 0f237f191b7231c45919c535f8b18574
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -378,7 +378,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_608_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: cc9daf1a99baa3a49a5e13344318a4fd
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -407,7 +407,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/SUBROLE_524_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 019f3f4e4ce0ad444998f0989a009e39
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -447,7 +447,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_708_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: b11f32e1839c16e4096431d3393f5298
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -495,7 +495,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_701_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 9b58850cca085024cb38f83208cea2fe
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -560,7 +560,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_604_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 813b3c50d3047244b8c4d5e67152e5ea
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -607,7 +607,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_607_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 6336fe3f3ad86934ca6b9ffb1d1089bf
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -638,7 +638,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_704_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: ea13025e49bbe1e408edc60057989b7e
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -687,7 +687,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_601_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 379c5f4815f4bc7459b1536ad9241063
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -716,7 +716,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/ROLE_503_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 61bd8b381a6bd114e9bc6ef9c8f11248
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -763,7 +763,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_711_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: a4a0cac122b37d341bff0fb2f75a566a
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1326,7 +1326,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_606_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 0db87450ee36c374381e6049f6269fb9
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1377,7 +1377,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_605_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: c27912d407e1b454ab09d39381c8a5bd
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_716_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 6358a06cd3ec01446857bf01f8c82311
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_715_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 17064268935c08f4e9c9cf466bcc60e2
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_705_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 60bfad7d31f39dc4b9f31989ff4d9ac1
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_702_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: c7db31804c259cb438cadf1fd8b05234
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/SUBROLE_522_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 59802cedda9f7ff4d9d53c9375109576
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/SUBROLE_521_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: f6701faae79c84642bcd684ce537feb4
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_703_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 18f775dba485e4a4aaee9a85c4535dcd
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_713_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 3bc8a03299b5a204bb289a57ebb252fa
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1812,7 +1812,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/ROLE_502_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 3b465b78df639e84fbff9d8a5d975031
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1836,7 +1836,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_714_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: e880559045f99df4694ef461cca1f69d
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/SPEC_706_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 0587041842ce438478ec2feb66be9cbd
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   descKey:
     value: CHARACTERS/CLASS_603_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: b6ec16c5270740948b7f5e4f7ec1fa16
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   nameKey:
     value: CHARACTERS/SUBROLE_525_TTL
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 7fc899c1a3336be44b99a8f808f86386
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
