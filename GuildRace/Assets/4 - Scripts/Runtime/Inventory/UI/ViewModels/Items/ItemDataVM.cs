@@ -3,26 +3,27 @@ using AD.Services.Router;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Game.Inventory
 {
     public abstract class ItemDataVM : ViewModel
     {
-        private readonly ItemData data;
         private readonly InventoryVMFactory inventoryVMF;
 
         public int Id { get; }
         public LocalizeKey NameKey { get; }
         public ItemType ItemType { get; }
+        public AssetReference IconRef { get; }
 
         public ItemDataVM(ItemData data, InventoryVMFactory inventoryVMF)
         {
-            this.data = data;
             this.inventoryVMF = inventoryVMF;
 
             Id = data.Id;
             NameKey = data.NameKey;
             ItemType = data.ItemType;
+            IconRef = data.IconRef;
         }
 
         protected override void InitSubscribes()
@@ -33,7 +34,7 @@ namespace Game.Inventory
 
         public async UniTask<Sprite> LoadIcon(CancellationTokenSource ct)
         {
-            return await inventoryVMF.RentImage(data.IconRef, ct.Token);
+            return await inventoryVMF.RentImage(IconRef, ct.Token);
         }
     }
 }

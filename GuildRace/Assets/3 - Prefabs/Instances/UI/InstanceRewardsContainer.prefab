@@ -302,6 +302,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2319041787289783725}
     m_Modifications:
+    - target: {fileID: 2558581876395602531, guid: c6566ee8e87d78943b666d96420b4a4d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558581876395602531, guid: c6566ee8e87d78943b666d96420b4a4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558581876395602531, guid: c6566ee8e87d78943b666d96420b4a4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3893015189876031093, guid: c6566ee8e87d78943b666d96420b4a4d, type: 3}
       propertyPath: m_Name
       value: RewardResultsContainer

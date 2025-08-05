@@ -23,6 +23,8 @@ namespace AD.Services.Router
             public static readonly RouteKey InstanceRewards = new("8fd0df8348db4389a5dd48bb48cf9fd2");
             public static readonly RouteKey Vendors = new("11d1048181b44ab88943a094f1b8871e");
             public static readonly RouteKey Quests = new("180f07bff28e4415a08a52deb9e48c22");
+            public static readonly RouteKey Store = new("d8fe4ec7298f4309befd216354aebce9");
+            public static readonly RouteKey StoreRewards = new("03970411b5fe430dbe84377739267d38");
         }
         public static class Guild
         {

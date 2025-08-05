@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9122925027536821274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 500
 --- !u!114 &-8944890680548915326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: almans.dm.iap.cr1
---- !u!114 &-8487571232655378201
+--- !u!114 &-8832036055481940468
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,17 +51,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb40deb1034e826419f2111c32b203da, type: 3}
-  m_Name: Test Currencies Packs
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Dungeon
   m_EditorClassIdentifier: 
-  id: 790d9fa952614e03ab64ed8e444d2e72
-  title: Test Currencies Packs
-  titleKey:
-    value: <none>
-  items:
-  - {fileID: -5769116381789360939}
-  - {fileID: 8372087809579909056}
---- !u!114 &-8205888564160782666
+  id: c7b74f6f1b3f4e6f994e4a05629f0616
+  title: Dungeon Pack (1)
+  nameKey:
+    value: STORE/EQUIP_DUNGEON_PACK_TTL
+  descKey:
+    value: STORE/EQUIP_DUNGEON_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: 6659279242057502630}
+  reward: {fileID: -2304118631761978139}
+  purchaserType: 0
+--- !u!114 &-8777408517097897187
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edb8c3dae0c24940b568a9e1f66c050, type: 3}
+  m_Name: Gold Pack - Small
+  m_EditorClassIdentifier: 
+  id: cebe93f0718646c2a9c698bb891ec283
+  title: Gold Pack - Small
+  type: 0
+  iaps:
+  - {fileID: -5272792349407664658}
+--- !u!114 &-8131808693545159377
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240c9592b9b82b942a3a28079e89624a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    value: 08daf37fe0504eb2ba5471e2a002c077
+--- !u!114 &-7878562942236425374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240c9592b9b82b942a3a28079e89624a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    value: cebe93f0718646c2a9c698bb891ec283
+--- !u!114 &-7465042032525383652
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,9 +127,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyKey:
-    value: d55a8b05cf0142f588d84a31043d17c1
-  value: 10
---- !u!114 &-5769116381789360939
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 5000
+--- !u!114 &-7148349938891386449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edb8c3dae0c24940b568a9e1f66c050, type: 3}
+  m_Name: Gold Pack - Medium
+  m_EditorClassIdentifier: 
+  id: 08daf37fe0504eb2ba5471e2a002c077
+  title: Gold Pack - Large
+  type: 0
+  iaps:
+  - {fileID: -4361706031274226063}
+--- !u!114 &-7044691936598804134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e356fca05c325f489bb54871c06b770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6f979ece28554518aab545588ded1f7e
+  title: Equips
+  mechanicId: 302
+--- !u!114 &-6569245980419964307
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,19 +171,108 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
-  m_Name: Gold Pack - 100
+  m_Name: Armorer
   m_EditorClassIdentifier: 
-  id: 5c6f015329044dd8be9b2f730cedb9ee
-  title: Gold Pack - 100 - 10 (hard)
-  purchaserType: 0
+  id: f3252e0663b3444cb2bee22ff58cfa2d
+  title: Inscrypter
+  nameKey:
+    value: STORE/INSCRYPTER_PACK_TTL
+  descKey:
+    value: STORE/INSCRYPTER_PACK_DSC
   iconRef:
-    m_AssetGUID: 1345ab258b0300f448cb34805bbe72f9
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  price: {fileID: -8205888564160782666}
-  reward: {fileID: 8013478924082018806}
+  price: {fileID: -3395371120894834651}
+  reward: {fileID: 7764619848556971436}
+  purchaserType: 0
+--- !u!114 &-6480401550842693442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240c9592b9b82b942a3a28079e89624a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    value: 150d58f28e164d58b026ea77ac19505b
+--- !u!114 &-6467837411680990728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Armorer
+  m_EditorClassIdentifier: 
+  id: f15fd75f9f9a40529f9bb102aff6702e
+  title: Alchemist
+  nameKey:
+    value: STORE/ALCHEMIST_PACK_TTL
+  descKey:
+    value: STORE/ALCHEMIST_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: 5851646192340071790}
+  reward: {fileID: 8042139206021341408}
+  purchaserType: 0
+--- !u!114 &-6384121189700819446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Raid Pack
+  m_EditorClassIdentifier: 
+  id: 3b99ba6353e34475a1d89989e9d8653d
+  title: Raid Pack (2)
+  nameKey:
+    value: STORE/EQUIP_RAID_PACK_TTL
+  descKey:
+    value: STORE/EQUIP_RAID_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -7465042032525383652}
+  reward: {fileID: -2375026289435498903}
+  purchaserType: 0
+--- !u!114 &-5964666079450079343
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edb8c3dae0c24940b568a9e1f66c050, type: 3}
+  m_Name: Gold Pack - Medium
+  m_EditorClassIdentifier: 
+  id: 150d58f28e164d58b026ea77ac19505b
+  title: Gold Pack - Medium
+  type: 0
+  iaps:
+  - {fileID: -373933508734274394}
 --- !u!114 &-5707038225321506771
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +287,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2220d40df1c244128607cebb39bbec2e
   title: Packs
+--- !u!114 &-5618993658085584158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25391251c05634342be9ad283d3d1d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 1
+  instanceType:
+    value: 252
+  previewKey:
+    value: STORE/EQUIP_ITEM_TTL
+--- !u!114 &-5569566917494875056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb40deb1034e826419f2111c32b203da, type: 3}
+  m_Name: Equips Packs
+  m_EditorClassIdentifier: 
+  id: f08b1d26f4bb49da8e9265aa9f39f04c
+  title: Equips Packs
+  titleKey:
+    value: STORE/EQUIPS_SHELF_TTL
+  items:
+  - {fileID: -8832036055481940468}
+  - {fileID: 3558381072210164244}
+  - {fileID: -5252217026316289465}
+  - {fileID: -6384121189700819446}
+--- !u!114 &-5553284273077720874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 100
+--- !u!114 &-5272792349407664658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1bc411e46a0624191b71bb38aaeb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: gold_pack_small
+--- !u!114 &-5252217026316289465
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Raid Pack
+  m_EditorClassIdentifier: 
+  id: bd16ba44f87c4d749597621139d6e0e0
+  title: Raid Pack (1)
+  nameKey:
+    value: STORE/EQUIP_RAID_PACK_TTL
+  descKey:
+    value: STORE/EQUIP_RAID_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -3578103255090824568}
+  reward: {fileID: -5618993658085584158}
+  purchaserType: 0
 --- !u!114 &-4442716325778754451
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +406,20 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
---- !u!114 &-3997137567433207490
+--- !u!114 &-4361706031274226063
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1bc411e46a0624191b71bb38aaeb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: gold_pack_large
+--- !u!114 &-4075963703827643489
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +433,130 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 1000
+--- !u!114 &-3688815808440512353
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Gold Pack - Small
+  m_EditorClassIdentifier: 
+  id: a5ca84986e2144c09b8c02a20be6b119
+  title: Gold Pack - Large
+  nameKey:
+    value: STORE/GOLD_PACK_LARGE_TTL
+  descKey:
+    value: STORE/GOLD_PACK_LARGE_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -8131808693545159377}
+  reward: {fileID: 6985826519056832578}
+  purchaserType: 0
+--- !u!114 &-3578103255090824568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 5000
+--- !u!114 &-3395371120894834651
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
   value: 100
+--- !u!114 &-2881808925669662444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be1a25f732fd1143b506cdc5ae9889e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: a8292d7296694389a410bd00916b37d1
+  title: Yandex Game
+  enabled: 1
+--- !u!114 &-2855410559109280295
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25391251c05634342be9ad283d3d1d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 3
+  instanceType:
+    value: 251
+  previewKey:
+    value: STORE/EQUIP_ITEMS_TTL
+--- !u!114 &-2375026289435498903
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25391251c05634342be9ad283d3d1d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  instanceType:
+    value: 252
+  previewKey:
+    value: STORE/EQUIP_ITEMS_TTL
+--- !u!114 &-2304118631761978139
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25391251c05634342be9ad283d3d1d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 1
+  instanceType:
+    value: 251
+  previewKey:
+    value: STORE/EQUIP_ITEM_TTL
 --- !u!114 &-2082185298940011130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,6 +571,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1f038238c0c4483982d9e050758e0102
   title: Currency
+--- !u!114 &-742464150783054724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839586b6f1d930648927c5a0860cf81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 500
+--- !u!114 &-373933508734274394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1bc411e46a0624191b71bb38aaeb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: gold_pack_medium
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,9 +615,15 @@ MonoBehaviour:
   - {fileID: 7798648369359963485}
   - {fileID: -4442716325778754451}
   storeShelves:
-  - {fileID: -8487571232655378201}
-  purchaseProviders: []
-  inAppProducts: []
+  - {fileID: 8942095726243882050}
+  - {fileID: 2848440973404050828}
+  - {fileID: -5569566917494875056}
+  purchaseProviders:
+  - {fileID: -2881808925669662444}
+  inAppProducts:
+  - {fileID: -8777408517097897187}
+  - {fileID: -5964666079450079343}
+  - {fileID: -7148349938891386449}
   inAppCurrencies:
   - name: YAN
     codeKey:
@@ -208,12 +660,111 @@ MonoBehaviour:
   - {fileID: 5230214346501765998}
   rewardHandlers:
   - {fileID: 4658622391228671517}
+  - {fileID: -7044691936598804134}
+  - {fileID: 8531316438299212034}
   storeShelfFactories:
   - {fileID: -5707038225321506771}
   storeRouteKey:
-    value: a796446a14f24a88acb822d7c10ce5ac
+    value: d8fe4ec7298f4309befd216354aebce9
   purchaseProvidersKey:
-    value: a796446a14f24a88acb822d7c10ce5ac
+    value: d8fe4ec7298f4309befd216354aebce9
+--- !u!114 &1130561219644617488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reagentRewards:
+  - reagentId: 1003
+    amount: 60
+--- !u!114 &1465180580906155935
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reagentRewards:
+  - reagentId: 1001
+    amount: 20
+  - reagentId: 1002
+    amount: 20
+  - reagentId: 1003
+    amount: 20
+--- !u!114 &1963071397243671186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 100
+--- !u!114 &2848440973404050828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb40deb1034e826419f2111c32b203da, type: 3}
+  m_Name: Reagents Packs
+  m_EditorClassIdentifier: 
+  id: 59dfe42b33f74f48b2146982baf42e0c
+  title: Reagents Packs
+  titleKey:
+    value: STORE/REAGENT_PACKS_SHELF_TTL
+  items:
+  - {fileID: 6749432324010566143}
+  - {fileID: 4664773061097372328}
+  - {fileID: -6467837411680990728}
+  - {fileID: -6569245980419964307}
+--- !u!114 &3558381072210164244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Dungeon
+  m_EditorClassIdentifier: 
+  id: a603640570a24bccacc651d21c301fe3
+  title: Dungeon Pack (3)
+  nameKey:
+    value: STORE/EQUIP_DUNGEON_PACK_TTL
+  descKey:
+    value: STORE/EQUIP_DUNGEON_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -9122925027536821274}
+  reward: {fileID: -2855410559109280295}
+  purchaserType: 0
 --- !u!114 &4658622391228671517
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,7 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7550109187404d5f85e1decec8330258
   title: Currency
---- !u!114 &4762036534810069819
+--- !u!114 &4664773061097372328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,9 +788,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439a6b40d3e1f854c90ca1e05690377f, type: 3}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Armorer
   m_EditorClassIdentifier: 
+  id: 22705d0a49f141e6bd10ce97db19aeb3
+  title: Weaponmaster
+  nameKey:
+    value: STORE/WEAPONMASTER_PACK_TTL
+  descKey:
+    value: STORE/WEAPONMASTER_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: 1963071397243671186}
+  reward: {fileID: 1130561219644617488}
+  purchaserType: 0
 --- !u!114 &5230214346501765998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,6 +820,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: f12e5d22fe424c57b88ce352082dfa60
   title: Free
+--- !u!114 &5851646192340071790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 100
+--- !u!114 &6659279242057502630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f363ef26199b94f87bbe2d3af9fdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 500
+--- !u!114 &6749432324010566143
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Armorer
+  m_EditorClassIdentifier: 
+  id: b9b4fab7229143be81983f33868b10e2
+  title: Armorer
+  nameKey:
+    value: STORE/ARMORER_PACK_TTL
+  descKey:
+    value: STORE/ARMORER_PACK_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -5553284273077720874}
+  reward: {fileID: 1465180580906155935}
+  purchaserType: 0
 --- !u!114 &6860970241873987853
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +891,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 9ba349cb80bf4d94a11f1cc784be9824
   title: Ads
+--- !u!114 &6985826519056832578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839586b6f1d930648927c5a0860cf81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 5000
 --- !u!114 &7717973521685924777
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,6 +921,27 @@ MonoBehaviour:
   id: cc9ee19c33bd499b917e817c7c2f652d
   title: Yandex Game
   enabled: 1
+--- !u!114 &7764619848556971436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reagentRewards:
+  - reagentId: 1009
+    amount: 20
+  - reagentId: 1010
+    amount: 20
+  - reagentId: 1011
+    amount: 20
+  - reagentId: 1013
+    amount: 20
 --- !u!114 &7798648369359963485
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +968,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
---- !u!114 &8013478924082018806
+--- !u!114 &8042139206021341408
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,13 +977,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 839586b6f1d930648927c5a0860cf81e, type: 3}
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyKey:
-    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 1000
---- !u!114 &8372087809579909056
+  reagentRewards:
+  - reagentId: 1004
+    amount: 20
+  - reagentId: 1005
+    amount: 20
+  - reagentId: 1006
+    amount: 20
+  - reagentId: 1007
+    amount: 20
+  - reagentId: 1008
+    amount: 20
+--- !u!114 &8531316438299212034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e5756f972c9ff46af23d8228d51164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: d2e4e3b8703c4efd8ae74c00fb974482
+  title: Reagents
+--- !u!114 &8535281853054687364
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,16 +1015,67 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
-  m_Name: Gold Pack - 100
+  m_Name: Gold Pack - Small
   m_EditorClassIdentifier: 
-  id: 9b4129fee3da47d3ba9f8bf7c97fc5bd
-  title: Gold Pack - 100 - Free
-  purchaserType: 0
+  id: 642171dbe89c481a89b0a22a562a19c9
+  title: Gold Pack - Medium
+  nameKey:
+    value: STORE/GOLD_PACK_MEDIUM_TTL
+  descKey:
+    value: STORE/GOLD_PACK_MEDIUM_DSC
   iconRef:
-    m_AssetGUID: 1345ab258b0300f448cb34805bbe72f9
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  price: {fileID: 4762036534810069819}
-  reward: {fileID: -3997137567433207490}
+  price: {fileID: -6480401550842693442}
+  reward: {fileID: -4075963703827643489}
+  purchaserType: 0
+--- !u!114 &8594947038574270646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Gold Pack - Small
+  m_EditorClassIdentifier: 
+  id: 80f74af58eea494ab27c4f0095acd877
+  title: Gold Pack - Small
+  nameKey:
+    value: STORE/GOLD_PACK_SMALL_TTL
+  descKey:
+    value: STORE/GOLD_PACK_SMALL_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -7878562942236425374}
+  reward: {fileID: -742464150783054724}
+  purchaserType: 0
+--- !u!114 &8942095726243882050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb40deb1034e826419f2111c32b203da, type: 3}
+  m_Name: Gold Packs
+  m_EditorClassIdentifier: 
+  id: 0319eabc175a46e8b44b57b6d49f9645
+  title: Gold Packs
+  titleKey:
+    value: STORE/GOLD_PACKS_SHELF_TTL
+  items:
+  - {fileID: 8594947038574270646}
+  - {fileID: 8535281853054687364}
+  - {fileID: -3688815808440512353}
