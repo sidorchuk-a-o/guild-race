@@ -1,4 +1,5 @@
 ﻿using AD.ToolsCollection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -25,6 +26,7 @@ namespace Game.Instances
         private Dictionary<ThreatId, ThreatData> threatsCache;
         private Dictionary<InstanceType, InstanceTypeData> instanceTypesCache;
         private Dictionary<int, IReadOnlyCollection<InstanceRewardData>> unitRewardsCache;
+        private Dictionary<InstanceType, IReadOnlyCollection<InstanceRewardData>> instanceRewardsCache;
         private Dictionary<int, InstanceRewardData> rewardsCache;
 
         public IReadOnlyList<SeasonData> Seasons => seasons;
@@ -103,6 +105,33 @@ namespace Game.Instances
                 .ToDictionary(x => x.Key, x => (IReadOnlyCollection<InstanceRewardData>)x.ToList());
 
             unitRewardsCache.TryGetValue(unitId, out var data);
+
+            return data;
+        }
+
+        public IReadOnlyCollection<InstanceRewardData> GetInstanceRewards(InstanceType instanceType)
+        {
+            instanceRewardsCache ??= seasons
+                .SelectMany(x => getBossesByType(x))
+                .GroupBy(x => x.type)
+                .ToDictionary(x => x.Key, x => getRewards(x.Select(x => x.boss)));
+
+            static IEnumerable<(InstanceType type, UnitData boss)> getBossesByType(SeasonData x)
+            {
+                return x.Instances.SelectMany(i =>
+                {
+                    return i.BoosUnits.Select(b => (type: i.Type, boss: b));
+                });
+            }
+
+            IReadOnlyCollection<InstanceRewardData> getRewards(IEnumerable<UnitData> bosses)
+            {
+                return bosses
+                    .SelectMany(x => GetUnitRewards(x.Id))
+                    .ToList();
+            }
+
+            instanceRewardsCache.TryGetValue(instanceType, out var data);
 
             return data;
         }

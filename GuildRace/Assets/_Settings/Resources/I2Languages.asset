@@ -30,7 +30,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Press to continue
       - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u0447\u0442\u043E\u0431\u044B
         \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
       - 
@@ -49,9 +49,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435 \u043D\u043E\u0432\u043E\u0433\u043E
-        \u0438\u0433\u0440\u043E\u043A\u0430"
+      - Greetings, Guild Master!
+      - "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C,
+        \u0413\u043B\u0430\u0432\u0430 \u0413\u0438\u043B\u044C\u0434\u0438\u0438!"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -59,12 +59,15 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\\t\u041F\u0440\u0438\u0432\u0435\u0441\u0442\u0432\u0443\u0435\u043C \u0438\u0433\u0440\u043E\u043A\u0430
-        \u0432 \u0438\u0433\u0440\u0435 <b>Guild Race</b>. \u0420\u0430\u0441\u0441\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u043C
-        \u0435\u043C\u0443 \u043F\u0440\u043E \u043E\u0440\u043E\u043C\u043D\u044B\u0435
-        \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u0438
-        \u043F\u0435\u0440\u0441\u043F\u0435\u043A\u0442\u0438\u0432\u044B (\u0430\u0433\u0430)."
+      - \tWelcome in <b>Guild Race</b> Game! This is where Your guild's history starts.
+        And you're the only one who's responsible for where it'll lead to.
+      - "\\t\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u043C
+        \u0442\u0435\u0431\u044F \u0432 \u0438\u0433\u0440\u0435 <b>Guild Race</b>
+        - \u0437\u0434\u0435\u0441\u044C \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
+        \u0438\u0441\u0442\u043E\u0440\u0438\u044F \u0422\u0432\u043E\u0435\u0439
+        \u0433\u0438\u043B\u044C\u0434\u0438\u0438. \u0418 \u0442\u043E\u043B\u044C\u043A\u043E
+        \u043E\u0442 \u0442\u0435\u0431\u044F \u0437\u0430\u0432\u0438\u0441\u0438\u0442,
+        \u043A\u0430\u043A \u043E\u043D\u0430 \u0441\u043B\u043E\u0436\u0438\u0442\u0441\u044F."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -72,7 +75,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Guild Bank
       - "\u0411\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
@@ -81,11 +84,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\\t\u0412 \u0433\u0438\u043B\u044C\u0434\u0435\u0439\u0441\u0442\u043A\u043E\u043C
+      - \tHere, in Guild Bank, you can store new obtained items and  currencies.
+      - "\\t\u0412 \u0433\u0438\u043B\u044C\u0434\u0435\u0439\u0441\u043A\u043E\u043C
         \u0431\u0430\u043D\u043A\u0435 \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F
         \u0434\u043E\u0431\u044B\u0442\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
-        \u0438 \u0437\u043E\u043B\u043E\u0442\u043E."
+        \u0438 \u0432\u0430\u043B\u044E\u0442\u0430."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -93,7 +96,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Recruit Applications
       - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
       - 
       Flags: 000000
@@ -102,7 +105,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tReview new applications and make the decision if you want to accept them.
       - "\\t\u0422\u0443\u0442 \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435
         \u0440\u0430\u0441\u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044C
         \u0437\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432.
@@ -116,7 +119,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Guild Roster
       - "\u0421\u043F\u0438\u0441\u043E\u043A \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
@@ -125,7 +128,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tAdvanced guild members info.
       - "\\t\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F
         \u043E \u0447\u043B\u0435\u043D\u0430\u0445 \u0432\u0430\u0448\u0435\u0439
         \u0433\u0438\u043B\u044C\u0434\u0438\u0438."
@@ -136,7 +139,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - the Artisans Quarter
       - "\u0423\u043B\u0438\u0446\u0430 \u0440\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
       - 
       Flags: 000000
@@ -145,10 +148,15 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\\t\u041F\u0440\u0438\u0445\u043E\u0434\u0438\u043C \u0441\u044E\u0434\u0430,
-        \u043A\u0440\u0430\u0444\u0442\u0438\u043C, \u043D\u0435 \u0436\u0430\u043B\u0443\u0435\u043C\u0441\u044F
-        \u0438 \u0442\u043E\u043F\u0430\u0435\u043C \u0434\u0430\u043B\u044C\u0448\u0435."
+      - \tCome here to improve your players. Craft new items and let's make the strongest
+        Guild ever!
+      - "\\t\u0417\u0434\u0435\u0441\u044C \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
+        \u0443\u0441\u0438\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438\u0445
+        \u0438\u0433\u0440\u043E\u043A\u043E\u0432. \u0421\u043E\u0437\u0434\u0430\u0432\u0430\u0439
+        \u0434\u043B\u044F \u043D\u0438\u0445 \u0431\u043E\u043B\u0435\u0435 \u0441\u0438\u043B\u044C\u043D\u044B\u0435
+        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B, \u043F\u0443\u0441\u0442\u044C
+        \u0442\u0432\u043E\u044F \u0433\u0438\u043B\u044C\u0434\u0438\u044F \u0431\u0443\u0434\u0435\u0442
+        \u0441\u0430\u043C\u043E\u0439 \u0441\u0438\u043B\u044C\u043D\u043E\u0439!"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -156,7 +164,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Task Board
       - "\u0414\u043E\u0441\u043A\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
       - 
       Flags: 000000
@@ -165,7 +173,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tAh, new task on the Board! Let's do this!
       - "\\t\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0448\u0442\u0430\u0431 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
         \u0441\u0442\u0430\u0432\u0438\u0442 \u0437\u0430\u0434\u0430\u0447\u0443,
         \u043D\u0430\u043C \u043D\u0430\u0434\u043E \u0435\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C.
@@ -177,7 +185,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dungeons & Raids
       - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B"
       - 
       Flags: 000000
@@ -186,7 +194,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tCreate group. Try different comps. Make the strongest one to get the job
+        done.
       - "\\t\u0421\u043E\u0431\u0438\u0440\u0430\u0439 \u0433\u0440\u0443\u043F\u043F\u0443
         \u0438 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439 \u0438\u0445
         \u043D\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 \u0432 \u043B\u043E\u0433\u043E\u0432\u043E
@@ -198,7 +207,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Active Expeditions
       - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0445\u043E\u0434\u044B"
       - 
       Flags: 000000
@@ -207,7 +216,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tTrack current progress of your groups, check result and get some loot.
       - "\\t\u041E\u0442\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u0439 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0435
         \u0433\u0440\u0443\u043F\u043F\u044B, \u0432\u043E\u0432\u0440\u0435\u043C\u044F
         \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0439 \u0438\u0445 \u0438 \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u044F\u0439
@@ -278,6 +287,15 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: HUB/STORE_TAB_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - Shopping Area
+      - "\u0422\u043E\u0440\u0433\u043E\u0432\u0430\u044F \u043F\u043B\u043E\u0449\u0430\u0434\u044C"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: HUB/
       TermType: 0
       Description: 
@@ -291,7 +309,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Day of the Week
       - "\u0414\u0435\u043D\u044C \u043D\u0435\u0434\u0435\u043B\u0438"
       - 
       Flags: 000000
@@ -300,9 +318,19 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "** \u0423\u041C\u041D\u041E\u0415 \u041E\u041F\u0418\u0421\u0410\u041D\u0418\u0415
-        \u041C\u0415\u0425\u0410\u041D\u0418\u041A\u0418 **"
+      - Every 3 days the World refreshing - raids are available again, some new quests
+        are appear in the Task Board, and the Shop are filling with new fresh items.
+      - "\\t\u0420\u0430\u0437 \u0432 <b>3 \u0434\u043D\u044F</b> \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442
+        \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 \u043C\u0438\u0440\u0430
+        - <b>\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438
+        \u0440\u0435\u0439\u0434\u044B</b> \u0432\u043D\u043E\u0432\u044C \u0441\u0442\u0430\u043D\u043E\u0432\u044F\u0442\u0441\u044F
+        \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C\u0438 \u0434\u043B\u044F
+        \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F, \u043D\u0430
+        <b>\u0414\u043E\u0441\u043A\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0439</b>
+        \u043F\u043E\u044F\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u043D\u043E\u0432\u044B\u0435
+        \u0446\u0435\u043B\u0438, \u0430 <b>\u041C\u0430\u0433\u0430\u0437\u0438\u043D</b>
+        \u0432\u043D\u043E\u0432\u044C \u043D\u0430\u043F\u043E\u043B\u043D\u044F\u0435\u0442\u0441\u044F
+        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430\u043C\u0438."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -328,7 +356,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Your Name
       - "\u0412\u0430\u0448\u0435 \u0438\u043C\u044F"
       - 
       Flags: 000000
@@ -580,8 +608,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u043F\u043E\u0438\u0441\u043A\u0430
+      - Recruiting Parameters
+      - "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u043E\u0438\u0441\u043A\u0430
         \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
       - 
       Flags: 000000
@@ -799,7 +827,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Wizard
       - "\u041A\u043E\u043B\u0434\u0443\u043D"
       - 
       Flags: 000000
@@ -808,7 +836,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Augur
       - "\u0410\u0432\u0433\u0443\u0440"
       - 
       Flags: 000000
@@ -817,7 +845,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Palm Knight
       - "\u0414\u043B\u0430\u043D\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -826,7 +854,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Steelblade
       - "\u0411\u0443\u043B\u0430\u0442\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -835,7 +863,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Seeress
       - "\u0412\u0435\u0434\u0443\u043D\u044C\u044F"
       - 
       Flags: 000000
@@ -844,7 +872,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shapeshifter
       - "\u041F\u0430\u043D\u0434\u0435\u043C\u043E\u0440\u0444"
       - 
       Flags: 000000
@@ -853,7 +881,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Artificer
       - "\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440"
       - 
       Flags: 000000
@@ -862,7 +890,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Scout
       - "\u041B\u0430\u0437\u0443\u0442\u0447\u0438\u043A"
       - 
       Flags: 000000
@@ -871,7 +899,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tA bridge between chaos and order. He can be furious as a wildfire or unshakable
+        as a mountain. His magic doesn't just attack or defend - it rewrites the
+        rules, forcing enemies to play by his rules.
       - "\\t\u041A\u043E\u043B\u0434\u0443\u043D \u2014 \u044D\u0442\u043E \u043C\u043E\u0441\u0442
         \u043C\u0435\u0436\u0434\u0443 \u0445\u0430\u043E\u0441\u043E\u043C \u0438
         \u043F\u043E\u0440\u044F\u0434\u043A\u043E\u043C. \u041E\u043D \u043C\u043E\u0436\u0435\u0442
@@ -892,7 +922,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '\tHe doesn''t beg for mercy - he wields raw power, blending the purifying
+        wrath of the sun with shadowy bargains. To him, true holiness is born in
+        struggle: light without dark blinds, dark without light suffocates.'
       - "\\t\u041E\u043D \u043D\u0435 \u043C\u043E\u043B\u0438\u0442 \u043E \u043C\u0438\u043B\u043E\u0441\u0442\u0438
         \u2014 \u043E\u043D \u0432\u043B\u0430\u0434\u0435\u0435\u0442 \u043E\u0433\u0440\u043E\u043C\u043D\u043E\u0439
         \u0441\u0438\u043B\u043E\u0439, \u0441\u043C\u0435\u0448\u0438\u0432\u0430\u044F
@@ -911,7 +943,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tHe doesn't defend faith - he hammeres it into the skulls of the wicked.
+        His armor is etched with sacred verses, but there's no time to read it -
+        enemies fall in a single strike.
       - "\\t\u041E\u043D \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0437\u0430\u0449\u0438\u0449\u0430\u0435\u0442
         \u0432\u0435\u0440\u0443 \u2014 \u043E\u043D \u0432\u043A\u043E\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u0442
         \u0435\u0451 \u0432 \u0447\u0435\u0440\u0435\u043F\u0430 \u043D\u0435\u0447\u0435\u0441\u0442\u0438\u0432\u044B\u0445.
@@ -928,7 +962,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tThe walking fortress with style. He doesn't just block attacks - he does
+        it with such grace that even foes sometimes applaud. Lets himself get hot
+        twice to "warm up the crowd" then disarms an enemy with on fluid motion.
       - "\\t\u0425\u043E\u0434\u044F\u0447\u0430\u044F \u043A\u0440\u0435\u043F\u043E\u0441\u0442\u044C
         \u0441 \u0447\u0443\u0432\u0441\u0442\u0432\u043E\u043C \u0441\u0442\u0438\u043B\u044F.
         \u041E\u043D \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0431\u043B\u043E\u043A\u0438\u0440\u0443\u0435\u0442
@@ -949,7 +985,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tShe doesn't predict the future - she edits it. A mix of shamanic rites,
+        druidic botany and outright blackmail.
       - "\\t\u041E\u043D\u0430 \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E
         \u043F\u0440\u0435\u0434\u0441\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442
         \u0431\u0443\u0434\u0443\u0449\u0435\u0435 \u2014 \u043E\u043D\u0430 \u0435\u0433\u043E
@@ -966,7 +1003,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tHis blood is a blueprint. His mutations are his tools. And your corpse?
+        His next experiment.
       - "\\t\u0415\u0433\u043E \u043A\u0440\u043E\u0432\u044C \u2014 \u044D\u0442\u043E
         \u0435\u0433\u043E \u0447\u0435\u0440\u0442\u0435\u0436. \u0415\u0433\u043E
         \u043C\u0443\u0442\u0430\u0446\u0438\u0438 \u2014 \u044D\u0442\u043E \u0435\u0433\u043E
@@ -980,7 +1018,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tHis creations shield, shoot, slice and explode. Sometimes all at once.
+        "Safety" is when everyone around him are already dead.
       - "\\t\u0415\u0433\u043E \u043C\u0435\u0445\u0430\u043D\u0438\u0437\u043C\u044B
         \u0437\u0430\u0449\u0438\u0449\u0430\u044E\u0442, \u0441\u0442\u0440\u0435\u043B\u044F\u044E\u0442,
         \u0440\u0435\u0436\u0443\u0442 \u0438 \u0432\u0437\u0440\u044B\u0432\u0430\u044E\u0442\u0441\u044F.
@@ -995,7 +1034,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tHe doesn't just prey - he weaves a web of their own fears. His daggers
+        are fangs of the night, tempered in black flame. Every step is silent, every
+        strike is a ritual, turning blood into ink for new shadow marks.
       - "\\t\u041D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0432\u044B\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u0435\u0442
         \u0436\u0435\u0440\u0442\u0432 \u2014 \u043E\u043D \u043F\u043B\u0435\u0442\u0451\u0442
         \u0434\u043B\u044F \u043D\u0438\u0445 \u043F\u0430\u0443\u0442\u0438\u043D\u0443
@@ -1016,7 +1057,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Elemental Seer
       - "\u0412\u043E\u043B\u0445\u0432 \u0421\u0442\u0438\u0445\u0438\u0439\u043D\u044B\u0439"
       - 
       Flags: 000000
@@ -1025,7 +1066,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Keeper of Rites
       - "\u0417\u0430\u043F\u043E\u0432\u0435\u0434\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -1034,7 +1075,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Wrathbringer
       - "\u042F\u0440\u0443\u043D "
       - 
       Flags: 000000
@@ -1043,7 +1084,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Malefic Reaper
       - "\u041B\u0438\u0445\u043E\u0434\u0443\u0445"
       - 
       Flags: 000000
@@ -1052,7 +1093,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Hallowed Champion
       - "\u0420\u0430\u0442\u043D\u0438\u043A \u0421\u0432\u044F\u0449\u0435\u043D\u043D\u044B\u0439"
       - 
       Flags: 000000
@@ -1061,7 +1102,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Lightkeeper
       - "\u0421\u0432\u044F\u0442\u043E\u0441\u0442\u0440\u0430\u0436"
       - 
       Flags: 000000
@@ -1070,7 +1111,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Truthbearer '
       - "\u0427\u0435\u0441\u0442\u043E\u0431\u043E\u0440\u0435\u0446 "
       - 
       Flags: 000000
@@ -1079,7 +1120,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Watcher of the Veil
       - "\u0414\u043E\u0437\u043E\u0440\u043D\u044B\u0439"
       - 
       Flags: 000000
@@ -1088,7 +1129,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Woodsoul Warden
       - "\u041B\u0435\u0441\u043E\u0432\u0438\u043A"
       - 
       Flags: 000000
@@ -1097,7 +1138,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Doomscryer
       - "\u0412\u0435\u0441\u0442\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -1106,7 +1147,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Eternal Wayfarer
       - "\u041C\u0435\u0436\u0432\u0435\u0447\u043D\u044B\u0439 \u0421\u0442\u0440\u0430\u043D\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -1115,7 +1156,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Pestilent Alchemist
       - "\u0427\u0443\u043C\u043D\u043E\u0439 \u0410\u043B\u0445\u0438\u043C\u0438\u043A"
       - 
       Flags: 000000
@@ -1124,7 +1165,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ironclad Tinkerer
       - "\u041C\u0435\u0445\u0430\u043D\u0438\u0437\u0430\u0442\u043E\u0440"
       - 
       Flags: 000000
@@ -1133,7 +1174,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mad Bomber
       - "\u0411\u0435\u0437\u0443\u043C\u043D\u044B\u0439 \u0411\u043E\u043C\u0431\u0430\u0440\u0434\u0438\u0440"
       - 
       Flags: 000000
@@ -1142,7 +1183,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shadowweaver
       - "\u0422\u0435\u043D\u0435\u0442\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -1151,7 +1192,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Blade Whisperer
       - "\u0428\u0435\u043F\u043E\u0442 \u041A\u043B\u0438\u043D\u043A\u0430"
       - 
       Flags: 000000
@@ -1160,7 +1201,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - An ancient sorcerer who knows where the wind blows - literally. His enemies
+        are roasted, frozen or crushed with fallen boulders. And his allies are lifted
+        by tailwinds and warmed by embers.
       - "\u0414\u0440\u0435\u0432\u043D\u0438\u0439 \u043A\u043E\u043B\u0434\u0443\u043D,
         \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0437\u043D\u0430\u0435\u0442,
         \u043A\u0443\u0434\u0430 \u0434\u0443\u0435\u0442 \u0432\u0435\u0442\u0435\u0440
@@ -1179,7 +1222,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - No one enters his magic uninvited. Or leaves. Those who dare learn the meaning
+        of "sanction" carved into their flesh and blood.
       - "\u0412 \u0435\u0433\u043E \u043C\u0430\u0433\u0438\u044E \u043D\u0435 \u0432\u0445\u043E\u0434\u044F\u0442
         \u0431\u0435\u0437 \u0441\u043F\u0440\u043E\u0441\u0430. \u0412\u044B\u0445\u043E\u0434\u044F\u0442
         \u2014 \u0442\u043E\u0436\u0435. \u0410 \u0435\u0441\u043B\u0438 \u043A\u0442\u043E-\u0442\u043E
@@ -1195,7 +1239,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - The sun in his hands isn't just light - it's a weapon. But allies recieve
+        its warmth... assuming they're punctual for the ritual.
       - "\u0421\u043E\u043B\u043D\u0446\u0435 \u0432 \u0435\u0433\u043E \u0440\u0443\u043A\u0430\u0445
         \u2014 \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0441\u0432\u0435\u0442,
         \u0430 \u043E\u0440\u0443\u0436\u0438\u0435. \u041D\u043E \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430\u043C
@@ -1210,7 +1255,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - A broker of dark bargains. He doesn't heal - he renegotiates. Your pain vanishes...
+        only to be gifted to another. And yes, he's already chosen who.
       - "\u041F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A \u0442\u0435\u043C\u043D\u044B\u0445
         \u0441\u0438\u043B. \u041D\u0435 \u0438\u0441\u0446\u0435\u043B\u044F\u0435\u0442
         \u2014 \u043F\u0435\u0440\u0435\u0437\u0430\u043A\u043B\u044E\u0447\u0430\u0435\u0442
@@ -1226,7 +1272,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Sword and shield guard the temples; prayers guard the living. Let a foe cross
+        the threshold, and they'll learn the gods wrath is no metaphor.
       - "\u041C\u0435\u0447\u043E\u043C \u0438 \u0449\u0438\u0442\u043E\u043C \u043E\u0445\u0440\u0430\u043D\u044F\u0435\u0442
         \u0441\u0432\u044F\u0442\u044B\u043D\u0438, \u0430 \u043C\u043E\u043B\u0438\u0442\u0432\u043E\u0439
         \u2014 \u0434\u0443\u0448\u0438 \u0436\u0438\u0432\u044B\u0445. \u0415\u0441\u043B\u0438
@@ -1241,7 +1288,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - He stands on the frontline, but his weapon isn't just steel. He doesn't shout
+        "Charge!" - he says "Hold the line". Those who listen survive.
       - "\u041E\u043D \u0441\u0442\u043E\u0438\u0442 \u043D\u0430 \u043F\u0435\u0440\u0435\u0434\u043E\u0432\u043E\u0439,
         \u043D\u043E \u0435\u0433\u043E \u043E\u0440\u0443\u0436\u0438\u0435 \u2014
         \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u043C\u0435\u0447. \u041E\u043D
@@ -1256,7 +1304,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - He doesn't strike from shadows - he offers a fair chance. Underestimate him,
+        and his "honorable duel" end in one blow.
       - "\u041E\u043D \u043D\u0435 \u0443\u0431\u0438\u0432\u0430\u0435\u0442 \u0438\u0441\u043F\u043E\u0434\u0442\u0438\u0448\u043A\u0430
         \u2014 \u043E\u043D \u0434\u0430\u0451\u0442 \u0448\u0430\u043D\u0441. \u041D\u043E
         \u0435\u0441\u043B\u0438 \u0432\u0440\u0430\u0433 \u0435\u0433\u043E \u043D\u0435\u0434\u043E\u043E\u0446\u0435\u043D\u0438\u0442,
@@ -1271,7 +1320,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - He stood here a century ago; he'll stand a century more. His shield is the
+        border between life and death - and he decides who crosses.
       - "\u041E\u043D \u0441\u0442\u043E\u044F\u043B \u0437\u0434\u0435\u0441\u044C
         \u0441\u0442\u043E \u043B\u0435\u0442 \u0438 \u043F\u0440\u043E\u0441\u0442\u043E\u0438\u0442
         \u0435\u0449\u0451 \u0441\u0442\u043E. \u0415\u0433\u043E \u0449\u0438\u0442
@@ -1286,7 +1336,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Enemies laugh until they realize: the forest is his ally... and it''s already
+        inside their armor.'
       - "\u0412\u0440\u0430\u0433\u0438 \u0441\u043C\u0435\u044E\u0442\u0441\u044F,
         \u043F\u043E\u043A\u0430 \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E\u0442:
         \u043B\u0435\u0441 \u0432\u043E\u043A\u0440\u0443\u0433 \u2014 \u044D\u0442\u043E
@@ -1299,7 +1350,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Spirits are his eyes and ears. They whisper of ambushes, draw enemy attacks
+        onto himself, and shriek like owls if foes creep too close.
       - "\u0415\u0433\u043E \u0434\u0443\u0445\u0438 \u2014 \u044D\u0442\u043E \u0433\u043B\u0430\u0437\u0430
         \u0438 \u0443\u0448\u0438. \u041E\u043D\u0438 \u0448\u0435\u043F\u0447\u0443\u0442
         \u0435\u043C\u0443 \u043E \u0437\u0430\u0441\u0430\u0434\u0430\u0445, \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u044E\u0442
@@ -1317,7 +1369,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'The Abyss screams in his ears - the fiercer he fights, the louder it grows.
+        Every time he taps into his power, he gambles: can he control it before it
+        controls him?'
       - "\u041E\u043D \u0441\u043B\u044B\u0448\u0438\u0442 \u0433\u043E\u043B\u043E\u0441\u0430
         \u0411\u0435\u0437\u0434\u043D\u044B, \u0438 \u0447\u0435\u043C \u044F\u0440\u043E\u0441\u0442\u043D\u0435\u0435
         \u043E\u043D \u0441\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F, \u0442\u0435\u043C
@@ -1334,7 +1388,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'He doesn''t bury the dead - he reads them. Each corpse is a page: lungs
+        as parchment, blood as ink, decay as marginalia.'
       - "\u041E\u043D \u043D\u0435 \u0445\u043E\u0440\u043E\u043D\u0438\u0442 \u043C\u0451\u0440\u0442\u0432\u044B\u0445
         \u2014 \u043E\u043D \u0438\u0445 \u0447\u0438\u0442\u0430\u0435\u0442. \u041A\u0430\u0436\u0434\u044B\u0439
         \u0442\u0440\u0443\u043F \u0434\u043B\u044F \u043D\u0435\u0433\u043E \u043A\u0430\u043A
@@ -1350,7 +1405,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - His workshop is a shed of "this'll be useful someday". A shield made of spoons?
+        A grenade from honey and nails? If it smokes, it's working.
       - "\u0415\u0433\u043E \u043C\u0430\u0441\u0442\u0435\u0440\u0441\u043A\u0430\u044F
         \u2014 \u044D\u0442\u043E \u0441\u0430\u0440\u0430\u0439, \u043F\u043E\u043B\u043D\u044B\u0439
         '\u044D\u0442\u043E \u0435\u0449\u0451 \u043F\u0440\u0438\u0433\u043E\u0434\u0438\u0442\u0441\u044F'.
@@ -1367,7 +1423,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - A self-taught genius who believes "if you don't have the right tool, make
+        it explode". Equal parts alchemist, pyromaniac and town fool.
       - "\u0413\u0435\u043D\u0438\u0439-\u0441\u0430\u043C\u043E\u0443\u0447\u043A\u0430,
         \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0432\u0435\u0440\u0438\u0442,
         \u0447\u0442\u043E \xAB\u0435\u0441\u043B\u0438 \u0447\u0435\u0433\u043E-\u0442\u043E
@@ -1383,7 +1440,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'His backpack is a museum of pain: serrated snares, spiked caltrons, "surprise"
+        boxes. Favourite question: "Did you step on it? No? You''re about to."'
       - "\u0415\u0433\u043E \u0440\u044E\u043A\u0437\u0430\u043A \u2014 \u044D\u0442\u043E
         \u043C\u0443\u0437\u0435\u0439 \u0431\u043E\u043B\u0438: \u0437\u0443\u0431\u0447\u0430\u0442\u044B\u0435
         \u043B\u043E\u0432\u0443\u0448\u043A\u0438, \u0448\u0438\u043F\u043E\u0432\u0430\u043D\u043D\u044B\u0435
@@ -1399,7 +1457,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - His strikes don't just wound - it haunt. Blades force foes to battle their
+        own shosts, leaving hollow shells whispering, "I used to me... something".
       - "\u0415\u0433\u043E \u0443\u0434\u0430\u0440\u044B \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E
         \u043D\u0430\u043D\u043E\u0441\u044F\u0442 \u0443\u0440\u043E\u043D \u0446\u0435\u043B\u0438.
         \u0415\u0433\u043E \u043A\u043B\u0438\u043D\u043A\u0438 \u0442\u0435\u0440\u0437\u0430\u044E\u0442
@@ -2977,7 +3036,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rewards
       - "\u041D\u0430\u0433\u0440\u0430\u0434\u044B"
       - 
       Flags: 000000
@@ -2986,7 +3045,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Create a threat: {[0]}'
       - "\u0421\u043E\u0437\u0434\u0430\u0435\u0442 \u0443\u0433\u0440\u043E\u0437\u0443:
         {[0]}"
       - 
@@ -2996,7 +3055,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Remaining attempts: {[0]} / {[1]}'
       - "\u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u043F\u043E\u043F\u044B\u0442\u043E\u043A:
         {[0]} / {[1]}"
       - 
@@ -3034,7 +3093,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - In group
       - "\u0412 \u0433\u0440\u0443\u043F\u043F\u0435"
       - 
       Flags: 000000
@@ -3052,7 +3111,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - chance
       - "\u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C \u0443\u0441\u043F\u0435\u0445\u0430"
       - 
       Flags: 000000
@@ -3061,7 +3120,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - The chance of success
       - "\u0412\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C \u0443\u0441\u043F\u0435\u0445\u0430:"
       - 
       Flags: 000000
@@ -3088,7 +3147,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - No current expeditions
       - "\u041D\u0435\u0442 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u0445 \u043F\u043E\u0445\u043E\u0434\u043E\u0432"
       - 
       Flags: 000000
@@ -3097,7 +3156,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rewards
       - "\u041D\u0430\u0433\u0440\u0430\u0434\u044B"
       - 
       Flags: 000000
@@ -3106,7 +3165,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Claim reward
       - "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
       - 
       Flags: 000000
@@ -3125,7 +3184,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Expedition completed
       - "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E"
       - 
       Flags: 000000
@@ -3134,7 +3193,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Expedition failed
       - "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u043F\u0440\u043E\u0432\u0430\u043B\u0435\u043D\u043E"
       - 
       Flags: 000000
@@ -3143,9 +3202,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
-        \u0441\u0435\u0437\u043E\u043D\u0430"
+      - Season of Researches
+      - "\u0421\u0435\u0437\u043E\u043D \u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0439"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3226,8 +3284,19 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
       - <>
+      - "\u041D\u0435\u043A\u043E\u0433\u0434\u0430 \u043A\u043B\u044E\u0447\u0435\u0432\u0430\u044F
+        \u0441\u0442\u043E\u0440\u043E\u0436\u0435\u0432\u0430\u044F \u043A\u0440\u0435\u043F\u043E\u0441\u0442\u044C
+        \u0432 \u044D\u0442\u0438\u0445 \u0437\u0435\u043C\u043B\u044F\u0445, \u0430
+        \u043D\u044B\u043D\u0435 - \u0430\u0432\u0430\u043D\u043F\u043E\u0441\u0442
+        \u0413\u0430\u043D\u0437\u044B \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u043A\u043E\u0432,
+        \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u044E\u0449\u0438\u0445
+        \u0441\u0432\u043E\u0438 \u0441\u0442\u0435\u043D\u044B \u0432 \u0430\u043B\u044B\u0439
+        \u0446\u0432\u0435\u0442 \u043A\u0440\u043E\u0432\u0438 \u043F\u043E\u0439\u043C\u0430\u043D\u043D\u044B\u0445
+        \u0438\u043C\u0438 \u0432\u0440\u0430\u0433\u043E\u0432. \u041E\u0441\u0442\u0430\u0432\u044C
+        \u043D\u0430\u0434\u0435\u0436\u0434\u0443, \u043F\u043E\u043F\u0430\u0432
+        \u0441\u044E\u0434\u0430 - \u044D\u0442\u043E \u043A\u0440\u0435\u043F\u043E\u0441\u0442\u044C
+        \u043E\u0442\u0447\u0430\u044F\u043D\u0438\u044F \u0438 \u0431\u0435\u0437\u043D\u0430\u0434\u0435\u0436\u043D\u043E\u0441\u0442\u0438."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3235,7 +3304,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - <>
       - 
       Flags: 000000
@@ -3244,7 +3313,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - <>
       - 
       Flags: 000000
@@ -3253,7 +3322,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - <>
       - 
       Flags: 000000
@@ -3262,7 +3331,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - <>
       - 
       Flags: 000000
@@ -3271,7 +3340,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Burek the Sorcerer
       - "\u0411\u0443\u0440\u0435\u043A \u0412\u0435\u0434\u043E\u0433\u043E\u043D"
       - 
       Flags: 000000
@@ -3298,7 +3367,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Kespir the Bloodthirsty
       - "\u041A\u0435\u0441\u043F\u0438\u0440 \u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0439"
       - 
       Flags: 000000
@@ -3435,7 +3504,14 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Where he steps - earth trembles. Where he gestures - thunder answers."
+        </i>
+
+        Once a dark sorcerer''s apprentice, now a tempest-wrapped shaman
+        with stormblood in his veins. They say he learned yo summon winds and lightning
+        from Nature''s own spirits... until the Dark promised him dominion. He fights
+        not with weapons, but with thunder-dances and cyclone-whirls. Step into his
+        circle, and your bones will scatter like hail.'
       - "<i>\"\u0413\u0434\u0435 \u0441\u0442\u0443\u043F\u0438\u0442 \u2013 \u0437\u0435\u043C\u043B\u044F
         \u0434\u0440\u043E\u0436\u0438\u0442, \u0433\u0434\u0435 \u043C\u0430\u0445\u043D\u0451\u0442
         \u0440\u0443\u043A\u043E\u0439 \u2013 \u0433\u0440\u043E\u043C \u0433\u0440\u0435\u043C\u0438\u0442.\"</i>\n\u041D\u0435\u043A\u043E\u0433\u0434\u0430
@@ -3463,7 +3539,13 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"No longer man, not quite demon - his blood boils with hellfire, but
+        his mind still fights."</i>
+
+        A fortress captain, twisted by darkness.
+        Claws, horns, flame-eyed - yet fragments of honor remain. He battles in frenzied
+        swings: sword, talons, then raw demonic power erupting, swallowing whole
+        armies.'
       - "<i>\"\u041D\u0435 \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u0443\u0436\u0435,
         \u043D\u043E \u0438 \u043D\u0435 \u0431\u0435\u0441 \u2013 \u043A\u0440\u043E\u0432\u044C
         \u0434\u0435\u043C\u043E\u043D\u044C\u044F \u0432 \u043D\u0451\u043C \u043A\u0438\u043F\u0438\u0442,
@@ -3490,7 +3572,13 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Can''t be caught, can''t be killed - just a shadow slipping through
+        traps."</i>
+
+        Arrived from Far Lands with Naal, becoming his living
+        shadow. No face, only cloak and mask. Fighting him is death''s roulette:
+        floors collapse, arrows materialize from darkness, and he''s <i>everywhere</i>.
+        Catch him? A puppet. The real one''s already behind you.'
       - "<i>\"\u041D\u0435 \u043F\u043E\u0439\u043C\u0430\u0442\u044C, \u043D\u0435
         \u0443\u0431\u0438\u0442\u044C \u2013 \u043B\u0438\u0448\u044C \u0442\u0435\u043D\u044C
         \u0441\u043A\u043E\u043B\u044C\u0437\u0438\u0442 \u043C\u0435\u0436 \u043B\u043E\u0432\u0443\u0448\u0435\u043A.\"</i>\n\u041F\u0440\u0438\u0448\u0451\u043B
@@ -3507,7 +3595,7 @@ MonoBehaviour:
         \u043F\u0440\u043E\u0432\u0430\u043B\u0438\u0442\u0441\u044F, \u0441\u0442\u0440\u0435\u043B\u044B
         \u0438\u0437 \u0442\u0435\u043C\u043D\u043E\u0442\u044B \u043F\u0440\u0438\u043B\u0435\u0442\u044F\u0442,
         \u0434\u0430 \u0438 \u0441\u0430\u043C \u043E\u043D \u0431\u0443\u0434\u0442\u043E
-        \u0432 \u0442\u0440\u0451\u0445 \u043C\u0435\u0441\u0442\u0430\u0445 \u0441\u0440\u0430\u0437\u0443.
+        \u0432 <i>\u0442\u0440\u0451\u0445 \u043C\u0435\u0441\u0442\u0430\u0445 \u0441\u0440\u0430\u0437\u0443</i>.
         \u0413\u043E\u0432\u043E\u0440\u044F\u0442, \u0435\u0441\u043B\u0438 \u043F\u043E\u0439\u043C\u0430\u0435\u0448\u044C
         \u0435\u0433\u043E \u2013 \u043E\u043A\u0430\u0436\u0435\u0442\u0441\u044F,
         \u0447\u0442\u043E \u044D\u0442\u043E \u043B\u0438\u0448\u044C \u043A\u0443\u043A\u043B\u0430,
@@ -3520,7 +3608,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"His steed - flame. His armor - void. His spear - death incarnate."</i>
+
+        A
+        warlord leading legions. Commands with thunder, cuts with arrow-storms. Those
+        under his banner are immortal... until he falls, and his army crumbles to
+        dust.'
       - "<i>\"\u041A\u043E\u043D\u044C \u0435\u0433\u043E \u2013 \u043F\u043B\u0430\u043C\u0435\u043D\u044C,
         \u0434\u043E\u0441\u043F\u0435\u0445\u0438 \u2013 \u0442\u044C\u043C\u0430,
         \u0430 \u043A\u043E\u043F\u044C\u0451 \u2013 \u0441\u0430\u043C\u0430 \u0441\u043C\u0435\u0440\u0442\u044C.\"</i>\n\u0412\u043E\u0435\u0432\u043E\u0434\u0430
@@ -3543,7 +3636,13 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Born in flames, walking in shadows."</i>
+
+        Naal''s right hand
+        - his final shield. Whispers say she''s no mortal, but a demon wearing flesh.
+        Fights with glacial fury: her blade severs sould; her gaze melts armor. Kill
+        her, and the truth unravels: was she ever human, or just a vessel for something
+        <i>older</i>?'
       - "<i>\"\u0418\u0437 \u043E\u0433\u043D\u044F \u0440\u043E\u0436\u0434\u0451\u043D\u043D\u0430\u044F,
         \u0432 \u0442\u0435\u043D\u044F\u0445 \u0445\u043E\u0434\u044F\u0449\u0430\u044F.\"</i>\n\u041F\u0440\u0430\u0432\u0430\u044F
         \u0434\u043B\u0430\u043D\u044C \u041D\u0430\u0430\u043B\u0430, \u0435\u0433\u043E
@@ -3562,7 +3661,7 @@ MonoBehaviour:
         \u043E\u043D\u0430 \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u043E\u043C\u2026
         \u0438\u043B\u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u043B\u0438\u0448\u044C
         \u0441\u043E\u0441\u0443\u0434\u043E\u043C \u0434\u043B\u044F \u0447\u0435\u0433\u043E-\u0442\u043E
-        \u0431\u043E\u043B\u044C\u0448\u0435\u0433\u043E?"
+        <i>\u0431\u043E\u043B\u044C\u0448\u0435\u0433\u043E</i>?"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3570,7 +3669,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"He prayed to the Void... and the Void answered."</i>
+
+        A priest
+        turned slave to darkness. Thinks himfels a god, but his eyes jerk like a
+        marionette''s. The Void speaks through him; shadows move his hands. Defeat
+        him, and the abyss whispers: <i>"You''re next in my leash."</i>'
       - "<i>\"\u041C\u043E\u043B\u0438\u043B\u0441\u044F \u041F\u0443\u0441\u0442\u043E\u0442\u0435
         \u2013 \u0438 \u041F\u0443\u0441\u0442\u043E\u0442\u0430 \u0435\u043C\u0443
         \u043E\u0442\u0432\u0435\u0442\u0438\u043B\u0430.\"</i>\n\u041D\u0435\u043A\u043E\u0433\u0434\u0430
@@ -3584,9 +3688,9 @@ MonoBehaviour:
         \u0448\u0435\u0432\u0435\u043B\u0438\u0442 \u0435\u0433\u043E \u0440\u0443\u043A\u0430\u043C\u0438.
         \u041A\u0442\u043E \u043F\u043E\u0431\u0435\u0434\u0438\u0442 \u0435\u0433\u043E
         \u2013 \u0443\u0441\u043B\u044B\u0448\u0438\u0442 \u0448\u0435\u043F\u043E\u0442
-        \u0438\u0437 \u0431\u0435\u0437\u0434\u043D\u044B: \"\u0422\u044B \u043B\u0438\u0448\u044C
+        \u0438\u0437 \u0431\u0435\u0437\u0434\u043D\u044B: <i>\"\u0422\u044B \u043B\u0438\u0448\u044C
         \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u043D\u0430 \u043C\u043E\u0451\u043C
-        \u043F\u043E\u0432\u043E\u0434\u043A\u0435.\""
+        \u043F\u043E\u0432\u043E\u0434\u043A\u0435.\"</i>"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3594,7 +3698,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Where his fist strikes - a crater three fathoms deep."</i>
+
+        A
+        giant from the Rebel Hansa. Steel can''t pierce his hide; rage can''t be
+        quenched. When he falls, the earth quakes for three days.'
       - "<i>\"\u0413\u0434\u0435 \u043A\u0443\u043B\u0430\u043A \u0435\u0433\u043E
         \u0443\u0434\u0430\u0440\u0438\u0442 \u2013 \u0442\u0430\u043C \u044F\u043C\u0430
         \u043D\u0430 \u0442\u0440\u0438 \u0441\u0430\u0436\u0435\u043D\u0438.\"</i>\n\u0412\u0435\u043B\u0438\u043A\u0430\u043D
@@ -3616,7 +3724,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Holds fire in his palms, cacking like a mad god."</i>
+
+        A smith
+        who traded hammers for gunpowder. Everything he touches explodes - he dances
+        in the flames. Even Death fears him.'
       - "<i>\"\u041E\u0433\u043E\u043D\u044C \u0432 \u0440\u0443\u043A\u0430\u0445
         \u0434\u0435\u0440\u0436\u0438\u0442, \u0434\u0430 \u0441\u043C\u0435\u0451\u0442\u0441\u044F,
         \u043A\u0430\u043A \u0431\u0435\u0437\u0443\u043C\u043D\u044B\u0439.\"</i>\n\u0420\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A,
@@ -3636,7 +3748,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Once a priestess - now a rebel. Once faithful - now forsaken."</i>
+
+        She
+        overthrew the Temple of Void with the Dark''s gift. Now leads the Rebel Hands,
+        wielding a sword that cuts fate itself. Kill her, and the darkness whispers:
+        <i>"You''re my merely the next candidate..."</i>'
       - "<i>\"\u0411\u044B\u043B\u0430 \u0436\u0440\u0438\u0446\u0430 \u2013 \u0441\u0442\u0430\u043B\u0430
         \u043C\u044F\u0442\u0435\u0436\u043D\u0438\u0446\u0430, \u0431\u044B\u043B\u0430
         \u0432\u0435\u0440\u043D\u043E\u0439 \u2013 \u0441\u0442\u0430\u043B\u0430
@@ -3651,8 +3768,8 @@ MonoBehaviour:
         \u0447\u0442\u043E \u0440\u0435\u0436\u0435\u0442 \u0441\u0430\u043C\u0443
         \u0441\u0443\u0434\u044C\u0431\u0443. \u041A\u0442\u043E \u043F\u043E\u0431\u0435\u0434\u0438\u0442
         \u0435\u0451 \u2013 \u0443\u0441\u043B\u044B\u0448\u0438\u0442, \u043A\u0430\u043A
-        \u0448\u0435\u043F\u0447\u0435\u0442 \u0442\u044C\u043C\u0430: \"\u0422\u044B
-        \u043B\u0438\u0448\u044C \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439\u2026\""
+        \u0448\u0435\u043F\u0447\u0435\u0442 \u0442\u044C\u043C\u0430: <i>\"\u0422\u044B
+        \u043B\u0438\u0448\u044C \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439\u2026\"</i>"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3660,7 +3777,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Not a beast, but a mountain that learned to hate."</i>
+
+        A stone
+        titan summoned by Karg. Its footsteps are landslides; its breath reeks of
+        charnel caves. Shatter it, and the cracks reveal a subterranean hell - monsters
+        waiting as the ceiling collapses.'
       - "<i>\"\u041D\u0435 \u0437\u0432\u0435\u0440\u044C, \u0430 \u0441\u0430\u043C\u0430
         \u0433\u043E\u0440\u0430, \u0447\u0442\u043E \u0432 \u044F\u0440\u043E\u0441\u0442\u0438
         \u0437\u0430\u0434\u0432\u0438\u0433\u0430\u043B\u0430\u0441\u044C.\"</i>\n\u041F\u0440\u0438\u0437\u0432\u0430\u043D\u043D\u044B\u0439
@@ -3689,7 +3811,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"He doesn''t slow time - he accelerates your death."</i>
+
+        Karg''s
+        timekeeper. His chants thicken air, trap limbs, turn blades sluggish. His
+        laughter mocks: <i>"You''re already late. The ritual is done!"</i>'
       - "<i>\"\u041E\u043D \u043D\u0435 \u0437\u0430\u043C\u0435\u0434\u043B\u044F\u0435\u0442
         \u0432\u0440\u0435\u043C\u044F \u2013 \u043E\u043D \u0443\u0441\u043A\u043E\u0440\u044F\u0435\u0442
         \u0432\u0430\u0448\u0443 \u0441\u043C\u0435\u0440\u0442\u044C.\"</i>\n\u041F\u043E\u043C\u043E\u0449\u043D\u0438\u043A
@@ -3703,9 +3829,9 @@ MonoBehaviour:
         \u0431\u0443\u0434\u0442\u043E \u0441\u043A\u0432\u043E\u0437\u044C \u043C\u0435\u0434.
         \u041D\u043E \u0441\u0442\u0440\u0430\u0448\u043D\u0435\u0435 \u0432\u0441\u0435\u0433\u043E
         \u2013 \u0435\u0433\u043E \u0441\u043C\u0435\u0445, \u0438\u0431\u043E \u043E\u043D
-        \u0437\u043D\u0430\u0435\u0442: \"\u0412\u044B \u0438 \u0442\u0430\u043A
+        \u0437\u043D\u0430\u0435\u0442: <i>\"\u0412\u044B \u0438 \u0442\u0430\u043A
         \u043E\u043F\u043E\u0437\u0434\u0430\u043B\u0438. \u0420\u0438\u0442\u0443\u0430\u043B
-        \u0443\u0436\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0451\u043D.\""
+        \u0443\u0436\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0451\u043D.\"</i>"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3713,7 +3839,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"The dead don''t leave - they await his command."</i>
+
+        A vodouist
+        who sold his voice to the wind. Drums of human skin, bones of crow feathers.
+        Each rhythm raises corpses... but his songs weep. He fears what he summons.'
       - "<i>\"\u041C\u0451\u0440\u0442\u0432\u044B\u0435 \u043D\u0435 \u0443\u0445\u043E\u0434\u044F\u0442
         \u2013 \u043E\u043D\u0438 \u0436\u0434\u0443\u0442 \u0435\u0433\u043E \u043F\u0440\u0438\u043A\u0430\u0437\u0430.\"</i>\n\u0412\u0443\u0434\u0443\u0438\u0441\u0442,
         \u0447\u0442\u043E \u043F\u0440\u043E\u0434\u0430\u043B \u0433\u043E\u043B\u043E\u0441
@@ -3735,16 +3865,17 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"Not a shadow, but its absence, a hole in the world, staring back."</i>
+
+        A
+        demon guarding the dark magic secrets. Meet its gaze, and you will see your
+        own corpse... before cold hands drag you into <i>the void</i>.'
       - "<i>\"\u041D\u0435 \u0442\u0435\u043D\u044C, \u0430 \u0435\u0451 \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435
         \u2013 \u0434\u044B\u0440\u0430 \u0432 \u043C\u0438\u0440\u0435, \u0447\u0442\u043E
         \u0441\u043C\u043E\u0442\u0440\u0438\u0442 \u043D\u0430 \u0432\u0430\u0441.\"</i>\n\u0414\u0435\u043C\u043E\u043D,
         \u043F\u0440\u0438\u0437\u0432\u0430\u043D\u043D\u044B\u0439 \u0441\u0442\u0435\u0440\u0435\u0447\u044C
         \u0442\u0430\u0439\u043D\u044B \u0442\u0451\u043C\u043D\u043E\u0433\u043E
-        \u043C\u0430\u0433\u0430. \u041D\u0435 \u0431\u044C\u0451\u0442\u0441\u044F
-        \u2013 \u0440\u0430\u0441\u0442\u0432\u043E\u0440\u044F\u0435\u0442\u0441\u044F,
-        \u043D\u0435 \u0440\u0435\u0436\u0435\u0442 \u2013 \u0441\u0442\u0438\u0440\u0430\u0435\u0442.
-        \u041A\u0442\u043E \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u0442\u0441\u044F
+        \u043C\u0430\u0433\u0430. \u041A\u0442\u043E \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u0442\u0441\u044F
         \u0441 \u043D\u0438\u043C \u0432\u0437\u0433\u043B\u044F\u0434\u043E\u043C,
         \u0442\u043E\u0442 \u0443\u0432\u0438\u0434\u0438\u0442 \u0432 \u0441\u0432\u043E\u0438\u0445
         \u0433\u043B\u0430\u0437\u0430\u0445\u2026 \u0441\u0435\u0431\u044F \u0436\u0435,
@@ -3752,8 +3883,8 @@ MonoBehaviour:
         \u0410 \u043F\u043E\u0441\u043B\u0435 \u2013 \u043F\u043E\u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0442
         \u0445\u043E\u043B\u043E\u0434\u043D\u044B\u0435 \u043F\u0430\u043B\u044C\u0446\u044B,
         \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0442\u044F\u043D\u0443\u0442
-        \u0435\u0433\u043E \u0442\u0443\u0434\u0430, \u0433\u0434\u0435 \u043D\u0435\u0442
-        \u043D\u0438 \u0441\u0432\u0435\u0442\u0430, \u043D\u0438 \u0432\u0440\u0435\u043C\u0435\u043D\u0438."
+        \u0435\u0433\u043E \u0442\u0443\u0434\u0430, <i>\u0433\u0434\u0435 \u043D\u0435\u0442
+        \u043D\u0438 \u0441\u0432\u0435\u0442\u0430, \u043D\u0438 \u0432\u0440\u0435\u043C\u0435\u043D\u0438</i>."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3761,7 +3892,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"He isn''t called - he arrives when you forget to breath."</i>
+
+        The
+        Labyrinth''s faceless warden. Silent steps, invisible blades. Victims feel
+        pain <i>before</i> the cut. Hunts not bodies - but fear. The more you dread,
+        the swifter he finds you.'
       - "<i>\"\u0415\u0433\u043E \u043D\u0435 \u0437\u043E\u0432\u0443\u0442 \u2013
         \u043E\u043D \u0441\u0430\u043C \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442,
         \u043A\u043E\u0433\u0434\u0430 \u0442\u044B \u0437\u0430\u0431\u044B\u0432\u0430\u0435\u0448\u044C
@@ -3770,8 +3906,8 @@ MonoBehaviour:
         \u0431\u0435\u0437 \u043B\u0438\u0446\u0430. \u0428\u0430\u0433\u0438 \u0435\u0433\u043E
         \u0431\u0435\u0437\u0437\u0432\u0443\u0447\u043D\u044B, \u043A\u043B\u0438\u043D\u043A\u0438
         \u2013 \u043D\u0435\u0432\u0438\u0434\u0438\u043C\u044B, \u0430 \u0436\u0435\u0440\u0442\u0432\u044B
-        \u0441\u043D\u0430\u0447\u0430\u043B\u0430 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044E\u0442
-        \u0431\u043E\u043B\u044C, \u0438 \u043B\u0438\u0448\u044C \u043F\u043E\u0442\u043E\u043C
+        <i>\u0441\u043D\u0430\u0447\u0430\u043B\u0430 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044E\u0442
+        \u0431\u043E\u043B\u044C</i>, \u0438 \u043B\u0438\u0448\u044C \u043F\u043E\u0442\u043E\u043C
         \u2013 \u0447\u0442\u043E \u0443\u0436\u0435 \u0440\u0430\u043D\u0435\u043D\u044B.
         \u0413\u043E\u0432\u043E\u0440\u044F\u0442, \u043E\u043D \u043B\u043E\u0432\u0438\u0442
         \u043D\u0435 \u0442\u0435\u043B\u0430, \u0430 \u0441\u0442\u0440\u0430\u0445\u0438
@@ -3785,7 +3921,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"He knows what grows inside you. And he approves."</i>
+
+        A thing
+        that forgot how to pretend. His "herbs" squirm; his "potions" watch. His
+        bag holds fingers; his vials - souls. He doesn''t attack - he <i>cultivates</i>. '
       - "<i>\"\u041E\u043D \u0437\u043D\u0430\u0435\u0442, \u0447\u0442\u043E \u0440\u0430\u0441\u0442\u0451\u0442
         \u0443 \u0432\u0430\u0441 \u0432\u043D\u0443\u0442\u0440\u0438. \u0418 \u0435\u043C\u0443
         \u044D\u0442\u043E \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F.\"</i>\n\u041D\u0435
@@ -3799,7 +3939,7 @@ MonoBehaviour:
         \u0432 \u0441\u043A\u043B\u044F\u043D\u043A\u0430\u0445 \u2013 \u043D\u0435
         \u043D\u0430\u0441\u0442\u043E\u0439\u043A\u0438, \u0430 \u0434\u0443\u0448\u0438.
         \u041E\u043D \u043D\u0435 \u0430\u0442\u0430\u043A\u0443\u0435\u0442 \u2013
-        \u043E\u043D \u0443\u0434\u043E\u0431\u0440\u044F\u0435\u0442 \u0432\u0430\u0441
+        \u043E\u043D <i>\u0443\u0434\u043E\u0431\u0440\u044F\u0435\u0442</i> \u0432\u0430\u0441
         \u0441\u0432\u043E\u0435\u0439 \u0431\u0435\u0437\u0443\u043C\u043D\u043E\u0439
         \u0431\u043E\u0442\u0430\u043D\u0438\u043A\u043E\u0439."
       - 
@@ -3809,7 +3949,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"He doesn''t smith - he disassembles reality."</i>
+
+        A craftsman
+        whose gaze melts metal. Now forges tools of entropy: hammers to shatter space,
+        blades to cut memory. Listen to his anvil''s ring - you''ll hear something
+        <i>scraping back</i> from beyond.'
       - "<i>\"\u041E\u043D \u043D\u0435 \u043A\u0443\u0451\u0442 \u2013 \u043E\u043D
         \u0440\u0430\u0437\u0431\u0438\u0440\u0430\u0435\u0442 \u043C\u0438\u0440
         \u043D\u0430 \u0447\u0430\u0441\u0442\u0438.\"</i>\n\u0420\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A,
@@ -3824,8 +3969,8 @@ MonoBehaviour:
         \u0432 \u0437\u0432\u043E\u043D \u0435\u0433\u043E \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u043E\u0432
         \u2013 \u043C\u043E\u0436\u043D\u043E \u0443\u0441\u043B\u044B\u0448\u0430\u0442\u044C,
         \u043A\u0430\u043A \u0447\u0442\u043E-\u0442\u043E \u0437\u0430 \u0441\u0442\u0435\u043D\u043E\u0439
-        \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u0441\u043A\u0440\u0435\u0431\u0451\u0442\u0441\u044F
-        \u0432 \u043E\u0442\u0432\u0435\u0442. \u0412\u044B\u0441\u043E\u043A\u043E\u043C\u0435\u0440\u043D\u044B\u0439,
+        \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438 <i>\u0441\u043A\u0440\u0435\u0431\u0451\u0442\u0441\u044F
+        \u0432 \u043E\u0442\u0432\u0435\u0442<i>. \u0412\u044B\u0441\u043E\u043A\u043E\u043C\u0435\u0440\u043D\u044B\u0439,
         \u0445\u043E\u043B\u043E\u0434\u043D\u044B\u0439, \u043E\u0434\u0435\u0440\u0436\u0438\u043C\u044B\u0439
         \u0438\u0434\u0435\u0435\u0439 \u043F\u0440\u0435\u0432\u0437\u043E\u0439\u0442\u0438
         \u0441\u0430\u043C\u043E\u0433\u043E \u0442\u0451\u043C\u043D\u043E\u0433\u043E
@@ -3844,7 +3989,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"His thoughts - not actually his. His arms - not actually his. His scream
+        - still his?"</i>
+
+        A smith''s apprentice, now a puppet for whispering
+        voices. Builds horrors: swords with teeth, armor that drinks blood. Peer
+        into his eyes - someone <i>else</i> smiles back.'
       - "<i>\"\u0415\u0433\u043E \u043C\u044B\u0441\u043B\u0438 \u2013 \u043D\u0435
         \u0435\u0433\u043E. \u0415\u0433\u043E \u0440\u0443\u043A\u0438 \u2013 \u043D\u0435
         \u0435\u0433\u043E. \u0415\u0433\u043E \u043A\u0440\u0438\u043A \u2013 \u0435\u0449\u0451
@@ -3859,7 +4009,7 @@ MonoBehaviour:
         \u0447\u0442\u043E \u043F\u044C\u044E\u0442 \u043A\u0440\u043E\u0432\u044C.
         \u0410 \u0435\u0441\u043B\u0438 \u043F\u0440\u0438\u0433\u043B\u044F\u0434\u0435\u0442\u044C\u0441\u044F
         \u2013 \u0432 \u0435\u0433\u043E \u0437\u0440\u0430\u0447\u043A\u0430\u0445
-        \u043E\u0442\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F \u043A\u0442\u043E-\u0442\u043E,
+        \u043E\u0442\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F <i>\u043A\u0442\u043E-\u0442\u043E<i>,
         \u043A\u0442\u043E \u0441\u043C\u043E\u0442\u0440\u0438\u0442 \u043D\u0430
         \u0432\u0430\u0441 \u0438 \u0443\u043B\u044B\u0431\u0430\u0435\u0442\u0441\u044F."
       - 
@@ -3869,7 +4019,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '<i>"He chained himself - just to silence their voices."</i>
+
+        A master
+        consumed by darkness. Now hammers only nails - through flesh, will, even
+        souls. His final creation: <i>The Nail for the World</i>. Finish it, and
+        all crumbles to ash.'
       - "<i>\"\u041E\u043D \u0437\u0430\u043A\u043E\u0432\u0430\u043B \u0441\u0435\u0431\u044F
         \u0441\u0430\u043C \u2013 \u043B\u0438\u0448\u044C \u0431\u044B \u043D\u0435
         \u0441\u043B\u044B\u0448\u0430\u0442\u044C \u0438\u0445 \u0433\u043E\u043B\u043E\u0441\u043E\u0432.\"</i>\n\u0411\u044B\u043B
@@ -3881,8 +4036,8 @@ MonoBehaviour:
         \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u0440\u043E\u0431\u0438\u0432\u0430\u044E\u0442
         \u043F\u043B\u043E\u0442\u044C, \u0432\u043E\u043B\u044E, \u0441\u0430\u043C\u0443
         \u0434\u0443\u0448\u0443. \u0415\u0433\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0435
-        \u0442\u0432\u043E\u0440\u0435\u043D\u0438\u0435 \u2013 \u0413\u0432\u043E\u0437\u0434\u044C
-        \u0434\u043B\u044F \u041C\u0438\u0440\u0430 \u2013 \u043B\u0435\u0436\u0438\u0442
+        \u0442\u0432\u043E\u0440\u0435\u043D\u0438\u0435 \u2013 <i>\u0413\u0432\u043E\u0437\u0434\u044C
+        \u0434\u043B\u044F \u041C\u0438\u0440\u0430</i> \u2013 \u043B\u0435\u0436\u0438\u0442
         \u043D\u0430 \u043D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u0435.
         \u0415\u0441\u043B\u0438 \u043E\u043D \u0435\u0433\u043E \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u0442
         \u2013 \u0432\u0441\u0451 \u0432\u043E\u043A\u0440\u0443\u0433 \u0440\u0430\u0441\u0441\u044B\u043F\u043B\u0435\u0442\u0441\u044F
@@ -4178,7 +4333,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Need some defenders that can focus the boss attention on them
       - "\u0422\u0440\u0435\u0431\u0443\u0435\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435
         \u0437\u0430\u0449\u0438\u0442\u043D\u0438\u043A\u0430 \u043D\u0430 \u043F\u043E\u043B\u0435,
         \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0431\u0443\u0434\u0435\u0442
@@ -4191,7 +4346,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Need some healers to minimize the damage from dangerous spells and events
       - "\u0422\u0440\u0435\u0431\u0443\u0435\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435
         \u043B\u0435\u043A\u0430\u0440\u0435\u0439 \u043D\u0430 \u043F\u043E\u043B\u0435,
         \u0438\u0437-\u0437\u0430 \u043E\u043F\u0430\u0441\u043D\u044B\u0445 \u0437\u0430\u043A\u043B\u0438\u043D\u0430\u043D\u0438\u0439
@@ -4203,7 +4358,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Need some ranged fighters that can stay away from the boss
       - "\u0422\u0440\u0435\u0431\u0443\u0435\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435
         \u0431\u043E\u0439\u0446\u043E\u0432 \u0434\u0430\u043B\u044C\u043D\u0435\u0433\u043E
         \u0431\u043E\u044F, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0441\u043C\u043E\u0433\u0443\u0442
@@ -4216,7 +4371,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Need some melee fighters that can stay near the boss
       - "\u0422\u0440\u0435\u0431\u0443\u0435\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435
         \u0431\u043E\u0439\u0446\u043E\u0432 \u0434\u0430\u043B\u044C\u043D\u0435\u0433\u043E
         \u0431\u043E\u044F, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0441\u043C\u043E\u0433\u0443\u0442
@@ -4238,7 +4393,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Frozen tomb
       - "\u041B\u0435\u0434\u044F\u043D\u0430\u044F \u0433\u0440\u043E\u0431\u043D\u0438\u0446\u0430"
       - 
       Flags: 000000
@@ -4247,7 +4402,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Runes of commandment
       - "\u0417\u0430\u043F\u043E\u0432\u0435\u0434\u043D\u044B\u0435 \u0440\u0443\u043D\u044B"
       - 
       Flags: 000000
@@ -4256,7 +4411,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Soothing incense
       - "\u0423\u0441\u043F\u043E\u043A\u0430\u0438\u0432\u0430\u044E\u0449\u0438\u0435
         \u0431\u043B\u0430\u0433\u043E\u0432\u043E\u043D\u0438\u044F"
       - 
@@ -4266,7 +4421,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Psycho attack
       - "\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F
         \u0430\u0442\u0430\u043A\u0430"
       - 
@@ -4276,7 +4431,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shining shield
       - "\u0421\u0432\u0435\u0440\u043A\u0430\u044E\u0449\u0438\u0439 \u0449\u0438\u0442"
       - 
       Flags: 000000
@@ -4285,7 +4440,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Holy scroll
       - "\u0421\u0432\u044F\u0449\u0435\u043D\u043D\u0430\u044F \u0441\u043A\u0440\u0438\u0436\u0430\u043B\u044C"
       - 
       Flags: 000000
@@ -4294,7 +4449,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Faithful steed
       - "\u0412\u0435\u0440\u043D\u044B\u0439 \u0441\u043A\u0430\u043A\u0443\u043D"
       - 
       Flags: 000000
@@ -4303,7 +4458,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shield slam
       - "\u0423\u0434\u0430\u0440 \u0449\u0438\u0442\u043E\u043C"
       - 
       Flags: 000000
@@ -4312,7 +4467,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Entangling roots
       - "\u041E\u043F\u0443\u0442\u044B\u0432\u0430\u044E\u0449\u0438\u0435 \u043A\u043E\u0440\u043D\u0438"
       - 
       Flags: 000000
@@ -4321,7 +4476,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Astral interaction
       - "\u0410\u0441\u0442\u0440\u0430\u043B\u044C\u043D\u043E\u0435 \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435"
       - 
       Flags: 000000
@@ -4330,7 +4485,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Jump between the worlds
       - "\u041F\u0435\u0440\u0435\u0445\u043E\u0434 \u043C\u0435\u0436\u0434\u0443
         \u043C\u0438\u0440\u0430\u043C\u0438"
       - 
@@ -4340,7 +4495,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Master Alchemist
       - "\u041C\u0430\u0441\u0442\u0435\u0440 \u0430\u043B\u0445\u0438\u043C\u0438\u0438"
       - 
       Flags: 000000
@@ -4349,7 +4504,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Radar
       - "\u0420\u0430\u0434\u0430\u0440"
       - 
       Flags: 000000
@@ -4358,7 +4513,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Drop mines
       - "\u0411\u0440\u043E\u0441\u043E\u043A \u043C\u0438\u043D\u044B"
       - 
       Flags: 000000
@@ -4367,7 +4522,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Master of stealth
       - "\u041C\u0430\u0441\u0442\u0435\u0440 \u043D\u0435\u0437\u0430\u043C\u0435\u0442\u043D\u043E\u0441\u0442\u0438"
       - 
       Flags: 000000
@@ -4376,7 +4531,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Garrote
       - "\u0413\u0430\u0440\u0440\u043E\u0442\u0430"
       - 
       Flags: 000000
@@ -4385,7 +4540,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Concentration of Elements
       - "\u041A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0446\u0438\u044F
         \u0441\u0442\u0438\u0445\u0438\u0439"
       - 
@@ -4395,7 +4550,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Magic ward
       - "\u041C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043E\u0431\u0435\u0440\u0435\u0433"
       - 
       Flags: 000000
@@ -4404,7 +4559,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Pray
       - "\u0427\u0442\u0435\u043D\u0438\u0435 \u043C\u043E\u043B\u0438\u0442\u0432\u044B"
       - 
       Flags: 000000
@@ -4413,7 +4568,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Soul Swap
       - "\u041E\u0431\u043C\u0435\u043D \u0434\u0443\u0448"
       - 
       Flags: 000000
@@ -4422,7 +4577,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Burning sword
       - "\u041F\u044B\u043B\u0430\u044E\u0449\u0438\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
       - 
       Flags: 000000
@@ -4431,7 +4586,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Soul restoration
       - "\u0418\u0441\u0446\u0435\u043B\u0435\u043D\u0438\u0435 \u0434\u0443\u0445\u0430"
       - 
       Flags: 000000
@@ -4440,7 +4595,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Heroic duel
       - "\u0413\u0435\u0440\u043E\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0434\u0443\u044D\u043B\u044C"
       - 
       Flags: 000000
@@ -4449,7 +4604,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shield block
       - "\u0411\u043B\u043E\u043A \u0449\u0438\u0442\u043E\u043C"
       - 
       Flags: 000000
@@ -4458,7 +4613,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Predatory vines
       - "\u0425\u0438\u0449\u043D\u044B\u0435 \u043B\u0438\u0430\u043D\u044B"
       - 
       Flags: 000000
@@ -4467,7 +4622,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Bond with the spirit world
       - "\u0421\u0432\u044F\u0437\u044C \u0441 \u043C\u0438\u0440\u043E\u043C \u0434\u0443\u0445\u043E\u0432"
       - 
       Flags: 000000
@@ -4476,7 +4631,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Bond with the demon world
       - "\u0421\u0432\u044F\u0437\u044C \u0441 \u043C\u0438\u0440\u043E\u043C \u0434\u0435\u043C\u043E\u043D\u043E\u0432"
       - 
       Flags: 000000
@@ -4485,7 +4640,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Painful touch
       - "\u0411\u043E\u043B\u0435\u0437\u043D\u0435\u043D\u043D\u043E\u0435 \u043F\u0440\u0438\u043A\u043E\u0441\u043D\u043E\u0432\u0435\u043D\u0438\u0435"
       - 
       Flags: 000000
@@ -4494,7 +4649,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Energy shield
       - "\u042D\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439
         \u0449\u0438\u0442"
       - 
@@ -4504,7 +4659,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Bomb attach
       - "\u0417\u0430\u043A\u0440\u0435\u043F\u0438\u0442\u044C \u0431\u043E\u043C\u0431\u0443"
       - 
       Flags: 000000
@@ -4513,7 +4668,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Hide in the shadows
       - "\u0421\u043A\u0440\u044B\u0442\u044C\u0441\u044F \u0432 \u0442\u0435\u043D\u0438"
       - 
       Flags: 000000
@@ -4522,7 +4677,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Crystal blade
       - "\u041A\u0440\u0438\u0441\u0442\u0430\u043B\u044C\u043D\u043E\u0435 \u043B\u0435\u0437\u0432\u0438\u0435"
       - 
       Flags: 000000
@@ -5055,7 +5210,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Create conduit
       - "\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -5064,7 +5219,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Thunderclap strike
       - "\u0423\u0434\u0430\u0440 \u0433\u0440\u043E\u0437\u043E\u0432\u043E\u0439
         \u043F\u043B\u0435\u0442\u044C\u044E"
       - 
@@ -5074,7 +5229,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ritual of Thunder
       - "\u0420\u0438\u0442\u0443\u0430\u043B \u043F\u0440\u0438\u0437\u044B\u0432\u0430
         \u0433\u0440\u043E\u0437\u044B"
       - 
@@ -5084,7 +5239,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shield of lightning
       - "\u0429\u0438\u0442 \u043C\u043E\u043B\u043D\u0438\u0439"
       - 
       Flags: 000000
@@ -5093,7 +5248,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Negative charge
       - "\u041E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439
         \u0437\u0430\u0440\u044F\u0434"
       - 
@@ -5103,7 +5258,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Catch the intruders!
       - "\u041F\u043E\u0438\u043C\u043A\u0430 \u043D\u0430\u0440\u0443\u0448\u0438\u0442\u0435\u043B\u0435\u0439"
       - 
       Flags: 000000
@@ -5112,7 +5267,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Essence gap
       - "\u0420\u0430\u0437\u0440\u044B\u0432 \u0441\u0443\u0449\u043D\u043E\u0441\u0442\u0438"
       - 
       Flags: 000000
@@ -5121,7 +5276,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Guard!
       - "\u0421\u0442\u0440\u0430\u0436\u0430! \u041D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C!"
       - 
       Flags: 000000
@@ -5130,7 +5285,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Hot speech
       - "\u041F\u043B\u0430\u043C\u0435\u043D\u043D\u0430\u044F \u0440\u0435\u0447\u044C"
       - 
       Flags: 000000
@@ -5139,7 +5294,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Intolerance of the weak
       - "\u041D\u0435\u0442\u0435\u0440\u043F\u0438\u043C\u043E\u0441\u0442\u044C
         \u043A \u0441\u043B\u0430\u0431\u044B\u043C"
       - 
@@ -5149,7 +5304,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Explosive traps
       - "\u0412\u0437\u0440\u044B\u0432\u043E\u043E\u043F\u0430\u0441\u043D\u044B\u0435
         \u043B\u043E\u0432\u0443\u0448\u043A\u0438"
       - 
@@ -5159,7 +5314,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Here's my gift!
       - "\u0410 \u0432\u043E\u0442 \u0438 \u043F\u043E\u0434\u0430\u0440\u043E\u0447\u0435\u043A!"
       - 
       Flags: 000000
@@ -5168,7 +5323,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shadow bite
       - "\u0422\u0435\u043D\u0435\u0432\u043E\u0439 \u043A\u043B\u044B\u043A"
       - 
       Flags: 000000
@@ -5177,7 +5332,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Urt Insanity
       - "\u0411\u0435\u0437\u0443\u043C\u0438\u0435 \u0423\u0440\u0442\u0430"
       - 
       Flags: 000000
@@ -5186,7 +5341,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Collapse of gravity
       - "\u0413\u0440\u0430\u0432\u0438\u0442\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439
         \u043A\u043E\u043B\u043B\u0430\u043F\u0441"
       - 
@@ -5196,7 +5351,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Phase flash
       - "\u0424\u0430\u0437\u043E\u0432\u0430\u044F \u0432\u0441\u043F\u044B\u0448\u043A\u0430"
       - 
       Flags: 000000
@@ -5205,7 +5360,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Curse of Weakness
       - "\u041F\u0440\u043E\u043A\u043B\u044F\u0442\u0438\u0435 \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u0438"
       - 
       Flags: 000000
@@ -5214,7 +5369,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Awakening of the Elder
       - "\u041F\u0440\u043E\u0431\u0443\u0436\u0434\u0435\u043D\u0438\u0435 \u0414\u0440\u0435\u0432\u043D\u0435\u0433\u043E"
       - 
       Flags: 000000
@@ -5223,7 +5378,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Crushing slam
       - "\u0421\u043E\u043A\u0440\u0443\u0448\u0430\u044E\u0449\u0438\u0439 \u0443\u0434\u0430\u0440"
       - 
       Flags: 000000
@@ -5232,7 +5387,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Woodoo doll
       - "\u041A\u0443\u043A\u043B\u0430 \u0412\u0443\u0434\u0443"
       - 
       Flags: 000000
@@ -5241,7 +5396,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Treasoner
       - "\u0422\u0435\u043D\u0435\u0442\u0430\u0440\u044C"
       - 
       Flags: 000000
@@ -5250,7 +5405,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Reality split
       - "\u0420\u0430\u0441\u0449\u0435\u043F\u043B\u0435\u043D\u0438\u0435 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438"
       - 
       Flags: 000000
@@ -5259,7 +5414,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shadow arrow
       - "\u0422\u0435\u043C\u043D\u0430\u044F \u0441\u0442\u0440\u0435\u043B\u0430"
       - 
       Flags: 000000
@@ -5268,7 +5423,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Concentrated Attack
       - "\u0421\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0435\u043D\u043D\u0430\u044F
         \u0430\u0442\u0430\u043A\u0430"
       - 
@@ -5278,7 +5433,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Toxic Fog
       - "\u0422\u043E\u043A\u0441\u0438\u0447\u043D\u044B\u0439 \u0442\u0443\u043C\u0430\u043D"
       - 
       Flags: 000000
@@ -5287,7 +5442,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Silent guardians
       - "\u0421\u0442\u0440\u0430\u0436\u0438 \u0411\u0435\u0437\u043C\u043E\u043B\u0432\u0438\u044F"
       - 
       Flags: 000000
@@ -5296,7 +5451,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dark obelisk
       - "\u0422\u0435\u043C\u043D\u044B\u0439 \u043E\u0431\u0435\u043B\u0438\u0441\u043A"
       - 
       Flags: 000000
@@ -5305,7 +5460,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Backlash
       - "\u041E\u0431\u0440\u0430\u0442\u043D\u0430\u044F \u0440\u0435\u0430\u043A\u0446\u0438\u044F"
       - 
       Flags: 000000
@@ -5314,7 +5469,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ray of destruction
       - "\u041B\u0443\u0447 \u0440\u0430\u0437\u0440\u0443\u0448\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -5323,7 +5478,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Demon swarm
       - "\u0420\u043E\u0439 \u0434\u0435\u043C\u043E\u043D\u043E\u0432"
       - 
       Flags: 000000
@@ -5332,7 +5487,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cascade bite
       - "\u041A\u0430\u0441\u043A\u0430\u0434\u043D\u044B\u0439 \u0443\u043A\u0443\u0441"
       - 
       Flags: 000000
@@ -5341,7 +5496,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Vengeance strike
       - "\u0423\u0434\u0430\u0440 \u0432\u043E\u0437\u043C\u0435\u0437\u0434\u0438\u044F"
       - 
       Flags: 000000
@@ -5350,7 +5505,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Blood boil
       - "\u0412\u0441\u043A\u0438\u043F\u0430\u043D\u0438\u0435 \u043A\u0440\u043E\u0432\u0438"
       - 
       Flags: 000000
@@ -5359,7 +5514,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Resonance
       - "\u0420\u0435\u0437\u043E\u043D\u0430\u043D\u0441"
       - 
       Flags: 000000
@@ -5368,9 +5523,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F
-        \u0446\u0435\u043F\u043D\u0430\u044F \u0440\u0435\u0430\u043A\u0446\u0438\u044F"
+      - Chain reaction
+      - "\u0426\u0435\u043F\u043D\u0430\u044F \u0440\u0435\u0430\u043A\u0446\u0438\u044F"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -5378,7 +5532,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Fast repair
       - "\u0413\u043E\u0440\u044F\u0447\u0438\u0439 \u0440\u0435\u043C\u043E\u043D\u0442"
       - 
       Flags: 000000
@@ -5387,7 +5541,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - NIce detonation
       - "\u0420\u0430\u0437\u0431\u043E\u0440\u0447\u0438\u0432\u0430\u044F \u0434\u0435\u0442\u043E\u043D\u0430\u0446\u0438\u044F"
       - 
       Flags: 000000
@@ -5396,7 +5550,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mechanical twins
       - "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0435
         \u0434\u0432\u043E\u0439\u043D\u0438\u043A\u0438"
       - 
@@ -5406,7 +5560,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dark Cataclysm
       - "\u0422\u0435\u043C\u043D\u044B\u0439 \u043A\u0430\u0442\u0430\u043A\u043B\u0438\u0437\u043C"
       - 
       Flags: 000000
@@ -5415,7 +5569,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mirror of Soul
       - "\u0417\u0435\u0440\u043A\u0430\u043B\u043E \u0414\u0443\u0448\u0438"
       - 
       Flags: 000000
@@ -5424,7 +5578,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Kiss of emptiness
       - "\u041F\u043E\u0446\u0435\u043B\u0443\u0439 \u043F\u0443\u0441\u0442\u043E\u0442\u044B"
       - 
       Flags: 000000
@@ -5433,7 +5587,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - the Black pit
       - "\u0427\u0435\u0440\u043D\u044B\u0439 \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
       - 
       Flags: 000000
@@ -5442,7 +5596,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Stone fall
       - "\u041A\u0430\u043C\u043D\u0435\u043F\u0430\u0434"
       - 
       Flags: 000000
@@ -5451,7 +5605,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Claw of oblivion
       - "\u041A\u043E\u0433\u043E\u0442\u044C \u0437\u0430\u0431\u044B\u0442\u044C\u044F"
       - 
       Flags: 000000
@@ -5460,7 +5614,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charge
       - "\u0420\u044B\u0432\u043E\u043A"
       - 
       Flags: 000000
@@ -5469,7 +5623,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Plague cloud
       - "\u0427\u0443\u043C\u043D\u043E\u0435 \u043E\u0431\u043B\u0430\u043A\u043E"
       - 
       Flags: 000000
@@ -5478,7 +5632,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Bloody harvest
       - "\u041A\u0440\u043E\u0432\u0430\u0432\u0430\u044F \u0436\u0430\u0442\u0432\u0430"
       - 
       Flags: 000000
@@ -5487,7 +5641,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Overwhelming fear
       - "\u0421\u043A\u043E\u0432\u044B\u0432\u0430\u044E\u0449\u0438\u0439 \u0441\u0442\u0440\u0430\u0445"
       - 
       Flags: 000000
@@ -5496,7 +5650,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dark ritual
       - "\u0422\u0435\u043C\u043D\u044B\u0439 \u0440\u0438\u0442\u0443\u0430\u043B"
       - 
       Flags: 000000
@@ -5505,7 +5659,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Master's forgiveness
       - "\u041F\u0440\u043E\u0449\u0435\u043D\u0438\u0435 \u043C\u0430\u0441\u0442\u0435\u0440\u0430"
       - 
       Flags: 000000
@@ -5514,7 +5668,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dance of the Dead
       - "\u041F\u043B\u044F\u0441\u043A\u0430 \u043C\u0435\u0440\u0442\u0432\u0435\u0446\u043E\u0432"
       - 
       Flags: 000000
@@ -5523,7 +5677,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dance of shadows
       - "\u0425\u043E\u0440\u043E\u0432\u043E\u0434 \u0442\u0435\u043D\u0435\u0439"
       - 
       Flags: 000000
@@ -5532,7 +5686,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ritual of Doom
       - "\u0420\u0438\u0442\u0443\u0430\u043B \u0420\u043E\u043A\u0430"
       - 
       Flags: 000000
@@ -5541,7 +5695,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Phantom overclocking
       - "\u0424\u0430\u043D\u0442\u043E\u043C\u043D\u044B\u0439 \u0440\u0430\u0437\u0433\u043E\u043D"
       - 
       Flags: 000000
@@ -5550,7 +5704,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Fury of the last breath
       - "\u042F\u0440\u043E\u0441\u0442\u044C \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0433\u043E
         \u0432\u0437\u0434\u043E\u0445\u0430"
       - 
@@ -5560,7 +5714,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mirror deception
       - "\u0417\u0435\u0440\u043A\u0430\u043B\u044C\u043D\u044B\u0439 \u043E\u0431\u043C\u0430\u043D"
       - 
       Flags: 000000
@@ -5569,7 +5723,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Escape to the Void
       - "\u041F\u043E\u0431\u0435\u0433 \u0432 \u0411\u0435\u0437\u0434\u043D\u0443"
       - 
       Flags: 000000
@@ -5578,7 +5732,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Whisper in the back
       - "\u0428\u0451\u043F\u043E\u0442 \u0432 \u0441\u043F\u0438\u043D\u0443"
       - 
       Flags: 000000
@@ -5587,7 +5741,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Chase
       - "\u041F\u0440\u0435\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435"
       - 
       Flags: 000000
@@ -5596,7 +5750,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Corrupted Trap
       - "\u041A\u0430\u043F\u043A\u0430\u043D \u0421\u043A\u0432\u0435\u0440\u043D\u044B"
       - 
       Flags: 000000
@@ -5605,7 +5759,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Assassination
       - "\u0420\u0435\u0436\u0438\u043C \u043B\u0438\u043A\u0432\u0438\u0434\u0430\u0446\u0438\u0438"
       - 
       Flags: 000000
@@ -5614,8 +5768,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u041F\u0440\u0435\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435"
+      - Blood mark
+      - "\u041A\u0440\u043E\u0432\u0430\u0432\u0430\u044F \u043C\u0435\u0442\u043A\u0430"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -5623,7 +5777,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Poisonous rapture
       - "\u042F\u0434\u043E\u0432\u0438\u0442\u044B\u0439 \u044D\u043A\u0441\u0442\u0430\u0437"
       - 
       Flags: 000000
@@ -5632,7 +5786,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Poisonous shiv
       - "\u042F\u0434\u043E\u0432\u0438\u0442\u043E\u0435 \u0436\u0430\u043B\u043E"
       - 
       Flags: 000000
@@ -5641,8 +5795,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u0422\u0430\u043D\u0435\u0446 \u0448\u0438\u043F\u043E\u0432"
+      - Scatter the spikes
+      - "\u0420\u0430\u0437\u0431\u0440\u043E\u0441\u0430\u0442\u044C \u0448\u0438\u043F\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -5650,7 +5804,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shadow whippersnappers
       - "\u0422\u0435\u043D\u0435\u0432\u044B\u0435 \u043F\u043B\u0435\u0442\u043E\u0447\u043D\u0438\u043A\u0438"
       - 
       Flags: 000000
@@ -5659,7 +5813,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dancing blade
       - "\u0422\u0430\u043D\u0446\u0443\u044E\u0449\u0438\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
       - 
       Flags: 000000
@@ -5668,7 +5822,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Fiery draft
       - "\u041E\u0433\u043D\u0435\u043D\u043D\u044B\u0439 \u0441\u043A\u0432\u043E\u0437\u043D\u044F\u043A"
       - 
       Flags: 000000
@@ -5677,7 +5831,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Sandwatch
       - "\u041F\u0435\u0441\u043E\u0447\u043D\u044B\u0435 \u0447\u0430\u0441\u044B"
       - 
       Flags: 000000
@@ -5686,7 +5840,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cover of darkness
       - "\u041F\u043E\u043A\u0440\u043E\u0432 \u0422\u044C\u043C\u044B"
       - 
       Flags: 000000
@@ -5695,7 +5849,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Call of the workers
       - "\u0421\u043E\u0437\u044B\u0432 \u043F\u043E\u0434\u043C\u0430\u0441\u0442\u0435\u0440\u0438\u0439"
       - 
       Flags: 000000
@@ -5704,7 +5858,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Smoldering supremacy
       - "\u0422\u043B\u0435\u044E\u0449\u0435\u0435 \u043F\u0440\u0435\u0432\u043E\u0441\u0445\u043E\u0434\u0441\u0442\u0432\u043E"
       - 
       Flags: 000000
@@ -5713,7 +5867,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Last frontier
       - "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0440\u0443\u0431\u0435\u0436"
       - 
       Flags: 000000
@@ -5722,7 +5876,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ripped soul
       - "\u0420\u0430\u0437\u043E\u0440\u0432\u0430\u043D\u043D\u0430\u044F \u0434\u0443\u0448\u0430"
       - 
       Flags: 000000
@@ -5731,7 +5885,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Throwing coals
       - "\u0411\u0440\u043E\u0441\u043E\u043A \u0443\u0433\u043B\u0435\u0439"
       - 
       Flags: 000000
@@ -5740,7 +5894,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Burning Harpoon
       - "\u0416\u0433\u0443\u0447\u0438\u0439 \u0433\u0430\u0440\u043F\u0443\u043D"
       - 
       Flags: 000000
@@ -5749,7 +5903,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Titan's wrath
       - "\u0413\u043D\u0435\u0432 \u0442\u0438\u0442\u0430\u043D\u0430"
       - 
       Flags: 000000
@@ -5758,7 +5912,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Forge explosion
       - "\u041F\u043E\u0434\u0440\u044B\u0432 \u041A\u0443\u0437\u043D\u0438"
       - 
       Flags: 000000
@@ -6771,7 +6925,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Complete the order
       - "\u0421\u0434\u0435\u043B\u0430\u0442\u044C \u0437\u0430\u043A\u0430\u0437"
       - 
       Flags: 000000
@@ -6780,7 +6934,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - No recipe is selected
       - "\u0420\u0435\u0446\u0435\u043F\u0442 \u043D\u0435 \u0432\u044B\u0431\u0440\u0430\u043D"
       - 
       Flags: 000000
@@ -6789,7 +6943,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Item
       - "\u041F\u0440\u0435\u0434\u043C\u0435\u0442"
       - 
       Flags: 000000
@@ -6798,7 +6952,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Reagents
       - "\u0420\u0435\u0430\u0433\u0435\u043D\u0442\u044B"
       - 
       Flags: 000000
@@ -6807,7 +6961,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - '{[0]} - {[1]}'
       - '{[0]} - {[1]}'
       - 
       Flags: 000000
@@ -6825,7 +6979,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Armorer
       - "\u0411\u0440\u043E\u043D\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -6834,7 +6988,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Weaponmaster
       - "\u041E\u0440\u0443\u0436\u0435\u0439\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -6843,7 +6997,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Alchemist
       - "\u0410\u043B\u0445\u0438\u043C\u0438\u043A"
       - 
       Flags: 000000
@@ -6852,7 +7006,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cook
       - "\u041A\u0443\u043B\u0438\u043D\u0430\u0440"
       - 
       Flags: 000000
@@ -6861,7 +7015,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Inscrypter
       - "\u041D\u0430\u0447\u0435\u0440\u0442\u0430\u0442\u0435\u043B\u044C"
       - 
       Flags: 000000
@@ -6870,7 +7024,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u0431\u0440\u043E\u043D\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -6879,7 +7033,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043E\u0440\u0443\u0436\u0435\u0439\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -6888,7 +7042,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u0430\u043B\u0445\u0438\u043C\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -6897,7 +7051,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043A\u0443\u043B\u0438\u043D\u0430\u0440\u0430"
       - 
       Flags: 000000
@@ -6906,7 +7060,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - <>
       - "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043D\u0430\u0447\u0435\u0440\u0442\u0430\u0442\u0435\u043B\u044F"
       - 
       Flags: 000000
@@ -6915,7 +7069,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cotton cloth
       - "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u043E\u0435 \u043F\u043E\u043B\u043E\u0442\u043D\u043E"
       - 
       Flags: 000000
@@ -6924,7 +7078,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rawhide
       - "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u043E\u0436\u0430"
       - 
       Flags: 000000
@@ -6933,7 +7087,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Ore
       - "\u041C\u0435\u0434\u043D\u044B\u0439 \u0441\u043B\u0438\u0442\u043E\u043A"
       - 
       Flags: 000000
@@ -6942,7 +7096,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Leaf flower
       - "\u041B\u0438\u0441\u0442\u043E\u0446\u0432\u0435\u0442"
       - 
       Flags: 000000
@@ -6951,7 +7105,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Oakroot
       - "\u0414\u0443\u0431\u043E\u043A\u043E\u0440\u0435\u043D\u044C"
       - 
       Flags: 000000
@@ -6960,7 +7114,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Red Lotus
       - "\u041A\u0440\u0430\u0441\u043D\u044B\u0439 \u043B\u043E\u0442\u043E\u0441"
       - 
       Flags: 000000
@@ -6969,7 +7123,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Demonic essence
       - "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F
         \u0441\u0443\u0449\u043D\u043E\u0441\u0442\u044C"
       - 
@@ -6979,7 +7133,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Thunder brimstone
       - "\u0413\u0440\u043E\u043C\u043E\u0432\u0430\u044F \u0441\u0435\u0440\u0430"
       - 
       Flags: 000000
@@ -6988,7 +7142,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Essence of nature
       - "\u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u043F\u0440\u0438\u0440\u043E\u0434\u044B"
       - 
       Flags: 000000
@@ -6997,7 +7151,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Essence of earth
       - "\u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u0437\u0435\u043C\u043B\u0438"
       - 
       Flags: 000000
@@ -7006,7 +7160,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Essence of fire
       - "\u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u043E\u0433\u043D\u044F"
       - 
       Flags: 000000
@@ -7015,7 +7169,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mana catalyst
       - "\u041A\u0430\u0442\u0430\u043B\u0438\u0437\u0430\u0442\u043E\u0440 \u043C\u0430\u043D\u044B"
       - 
       Flags: 000000
@@ -7024,7 +7178,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Essence of air
       - "\u042D\u0441\u0441\u0435\u043D\u0446\u0438\u044F \u0432\u043E\u0437\u0434\u0443\u0445\u0430"
       - 
       Flags: 000000
@@ -7033,7 +7187,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Power Surge Rune
       - "\u0420\u0443\u043D\u0430 \u0432\u0441\u043F\u043B\u0435\u0441\u043A\u0430
         \u0441\u0438\u043B\u044B"
       - 
@@ -7043,7 +7197,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charmed Power Surge Rune
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
         \u0440\u0443\u043D\u0430 \u0432\u0441\u043F\u043B\u0435\u0441\u043A\u0430
         \u0441\u0438\u043B\u044B"
@@ -7054,7 +7208,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Stone Skin Rune
       - "\u0420\u0443\u043D\u0430 \u043A\u0430\u043C\u0435\u043D\u043D\u043E\u0439
         \u043A\u043E\u0436\u0438"
       - 
@@ -7064,7 +7218,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charmed Stone Skin Rune
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
         \u0440\u0443\u043D\u0430 \u043A\u0430\u043C\u0435\u043D\u043D\u043E\u0439
         \u043A\u043E\u0436\u0438"
@@ -7075,7 +7229,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Distraction
       - "\u0417\u0435\u043B\u044C\u0435 \u043E\u0442\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7084,7 +7238,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Distraction
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0442\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F"
       - 
@@ -7094,7 +7248,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Dispelling
       - "\u0417\u0435\u043B\u044C\u0435 \u0440\u0430\u0437\u0432\u0435\u0438\u0432\u0430\u043D\u0438\u044F
         \u043C\u0430\u0433\u0438\u0438"
       - 
@@ -7104,7 +7258,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Dispelling
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0440\u0430\u0437\u0432\u0435\u0438\u0432\u0430\u043D\u0438\u044F \u043C\u0430\u0433\u0438\u0438"
       - 
@@ -7114,7 +7268,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Eagle vision
       - "\u0417\u0435\u043B\u044C\u0435 \u043E\u0440\u043B\u0438\u043D\u043E\u0433\u043E
         \u0437\u0440\u0435\u043D\u0438\u044F"
       - 
@@ -7124,7 +7278,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Eagle vision
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0440\u043B\u0438\u043D\u043E\u0433\u043E \u0437\u0440\u0435\u043D\u0438\u044F"
       - 
@@ -7134,7 +7288,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Speed
       - "\u0417\u0435\u043B\u044C\u0435 \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7143,7 +7297,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Speed
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435"
       - 
@@ -7153,7 +7307,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Stun
       - "\u0417\u0435\u043B\u044C\u0435 \u043E\u0441\u0442\u043E\u043B\u0431\u0435\u043D\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7162,7 +7316,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Stun
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0441\u0442\u043E\u043B\u0431\u0435\u043D\u0435\u043D\u0438\u044F"
       - 
@@ -7172,7 +7326,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Harden
       - "\u0417\u0435\u043B\u044C\u0435 \u0437\u0430\u0442\u0432\u0435\u0440\u0434\u0435\u0432\u0430\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7181,7 +7335,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Harden
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0437\u0430\u0442\u0432\u0435\u0440\u0434\u0435\u0432\u0430\u043D\u0438\u044F"
       - 
@@ -7191,7 +7345,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Soothe
       - "\u0417\u0435\u043B\u044C\u0435 \u0443\u043C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7200,7 +7354,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Soothe
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0443\u043C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u043D\u0438\u044F"
       - 
@@ -7210,7 +7364,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Overclock
       - "\u0417\u0435\u043B\u044C\u0435 \u0440\u0430\u0437\u0433\u043E\u043D\u0430"
       - 
       Flags: 000000
@@ -7219,7 +7373,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Overclock
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0440\u0430\u0437\u0433\u043E\u043D\u0430"
       - 
@@ -7229,7 +7383,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Fire rage
       - "\u0417\u0435\u043B\u044C\u0435 \u043E\u0433\u043D\u0435\u043D\u043D\u043E\u0439
         \u044F\u0440\u043E\u0441\u0442\u0438"
       - 
@@ -7239,7 +7393,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Fire rage
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0433\u043D\u0435\u043D\u043D\u043E\u0439 \u044F\u0440\u043E\u0441\u0442\u0438"
       - 
@@ -7249,7 +7403,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Focus
       - "\u0417\u0435\u043B\u044C\u0435 \u0441\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7258,7 +7412,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Focus
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0441\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0435\u043D\u0438\u044F"
       - 
@@ -7268,7 +7422,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Unity
       - "\u0417\u0435\u043B\u044C\u0435 \u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7277,7 +7431,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Unity
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F"
       - 
@@ -7287,7 +7441,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Potion of Iron armor
       - "\u0417\u0435\u043B\u044C\u0435 \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0439
         \u0431\u0440\u043E\u043D\u0438"
       - 
@@ -7297,7 +7451,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improved potion of Iron armor
       - "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0439 \u0431\u0440\u043E\u043D\u0438"
       - 
@@ -7307,7 +7461,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Soulstone
       - "\u041A\u0430\u043C\u0435\u043D\u044C \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F
         \u0434\u0443\u0448\u0438"
       - 
@@ -7317,7 +7471,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase attack power by {[0]} until the end of the fight
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0441\u0438\u043B\u0443
         \u0430\u0442\u0430\u043A\u0438 \u043D\u0430 {[0]} \u0434\u043E \u043A\u043E\u043D\u0446\u0430
         \u0431\u043E\u044F"
@@ -7328,7 +7482,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase attack power by {[0]} until the end of the fight
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0441\u0438\u043B\u0443
         \u0430\u0442\u0430\u043A\u0438 \u043D\u0430 {[0]} \u0434\u043E \u043A\u043E\u043D\u0446\u0430
         \u0431\u043E\u044F"
@@ -7339,7 +7493,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase health by {[0]} until the end of the fight
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435
         \u043D\u0430 {[0]} \u0434\u043E \u043A\u043E\u043D\u0446\u0430 \u0431\u043E\u044F"
       - 
@@ -7349,7 +7503,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase health by {[0]} until the end of the fight
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435
         \u043D\u0430 {[0]} \u0434\u043E \u043A\u043E\u043D\u0446\u0430 \u0431\u043E\u044F"
       - 
@@ -7359,7 +7513,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Create some sparks to distract the enemy
       - "\u0421\u043E\u0437\u0434\u0430\u0435\u0442 \u0441\u043D\u043E\u043F \u0438\u0441\u043A\u0440,
         \u043E\u0442\u0432\u043B\u0435\u043A\u0430\u044E\u0449\u0438\u0445 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430"
       - 
@@ -7369,7 +7523,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Create a lot of sparks to distract the enemy
       - "\u0421\u043E\u0437\u0434\u0430\u0435\u0442 \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u043D\u044B\u0439
         \u0441\u043D\u043E\u043F \u0438\u0441\u043A\u0440, \u043E\u0442\u0432\u043B\u0435\u043A\u0430\u044E\u0449\u0438\u0445
         \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430"
@@ -7380,7 +7534,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dispell some harmful effects
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0441\u043D\u044F\u0442\u044C
         \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435
         \u044D\u0444\u0444\u0435\u043A\u0442\u044B \u0441 \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430"
@@ -7391,7 +7545,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dispell all harmful effects
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0441\u043D\u044F\u0442\u044C
         \u043E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435
         \u044D\u0444\u0444\u0435\u043A\u0442\u044B \u0441 \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430"
@@ -7402,7 +7556,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improve the vision to see barely noticeable items
       - "\u0423\u0441\u0438\u043B\u0438\u0432\u0430\u0435\u0442 \u0432\u0438\u0434\u0438\u043C\u043E\u0441\u0442\u044C,
         \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u044F \u0432\u0438\u0434\u0435\u0442\u044C
         \u0435\u043B\u0435 \u0437\u0430\u043C\u0435\u0442\u043D\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
@@ -7413,11 +7567,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Improve the vision to see invisible items
       - "\u0423\u0441\u0438\u043B\u0438\u0432\u0430\u0435\u0442 \u0432\u0438\u0434\u0438\u043C\u043E\u0441\u0442\u044C,
         \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u044F \u0432\u0438\u0434\u0435\u0442\u044C
-        \u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u043D\u0435\u0437\u0430\u043C\u0435\u0442\u043D\u044B\u0435
-        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
+        \u043D\u0435\u0432\u0438\u0434\u0438\u043C\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -7425,7 +7578,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase movespeed for 5 seconds
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C
         \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F
         \u043D\u0430 5 \u0441\u0435\u043A\u0443\u043D\u0434"
@@ -7436,7 +7589,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase movespeed for 8 seconds
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C
         \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F
         \u043D\u0430 8 \u0441\u0435\u043A\u0443\u043D\u0434"
@@ -7447,7 +7600,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Stun the target for 3 seconds
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0433\u043B\u0443\u0448\u0438\u0442\u044C
         \u0446\u0435\u043B\u044C \u043D\u0430 3 \u0441\u0435\u043A\u0443\u043D\u0434\u044B"
       - 
@@ -7457,7 +7610,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Stun the target for 5 seconds
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0433\u043B\u0443\u0448\u0438\u0442\u044C
         \u0446\u0435\u043B\u044C \u043D\u0430 5 \u0441\u0435\u043A\u0443\u043D\u0434"
       - 
@@ -7467,7 +7620,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Slow the enemy
       - "\u0417\u0430\u043C\u0435\u0434\u043B\u044F\u0435\u0442 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435
         \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430"
       - 
@@ -7477,7 +7630,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Entangle the enemy
       - "\u041F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u043E\u0431\u0435\u0437\u0434\u0432\u0438\u0436\u0438\u0432\u0430\u0435\u0442
         \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430"
       - 
@@ -7487,7 +7640,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Puts opponent in a trance for 10 seconds
       - "\u0412\u0432\u043E\u0434\u0438\u0442 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
         \u0432 \u0442\u0440\u0430\u043D\u0441, \u0443\u0441\u043F\u043E\u043A\u0430\u0438\u0432\u0430\u044F
         \u0435\u0433\u043E \u043D\u0430 10 \u0441\u0435\u043A\u0443\u043D\u0434"
@@ -7498,7 +7651,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Puts opponent in a trance for 20 seconds
       - "\u0412\u0432\u043E\u0434\u0438\u0442 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
         \u0432 \u0442\u0440\u0430\u043D\u0441, \u0443\u0441\u043F\u043E\u043A\u0430\u0438\u0432\u0430\u044F
         \u0435\u0433\u043E \u043D\u0430 20 \u0441\u0435\u043A\u0443\u043D\u0434"
@@ -7509,7 +7662,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase attack speed for 8 seconds
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C
         \u0430\u0442\u0430\u043A\u0438 \u043D\u0430 8 \u0441\u0435\u043A\u0443\u043D\u0434"
       - 
@@ -7519,7 +7672,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase attack speed for 16 seconds
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C
         \u0430\u0442\u0430\u043A\u0438 \u043D\u0430 16 \u0441\u0435\u043A\u0443\u043D\u0434"
       - 
@@ -7529,7 +7682,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Attacks on the main target also deal damage to 2 of his minions
       - "\u0412\u0430\u0448\u0438 \u0430\u0442\u0430\u043A\u0438 \u043F\u043E \u043E\u0441\u043D\u043E\u0432\u043D\u043E\u0439
         \u0446\u0435\u043B\u0438 \u0442\u0430\u043A\u0436\u0435 \u043D\u0430\u043D\u043E\u0441\u044F\u0442
         \u0443\u0440\u043E\u043D \u0434\u0432\u0443\u043C \u0435\u0433\u043E \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430\u043C"
@@ -7540,7 +7693,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Attacks on the main target also deal damage to 3 of his minions
       - "\u0412\u0430\u0448\u0438 \u0430\u0442\u0430\u043A\u0438 \u043F\u043E \u043E\u0441\u043D\u043E\u0432\u043D\u043E\u0439
         \u0446\u0435\u043B\u0438 \u0442\u0430\u043A\u0436\u0435 \u043D\u0430\u043D\u043E\u0441\u044F\u0442
         \u0443\u0440\u043E\u043D \u0442\u0440\u0435\u043C \u0435\u0433\u043E \u0441\u043E\u044E\u0437\u043D\u0438\u043A\u0430\u043C"
@@ -7551,7 +7704,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Focus on the hard mechanic for 10 seconds
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0441\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0438\u0442\u044C\u0441\u044F
         \u043D\u0430 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u0438
         \u0441\u043B\u043E\u0436\u043D\u043E\u0439 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0438
@@ -7563,7 +7716,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Focus on the hard mechanic for 20 seconds
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0441\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0438\u0442\u044C\u0441\u044F
         \u043D\u0430 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u0438
         \u0441\u043B\u043E\u0436\u043D\u043E\u0439 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0438
@@ -7575,7 +7728,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Decrease incoming damage for 10 seconds
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0443\u043C\u0435\u043D\u044C\u0448\u0438\u0442\u044C
         \u0443\u0440\u043E\u043D, \u043D\u0430\u043D\u043E\u0441\u0438\u043C\u044B\u0439
         \u043F\u043E \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u043C
@@ -7587,7 +7740,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Decrease incoming damage for 15 seconds
       - "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0443\u043C\u0435\u043D\u044C\u0448\u0438\u0442\u044C
         \u0443\u0440\u043E\u043D, \u043D\u0430\u043D\u043E\u0441\u0438\u043C\u044B\u0439
         \u043F\u043E \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u043C
@@ -7599,7 +7752,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase armor for 7 seconds
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0431\u0440\u043E\u043D\u044E
         \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430 \u043D\u0430 7 \u0441\u0435\u043A\u0443\u043D\u0434"
       - 
@@ -7609,7 +7762,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Increase armor for 12 seconds
       - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u0431\u0440\u043E\u043D\u044E
         \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430 \u043D\u0430 12 \u0441\u0435\u043A\u0443\u043D\u0434"
       - 
@@ -7619,7 +7772,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Revive an ally in combat
       - "\u0412\u043E\u0441\u043A\u0440\u0435\u0448\u0430\u0435\u0442 \u0441\u043E\u044E\u0437\u043D\u043E\u0433\u043E
         \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430"
       - 
@@ -7672,6 +7825,24 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: STORE/ADS_PRICE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/FREE_PRICE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: STORE/
       TermType: 0
       Description: 
@@ -7681,12 +7852,288 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
-    - Term: STORE/TEST_CURRENCIES_PACKS_SHELF_TTL
+    - Term: STORE/REWARDS_TTL
       TermType: 0
       Description: 
       Languages:
       - 
-      - "\u041F\u0430\u043A\u0438 \u0441 \u0432\u0430\u043B\u044E\u0442\u0430\u043C\u0438"
+      - "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u044B\u0435 \u0442\u043E\u0432\u0430\u0440\u044B"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/TAKE_REWARD_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0417\u0430\u0431\u0440\u0430\u0442\u044C"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACKS_SHELF_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0417\u043E\u043B\u043E\u0442\u043E"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/REAGENT_PACKS_SHELF_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0420\u0435\u0430\u0433\u0435\u043D\u0442\u044B"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIPS_SHELF_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/ADS_CHESTS_SHELF_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/ARMORER_PACK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u0431\u0440\u043E\u043D\u043D\u0438\u043A\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/ARMORER_PACK_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u0431\u0440\u043E\u043D\u043D\u0438\u043A\u0430
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/WEAPONMASTER_PACK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u043E\u0440\u0443\u0436\u0435\u0439\u043D\u0438\u043A\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/WEAPONMASTER_PACK_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u043E\u0440\u0443\u0436\u0435\u0439\u043D\u0438\u043A\u0430
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/ALCHEMIST_PACK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u0430\u043B\u0445\u0438\u043C\u0438\u043A\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/ALCHEMIST_PACK_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u0430\u043B\u0445\u0438\u043C\u0438\u043A\u0430
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/INSCRYPTER_PACK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u043D\u0430\u0447\u0435\u0440\u0442\u0430\u0442\u0435\u043B\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/INSCRYPTER_PACK_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043C\u043A\u0430 \u043D\u0430\u0447\u0435\u0440\u0442\u0430\u0442\u0435\u043B\u044F
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACK_SMALL_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041C\u0430\u043B\u044B\u0439 \u043A\u043E\u0448\u0435\u043B\u044C \u0437\u043E\u043B\u043E\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACK_SMALL_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041C\u0430\u043B\u044B\u0439 \u043A\u043E\u0448\u0435\u043B\u044C \u0437\u043E\u043B\u043E\u0442\u0430
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACK_MEDIUM_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u043A\u043E\u0448\u0435\u043B\u044C
+        \u0437\u043E\u043B\u043E\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACK_MEDIUM_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u043A\u043E\u0448\u0435\u043B\u044C
+        \u0437\u043E\u043B\u043E\u0442\u0430 (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACK_LARGE_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u043A\u043E\u0448\u0435\u043B\u044C
+        \u0437\u043E\u043B\u043E\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_PACK_LARGE_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u043A\u043E\u0448\u0435\u043B\u044C
+        \u0437\u043E\u043B\u043E\u0442\u0430 (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIP_DUNGEON_PACK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430 \u0438\u0437
+        \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIP_DUNGEON_PACK_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430 \u0438\u0437
+        \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u0438\u0439 (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIP_RAID_PACK_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430 \u0438\u0437
+        \u0440\u0435\u0439\u0434\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIP_RAID_PACK_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430 \u0438\u0437
+        \u0440\u0435\u0439\u0434\u0430 (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIP_ITEM_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "{[0]} \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/EQUIP_ITEMS_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "{[0]} \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_CHEST_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043D\u0434\u0443\u043A \u0437\u043E\u043B\u043E\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/GOLD_CHEST_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043D\u0434\u0443\u043A \u0437\u043E\u043B\u043E\u0442\u0430
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/REAGENTS_CHEST_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043D\u0434\u0443\u043A \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: STORE/REAGENTS_CHEST_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0421\u0443\u043D\u0434\u0443\u043A \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u043E\u0432
+        (\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435)"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -7694,7 +8141,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Daily Quests
       - "\u0415\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u044F"
       - 
       Flags: 000000
@@ -7703,7 +8150,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Weekly Quests
       - "\u0415\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0435
         \u0437\u0430\u0434\u0430\u043D\u0438\u044F"
       - 
@@ -7713,7 +8160,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - No quests have been picked
       - "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u043D\u0435 \u0432\u044B\u0431\u0440\u0430\u043D\u043E"
       - 
       Flags: 000000
@@ -7722,7 +8169,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Progress
       - "\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441"
       - 
       Flags: 000000
@@ -7731,7 +8178,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Reward
       - "\u041D\u0430\u0433\u0440\u0430\u0434\u0430"
       - 
       Flags: 000000
@@ -7740,7 +8187,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Claim reward
       - "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
       - 
       Flags: 000000
@@ -7749,7 +8196,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Reward claimed
       - "\u041D\u0430\u0433\u0440\u0430\u0434\u0430 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0430"
       - 
       Flags: 000000
@@ -7767,7 +8214,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Eliminate the threat
       - "\u0423\u0441\u0442\u0440\u0430\u043D\u0438\u0442\u044C \u0443\u0433\u0440\u043E\u0437\u0443"
       - 
       Flags: 000000
@@ -7776,7 +8223,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dungeon invasion
       - "\u0412\u0442\u043E\u0440\u0436\u0435\u043D\u0438\u0435 \u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F"
       - 
       Flags: 000000
@@ -7785,7 +8232,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Enemy weakening: {[0]}'
       - "\u041E\u0441\u043B\u0430\u0431\u043B\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430:
         {[0]}"
       - 
@@ -7795,7 +8242,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Craft: gathering'
       - "\u0420\u0435\u043C\u0435\u0441\u043B\u043E: \u0441\u0431\u043E\u0440 \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u043E\u0432"
       - 
       Flags: 000000
@@ -7804,7 +8251,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Craft: creating'
       - "\u0420\u0435\u043C\u0435\u0441\u043B\u043E: \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435
         \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432"
       - 
@@ -7814,7 +8261,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Defeat {[0]} in {[1]}
       - "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C {[0]} \u0432 {[1]}"
       - 
       Flags: 000000
@@ -7823,7 +8270,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Finish {[0]}
       - "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
         \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0435 {[0]}"
       - 
@@ -7833,7 +8280,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - 'Defeat some bosses: {[0]}'
       - "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u044C \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435
         \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0431\u043E\u0441\u0441\u043E\u0432:
         {[0]}"
@@ -7844,7 +8291,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Obtain {[0]} {[1]}
       - "\u0414\u043E\u0431\u044B\u0442\u044C {[0]} {[1]}"
       - 
       Flags: 000000
@@ -7853,7 +8300,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Create {[0]} {[1]}
       - "\u0421\u043E\u0437\u0434\u0430\u0442\u044C {[0]} {[1]}"
       - 
       Flags: 000000
@@ -7876,7 +8323,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1753005780070
+    Google_LastUpdatedVersion: 1754749994657
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

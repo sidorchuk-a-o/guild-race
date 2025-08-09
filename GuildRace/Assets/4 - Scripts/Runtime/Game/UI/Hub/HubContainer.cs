@@ -1,7 +1,8 @@
-﻿using System.Threading;
+﻿using AD.UI;
+using AD.Services.Store;
 using AD.Services.Router;
 using AD.ToolsCollection;
-using AD.UI;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Store;
@@ -24,11 +25,14 @@ namespace Game
         [SerializeField] private WeeklyItem weeklyItem;
         [SerializeField] private CurrenciesContainer currenciesContainer;
 
+        private IStoreService storeService;
         private GuildVM guildVM;
 
         [Inject]
-        public void Inject(GuildVMFactory guildVMF)
+        public void Inject(GuildVMFactory guildVMF, IStoreService storeService)
         {
+            this.storeService = storeService;
+
             guildVM = guildVMF.GetGuild();
         }
 
@@ -54,6 +58,15 @@ namespace Game
             guildVM.PlayerRank
                 .Subscribe(x => playerGuildRankText.SetTextParams(x))
                 .AddTo(disp);
+
+            storeService.OnPurchaseResult
+                .Subscribe(PurchaseResultCallback)
+                .AddTo(disp);
+        }
+
+        private void PurchaseResultCallback()
+        {
+            Router.Push(RouteKeys.Hub.StoreRewards);
         }
     }
 }

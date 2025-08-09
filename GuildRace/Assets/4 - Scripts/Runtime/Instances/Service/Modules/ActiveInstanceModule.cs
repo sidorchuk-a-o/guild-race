@@ -42,7 +42,7 @@ namespace Game.Instances
                     continue;
                 }
 
-                var startTime = activeInstance.StartTime;
+                var startTime = activeInstance.StartTime.Value;
                 var completeTime = startTime + activeInstance.BossUnit.CompleteTime;
 
 #if UNITY_EDITOR || DEBUG_ENABLED

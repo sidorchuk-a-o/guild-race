@@ -953,12 +953,12 @@ MonoBehaviour:
         value: 121
       currencyKey:
         value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-      amount: 50
+      amount: 5
     - rarity:
         value: 122
       currencyKey:
         value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-      amount: 100
+      amount: 10
     ignoreReagents: f4030000
 --- !u!114 &612348295938896457
 MonoBehaviour:
