@@ -66,7 +66,7 @@ namespace Game.Inventory
             {
                 var completeTask = new UniTaskCompletionSource();
 
-                var dialogKey = RouteKeys.Inventory.splittingItemDialog;
+                var dialogKey = RouteKeys.Inventory.SplittingItemDialog;
                 var parameters = RouteParams.Default;
 
                 parameters[StackableItemDialog.contextKey] = new StackableContext

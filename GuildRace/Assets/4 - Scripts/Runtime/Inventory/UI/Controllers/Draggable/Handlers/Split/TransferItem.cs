@@ -58,7 +58,7 @@ namespace Game.Inventory
             {
                 var completeTask = new UniTaskCompletionSource();
 
-                var dialogKey = RouteKeys.Inventory.transferItemDialog;
+                var dialogKey = RouteKeys.Inventory.TransferItemDialog;
                 var parameters = RouteParams.Default;
 
                 parameters[StackableItemDialog.contextKey] = new StackableContext

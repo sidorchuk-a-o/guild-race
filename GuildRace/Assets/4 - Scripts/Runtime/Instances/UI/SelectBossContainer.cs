@@ -188,7 +188,7 @@ namespace Game.Instances
 
         private void BackClickCallback()
         {
-            Router.Push(RouteKeys.Hub.selectInstance);
+            Router.Push(RouteKeys.Hub.SelectInstance);
         }
     }
 }

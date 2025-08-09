@@ -31,10 +31,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2720447180249226343}
-  - {fileID: 6105961119975786278}
   - {fileID: 7254767870021024319}
   - {fileID: 5852180702340845144}
   - {fileID: 3476134414751386477}
+  - {fileID: 6105961119975786278}
   - {fileID: 1547315737535016757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,10 +83,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSlots:
   - {fileID: 1956011809980785928}
-  - {fileID: 7663267725517045321}
   - {fileID: 6506508336986145616}
   - {fileID: 8057715417390806839}
   - {fileID: 1069723630846095874}
+  - {fileID: 7663267725517045321}
   - {fileID: 3142656414100297306}
 --- !u!1001 &786885796868059682
 PrefabInstance:
@@ -215,7 +215,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4919172998473567171, guid: 23e85ffdc128ffe4ca84e76e4369ea9e, type: 3}
       propertyPath: m_Name
-      value: ItemSlot (Shoulders)
+      value: ItemSlot (Boots)
       objectReference: {fileID: 0}
     - target: {fileID: 5809738810056225138, guid: 23e85ffdc128ffe4ca84e76e4369ea9e, type: 3}
       propertyPath: slot.value
