@@ -78,7 +78,7 @@ MonoBehaviour:
     objectName: NameYourObject
     methodName: NameYourMethod
   RewardedAdv:
-    rewardedAfterClosing: 1
+    rewardedAfterClosing: 0
     skipInterAdvAfterReward: 1
     labelAdvSimLabel: 0
   ServerTime:

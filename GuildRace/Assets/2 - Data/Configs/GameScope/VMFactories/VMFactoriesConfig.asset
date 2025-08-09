@@ -60,6 +60,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be0b780ac0893a46b56ac09adfa3612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5653026657705967321
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f17855d8b3352449cca5af55ac769e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-4644494347860644938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,6 +152,7 @@ MonoBehaviour:
   - {fileID: -7747619364179239090}
   - {fileID: 5807538578464293890}
   - {fileID: -7363527560063341776}
+  - {fileID: 6333030019129641552}
 --- !u!114 &13672795444549551
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shelvesFactories:
   - {fileID: 2124320293283812969}
+  - {fileID: -5653026657705967321}
   rewardsFactories:
   - {fileID: 13672795444549551}
   - {fileID: -623485030146772574}
@@ -254,6 +268,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53cd285a39ec845499dc85b7bd99ee96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6333030019129641552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89e7e3c1df29864488e5acee666b3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6788406495150916494

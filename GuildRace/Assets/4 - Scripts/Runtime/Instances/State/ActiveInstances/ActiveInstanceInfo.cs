@@ -15,6 +15,7 @@ namespace Game.Instances
         private readonly ReactiveProperty<CompleteResult> completeResult = new();
         private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
+        private readonly ReactiveProperty<long> startTime;
 
         public string Id { get; }
 
@@ -24,7 +25,7 @@ namespace Game.Instances
         public IThreatCollection Threats => threats;
         public ISquadUnitsCollection Squad => squad;
 
-        public long StartTime { get; private set; }
+        public IReadOnlyReactiveProperty<long> StartTime => startTime;
         public IReadOnlyList<RewardResult> Rewards { get; private set; }
 
         public IReadOnlyReactiveProperty<float> CompleteChance => completeChance;
@@ -69,7 +70,7 @@ namespace Game.Instances
 
         public void SetStartTime(long value)
         {
-            StartTime = value;
+            startTime.Value = value;
         }
 
         public void SetCompleteChance(float value)

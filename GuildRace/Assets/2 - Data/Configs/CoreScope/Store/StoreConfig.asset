@@ -114,6 +114,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     value: cebe93f0718646c2a9c698bb891ec283
+--- !u!114 &-7625963891998916556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Gold Chest
+  m_EditorClassIdentifier: 
+  id: f1415a596c6d43c88cebdf46bb719a53
+  title: Reagents Chest (3)
+  nameKey:
+    value: STORE/REAGENTS_CHEST_TTL
+  descKey:
+    value: STORE/REAGENTS_CHEST_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: 2528928861441949859}
+  reward: {fileID: 8869905070624454875}
+  purchaserType: 0
+--- !u!114 &-7548867831579349316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reagentRewards:
+  - reagentId: 1004
+    amount: 5
+  - reagentId: 1005
+    amount: 5
+  - reagentId: 1006
+    amount: 5
+  - reagentId: 1007
+    amount: 5
+  - reagentId: 1008
+    amount: 5
 --- !u!114 &-7465042032525383652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,6 +237,33 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   price: {fileID: -3395371120894834651}
   reward: {fileID: 7764619848556971436}
+  purchaserType: 0
+--- !u!114 &-6550977726632997229
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Gold Chest
+  m_EditorClassIdentifier: 
+  id: a95c206f5af941618becc4b75b59436a
+  title: Reagents Chest (2)
+  nameKey:
+    value: STORE/REAGENTS_CHEST_TTL
+  descKey:
+    value: STORE/REAGENTS_CHEST_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -5417735608595068156}
+  reward: {fileID: -7548867831579349316}
   purchaserType: 0
 --- !u!114 &-6480401550842693442
 MonoBehaviour:
@@ -340,6 +417,21 @@ MonoBehaviour:
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
   value: 100
+--- !u!114 &-5417735608595068156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67206d20b1aa2741ab58d3a50794ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter:
+    maxCount: 5
+    cooldownTime: 72000
 --- !u!114 &-5272792349407664658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,6 +472,62 @@ MonoBehaviour:
   price: {fileID: -3578103255090824568}
   reward: {fileID: -5618993658085584158}
   purchaserType: 0
+--- !u!114 &-5008698552630140464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Gold Chest
+  m_EditorClassIdentifier: 
+  id: 080395bbe5f44dee8b728432961bb313
+  title: Reagents Chest (1)
+  nameKey:
+    value: STORE/REAGENTS_CHEST_TTL
+  descKey:
+    value: STORE/REAGENTS_CHEST_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: -2687753511735184694}
+  reward: {fileID: 4649434253324971894}
+  purchaserType: 0
+--- !u!114 &-4951049373223539213
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839586b6f1d930648927c5a0860cf81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyKey:
+    value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+  value: 200
+--- !u!114 &-4554924496286752214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551fa600bf04e9459f411fab3fae323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 436ea74964fd426783fead672e28b0ae
+  title: Ads
 --- !u!114 &-4442716325778754451
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -461,6 +609,47 @@ MonoBehaviour:
   price: {fileID: -8131808693545159377}
   reward: {fileID: 6985826519056832578}
   purchaserType: 0
+--- !u!114 &-3686339957334984006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5daaf9bcc2fce4990ea0972da73bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4e8df07aba7f42c6880256db3429c24e
+  title: In App
+--- !u!114 &-3610558604690295459
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b758f25bc890370468987f041ba99019, type: 3}
+  m_Name: Gold Chest
+  m_EditorClassIdentifier: 
+  id: 9cffe629e4ca4bbba1ebec7aa12f409d
+  title: Gold Chest
+  nameKey:
+    value: STORE/GOLD_CHEST_TTL
+  descKey:
+    value: STORE/GOLD_CHEST_DSC
+  iconRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  price: {fileID: 9022679888609685940}
+  reward: {fileID: -4951049373223539213}
+  purchaserType: 0
 --- !u!114 &-3578103255090824568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -476,6 +665,20 @@ MonoBehaviour:
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
   value: 5000
+--- !u!114 &-3429988843747145931
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c9327d6211cef438829e25df013850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7aec9ebd3b2946e8a21d86c1939f21db
+  title: Free
 --- !u!114 &-3395371120894834651
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,6 +726,21 @@ MonoBehaviour:
     value: 251
   previewKey:
     value: STORE/EQUIP_ITEMS_TTL
+--- !u!114 &-2687753511735184694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67206d20b1aa2741ab58d3a50794ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter:
+    maxCount: 5
+    cooldownTime: 72000
 --- !u!114 &-2375026289435498903
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -571,6 +789,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1f038238c0c4483982d9e050758e0102
   title: Currency
+--- !u!114 &-2021755520792300376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0f4e786c613de4987b2de4cba79e90, type: 3}
+  m_Name: Ads Chests
+  m_EditorClassIdentifier: 
+  id: 0f89d0d66e53457287f63bf30a49269b
+  title: Ads Chests
+  titleKey:
+    value: STORE/ADS_CHESTS_SHELF_TTL
+  items:
+  - {fileID: -3610558604690295459}
+  - {fileID: -5008698552630140464}
+  - {fileID: -6550977726632997229}
+  - {fileID: -7625963891998916556}
 --- !u!114 &-742464150783054724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -618,6 +857,7 @@ MonoBehaviour:
   - {fileID: 8942095726243882050}
   - {fileID: 2848440973404050828}
   - {fileID: -5569566917494875056}
+  - {fileID: -2021755520792300376}
   purchaseProviders:
   - {fileID: -2881808925669662444}
   inAppProducts:
@@ -662,8 +902,17 @@ MonoBehaviour:
   - {fileID: 4658622391228671517}
   - {fileID: -7044691936598804134}
   - {fileID: 8531316438299212034}
+  storeItemHandlers:
+  - {fileID: 7065293722966396465}
+  - {fileID: 4341168080543824783}
   storeShelfFactories:
   - {fileID: -5707038225321506771}
+  - {fileID: 7746093351798689811}
+  priceFactories:
+  - {fileID: -4554924496286752214}
+  - {fileID: -3429988843747145931}
+  - {fileID: -3686339957334984006}
+  - {fileID: 4226772552536314935}
   storeRouteKey:
     value: d8fe4ec7298f4309befd216354aebce9
   purchaseProvidersKey:
@@ -717,6 +966,21 @@ MonoBehaviour:
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
   value: 100
+--- !u!114 &2528928861441949859
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67206d20b1aa2741ab58d3a50794ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter:
+    maxCount: 5
+    cooldownTime: 72000
 --- !u!114 &2848440973404050828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -765,6 +1029,53 @@ MonoBehaviour:
   price: {fileID: -9122925027536821274}
   reward: {fileID: -2855410559109280295}
   purchaserType: 0
+--- !u!114 &4226772552536314935
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee64d6d7d0d0ad0479b9be149173653b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0bd52b84e485442f9152427579a8b51e
+  title: Currency
+--- !u!114 &4341168080543824783
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9613ebf8191ad87469972c1d6d9caaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: dfdbf225f987401e9ea9d2443c4c7f0d
+  title: Pack
+--- !u!114 &4649434253324971894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reagentRewards:
+  - reagentId: 1001
+    amount: 5
+  - reagentId: 1002
+    amount: 5
+  - reagentId: 1003
+    amount: 5
 --- !u!114 &4658622391228671517
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -906,6 +1217,20 @@ MonoBehaviour:
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
   value: 5000
+--- !u!114 &7065293722966396465
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28f531422bde5b438f4abc15d36cabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 23a9efe337a54ad8aa2324e487693615
+  title: Ads Chest
 --- !u!114 &7717973521685924777
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -921,6 +1246,20 @@ MonoBehaviour:
   id: cc9ee19c33bd499b917e817c7c2f652d
   title: Yandex Game
   enabled: 1
+--- !u!114 &7746093351798689811
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1bcefdaa6360b43a72023849657cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 80dfedf6f9f740fa860023e6182e036b
+  title: Ads Chests
 --- !u!114 &7764619848556971436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1059,6 +1398,27 @@ MonoBehaviour:
   price: {fileID: -7878562942236425374}
   reward: {fileID: -742464150783054724}
   purchaserType: 0
+--- !u!114 &8869905070624454875
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8ca6563dd94f4f872ee25932dceca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reagentRewards:
+  - reagentId: 1009
+    amount: 5
+  - reagentId: 1010
+    amount: 5
+  - reagentId: 1011
+    amount: 5
+  - reagentId: 1013
+    amount: 5
 --- !u!114 &8942095726243882050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1079,3 +1439,18 @@ MonoBehaviour:
   - {fileID: 8594947038574270646}
   - {fileID: 8535281853054687364}
   - {fileID: -3688815808440512353}
+--- !u!114 &9022679888609685940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67206d20b1aa2741ab58d3a50794ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter:
+    maxCount: 5
+    cooldownTime: 72000

@@ -22,7 +22,9 @@ namespace Game.Store
         private bool inProcess = true;
 
         public abstract Type ViewModelType { get; }
+
         protected StoreVMFactory StoreVMF => storeVMF;
+        protected UIButton Button => button;
 
         [Inject]
         public void Inject(IStoreService storeService, StoreVMFactory storeVMF)
