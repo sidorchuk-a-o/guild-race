@@ -3170,6 +3170,15 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: INSTANCES/ADS_SKIP_TIMER_BTN
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0423\u0441\u043A\u043E\u0440\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: INSTANCES/CONSUME_CHANCE_TTL
       TermType: 0
       Description: 
@@ -8323,7 +8332,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1754749994657
+    Google_LastUpdatedVersion: 1754839146880
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

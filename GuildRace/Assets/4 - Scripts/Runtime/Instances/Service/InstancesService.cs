@@ -137,6 +137,11 @@ namespace Game.Instances
             instanceModule.CancelSetupInstance();
         }
 
+        public void ForceReadyToCompleteActiveInstance(string activeInstanceId)
+        {
+            activeInstanceModule.MarkAsReadyToComplete(activeInstanceId);
+        }
+
         public int CompleteActiveInstance(string activeInstanceId)
         {
             return instanceModule.CompleteActiveInstance(activeInstanceId);
