@@ -233,6 +233,11 @@ namespace Game.Instances
             instancesService.CancelSetupInstance();
         }
 
+        public void ForceReadyToCompleteActiveInstance(string activeInstanceId)
+        {
+            instancesService.ForceReadyToCompleteActiveInstance(activeInstanceId);
+        }
+
         public int CompleteActiveInstance(string activeInstanceId)
         {
             return instancesService.CompleteActiveInstance(activeInstanceId);

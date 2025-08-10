@@ -1,9 +1,10 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using System.Threading;
+using Game.Ads;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,7 @@ namespace Game.Instances
         [SerializeField] private UIText progressTimerText;
         [Space]
         [SerializeField] private UIStates resultState;
+        [SerializeField] private AdsButton adsCompleteButton;
         [SerializeField] private UIButton completeInstanceButton;
 
         private readonly CompositeDisp instanceDisp = new();
@@ -57,6 +59,10 @@ namespace Game.Instances
             completeInstanceButton.OnClick
                 .Subscribe(CompleteInstanceCallback)
                 .AddTo(this);
+
+            adsCompleteButton.OnRewarded
+                .Subscribe(ForceReadyInstanceCallback)
+                .AddTo(this);
         }
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
@@ -71,6 +77,12 @@ namespace Game.Instances
 
             activeInstancesScroll.OnSelect
                 .Subscribe(InstanceSelectCallback)
+                .AddTo(disp);
+
+            adsCompleteButton.Init(disp);
+
+            adsCompleteButton.IsCompleted
+                .SilentSubscribe(UpdateAdsButton)
                 .AddTo(disp);
 
             if (hasBack)
@@ -199,9 +211,24 @@ namespace Game.Instances
         private void ReadyToCompleteChangedCallback(bool state)
         {
             resultState.SetActive(state);
-            completeInstanceButton.SetInteractableState(state);
+            completeInstanceButton.SetActive(state);
 
             progressContainer.SetActive(!state);
+
+            UpdateAdsButton();
+        }
+
+        private void UpdateAdsButton()
+        {
+            var instanceIsReady = activeInstanceVM.IsReadyToComplete.Value;
+            var adsIsCompleted = adsCompleteButton.IsCompleted.Value;
+
+            adsCompleteButton.SetActive(!instanceIsReady && !adsIsCompleted);
+        }
+
+        private void ForceReadyInstanceCallback()
+        {
+            instancesVMF.ForceReadyToCompleteActiveInstance(activeInstanceVM.Id);
         }
 
         private async void CompleteInstanceCallback()

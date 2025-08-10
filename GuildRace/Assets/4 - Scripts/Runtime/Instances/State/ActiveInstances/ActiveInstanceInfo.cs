@@ -15,7 +15,7 @@ namespace Game.Instances
         private readonly ReactiveProperty<CompleteResult> completeResult = new();
         private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
-        private readonly ReactiveProperty<long> startTime;
+        private readonly ReactiveProperty<long> startTime = new();
 
         public string Id { get; }
 

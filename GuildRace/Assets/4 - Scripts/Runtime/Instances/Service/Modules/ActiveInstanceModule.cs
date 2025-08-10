@@ -54,24 +54,36 @@ namespace Game.Instances
                     continue;
                 }
 
-                var result = CalcResult(activeInstance);
+                MarkAsReadyToComplete(activeInstance);
+            }
+        }
 
-                activeInstance.SetResult(result);
-                activeInstance.MarkAsReadyToComplete();
+        internal void MarkAsReadyToComplete(string activeInstanceId)
+        {
+            var activeInstance = state.ActiveInstances.GetInstance(activeInstanceId);
 
-                activeInstance.BossUnit.IncreaseTriesCount();
+            MarkAsReadyToComplete(activeInstance);
+        }
 
-                if (activeInstance.Instance.Type == InstanceTypes.Dungeon)
-                {
-                    state.DecrementGuaranteedCompleted();
-                }
+        private void MarkAsReadyToComplete(ActiveInstanceInfo activeInstance)
+        {
+            var result = CalcResult(activeInstance);
 
-                if (result == CompleteResult.Completed)
-                {
-                    activeInstance.BossUnit.IncreaseCompletedCount();
+            activeInstance.SetResult(result);
+            activeInstance.MarkAsReadyToComplete();
 
-                    onInstanceCompleted.OnNext(activeInstance);
-                }
+            activeInstance.BossUnit.IncreaseTriesCount();
+
+            if (activeInstance.Instance.Type == InstanceTypes.Dungeon)
+            {
+                state.DecrementGuaranteedCompleted();
+            }
+
+            if (result == CompleteResult.Completed)
+            {
+                activeInstance.BossUnit.IncreaseCompletedCount();
+
+                onInstanceCompleted.OnNext(activeInstance);
             }
         }
 

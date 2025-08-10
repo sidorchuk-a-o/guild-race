@@ -26,6 +26,7 @@ namespace Game.Instances
         void TryRemoveCharacterFromSquad(string characterId);
 
         UniTask CompleteSetupAndStartInstance();
+        void ForceReadyToCompleteActiveInstance(string activeInstanceId);
         int CompleteActiveInstance(string activeInstanceId);
 
         void SetBossTimeState(bool state);
