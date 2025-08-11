@@ -28,6 +28,7 @@ namespace Game.Instances
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete { get; }
 
         public InstanceRewardsVM RewardsVM { get; }
+        public AdsInstanceRewardsVM AdsRewardVM { get; }
 
         public ActiveInstanceVM(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
         {
@@ -42,6 +43,7 @@ namespace Game.Instances
             SquadVM = new(info.Instance.Type, info.Squad, instancesVMF);
             CompleteChance = info.CompleteChance;
             RewardsVM = GetRewards(info, instancesVMF);
+            AdsRewardVM = GetAdsRewards(info, instancesVMF);
             ResultStateVM = new();
 
             var startTime = info.StartTime;
@@ -52,9 +54,12 @@ namespace Game.Instances
 
         private InstanceRewardsVM GetRewards(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
         {
-            return info.Rewards != null
-                ? instancesVMF.GetRewards(info.Rewards)
-                : null;
+            return instancesVMF.GetRewards(info.Rewards);
+        }
+
+        private AdsInstanceRewardsVM GetAdsRewards(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
+        {
+            return instancesVMF.GetAdsRewards(info.AdsRewards);
         }
 
         protected override void InitSubscribes()

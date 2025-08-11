@@ -147,6 +147,11 @@ namespace Game.Instances
             return instanceModule.CompleteActiveInstance(activeInstanceId);
         }
 
+        public void ReceiveAdsRewards()
+        {
+            instanceModule.ReceiveAdsRewards();
+        }
+
         public float CalcChanceDiff(AddItemArgs args)
         {
             return instanceModule.CalcChanceDiff(args);

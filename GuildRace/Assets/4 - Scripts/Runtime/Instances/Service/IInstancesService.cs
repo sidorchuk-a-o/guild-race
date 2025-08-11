@@ -28,6 +28,7 @@ namespace Game.Instances
         UniTask CompleteSetupAndStartInstance();
         void ForceReadyToCompleteActiveInstance(string activeInstanceId);
         int CompleteActiveInstance(string activeInstanceId);
+        void ReceiveAdsRewards();
 
         void SetBossTimeState(bool state);
         bool HasBossComplete(int unitId);

@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 3004238355186577763}
   - component: {fileID: 5874592185643632322}
   - component: {fileID: -1594855986779415890}
+  - component: {fileID: 376366825687588975}
   m_Layer: 0
   m_Name: AdsButton (Instance)
   m_TagString: Untagged
@@ -753,6 +754,24 @@ MonoBehaviour:
   loadingIndicator: {fileID: 6445421630695993994}
   adsCooldown: {fileID: 5885415636693009246}
   adsViewedCounter: {fileID: 6360721142795095074}
+--- !u!114 &376366825687588975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151435561110649002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ca37256e06ff4b8f6258825a4c5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipRef:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!1 &7522807253391624021
 GameObject:
   m_ObjectHideFlags: 0
