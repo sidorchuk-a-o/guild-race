@@ -291,11 +291,21 @@ namespace Game.Instances
             return instancesService.HasBossTries(unitId);
         }
 
+        public bool HasBossComplete(int unitId)
+        {
+            return instancesService.HasBossComplete(unitId);
+        }
+
         public int CalcChanceDiff(AddItemArgs args)
         {
             var diff = instancesService.CalcChanceDiff(args);
 
             return Mathf.RoundToInt(Mathf.Max(0, diff * 100f));
+        }
+
+        public void AddTries(int unitId)
+        {
+            instancesService.AddTries(unitId);
         }
     }
 }

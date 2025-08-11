@@ -29,8 +29,8 @@ namespace Game.Instances
         [SerializeField] private UIText progressTimerText;
         [Space]
         [SerializeField] private UIStates resultState;
-        [SerializeField] private AdsButton adsCompleteButton;
         [SerializeField] private UIButton completeInstanceButton;
+        [SerializeField] private AdsButton adsCompleteButton;
 
         private readonly CompositeDisp instanceDisp = new();
         private CancellationTokenSource instanceToken;

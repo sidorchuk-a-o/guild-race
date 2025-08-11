@@ -1,14 +1,16 @@
-﻿using System.Threading;
-using Cysharp.Threading.Tasks;
-using AD.UI;
-using DG.Tweening;
+﻿using System;
+using System.Threading;
 using AD.Services.Router;
 using AD.ToolsCollection;
+using AD.UI;
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
+using Game.Ads;
+using Game.Guild;
 using UniRx;
 using UnityEngine;
-using VContainer;
 using UnityEngine.UI;
-using Game.Guild;
+using VContainer;
 
 namespace Game.Instances
 {
@@ -32,6 +34,7 @@ namespace Game.Instances
         [Space]
         [SerializeField] private UIText triesCountText;
         [SerializeField] private UIButton startInstanceButton;
+        [SerializeField] private AdsButton adsStartButton;
 
         private readonly CompositeDisp unitDisp = new();
         private CancellationTokenSource unitToken;
@@ -51,6 +54,10 @@ namespace Game.Instances
         {
             startInstanceButton.OnClick
                 .Subscribe(StartSetupInstanceCallback)
+                .AddTo(this);
+
+            adsStartButton.OnRewarded
+                .Subscribe(AddTriesCallback)
                 .AddTo(this);
 
             backButton.OnClick
@@ -162,17 +169,31 @@ namespace Game.Instances
                     .SilentSubscribe(updateStartButtonState)
                     .AddTo(unitDisp);
 
+                adsStartButton.Init(disp);
+
+                adsStartButton.IsCompleted
+                    .SilentSubscribe(updateStartButtonState)
+                    .AddTo(unitDisp);
+
                 updateStartButtonState();
 
                 void updateStartButtonState()
                 {
-                    startInstanceButton.SetInteractableState(!unitVM.HasActiveInstance && unitVM.HasTries);
+                    var hasTries = unitVM.HasTries;
+                    var hasComplete = unitVM.HasComplete;
+                    var hasActiveInstance = unitVM.HasActiveInstance;
 
                     var maxTriesCount = unitVM.CooldownParams.MaxTriesCount;
                     var triesCount = maxTriesCount - unitVM.TriesCount.Value;
+                    var adsIsCompleted = adsStartButton.IsCompleted.Value;
 
-                    triesCountText.SetActive(unitVM.HasTries && maxTriesCount > 0);
+                    triesCountText.SetActive(hasTries && hasComplete && maxTriesCount > 0);
                     triesCountText.SetTextParams(new(triesCountText.LocalizeKey, triesCount, maxTriesCount));
+
+                    adsStartButton.SetActive(!hasActiveInstance && !hasTries && hasComplete && maxTriesCount > 0 && !adsIsCompleted);
+
+                    startInstanceButton.SetActive(!adsStartButton.gameObject.activeSelf);
+                    startInstanceButton.SetInteractableState(!hasActiveInstance && hasTries && hasComplete);
                 }
             }
         }
@@ -184,6 +205,11 @@ namespace Game.Instances
                 InstanceId = instanceVM.Id,
                 BossUnitId = selectedUnitVM.Id
             });
+        }
+
+        private void AddTriesCallback()
+        {
+            instancesVMF.AddTries(selectedUnitVM.Id);
         }
 
         private void BackClickCallback()
