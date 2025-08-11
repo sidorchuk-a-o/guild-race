@@ -4,6 +4,7 @@ using AD.Services.Localization;
 using AD.ToolsCollection;
 using Game.Guild;
 using UniRx;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace Game.Instances
@@ -64,7 +65,7 @@ namespace Game.Instances
 
         public void SetTriesCount(int value)
         {
-            triesCount.Value = value;
+            triesCount.Value = Mathf.Max(value, 0);
         }
 
         public void IncreaseTriesCount()

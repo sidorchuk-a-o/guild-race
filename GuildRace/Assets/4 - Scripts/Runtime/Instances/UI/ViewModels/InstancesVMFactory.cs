@@ -143,6 +143,18 @@ namespace Game.Instances
             return new InstanceRewardsVM(rewards, this);
         }
 
+        public InstanceRewardVM GetReward(int rewardId)
+        {
+            var reward = InstancesConfig.GetReward(rewardId);
+
+            return new InstanceRewardVM(reward, this);
+        }
+
+        public AdsInstanceRewardsVM GetAdsRewards(IReadOnlyList<AdsInstanceRewardInfo> adsRewards)
+        {
+            return new AdsInstanceRewardsVM(adsRewards, this);
+        }
+
         // == Threats ==
 
         public ThreatDataVM GetThreat(ThreatId threatId)
@@ -243,6 +255,11 @@ namespace Game.Instances
             return instancesService.CompleteActiveInstance(activeInstanceId);
         }
 
+        public void ReceiveAdsRewards()
+        {
+            instancesService.ReceiveAdsRewards();
+        }
+
         public ActiveInstanceVM GetSetupInstance()
         {
             var activeInstance = instancesService.SetupInstance;
@@ -291,11 +308,21 @@ namespace Game.Instances
             return instancesService.HasBossTries(unitId);
         }
 
+        public bool HasBossComplete(int unitId)
+        {
+            return instancesService.HasBossComplete(unitId);
+        }
+
         public int CalcChanceDiff(AddItemArgs args)
         {
             var diff = instancesService.CalcChanceDiff(args);
 
             return Mathf.RoundToInt(Mathf.Max(0, diff * 100f));
+        }
+
+        public void AddTries(int unitId)
+        {
+            instancesService.AddTries(unitId);
         }
     }
 }

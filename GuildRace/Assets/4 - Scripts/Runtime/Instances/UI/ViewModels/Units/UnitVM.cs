@@ -26,6 +26,7 @@ namespace Game.Instances
         public bool HasActiveInstance => ActiveInstanceVM.Value != null;
         public IReadOnlyReactiveProperty<ActiveInstanceVM> ActiveInstanceVM => activeInstanceVM;
 
+        public bool HasComplete { get; private set; }
         public bool HasTries { get; private set; }
         public IReadOnlyReactiveProperty<int> CompletedCount { get; }
         public IReadOnlyReactiveProperty<int> TriesCount { get; }
@@ -57,14 +58,14 @@ namespace Game.Instances
                 .AddTo(this);
 
             info.CompletedCount
-                .SilentSubscribe(UpdateHasTriesState)
+                .SilentSubscribe(UpdateHasStates)
                 .AddTo(this);
 
             info.TriesCount
-                .SilentSubscribe(UpdateHasTriesState)
+                .SilentSubscribe(UpdateHasStates)
                 .AddTo(this);
 
-            UpdateHasTriesState();
+            UpdateHasStates();
         }
 
         public async UniTask<Sprite> LoadImage(CancellationTokenSource ct)
@@ -79,9 +80,10 @@ namespace Game.Instances
                 : null;
         }
 
-        private void UpdateHasTriesState()
+        private void UpdateHasStates()
         {
             HasTries = instancesVMF.HasBossTries(Id);
+            HasComplete = instancesVMF.HasBossComplete(Id);
         }
     }
 }

@@ -28,9 +28,12 @@ namespace Game.Instances
         UniTask CompleteSetupAndStartInstance();
         void ForceReadyToCompleteActiveInstance(string activeInstanceId);
         int CompleteActiveInstance(string activeInstanceId);
+        void ReceiveAdsRewards();
 
         void SetBossTimeState(bool state);
+        bool HasBossComplete(int unitId);
         bool HasBossTries(int unitId);
+        void AddTries(int unitId);
         float CalcChanceDiff(AddItemArgs args);
     }
 }

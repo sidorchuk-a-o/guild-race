@@ -16,6 +16,8 @@ namespace Game.Instances
         private readonly ReactiveProperty<float> completeChance = new();
         private readonly ReactiveProperty<bool> isReadyToComplete = new();
         private readonly ReactiveProperty<long> startTime = new();
+        private readonly List<RewardResult> rewards = new();
+        private readonly List<AdsInstanceRewardInfo> adsRewards = new();
 
         public string Id { get; }
 
@@ -26,8 +28,9 @@ namespace Game.Instances
         public ISquadUnitsCollection Squad => squad;
 
         public IReadOnlyReactiveProperty<long> StartTime => startTime;
-        public IReadOnlyList<RewardResult> Rewards { get; private set; }
-
+        public IReadOnlyList<RewardResult> Rewards => rewards;
+        public IReadOnlyList<AdsInstanceRewardInfo> AdsRewards => adsRewards;
+        
         public IReadOnlyReactiveProperty<float> CompleteChance => completeChance;
         public IReadOnlyReactiveProperty<CompleteResult> Result => completeResult;
         public IReadOnlyReactiveProperty<bool> IsReadyToComplete => isReadyToComplete;
@@ -92,7 +95,12 @@ namespace Game.Instances
 
         public void SetRewards(IEnumerable<RewardResult> rewards)
         {
-            Rewards = rewards.ToList();
+            this.rewards.AddRange(rewards);
+        }
+
+        public void SetAdsRewards(IEnumerable<AdsInstanceRewardInfo> adsRewards)
+        {
+            this.adsRewards.AddRange(adsRewards);
         }
 
         // == IEquatable ==

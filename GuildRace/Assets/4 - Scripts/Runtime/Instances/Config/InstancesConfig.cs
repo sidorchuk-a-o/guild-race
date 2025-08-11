@@ -1,5 +1,4 @@
 ﻿using AD.ToolsCollection;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -143,6 +142,14 @@ namespace Game.Instances
             return rewardIds
                 .Select(x => rewardsCache[x])
                 .Where(x => x != null);
+        }
+
+        public InstanceRewardData GetReward(int rewardId)
+        {
+            rewardsCache ??= rewardsParams.Rewards.ToDictionary(x => x.Id, x => x);
+            rewardsCache.TryGetValue(rewardId, out var data);
+
+            return data;
         }
 
         public UnitCooldownParams GetUnitCooldown(InstanceType instanceType)

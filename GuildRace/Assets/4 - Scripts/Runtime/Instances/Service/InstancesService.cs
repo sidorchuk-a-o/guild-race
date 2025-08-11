@@ -147,6 +147,11 @@ namespace Game.Instances
             return instanceModule.CompleteActiveInstance(activeInstanceId);
         }
 
+        public void ReceiveAdsRewards()
+        {
+            instanceModule.ReceiveAdsRewards();
+        }
+
         public float CalcChanceDiff(AddItemArgs args)
         {
             return instanceModule.CalcChanceDiff(args);
@@ -207,13 +212,28 @@ namespace Game.Instances
             var triesCount = unit.TriesCount.Value;
             var maxTriesCount = cooldownPatams.MaxTriesCount;
 
+            return maxTriesCount < 0 || triesCount < maxTriesCount;
+        }
+
+        public bool HasBossComplete(int unitId)
+        {
+            var unit = Seasons.GetBossUnit(unitId);
+            var instance = instancesConfig.GetBossInstance(unitId);
+            var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
+
             var completedCount = unit.CompletedCount.Value;
             var maxCompletedCount = cooldownPatams.MaxCompletedCount;
 
-            var hasTries = maxTriesCount <= 0 || maxTriesCount > 0 && triesCount < maxTriesCount;
-            var isCompleted = maxCompletedCount > 0 && completedCount >= maxCompletedCount;
+            return maxCompletedCount < 0 || completedCount < maxCompletedCount;
+        }
 
-            return hasTries && !isCompleted;
+        public void AddTries(int unitId)
+        {
+            var unit = Seasons.GetBossUnit(unitId);
+
+            unit.SetTriesCount(unit.TriesCount.Value - 1);
+
+            state.MarkAsDirty();
         }
 
         // == Dispose ==
