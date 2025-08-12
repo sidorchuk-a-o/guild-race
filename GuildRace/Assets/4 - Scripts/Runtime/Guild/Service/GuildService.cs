@@ -1,4 +1,6 @@
 ﻿using AD.Services;
+using AD.Services.AppEvents;
+using AD.Services.Leaderboards;
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
 using Cysharp.Threading.Tasks;
@@ -11,7 +13,9 @@ namespace Game.Guild
     public class GuildService : Service, IGuildService
     {
         private readonly GuildState state;
+
         private readonly RecruitingModule recruitingModule;
+        private readonly GuildLeaderboardModule leaderboardModule;
 
         public bool GuildExists => state.IsExists;
         public IReadOnlyReactiveProperty<string> GuildName => state.GuildName;
@@ -30,16 +34,20 @@ namespace Game.Guild
             IInventoryService inventoryService,
             ILocalizationService localization,
             ITimeService time,
+            IAppEventsService appEvents,
+            ILeaderboardsService leaderboards,
             IObjectResolver resolver)
         {
             state = new(guildConfig, inventoryService, localization, resolver);
             recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, time, resolver);
+            leaderboardModule = new(state, guildConfig, leaderboards, appEvents);
         }
 
         public override async UniTask<bool> Init()
         {
             state.Init();
             recruitingModule.Init();
+            leaderboardModule.Init();
 
             return await Inited();
         }
