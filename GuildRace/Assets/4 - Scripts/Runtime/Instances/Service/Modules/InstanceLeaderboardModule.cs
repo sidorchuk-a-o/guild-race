@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
+using System.Collections.Generic;
+using AD.ToolsCollection;
 using AD.Services.AppEvents;
 using AD.Services.Leaderboards;
 using Game.Guild;
+using UniRx;
 
 namespace Game.Instances
 {
-    public class InstanceLeaderboardModule : IAppTickListener
+    public class InstanceLeaderboardModule
     {
         private readonly InstancesState state;
         private readonly InstancesConfig config;
@@ -15,14 +17,13 @@ namespace Game.Instances
         private readonly IAppEventsService appEvents;
         private readonly ILeaderboardsService leaderboards;
 
+        private LeaderboardInfo leaderboard;
         private IReadOnlyDictionary<InstanceType, UnitInfo[]> bossesCache;
-
-        private int totalScore;
-        private float sendTimer;
 
         public InstanceLeaderboardModule(
             InstancesState state,
             InstancesConfig config,
+            ActiveInstanceModule activeInstanceModule,
             IGuildService guildService,
             ILeaderboardsService leaderboards,
             IAppEventsService appEvents)
@@ -32,14 +33,23 @@ namespace Game.Instances
             this.guildService = guildService;
             this.leaderboards = leaderboards;
             this.appEvents = appEvents;
+
+            activeInstanceModule.OnInstanceCompleted
+                .Where(x => x.BossUnit.CompletedCount.Value == 1)
+                .Subscribe(InstanceCompleted);
         }
 
         public void Init()
         {
+            leaderboard = GetLeaderboard();
             bossesCache = GetBossesCache();
-            totalScore = GetCurrentScore();
+        }
 
-            appEvents.AddAppTickListener(this);
+        private LeaderboardInfo GetLeaderboard()
+        {
+            var guildPowerKey = config.LeaderboardParams.GuildPowerKey;
+
+            return leaderboards.GetLeaderboard(guildPowerKey);
         }
 
         private IReadOnlyDictionary<InstanceType, UnitInfo[]> GetBossesCache()
@@ -51,6 +61,15 @@ namespace Game.Instances
                 .ToDictionary(x => x.Key, x => x.Select(t => t.unit).ToArray());
         }
 
+        private void InstanceCompleted(ActiveInstanceInfo instanceInfo)
+        {
+            var guildName = guildService.GuildName.Value;
+            var leaderboardKey = config.LeaderboardParams.GuildPowerKey;
+            var currentScore = GetCurrentScore();
+
+            leaderboards.SendScore(leaderboardKey, currentScore, guildName);
+        }
+
         private int GetCurrentScore()
         {
             return bossesCache.Sum(getScore);
@@ -58,40 +77,10 @@ namespace Game.Instances
             int getScore(KeyValuePair<InstanceType, UnitInfo[]> kvp)
             {
                 var scoreParams = config.LeaderboardParams.GetScoreParams(kvp.Key);
-                var completedCount = kvp.Value.Sum(b => b.TotalCompletedCount);
+                var completedCount = kvp.Value.Count(x => x.CompletedCount.Value > 0);
 
                 return scoreParams.Score * completedCount;
             }
-        }
-
-        void IAppTickListener.OnTick(float deltaTime)
-        {
-            sendTimer -= deltaTime;
-
-            if (sendTimer > 0)
-            {
-                return;
-            }
-
-            sendTimer = config.LeaderboardParams.SendTime;
-
-            var currentScore = GetCurrentScore();
-
-            if (totalScore == currentScore)
-            {
-                return;
-            }
-
-            var guildName = guildService.GuildName.Value;
-            var leaderboardKey = config.LeaderboardParams.GuildPowerKey;
-
-            leaderboards.SendScore(leaderboardKey, currentScore, guildName);
-
-            totalScore = currentScore;
-        }
-
-        void IAppTickListener.OnLateTick(float deltaTime)
-        {
         }
     }
 }

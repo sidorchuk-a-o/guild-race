@@ -49,9 +49,6 @@ namespace Game.Quests
 
         private void Awake()
         {
-            questContainer.alpha = 0;
-            questContainer.interactable = false;
-
             takeRewardButton.OnClick
                 .Subscribe(TakeRewardCallback)
                 .AddTo(this);
@@ -109,6 +106,8 @@ namespace Game.Quests
             if (hasQuest == false &&
                 lastQuestId.IsValid() == false)
             {
+                questContainer.alpha = 0;
+                questContainer.interactable = false;
                 return;
             }
 

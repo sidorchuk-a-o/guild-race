@@ -8,7 +8,6 @@ namespace Game.Instances
     public class LeaderboardParamsElement : Element
     {
         private PropertyElement guildScoreKeyField;
-        private PropertyElement sendTimeField;
         private InstanceScoresList instanceScoresList;
 
         protected override void CreateElementGUI(Element root)
@@ -16,7 +15,6 @@ namespace Game.Instances
             root.CreateHeader("Leaderboard Params");
 
             guildScoreKeyField = root.CreateProperty();
-            sendTimeField = root.CreateProperty();
 
             root.CreateSpace();
 
@@ -28,7 +26,6 @@ namespace Game.Instances
             base.BindData(data);
 
             guildScoreKeyField.BindProperty("guildScoreKey", data);
-            sendTimeField.BindProperty("sendTime", data);
             instanceScoresList.BindProperty("instanceScores", data);
         }
     }

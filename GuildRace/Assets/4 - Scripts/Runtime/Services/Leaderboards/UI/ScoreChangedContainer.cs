@@ -1,13 +1,12 @@
-﻿using AD.Services.Store;
+﻿using AD.Services.Leaderboards;
 using AD.ToolsCollection;
 using AD.UI;
-using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 
-namespace Game.Store
+namespace Game.Leaderboards
 {
-    public class CurrencyChangedContainer : MonoBehaviour
+    public class ScoreChangedContainer : MonoBehaviour
     {
         private const float showTime = 2;
 
@@ -21,22 +20,22 @@ namespace Game.Store
         [SerializeField] private string positiveKey = "positive";
         [SerializeField] private string negativeKey = "negative";
 
-        private long delta;
+        private int delta;
         private float timer;
         private bool? lastIsPositive;
 
-        public void Init(CurrencyVM currencyVM, CompositeDisp disp)
+        public void Init(LeaderboardVM leaderboardVM, CompositeDisp disp)
         {
             delta = 0;
             lastIsPositive = null;
             visibleState.SetState(hiddenKey);
 
-            currencyVM.Delta
+            leaderboardVM.Delta
                 .SilentSubscribe(DeltaChangedCallback)
                 .AddTo(disp);
         }
 
-        private void DeltaChangedCallback(long value)
+        private void DeltaChangedCallback(int value)
         {
             var isPositive = value > 0;
 
