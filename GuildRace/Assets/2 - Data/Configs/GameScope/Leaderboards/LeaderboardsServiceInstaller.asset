@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131d924aea7cfe24eb22985389e70b6a, type: 3}
+  m_Name: LeaderboardsServiceInstaller
+  m_EditorClassIdentifier: 
+  id: f2be37bcd0154e5f82c2f54ddde79e30
+  title: Leaderboards  Service
+  enabled: 1
+  order: 0
+  configRef:
+    m_AssetGUID: 310137f0a2725664a8f8a97eebbc1b95
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
