@@ -17,7 +17,7 @@ namespace Game.Instances
         {
             id = info.Id;
             instanceId = info.InstanceId.Value;
-            totalCompletedCount = info.TotalCompletedCount;
+            totalCompletedCount = info.TotalCompletedCount.Value;
             completedCount = info.CompletedCount.Value;
             triesCount = info.TriesCount.Value;
         }

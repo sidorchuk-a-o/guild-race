@@ -24,7 +24,7 @@ namespace Game
         [SerializeField] private UIText playerGuildRankText;
         [Space]
         [SerializeField] private WeeklyItem weeklyItem;
-        [SerializeField] private LeaderboardComponent leaderboardComponent;
+        [SerializeField] private ScoreComponent leaderboardComponent;
         [SerializeField] private CurrenciesContainer currenciesContainer;
 
         private IStoreService storeService;

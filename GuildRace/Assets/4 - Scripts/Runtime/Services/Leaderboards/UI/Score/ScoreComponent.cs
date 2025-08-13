@@ -1,19 +1,24 @@
-﻿using AD.UI;
+﻿using System.Threading;
 using AD.Services.Leaderboards;
+using AD.Services.Router;
 using AD.ToolsCollection;
-using System.Threading;
+using AD.UI;
+using Cysharp.Threading.Tasks;
+using Game.UI;
+using UniRx;
 using UnityEngine;
 using VContainer;
-using UniRx;
 
 namespace Game.Leaderboards
 {
-    public class LeaderboardComponent : MonoBehaviour
+    public class ScoreComponent : MonoBehaviour
     {
         [SerializeField] private LeaderboardKey leaderboardKey;
         [Space]
         [SerializeField] private UIText scoreText;
         [SerializeField] private ScoreChangedContainer changedContainer;
+        [Space]
+        [SerializeField] private TooltipComponent tooltipComponent;
 
         private LeaderboardVM leaderboardVM;
 
@@ -28,6 +33,7 @@ namespace Game.Leaderboards
             leaderboardVM.AddTo(disp);
 
             changedContainer.Init(leaderboardVM, disp);
+            tooltipComponent.Init(leaderboardVM);
 
             leaderboardVM.ScoreStr
                 .Subscribe(x => scoreText.SetTextParams(x))
