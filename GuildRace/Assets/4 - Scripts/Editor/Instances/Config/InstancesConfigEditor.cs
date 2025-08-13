@@ -15,6 +15,7 @@ namespace Game.Instances
         private ConsumablesParamsEditor consumablesParamsEditor;
         private RewardsParamsEditor rewardsParamsEditor;
         private ThreatsList threatsList;
+        private LeaderboardParamsElement leaderboardParams;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -47,6 +48,10 @@ namespace Game.Instances
             unitCooldownParamsList = root.CreateElement<UnitCooldownParamsList>();
             unitCooldownParamsList.FlexWidth(33).MarginRight(10);
             unitCooldownParamsList.BindProperty("unitCooldownParams", data);
+
+            leaderboardParams = root.CreateElement<LeaderboardParamsElement>();
+            leaderboardParams.FlexWidth(33).MarginRight(10);
+            leaderboardParams.BindProperty("leaderboardParams", data);
         }
 
         private void CreateSquadParamsTab(TabsContainer tabs)

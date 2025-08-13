@@ -7,6 +7,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Ads;
 using Game.Guild;
+using Game.Leaderboards;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,6 +32,8 @@ namespace Game.Instances
         [SerializeField] private Image unitImage;
         [SerializeField] private AbilitiesContainer unitAbilities;
         [SerializeField] private RewardsContainer unitRewardContainer;
+        [SerializeField] private RankRewardContainer rankRewardContainer;
+        [SerializeField] private KillCountContainer killCountContainer;
         [Space]
         [SerializeField] private UIText triesCountText;
         [SerializeField] private UIButton startInstanceButton;
@@ -156,6 +159,9 @@ namespace Game.Instances
 
                 unitAbilities.Init(unitVM.AbilitiesVM, ct);
                 unitRewardContainer.Init(unitVM.RewardsVM, ct);
+
+                killCountContainer.Init(unitVM, disp);
+                rankRewardContainer.Init(unitVM, disp);
 
                 unitVM.ActiveInstanceVM
                     .SilentSubscribe(updateStartButtonState)

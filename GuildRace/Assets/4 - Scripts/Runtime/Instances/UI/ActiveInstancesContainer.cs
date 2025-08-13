@@ -53,9 +53,6 @@ namespace Game.Instances
 
         private void Awake()
         {
-            instanceContainer.alpha = 0;
-            instanceContainer.interactable = false;
-
             completeInstanceButton.OnClick
                 .Subscribe(CompleteInstanceCallback)
                 .AddTo(this);
@@ -101,6 +98,12 @@ namespace Game.Instances
                 }
 
                 return;
+            }
+
+            if (activeInstanceVM == null)
+            {
+                instanceContainer.alpha = 0;
+                instanceContainer.interactable = false;
             }
 
             SelectActiveInstance(activeInstanceVM ?? activeInstancesVM.FirstOrDefault());

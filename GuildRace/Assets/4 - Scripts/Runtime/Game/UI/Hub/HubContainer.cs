@@ -7,6 +7,7 @@ using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Store;
 using Game.Weekly;
+using Game.Leaderboards;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -23,6 +24,7 @@ namespace Game
         [SerializeField] private UIText playerGuildRankText;
         [Space]
         [SerializeField] private WeeklyItem weeklyItem;
+        [SerializeField] private ScoreComponent leaderboardComponent;
         [SerializeField] private CurrenciesContainer currenciesContainer;
 
         private IStoreService storeService;
@@ -44,6 +46,7 @@ namespace Game
 
             weeklyItem.Init(disp);
             currenciesContainer.Init(disp, ct);
+            leaderboardComponent.Init(disp, ct);
 
             await emblemContainer.Init(guildVM.EmblemVM);
 

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-26798013487599552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc5c2b01442a424f9cfbc4f4d24121a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 758318b091dd4900806a104b53bba70a
+  title: Yandex Game
+  isDefault: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a18d63565dedb458e7cf9b568f2646, type: 3}
+  m_Name: LeaderboardsConfig
+  m_EditorClassIdentifier: 
+  modules:
+  - {fileID: -26798013487599552}
+  leaderboards:
+  - id: 6721f541d7944a479fb4254d9b771bc5
+    title: GuildScore
+    titleKey:
+      value: LEADERBOARDS/GUILD_SCORE_LB_TTL
+  - id: bf79a9833c7f480987f53400a9d6fbc5
+    title: GuildPower
+    titleKey:
+      value: LEADERBOARDS/GUILD_POWER_LB_TTL
+  getCooldownTime: 300
+  getMaxRequestCount: 20
+  globalCooldownTime: 1.1

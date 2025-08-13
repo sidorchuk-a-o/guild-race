@@ -14,6 +14,8 @@ namespace Game.Guild
         private RecruitingParamsEditor recruitingParamsEditor;
         private GuildBankParamsEditor guildBankParamsEditor;
         private EmblemParamsEditor emblemParamsEditor;
+        private PropertyElement guildPowerKeyField;
+        private PropertyElement sendTimeField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -37,6 +39,16 @@ namespace Game.Guild
 
             defaultGuildRanksList = root.CreateElement<GuildRanksList>();
             defaultGuildRanksList.BindProperty("defaultGuildRanks", data);
+
+            root.CreateHeader("Leaderboard Params");
+
+            var leaderboardData = data.GetProperty("leaderboardParams");
+
+            guildPowerKeyField = root.CreateProperty();
+            guildPowerKeyField.BindProperty("guildPowerKey", leaderboardData);
+
+            sendTimeField = root.CreateProperty();
+            sendTimeField.BindProperty("sendTime", leaderboardData);
         }
 
         private void CreateCharactersTabs(TabsContainer tabs)

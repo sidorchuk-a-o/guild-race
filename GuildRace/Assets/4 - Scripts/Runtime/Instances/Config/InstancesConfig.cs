@@ -1,6 +1,6 @@
-﻿using AD.ToolsCollection;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using AD.ToolsCollection;
 using UnityEngine;
 
 namespace Game.Instances
@@ -15,6 +15,7 @@ namespace Game.Instances
         [SerializeField] private CompleteChanceParams completeChanceParams;
         [SerializeField] private ConsumablesParams consumablesParams;
         [SerializeField] private RewardsParams rewardsParams;
+        [SerializeField] private LeaderboardParams leaderboardParams;
         [SerializeField] private List<UnitCooldownParams> unitCooldownParams;
         [SerializeField] private List<ThreatData> threats;
 
@@ -35,8 +36,10 @@ namespace Game.Instances
         public CompleteChanceParams CompleteChanceParams => completeChanceParams;
         public ConsumablesParams ConsumablesParams => consumablesParams;
         public RewardsParams RewardsParams => rewardsParams;
+        public LeaderboardParams LeaderboardParams => leaderboardParams;
+
         public IReadOnlyList<ThreatData> Threats => threats;
-        public List<UnitCooldownParams> UnitCooldownParams => unitCooldownParams;
+        public IReadOnlyList<UnitCooldownParams> UnitCooldownParams => unitCooldownParams;
 
         public SeasonData GetSeason(int id)
         {

@@ -40,9 +40,6 @@ namespace Game.Craft
 
         private void Awake()
         {
-            recipeContainer.alpha = 0;
-            recipeContainer.interactable = false;
-
             startCraftingButton.OnClick
                 .Subscribe(StartCraftingCallback)
                 .AddTo(this);
@@ -73,6 +70,8 @@ namespace Game.Craft
             if (hasRecipe == false &&
                 lastRecipeId.HasValue == false)
             {
+                recipeContainer.alpha = 0;
+                recipeContainer.interactable = false;
                 return;
             }
 

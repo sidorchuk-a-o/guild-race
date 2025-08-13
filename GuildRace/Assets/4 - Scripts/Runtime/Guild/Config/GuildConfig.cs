@@ -14,6 +14,8 @@ namespace Game.Guild
         [SerializeField] private GuildBankParams guildBankParams = new();
         [SerializeField] private EmblemParams emblemParams = new();
 
+        [SerializeField] private LeaderboardParams leaderboardParams;
+
         public int MaxCharactersCount => maxCharactersCount;
         public IReadOnlyList<GuildRankData> DefaultGuildRanks => defaultGuildRanks;
 
@@ -21,5 +23,7 @@ namespace Game.Guild
         public RecruitingParams RecruitingParams => recruitingParams;
         public GuildBankParams GuildBankParams => guildBankParams;
         public EmblemParams EmblemParams => emblemParams;
+
+        public LeaderboardParams LeaderboardParams => leaderboardParams;
     }
 }

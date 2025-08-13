@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1974708385721160763, guid: f24a1f271647b4a4c8d788b703c26e1e, type: 3}
       propertyPath: m_Name
-      value: CharactersScrollView Variant
+      value: GuildBankCharactersScrollView
       objectReference: {fileID: 0}
     - target: {fileID: 5895517005055463644, guid: f24a1f271647b4a4c8d788b703c26e1e, type: 3}
       propertyPath: m_AnchorMax.x

@@ -25,15 +25,11 @@ namespace Game.Store
         private float timer;
         private bool? lastIsPositive;
 
-        private void Awake()
-        {
-            enabled = false;
-        }
-
         public void Init(CurrencyVM currencyVM, CompositeDisp disp)
         {
             delta = 0;
             lastIsPositive = null;
+            visibleState.SetState(hiddenKey);
 
             currencyVM.Delta
                 .SilentSubscribe(DeltaChangedCallback)

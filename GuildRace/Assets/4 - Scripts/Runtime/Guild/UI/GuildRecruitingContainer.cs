@@ -46,9 +46,6 @@ namespace Game.Guild
 
         private void Awake()
         {
-            characterContainer.alpha = 0;
-            characterContainer.interactable = false;
-
             settingsButton.OnClick
                 .Subscribe(SettingsButtonCallback)
                 .AddTo(this);
@@ -89,6 +86,12 @@ namespace Game.Guild
                 }
 
                 return;
+            }
+
+            if (joinRequestVM == null)
+            {
+                characterContainer.alpha = 0;
+                characterContainer.interactable = false;
             }
 
             SelectRequest(joinRequestVM ?? joinRequestsVM.FirstOrDefault());

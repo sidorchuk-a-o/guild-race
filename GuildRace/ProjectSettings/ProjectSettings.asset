@@ -812,24 +812,24 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Android: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
+    Android: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
     EmbeddedLinux: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN;TextMeshPro
-    LinuxHeadlessSimulation: UNITY_VISUAL_SCRIPTING;DOTWEEN
-    Nintendo Switch: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
-    PS4: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
-    PS5: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
+    LinuxHeadlessSimulation: UNITY_VISUAL_SCRIPTING;DOTWEEN;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
+    Nintendo Switch: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
+    PS4: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
+    PS5: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
     QNX: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
     ReservedCFE: DOTWEEN;TextMeshPro
     Server: UNITY_VISUAL_SCRIPTING
-    Standalone: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
+    Standalone: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
     VisionOS: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
     WebGL: UNITY_VISUAL_SCRIPTING;LETAI_TRUESHADOW;DOTWEEN;TextMeshPro;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;InterstitialAdv_yg;RewardedAdv_yg;StickyAdv_yg;EnvirData_yg;Authorization_yg;Storage_yg;ServerTime_yg;Leaderboards_yg;Payments_yg;Metrica_yg;Review_yg;QuitGameEvent_yg;Flags_yg;YandexGamesPlatform_yg;NJSON_STORAGE_YG2
-    Windows Store Apps: UNITY_VISUAL_SCRIPTING;DOTWEEN
-    XboxOne: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
-    iPhone: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
-    tvOS: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro
+    Windows Store Apps: UNITY_VISUAL_SCRIPTING;DOTWEEN;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
+    XboxOne: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
+    iPhone: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
+    tvOS: UNITY_VISUAL_SCRIPTING;DOTWEEN;TextMeshPro;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;EnvirData_yg;Flags_yg;InterstitialAdv_yg;Leaderboards_yg;Metrica_yg;Payments_yg;QuitGameEvent_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TMP_YG2;NJSON_YG2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
