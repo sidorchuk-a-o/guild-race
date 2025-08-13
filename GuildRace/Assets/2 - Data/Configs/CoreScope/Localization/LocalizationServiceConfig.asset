@@ -23,3 +23,4 @@ MonoBehaviour:
     code: ru
   - language: English
     code: en
+  defaultLanguageCode: ru
