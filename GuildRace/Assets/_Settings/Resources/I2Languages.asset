@@ -673,6 +673,16 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: GUILD/RECRUITING_DISABLED_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041D\u0430\u0431\u043E\u0440 \u0432 \u0433\u0438\u043B\u044C\u0434\u0438\u044E
+        \u0437\u0430\u043A\u0440\u044B\u0442"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: GUILD/SPEC_BLOCK_TTL
       TermType: 0
       Description: 
@@ -8671,7 +8681,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1755186358061
+    Google_LastUpdatedVersion: 1755188182070
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
