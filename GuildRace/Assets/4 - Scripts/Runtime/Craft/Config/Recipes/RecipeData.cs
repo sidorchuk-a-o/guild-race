@@ -1,4 +1,5 @@
-﻿using AD.ToolsCollection;
+﻿using AD.Services.Store;
+using AD.ToolsCollection;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,10 @@ namespace Game.Craft
     {
         [SerializeField] private int productItemId;
         [SerializeField] private List<IngredientData> ingredients;
+        [SerializeField] private CurrencyAmountData price;
 
         public int ProductItemId => productItemId;
         public IReadOnlyList<IngredientData> Ingredients => ingredients;
+        public CurrencyAmount Price => price;
     }
 }

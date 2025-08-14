@@ -312,227 +312,346 @@ MonoBehaviour:
       productItemId: 10102
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2002
       title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
       productItemId: 10117
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2003
-      title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+      title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0442\u0430\u043F\u043A\u0438"
       productItemId: 10103
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2004
-      title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
-        \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u041D\u0430\u043F\u043B\u0435\u0447\u043D\u0438\u043A"
+      title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
+        \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0442\u0430\u043F\u043A\u0438"
       productItemId: 10118
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2005
       title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
       productItemId: 10104
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2006
       title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
       productItemId: 10119
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2007
       title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0430"
       productItemId: 10105
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2008
       title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0430"
       productItemId: 10120
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2009
       title: "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438"
       productItemId: 10106
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2010
       title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438"
       productItemId: 10121
       ingredients:
       - reagentId: 1001
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2011
       title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u043A\u0430"
       productItemId: 10107
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2012
       title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0430\u044F
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u043A\u0430"
       productItemId: 10122
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2013
-      title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0439 \u0449\u0438\u0442\u043E\u043A"
+      title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043F\u043E\u043B\u0443\u0431\u043E\u0442\u0438\u043D\u043A\u0438"
       productItemId: 10108
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2014
-      title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0439
-        \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0439 \u0449\u0438\u0442\u043E\u043A"
+      title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
+        \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043F\u043E\u043B\u0443\u0431\u043E\u0442\u0438\u043D\u043A\u0438"
       productItemId: 10123
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2015
       title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u0443\u0440\u0442\u043A\u0430"
       productItemId: 10109
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2016
       title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0430\u044F
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u0443\u0440\u0442\u043A\u0430"
       productItemId: 10124
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2017
       title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
       productItemId: 10110
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2018
       title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
       productItemId: 10125
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2019
       title: "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u0431\u0440\u044E\u043A\u0438"
       productItemId: 10111
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2020
       title: "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u0431\u0440\u044E\u043A\u0438"
       productItemId: 10126
       ingredients:
       - reagentId: 1002
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2021
-      title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u0440\u043E\u0433\u0430\u0442\u044B\u0439
-        \u0448\u043B\u0435\u043C"
+      title: "\u041C\u0435\u0434\u043D\u0430\u044F \u043A\u0430\u0441\u043A\u0430"
       productItemId: 10112
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2022
-      title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
-        \u0440\u043E\u0433\u0430\u0442\u044B\u0439 \u0448\u043B\u0435\u043C"
+      title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
+        \u043A\u0430\u0441\u043A\u0430"
       productItemId: 10127
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2023
-      title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u043D\u0430\u043F\u043B\u0435\u0447"
+      title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u0441\u0430\u043F\u043E\u0433\u0438"
       productItemId: 10113
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2024
-      title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
-        \u043D\u0430\u043F\u043B\u0435\u0447"
+      title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
+        \u0441\u0430\u043F\u043E\u0433\u0438"
       productItemId: 10128
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2025
       title: "\u041C\u0435\u0434\u043D\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445"
       productItemId: 10114
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2026
       title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
         \u0434\u043E\u0441\u043F\u0435\u0445"
       productItemId: 10129
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2027
       title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       productItemId: 10115
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2028
       title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       productItemId: 10130
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2029
       title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
       productItemId: 10116
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2030
       title: "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u043D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
       productItemId: 10131
       ingredients:
       - reagentId: 1003
-        count: 7
+        count: 10
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
   - id: 102
     title: "\u041E\u0440\u0443\u0436\u0435\u0439\u043D\u0438\u043A"
     nameKey:
@@ -551,61 +670,93 @@ MonoBehaviour:
       productItemId: 10136
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2032
       title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
         \u0441\u0442\u0440\u0430\u0436"
       productItemId: 10140
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2033
       title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043A\u043B\u044B\u043A\u0438"
       productItemId: 10137
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2034
       title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u043A\u043B\u044B\u043A\u0438"
       productItemId: 10141
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2035
       title: "\u041C\u0435\u0434\u043D\u0430\u044F \u0442\u0440\u043E\u0441\u0442\u044C"
       productItemId: 10138
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2036
       title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
         \u0442\u0440\u043E\u0441\u0442\u044C"
       productItemId: 10142
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
     - id: 2037
       title: "\u041C\u0435\u0434\u043D\u044B\u0435 \u043A\u0430\u0441\u0442\u0435\u0442\u044B"
       productItemId: 10139
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1850
     - id: 2038
       title: "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u043A\u0430\u0441\u0442\u0435\u0442\u044B"
       productItemId: 10143
       ingredients:
       - reagentId: 1003
-        count: 11
+        count: 12
       - reagentId: 1012
-        count: 3
+        count: 4
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3500
   - id: 103
     title: "\u0410\u043B\u0445\u0438\u043C\u0438\u043A"
     nameKey:
@@ -627,6 +778,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1010
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2056
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0442\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F"
@@ -638,6 +793,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2057
       title: "\u0417\u0435\u043B\u044C\u0435 \u0440\u0430\u0437\u0432\u0435\u0438\u0432\u0430\u043D\u0438\u044F
         \u043C\u0430\u0433\u0438\u0438"
@@ -647,6 +806,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1009
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2058
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0440\u0430\u0437\u0432\u0435\u0438\u0432\u0430\u043D\u0438\u044F \u043C\u0430\u0433\u0438\u0438"
@@ -658,6 +821,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2059
       title: "\u0417\u0435\u043B\u044C\u0435 \u043E\u0440\u043B\u0438\u043D\u043E\u0433\u043E
         \u0437\u0440\u0435\u043D\u0438\u044F"
@@ -667,6 +834,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1013
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2060
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0440\u043B\u0438\u043D\u043E\u0433\u043E \u0437\u0440\u0435\u043D\u0438\u044F"
@@ -678,6 +849,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2061
       title: "\u0417\u0435\u043B\u044C\u0435 \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u044F"
       productItemId: 3011
@@ -686,6 +861,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1011
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2062
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435"
@@ -697,6 +876,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2063
       title: "\u0417\u0435\u043B\u044C\u0435 \u043E\u0441\u0442\u043E\u043B\u0431\u0435\u043D\u0435\u043D\u0438\u044F"
       productItemId: 3013
@@ -705,6 +888,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1011
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2064
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0441\u0442\u043E\u043B\u0431\u0435\u043D\u0435\u043D\u0438\u044F"
@@ -716,6 +903,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2065
       title: "\u0417\u0435\u043B\u044C\u0435 \u0437\u0430\u0442\u0432\u0435\u0440\u0434\u0435\u0432\u0430\u043D\u0438\u044F"
       productItemId: 3015
@@ -724,6 +915,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1009
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2066
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0437\u0430\u0442\u0432\u0435\u0440\u0434\u0435\u0432\u0430\u043D\u0438\u044F"
@@ -735,6 +930,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2067
       title: "\u0417\u0435\u043B\u044C\u0435 \u0443\u043C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u043D\u0438\u044F"
       productItemId: 3017
@@ -743,6 +942,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1009
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2068
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0443\u043C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u043D\u0438\u044F"
@@ -754,6 +957,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2069
       title: "\u0417\u0435\u043B\u044C\u0435 \u0440\u0430\u0437\u0433\u043E\u043D\u0430"
       productItemId: 3019
@@ -762,6 +969,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1013
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2070
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0440\u0430\u0437\u0433\u043E\u043D\u0430"
@@ -773,6 +984,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2071
       title: "\u0417\u0435\u043B\u044C\u0435 \u043E\u0433\u043D\u0435\u043D\u043D\u043E\u0439
         \u044F\u0440\u043E\u0441\u0442\u0438"
@@ -782,6 +997,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1011
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2072
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u043E\u0433\u043D\u0435\u043D\u043D\u043E\u0439 \u044F\u0440\u043E\u0441\u0442\u0438"
@@ -793,6 +1012,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2073
       title: "\u0417\u0435\u043B\u044C\u0435 \u0441\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0435\u043D\u0438\u044F"
       productItemId: 3023
@@ -801,6 +1024,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1013
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2074
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0441\u043E\u0441\u0440\u0435\u0434\u043E\u0442\u043E\u0447\u0435\u043D\u0438\u044F"
@@ -812,6 +1039,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2075
       title: "\u0417\u0435\u043B\u044C\u0435 \u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F"
       productItemId: 3025
@@ -820,6 +1051,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1010
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2076
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F"
@@ -831,6 +1066,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
     - id: 2077
       title: "\u0417\u0435\u043B\u044C\u0435 \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0439
         \u0431\u0440\u043E\u043D\u0438"
@@ -840,6 +1079,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1010
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1250
     - id: 2078
       title: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435
         \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0439 \u0431\u0440\u043E\u043D\u0438"
@@ -851,6 +1094,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2500
   - id: 105
     title: "\u041D\u0430\u0447\u0435\u0440\u0442\u0430\u0442\u0435\u043B\u044C"
     nameKey:
@@ -873,6 +1120,10 @@ MonoBehaviour:
         count: 5
       - reagentId: 1006
         count: 5
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1300
     - id: 2052
       title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
         \u0440\u0443\u043D\u0430 \u0432\u0441\u043F\u043B\u0435\u0441\u043A\u0430
@@ -885,6 +1136,10 @@ MonoBehaviour:
         count: 5
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2600
     - id: 2053
       title: "\u0420\u0443\u043D\u0430 \u043A\u0430\u043C\u0435\u043D\u043D\u043E\u0439
         \u043A\u043E\u0436\u0438"
@@ -894,6 +1149,10 @@ MonoBehaviour:
         count: 5
       - reagentId: 1004
         count: 5
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 1300
     - id: 2054
       title: "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
         \u0440\u0443\u043D\u0430 \u043A\u0430\u043C\u0435\u043D\u043D\u043E\u0439
@@ -906,8 +1165,12 @@ MonoBehaviour:
         count: 5
       - reagentId: 1012
         count: 2
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 2600
     - id: 2079
-      title: "\u0420\u0443\u043D\u0430 \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F
+      title: "\u041A\u0430\u043C\u0435\u043D\u044C \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F
         \u0434\u0443\u0448\u0438"
       productItemId: 3029
       ingredients:
@@ -917,6 +1180,10 @@ MonoBehaviour:
         count: 3
       - reagentId: 1011
         count: 3
+      price:
+        key:
+          value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
+        value: 3000
   reagentsParams:
     items:
     - {fileID: -5649447585300624681}

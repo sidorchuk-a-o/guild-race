@@ -24,7 +24,7 @@ namespace Game.Craft
         [SerializeField] private IngredientsContainer ingredientsContainer;
         [SerializeField] private CraftingCounterContainer counterContainer;
         [Space]
-        [SerializeField] private UIButton startCraftingButton;
+        [SerializeField] private CraftButton startCraftingButton;
 
         private readonly CompositeDisp recipeDisp = new();
         private CancellationTokenSource recipeToken;
@@ -40,7 +40,7 @@ namespace Game.Craft
 
         private void Awake()
         {
-            startCraftingButton.OnClick
+            startCraftingButton.OnCraft
                 .Subscribe(StartCraftingCallback)
                 .AddTo(this);
         }
@@ -118,7 +118,8 @@ namespace Game.Craft
 
                     await UniTask.WhenAll(
                         productContainer.Init(recipeVM, recipeDisp, token),
-                        ingredientsContainer.Init(recipeVM, recipeDisp, token));
+                        ingredientsContainer.Init(recipeVM, recipeDisp, token),
+                        startCraftingButton.Init(recipeVM, recipeDisp, token));
 
                     if (token.IsCancellationRequested)
                     {
@@ -126,27 +127,20 @@ namespace Game.Craft
                     }
 
                     recipeNameText.SetTextParams(recipeVM.ProductVM.NameKey);
-
-                    ingredientsContainer.IsAvailablle
-                        .Subscribe(startCraftingButton.SetInteractableState)
-                        .AddTo(recipeDisp);
                 }
             }
         }
 
         private void StartCraftingCallback()
         {
-            if (ingredientsContainer.IsAvailablle.Value)
-            {
-                var vendorVM = vendorsTabsContainer.VendorVM.Value;
-                var recipeVM = vendorsTabsContainer.RecipeVM.Value;
-                var count = counterContainer.Count.Value;
+            var recipeVM = vendorsTabsContainer.RecipeVM.Value;
 
+            if (recipeVM != null && recipeVM.IsAvailable.Value)
+            {
                 var craftingEM = new StartCraftingEM
                 {
-                    VendorId = vendorVM.Id,
                     RecipeId = recipeVM.Id,
-                    Count = count
+                    Count = recipeVM.Count.Value
                 };
 
                 craftVMF.StartCraftingProcess(craftingEM);

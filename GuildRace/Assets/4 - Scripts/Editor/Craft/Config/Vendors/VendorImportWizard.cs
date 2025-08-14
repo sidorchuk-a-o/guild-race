@@ -1,4 +1,5 @@
 ﻿using AD.Services.Localization;
+using AD.Services.Store;
 using AD.ToolsCollection;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Game.Craft
         {
             LockWizard();
 
-            recipeImporter ??= new(SheetId, "craft", "A:P", typeof(RecipeData));
+            recipeImporter ??= new(SheetId, "craft", "A:Q", typeof(RecipeData));
 
             await recipeImporter.LoadData("ID");
 
@@ -90,6 +91,13 @@ namespace Game.Craft
                 .ToList();
 
             recipeData.GetProperty("ingredients").SetValue(ingredients);
+
+            // price
+            var cost = row["Cost"].IntParse();
+            var currencyKey = CurrencyKeys.Gold;
+            var price = new CurrencyAmount(currencyKey, cost);
+
+            recipeData.GetProperty("price").SetValue((CurrencyAmountData)price);
         }
     }
 }
