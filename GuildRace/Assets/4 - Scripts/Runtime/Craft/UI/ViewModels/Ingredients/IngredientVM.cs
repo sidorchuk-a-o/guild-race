@@ -6,11 +6,17 @@ namespace Game.Craft
 {
     public class IngredientVM : ViewModel
     {
+        private readonly ReactiveProperty<int> craftCount = new();
+        private readonly ReactiveProperty<bool> isAvailable = new();
+
         public int Id { get; }
 
         public int Count { get; }
         public ReagentDataVM ReagentVM { get; }
         public ItemCounterVM ReagentCounterVM { get; }
+
+        public IReadOnlyReactiveProperty<int> CraftCount => craftCount;
+        public IReadOnlyReactiveProperty<bool> IsAvailable => isAvailable;
 
         public IngredientVM(IngredientData data, CraftVMFactory craftVMF)
         {
@@ -25,6 +31,12 @@ namespace Game.Craft
         {
             ReagentVM.AddTo(this);
             ReagentCounterVM.AddTo(this);
+        }
+
+        public void SetCraftingCount(int value)
+        {
+            craftCount.Value = Count * value;
+            isAvailable.Value = ReagentCounterVM.Count.Value >= craftCount.Value;
         }
     }
 }
