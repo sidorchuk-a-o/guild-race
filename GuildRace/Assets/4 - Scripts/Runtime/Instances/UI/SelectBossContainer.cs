@@ -111,7 +111,7 @@ namespace Game.Instances
             unitToken = token;
 
             unitContainer.DOKill();
-            unitContainer.interactable = hasUnit;
+            unitContainer.SetInteractable(hasUnit);
 
             const float duration = 0.1f;
 

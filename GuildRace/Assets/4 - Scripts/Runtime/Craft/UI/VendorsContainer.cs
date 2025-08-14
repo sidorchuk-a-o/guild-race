@@ -71,7 +71,7 @@ namespace Game.Craft
                 lastRecipeId.HasValue == false)
             {
                 recipeContainer.alpha = 0;
-                recipeContainer.interactable = false;
+                recipeContainer.SetInteractable(false);
                 return;
             }
 
@@ -88,8 +88,8 @@ namespace Game.Craft
             recipeContainer.DOKill();
             emptyRecipeContainer.DOKill();
 
-            recipeContainer.interactable = hasRecipe;
-            emptyRecipeContainer.interactable = !hasRecipe;
+            recipeContainer.SetInteractable(hasRecipe);
+            emptyRecipeContainer.SetInteractable(!hasRecipe);
 
             const float duration = 0.1f;
 

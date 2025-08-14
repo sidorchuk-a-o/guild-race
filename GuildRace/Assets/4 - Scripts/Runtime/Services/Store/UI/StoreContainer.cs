@@ -82,7 +82,7 @@ namespace Game.Store
             lastShelfId = shelfVM.Id;
 
             shelfContainer.DOKill();
-            shelfContainer.interactable = true;
+            shelfContainer.SetInteractable(true);
 
             const float duration = 0.1f;
 

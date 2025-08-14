@@ -107,7 +107,7 @@ namespace Game.Quests
                 lastQuestId.IsValid() == false)
             {
                 questContainer.alpha = 0;
-                questContainer.interactable = false;
+                questContainer.SetInteractable(false);
                 return;
             }
 
@@ -124,8 +124,8 @@ namespace Game.Quests
             questContainer.DOKill();
             emptyQuestContainer.DOKill();
 
-            questContainer.interactable = hasQuest;
-            emptyQuestContainer.interactable = !hasQuest;
+            questContainer.SetInteractable(hasQuest);
+            emptyQuestContainer.SetInteractable(!hasQuest);
 
             const float duration = 0.1f;
 
