@@ -29,8 +29,7 @@ namespace Game.Instances
         public void SetContentState(bool state)
         {
             content.alpha = state ? 1 : 0;
-            content.interactable = state;
-            content.blocksRaycasts = state;
+            content.SetInteractable(state);
 
             button.SetState(state ? selectedStateKey : unselectedStateKey);
         }

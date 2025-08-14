@@ -82,7 +82,7 @@ namespace Game.Guild
                 if (joinRequestVM == null)
                 {
                     characterContainer.alpha = 0;
-                    characterContainer.interactable = false;
+                    characterContainer.SetInteractable(false);
                 }
 
                 return;
@@ -91,7 +91,7 @@ namespace Game.Guild
             if (joinRequestVM == null)
             {
                 characterContainer.alpha = 0;
-                characterContainer.interactable = false;
+                characterContainer.SetInteractable(false);
             }
 
             SelectRequest(joinRequestVM ?? joinRequestsVM.FirstOrDefault());
@@ -118,7 +118,7 @@ namespace Game.Guild
                 if (joinRequestVM == null)
                 {
                     characterContainer.alpha = 0;
-                    characterContainer.interactable = false;
+                    characterContainer.SetInteractable(false);
                 }
             }
         }
@@ -128,7 +128,7 @@ namespace Game.Guild
             joinRequestVM = null;
 
             characterContainer.alpha = 0;
-            characterContainer.interactable = false;
+            characterContainer.SetInteractable(false);
         }
 
         private void RequestSelectCallback(JoinRequestVM joinRequestVM)
@@ -168,7 +168,7 @@ namespace Game.Guild
             lastRequestId = joinRequestVM?.Id;
 
             characterContainer.DOKill();
-            characterContainer.interactable = hasRequest;
+            characterContainer.SetInteractable(hasRequest);
 
             const float duration = 0.1f;
 

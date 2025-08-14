@@ -94,7 +94,7 @@ namespace Game.Instances
                 if (activeInstanceVM == null)
                 {
                     instanceContainer.alpha = 0;
-                    instanceContainer.interactable = false;
+                    instanceContainer.SetInteractable(false);
                 }
 
                 return;
@@ -103,7 +103,7 @@ namespace Game.Instances
             if (activeInstanceVM == null)
             {
                 instanceContainer.alpha = 0;
-                instanceContainer.interactable = false;
+                instanceContainer.SetInteractable(false);
             }
 
             SelectActiveInstance(activeInstanceVM ?? activeInstancesVM.FirstOrDefault());
@@ -157,8 +157,8 @@ namespace Game.Instances
             instanceContainer.DOKill();
             emptyInstanceContainer.DOKill();
 
-            instanceContainer.interactable = selected;
-            emptyInstanceContainer.interactable = !selected;
+            instanceContainer.SetInteractable(selected);
+            emptyInstanceContainer.SetInteractable(!selected);
 
             const float duration = 0.1f;
 
@@ -255,7 +255,7 @@ namespace Game.Instances
             if (activeInstanceVM == null)
             {
                 instanceContainer.alpha = 0;
-                instanceContainer.interactable = false;
+                instanceContainer.SetInteractable(false);
             }
         }
     }

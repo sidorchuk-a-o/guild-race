@@ -89,7 +89,7 @@ namespace Game.Guild
                 if (characterVM == null)
                 {
                     characterContainer.alpha = 0;
-                    characterContainer.interactable = false;
+                    characterContainer.SetInteractable(false);
                 }
 
                 return;
@@ -144,7 +144,7 @@ namespace Game.Guild
             lastCharacterId = characterVM?.Id;
 
             characterContainer.DOKill();
-            characterContainer.interactable = hasCharacter;
+            characterContainer.SetInteractable(hasCharacter);
 
             const float duration = 0.1f;
 
