@@ -15,6 +15,7 @@ namespace Game.Guild
     {
         [Header("Requests")]
         [SerializeField] private JoinRequestsScrollView joinRequestsScroll;
+        [SerializeField] private CanvasGroup joinRequestsEmpty;
 
         [Header("Character")]
         [SerializeField] private CanvasGroup characterContainer;
@@ -37,11 +38,13 @@ namespace Game.Guild
         private string lastRequestId;
         private JoinRequestVM joinRequestVM;
         private JoinRequestsVM joinRequestsVM;
+        private RecruitingVM recruitingVM;
 
         [Inject]
         public void Inject(GuildVMFactory guildVMF)
         {
             joinRequestsVM = guildVMF.GetJoinRequests();
+            recruitingVM = guildVMF.GetRecruiting();
         }
 
         private void Awake()
@@ -75,6 +78,12 @@ namespace Game.Guild
 
             joinRequestsVM.ObserveClear()
                 .Subscribe(ClearRequestsCallback)
+                .AddTo(disp);
+
+            recruitingVM.AddTo(disp);
+
+            recruitingVM.IsEnabled
+                .Subscribe(RecruitingStateChangedCallback)
                 .AddTo(disp);
 
             if (hasBack)
@@ -129,6 +138,12 @@ namespace Game.Guild
 
             characterContainer.alpha = 0;
             characterContainer.SetInteractable(false);
+        }
+
+        private void RecruitingStateChangedCallback(bool state)
+        {
+            joinRequestsEmpty.alpha = state ? 0 : 1;
+            joinRequestsEmpty.SetInteractable(state);
         }
 
         private void RequestSelectCallback(JoinRequestVM joinRequestVM)

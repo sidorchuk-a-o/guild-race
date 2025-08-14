@@ -8,6 +8,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using Game.UI;
 
 namespace Game.Instances
 {
@@ -30,6 +31,7 @@ namespace Game.Instances
         [SerializeField] private UIText completeChanceText;
         [SerializeField] private UIText chanceLabelText;
         [SerializeField] private Gradient chanceGradient;
+        [SerializeField] private TooltipComponent chanceTooltip;
 
         [Header("Button")]
         [SerializeField] private UIButton backButton;
@@ -125,6 +127,7 @@ namespace Game.Instances
             if (ct.IsCancellationRequested) return;
 
             bossImage.sprite = image;
+            chanceTooltip.Init(setupInstanceVM);
 
             await bossThreatsContainer.Init(setupInstanceVM.ThreatsVM, disp, ct);
         }
