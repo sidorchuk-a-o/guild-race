@@ -39,7 +39,7 @@ namespace Game.Instances
 
             var stateKey = hasChance
                 ? isPositive ? positiveDiffKey : negativeDiffKey
-                : UISelectionStateComponent.defaultStateKey;
+                : UISelectable.defaultStateKey;
 
             diffText.SetTextParams(diffStr);
             diffState.SetState(stateKey);

@@ -1,6 +1,6 @@
-﻿using AD.ToolsCollection;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using AD.ToolsCollection;
 using UnityEngine;
 
 namespace Game.Instances
@@ -15,6 +15,7 @@ namespace Game.Instances
         [SerializeField] private CompleteChanceParams completeChanceParams;
         [SerializeField] private ConsumablesParams consumablesParams;
         [SerializeField] private RewardsParams rewardsParams;
+        [SerializeField] private LeaderboardParams leaderboardParams;
         [SerializeField] private List<UnitCooldownParams> unitCooldownParams;
         [SerializeField] private List<ThreatData> threats;
 
@@ -25,6 +26,7 @@ namespace Game.Instances
         private Dictionary<ThreatId, ThreatData> threatsCache;
         private Dictionary<InstanceType, InstanceTypeData> instanceTypesCache;
         private Dictionary<int, IReadOnlyCollection<InstanceRewardData>> unitRewardsCache;
+        private Dictionary<InstanceType, IReadOnlyCollection<InstanceRewardData>> instanceRewardsCache;
         private Dictionary<int, InstanceRewardData> rewardsCache;
 
         public IReadOnlyList<SeasonData> Seasons => seasons;
@@ -34,8 +36,10 @@ namespace Game.Instances
         public CompleteChanceParams CompleteChanceParams => completeChanceParams;
         public ConsumablesParams ConsumablesParams => consumablesParams;
         public RewardsParams RewardsParams => rewardsParams;
+        public LeaderboardParams LeaderboardParams => leaderboardParams;
+
         public IReadOnlyList<ThreatData> Threats => threats;
-        public List<UnitCooldownParams> UnitCooldownParams => unitCooldownParams;
+        public IReadOnlyList<UnitCooldownParams> UnitCooldownParams => unitCooldownParams;
 
         public SeasonData GetSeason(int id)
         {
@@ -107,6 +111,33 @@ namespace Game.Instances
             return data;
         }
 
+        public IReadOnlyCollection<InstanceRewardData> GetInstanceRewards(InstanceType instanceType)
+        {
+            instanceRewardsCache ??= seasons
+                .SelectMany(x => getBossesByType(x))
+                .GroupBy(x => x.type)
+                .ToDictionary(x => x.Key, x => getRewards(x.Select(x => x.boss)));
+
+            static IEnumerable<(InstanceType type, UnitData boss)> getBossesByType(SeasonData x)
+            {
+                return x.Instances.SelectMany(i =>
+                {
+                    return i.BoosUnits.Select(b => (type: i.Type, boss: b));
+                });
+            }
+
+            IReadOnlyCollection<InstanceRewardData> getRewards(IEnumerable<UnitData> bosses)
+            {
+                return bosses
+                    .SelectMany(x => GetUnitRewards(x.Id))
+                    .ToList();
+            }
+
+            instanceRewardsCache.TryGetValue(instanceType, out var data);
+
+            return data;
+        }
+
         public IEnumerable<InstanceRewardData> GetRewards(IEnumerable<int> rewardIds)
         {
             rewardsCache ??= rewardsParams.Rewards.ToDictionary(x => x.Id, x => x);
@@ -114,6 +145,14 @@ namespace Game.Instances
             return rewardIds
                 .Select(x => rewardsCache[x])
                 .Where(x => x != null);
+        }
+
+        public InstanceRewardData GetReward(int rewardId)
+        {
+            rewardsCache ??= rewardsParams.Rewards.ToDictionary(x => x.Id, x => x);
+            rewardsCache.TryGetValue(rewardId, out var data);
+
+            return data;
         }
 
         public UnitCooldownParams GetUnitCooldown(InstanceType instanceType)

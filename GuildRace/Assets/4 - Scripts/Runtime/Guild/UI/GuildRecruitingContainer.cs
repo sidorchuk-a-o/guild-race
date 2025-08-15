@@ -15,6 +15,7 @@ namespace Game.Guild
     {
         [Header("Requests")]
         [SerializeField] private JoinRequestsScrollView joinRequestsScroll;
+        [SerializeField] private CanvasGroup joinRequestsEmpty;
 
         [Header("Character")]
         [SerializeField] private CanvasGroup characterContainer;
@@ -37,18 +38,17 @@ namespace Game.Guild
         private string lastRequestId;
         private JoinRequestVM joinRequestVM;
         private JoinRequestsVM joinRequestsVM;
+        private RecruitingVM recruitingVM;
 
         [Inject]
         public void Inject(GuildVMFactory guildVMF)
         {
             joinRequestsVM = guildVMF.GetJoinRequests();
+            recruitingVM = guildVMF.GetRecruiting();
         }
 
         private void Awake()
         {
-            characterContainer.alpha = 0;
-            characterContainer.interactable = false;
-
             settingsButton.OnClick
                 .Subscribe(SettingsButtonCallback)
                 .AddTo(this);
@@ -80,15 +80,27 @@ namespace Game.Guild
                 .Subscribe(ClearRequestsCallback)
                 .AddTo(disp);
 
+            recruitingVM.AddTo(disp);
+
+            recruitingVM.IsEnabled
+                .Subscribe(RecruitingStateChangedCallback)
+                .AddTo(disp);
+
             if (hasBack)
             {
                 if (joinRequestVM == null)
                 {
                     characterContainer.alpha = 0;
-                    characterContainer.interactable = false;
+                    characterContainer.SetInteractable(false);
                 }
 
                 return;
+            }
+
+            if (joinRequestVM == null)
+            {
+                characterContainer.alpha = 0;
+                characterContainer.SetInteractable(false);
             }
 
             SelectRequest(joinRequestVM ?? joinRequestsVM.FirstOrDefault());
@@ -115,7 +127,7 @@ namespace Game.Guild
                 if (joinRequestVM == null)
                 {
                     characterContainer.alpha = 0;
-                    characterContainer.interactable = false;
+                    characterContainer.SetInteractable(false);
                 }
             }
         }
@@ -125,7 +137,13 @@ namespace Game.Guild
             joinRequestVM = null;
 
             characterContainer.alpha = 0;
-            characterContainer.interactable = false;
+            characterContainer.SetInteractable(false);
+        }
+
+        private void RecruitingStateChangedCallback(bool state)
+        {
+            joinRequestsEmpty.alpha = state ? 0 : 1;
+            joinRequestsEmpty.SetInteractable(state);
         }
 
         private void RequestSelectCallback(JoinRequestVM joinRequestVM)
@@ -165,7 +183,7 @@ namespace Game.Guild
             lastRequestId = joinRequestVM?.Id;
 
             characterContainer.DOKill();
-            characterContainer.interactable = hasRequest;
+            characterContainer.SetInteractable(hasRequest);
 
             const float duration = 0.1f;
 

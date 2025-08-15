@@ -54,6 +54,33 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
   children: []
+--- !u!114 &-5539922946178741535
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: StoreRewards
+  m_EditorClassIdentifier: 
+  id: 03970411b5fe430dbe84377739267d38
+  title: StoreRewards
+  path: StoreRewards
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: c03909eb51ba4679bca68f80a830b499
+    title: default
+    asset:
+      m_AssetGUID: 872fe8709d76b2f47bd1c8fc73ee675d
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
 --- !u!114 &-5429601353496565382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,6 +103,60 @@ MonoBehaviour:
     title: default
     asset:
       m_AssetGUID: b3025289897854a469ad5aa1c77f2208
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &-3966830472013763755
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Store
+  m_EditorClassIdentifier: 
+  id: d8fe4ec7298f4309befd216354aebce9
+  title: Store
+  path: Store
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 010509b968214564a3dc29db8d341212
+    title: default
+    asset:
+      m_AssetGUID: e4943e434a8600546bae4a7f436dbc89
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &-3849291005464559669
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Leaderboards
+  m_EditorClassIdentifier: 
+  id: b36247e57b5344f3b7cf1f699cd84195
+  title: Leaderboards
+  path: Leaderboards
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 09d6c4eda2a3402ea08e191ab481d645
+    title: default
+    asset:
+      m_AssetGUID: d013a369d8d5226438e2937b2cb5a0a8
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 
@@ -116,6 +197,9 @@ MonoBehaviour:
   - {fileID: 8467977470284476441}
   - {fileID: 941076224696289187}
   - {fileID: 3754611210617734579}
+  - {fileID: -3966830472013763755}
+  - {fileID: -5539922946178741535}
+  - {fileID: -3849291005464559669}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

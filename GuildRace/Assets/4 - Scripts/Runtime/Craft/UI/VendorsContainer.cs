@@ -24,7 +24,7 @@ namespace Game.Craft
         [SerializeField] private IngredientsContainer ingredientsContainer;
         [SerializeField] private CraftingCounterContainer counterContainer;
         [Space]
-        [SerializeField] private UIButton startCraftingButton;
+        [SerializeField] private CraftButton startCraftingButton;
 
         private readonly CompositeDisp recipeDisp = new();
         private CancellationTokenSource recipeToken;
@@ -40,10 +40,7 @@ namespace Game.Craft
 
         private void Awake()
         {
-            recipeContainer.alpha = 0;
-            recipeContainer.interactable = false;
-
-            startCraftingButton.OnClick
+            startCraftingButton.OnCraft
                 .Subscribe(StartCraftingCallback)
                 .AddTo(this);
         }
@@ -73,6 +70,8 @@ namespace Game.Craft
             if (hasRecipe == false &&
                 lastRecipeId.HasValue == false)
             {
+                recipeContainer.alpha = 0;
+                recipeContainer.SetInteractable(false);
                 return;
             }
 
@@ -89,8 +88,8 @@ namespace Game.Craft
             recipeContainer.DOKill();
             emptyRecipeContainer.DOKill();
 
-            recipeContainer.interactable = hasRecipe;
-            emptyRecipeContainer.interactable = !hasRecipe;
+            recipeContainer.SetInteractable(hasRecipe);
+            emptyRecipeContainer.SetInteractable(!hasRecipe);
 
             const float duration = 0.1f;
 
@@ -119,7 +118,8 @@ namespace Game.Craft
 
                     await UniTask.WhenAll(
                         productContainer.Init(recipeVM, recipeDisp, token),
-                        ingredientsContainer.Init(recipeVM, recipeDisp, token));
+                        ingredientsContainer.Init(recipeVM, recipeDisp, token),
+                        startCraftingButton.Init(recipeVM, recipeDisp, token));
 
                     if (token.IsCancellationRequested)
                     {
@@ -127,27 +127,20 @@ namespace Game.Craft
                     }
 
                     recipeNameText.SetTextParams(recipeVM.ProductVM.NameKey);
-
-                    ingredientsContainer.IsAvailablle
-                        .Subscribe(startCraftingButton.SetInteractableState)
-                        .AddTo(recipeDisp);
                 }
             }
         }
 
         private void StartCraftingCallback()
         {
-            if (ingredientsContainer.IsAvailablle.Value)
-            {
-                var vendorVM = vendorsTabsContainer.VendorVM.Value;
-                var recipeVM = vendorsTabsContainer.RecipeVM.Value;
-                var count = counterContainer.Count.Value;
+            var recipeVM = vendorsTabsContainer.RecipeVM.Value;
 
+            if (recipeVM != null && recipeVM.IsAvailable.Value)
+            {
                 var craftingEM = new StartCraftingEM
                 {
-                    VendorId = vendorVM.Id,
                     RecipeId = recipeVM.Id,
-                    Count = count
+                    Count = recipeVM.Count.Value
                 };
 
                 craftVMF.StartCraftingProcess(craftingEM);

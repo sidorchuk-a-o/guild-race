@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03cc8298506d7b942b27513aeb3c7a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSensitivity: 1500
+  scrollSensitivity: 500
 --- !u!1001 &445842534194652333
 PrefabInstance:
   m_ObjectHideFlags: 0

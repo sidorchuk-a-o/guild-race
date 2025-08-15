@@ -10,46 +10,21 @@ namespace Game.Craft
 {
     public class IngredientsContainer : MonoBehaviour
     {
-        [SerializeField] private CraftingCounterContainer counterContainer;
         [SerializeField] private List<IngredientItemSlot> ingredientItems;
 
-        private readonly ReactiveProperty<bool> isAvailablle = new();
-
         private RecipeVM recipeVM;
-
-        public IReadOnlyReactiveProperty<bool> IsAvailablle => isAvailablle;
-
-        private void Awake()
-        {
-            foreach (var ingridientVM in ingredientItems)
-            {
-                ingridientVM.IsAvailable
-                    .SilentSubscribe(UpdateAvailableState)
-                    .AddTo(this);
-            }
-        }
 
         public async UniTask Init(RecipeVM recipeVM, CompositeDisp disp, CancellationTokenSource ct)
         {
             this.recipeVM = recipeVM;
 
             await InitIngredientItems(disp, ct);
-
-            if (ct.IsCancellationRequested)
-            {
-                return;
-            }
-
-            counterContainer.Count
-                .Subscribe(CounterChangedCallback)
-                .AddTo(disp);
         }
 
         private async UniTask InitIngredientItems(CompositeDisp disp, CancellationTokenSource ct)
         {
             var itemsCount = ingredientItems.Count;
             var ingridientsCount = recipeVM.IngridientsVM.Count;
-            var craftingCount = counterContainer.Count.Value;
 
             // update active state
             for (var i = 0; i < itemsCount; i++)
@@ -65,33 +40,10 @@ namespace Game.Craft
             {
                 var item = ingredientItems[i];
 
-                return item.Init(ingridientVM, craftingCount, disp, ct);
+                return item.Init(ingridientVM, disp, ct);
             });
 
             await UniTask.WhenAll(initItemsTasks);
-        }
-
-        private void CounterChangedCallback(int count)
-        {
-            var activeItems = ingredientItems.Where(x => x.isActiveAndEnabled);
-
-            foreach (var ingredientItem in activeItems)
-            {
-                ingredientItem.SetCraftingCount(count);
-            }
-
-            UpdateAvailableState();
-        }
-
-        private void UpdateAvailableState()
-        {
-            var hasCraft = counterContainer.Count.Value > 0;
-
-            var ingredientsAvailable = ingredientItems
-                .Where(x => x.isActiveAndEnabled)
-                .All(x => x.IsAvailable.Value);
-
-            isAvailablle.Value = ingredientsAvailable && hasCraft;
         }
     }
 }

@@ -13,10 +13,6 @@ namespace Game.Craft
 
         private RecipeVM recipeVM;
 
-        private readonly ReactiveProperty<int> count = new();
-
-        public IReadOnlyReactiveProperty<int> Count => count;
-
         public void Init(RecipeVM recipeVM, CompositeDisp disp)
         {
             this.recipeVM = recipeVM;
@@ -43,14 +39,15 @@ namespace Game.Craft
 
         private void AddCount(int value)
         {
-            SetCount(count.Value + value);
+            SetCount(recipeVM.Count.Value + value);
         }
 
         private void SetCount(int newValue)
         {
-            count.Value = Mathf.Clamp(newValue, 0, recipeVM.AvailableCount.Value);
+            var count = Mathf.Clamp(newValue, 0, recipeVM.AvailableCount.Value);
 
-            countText.SetTextParams(count.Value);
+            recipeVM.SetCount(count);
+            countText.SetTextParams(count);
         }
     }
 }

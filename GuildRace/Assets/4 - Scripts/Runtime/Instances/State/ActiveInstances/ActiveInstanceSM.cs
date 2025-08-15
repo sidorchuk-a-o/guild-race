@@ -22,7 +22,7 @@ namespace Game.Instances
             id = info.Id;
             instanceId = info.Instance.Id;
             bossUnitId = info.BossUnit.Id;
-            startTime = info.StartTime;
+            startTime = info.StartTime.Value;
             completeChance = info.CompleteChance.Value;
             isReadyToComplete = info.IsReadyToComplete.Value;
             result = info.Result.Value;

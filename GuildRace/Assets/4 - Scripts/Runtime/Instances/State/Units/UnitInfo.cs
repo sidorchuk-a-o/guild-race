@@ -4,6 +4,7 @@ using AD.Services.Localization;
 using AD.ToolsCollection;
 using Game.Guild;
 using UniRx;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace Game.Instances
@@ -13,6 +14,7 @@ namespace Game.Instances
         private readonly ReactiveProperty<string> instanceId = new();
         private readonly ReactiveProperty<int> completedCount = new();
         private readonly ReactiveProperty<int> triesCount = new();
+        private readonly ReactiveProperty<int> totalCompletedCount = new();
 
         public int Id { get; }
 
@@ -23,7 +25,7 @@ namespace Game.Instances
         public int CompleteTime { get; }
         public UnitParams UnitParams { get; }
 
-        public int TotalCompletedCount { get; private set; }
+        public IReadOnlyReactiveProperty<int> TotalCompletedCount => totalCompletedCount;
         public IReadOnlyReactiveProperty<int> CompletedCount => completedCount;
         public IReadOnlyReactiveProperty<int> TriesCount => triesCount;
 
@@ -52,19 +54,19 @@ namespace Game.Instances
 
         public void SetCompletedCount(int totalCount, int count)
         {
-            TotalCompletedCount = totalCount;
+            totalCompletedCount.Value = totalCount;
             completedCount.Value = count;
         }
 
         public void IncreaseCompletedCount()
         {
-            TotalCompletedCount++;
+            totalCompletedCount.Value++;
             completedCount.Value++;
         }
 
         public void SetTriesCount(int value)
         {
-            triesCount.Value = value;
+            triesCount.Value = Mathf.Max(value, 0);
         }
 
         public void IncreaseTriesCount()

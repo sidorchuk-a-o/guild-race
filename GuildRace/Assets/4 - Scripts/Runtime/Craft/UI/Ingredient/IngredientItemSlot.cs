@@ -23,14 +23,9 @@ namespace Game.Craft
         [SerializeField] private string craftCountFormat = "{0} / <b><size=+4>{1}</size></b>";
         [SerializeField] private string craftCountErrorFormat = "<color=#D92121>{0}</color> / <b><size=+4>{1}</size></b>";
 
-        private readonly ReactiveProperty<bool> isAvailable = new();
-
         private IngredientVM ingredientVM;
-        private int ingridientsCount;
 
-        public IReadOnlyReactiveProperty<bool> IsAvailable => isAvailable;
-
-        public async UniTask Init(IngredientVM ingredientVM, int craftingCount, CompositeDisp disp, CancellationTokenSource ct)
+        public async UniTask Init(IngredientVM ingredientVM, CompositeDisp disp, CancellationTokenSource ct)
         {
             this.ingredientVM = ingredientVM;
 
@@ -48,37 +43,19 @@ namespace Game.Craft
             countText.SetTextParams(ingredientVM.Count);
             tooltipComponent.Init(reagentVM);
 
-            // reagent
             ingredientVM.ReagentCounterVM.Count
                 .SilentSubscribe(UpdateView)
                 .AddTo(disp);
 
-            // count
-            SetCraftingCount(craftingCount);
-        }
-
-        public void SetCraftingCount(int count)
-        {
-            ingridientsCount = ingredientVM.Count * count;
-
-            UpdateView();
+            ingredientVM.CraftCount
+                .Subscribe(UpdateView)
+                .AddTo(disp);
         }
 
         private void UpdateView()
         {
-            UpdateAvailableState();
-            UpdateCountText();
-        }
-
-        private void UpdateAvailableState()
-        {
-            isAvailable.Value = ingredientVM.ReagentCounterVM.Count.Value >= ingridientsCount;
-        }
-
-        private void UpdateCountText()
-        {
-            var format = IsAvailable.Value ? craftCountFormat : craftCountErrorFormat;
-            var countStr = string.Format(format, ingredientVM.ReagentCounterVM.Count.Value, ingridientsCount);
+            var format = ingredientVM.IsAvailable.Value ? craftCountFormat : craftCountErrorFormat;
+            var countStr = string.Format(format, ingredientVM.ReagentCounterVM.Count.Value, ingredientVM.CraftCount.Value);
 
             craftCountText.SetTextParams(countStr);
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AD.Services;
 using AD.Services.AppEvents;
+using AD.Services.Leaderboards;
 using AD.Services.ProtectedTime;
 using AD.Services.Router;
 using AD.ToolsCollection;
@@ -21,6 +22,7 @@ namespace Game.Instances
 
         private readonly InstanceModule instanceModule;
         private readonly ActiveInstanceModule activeInstanceModule;
+        private readonly InstanceLeaderboardModule leaderboardModule;
 
         private readonly Dictionary<int, RewardHandler> rewardHandlers;
         private readonly Dictionary<int, ConsumableMechanicHandler> consumableHandlers;
@@ -47,6 +49,7 @@ namespace Game.Instances
             IWeeklyService weeklyService,
             IRouterService router,
             IAppEventsService appEvents,
+            ILeaderboardsService leaderboards,
             ITimeService time,
             IObjectResolver resolver)
         {
@@ -58,6 +61,7 @@ namespace Game.Instances
             state = new(instancesConfig, time, guildService, inventoryService, weeklyService, resolver);
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
             activeInstanceModule = new(this, state, time);
+            leaderboardModule = new(state, instancesConfig, activeInstanceModule, guildService, leaderboards, appEvents);
 
             rewardHandlers = instancesConfig.RewardsParams.RewardHandlers.ToDictionary(x => x.Id, x => x);
             consumableHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToDictionary(x => x.Id, x => x);
@@ -69,6 +73,8 @@ namespace Game.Instances
 
             InitHandlers();
             TryResetUnitsCooldown();
+
+            leaderboardModule.Init();
 
             appEvents.AddAppTickListener(activeInstanceModule);
 
@@ -137,9 +143,19 @@ namespace Game.Instances
             instanceModule.CancelSetupInstance();
         }
 
+        public void ForceReadyToCompleteActiveInstance(string activeInstanceId)
+        {
+            activeInstanceModule.MarkAsReadyToComplete(activeInstanceId);
+        }
+
         public int CompleteActiveInstance(string activeInstanceId)
         {
             return instanceModule.CompleteActiveInstance(activeInstanceId);
+        }
+
+        public void ReceiveAdsRewards()
+        {
+            instanceModule.ReceiveAdsRewards();
         }
 
         public float CalcChanceDiff(AddItemArgs args)
@@ -202,13 +218,28 @@ namespace Game.Instances
             var triesCount = unit.TriesCount.Value;
             var maxTriesCount = cooldownPatams.MaxTriesCount;
 
+            return maxTriesCount < 0 || triesCount < maxTriesCount;
+        }
+
+        public bool HasBossComplete(int unitId)
+        {
+            var unit = Seasons.GetBossUnit(unitId);
+            var instance = instancesConfig.GetBossInstance(unitId);
+            var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
+
             var completedCount = unit.CompletedCount.Value;
             var maxCompletedCount = cooldownPatams.MaxCompletedCount;
 
-            var hasTries = maxTriesCount <= 0 || maxTriesCount > 0 && triesCount < maxTriesCount;
-            var isCompleted = maxCompletedCount > 0 && completedCount >= maxCompletedCount;
+            return maxCompletedCount < 0 || completedCount < maxCompletedCount;
+        }
 
-            return hasTries && !isCompleted;
+        public void AddTries(int unitId)
+        {
+            var unit = Seasons.GetBossUnit(unitId);
+
+            unit.SetTriesCount(unit.TriesCount.Value - 1);
+
+            state.MarkAsDirty();
         }
 
         // == Dispose ==

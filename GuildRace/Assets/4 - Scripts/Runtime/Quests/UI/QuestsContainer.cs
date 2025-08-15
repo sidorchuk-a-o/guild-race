@@ -49,9 +49,6 @@ namespace Game.Quests
 
         private void Awake()
         {
-            questContainer.alpha = 0;
-            questContainer.interactable = false;
-
             takeRewardButton.OnClick
                 .Subscribe(TakeRewardCallback)
                 .AddTo(this);
@@ -109,6 +106,8 @@ namespace Game.Quests
             if (hasQuest == false &&
                 lastQuestId.IsValid() == false)
             {
+                questContainer.alpha = 0;
+                questContainer.SetInteractable(false);
                 return;
             }
 
@@ -125,8 +124,8 @@ namespace Game.Quests
             questContainer.DOKill();
             emptyQuestContainer.DOKill();
 
-            questContainer.interactable = hasQuest;
-            emptyQuestContainer.interactable = !hasQuest;
+            questContainer.SetInteractable(hasQuest);
+            emptyQuestContainer.SetInteractable(!hasQuest);
 
             const float duration = 0.1f;
 

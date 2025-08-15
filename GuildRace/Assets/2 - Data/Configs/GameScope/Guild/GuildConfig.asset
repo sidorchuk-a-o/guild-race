@@ -1307,6 +1307,10 @@ MonoBehaviour:
     - {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 1}
     - {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
     - {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  leaderboardParams:
+    guildPowerKey:
+      value: bf79a9833c7f480987f53400a9d6fbc5
+    sendTime: 30
 --- !u!114 &59231052814991113
 MonoBehaviour:
   m_ObjectHideFlags: 1

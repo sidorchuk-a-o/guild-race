@@ -1,4 +1,5 @@
-﻿using AD.ToolsCollection;
+﻿using AD.Services.Store;
+using AD.ToolsCollection;
 using Game.Inventory;
 using UnityEngine.UIElements;
 
@@ -9,6 +10,7 @@ namespace Game.Craft
     {
         private PopupElement<int> productItemPopup;
         private IngredientsList ingredientsList;
+        private CurrencyAmountElement priceField;
 
         protected override void CreateTabItems(TabsContainer tabs)
         {
@@ -29,6 +31,11 @@ namespace Game.Craft
 
             ingredientsList = root.CreateElement<IngredientsList>();
             ingredientsList.BindProperty("ingredients", data);
+
+            root.CreateHeader("Price");
+
+            priceField = root.CreateElement<CurrencyAmountElement>();
+            priceField.BindProperty("price", data);
         }
     }
 }

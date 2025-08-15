@@ -455,8 +455,52 @@ namespace Game.Instances
             {
                 instance.SetRewards(rewardResults);
 
+                if (instanceResult == CompleteResult.Completed)
+                {
+                    instance.SetAdsRewards(CreateAdsRewards(bossRewards));
+                }
+
                 onRewardsReceived.OnNext(rewardResults);
             }
+        }
+
+        public void ReceiveAdsRewards()
+        {
+            var activeInstance = state.CompletedInstance;
+            var adsRewards = activeInstance.AdsRewards;
+
+            foreach (var rewardGroup in adsRewards.GroupBy(x => x.Data.MechanicId))
+            {
+                var rewards = rewardGroup.Select(x => x.Data).ToListPool();
+                var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
+
+                var result = rewardHandler.ApplyRewards(rewards, activeInstance).ToListPool();
+
+                rewards.ReleaseListPool();
+                result.ReleaseListPool();
+            }
+
+            adsRewards.ForEach(x => x.MarkAsRewarded());
+        }
+
+        private IEnumerable<AdsInstanceRewardInfo> CreateAdsRewards(IReadOnlyCollection<InstanceRewardData> bossRewards)
+        {
+            foreach (var rewardGroup in bossRewards.GroupBy(x => x.MechanicId))
+            {
+                var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
+
+                if (rewardHandler is not EquipRewardHandler)
+                {
+                    continue;
+                }
+
+                return rewardGroup.RandomValues(1).Select(x =>
+                {
+                    return new AdsInstanceRewardInfo(x);
+                });
+            }
+
+            return Array.Empty<AdsInstanceRewardInfo>();
         }
     }
 }

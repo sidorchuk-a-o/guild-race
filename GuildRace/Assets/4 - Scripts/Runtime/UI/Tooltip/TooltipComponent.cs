@@ -11,6 +11,8 @@ namespace Game.UI
     {
         [SerializeField] private AssetReference tooltipRef;
 
+        private bool interacted;
+
         private static readonly Subject<TooltipComponent> onInteracted = new();
 
         public static IObservable<TooltipComponent> OnInteracted => onInteracted;
@@ -27,12 +29,22 @@ namespace Game.UI
 
         void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
         {
+            interacted = true;
             onInteracted.OnNext(this);
         }
 
         void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
         {
+            interacted = false;
             onInteracted.OnNext(null);
+        }
+
+        private void OnDisable()
+        {
+            if (interacted)
+            {
+                onInteracted.OnNext(null);
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 1a3b26406f9043ebb639979ef8d8362f
   title: Save Service
   enabled: 1
-  order: -1000
+  order: -9000
   configRef:
     m_AssetGUID: ac92818bc5937a946abb5eaecf2de1d2
     m_SubObjectName: 

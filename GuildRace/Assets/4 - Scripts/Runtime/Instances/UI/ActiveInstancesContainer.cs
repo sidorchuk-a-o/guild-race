@@ -1,9 +1,10 @@
 ﻿using AD.Services.Router;
 using AD.ToolsCollection;
 using AD.UI;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using System.Threading;
+using Game.Ads;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +30,7 @@ namespace Game.Instances
         [Space]
         [SerializeField] private UIStates resultState;
         [SerializeField] private UIButton completeInstanceButton;
+        [SerializeField] private AdsButton adsCompleteButton;
 
         private readonly CompositeDisp instanceDisp = new();
         private CancellationTokenSource instanceToken;
@@ -51,11 +53,12 @@ namespace Game.Instances
 
         private void Awake()
         {
-            instanceContainer.alpha = 0;
-            instanceContainer.interactable = false;
-
             completeInstanceButton.OnClick
                 .Subscribe(CompleteInstanceCallback)
+                .AddTo(this);
+
+            adsCompleteButton.OnRewarded
+                .Subscribe(ForceReadyInstanceCallback)
                 .AddTo(this);
         }
 
@@ -73,6 +76,12 @@ namespace Game.Instances
                 .Subscribe(InstanceSelectCallback)
                 .AddTo(disp);
 
+            adsCompleteButton.Init(disp);
+
+            adsCompleteButton.IsCompleted
+                .SilentSubscribe(UpdateAdsButton)
+                .AddTo(disp);
+
             if (hasBack)
             {
                 if (switchToInstanceVM != null)
@@ -85,10 +94,16 @@ namespace Game.Instances
                 if (activeInstanceVM == null)
                 {
                     instanceContainer.alpha = 0;
-                    instanceContainer.interactable = false;
+                    instanceContainer.SetInteractable(false);
                 }
 
                 return;
+            }
+
+            if (activeInstanceVM == null)
+            {
+                instanceContainer.alpha = 0;
+                instanceContainer.SetInteractable(false);
             }
 
             SelectActiveInstance(activeInstanceVM ?? activeInstancesVM.FirstOrDefault());
@@ -142,8 +157,8 @@ namespace Game.Instances
             instanceContainer.DOKill();
             emptyInstanceContainer.DOKill();
 
-            instanceContainer.interactable = selected;
-            emptyInstanceContainer.interactable = !selected;
+            instanceContainer.SetInteractable(selected);
+            emptyInstanceContainer.SetInteractable(!selected);
 
             const float duration = 0.1f;
 
@@ -199,9 +214,24 @@ namespace Game.Instances
         private void ReadyToCompleteChangedCallback(bool state)
         {
             resultState.SetActive(state);
-            completeInstanceButton.SetInteractableState(state);
+            completeInstanceButton.SetActive(state);
 
             progressContainer.SetActive(!state);
+
+            UpdateAdsButton();
+        }
+
+        private void UpdateAdsButton()
+        {
+            var instanceIsReady = activeInstanceVM.IsReadyToComplete.Value;
+            var adsIsCompleted = adsCompleteButton.IsCompleted.Value;
+
+            adsCompleteButton.SetActive(!instanceIsReady && !adsIsCompleted);
+        }
+
+        private void ForceReadyInstanceCallback()
+        {
+            instancesVMF.ForceReadyToCompleteActiveInstance(activeInstanceVM.Id);
         }
 
         private async void CompleteInstanceCallback()
@@ -225,7 +255,7 @@ namespace Game.Instances
             if (activeInstanceVM == null)
             {
                 instanceContainer.alpha = 0;
-                instanceContainer.interactable = false;
+                instanceContainer.SetInteractable(false);
             }
         }
     }
