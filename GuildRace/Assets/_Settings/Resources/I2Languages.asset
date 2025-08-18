@@ -135,6 +135,25 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: TUTORIAL/GUILD_LEVEL_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: TUTORIAL/GUILD_LEVEL_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\\t\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0432\u0430\u0448\u0435\u0439
+        \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: TUTORIAL/VENDORS_TTL
       TermType: 0
       Description: 
@@ -288,6 +307,15 @@ MonoBehaviour:
       Languages:
       - Guild Bank
       - "\u0411\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: HUB/GUILD_LEVELS_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -677,7 +705,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Recruiting Closed
       - "\u041D\u0430\u0431\u043E\u0440 \u0432 \u0433\u0438\u043B\u044C\u0434\u0438\u044E
         \u0437\u0430\u043A\u0440\u044B\u0442"
       - 
@@ -753,6 +781,111 @@ MonoBehaviour:
       Languages:
       - In group
       - "\u0412 \u0433\u0440\u0443\u043F\u043F\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/UNLOCKED_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041F\u043E\u043B\u0443\u0447\u0435\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/ADD_MAX_CHARACTERS_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - '{[0]} additional character slots'
+      - "{[0]} \u0434\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445
+        \u0441\u043B\u043E\u0442\u0430 \u0438\u0433\u0440\u043E\u043A\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/ADD_BANK_ROWS_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - '{[0]} additional bank rows'
+      - "{[0]} \u0434\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445
+        \u0440\u044F\u0434\u0430 \u0432 \u0431\u0430\u043D\u043A\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/INC_QUEST_GOLD_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - The amount of gold received for quests has been increased by {[0]}%
+      - "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u043E\u043B\u043E\u0442\u0430,
+        \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u043C\u043E\u0433\u043E \u0437\u0430
+        \u0437\u0430\u0434\u0430\u043D\u0438\u044F, \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u043E
+        \u043D\u0430 {[0]}%"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/ADD_DAILY_QUEST_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - Additional daily quest
+      - "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435
+        \u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u043E\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/ADD_WEAKLY_QUEST_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - Additional weekly quest
+      - "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435
+        \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u043E\u0435
+        \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/DEC_CRAFT_PRICE_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - The amount of gold required to create items has been reduced by {[0]}%
+      - "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u043E\u043B\u043E\u0442\u0430,
+        \u0442\u0440\u0435\u0431\u0443\u0435\u043C\u043E\u0433\u043E \u043D\u0430
+        \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432,
+        \u0443\u043C\u0435\u043D\u044C\u0448\u0435\u043D\u043E \u043D\u0430 {[0]}%"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/DEC_GUILD_REQUEST_TIME_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - New applications appear at {[0]}% faster
+      - "\u041D\u043E\u0432\u044B\u0435 \u0437\u0430\u044F\u0432\u043A\u0438 \u043F\u043E\u044F\u0432\u043B\u044F\u044E\u0442\u0441\u044F
+        \u043D\u0430 {[0]}% \u0431\u044B\u0441\u0442\u0440\u0435\u0435"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: GUILD_LEVELS/ADD_BOSS_TRIES_DSC
+      TermType: 0
+      Description: 
+      Languages:
+      - The number of attempts to defeat raid bosses has been increased by {[0]}
+      - "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u043E\u043F\u044B\u0442\u043E\u043A
+        \u0434\u043B\u044F \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
+        \u0440\u0435\u0439\u0434\u043E\u0432\u044B\u0445 \u0431\u043E\u0441\u0441\u043E\u0432
+        \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u043E \u043D\u0430 {[0]}"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -1791,7 +1924,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Advisor\u2019s Turban"
       - "\u0422\u044E\u0440\u0431\u0430\u043D \u0441\u043E\u0432\u0435\u0442\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -1800,7 +1933,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Spellweave Hat
       - "\u0428\u043B\u044F\u043F\u0430 \u0438\u0437 \u043C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0439
         \u0442\u043A\u0430\u043D\u0438"
       - 
@@ -1810,7 +1943,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Battlemage\u2019s Sandals"
       - "\u0421\u0430\u043D\u0434\u0430\u043B\u0438\u0438 \u0431\u043E\u0435\u0432\u043E\u0433\u043E
         \u043C\u0430\u0433\u0430"
       - 
@@ -1820,7 +1953,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Necromancer\u2019s Boots"
       - "\u0411\u043E\u0442\u0438\u043D\u043A\u0438 \u043D\u0435\u043A\u0440\u043E\u043C\u0430\u043D\u0442\u0430"
       - 
       Flags: 000000
@@ -1829,7 +1962,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Traitor\u2019s Mantle"
       - "\u041C\u0430\u043D\u0442\u0438\u044F \u0438\u0437\u043C\u0435\u043D\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -1838,7 +1971,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Warlock\u2019s Tattered Robe"
       - "\u041F\u043E\u0432\u0440\u0435\u0436\u0434\u0435\u043D\u043D\u0430\u044F
         \u0440\u043E\u0431\u0430 \u043A\u043E\u043B\u0434\u0443\u043D\u0430"
       - 
@@ -1848,7 +1981,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ritual Gloves
       - "\u0420\u0438\u0442\u0443\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438"
       - 
       Flags: 000000
@@ -1857,7 +1990,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Vintner\u2019s Gauntlets"
       - "\u0412\u044B\u0441\u043E\u043A\u0438\u0435 \u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438
         \u0432\u0438\u043D\u043E\u0447\u0435\u0440\u043F\u0438\u044F"
       - 
@@ -1867,7 +2000,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Elegant Culottes
       - "\u0418\u0437\u044B\u0441\u043A\u0430\u043D\u043D\u044B\u0435 \u043A\u044E\u043B\u043E\u0442\u044B"
       - 
       Flags: 000000
@@ -1876,7 +2009,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Hidden-Pocket Breeches
       - "\u0411\u0440\u044E\u043A\u0438 \u0441\u043E \u0441\u043A\u0440\u044B\u0442\u044B\u043C\u0438
         \u043A\u0430\u0440\u043C\u0430\u043D\u0430\u043C\u0438"
       - 
@@ -1886,7 +2019,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Snake Hood
       - "\u0417\u043C\u0435\u0438\u043D\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
       - 
       Flags: 000000
@@ -1895,7 +2028,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Expedition Helm
       - "\u042D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u043E\u043D\u043D\u044B\u0439
         \u0448\u043B\u0435\u043C"
       - 
@@ -1905,7 +2038,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Mad Prince\u2019s Legguards"
       - "\u041D\u0430\u0433\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438 \u0431\u0435\u0437\u0443\u043C\u043D\u043E\u0433\u043E
         \u043F\u0440\u0438\u043D\u0446\u0430"
       - 
@@ -1915,7 +2048,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Brigand\u2019s Half-Boots"
       - "\u0420\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u0447\u044C\u0438 \u043F\u043E\u043B\u0443\u0431\u043E\u0442\u0438\u043D\u043A\u0438"
       - 
       Flags: 000000
@@ -1924,7 +2057,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Saboteur\u2019s Jacket"
       - "\u041A\u0443\u0440\u0442\u043A\u0430 \u0434\u0438\u0432\u0435\u0440\u0441\u0430\u043D\u0442\u0430"
       - 
       Flags: 000000
@@ -1933,7 +2066,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Xorgoghol\u2019s Vest"
       - "\u041E\u0441\u043E\u0431\u044B\u0439 \u0436\u0438\u043B\u0435\u0442 \u041A\u0441\u043E\u0440\u0433\u043E\u0433\u043E\u043B\u044C"
       - 
       Flags: 000000
@@ -1942,7 +2075,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Grasps of Rage
       - "\u0417\u0430\u0445\u0432\u0430\u0442\u044B \u044F\u0440\u043E\u0441\u0442\u0438"
       - 
       Flags: 000000
@@ -1951,7 +2084,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Trapper\u2019s Mitts"
       - "\u0420\u0443\u043A\u0430\u0432\u0438\u0446\u044B \u043B\u043E\u0432\u0446\u0430"
       - 
       Flags: 000000
@@ -1960,7 +2093,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Butcher\u2019s Greaves"
       - "\u041F\u043E\u043D\u043E\u0436\u0438 \u043C\u044F\u0441\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -1969,7 +2102,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - "Rider\u2019s Tassets"
       - "\u041D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438
         \u043D\u0430\u0435\u0437\u0434\u043D\u0438\u043A\u0430"
       - 
@@ -1979,7 +2112,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Experimental Visor
       - "\u042D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u044B\u0439
         \u0449\u0438\u0442\u043E\u043A"
       - 
@@ -1989,7 +2122,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Reinforced Horned Cowl
       - "\u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0433\u0430\u0442\u044B\u0439
         \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
       - 
@@ -1999,7 +2132,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Heels of Valor
       - "\u041A\u0430\u0431\u043B\u0443\u043A\u0438 \u0414\u043E\u0431\u043B\u0435\u0441\u0442\u0438"
       - 
       Flags: 000000
@@ -2008,7 +2141,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Princely Envoy's Boots
       - "\u0421\u0430\u043F\u043E\u0433\u0438 \u043A\u043D\u044F\u0436\u0435\u0441\u043A\u043E\u0433\u043E
         \u043F\u043E\u0441\u043B\u0430\u043D\u043D\u0438\u043A\u0430"
       - 
@@ -2018,7 +2151,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Battle-Honed Cuirass
       - "\u0411\u043E\u0435\u0432\u0430\u044F \u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430
         \u0438\u0441\u043A\u0443\u0441\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B"
       - 
@@ -2028,7 +2161,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Noble's Scale Armor
       - "\u0427\u0435\u0448\u0443\u0439\u0447\u0430\u0442\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445
         \u0434\u0432\u043E\u0440\u044F\u043D\u0438\u043D\u0430"
       - 
@@ -2038,7 +2171,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Chainmail Gauntlets
       - "\u041F\u043B\u0435\u0442\u0435\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       - 
       Flags: 000000
@@ -2047,7 +2180,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Senior Guardsman's Grasps
       - "\u0417\u0430\u0445\u0432\u0430\u0442\u044B \u0441\u0442\u0430\u0440\u0448\u0435\u0433\u043E
         \u043A\u0430\u0440\u0430\u0443\u043B\u044C\u043D\u043E\u0433\u043E"
       - 
@@ -2057,7 +2190,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rebel Rider's Culottes
       - "\u041A\u044E\u043B\u043E\u0442\u044B \u0432\u0441\u0430\u0434\u043D\u0438\u043A\u0430
         \u041C\u044F\u0442\u0435\u0436\u043D\u0438\u043A\u043E\u0432"
       - 
@@ -2067,7 +2200,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Heroic Greaves
       - "\u0411\u043E\u0433\u0430\u0442\u044B\u0440\u0441\u043A\u0438\u0435 \u043D\u0430\u0433\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438"
       - 
       Flags: 000000
@@ -2076,7 +2209,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Herald's Voice
       - "\u0413\u043B\u0430\u0441 \u0412\u0435\u0441\u0442\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2085,7 +2218,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Claws from Nowhere
       - "\u041A\u043E\u0433\u0442\u0438 \u0438\u0437 \u041D\u0438\u043E\u0442\u043A\u0443\u0434\u0430"
       - 
       Flags: 000000
@@ -2094,7 +2227,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Neophyte's Battle Scepter
       - "\u0411\u043E\u0435\u0432\u043E\u0439 \u0436\u0435\u0437\u043B \u043D\u0435\u043E\u0444\u0438\u0442\u0430"
       - 
       Flags: 000000
@@ -2103,7 +2236,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Marauder's Fists
       - "\u041A\u0443\u043B\u0430\u043A\u0438 \u043C\u0430\u0440\u043E\u0434\u0435\u0440\u0430"
       - 
       Flags: 000000
@@ -2112,7 +2245,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Whispering Executioner
       - "\u0428\u0435\u043F\u0447\u0443\u0449\u0438\u0439 \u043F\u0430\u043B\u0430\u0447"
       - 
       Flags: 000000
@@ -2121,7 +2254,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Bone Spikes
       - "\u041A\u043E\u0441\u0442\u044F\u043D\u044B\u0435 \u0448\u0438\u043F\u044B"
       - 
       Flags: 000000
@@ -2130,7 +2263,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Staff of Triumph
       - "\u041F\u043E\u0441\u043E\u0445 \u0422\u0440\u0438\u0443\u043C\u0444\u0430"
       - 
       Flags: 000000
@@ -2139,7 +2272,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Spiked Vambraces
       - "\u0428\u0438\u043F\u0430\u0441\u0442\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
       - 
       Flags: 000000
@@ -2148,7 +2281,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Captain's Headgear
       - "\u0413\u043E\u043B\u043E\u0432\u043D\u043E\u0439 \u0443\u0431\u043E\u0440
         \u043A\u0430\u043F\u0438\u0442\u0430\u043D\u0430"
       - 
@@ -2158,7 +2291,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Courtier's Embellished Shoes
       - "\u0423\u043A\u0440\u0430\u0448\u0435\u043D\u043D\u044B\u0435 \u0442\u0443\u0444\u043B\u0438
         \u043F\u0440\u0438\u0434\u0432\u043E\u0440\u043D\u043E\u0433\u043E"
       - 
@@ -2168,7 +2301,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Traitor's Tunic
       - "\u0422\u0443\u043D\u0438\u043A\u0430 \u043F\u0440\u0435\u0434\u0430\u0442\u0435\u043B\u044F"
       - 
       Flags: 000000
@@ -2177,7 +2310,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mystic's Mitts
       - "\u0420\u0443\u043A\u0430\u0432\u0438\u0446\u044B \u043C\u0438\u0441\u0442\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2186,7 +2319,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Prince-Consort's Reinforced Legguards
       - "\u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438
         \u043F\u0440\u0438\u043D\u0446\u0430-\u043A\u043E\u043D\u0441\u043E\u0440\u0442\u0430"
       - 
@@ -2196,7 +2329,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mask of Frozen Smoke
       - "\u041C\u0430\u0441\u043A\u0430 \u0437\u0430\u0441\u0442\u044B\u0432\u0448\u0435\u0433\u043E
         \u0434\u044B\u043C\u0430"
       - 
@@ -2206,7 +2339,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Sandals of Entangled Shadows
       - "\u0421\u0430\u043D\u0434\u0430\u043B\u0438\u0438 \u0441\u043F\u0443\u0442\u0430\u043D\u043D\u044B\u0445
         \u0442\u0435\u043D\u0435\u0439"
       - 
@@ -2216,7 +2349,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Forester's Guise
       - "\u041C\u0430\u0441\u043A\u0438\u0440\u043E\u0432\u043A\u0430 \u043B\u0435\u0441\u043E\u0432\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2225,7 +2358,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Defiled Half-Gloves
       - "\u041F\u043E\u043B\u0443\u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438
         \u0432\u044B\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u0421\u043A\u0432\u0435\u0440\u043D\u043E\u0439"
       - 
@@ -2235,7 +2368,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ritualist's Legwraps
       - "\u041F\u043E\u043D\u043E\u0436\u0438 \u0440\u0438\u0442\u0443\u0430\u043B\u0438\u0441\u0442\u0430"
       - 
       Flags: 000000
@@ -2244,7 +2377,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Demon's Gaze
       - "\u0414\u0435\u043C\u043E\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439
         \u0432\u0437\u043E\u0440"
       - 
@@ -2254,7 +2387,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Chased Commander's Greaves
       - "\u0427\u0435\u043A\u0430\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u0438\u0440\u0441\u043A\u0438\u0435
         \u043D\u0430\u0433\u043E\u043B\u0435\u043D\u043D\u0438\u043A\u0438"
       - 
@@ -2264,7 +2397,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Exquisite Tempered Plate
       - "\u0418\u0437\u044B\u0441\u043A\u0430\u043D\u043D\u044B\u0439 \u0437\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439
         \u0434\u043E\u0441\u043F\u0435\u0445"
       - 
@@ -2274,7 +2407,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Ornate Battle Gauntlets
       - "\u0423\u043A\u0440\u0430\u0448\u0435\u043D\u043D\u044B\u0435 \u0431\u043E\u0435\u0432\u044B\u0435
         \u043A\u0440\u0430\u0433\u0438"
       - 
@@ -2284,7 +2417,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Jailer's Legguards
       - "\u041F\u043E\u043D\u043E\u0436\u0438 \u0442\u044E\u0440\u0435\u043C\u0449\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2293,7 +2426,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Liquid-Core Blade
       - "\u041C\u0435\u0447 \u0441 \u0436\u0438\u0434\u043A\u0438\u043C \u0441\u0435\u0440\u0434\u0435\u0447\u043D\u0438\u043A\u043E\u043C"
       - 
       Flags: 000000
@@ -2302,7 +2435,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Forbidden Threshold
       - "\u0417\u0430\u043F\u0440\u0435\u0442\u043D\u0430\u044F \u0447\u0435\u0440\u0442\u0430"
       - 
       Flags: 000000
@@ -2311,7 +2444,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Yarovit's Fang
       - "\u042F\u0440\u043E\u0432\u0438\u0442"
       - 
       Flags: 000000
@@ -2320,7 +2453,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Hollow Blade-Bracelets
       - "\u041F\u043E\u043B\u044B\u0435 \u0431\u0440\u0430\u0441\u043B\u0435\u0442\u044B
         \u0441\u043E \u0441\u043C\u0435\u0449\u0435\u043D\u043D\u044B\u043C \u043B\u0435\u0437\u0432\u0438\u0435\u043C"
       - 
@@ -2330,7 +2463,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Apothecary's Cowl
       - "\u041A\u043B\u043E\u0431\u0443\u043A \u0444\u0430\u0440\u043C\u0430\u0446\u0435\u0432\u0442\u0430"
       - 
       Flags: 000000
@@ -2339,7 +2472,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Strolling Booties
       - "\u041F\u0440\u043E\u0433\u0443\u043B\u043E\u0447\u043D\u044B\u0435 \u0431\u0430\u0448\u043C\u0430\u043A\u0438"
       - 
       Flags: 000000
@@ -2348,7 +2481,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Infernal Robe
       - "\u0418\u043D\u0444\u0435\u0440\u043D\u0430\u043B\u044C\u043D\u0430\u044F
         \u0440\u043E\u0431\u0430"
       - 
@@ -2358,7 +2491,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Merchant's Inlaid Gloves
       - "\u0418\u043D\u043A\u0440\u0443\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
         \u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u043A\u0443\u043F\u0446\u0430"
       - 
@@ -2368,7 +2501,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Temple Acolyte's Vestments
       - "\u041E\u0434\u0435\u044F\u043D\u0438\u0435 \u0441\u043B\u0443\u0436\u0438\u0442\u0435\u043B\u044F
         \u0445\u0440\u0430\u043C\u0430"
       - 
@@ -2378,7 +2511,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mourning Tracker's Cap
       - "\u0428\u0430\u043F\u043A\u0430 \u0441\u043A\u043E\u0440\u0431\u043D\u043E\u0433\u043E
         \u0441\u043B\u0435\u0434\u043E\u043F\u044B\u0442\u0430"
       - 
@@ -2388,7 +2521,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Barbarian Striders
       - "\u0421\u0430\u043F\u043E\u0433\u0438 \u0432\u0430\u0440\u0432\u0430\u0440\u0430"
       - 
       Flags: 000000
@@ -2397,7 +2530,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mercenary's Uniform
       - "\u041C\u0443\u043D\u0434\u0438\u0440 \u043D\u0430\u0435\u043C\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2406,7 +2539,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Trappers' Guild Gloves
       - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
         \u0441\u043B\u0435\u0434\u043E\u043F\u044B\u0442\u043E\u0432 \u0441 \u043E\u0440\u043D\u0430\u043C\u0435\u043D\u0442\u043E\u043C"
       - 
@@ -2416,7 +2549,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Sharpshooter Commander's Greaves
       - "\u041F\u043E\u043D\u043E\u0436\u0438 \u043A\u043E\u043C\u0430\u043D\u0434\u0438\u0440\u0430
         \u0441\u0442\u0440\u0435\u043B\u043A\u043E\u0432"
       - 
@@ -2426,7 +2559,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Valiant Warden's Helm
       - "\u041D\u0430\u0433\u043E\u043B\u043E\u0432\u043D\u0438\u043A \u0431\u0440\u0430\u0432\u043E\u0433\u043E
         \u0434\u0440\u0443\u0436\u0438\u043D\u043D\u0438\u043A\u0430"
       - 
@@ -2436,7 +2569,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Shattered Jackboots
       - "\u0420\u0430\u0441\u043A\u043E\u043B\u043E\u0442\u044B\u0435 \u0431\u043E\u0442\u0444\u043E\u0440\u0442\u044B"
       - 
       Flags: 000000
@@ -2445,7 +2578,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Master's Engraved Armor
       - "\u0413\u0440\u0430\u0432\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
         \u0434\u043E\u0441\u043F\u0435\u0445 \u043C\u0430\u0441\u0442\u0435\u0440\u0430"
       - 
@@ -2455,7 +2588,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Dueling Mitts
       - "\u0414\u0443\u044D\u043B\u044C\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       - 
       Flags: 000000
@@ -2464,7 +2597,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Pikeman's Cuisses
       - "\u041D\u043E\u0436\u043D\u044B\u0435 \u043B\u0430\u0442\u044B \u043A\u043E\u043F\u0435\u0439\u0449\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2473,7 +2606,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Pathwalker's Sigil
       - "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u041F\u0443\u0442\u0438"
       - 
       Flags: 000000
@@ -2482,7 +2615,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Voidrender
       - "\u0420\u0435\u0437\u0430\u043A \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u0430"
       - 
       Flags: 000000
@@ -2491,7 +2624,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Skyflare
       - "\u041D\u0435\u0431\u0435\u0441\u043D\u0430\u044F \u0432\u0441\u043F\u044B\u0448\u043A\u0430"
       - 
       Flags: 000000
@@ -2500,7 +2633,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Sigil of Shadows
       - "\u0422\u0435\u043D\u0435\u0432\u0430\u044F \u043F\u0435\u0447\u0430\u0442\u044C"
       - 
       Flags: 000000
@@ -2509,7 +2642,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Woven Hood
       - "\u0422\u043A\u0430\u043D\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
       - 
       Flags: 000000
@@ -2518,7 +2651,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Windbind Legwraps
       - "\u041E\u0431\u043C\u043E\u0442\u043A\u0438 \u043E\u0442 \u0432\u0435\u0442\u0440\u0430"
       - 
       Flags: 000000
@@ -2527,7 +2660,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Windwrap Tunic
       - "\u041F\u043B\u043E\u0442\u043D\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
       - 
       Flags: 000000
@@ -2536,7 +2669,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cropped Gauntlets
       - "\u041E\u0431\u0440\u0435\u0437\u0430\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       - 
       Flags: 000000
@@ -2545,7 +2678,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Workman's Trousers
       - "\u0420\u0430\u0431\u043E\u0447\u0438\u0435 \u0431\u0440\u044E\u043A\u0438"
       - 
       Flags: 000000
@@ -2554,7 +2687,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Avenger's Visage
       - "\u041C\u0430\u0441\u043A\u0430 \u043C\u0441\u0442\u0438\u0442\u0435\u043B\u044F"
       - 
       Flags: 000000
@@ -2563,7 +2696,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Scale-weave Shoes
       - "\u0427\u0435\u0448\u0443\u0439\u0447\u0430\u0442\u044B\u0435 \u0442\u0443\u0444\u043B\u0438"
       - 
       Flags: 000000
@@ -2572,7 +2705,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Novice's Vest
       - "\u0416\u0438\u043B\u0435\u0442 \u043D\u043E\u0432\u0438\u0447\u043A\u0430"
       - 
       Flags: 000000
@@ -2581,7 +2714,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Armorbark Gloves
       - "\u041F\u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u0438\u0437 \u0431\u0440\u043E\u043D\u0435\u043A\u043E\u0440\u044B"
       - 
       Flags: 000000
@@ -2590,8 +2723,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u0428\u0442\u0430\u043D\u044B \u0440\u0430\u0431\u043E\u0447\u0435\u0433\u043E"
+      - Pants with patches
+      - "\u0428\u0442\u0430\u043D\u044B \u0441 \u0437\u0430\u043F\u043B\u0430\u0442\u043A\u0430\u043C\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -2599,7 +2732,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Guardian's Helmet
       - "\u041A\u0430\u0441\u043A\u0430 \u0441\u0442\u0440\u0430\u0436\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2608,7 +2741,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Temple Spurs
       - "\u0428\u043F\u043E\u0440\u044B \u0445\u0440\u0430\u043C\u043E\u0432\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2617,7 +2750,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Battered Harness
       - "\u041F\u043E\u043C\u044F\u0442\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445"
       - 
       Flags: 000000
@@ -2626,7 +2759,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Weighted Mitts
       - "\u0423\u0442\u044F\u0436\u0435\u043B\u0435\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       - 
       Flags: 000000
@@ -2635,7 +2768,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Squire's Pauldrons
       - "\u0411\u0440\u043E\u043D\u0435\u0449\u0438\u0442\u043A\u0438 \u043E\u0440\u0443\u0436\u0435\u043D\u043E\u0441\u0446\u0430"
       - 
       Flags: 000000
@@ -2644,7 +2777,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cotton Cowl
       - "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
       - 
       Flags: 000000
@@ -2653,7 +2786,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cotton Slippers
       - "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0442\u0430\u043F\u043A\u0438"
       - 
       Flags: 000000
@@ -2662,7 +2795,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cotton Shirt
       - "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
       - 
       Flags: 000000
@@ -2671,7 +2804,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cotton Sleeves
       - "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0430"
       - 
       Flags: 000000
@@ -2680,7 +2813,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Cotton Chausses
       - "\u0425\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438"
       - 
       Flags: 000000
@@ -2689,7 +2822,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rawhide Mask
       - "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u043A\u0430"
       - 
       Flags: 000000
@@ -2698,7 +2831,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rawhide Boots
       - "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043F\u043E\u043B\u0443\u0431\u043E\u0442\u0438\u043D\u043A\u0438"
       - 
       Flags: 000000
@@ -2707,7 +2840,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rawhide Jacket
       - "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u0443\u0440\u0442\u043A\u0430"
       - 
       Flags: 000000
@@ -2716,7 +2849,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rawhide Bracers
       - "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
       - 
       Flags: 000000
@@ -2725,7 +2858,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Rawhide Leggings
       - "\u0421\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u0431\u0440\u044E\u043A\u0438"
       - 
       Flags: 000000
@@ -2734,7 +2867,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Sallet
       - "\u041C\u0435\u0434\u043D\u0430\u044F \u043A\u0430\u0441\u043A\u0430"
       - 
       Flags: 000000
@@ -2743,7 +2876,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Sabatons
       - "\u041C\u0435\u0434\u043D\u044B\u0435 \u0441\u0430\u043F\u043E\u0433\u0438"
       - 
       Flags: 000000
@@ -2752,7 +2885,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Cuirass
       - "\u041C\u0435\u0434\u043D\u044B\u0439 \u0434\u043E\u0441\u043F\u0435\u0445"
       - 
       Flags: 000000
@@ -2761,7 +2894,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Gauntlets
       - "\u041C\u0435\u0434\u043D\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       - 
       Flags: 000000
@@ -2770,7 +2903,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Tassets
       - "\u041C\u0435\u0434\u043D\u044B\u0435 \u043D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
       - 
       Flags: 000000
@@ -2779,7 +2912,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Enchanted Cotton Cowl
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0439 \u043A\u0430\u043F\u044E\u0448\u043E\u043D"
       - 
@@ -2789,7 +2922,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Enchanted Cotton Slippers
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0442\u0430\u043F\u043A\u0438"
       - 
@@ -2799,7 +2932,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Enchanted Cotton Shirt
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u0430\u044F \u0440\u0443\u0431\u0430\u0445\u0430"
       - 
@@ -2809,7 +2942,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Enchanted Cotton Sleeves
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u0440\u0443\u043A\u0430\u0432\u0430"
       - 
@@ -2819,7 +2952,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Enchanted Cotton Chausses
       - "\u0417\u0430\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435
         \u0445\u043B\u043E\u043F\u043A\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u043E\u0436\u0438"
       - 
@@ -2829,7 +2962,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mutated Rawhide Mask
       - "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0430\u044F
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u043A\u0430"
       - 
@@ -2839,7 +2972,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mutated Rawhide Boots
       - "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043F\u043E\u043B\u0443\u0431\u043E\u0442\u0438\u043D\u043A\u0438"
       - 
@@ -2849,7 +2982,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mutated Rawhide Jacket
       - "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0430\u044F
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u0430\u044F \u043A\u0443\u0440\u0442\u043A\u0430"
       - 
@@ -2859,7 +2992,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mutated Rawhide Bracers
       - "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
       - 
@@ -2869,7 +3002,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Mutated Rawhide Leggings
       - "\u041C\u0443\u0442\u0438\u0440\u043E\u0432\u0430\u0432\u0448\u0438\u0435
         \u0441\u044B\u0440\u043E\u043C\u044F\u0442\u043D\u044B\u0435 \u0431\u0440\u044E\u043A\u0438"
       - 
@@ -2879,7 +3012,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Tempered Copper Sallet
       - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
         \u043A\u0430\u0441\u043A\u0430"
       - 
@@ -2889,7 +3022,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Tempered Copper Sabatons
       - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u0441\u0430\u043F\u043E\u0433\u0438"
       - 
@@ -2899,7 +3032,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Tempered Copper Cuirass
       - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
         \u0434\u043E\u0441\u043F\u0435\u0445"
       - 
@@ -2909,7 +3042,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Tempered Copper Gauntlets
       - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u0440\u0443\u043A\u0430\u0432\u0438\u0446\u044B"
       - 
@@ -2919,7 +3052,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Tempered Copper Tassets
       - "\u0417\u0430\u043A\u0430\u043B\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u043D\u0430\u0431\u0435\u0434\u0440\u0435\u043D\u043D\u0438\u043A\u0438"
       - 
@@ -2929,7 +3062,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Family Guardian
       - "\u0417\u0430\u0449\u0438\u0442\u043D\u0438\u043A \u0441\u0435\u043C\u044C\u0438"
       - 
       Flags: 000000
@@ -2938,7 +3071,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Blunted Blades
       - "\u0417\u0430\u0442\u0443\u043F\u043B\u0435\u043D\u043D\u044B\u0435 \u043B\u0435\u0437\u0432\u0438\u044F"
       - 
       Flags: 000000
@@ -2947,7 +3080,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Apprentice's Cane
       - "\u0422\u0440\u043E\u0441\u0442\u044C \u0443\u0447\u0435\u043D\u0438\u043A\u0430"
       - 
       Flags: 000000
@@ -2956,7 +3089,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Stone Bracers
       - "\u041A\u0430\u043C\u0435\u043D\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
       - 
       Flags: 000000
@@ -2965,7 +3098,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Ward
       - "\u041C\u0435\u0434\u043D\u044B\u0439 \u0441\u0442\u0440\u0430\u0436"
       - 
       Flags: 000000
@@ -2974,7 +3107,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Fangs
       - "\u041C\u0435\u0434\u043D\u044B\u0435 \u043A\u043B\u044B\u043A\u0438"
       - 
       Flags: 000000
@@ -2983,7 +3116,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Staff
       - "\u041C\u0435\u0434\u043D\u0430\u044F \u0442\u0440\u043E\u0441\u0442\u044C"
       - 
       Flags: 000000
@@ -2992,7 +3125,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Copper Cesti
       - "\u041C\u0435\u0434\u043D\u044B\u0435 \u043A\u0430\u0441\u0442\u0435\u0442\u044B"
       - 
       Flags: 000000
@@ -3001,7 +3134,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charred Copper Ward
       - "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0439 \u043C\u0435\u0434\u043D\u044B\u0439
         \u0441\u0442\u0440\u0430\u0436"
       - 
@@ -3011,7 +3144,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charred Copper Fangs
       - "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u043A\u043B\u044B\u043A\u0438"
       - 
@@ -3021,7 +3154,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charred Copper Staff
       - "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u0430\u044F \u043C\u0435\u0434\u043D\u0430\u044F
         \u0442\u0440\u043E\u0441\u0442\u044C"
       - 
@@ -3031,7 +3164,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Charred Copper Cesti
       - "\u041E\u0431\u043E\u0436\u0436\u0435\u043D\u043D\u044B\u0435 \u043C\u0435\u0434\u043D\u044B\u0435
         \u043A\u0430\u0441\u0442\u0435\u0442\u044B"
       - 
@@ -3106,7 +3239,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Number of victories
       - "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u043E\u0431\u0435\u0434"
       - 
       Flags: 000000
@@ -3115,8 +3248,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u0421\u0447\u0435\u0442 \u0432\u0441\u0435\u0445 \u043F\u043E\u0431\u0435\u0434
+      - The counter of all victories over this boss
+      - "\u0421\u0447\u0435\u0442\u0447\u0438\u043A \u0432\u0441\u0435\u0445 \u043F\u043E\u0431\u0435\u0434
         \u043D\u0430\u0434 \u044D\u0442\u0438\u043C \u0431\u043E\u0441\u0441\u043E\u043C"
       - 
       Flags: 000000
@@ -3189,11 +3322,19 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - "\u042D\u0442\u043E \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C
-        \u043F\u043E\u0431\u0435\u0434\u044B \u0442\u0432\u043E\u0435\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u044B,
-        \u0444\u043E\u0440\u043C\u0438\u0440\u0443\u0439 \u0433\u0440\u0443\u043F\u043F\u0443
-        \u0441 \u0443\u043C\u043E\u043C"
+      - "Probability of winning with the current composition. Changes when: \n\\t-
+        Closing the boss mechanic (with a character or potion)\n\\t- Adding a rune
+        for attack power or health\n\\t- Adding a Soulstone"
+      - "\u0412\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C \u043F\u043E\u0431\u0435\u0434\u044B
+        \u0442\u0435\u043A\u0443\u0449\u0435\u0433\u043E \u0441\u043E\u0441\u0442\u0430\u0432\u0430.
+        \u0418\u0437\u043C\u0435\u043D\u044F\u0435\u0442\u0441\u044F \u043F\u0440\u0438:
+        \n\\t- \u0417\u0430\u043A\u0440\u044B\u0442\u0438\u0438 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0438
+        \u0431\u043E\u0441\u0441\u0430 (\u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u043C
+        \u0438\u043B\u0438 \u0437\u0435\u043B\u044C\u0435\u043C)\n\\t- \u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u0438
+        \u0440\u0443\u043D\u044B \u043D\u0430 \u0441\u0438\u043B\u0443 \u0430\u0442\u0430\u043A\u0438
+        \u0438\u043B\u0438 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435\n\\t-
+        \u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u0438 \u043A\u0430\u043C\u043D\u044F
+        \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u044F \u0434\u0443\u0448\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8145,8 +8286,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Free
-      - "\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E"
+      - Free Goods
+      - "\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0435 \u0442\u043E\u0432\u0430\u0440\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8681,7 +8822,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1755188182070
+    Google_LastUpdatedVersion: 1755533263564
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

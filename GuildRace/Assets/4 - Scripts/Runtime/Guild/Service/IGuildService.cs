@@ -7,6 +7,7 @@ namespace Game.Guild
         bool GuildExists { get; }
         IReadOnlyReactiveProperty<string> GuildName { get; }
         IReadOnlyReactiveProperty<string> PlayerName { get; }
+        IReadOnlyReactiveProperty<int> MaxCharactersCount { get; }
         EmblemInfo Emblem { get; }
 
         ICharactersCollection Characters { get; }

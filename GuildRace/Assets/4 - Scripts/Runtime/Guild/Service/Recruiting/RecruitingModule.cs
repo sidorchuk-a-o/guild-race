@@ -209,7 +209,7 @@ namespace Game.Guild
         private int CalcMaxRequestCount()
         {
             var rosterCount = guildState.Characters.Count;
-            var maxRosterCount = guildConfig.MaxCharactersCount;
+            var maxRosterCount = guildState.MaxCharactersCount.Value;
 
             var minRequestCount = data.MinRequestCount;
             var maxRequestCount = data.MaxRequestCount;

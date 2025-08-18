@@ -2,6 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.Save;
 using AD.ToolsCollection;
+using Game.GuildLevels;
 using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,14 @@ namespace Game.Guild
         private readonly ReactiveProperty<string> guildName = new();
         private readonly ReactiveProperty<string> playerName = new();
 
+        private readonly ReactiveProperty<int> maxCharactersCount = new();
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
         private readonly GuildBankTabsCollection bankTabs = new(null);
 
+        private readonly GuildLevelContext guildLevelContext = new();
+
+        private readonly IGuildLevelsService guildLevelsService;
         private readonly IInventoryService inventoryService;
         private readonly ILocalizationService localization;
 
@@ -28,6 +33,7 @@ namespace Game.Guild
         public bool IsExists => guildName.IsValid();
         public IReadOnlyReactiveProperty<string> GuildName => guildName;
         public IReadOnlyReactiveProperty<string> PlayerName => playerName;
+        public IReadOnlyReactiveProperty<int> MaxCharactersCount => maxCharactersCount;
         public EmblemInfo Emblem { get; private set; }
 
         public ICharactersCollection Characters => characters;
@@ -36,13 +42,23 @@ namespace Game.Guild
 
         public GuildState(
             GuildConfig config,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             ILocalizationService localization,
             IObjectResolver resolver)
             : base(config, resolver)
         {
+            this.guildLevelsService = guildLevelsService;
             this.inventoryService = inventoryService;
             this.localization = localization;
+        }
+
+        public override void Init()
+        {
+            guildLevelsService.RegisterContext(guildLevelContext);
+            guildLevelContext.CharactersCount.Subscribe(UpgradeCharactersCountCallback);
+
+            base.Init();
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
@@ -72,7 +88,7 @@ namespace Game.Guild
             MarkAsDirty(true);
         }
 
-        // == Character ==
+        // == Characters ==
 
         public void AddCharacter(CharacterInfo info)
         {
@@ -95,6 +111,15 @@ namespace Game.Guild
             MarkAsDirty(true);
 
             return index;
+        }
+
+        private void UpgradeCharactersCountCallback(int upgradeValue)
+        {
+            var count = config.MaxCharactersCount + upgradeValue;
+
+            maxCharactersCount.Value = count;
+
+            MarkAsDirty();
         }
 
         // == Save ==

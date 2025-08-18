@@ -31,12 +31,16 @@ namespace Game.Guild
                 .Subscribe(CountChangedCallback)
                 .AddTo(this);
 
-            CountChangedCallback(Count);
+            guildVMF.MaxCharactersCount
+                .SilentSubscribe(CountChangedCallback)
+                .AddTo(this);
+
+            CountChangedCallback();
         }
 
-        private void CountChangedCallback(int count)
+        private void CountChangedCallback()
         {
-            countStr.Value = $"{count} / {guildVMF.MaxCharactersCount}";
+            countStr.Value = $"{Count} / {guildVMF.MaxCharactersCount.Value}";
         }
     }
 }

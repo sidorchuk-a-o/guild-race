@@ -36,21 +36,17 @@ namespace Game.Store
             iconImage.sprite = icon;
             priceText.SetTextParams(currencyVM.Amount.Value);
 
-            var storeCurrencyVM = StoreVMF.GetCurrency(currencyVM.Key);
-            storeCurrencyVM.AddTo(disp);
-
-            storeCurrencyVM.Amount
-                .Subscribe(x => UpdatePriceState(storeCurrencyVM, currencyVM))
+            currencyPriceVM.CurrencyVM.IsAvailable
+                .Subscribe(UpdatePriceState)
                 .AddTo(disp);
         }
 
-        private void UpdatePriceState(CurrencyVM storeCurrencyVM, CurrencyVM priceCurrencyVM)
+        private void UpdatePriceState(bool isAvailable)
         {
-            var available = storeCurrencyVM.Amount.Value >= priceCurrencyVM.Amount.Value;
-            var stateKey = available ? defaultStateKey : errorStateKey;
+            var stateKey = isAvailable ? defaultStateKey : errorStateKey;
 
             priceButton.SetState(stateKey);
-            priceButton.SetInteractableState(available);
+            priceButton.SetInteractableState(isAvailable);
         }
     }
 }
