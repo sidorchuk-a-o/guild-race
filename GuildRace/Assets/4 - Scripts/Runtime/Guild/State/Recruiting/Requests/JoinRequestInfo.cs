@@ -2,7 +2,7 @@
 
 namespace Game.Guild
 {
-    public class JoinRequestInfo
+    public class JoinRequestInfo : IEquatable<JoinRequestInfo>
     {
         public string Id { get; }
 
@@ -17,6 +17,24 @@ namespace Game.Guild
             Character = character;
             CreatedTime = createdTime;
             IsDefault = CreatedTime == DateTime.MinValue;
+        }
+
+        // == IEquatable ==
+
+        public bool Equals(JoinRequestInfo other)
+        {
+            return other is not null
+                && other.Id == Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as JoinRequestInfo);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
         }
     }
 }

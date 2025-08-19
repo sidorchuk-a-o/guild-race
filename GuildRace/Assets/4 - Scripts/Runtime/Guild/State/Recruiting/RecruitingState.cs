@@ -16,6 +16,7 @@ namespace Game.Guild
 
         private readonly ReactiveProperty<bool> isEnabled = new();
         private readonly JoinRequestsCollection requests = new(null);
+        private readonly List<JoinRequestInfo> removedRequests = new();
         private readonly List<ClassRoleSelectorInfo> classRoleSelectors = new();
 
         public override string SaveKey => RecruitingSM.key;
@@ -53,11 +54,26 @@ namespace Game.Guild
         {
             var index = requests.FindIndex(x => x.Id == requestId);
 
-            requests.RemoveAt(index);
+            if (index != -1)
+            {
+                var request = requests[index];
 
-            MarkAsDirty();
+                requests.RemoveAt(index);
+                removedRequests.Add(request);
+
+                MarkAsDirty();
+            }
 
             return index;
+        }
+
+        public JoinRequestInfo GetRemovedRequest(string requestId)
+        {
+            var request = removedRequests.FirstOrDefault(x => x.Id == requestId);
+
+            removedRequests.Clear();
+
+            return request;
         }
 
         public void SwitchRecruitingState()

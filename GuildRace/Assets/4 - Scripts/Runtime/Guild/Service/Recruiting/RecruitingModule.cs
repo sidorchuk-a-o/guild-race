@@ -65,6 +65,7 @@ namespace Game.Guild
         public int AcceptJoinRequest(string requestId, out JoinRequestInfo info)
         {
             info = Requests.FirstOrDefault(x => x.Id == requestId);
+            info ??= recruitingState.GetRemovedRequest(requestId);
 
             return RemoveRequest(requestId);
         }

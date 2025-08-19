@@ -95,7 +95,7 @@ namespace Game.Guild
         {
             var index = recruitingModule.AcceptJoinRequest(requestId, out var requestInfo);
 
-            if (index != -1)
+            if (requestInfo != null)
             {
                 state.AddCharacter(requestInfo.Character);
             }
