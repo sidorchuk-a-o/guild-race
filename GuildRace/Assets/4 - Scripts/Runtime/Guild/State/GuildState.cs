@@ -2,6 +2,7 @@
 using AD.Services.Localization;
 using AD.Services.Save;
 using AD.ToolsCollection;
+using Game.GuildLevels;
 using Game.Inventory;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,16 @@ namespace Game.Guild
         private readonly ReactiveProperty<string> guildName = new();
         private readonly ReactiveProperty<string> playerName = new();
 
+        private readonly ReactiveProperty<int> maxCharactersCount = new();
+        private readonly ReactiveProperty<float> requestTimePercent = new(1);
+
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
         private readonly GuildBankTabsCollection bankTabs = new(null);
 
+        private readonly GuildLevelContext levelContext = new();
+
+        private readonly IGuildLevelsService guildLevelsService;
         private readonly IInventoryService inventoryService;
         private readonly ILocalizationService localization;
 
@@ -28,21 +35,37 @@ namespace Game.Guild
         public bool IsExists => guildName.IsValid();
         public IReadOnlyReactiveProperty<string> GuildName => guildName;
         public IReadOnlyReactiveProperty<string> PlayerName => playerName;
-        public EmblemInfo Emblem { get; private set; }
+
+        public IReadOnlyReactiveProperty<int> MaxCharactersCount => maxCharactersCount;
+        public IReadOnlyReactiveProperty<float> RequestTimePercent => requestTimePercent;
 
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
         public IGuildBankTabsCollection BankTabs => bankTabs;
+        public EmblemInfo Emblem { get; private set; }
 
         public GuildState(
             GuildConfig config,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             ILocalizationService localization,
             IObjectResolver resolver)
             : base(config, resolver)
         {
+            this.guildLevelsService = guildLevelsService;
             this.inventoryService = inventoryService;
             this.localization = localization;
+        }
+
+        public override void Init()
+        {
+            base.Init();
+
+            guildLevelsService.RegisterContext(levelContext);
+
+            levelContext.BankRowCount.Subscribe(UpgradeBankRowCountCallback);
+            levelContext.CharactersCount.Subscribe(UpgradeCharactersCountCallback);
+            levelContext.RequestTimePercent.Subscribe(x => requestTimePercent.Value = x);
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
@@ -72,7 +95,7 @@ namespace Game.Guild
             MarkAsDirty(true);
         }
 
-        // == Character ==
+        // == Characters ==
 
         public void AddCharacter(CharacterInfo info)
         {
@@ -95,6 +118,26 @@ namespace Game.Guild
             MarkAsDirty(true);
 
             return index;
+        }
+
+        // == Guild Levels ==
+
+        private void UpgradeBankRowCountCallback(int upgradeValue)
+        {
+            foreach (var bankTab in bankTabs)
+            {
+                var grid = bankTab.Grid;
+                var rows = grid.DefaultRowsCount + upgradeValue;
+
+                grid.SetSize(rows, grid.ColumnsCount);
+            }
+        }
+
+        private void UpgradeCharactersCountCallback(int upgradeValue)
+        {
+            var count = config.MaxCharactersCount + upgradeValue;
+
+            maxCharactersCount.Value = count;
         }
 
         // == Save ==

@@ -20,7 +20,9 @@ namespace Game.Quests
                 var item = items[i];
                 var questVM = questsVM[i];
 
-                if (questVM != null)
+                var hasVM = questVM != null;
+
+                if (hasVM)
                 {
                     item.Init(questVM, disp);
 
@@ -28,6 +30,8 @@ namespace Game.Quests
                         .Subscribe(onSelect.OnNext)
                         .AddTo(disp);
                 }
+
+                item.SetActive(hasVM);
             }
         }
     }

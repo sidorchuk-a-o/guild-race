@@ -1,5 +1,4 @@
 ﻿using AD.UI;
-using AD.Services.Store;
 using AD.ToolsCollection;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -20,15 +19,15 @@ namespace Game.Craft
 
         private readonly Subject onCraft = new();
 
-        private IStoreService store;
+        private CraftVMFactory craftVMF;
         private RecipeVM recipeVM;
 
         public IObservable OnCraft => onCraft;
 
         [Inject]
-        public void Inject(IStoreService store)
+        public void Inject(CraftVMFactory craftVMF)
         {
-            this.store = store;
+            this.craftVMF = craftVMF;
         }
 
         private void Awake()
@@ -67,9 +66,15 @@ namespace Game.Craft
 
         private void ButtonClickCallback()
         {
-            var result = store.CurrenciesModule.SpendCurrency(recipeVM.PriceVM.Value);
+            var craftOrder = new CraftOrderArgs
+            {
+                RecipeId = recipeVM.Id,
+                Count = recipeVM.Count.Value
+            };
 
-            if (result.HasValue)
+            var result = craftVMF.CreateCraftOrder(craftOrder);
+
+            if (result)
             {
                 onCraft.OnNext();
             }

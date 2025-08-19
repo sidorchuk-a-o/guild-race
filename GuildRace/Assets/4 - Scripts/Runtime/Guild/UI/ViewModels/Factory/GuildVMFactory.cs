@@ -1,4 +1,5 @@
-﻿using AD.Services.Pools;
+﻿using AD.Services.Store;
+using AD.Services.Pools;
 using AD.Services.Router;
 using Game.Instances;
 using Game.Inventory;
@@ -9,6 +10,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using VContainer;
+using UniRx;
 using static TMPro.TMP_Dropdown;
 
 namespace Game.Guild
@@ -23,11 +25,13 @@ namespace Game.Guild
 
         private InventoryVMFactory inventoryVMF;
         private InstancesVMFactory instancesVMF;
+        private StoreVMFactory storeVMF;
 
-        public int MaxCharactersCount => guildConfig.MaxCharactersCount;
+        public IReadOnlyReactiveProperty<int> MaxCharactersCount => guildService.MaxCharactersCount;
 
         public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
         public InstancesVMFactory InstancesVMF => instancesVMF ??= resolver.Resolve<InstancesVMFactory>();
+        public StoreVMFactory StoreVMF => storeVMF ??= resolver.Resolve<StoreVMFactory>();
 
         public GuildVMFactory(
             GuildConfig guildConfig,

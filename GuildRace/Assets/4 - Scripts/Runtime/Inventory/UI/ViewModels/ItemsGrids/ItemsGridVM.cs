@@ -1,20 +1,23 @@
-﻿using AD.Services.Router;
-using Game.UI;
+﻿using Game.UI;
+using AD.Services.Router;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 namespace Game.Inventory
 {
     public class ItemsGridVM : ViewModel, IPlacementContainerVM
     {
         private readonly ItemsGridInfo info;
+        private readonly ReactiveProperty<BoundsInt> bounds = new();
 
         private readonly InventoryVMFactory inventoryVMF;
 
         public string Id { get; }
+
         public ItemsGridCategory Category { get; }
         public ItemsGridCellType CellType { get; }
-        public BoundsInt Bounds { get; }
+        public IReadOnlyReactiveProperty<BoundsInt> Bounds => bounds;
 
         public ItemsVM ItemsVM { get; }
         public UIStateVM PlacementStateVM { get; }
@@ -27,7 +30,7 @@ namespace Game.Inventory
             Id = info.Id;
             Category = info.Category;
             CellType = info.CellType;
-            Bounds = new(Vector3Int.zero, info.Size);
+            bounds.Value = new(Vector3Int.zero, info.Size.Value);
 
             ItemsVM = new(info.Items, inventoryVMF);
             PlacementStateVM = new();
@@ -35,6 +38,10 @@ namespace Game.Inventory
 
         protected override void InitSubscribes()
         {
+            info.Size
+                .Subscribe(x => bounds.Value = new(Vector3Int.zero, x))
+                .AddTo(this);
+
             ItemsVM.AddTo(this);
             PlacementStateVM.AddTo(this);
         }

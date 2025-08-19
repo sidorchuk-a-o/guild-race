@@ -31,7 +31,7 @@ namespace Game.Instances
         public IReadOnlyReactiveProperty<int> TotalCompletedCount { get; }
         public IReadOnlyReactiveProperty<int> CompletedCount { get; }
         public IReadOnlyReactiveProperty<int> TriesCount { get; }
-        public UnitCooldownParams CooldownParams { get; }
+        public UnitCooldownInfo CooldownParams { get; }
 
         public UnitVM(UnitInfo info, InstancesVMFactory instancesVMF)
         {
@@ -47,7 +47,7 @@ namespace Game.Instances
             TriesCount = info.TriesCount;
             CompletedCount = info.CompletedCount;
             TotalCompletedCount = info.TotalCompletedCount;
-            CooldownParams = instancesVMF.GetCooldownParams(Id);
+            CooldownParams = instancesVMF.GetUnitCooldown(Id);
         }
 
         protected override void InitSubscribes()

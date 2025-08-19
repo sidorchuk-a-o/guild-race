@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebdb024189e57c41a851d1b08283d79, type: 3}
   m_Name: GuildConfig
   m_EditorClassIdentifier: 
-  maxCharactersCount: 30
+  maxCharactersCount: 15
   defaultGuildRanks:
   - {fileID: 499257089889080854}
   - {fileID: 5098217918887357756}
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   id: 58132353
   title: 
   rowSize: 8
-  rowCount: 11
+  rowCount: 5
   category:
     value: 201
   cellType:
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   id: 2060599779
   title: 
   rowSize: 8
-  rowCount: 11
+  rowCount: 5
   category:
     value: 201
   cellType:
@@ -2071,7 +2071,7 @@ MonoBehaviour:
   id: 331941892
   title: 
   rowSize: 8
-  rowCount: 11
+  rowCount: 5
   category:
     value: 201
   cellType:

@@ -9,6 +9,7 @@ using AD.Services.Router;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
+using Game.GuildLevels;
 using Game.Inventory;
 using Game.Weekly;
 using UniRx;
@@ -45,6 +46,7 @@ namespace Game.Instances
             GuildConfig guildConfig,
             InstancesConfig instancesConfig,
             IGuildService guildService,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             IWeeklyService weeklyService,
             IRouterService router,
@@ -58,7 +60,7 @@ namespace Game.Instances
             this.appEvents = appEvents;
             this.resolver = resolver;
 
-            state = new(instancesConfig, time, guildService, inventoryService, weeklyService, resolver);
+            state = new(instancesConfig, time, guildService, guildLevelsService, inventoryService, weeklyService, resolver);
             instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
             activeInstanceModule = new(this, state, time);
             leaderboardModule = new(state, instancesConfig, activeInstanceModule, guildService, leaderboards, appEvents);
@@ -167,7 +169,7 @@ namespace Game.Instances
 
         private void TryResetUnitsCooldown()
         {
-            foreach (var cooldownParams in instancesConfig.UnitCooldownParams)
+            foreach (var cooldownParams in state.UnitCooldowns)
             {
                 if (cooldownParams.IsWeeklyReset)
                 {
@@ -213,10 +215,10 @@ namespace Game.Instances
         {
             var unit = Seasons.GetBossUnit(unitId);
             var instance = instancesConfig.GetBossInstance(unitId);
-            var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
+            var cooldownPatams = GetUnitCooldown(instance.Type);
 
             var triesCount = unit.TriesCount.Value;
-            var maxTriesCount = cooldownPatams.MaxTriesCount;
+            var maxTriesCount = cooldownPatams.MaxTriesCount.Value;
 
             return maxTriesCount < 0 || triesCount < maxTriesCount;
         }
@@ -225,12 +227,17 @@ namespace Game.Instances
         {
             var unit = Seasons.GetBossUnit(unitId);
             var instance = instancesConfig.GetBossInstance(unitId);
-            var cooldownPatams = instancesConfig.GetUnitCooldown(instance.Type);
+            var cooldownPatams = GetUnitCooldown(instance.Type);
 
             var completedCount = unit.CompletedCount.Value;
             var maxCompletedCount = cooldownPatams.MaxCompletedCount;
 
             return maxCompletedCount < 0 || completedCount < maxCompletedCount;
+        }
+
+        public UnitCooldownInfo GetUnitCooldown(InstanceType type)
+        {
+            return state.GetUnitCooldown(type);
         }
 
         public void AddTries(int unitId)

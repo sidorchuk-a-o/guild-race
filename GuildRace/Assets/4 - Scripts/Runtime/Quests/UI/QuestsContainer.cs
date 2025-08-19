@@ -153,17 +153,19 @@ namespace Game.Quests
                     nameText.SetTextParams(questVM.NameKey);
                     descText.SetTextParams(questVM.DescKey);
 
-                    rewardAmountText.SetTextParams((long)questVM.Reward.Value);
+                    progressContainer.Init(questVM, questDisp);
 
-                    progressContainer.Init(questVM, disp);
+                    questVM.Reward
+                        .Subscribe(x => rewardAmountText.SetTextParams((long)x.Value))
+                        .AddTo(questDisp);
 
                     questVM.IsCompleted
                         .SilentSubscribe(UpdateButtons)
-                        .AddTo(disp);
+                        .AddTo(questDisp);
 
                     questVM.IsRewarded
                         .SilentSubscribe(UpdateButtons)
-                        .AddTo(disp);
+                        .AddTo(questDisp);
 
                     UpdateButtons();
                 }

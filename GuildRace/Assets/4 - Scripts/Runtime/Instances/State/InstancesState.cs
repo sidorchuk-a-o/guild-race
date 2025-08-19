@@ -10,6 +10,8 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using VContainer;
+using Game.GuildLevels;
+using UniRx;
 
 namespace Game.Instances
 {
@@ -17,11 +19,16 @@ namespace Game.Instances
     {
         private readonly ITimeService time;
         private readonly IGuildService guildService;
+        private readonly IGuildLevelsService guildLevelsService;
         private readonly IInventoryService inventoryService;
         private readonly IWeeklyService weeklyService;
 
         private readonly SeasonsCollection seasons = new(null);
         private readonly ActiveInstancesCollection activeInstances = new(null);
+        private readonly List<UnitCooldownInfo> unitCooldowns = new();
+
+        private readonly InstancesLevelContext levelContext;
+
         private int guaranteedCompletedCount;
 
         public override string SaveKey => InstancesStateSM.key;
@@ -29,6 +36,7 @@ namespace Game.Instances
 
         public ISeasonsCollection Seasons => seasons;
         public IActiveInstancesCollection ActiveInstances => activeInstances;
+        public IReadOnlyList<UnitCooldownInfo> UnitCooldowns => unitCooldowns;
         public bool HasGuaranteedCompleted => guaranteedCompletedCount > 0;
 
         public ActiveInstanceInfo SetupInstance { get; private set; }
@@ -41,6 +49,7 @@ namespace Game.Instances
             InstancesConfig config,
             ITimeService time,
             IGuildService guildService,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             IWeeklyService weeklyService,
             IObjectResolver resolver)
@@ -48,9 +57,31 @@ namespace Game.Instances
         {
             this.time = time;
             this.guildService = guildService;
+            this.guildLevelsService = guildLevelsService;
             this.inventoryService = inventoryService;
             this.weeklyService = weeklyService;
+
+            levelContext = new(config);
         }
+
+        public override void Init()
+        {
+            base.Init();
+
+            // guild levels
+            guildLevelsService.RegisterContext(levelContext);
+
+            levelContext.BossTriesMods.ForEach(x =>
+            {
+                UpgradeBossTries(x.Key, x.Value);
+            });
+
+            levelContext.BossTriesMods
+                .ObserveReplace()
+                .Subscribe(UpgradeBossTriesCallback);
+        }
+
+        // == Instances ==
 
         public void CreateSetupInstance(SetupInstanceArgs args)
         {
@@ -118,6 +149,29 @@ namespace Game.Instances
             LastResetWeek = value;
         }
 
+        // == Guild Levels ==
+
+        private void UpgradeBossTriesCallback(DictionaryReplaceEvent<InstanceType, int> args)
+        {
+            var instanceType = args.Key;
+            var increaseValue = args.NewValue;
+
+            UpgradeBossTries(instanceType, increaseValue);
+        }
+
+        private void UpgradeBossTries(InstanceType instanceType, int increaseValue)
+        {
+            var cooldown = unitCooldowns.FirstOrDefault(x => x.InstanceType == instanceType);
+            var newTries = cooldown.MaxTriesCount.Value + increaseValue;
+
+            cooldown.SetMaxTriesCount(newTries);
+        }
+
+        public UnitCooldownInfo GetUnitCooldown(InstanceType instanceType)
+        {
+            return unitCooldowns.FirstOrDefault(x => x.InstanceType == instanceType);
+        }
+
         // == Save ==
 
         protected override InstancesStateSM CreateSave()
@@ -137,6 +191,8 @@ namespace Game.Instances
 
         protected override void ReadSave(InstancesStateSM save)
         {
+            unitCooldowns.AddRange(CreateDefaultUnitCooldowns());
+
             if (save == null)
             {
                 guaranteedCompletedCount = config.CompleteChanceParams.GuaranteedCompletedCount;
@@ -158,6 +214,14 @@ namespace Game.Instances
             activeInstances.AddRange(save.GetActiveInstances(inventoryService, seasons));
 
             CreateNewSeasons();
+        }
+
+        private IEnumerable<UnitCooldownInfo> CreateDefaultUnitCooldowns()
+        {
+            return config.UnitCooldownParams.Select(x =>
+            {
+                return new UnitCooldownInfo(x);
+            });
         }
 
         private IEnumerable<SeasonInfo> CreateDefaultSeasons()

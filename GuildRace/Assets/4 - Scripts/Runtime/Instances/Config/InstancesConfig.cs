@@ -154,10 +154,5 @@ namespace Game.Instances
 
             return data;
         }
-
-        public UnitCooldownParams GetUnitCooldown(InstanceType instanceType)
-        {
-            return unitCooldownParams.FirstOrDefault(x => x.InstanceType == instanceType);
-        }
     }
 }

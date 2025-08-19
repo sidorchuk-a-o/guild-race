@@ -1,4 +1,5 @@
 ﻿using System;
+using UniRx;
 
 namespace Game.Craft
 {
@@ -7,7 +8,10 @@ namespace Game.Craft
         IVendorsCollection Vendors { get; }
         RecycleSlotInfo RecycleSlot { get; }
 
+        IReadOnlyReactiveProperty<float> PriceDiscount { get; }
         IObservable<CraftingResult> OnCraftingComplete { get; }
+
+        bool CreateCraftOrder(CraftOrderArgs args);
 
         RecyclingResult GetRecyclingResult(string itemId);
         void StartCraftingProcess(StartCraftingEM craftingEM);

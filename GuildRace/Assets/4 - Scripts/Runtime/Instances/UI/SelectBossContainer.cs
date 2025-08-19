@@ -175,6 +175,10 @@ namespace Game.Instances
                     .SilentSubscribe(updateStartButtonState)
                     .AddTo(unitDisp);
 
+                unitVM.CooldownParams.MaxTriesCount
+                    .SilentSubscribe(updateStartButtonState)
+                    .AddTo(unitDisp);
+
                 adsStartButton.Init(disp);
 
                 adsStartButton.IsCompleted
@@ -189,7 +193,7 @@ namespace Game.Instances
                     var hasComplete = unitVM.HasComplete;
                     var hasActiveInstance = unitVM.HasActiveInstance;
 
-                    var maxTriesCount = unitVM.CooldownParams.MaxTriesCount;
+                    var maxTriesCount = unitVM.CooldownParams.MaxTriesCount.Value;
                     var triesCount = maxTriesCount - unitVM.TriesCount.Value;
                     var adsIsCompleted = adsStartButton.IsCompleted.Value;
 

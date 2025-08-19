@@ -9,11 +9,10 @@ namespace Game.Guild
         [SerializeField] private int maxCharactersCount;
         [SerializeField] private List<GuildRankData> defaultGuildRanks;
 
-        [SerializeField] private CharactersParams charactersParams = new();
-        [SerializeField] private RecruitingParams recruitingParams = new();
-        [SerializeField] private GuildBankParams guildBankParams = new();
-        [SerializeField] private EmblemParams emblemParams = new();
-
+        [SerializeField] private CharactersParams charactersParams;
+        [SerializeField] private RecruitingParams recruitingParams;
+        [SerializeField] private GuildBankParams guildBankParams;
+        [SerializeField] private EmblemParams emblemParams;
         [SerializeField] private LeaderboardParams leaderboardParams;
 
         public int MaxCharactersCount => maxCharactersCount;
@@ -23,7 +22,6 @@ namespace Game.Guild
         public RecruitingParams RecruitingParams => recruitingParams;
         public GuildBankParams GuildBankParams => guildBankParams;
         public EmblemParams EmblemParams => emblemParams;
-
         public LeaderboardParams LeaderboardParams => leaderboardParams;
     }
 }

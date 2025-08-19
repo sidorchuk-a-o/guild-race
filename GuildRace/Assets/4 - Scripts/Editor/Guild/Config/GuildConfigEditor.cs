@@ -21,11 +21,17 @@ namespace Game.Guild
         {
             base.CreateTabItems(tabs);
 
-            tabs.CreateTab("Guild", CreateGuildTab);
+            tabs.CreateTabs("Guild", CreateGuildTabs);
             tabs.CreateTabs("Characters", CreateCharactersTabs);
             tabs.CreateTabs("Recruiting", CreateRecruitingTabs);
             tabs.CreateTabs("Guild Bank", CreateGuildBankTabs);
             tabs.CreateTabs("Emblem", CreateEmblemTabs);
+        }
+
+        private void CreateGuildTabs(TabsContainer tabs)
+        {
+            tabs.CreateTab("Common", CreateGuildTab);
+            tabs.CreateTab("Ranks", CreateRanksTab);
         }
 
         private void CreateGuildTab(VisualElement root, SerializedData data)
@@ -34,11 +40,6 @@ namespace Game.Guild
 
             maxCharactersCountField = root.CreateProperty();
             maxCharactersCountField.BindProperty("maxCharactersCount", data);
-
-            root.CreateHeader("Guild Ranks (Default)");
-
-            defaultGuildRanksList = root.CreateElement<GuildRanksList>();
-            defaultGuildRanksList.BindProperty("defaultGuildRanks", data);
 
             root.CreateHeader("Leaderboard Params");
 
@@ -49,6 +50,12 @@ namespace Game.Guild
 
             sendTimeField = root.CreateProperty();
             sendTimeField.BindProperty("sendTime", leaderboardData);
+        }
+
+        private void CreateRanksTab(VisualElement root, SerializedData data)
+        {
+            defaultGuildRanksList = root.CreateElement<GuildRanksList>();
+            defaultGuildRanksList.BindProperty("defaultGuildRanks", data);
         }
 
         private void CreateCharactersTabs(TabsContainer tabs)
