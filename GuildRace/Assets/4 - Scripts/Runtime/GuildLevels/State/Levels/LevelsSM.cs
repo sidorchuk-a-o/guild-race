@@ -29,21 +29,9 @@ namespace Game.GuildLevels
 
                 resolver.Inject(levelData.Mechanic);
 
-                if (levelSM != null)
-                {
-                    yield return levelSM.GetValue(level, levelData);
-                }
-                else
-                {
-                    var levelInfo = new LevelInfo(level, levelData);
-
-                    if (level == 1)
-                    {
-                        levelInfo.MarkAsReadyUnlock();
-                    }
-
-                    yield return levelInfo;
-                }
+                yield return levelSM != null
+                    ? levelSM.GetValue(level, levelData)
+                    : new LevelInfo(level, levelData);
             }
 
             yield break;

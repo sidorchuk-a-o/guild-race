@@ -10,6 +10,8 @@ namespace Game.Craft
     public class CraftPriceVM : ViewModel
     {
         private readonly RecipeData data;
+        private readonly CraftVMFactory craftVMF;
+
         private readonly CurrencyVM priceVM;
         private readonly ReactiveProperty<CurrencyAmount> price = new();
 
@@ -21,8 +23,10 @@ namespace Game.Craft
         public CraftPriceVM(RecipeData data, CraftVMFactory craftVMF)
         {
             this.data = data;
+            this.craftVMF = craftVMF;
 
-            price.Value = data.Price;
+            UpdatePrice(0);
+
             priceVM = craftVMF.StoreVMF.GetCurrency(price);
 
             Amount = priceVM.Amount;
@@ -37,7 +41,10 @@ namespace Game.Craft
 
         public void UpdatePrice(int count)
         {
-            price.Value = data.Price * count;
+            var price = data.Price * count;
+            var discount = price * craftVMF.PriceDiscount.Value;
+
+            this.price.Value = price - discount;
         }
 
         public async UniTask<Sprite> LoadIcon(CancellationTokenSource ct = null)

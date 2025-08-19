@@ -15,7 +15,7 @@ namespace Game.Inventory
         {
             var i = 0;
 
-            var gridBounds = gridVM.Bounds;
+            var gridBounds = gridVM.Bounds.Value;
             var cellsCount = gridBounds.size.x * gridBounds.size.y;
 
             for (var h = 0; h < gridBounds.size.y; h++)

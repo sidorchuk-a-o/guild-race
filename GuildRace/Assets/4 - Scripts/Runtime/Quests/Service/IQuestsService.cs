@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UniRx;
 
 namespace Game.Quests
 {
@@ -6,6 +7,7 @@ namespace Game.Quests
     {
         IEnumerable<QuestInfo> Quests { get; }
         IEnumerable<QuestsGroupModule> Modules { get; }
+        IReadOnlyReactiveProperty<float> RewardBonus { get; }
 
         QuestsGroupModule GetGroupModule(QuestsGroup group);
         QuestMechanicHandler GetMechanicHandler(int id);

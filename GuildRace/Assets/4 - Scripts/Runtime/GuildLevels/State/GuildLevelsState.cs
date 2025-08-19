@@ -3,6 +3,7 @@ using System.Linq;
 using AD.Services.Save;
 using AD.States;
 using UniRx;
+using UnityEngine;
 using VContainer;
 
 namespace Game.GuildLevels
@@ -52,6 +53,19 @@ namespace Game.GuildLevels
             }
 
             levels.AddRange(save.GetGuildLevels(config, resolver));
+
+            UpdateLevels();
+        }
+
+        private void UpdateLevels()
+        {
+            var lastReadyIndex = levels.FindLastIndex(x => x.ReadyToUnlock.Value);
+            var lastIndex = Mathf.Max(0, lastReadyIndex - 1);
+
+            for (var i = lastIndex; i >= 0; i--)
+            {
+                levels[i].MarkAsReadyUnlock();
+            }
         }
 
         private IEnumerable<LevelInfo> CreateDefaultGuildLevels()

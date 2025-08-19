@@ -877,7 +877,7 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
-    - Term: GUILD_LEVELS/ADD_BOSS_TRIES_DSC
+    - Term: GUILD_LEVELS/ADD_RAID_BOSS_TRIES_DSC
       TermType: 0
       Description: 
       Languages:
@@ -8822,7 +8822,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1755533263564
+    Google_LastUpdatedVersion: 1755591024948
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

@@ -10,6 +10,7 @@ namespace Game.Instances
     {
         [SerializeField] private LocalizeKey nameKey;
 
+        public InstanceType Type => Id;
         public LocalizeKey NameKey => nameKey;
     }
 }

@@ -281,11 +281,11 @@ namespace Game.Instances
             return new SquadCandidatesVM(candidates, this);
         }
 
-        public UnitCooldownParams GetCooldownParams(int bossId)
+        public UnitCooldownInfo GetUnitCooldown(int bossId)
         {
             var instance = InstancesConfig.GetBossInstance(bossId);
 
-            return InstancesConfig.GetUnitCooldown(instance.Type);
+            return instancesService.GetUnitCooldown(instance.Type);
         }
 
         public UnitVM GetBossUnit(int unitId)

@@ -34,9 +34,16 @@ namespace Game.Quests
 
             state.ClearQuests();
 
+            AddQuests(MaxQuestsCount.Value);
+
+            state.SetLastResetDate(currentDate);
+        }
+
+        protected override void AddQuests(int count)
+        {
             var questsDataPool = questsConfig.Quests
                 .Where(x => x.GroupId == Id)
-                .RandomValues(MaxQuestsCount);
+                .RandomValues(count);
 
             var newQuests = questsDataPool.Select(data =>
             {
@@ -47,12 +54,11 @@ namespace Game.Quests
             });
 
             state.AddQuests(newQuests);
-            state.SetLastResetDate(currentDate);
         }
 
-        public override bool TakeQuestReward(TakeRewardArgs args)
+        public override bool TakeQuestReward(TakeRewardArgs args, float bonusValue)
         {
-            var result = base.TakeQuestReward(args);
+            var result = base.TakeQuestReward(args, bonusValue);
 
             if (result)
             {

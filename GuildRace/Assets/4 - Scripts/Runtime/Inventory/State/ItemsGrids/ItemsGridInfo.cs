@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
 
 namespace Game.Inventory
@@ -6,13 +7,19 @@ namespace Game.Inventory
     public abstract class ItemsGridInfo : IPlacementContainer
     {
         private readonly ItemsCollection items;
+        private readonly ReactiveProperty<Vector3Int> size = new();
 
         public string Id { get; }
         public int DataId { get; }
 
-        public Vector3Int Size { get; }
         public ItemsGridCategory Category { get; }
         public ItemsGridCellType CellType { get; }
+
+        public int DefaultRowsCount { get; }
+        public int DefaultColumnsCount { get; }
+        public int RowsCount => size.Value.y;
+        public int ColumnsCount => size.Value.x;
+        public IReadOnlyReactiveProperty<Vector3Int> Size => size;
 
         public IItemsCollection Items => items;
 
@@ -22,9 +29,18 @@ namespace Game.Inventory
 
             Id = id;
             DataId = data.Id;
-            Size = new(data.RowSize, data.RowCount);
             Category = data.Category;
             CellType = data.CellType;
+
+            DefaultRowsCount = data.RowCount;
+            DefaultColumnsCount = data.RowSize;
+
+            size.Value = new(data.RowSize, data.RowCount);
+        }
+
+        public void SetSize(int rows, int columns)
+        {
+            size.Value = new(columns, rows);
         }
 
         public virtual bool CheckPossibilityOfPlacement(ItemInfo item, in Vector3Int positionOnGrid)
@@ -111,8 +127,8 @@ namespace Game.Inventory
 
         private bool FindPlacement(ItemInfo item)
         {
-            var normalizedWidth = Size.x - item.Bounds.Size.x;
-            var normalizedHeight = Size.y - item.Bounds.Size.y;
+            var normalizedWidth = Size.Value.x - item.Bounds.Size.x;
+            var normalizedHeight = Size.Value.y - item.Bounds.Size.y;
 
             for (var y = 0; y <= normalizedHeight; y++)
             {
@@ -155,8 +171,8 @@ namespace Game.Inventory
 
         private bool PlaceItem(ItemInfo item)
         {
-            var normalizedWidth = Size.x - item.Bounds.Size.x;
-            var normalizedHeight = Size.y - item.Bounds.Size.y;
+            var normalizedWidth = Size.Value.x - item.Bounds.Size.x;
+            var normalizedHeight = Size.Value.y - item.Bounds.Size.y;
 
             for (var y = 0; y <= normalizedHeight; y++)
             {
@@ -205,8 +221,8 @@ namespace Game.Inventory
         {
             return itemBounds.min.x >= 0
                 && itemBounds.min.y >= 0
-                && itemBounds.max.x <= Size.x
-                && itemBounds.max.y <= Size.y
+                && itemBounds.max.x <= Size.Value.x
+                && itemBounds.max.y <= Size.Value.y
                 && NotIntersects(itemBounds);
         }
 

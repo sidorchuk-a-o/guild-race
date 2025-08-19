@@ -1,10 +1,11 @@
-﻿using AD.Services.Router;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AD.Services.Router;
 using AD.Services.Store;
 using Game.Guild;
 using Game.Inventory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using UniRx;
 
 namespace Game.Craft
 {
@@ -14,6 +15,8 @@ namespace Game.Craft
 
         private readonly ICraftService craftService;
         private readonly IGuildService guildService;
+
+        public IReadOnlyReactiveProperty<float> PriceDiscount { get; }
 
         public InventoryVMFactory InventoryVMF { get; }
         public StoreVMFactory StoreVMF { get; }
@@ -29,8 +32,14 @@ namespace Game.Craft
             this.craftService = craftService;
             this.guildService = guildService;
 
+            PriceDiscount = craftService.PriceDiscount;
             InventoryVMF = inventoryVMF;
             StoreVMF = storeVMF;
+        }
+
+        public bool CreateCraftOrder(CraftOrderArgs craftArgs)
+        {
+            return craftService.CreateCraftOrder(craftArgs);
         }
 
         public VendorsVM GetVendors()

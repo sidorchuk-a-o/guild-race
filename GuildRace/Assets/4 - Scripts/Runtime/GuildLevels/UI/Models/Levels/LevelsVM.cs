@@ -7,6 +7,8 @@ namespace Game.GuildLevels
     {
         private readonly GuildLevelsVMFactory levelsVMF;
 
+        public int LastReadyToCompleteIndex => FindLastIndex(x => x.ReadyToUnlock.Value);
+
         public LevelsVM(IReadOnlyCollection<LevelInfo> values, GuildLevelsVMFactory levelsVMF) : base(values)
         {
             this.levelsVMF = levelsVMF;

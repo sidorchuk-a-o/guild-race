@@ -26,7 +26,14 @@ namespace Game.GuildLevels
 
             levelsVM.AddTo(disp);
 
-            levelsScroll.Init(levelsVM, true);
+            InitLevels();
+        }
+
+        public async void InitLevels()
+        {
+            await levelsScroll.InitAsync(levelsVM, true);
+
+            levelsScroll.ScrollTo(levelsVM.LastReadyToCompleteIndex, .1f);
         }
     }
 }

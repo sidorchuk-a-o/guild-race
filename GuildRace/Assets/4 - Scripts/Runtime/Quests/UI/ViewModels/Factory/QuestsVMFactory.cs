@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using UniRx;
 using VContainer;
 
 namespace Game.Quests
@@ -6,6 +7,8 @@ namespace Game.Quests
     public class QuestsVMFactory : VMFactory
     {
         private IQuestsService questsService;
+
+        public IReadOnlyReactiveProperty<float> RewardBonus => questsService.RewardBonus;
 
         [Inject]
         public void Inject(IQuestsService questsService)

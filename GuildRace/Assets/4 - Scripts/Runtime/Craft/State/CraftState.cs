@@ -1,9 +1,11 @@
-﻿using AD.Services;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AD.Services;
 using AD.Services.Save;
 using Game.Guild;
+using Game.GuildLevels;
 using Game.Inventory;
-using System.Collections.Generic;
-using System.Linq;
+using UniRx;
 using VContainer;
 
 namespace Game.Craft
@@ -11,24 +13,31 @@ namespace Game.Craft
     public class CraftState : ServiceState<CraftConfig, CraftStateSM>
     {
         private readonly IGuildService guildService;
+        private readonly IGuildLevelsService guildLevelsService;
         private readonly IInventoryService inventoryService;
 
         private readonly VendorsCollection vendors = new(null);
+        private readonly ReactiveProperty<float> priceDiscount = new();
+
+        private readonly CraftLevelContext levelContext = new();
 
         public override string SaveKey => CraftStateSM.key;
         public override SaveSource SaveSource => SaveSource.app;
 
         public IVendorsCollection Vendors => vendors;
         public RecycleSlotInfo RecycleSlot { get; }
+        public IReadOnlyReactiveProperty<float> PriceDiscount => priceDiscount;
 
         public CraftState(
             CraftConfig config,
             IGuildService guildService,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             IObjectResolver resolver)
             : base(config, resolver)
         {
             this.guildService = guildService;
+            this.guildLevelsService = guildLevelsService;
             this.inventoryService = inventoryService;
 
             RecycleSlot = CreateRecycleSlot();
@@ -40,6 +49,22 @@ namespace Game.Craft
             var slotInfo = inventoryService.Factory.CreateSlot(slotData);
 
             return slotInfo as RecycleSlotInfo;
+        }
+
+        public override void Init()
+        {
+            base.Init();
+
+            guildLevelsService.RegisterContext(levelContext);
+
+            levelContext.Discount.Subscribe(UpgradeDiscountCallback);
+        }
+
+        // == Guild Levels ==
+
+        private void UpgradeDiscountCallback(float discount)
+        {
+            priceDiscount.Value = discount;
         }
 
         // == Save ==

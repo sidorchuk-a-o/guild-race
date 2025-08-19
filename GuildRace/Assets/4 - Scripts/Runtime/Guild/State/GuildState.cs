@@ -17,11 +17,13 @@ namespace Game.Guild
         private readonly ReactiveProperty<string> playerName = new();
 
         private readonly ReactiveProperty<int> maxCharactersCount = new();
+        private readonly ReactiveProperty<float> requestTimePercent = new(1);
+
         private readonly CharactersCollection characters = new(null);
         private readonly GuildRanksCollection guildRanks = new(null);
         private readonly GuildBankTabsCollection bankTabs = new(null);
 
-        private readonly GuildLevelContext guildLevelContext = new();
+        private readonly GuildLevelContext levelContext = new();
 
         private readonly IGuildLevelsService guildLevelsService;
         private readonly IInventoryService inventoryService;
@@ -33,12 +35,14 @@ namespace Game.Guild
         public bool IsExists => guildName.IsValid();
         public IReadOnlyReactiveProperty<string> GuildName => guildName;
         public IReadOnlyReactiveProperty<string> PlayerName => playerName;
+
         public IReadOnlyReactiveProperty<int> MaxCharactersCount => maxCharactersCount;
-        public EmblemInfo Emblem { get; private set; }
+        public IReadOnlyReactiveProperty<float> RequestTimePercent => requestTimePercent;
 
         public ICharactersCollection Characters => characters;
         public IGuildRanksCollection GuildRanks => guildRanks;
         public IGuildBankTabsCollection BankTabs => bankTabs;
+        public EmblemInfo Emblem { get; private set; }
 
         public GuildState(
             GuildConfig config,
@@ -55,10 +59,13 @@ namespace Game.Guild
 
         public override void Init()
         {
-            guildLevelsService.RegisterContext(guildLevelContext);
-            guildLevelContext.CharactersCount.Subscribe(UpgradeCharactersCountCallback);
-
             base.Init();
+
+            guildLevelsService.RegisterContext(levelContext);
+
+            levelContext.BankRowCount.Subscribe(UpgradeBankRowCountCallback);
+            levelContext.CharactersCount.Subscribe(UpgradeCharactersCountCallback);
+            levelContext.RequestTimePercent.Subscribe(x => requestTimePercent.Value = x);
         }
 
         public void CreateOrUpdateGuild(GuildEM guildEM)
@@ -113,13 +120,24 @@ namespace Game.Guild
             return index;
         }
 
+        // == Guild Levels ==
+
+        private void UpgradeBankRowCountCallback(int upgradeValue)
+        {
+            foreach (var bankTab in bankTabs)
+            {
+                var grid = bankTab.Grid;
+                var rows = grid.DefaultRowsCount + upgradeValue;
+
+                grid.SetSize(rows, grid.ColumnsCount);
+            }
+        }
+
         private void UpgradeCharactersCountCallback(int upgradeValue)
         {
             var count = config.MaxCharactersCount + upgradeValue;
 
             maxCharactersCount.Value = count;
-
-            MarkAsDirty();
         }
 
         // == Save ==
