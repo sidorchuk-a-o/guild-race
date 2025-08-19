@@ -7,6 +7,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using Game.UI;
 
 namespace Game.Instances
 {
@@ -15,6 +16,8 @@ namespace Game.Instances
         [SerializeField] private Image image;
         [SerializeField] private UIText nameText;
         [SerializeField] private UIButton button;
+        [Space]
+        [SerializeField] private TooltipComponent tooltipComponent;
 
         private InstanceVM instanceVM;
         private IRouterService router;
@@ -42,6 +45,8 @@ namespace Game.Instances
 
             image.sprite = sprite;
             nameText.SetTextParams(instanceVM.NameKey);
+
+            tooltipComponent.Init(instanceVM);
         }
 
         private async void ClickCallback()
