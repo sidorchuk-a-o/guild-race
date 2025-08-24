@@ -39,7 +39,7 @@ namespace Game.Instances
         {
             this.instanceVM = instanceVM;
 
-            var sprite = await instanceVM.LoadImage(ct);
+            var sprite = await instanceVM.LoadPreviewImage(ct);
 
             if (ct.IsCancellationRequested) return;
 
