@@ -35,6 +35,14 @@ MonoBehaviour:
       m_SubObjectGUID: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
+  - id: 7bfbb8f72aa64ac99887c45abab9353f
+    title: Instance
+    asset:
+      m_AssetGUID: bf82460e5e522214ba84142efd178ed5
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
   scenes:
   - id: 3e7590c332d84ba0bb365225372f279e
     title: Game

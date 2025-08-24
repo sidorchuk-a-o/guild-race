@@ -19,7 +19,7 @@ namespace Game.Quests
 
         public UITextData NameKey { get; }
         public UITextData DescKey { get; }
-        public IReadOnlyReactiveProperty<CurrencyAmount> Reward => reward;
+        public CurrencyVM RewardVM { get; }
 
         public int RequiredProgress { get; }
         public IReadOnlyReactiveProperty<int> ProgressCounter { get; }
@@ -33,8 +33,10 @@ namespace Game.Quests
             this.info = info;
             this.questsVMF = questsVMF;
 
-            mechanicVM = questsVMF.GetMechanic(info.MechanicId);
             reward.Value = info.Reward;
+            RewardVM = questsVMF.StoreVMF.GetCurrency(reward);
+
+            mechanicVM = questsVMF.GetMechanic(info.MechanicId);
 
             Id = info.Id;
             GroupId = info.GroupId;
@@ -49,6 +51,7 @@ namespace Game.Quests
         protected override void InitSubscribes()
         {
             mechanicVM.AddTo(this);
+            RewardVM.AddTo(this);
 
             info.ProgressCounter
                 .Subscribe(ProgressChangedCallback)

@@ -1038,6 +1038,7 @@ MonoBehaviour:
   nameText: {fileID: 4867667976880309584}
   descText: {fileID: 1794009481206768288}
   progressContainer: {fileID: 7057160968339183227}
+  rewardImage: {fileID: 48562779271807215}
   rewardAmountText: {fileID: 8253107475766195422}
   takeRewardButton: {fileID: 5139878260158522392}
   rewardedPlug: {fileID: 5887706394736254962}
