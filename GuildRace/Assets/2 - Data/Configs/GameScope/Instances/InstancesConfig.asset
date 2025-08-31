@@ -722,6 +722,12 @@ MonoBehaviour:
         m_SubObjectGUID: 
         m_SubObjectType: 
         m_EditorAssetChanged: 1
+      loadingRef:
+        m_AssetGUID: e50f5fa87a2069241967d63d1be037fa
+        m_SubObjectName: 
+        m_SubObjectGUID: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 1
       type:
         value: 251
       boosUnits:
@@ -882,6 +888,12 @@ MonoBehaviour:
         value: INSTANCES/INSTANCE_302_DSC
       imageRef:
         m_AssetGUID: 3841889e0aabd4143b7fb9b4e36e862b
+        m_SubObjectName: 
+        m_SubObjectGUID: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 1
+      loadingRef:
+        m_AssetGUID: 24860992dd2f78046a89b550b7f106c2
         m_SubObjectName: 
         m_SubObjectGUID: 
         m_SubObjectType: 
@@ -1050,6 +1062,12 @@ MonoBehaviour:
         m_SubObjectGUID: 
         m_SubObjectType: 
         m_EditorAssetChanged: 1
+      loadingRef:
+        m_AssetGUID: 4d00ee69a1e32af4cb0583a8421f0817
+        m_SubObjectName: 
+        m_SubObjectGUID: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 1
       type:
         value: 251
       boosUnits:
@@ -1213,6 +1231,12 @@ MonoBehaviour:
         m_SubObjectGUID: 
         m_SubObjectType: 
         m_EditorAssetChanged: 1
+      loadingRef:
+        m_AssetGUID: f55ac079a5900764e955cf1350c499fd
+        m_SubObjectName: 
+        m_SubObjectGUID: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 1
       type:
         value: 251
       boosUnits:
@@ -1372,6 +1396,12 @@ MonoBehaviour:
       descKey:
         value: INSTANCES/INSTANCE_305_DSC
       imageRef:
+        m_AssetGUID: a63f5f96ddd25114c9013b52afc836de
+        m_SubObjectName: 
+        m_SubObjectGUID: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 1
+      loadingRef:
         m_AssetGUID: a63f5f96ddd25114c9013b52afc836de
         m_SubObjectName: 
         m_SubObjectGUID: 
