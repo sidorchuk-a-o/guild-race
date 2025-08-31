@@ -3,6 +3,7 @@ using AD.Services.Store;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Guild;
+using Game.GuildLevels;
 using Game.Instances;
 using Game.Inventory;
 using System;
@@ -29,12 +30,14 @@ namespace Game.Craft
         public IVendorsCollection Vendors => state.Vendors;
         public RecycleSlotInfo RecycleSlot => state.RecycleSlot;
 
+        public IReadOnlyReactiveProperty<float> PriceDiscount => state.PriceDiscount;
         public IObservable<CraftingResult> OnCraftingComplete => onCraftingComplete;
 
         public CraftService(
             CraftConfig craftConfig,
             InventoryConfig inventoryConfig,
             IGuildService guildService,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             IStoreService storeService,
             IObjectResolver resolver)
@@ -45,7 +48,8 @@ namespace Game.Craft
             this.guildService = guildService;
             this.inventoryService = inventoryService;
             this.storeService = storeService;
-            state = new(craftConfig, guildService, inventoryService, resolver);
+
+            state = new(craftConfig, guildService, guildLevelsService, inventoryService, resolver);
         }
 
         public override async UniTask<bool> Init()
@@ -232,6 +236,17 @@ namespace Game.Craft
         }
 
         // == Crafting ==
+
+        public bool CreateCraftOrder(CraftOrderArgs args)
+        {
+            var recipe = Vendors.GetRecipe(args.RecipeId);
+            var price = recipe.Price * args.Count;
+            var discount = price * state.PriceDiscount.Value;
+
+            var result = storeService.CurrenciesModule.SpendCurrency(price - discount);
+
+            return result.HasValue;
+        }
 
         public void StartCraftingProcess(StartCraftingEM craftingEM)
         {

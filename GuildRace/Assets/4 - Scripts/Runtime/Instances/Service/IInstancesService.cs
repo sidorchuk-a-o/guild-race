@@ -17,6 +17,7 @@ namespace Game.Instances
 
         RewardHandler GetRewardHandler(int id);
         ConsumableMechanicHandler GetConsumableHandler(int id);
+        UnitCooldownInfo GetUnitCooldown(InstanceType type);
 
         UniTask StartSetupInstance(SetupInstanceArgs args);
         void CancelSetupInstance();

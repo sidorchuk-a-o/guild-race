@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace Game.Quests
@@ -23,6 +24,7 @@ namespace Game.Quests
         [SerializeField] private UIText nameText;
         [SerializeField] private UIText descText;
         [SerializeField] private QuestProgressContainer progressContainer;
+        [SerializeField] private Image rewardImage;
         [SerializeField] private UIText rewardAmountText;
         [Space]
         [SerializeField] private UIButton takeRewardButton;
@@ -115,7 +117,7 @@ namespace Game.Quests
                 lastQuestId.IsValid() &&
                 lastQuestId == questVM.Id)
             {
-                updateQuest();
+                await updateQuest();
                 return;
             }
 
@@ -133,12 +135,11 @@ namespace Game.Quests
                 questContainer.DOFade(0, duration).ToUniTask(),
                 emptyQuestContainer.DOFade(0, duration).ToUniTask());
 
-            if (token.IsCancellationRequested)
-            {
-                return;
-            }
+            if (token.IsCancellationRequested) return;
 
-            updateQuest();
+            await updateQuest();
+
+            if (token.IsCancellationRequested) return;
 
             var showContainer = hasQuest
                 ? questContainer
@@ -146,24 +147,32 @@ namespace Game.Quests
 
             await showContainer.DOFade(1, duration);
 
-            void updateQuest()
+            async UniTask updateQuest()
             {
                 if (hasQuest)
                 {
+                    var rewardIcon = await questVM.RewardVM.LoadIcon(token);
+
+                    if (token.IsCancellationRequested) return;
+
+                    rewardImage.sprite = rewardIcon;
+
                     nameText.SetTextParams(questVM.NameKey);
                     descText.SetTextParams(questVM.DescKey);
 
-                    rewardAmountText.SetTextParams((long)questVM.Reward.Value);
+                    progressContainer.Init(questVM, questDisp);
 
-                    progressContainer.Init(questVM, disp);
+                    questVM.RewardVM.Amount
+                        .Subscribe(x => rewardAmountText.SetTextParams(x))
+                        .AddTo(questDisp);
 
                     questVM.IsCompleted
                         .SilentSubscribe(UpdateButtons)
-                        .AddTo(disp);
+                        .AddTo(questDisp);
 
                     questVM.IsRewarded
                         .SilentSubscribe(UpdateButtons)
-                        .AddTo(disp);
+                        .AddTo(questDisp);
 
                     UpdateButtons();
                 }

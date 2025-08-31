@@ -61,7 +61,7 @@ namespace Game.Instances
             // setup
             await router.PushAsync(
                 pathKey: RouteKeys.Instances.SetupInstance,
-                loadingKey: LoadingScreenKeys.Loading);
+                loadingKey: LoadingScreenKeys.Instance);
         }
 
         public IReadOnlyCollection<SquadCandidateInfo> GetSquadCandidates()

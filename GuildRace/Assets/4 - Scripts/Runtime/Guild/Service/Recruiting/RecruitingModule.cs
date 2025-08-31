@@ -65,6 +65,7 @@ namespace Game.Guild
         public int AcceptJoinRequest(string requestId, out JoinRequestInfo info)
         {
             info = Requests.FirstOrDefault(x => x.Id == requestId);
+            info ??= recruitingState.GetRemovedRequest(requestId);
 
             return RemoveRequest(requestId);
         }
@@ -137,8 +138,12 @@ namespace Game.Guild
 
         private void ResetNextRequestTime(DateTime currentTime)
         {
-            var randomRequestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
-            var nextRequestTime = currentTime.AddSeconds(randomRequestTime);
+            var minTime = data.MinNextRequestTime;
+            var maxTime = data.MaxNextRequestTime;
+            var timePercent = guildState.RequestTimePercent.Value;
+            var randomRequestTime = Random.Range(minTime, maxTime);
+
+            var nextRequestTime = currentTime.AddSeconds(randomRequestTime * timePercent);
 
             recruitingState.SetNextRequestTime(nextRequestTime);
         }
@@ -197,19 +202,17 @@ namespace Game.Guild
                 return;
             }
 
-            var randomRequestTime = Random.Range(data.MinNextRequestTime, data.MaxNextRequestTime);
-            var nextRequestTime = currentTime.AddSeconds(randomRequestTime);
-
             var request = CreateRequest(currentTime);
 
             recruitingState.AddRequest(request);
-            recruitingState.SetNextRequestTime(nextRequestTime);
+
+            ResetNextRequestTime(currentTime);
         }
 
         private int CalcMaxRequestCount()
         {
             var rosterCount = guildState.Characters.Count;
-            var maxRosterCount = guildConfig.MaxCharactersCount;
+            var maxRosterCount = guildState.MaxCharactersCount.Value;
 
             var minRequestCount = data.MinRequestCount;
             var maxRequestCount = data.MaxRequestCount;

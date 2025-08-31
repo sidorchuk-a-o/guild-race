@@ -4,6 +4,7 @@ using AD.Services.Leaderboards;
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
 using Cysharp.Threading.Tasks;
+using Game.GuildLevels;
 using Game.Inventory;
 using UniRx;
 using VContainer;
@@ -15,11 +16,12 @@ namespace Game.Guild
         private readonly GuildState state;
 
         private readonly RecruitingModule recruitingModule;
-        private readonly GuildLeaderboardModule leaderboardModule;
+        private readonly LeaderboardModule leaderboardModule;
 
         public bool GuildExists => state.IsExists;
         public IReadOnlyReactiveProperty<string> GuildName => state.GuildName;
         public IReadOnlyReactiveProperty<string> PlayerName => state.PlayerName;
+        public IReadOnlyReactiveProperty<int> MaxCharactersCount => state.MaxCharactersCount;
         public EmblemInfo Emblem => state.Emblem;
 
         public ICharactersCollection Characters => state.Characters;
@@ -31,6 +33,7 @@ namespace Game.Guild
         public GuildService(
             GuildConfig guildConfig,
             InventoryConfig inventoryConfig,
+            IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             ILocalizationService localization,
             ITimeService time,
@@ -38,7 +41,7 @@ namespace Game.Guild
             ILeaderboardsService leaderboards,
             IObjectResolver resolver)
         {
-            state = new(guildConfig, inventoryService, localization, resolver);
+            state = new(guildConfig, guildLevelsService, inventoryService, localization, resolver);
             recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, time, resolver);
             leaderboardModule = new(state, guildConfig, leaderboards, appEvents);
         }
@@ -92,7 +95,7 @@ namespace Game.Guild
         {
             var index = recruitingModule.AcceptJoinRequest(requestId, out var requestInfo);
 
-            if (index != -1)
+            if (requestInfo != null)
             {
                 state.AddCharacter(requestInfo.Character);
             }

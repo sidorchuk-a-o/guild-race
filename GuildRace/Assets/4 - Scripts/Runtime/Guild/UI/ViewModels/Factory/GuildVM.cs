@@ -6,9 +6,7 @@ namespace Game.Guild
 {
     public class GuildVM : ViewModel
     {
-        private readonly GuildConfig guildConfig;
         private readonly IGuildService guildService;
-
         private readonly ReactiveProperty<bool> rosterIsFull = new();
 
         public IReadOnlyReactiveProperty<string> GuildName { get; }
@@ -21,7 +19,6 @@ namespace Game.Guild
 
         public GuildVM(GuildConfig guildConfig, IGuildService guildService)
         {
-            this.guildConfig = guildConfig;
             this.guildService = guildService;
 
             GuildName = guildService.GuildName;
@@ -45,7 +42,7 @@ namespace Game.Guild
 
         private void CharactersCountChanged(int count)
         {
-            rosterIsFull.Value = count >= guildConfig.MaxCharactersCount;
+            rosterIsFull.Value = count >= guildService.MaxCharactersCount.Value;
         }
     }
 }

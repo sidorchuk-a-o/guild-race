@@ -4,7 +4,7 @@ using AD.Services.Leaderboards;
 
 namespace Game.Guild
 {
-    public class GuildLeaderboardModule : IAppTickListener
+    public class LeaderboardModule : IAppTickListener
     {
         private readonly GuildState state;
         private readonly GuildConfig config;
@@ -15,7 +15,7 @@ namespace Game.Guild
         private int powerScore;
         private float sendTimer;
 
-        public GuildLeaderboardModule(
+        public LeaderboardModule(
             GuildState state,
             GuildConfig config,
             ILeaderboardsService leaderboards,

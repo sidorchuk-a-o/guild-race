@@ -192,6 +192,7 @@ MonoBehaviour:
   - {fileID: 8981572059574349382}
   - {fileID: -7570659539666722187}
   - {fileID: -8652000242002374250}
+  - {fileID: 6438405590150294153}
   - {fileID: 618499627384911689}
   - {fileID: -5429601353496565382}
   - {fileID: 8467977470284476441}
@@ -348,6 +349,33 @@ MonoBehaviour:
     title: default
     asset:
       m_AssetGUID: f514723b62c0626489727f0a653d9a7a
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &6438405590150294153
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: GuildLevels
+  m_EditorClassIdentifier: 
+  id: ee11b0e380b34e30a5651879965a3253
+  title: GuildLevels
+  path: GuildLevels
+  layerKey:
+    value: 37907a48d71b406fb0dad3e7b3d60e42
+  components:
+  - id: 00a77e47c4344b038f660eea9e5c4445
+    title: default
+    asset:
+      m_AssetGUID: c61d0b970bbdd534d8b981d9090fb6b8
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 

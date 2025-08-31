@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4255440727497672944}
   - component: {fileID: 2773019056083178250}
   - component: {fileID: 1077262343954476012}
+  - component: {fileID: 998393878980150669}
   - component: {fileID: 9020327951960004734}
   m_Layer: 5
   m_Name: RaidItem
@@ -103,6 +104,24 @@ MonoBehaviour:
   - {fileID: 6361936051617499405}
   ignoreSelectedState: 1
   button: {fileID: 2773019056083178250}
+--- !u!114 &998393878980150669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165529300957511433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ca37256e06ff4b8f6258825a4c5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipRef:
+    m_AssetGUID: 4bf11e33a7adefd47a85ae1abbf49fda
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!114 &9020327951960004734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +137,7 @@ MonoBehaviour:
   image: {fileID: 8983740857135814664}
   nameText: {fileID: 7104798369971896051}
   button: {fileID: 1077262343954476012}
+  tooltipComponent: {fileID: 998393878980150669}
 --- !u!1 &6153056663655212281
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,19 +502,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6220145868324660755, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6220145868324660755, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
       propertyPath: m_Color.b
-      value: 0.25500003
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6220145868324660755, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
       propertyPath: m_Color.g
-      value: 0.85
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6220145868324660755, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
       propertyPath: m_Color.r
-      value: 0.25559738
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8629330097079247994, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
       propertyPath: m_Name

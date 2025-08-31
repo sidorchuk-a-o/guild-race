@@ -22,7 +22,7 @@ namespace Game.Instances
         {
             LockWizard();
 
-            instancesImporter ??= new(SheetId, "boss-data", "O2:X", typeof(InstanceData));
+            instancesImporter ??= new(SheetId, "boss-data", "O2:Y", typeof(InstanceData));
             boosUnitsImporter ??= new(SheetId, "boss-units", "A:N", typeof(UnitData));
             abilitiesImporter ??= new(SheetId, "unit-abilities", "A:J", typeof(AbilityData));
 
@@ -78,6 +78,7 @@ namespace Game.Instances
             var descKey = row["Desc Key"].LocalizeKeyParse();
             var type = new InstanceType(row["Type ID"].IntParse());
             var imageRef = row["Image Name"].AddressableFileParse();
+            var loadingRef = row["Loading Screen"].AddressableFileParse();
 
             instanceData.GetProperty("id").SetValue(id);
             instanceData.GetProperty("title").SetValue(title);
@@ -85,6 +86,7 @@ namespace Game.Instances
             instanceData.GetProperty("descKey").SetValue(descKey);
             instanceData.GetProperty("type").SetValue(type);
             instanceData.GetProperty("imageRef").SetValue(imageRef);
+            instanceData.GetProperty("loadingRef").SetValue(loadingRef);
 
             ImportBossUnits(instanceData);
         }

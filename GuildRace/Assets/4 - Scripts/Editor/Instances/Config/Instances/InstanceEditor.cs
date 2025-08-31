@@ -11,6 +11,7 @@ namespace Game.Instances
         private PropertyElement nameKeyField;
         private PropertyElement descKeyField;
         private AddressableElement<Sprite> imageRefField;
+        private AddressableElement<Sprite> loadingRefField;
 
         private UnitsList boosUnitsList;
 
@@ -39,6 +40,9 @@ namespace Game.Instances
 
             imageRefField = root.CreateAddressable<Sprite>();
             imageRefField.BindProperty("imageRef", data);
+
+            loadingRefField = root.CreateAddressable<Sprite>();
+            loadingRefField.BindProperty("loadingRef", data);
 
             root.CreateHeader("Boos Units");
 

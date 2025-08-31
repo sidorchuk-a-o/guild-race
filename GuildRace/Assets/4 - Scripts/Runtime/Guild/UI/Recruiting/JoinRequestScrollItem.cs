@@ -76,11 +76,12 @@ namespace Game.Guild
 
         private void AcceptCallback()
         {
+            var requestId = ViewModel.Id;
             var parameters = RouteParams.Default;
 
             parameters[BaseDialog.okKey] = (Action)(() =>
             {
-                guildVMF.AcceptJoinRequest(ViewModel.Id);
+                guildVMF.AcceptJoinRequest(requestId);
             });
 
             router.Push(RouteKeys.Guild.AcceptJointRequest, parameters: parameters);
@@ -88,11 +89,12 @@ namespace Game.Guild
 
         private void DeclineCallback()
         {
+            var requestId = ViewModel.Id;
             var parameters = RouteParams.Default;
 
             parameters[BaseDialog.okKey] = (Action)(() =>
             {
-                guildVMF.DeclineJoinRequest(ViewModel.Id);
+                guildVMF.DeclineJoinRequest(requestId);
             });
 
             router.Push(RouteKeys.Guild.DeclineJointRequest, parameters: parameters);

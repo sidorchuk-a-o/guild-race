@@ -36,9 +36,14 @@ namespace Game.Instances
             BossUnitsVM.AddTo(this);
         }
 
-        public async UniTask<Sprite> LoadImage(CancellationTokenSource ct)
+        public async UniTask<Sprite> LoadPreviewImage(CancellationTokenSource ct)
         {
             return await instancesVMF.LoadImage(info.ImageRef, ct);
+        }
+
+        public async UniTask<Sprite> LoadLoadingImage(CancellationTokenSource ct)
+        {
+            return await instancesVMF.LoadImage(info.LoadingRef, ct);
         }
     }
 }

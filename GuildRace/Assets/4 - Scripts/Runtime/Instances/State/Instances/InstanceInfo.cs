@@ -13,6 +13,7 @@ namespace Game.Instances
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
         public AssetReference ImageRef { get; }
+        public AssetReference LoadingRef { get; }
 
         public UnitInfo[] BossUnits { get; }
 
@@ -23,6 +24,7 @@ namespace Game.Instances
             NameKey = data.NameKey;
             DescKey = data.DescKey;
             ImageRef = data.ImageRef;
+            LoadingRef = data.LoadingRef;
             BossUnits = bossUnits.ToArray();
         }
 

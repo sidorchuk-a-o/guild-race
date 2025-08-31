@@ -53,8 +53,8 @@ namespace Game.Inventory
 
             rect.sizeDelta = new Vector2
             {
-                x = ViewModel.Bounds.size.x * CellSize,
-                y = ViewModel.Bounds.size.y * CellSize
+                x = ViewModel.Bounds.Value.size.x * CellSize,
+                y = ViewModel.Bounds.Value.size.y * CellSize
             };
         }
 
