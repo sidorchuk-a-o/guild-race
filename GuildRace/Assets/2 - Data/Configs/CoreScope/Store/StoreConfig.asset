@@ -61,7 +61,7 @@ MonoBehaviour:
   descKey:
     value: STORE/EQUIP_DUNGEON_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 6136e94211599b046a8b0401240fbcc5
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -133,7 +133,7 @@ MonoBehaviour:
   descKey:
     value: STORE/REAGENTS_CHEST_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 4194ed1ebcdd6db4e8707bd03b3382d2
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -230,7 +230,7 @@ MonoBehaviour:
   descKey:
     value: STORE/INSCRYPTER_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: f08d1d44bfcb2c44893d22907cab490d
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -257,7 +257,7 @@ MonoBehaviour:
   descKey:
     value: STORE/REAGENTS_CHEST_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: edaa12d99e49e6f48a48d281b87dc589
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -298,7 +298,7 @@ MonoBehaviour:
   descKey:
     value: STORE/ALCHEMIST_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 03159febd4440a1419a555584998daae
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -325,7 +325,7 @@ MonoBehaviour:
   descKey:
     value: STORE/EQUIP_RAID_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 64c5229592555d54681c5cb30769fd19
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -464,7 +464,7 @@ MonoBehaviour:
   descKey:
     value: STORE/EQUIP_RAID_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 30e86af03d6c8b84eb1d922d1570d08c
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -491,7 +491,7 @@ MonoBehaviour:
   descKey:
     value: STORE/REAGENTS_CHEST_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 25382ec6d2be44244bde4e4f5f7ed19c
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -601,7 +601,7 @@ MonoBehaviour:
   descKey:
     value: STORE/GOLD_PACK_LARGE_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 95ab749bc26421b4f96c4d343436e744
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -642,7 +642,7 @@ MonoBehaviour:
   descKey:
     value: STORE/GOLD_CHEST_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 5cbbb682fe775934e8e1ec1fa033a3af
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   descKey:
     value: STORE/EQUIP_DUNGEON_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: acbf29f952f88f347995d8ee2055c448
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   descKey:
     value: STORE/WEAPONMASTER_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 89cd3b8bb8004b44fbf5184f990e215a
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   descKey:
     value: STORE/ARMORER_PACK_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: fd98d7e172d00274a84f57a363f16a72
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   descKey:
     value: STORE/GOLD_CURRENCY_DESC
   iconRef:
-    m_AssetGUID: 1345ab258b0300f448cb34805bbe72f9
+    m_AssetGUID: e99a35fa3a58dc8438731dd2d833f69a
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1363,7 +1363,7 @@ MonoBehaviour:
   descKey:
     value: STORE/GOLD_PACK_MEDIUM_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: f98d8fdd63206004b980f497a2dfb6ab
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   descKey:
     value: STORE/GOLD_PACK_SMALL_DSC
   iconRef:
-    m_AssetGUID: 
+    m_AssetGUID: 9acb892ae8ec51f4ebc73ae576f7b088
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 

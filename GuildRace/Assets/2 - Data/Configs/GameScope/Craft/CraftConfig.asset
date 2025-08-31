@@ -24,7 +24,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1002_TTL
   iconRef:
-    m_AssetGUID: ea0a16baf7fd80842a836af249dbb5f2
+    m_AssetGUID: 6193bad3e3475aa419d595bb4ebb0176
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -57,7 +57,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1003_TTL
   iconRef:
-    m_AssetGUID: c4558a589f3f9014fa0be9467455f8ca
+    m_AssetGUID: 24f84794ec7a1d74d8e0ca360bec3639
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -90,7 +90,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1004_TTL
   iconRef:
-    m_AssetGUID: a3692a7c71210be44bdd46a06eea93c6
+    m_AssetGUID: be004ecb132348b46b3f3be1bdf1abd8
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -124,7 +124,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1007_TTL
   iconRef:
-    m_AssetGUID: 42e2f1f0c48b9804088f0247a2c98faa
+    m_AssetGUID: ffde06630aee7644a8bbbdcc8ad22e69
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -157,7 +157,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1008_TTL
   iconRef:
-    m_AssetGUID: 2413974bd9654ab44a1fc54cff8c0b77
+    m_AssetGUID: 247d6e2628200894bb0023f3076afbf4
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -190,7 +190,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1001_TTL
   iconRef:
-    m_AssetGUID: 6c41675ed53291b4db0886a334fdec58
+    m_AssetGUID: 649dcf30b7fb02e489cfa97a46d77d6a
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -223,7 +223,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1011_TTL
   iconRef:
-    m_AssetGUID: 0f9f9e858adbbed4f97b39f59453f5ff
+    m_AssetGUID: dd426c8599887a64fb920d340ce8f91f
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -256,7 +256,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1010_TTL
   iconRef:
-    m_AssetGUID: 8a193b04cd0a63a468353549e910d38c
+    m_AssetGUID: ad39a65fb767f334c9cba3d062c0d804
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1009_TTL
   iconRef:
-    m_AssetGUID: c2c708f4221968e40b659a9ad531fee5
+    m_AssetGUID: 5ce51f2c09c7b3241bc3b4de83c8a852
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1013_TTL
   iconRef:
-    m_AssetGUID: 6621c941f72416340a692bc6a8687b86
+    m_AssetGUID: 644c227f9c26f4d4885d4dc6f2caee83
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1006_TTL
   iconRef:
-    m_AssetGUID: 55cd6bebb77b21f47a5a8562261a89c6
+    m_AssetGUID: 2e92ed1800a9fae4d8dcf00918a338db
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1012_TTL
   iconRef:
-    m_AssetGUID: c5ce6662f6f1e5f4cbbede6318d6f962
+    m_AssetGUID: 64bf49e84bedae34abe27395e3aac2e3
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   nameKey:
     value: CRAFT/REAGENT_1005_TTL
   iconRef:
-    m_AssetGUID: 121e5d78f8d698d4ca470b8656d91da6
+    m_AssetGUID: 871cb76ba83787140ab227284f688afa
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
