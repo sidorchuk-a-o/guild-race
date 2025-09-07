@@ -1,4 +1,5 @@
-﻿using AD.Services.ProtectedTime;
+﻿using AD.Services.Localization;
+using AD.Services.ProtectedTime;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.Inventory;
@@ -22,7 +23,11 @@ namespace Game.Guild
         private readonly RecruitingState recruitingState;
 
         private readonly IInventoryService inventoryService;
+        private readonly ILocalizationService localization;
         private readonly ITimeService time;
+
+        private readonly Dictionary<GenderType, LocalizeKey[]> namesCache;
+        private readonly Dictionary<GenderType, LocalizeKey[]> surnamesCache;
 
         public IReadOnlyReactiveProperty<bool> IsEnabled => recruitingState.IsEnabled;
 
@@ -34,6 +39,7 @@ namespace Game.Guild
             GuildConfig guildConfig,
             InventoryConfig inventoryConfig,
             IInventoryService inventoryService,
+            ILocalizationService localization,
             ITimeService time,
             IObjectResolver resolver)
         {
@@ -41,10 +47,14 @@ namespace Game.Guild
             this.guildState = guildState;
             this.inventoryConfig = inventoryConfig;
             this.inventoryService = inventoryService;
+            this.localization = localization;
             this.time = time;
 
             data = guildConfig.RecruitingParams;
             recruitingState = new(guildConfig, inventoryService, resolver);
+
+            namesCache = new Dictionary<GenderType, LocalizeKey[]>();
+            surnamesCache = new Dictionary<GenderType, LocalizeKey[]>();
         }
 
         public void SwitchRecruitingState()
@@ -56,10 +66,36 @@ namespace Game.Guild
         {
             recruitingState.Init();
 
+            CreateNamesCache();
             CreateDefaultRequests();
+
             UpdateOffileRequests();
 
             time.OnTick.Subscribe(OnUpdate);
+        }
+
+        private void CreateNamesCache()
+        {
+            createNamesCache(GenderType.Male, "MALE_NAMES");
+            createNamesCache(GenderType.Female, "FEMALE_NAMES");
+
+            void createNamesCache(GenderType gender, string category)
+            {
+                var terms = localization.GetTerms(category);
+                var nameFilter = $"{category}/NAME";
+                var surnameFilter = $"{category}/SURNAME";
+
+                var names = terms.Where(x => filter(x, nameFilter)).ToArray();
+                var surnames = terms.Where(x => filter(x, surnameFilter)).ToArray();
+
+                static bool filter(string key, string keyFilter)
+                {
+                    return key.StartsWith(keyFilter);
+                }
+
+                namesCache[gender] = names;
+                surnamesCache[gender] = surnames;
+            }
         }
 
         public int AcceptJoinRequest(string requestId, out JoinRequestInfo info)
@@ -262,14 +298,17 @@ namespace Game.Guild
         private JoinRequestInfo CreateRequest(ClassData classData, SpecializationData specData, DateTime createdTime)
         {
             var id = GuidUtils.Generate();
-            var nickname = GetNickname(id);
             var recruitRank = guildState.GuildRanks.Last();
+
+            var gender = GenerateGender();
+            var name = GenerateName(gender);
+            var surname = GenerateSurname(gender);
 
             var equipSlots = CreateEquipSlots(classData);
 
             CreateEquipItems(equipSlots, classData);
 
-            var character = new CharacterInfo(id, nickname, classData.Id, specData.Id, equipSlots);
+            var character = new CharacterInfo(id, name, surname, gender, classData.Id, specData.Id, equipSlots);
 
             character.Init();
             character.SetGuildRank(recruitRank.Id);
@@ -277,9 +316,31 @@ namespace Game.Guild
             return new JoinRequestInfo(character, createdTime);
         }
 
-        private static string GetNickname(string id)
+        private GenderType GenerateGender()
         {
-            return $"Игрок ({id[..7]})";
+            return Enum
+                .GetValues(typeof(GenderType))
+                .OfType<GenderType>()
+                .RandomValue();
+        }
+
+        private string GenerateName(GenderType gender)
+        {
+            return namesCache[gender].RandomValue();
+        }
+
+        private string GenerateSurname(GenderType gender)
+        {
+            var surname = default(LocalizeKey);
+            var characters = guildState.Characters;
+
+            do
+            {
+                surname = surnamesCache[gender].RandomValue();
+            }
+            while (characters.Any(x => x.SurnameKey == surname));
+
+            return surname;
         }
 
         private float GetClassRoleWeight(ClassRoleSelectorInfo classRoleSelector)

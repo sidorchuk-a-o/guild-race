@@ -1,8 +1,9 @@
-﻿using System.Threading;
-using Cysharp.Threading.Tasks;
-using AD.UI;
+﻿using AD.UI;
 using AD.Services.Router;
 using AD.ToolsCollection;
+using Game.Guild;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -12,7 +13,7 @@ namespace Game.Instances
     public class SquadCandidateScrollItem : VMScrollItem<SquadCandidateVM>
     {
         [Header("Character")]
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private NicknameComponent nicknameComponent;
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
@@ -42,7 +43,7 @@ namespace Game.Instances
             // character 
             var characterVM = ViewModel.CharacterVM;
 
-            nicknameText.SetTextParams(characterVM.Nickname);
+            nicknameComponent.Init(characterVM);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
             specNameText.SetTextParams(characterVM.SpecVM.NameKey);
             itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);

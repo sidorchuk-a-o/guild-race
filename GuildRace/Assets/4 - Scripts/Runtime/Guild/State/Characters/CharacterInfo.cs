@@ -1,4 +1,5 @@
-﻿using AD.ToolsCollection;
+﻿using AD.Services.Localization;
+using AD.ToolsCollection;
 using Game.Inventory;
 using System.Collections.Generic;
 using UniRx;
@@ -14,7 +15,9 @@ namespace Game.Guild
         private readonly ItemSlotsCollection equipSlots;
 
         public string Id { get; }
-        public string Nickname { get; }
+        public LocalizeKey NameKey { get; }
+        public LocalizeKey SurnameKey { get; }
+        public GenderType Gender { get; }
 
         public ClassId ClassId { get; }
         public SpecializationId SpecId { get; }
@@ -29,7 +32,9 @@ namespace Game.Guild
 
         public CharacterInfo(
             string id,
-            string nickname,
+            LocalizeKey nameKey,
+            LocalizeKey surnameKey,
+            GenderType gender,
             ClassId classId,
             SpecializationId specId,
             IEnumerable<EquipSlotInfo> equipSlots)
@@ -37,7 +42,9 @@ namespace Game.Guild
             this.equipSlots = new(equipSlots);
 
             Id = id;
-            Nickname = nickname;
+            NameKey = nameKey;
+            SurnameKey = surnameKey;
+            Gender = gender;
             ClassId = classId;
             SpecId = specId;
         }

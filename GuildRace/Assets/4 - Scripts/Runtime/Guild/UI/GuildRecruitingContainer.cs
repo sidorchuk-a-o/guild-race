@@ -21,7 +21,7 @@ namespace Game.Guild
         [SerializeField] private CanvasGroup characterContainer;
         [Space]
         [SerializeField] private UIText itemsLevelText;
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private NicknameComponent nicknameComponent;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [Space]
@@ -202,7 +202,7 @@ namespace Game.Guild
             {
                 var characterVM = joinRequestVM.CharacterVM;
 
-                nicknameText.SetTextParams(characterVM.Nickname);
+                nicknameComponent.Init(characterVM);
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 

@@ -1,5 +1,6 @@
 ﻿using AD.UI;
 using AD.ToolsCollection;
+using Game.Guild;
 using Game.Inventory;
 using System.Threading;
 using UniRx;
@@ -14,7 +15,7 @@ namespace Game.Instances
         [SerializeField] private GameObject characterItem;
         [SerializeField] private UIButton selectButton;
         [Space]
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private NicknameComponent nicknameComponent;
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
@@ -63,7 +64,7 @@ namespace Game.Instances
             {
                 var characterVM = squadUnitVM.CharactedVM;
 
-                nicknameText.SetTextParams(characterVM.Nickname);
+                nicknameComponent.Init(characterVM);
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);

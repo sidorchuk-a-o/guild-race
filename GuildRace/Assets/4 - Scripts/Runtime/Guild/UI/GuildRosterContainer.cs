@@ -1,11 +1,11 @@
-﻿using AD.Services.Router;
+﻿using AD.UI;
+using AD.Services.Router;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Inventory;
 using System;
 using System.Threading;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -23,7 +23,7 @@ namespace Game.Guild
         [SerializeField] private UIButton removeButton;
         [Space]
         [SerializeField] private UIText itemsLevelText;
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private NicknameComponent nicknameComponent;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [SerializeField] private UIText guildRankText;
@@ -161,7 +161,7 @@ namespace Game.Guild
 
             void updateCharacter()
             {
-                nicknameText.SetTextParams(characterVM.Nickname);
+                nicknameComponent.Init(characterVM);
                 classNameText.SetTextParams(characterVM.ClassVM.NameKey);
                 specNameText.SetTextParams(characterVM.SpecVM.NameKey);
 
