@@ -48,6 +48,11 @@ namespace Game.Quests
             if (addCount > 0)
             {
                 maxQuestsCountProp.Value = count;
+            }
+
+            if (Quests.Count < maxQuestsCountProp.Value)
+            {
+                addCount = maxQuestsCountProp.Value - Quests.Count;
 
                 AddQuests(addCount);
             }
