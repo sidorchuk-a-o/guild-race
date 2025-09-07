@@ -217,6 +217,7 @@ MonoBehaviour:
   title: Hub
   routes:
   - {fileID: -1523697382088787619}
+  - {fileID: 6872997417629806671}
 --- !u!114 &71003467469975860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +377,33 @@ MonoBehaviour:
     title: default
     asset:
       m_AssetGUID: c61d0b970bbdd534d8b981d9090fb6b8
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  children: []
+--- !u!114 &6872997417629806671
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e6bb19517d4d42b01e4d87fc134ab, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  id: f7d197b63fb8486b9ce61af9f3079272
+  title: Settings
+  path: Settings
+  layerKey:
+    value: c38b631c114048f2985caa6e0e90bc64
+  components:
+  - id: d60502bcfcc646389c1b52a5aa8c8bc0
+    title: default
+    asset:
+      m_AssetGUID: ab5425fcba20b2445aa4a51825e79564
       m_SubObjectName: 
       m_SubObjectGUID: 
       m_SubObjectType: 

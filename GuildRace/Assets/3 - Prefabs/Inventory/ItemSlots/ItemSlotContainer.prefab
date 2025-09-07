@@ -509,9 +509,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot:
     value: 181
+  slotParams: {fileID: 0}
+  tooltipParams: {fileID: 0}
   itemPreview: {fileID: 7295498088897353069}
+  addSfxKey:
+    value: 38b6fa7f6d8248259cf7ae0652f67d27
   pickupStates: {fileID: 6944904510650452497}
   pickupPreviewImage: {fileID: 3380064364650367119}
+  errorState: slotError
+  readyState: slotReady
+  previewState: slotPreview
+  isReadOnly: 0
 --- !u!1 &6103890772475530163
 GameObject:
   m_ObjectHideFlags: 0

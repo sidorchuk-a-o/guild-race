@@ -26,13 +26,48 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: SETTINGS/SETTINGS_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: SETTINGS/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: SETTINGS/UI_AUDIO_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u0417\u0432\u0443\u043A\u0438 UI"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: SETTINGS/MUSIC_AUDIO_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041C\u0443\u0437\u044B\u043A\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: TUTORIAL/TAP_TO_CLOSE_BTN
       TermType: 0
       Description: 
       Languages:
       - Press to continue
-      - "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u0447\u0442\u043E\u0431\u044B
-        \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+      - "\u041D\u0430\u0436\u043C\u0438, \u0447\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -67,7 +102,16 @@ MonoBehaviour:
         \u0438\u0441\u0442\u043E\u0440\u0438\u044F \u0422\u0432\u043E\u0435\u0439
         \u0433\u0438\u043B\u044C\u0434\u0438\u0438. \u0418 \u0442\u043E\u043B\u044C\u043A\u043E
         \u043E\u0442 \u0442\u0435\u0431\u044F \u0437\u0430\u0432\u0438\u0441\u0438\u0442,
-        \u043A\u0430\u043A \u043E\u043D\u0430 \u0441\u043B\u043E\u0436\u0438\u0442\u0441\u044F."
+        \u043A\u0430\u043A \u043E\u043D\u0430 \u0441\u043B\u043E\u0436\u0438\u0442\u0441\u044F.
+        \u041F\u0440\u0438\u043D\u0438\u043C\u0430\u0439 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432,
+        \u0441\u043D\u0430\u0440\u044F\u0436\u0430\u0439 \u0438\u0445 \u0432 \u043F\u043E\u0445\u043E\u0434\u044B,
+        \u043F\u0440\u043E\u0445\u043E\u0434\u0438 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F
+        \u0438 \u0440\u0435\u0439\u0434\u044B, \u0443\u0441\u0438\u043B\u0438\u0432\u0430\u0439
+        \u0438\u0445 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0420\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432
+        - \u0441\u0434\u0435\u043B\u0430\u0439 \u0432\u0441\u0435, \u0447\u0442\u043E\u0431\u044B
+        \u0442\u0432\u043E\u044F \u0413\u0438\u043B\u044C\u0434\u0438\u044F \u0437\u0430\u043D\u044F\u043B\u0430
+        \u0432\u0430\u0436\u043D\u0443\u044E \u0440\u043E\u043B\u044C \u0432 \u044D\u0442\u043E\u0439
+        \u0438\u0441\u0442\u043E\u0440\u0438\u0438!"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -86,9 +130,18 @@ MonoBehaviour:
       Languages:
       - \tHere, in Guild Bank, you can store new obtained items and  currencies.
       - "\\t\u0412 \u0433\u0438\u043B\u044C\u0434\u0435\u0439\u0441\u043A\u043E\u043C
-        \u0431\u0430\u043D\u043A\u0435 \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F
-        \u0434\u043E\u0431\u044B\u0442\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
-        \u0438 \u0432\u0430\u043B\u044E\u0442\u0430."
+        \u0431\u0430\u043D\u043A\u0435 \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F:\\t
+        - \u0434\u043E\u0431\u044B\u0442\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
+        (\u0440\u0435\u0430\u0433\u0435\u043D\u0442\u044B, \u0440\u0430\u0441\u0445\u043E\u0434\u043D\u0438\u043A\u0438,
+        \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430)\\t - \u0441\u043E\u0437\u0434\u0430\u043D\u043D\u044B\u0435
+        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B (\u0440\u0430\u0441\u0445\u043E\u0434\u043D\u0438\u043A\u0438,
+        \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430)\\t - \u0437\u043E\u043B\u043E\u0442\u043E.\\t\\t\u0412
+        \u0411\u0430\u043D\u043A\u0435 \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
+        \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C
+        \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0443 \u043C\u0435\u0436\u0434\u0443
+        \u0447\u043B\u0435\u043D\u0430\u043C\u0438 \u0433\u0438\u043B\u044C\u0434\u0438\u0438,
+        \u0440\u0430\u0441\u043F\u044B\u043B\u0438\u0442\u044C \u043D\u0435\u043D\u0443\u0436\u043D\u044B\u0435
+        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -106,12 +159,20 @@ MonoBehaviour:
       Description: 
       Languages:
       - \tReview new applications and make the decision if you want to accept them.
-      - "\\t\u0422\u0443\u0442 \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435
+      - "\\t\u0422\u0443\u0442 \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
         \u0440\u0430\u0441\u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044C
         \u0437\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432.
-        \u041F\u0440\u0438\u043C\u0438\u0442\u0435 \u044D\u0442\u0438\u0445 \u043F\u0435\u0440\u0432\u044B\u0445
+        \u0421\u0435\u0439\u0447\u0430\u0441 \u0438\u0445 \u043D\u0435\u043C\u043D\u043E\u0433\u043E,
+        \u043D\u043E, \u0447\u0435\u043C \u043C\u043E\u0449\u043D\u0435\u0435 \u0438
+        \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0435\u0435 \u0431\u0443\u0434\u0435\u0442
+        \u0442\u0432\u043E\u044F \u0413\u0438\u043B\u044C\u0434\u0438\u044F, \u0442\u0435\u043C
+        \u0431\u043E\u043B\u044C\u0448\u0435 \u0437\u0430\u044F\u0432\u043E\u043A
+        \u0431\u0443\u0434\u0435\u0442 \u0432 \u043D\u0435\u0435 \u043F\u043E\u0441\u0442\u0443\u043F\u0430\u0442\u044C.
+        \u041F\u0440\u0438\u043C\u0438 \u044D\u0442\u0438\u0445 \u043F\u0435\u0440\u0432\u044B\u0445
         \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432 \u0432 \u0441\u0432\u043E\u0438
-        \u0440\u044F\u0434\u044B."
+        \u0440\u044F\u0434\u044B \u0438 \u043D\u0430\u0447\u043D\u0438 \u043F\u0435\u0440\u0432\u0443\u044E
+        \u0433\u043B\u0430\u0432\u0443 \u0438\u0441\u0442\u043E\u0440\u0438\u0438
+        \u0413\u0438\u043B\u044C\u0434\u0438\u0438."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -130,8 +191,21 @@ MonoBehaviour:
       Languages:
       - \tAdvanced guild members info.
       - "\\t\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F
-        \u043E \u0447\u043B\u0435\u043D\u0430\u0445 \u0432\u0430\u0448\u0435\u0439
-        \u0433\u0438\u043B\u044C\u0434\u0438\u0438."
+        \u043E \u0447\u043B\u0435\u043D\u0430\u0445 \u0433\u0438\u043B\u044C\u0434\u0438\u0438.
+        \u0412 \u044D\u0442\u043E\u043C \u0440\u0430\u0437\u0434\u0435\u043B\u0435
+        \u0435\u0441\u0442\u044C \u0432\u0441\u044F \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u044F
+        \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0431
+        \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u0445:\\t - \u043A\u043B\u0430\u0441\u0441\\t
+        - \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F\\t
+        - \u0440\u043E\u043B\u044C \\t - \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435
+        \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0435\u0439
+        (\u0441 \u0443\u043A\u0430\u0437\u0430\u043D\u0438\u0435\u043C \u0423\u0433\u0440\u043E\u0437\u044B,
+        \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u0435\u0442
+        \u044D\u0442\u0430 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C)\\t
+        - \u0441\u043F\u0438\u0441\u043E\u043A \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0438,
+        \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u043D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439
+        \u043C\u043E\u043C\u0435\u043D\u0442 \u043D\u0430\u0434\u0435\u0442\u0430
+        \u043D\u0430 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -150,16 +224,22 @@ MonoBehaviour:
       Languages:
       - '\tShows your Guild''s current level. Increase it and get access to extended
         features of your Guild: cheaper craft, free items and even more!'
-      - "\\t\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u0442\u0435\u043A\u0443\u0449\u0438\u0439
-        \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u0432\u0430\u0448\u0435\u0439
-        \u0413\u0438\u043B\u044C\u0434\u0438\u0438. \u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u0439\u0442\u0435
-        \u0435\u0433\u043E \u0438 \u043F\u043E\u043B\u0443\u0447\u0430\u0439\u0442\u0435
-        \u0434\u043E\u0441\u0442\u0443\u043F \u043A \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u043D\u044B\u043C
+      - "\\t\u0420\u0430\u0437\u0434\u0435\u043B, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C
+        \u043C\u043E\u0436\u043D\u043E \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0442\u044C
+        \u0442\u0432\u043E\u044E \u0413\u0438\u043B\u044C\u0434\u0438\u044E. \u0412
+        \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u0438 \u043E\u0442
+        \u0443\u0440\u043E\u0432\u043D\u044F \u0433\u0438\u043B\u044C\u0434\u0438\u0438,
+        \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C
+        \u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u043D\u044B\u0435
+        \u0431\u043E\u043D\u0443\u0441\u044B. \u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u044C
+        \u0435\u0433\u043E \u0438 \u043F\u043E\u043B\u0443\u0447\u0438 \u0434\u043E\u0441\u0442\u0443\u043F
+        \u043A \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u043D\u044B\u043C
         \u0444\u0443\u043D\u043A\u0446\u0438\u044F\u043C \u0413\u0438\u043B\u044C\u0434\u0438\u0438:
         \u0441\u043A\u0438\u0434\u043A\u0438 \u043D\u0430 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435
         \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432, \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0435
-        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B \u0438 \u0434\u0430\u0436\u0435
-        \u0431\u043E\u043B\u044C\u0448\u0435! "
+        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B, \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435
+        \u0440\u043E\u0441\u0442\u0435\u0440\u0430 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
+        \u0438 \u0434\u0430\u0436\u0435 \u0431\u043E\u043B\u044C\u0448\u0435! "
       - 
       Flags: 000000
       Languages_Touch: []
@@ -227,7 +307,20 @@ MonoBehaviour:
       - "\\t\u0421\u043E\u0431\u0438\u0440\u0430\u0439 \u0433\u0440\u0443\u043F\u043F\u0443
         \u0438 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439 \u0438\u0445
         \u043D\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 \u0432 \u043B\u043E\u0433\u043E\u0432\u043E
-        \u0432\u0440\u0430\u0433\u0430."
+        \u0432\u0440\u0430\u0433\u0430. \u0415\u0441\u0442\u044C 2 \u0442\u0438\u043F\u0430
+        \u0437\u0430\u0434\u0430\u043D\u0438\u0439: \u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0435
+        (\u043E\u0431\u043D\u043E\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0440\u0430\u0437
+        \u0432 \u0434\u0435\u043D\u044C) \u0438 \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0435
+        (\u043E\u0431\u043D\u043E\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0440\u0430\u0437
+        \u0432 3 \u0434\u043D\u044F). \u041D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439
+        \u043C\u043E\u043C\u0435\u043D\u0442 \u0442\u0435\u0431\u0435 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E
+        3 \u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0445 \u0438 3 \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
+        \u0437\u0430\u0434\u0430\u043D\u0438\u044F. \u041F\u0440\u043E\u0432\u0435\u0440\u044C
+        \u0442\u0435\u043A\u0443\u0449\u0438\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u044F,
+        \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C, \u0442\u0430\u043C
+        \u0435\u0441\u0442\u044C \u0447\u0442\u043E-\u0442\u043E, \u0447\u0442\u043E
+        \u0442\u044B \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u043B\u0435\u0433\u043A\u043E
+        \u0438 \u0431\u044B\u0441\u0442\u0440\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C?"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -247,8 +340,11 @@ MonoBehaviour:
       - \tTrack current progress of your groups, check result and get some loot.
       - "\\t\u041E\u0442\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u0439 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0435
         \u0433\u0440\u0443\u043F\u043F\u044B, \u0432\u043E\u0432\u0440\u0435\u043C\u044F
-        \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0439 \u0438\u0445 \u0438 \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u044F\u0439
-        \u0434\u043E\u0431\u044B\u0442\u0438\u044B\u0435 \u0441\u043E\u043A\u0440\u043E\u0432\u0438\u0449\u0430."
+        \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0439 \u0438\u0445 \u0438 \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0439
+        \u0434\u043E\u0431\u044B\u0442\u044B\u0435 \u0441\u043E\u043A\u0440\u043E\u0432\u0438\u0449\u0430.
+        \u041D\u0435 \u0437\u0430\u0431\u0443\u0434\u044C \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C
+        \u0431\u043E\u043D\u0443\u0441\u043D\u0443\u044E \u043D\u0430\u0433\u0440\u0430\u0434\u0443
+        \u0437\u0430 \u043F\u043E\u0431\u0435\u0434\u0443 \u043D\u0430\u0434 \u0431\u043E\u0441\u0441\u043E\u043C."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -266,11 +362,29 @@ MonoBehaviour:
       Description: 
       Languages:
       - Increase your guild's rating for each successful dungeon or raid expedition.
-      - "\u041F\u043E\u0432\u044B\u0448\u0430\u0439 \u0440\u0435\u0439\u0442\u0438\u043D\u0433
-        \u0433\u0438\u043B\u044C\u0434\u0438\u0438 \u0437\u0430 \u043A\u0430\u0436\u0434\u0443\u044E
-        \u0443\u0441\u043F\u0435\u0448\u043D\u0443\u044E \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u044E
-        \u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u0435 \u0438\u043B\u0438
-        \u0440\u0435\u0439\u0434. "
+      - "\\t\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 2 \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0430
+        - \u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
+        \u0438 \u0421\u0438\u043B\u0430 \u0433\u0438\u043B\u044C\u0434\u0438\u0438.\\t\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441
+        \u043F\u043E\u0432\u044B\u0448\u0430\u0435\u0442\u0441\u044F \u0437\u0430
+        \u0443\u0441\u043F\u0435\u0448\u043D\u044B\u0435 \u043F\u043E\u0431\u0435\u0434\u044B
+        \u043D\u0430\u0434 \u0431\u043E\u0441\u0441\u0430\u043C\u0438 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u0438\u0439
+        \u0438 \u0440\u0435\u0439\u0434\u043E\u0432. \u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
+        \u043F\u043E\u0432\u044B\u0448\u0435\u043D\u0438\u044F \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0430
+        \u043C\u043E\u0436\u043D\u043E \u0443\u0432\u0438\u0434\u0435\u0442\u044C
+        \u043F\u0440\u0438 \u0432\u044B\u0431\u043E\u0440\u0435 \u0431\u043E\u0441\u0441\u0430
+        \u0432 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 \"\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F
+        \u0438 \u0440\u0435\u0439\u0434\u044B\".\\t\u0421\u0438\u043B\u0430 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
+        \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E \u0437\u0430\u0432\u0438\u0441\u0438\u0442
+        \u043E\u0442 \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0438
+        \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439 \u0433\u0438\u043B\u044C\u0434\u0438\u0438.
+        \u0427\u0435\u043C \u043B\u0443\u0447\u0448\u0435 \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u043D
+        \u043A\u0430\u0436\u0434\u044B\u0439 \u0447\u043B\u0435\u043D \u0433\u0438\u043B\u044C\u0434\u0438\u0438,
+        \u0442\u0435\u043C \u0432\u044B\u0448\u0435 \u043F\u043E\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u044C
+        \u0421\u0438\u043B\u044B. ( \u0434\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0439\u0442\u0438\u043D\u0433
+        \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044F \u0437\u0430 \u043A\u0430\u0436\u0434\u043E\u0433\u043E
+        \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0433\u043E \u0447\u043B\u0435\u043D\u0430
+        \u0433\u0438\u043B\u044C\u0434\u0438\u0438, \u0434\u043E 25 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439
+        \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E)"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8749,7 +8863,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Guild Score Rankings
-      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433 \u0441\u0438\u043B\u044B \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
+      - "\u0421\u0438\u043B\u0430 \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8776,8 +8890,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Increase rank by successfully completing dungeon and raid bosses.
-      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433 \u043F\u043E\u0432\u044B\u0448\u0430\u0435\u0442\u0441\u044F
-        \u0437\u0430 \u0443\u0441\u043F\u0435\u0448\u043D\u044B\u0435 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
+      - "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442\u0441\u044F \u0437\u0430
+        \u0443\u0441\u043F\u0435\u0448\u043D\u044B\u0435 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
         \u0431\u043E\u0441\u0441\u043E\u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u0438\u0439
         \u0438 \u0440\u0435\u0439\u0434\u043E\u0432."
       - 
@@ -8787,8 +8901,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ranking Raward
-      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043D\u0430\u0433\u0440\u0430\u0434\u0430"
+      - Ranking reward
+      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043F\u043E\u0431\u0435\u0434\u0430"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8796,9 +8910,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Reward Avaliable
-      - "\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u0430 \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u043E\u0432\u0430\u044F
-        \u043D\u0430\u0433\u0440\u0430\u0434\u0430"
+      - Avaliable Guild rank increase for victory over this boss
+      - "\u0417\u0430 \u043F\u043E\u0431\u0435\u0434\u0443 \u043D\u0430\u0434 \u044D\u0442\u0438\u043C
+        \u0431\u043E\u0441\u0441\u043E\u043C \u0432\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435
+        \u043F\u043E\u0432\u044B\u0448\u0435\u043D\u0438\u0435 \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0430
+        \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8806,9 +8922,1809 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Reward Granted
+      - Ranking reward granted
       - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043D\u0430\u0433\u0440\u0430\u0434\u0430
         \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_01
+      TermType: 0
+      Description: 
+      Languages:
+      - Ratibor
+      - "\u0420\u0430\u0442\u0438\u0431\u043E\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_02
+      TermType: 0
+      Description: 
+      Languages:
+      - Svyatoslav
+      - "\u0421\u0432\u044F\u0442\u043E\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_03
+      TermType: 0
+      Description: 
+      Languages:
+      - Lyubomir
+      - "\u041B\u044E\u0431\u043E\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_04
+      TermType: 0
+      Description: 
+      Languages:
+      - Yaropolk
+      - "\u042F\u0440\u043E\u043F\u043E\u043B\u043A"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_05
+      TermType: 0
+      Description: 
+      Languages:
+      - Stanislav
+      - "\u0421\u0442\u0430\u043D\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_06
+      TermType: 0
+      Description: 
+      Languages:
+      - Peresvet
+      - "\u041F\u0435\u0440\u0435\u0441\u0432\u0435\u0442"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_07
+      TermType: 0
+      Description: 
+      Languages:
+      - Mstislav
+      - "\u041C\u0441\u0442\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_08
+      TermType: 0
+      Description: 
+      Languages:
+      - Vladimir
+      - "\u0412\u043B\u0430\u0434\u0438\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_09
+      TermType: 0
+      Description: 
+      Languages:
+      - Vsevolod
+      - "\u0412\u0441\u0435\u0432\u043E\u043B\u043E\u0434"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Dobrynya
+      - "\u0414\u043E\u0431\u0440\u044B\u043D\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Bogdan
+      - "\u0411\u043E\u0433\u0434\u0430\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Gorislav
+      - "\u0413\u043E\u0440\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Zakhar
+      - "\u0417\u0430\u0445\u0430\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Kazimir
+      - "\u041A\u0430\u0437\u0438\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Luchezar
+      - "\u041B\u0443\u0447\u0435\u0437\u0430\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Miroslav
+      - "\u041C\u0438\u0440\u043E\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_17
+      TermType: 0
+      Description: 
+      Languages:
+      - Nazar
+      - "\u041D\u0430\u0437\u0430\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_18
+      TermType: 0
+      Description: 
+      Languages:
+      - Ostromir
+      - "\u041E\u0441\u0442\u0440\u043E\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_19
+      TermType: 0
+      Description: 
+      Languages:
+      - Potap
+      - "\u041F\u043E\u0442\u0430\u043F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_20
+      TermType: 0
+      Description: 
+      Languages:
+      - Radovan
+      - "\u0420\u0430\u0434\u043E\u0432\u0430\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_21
+      TermType: 0
+      Description: 
+      Languages:
+      - Ratimir
+      - "\u0420\u0430\u0442\u0438\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_22
+      TermType: 0
+      Description: 
+      Languages:
+      - Rostislav
+      - "\u0420\u043E\u0441\u0442\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_23
+      TermType: 0
+      Description: 
+      Languages:
+      - Sadko
+      - "\u0421\u0430\u0434\u043A\u043E"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_24
+      TermType: 0
+      Description: 
+      Languages:
+      - Saveliy
+      - "\u0421\u0430\u0432\u0435\u043B\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_25
+      TermType: 0
+      Description: 
+      Languages:
+      - Samson
+      - "\u0421\u0430\u043C\u0441\u043E\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_26
+      TermType: 0
+      Description: 
+      Languages:
+      - Tverdislav
+      - "\u0422\u0432\u0435\u0440\u0434\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_27
+      TermType: 0
+      Description: 
+      Languages:
+      - Tikhomir
+      - "\u0422\u0438\u0445\u043E\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_28
+      TermType: 0
+      Description: 
+      Languages:
+      - Khrabr
+      - "\u0425\u0440\u0430\u0431\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_29
+      TermType: 0
+      Description: 
+      Languages:
+      - Cheslav
+      - "\u0427\u0435\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_30
+      TermType: 0
+      Description: 
+      Languages:
+      - Yaromir
+      - "\u042F\u0440\u043E\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_31
+      TermType: 0
+      Description: 
+      Languages:
+      - Bueslav
+      - "\u0411\u0443\u0435\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_32
+      TermType: 0
+      Description: 
+      Languages:
+      - Vyacheslav
+      - "\u0412\u044F\u0447\u0435\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_33
+      TermType: 0
+      Description: 
+      Languages:
+      - Gostomysl
+      - "\u0413\u043E\u0441\u0442\u043E\u043C\u044B\u0441\u043B"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_34
+      TermType: 0
+      Description: 
+      Languages:
+      - Dragomir
+      - "\u0414\u0440\u0430\u0433\u043E\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_35
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhdan
+      - "\u0416\u0434\u0430\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_36
+      TermType: 0
+      Description: 
+      Languages:
+      - Zvenislav
+      - "\u0417\u0432\u0435\u043D\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_37
+      TermType: 0
+      Description: 
+      Languages:
+      - Istr
+      - "\u0418\u0441\u0442\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_38
+      TermType: 0
+      Description: 
+      Languages:
+      - Knyaz
+      - "\u041A\u043D\u044F\u0436"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_39
+      TermType: 0
+      Description: 
+      Languages:
+      - Ladomir
+      - "\u041B\u0430\u0434\u043E\u043C\u0438\u0440"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_40
+      TermType: 0
+      Description: 
+      Languages:
+      - Mezheyaslav
+      - "\u041C\u0435\u0436\u0435\u044F\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_41
+      TermType: 0
+      Description: 
+      Languages:
+      - Nezhdan
+      - "\u041D\u0435\u0436\u0434\u0430\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_42
+      TermType: 0
+      Description: 
+      Languages:
+      - Olg
+      - "\u041E\u043B\u044C\u0433"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_43
+      TermType: 0
+      Description: 
+      Languages:
+      - Putislav
+      - "\u041F\u0443\u0442\u0438\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_44
+      TermType: 0
+      Description: 
+      Languages:
+      - Radim
+      - "\u0420\u0430\u0434\u0438\u043C"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_45
+      TermType: 0
+      Description: 
+      Languages:
+      - Sbyslav
+      - "\u0421\u0431\u044B\u0441\u043B\u0430\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_46
+      TermType: 0
+      Description: 
+      Languages:
+      - Slavomysl
+      - "\u0421\u043B\u0430\u0432\u043E\u043C\u044B\u0441\u043B"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_47
+      TermType: 0
+      Description: 
+      Languages:
+      - Troyan
+      - "\u0422\u0440\u043E\u044F\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_48
+      TermType: 0
+      Description: 
+      Languages:
+      - Khoten
+      - "\u0425\u043E\u0442\u0435\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_49
+      TermType: 0
+      Description: 
+      Languages:
+      - Churila
+      - "\u0427\u0443\u0440\u0438\u043B\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/NAME_50
+      TermType: 0
+      Description: 
+      Languages:
+      - Yakun
+      - "\u042F\u043A\u0443\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_01
+      TermType: 0
+      Description: 
+      Languages:
+      - Volkov
+      - "\u0412\u043E\u043B\u043A\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_02
+      TermType: 0
+      Description: 
+      Languages:
+      - Dubov
+      - "\u0414\u0443\u0431\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_03
+      TermType: 0
+      Description: 
+      Languages:
+      - Shchukin
+      - "\u0429\u0443\u043A\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_04
+      TermType: 0
+      Description: 
+      Languages:
+      - Medvedev
+      - "\u041C\u0435\u0434\u0432\u0435\u0434\u0435\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_05
+      TermType: 0
+      Description: 
+      Languages:
+      - Okunev
+      - "\u041E\u043A\u0443\u043D\u0435\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_06
+      TermType: 0
+      Description: 
+      Languages:
+      - Sokolov
+      - "\u0421\u043E\u043A\u043E\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_07
+      TermType: 0
+      Description: 
+      Languages:
+      - Krechetov
+      - "\u041A\u0440\u0435\u0447\u0435\u0442\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_08
+      TermType: 0
+      Description: 
+      Languages:
+      - Godinovich
+      - "\u0413\u043E\u0434\u0438\u043D\u043E\u0432\u0438\u0447"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_09
+      TermType: 0
+      Description: 
+      Languages:
+      - Pozharsky
+      - "\u041F\u043E\u0436\u0430\u0440\u0441\u043A\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Nikitin
+      - "\u041D\u0438\u043A\u0438\u0442\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Zimin
+      - "\u0417\u0438\u043C\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Voronov
+      - "\u0412\u043E\u0440\u043E\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Rodionov
+      - "\u0420\u043E\u0434\u0438\u043E\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Belyaev
+      - "\u0411\u0435\u043B\u044F\u0435\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Svetlov
+      - "\u0421\u0432\u0435\u0442\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Veselov
+      - "\u0412\u0435\u0441\u0435\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_17
+      TermType: 0
+      Description: 
+      Languages:
+      - Kuznetsov
+      - "\u041A\u0443\u0437\u043D\u0435\u0446\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_18
+      TermType: 0
+      Description: 
+      Languages:
+      - Gromov
+      - "\u0413\u0440\u043E\u043C\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_19
+      TermType: 0
+      Description: 
+      Languages:
+      - Sudilov
+      - "\u0421\u0443\u0434\u0438\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_20
+      TermType: 0
+      Description: 
+      Languages:
+      - Ignatov
+      - "\u0418\u0433\u043D\u0430\u0442\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_21
+      TermType: 0
+      Description: 
+      Languages:
+      - Mechnikov
+      - "\u041C\u0435\u0447\u043D\u0438\u043A\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_22
+      TermType: 0
+      Description: 
+      Languages:
+      - Yudin
+      - "\u042E\u0434\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_23
+      TermType: 0
+      Description: 
+      Languages:
+      - Novozhilov
+      - "\u041D\u043E\u0432\u043E\u0436\u0438\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_24
+      TermType: 0
+      Description: 
+      Languages:
+      - Morozov
+      - "\u041C\u043E\u0440\u043E\u0437\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_25
+      TermType: 0
+      Description: 
+      Languages:
+      - Rybakov
+      - "\u0420\u044B\u0431\u0430\u043A\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_26
+      TermType: 0
+      Description: 
+      Languages:
+      - Bulanov
+      - "\u0411\u0443\u043B\u0430\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_27
+      TermType: 0
+      Description: 
+      Languages:
+      - Tikhiy
+      - "\u0422\u0438\u0445\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_28
+      TermType: 0
+      Description: 
+      Languages:
+      - Smelov
+      - "\u0421\u043C\u0435\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_29
+      TermType: 0
+      Description: 
+      Languages:
+      - Yartsev
+      - "\u042F\u0440\u0446\u0435\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_30
+      TermType: 0
+      Description: 
+      Languages:
+      - Solntsev
+      - "\u0421\u043E\u043B\u043D\u0446\u0435\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_31
+      TermType: 0
+      Description: 
+      Languages:
+      - Gusev
+      - "\u0413\u0443\u0441\u0435\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_32
+      TermType: 0
+      Description: 
+      Languages:
+      - Bogdanov
+      - "\u0411\u043E\u0433\u0434\u0430\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_33
+      TermType: 0
+      Description: 
+      Languages:
+      - Surovov
+      - "\u0421\u0443\u0440\u043E\u0432\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_34
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhdanov
+      - "\u0416\u0434\u0430\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_35
+      TermType: 0
+      Description: 
+      Languages:
+      - Kalinin
+      - "\u041A\u0430\u043B\u0438\u043D\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_36
+      TermType: 0
+      Description: 
+      Languages:
+      - Kolokolov
+      - "\u041A\u043E\u043B\u043E\u043A\u043E\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_37
+      TermType: 0
+      Description: 
+      Languages:
+      - Putivolsky
+      - "\u041F\u0443\u0442\u0438\u0432\u043E\u043B\u044C\u0441\u043A\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_38
+      TermType: 0
+      Description: 
+      Languages:
+      - Boyarsky
+      - "\u0411\u043E\u044F\u0440\u0441\u043A\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_39
+      TermType: 0
+      Description: 
+      Languages:
+      - Mirnov
+      - "\u041C\u0438\u0440\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_40
+      TermType: 0
+      Description: 
+      Languages:
+      - Polyansky
+      - "\u041F\u043E\u043B\u044F\u043D\u0441\u043A\u0438\u0439"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_41
+      TermType: 0
+      Description: 
+      Languages:
+      - Nezhdanov
+      - "\u041D\u0435\u0436\u0434\u0430\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_42
+      TermType: 0
+      Description: 
+      Languages:
+      - Truvorov
+      - "\u0422\u0440\u0443\u0432\u043E\u0440\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_43
+      TermType: 0
+      Description: 
+      Languages:
+      - Dorozhin
+      - "\u0414\u043E\u0440\u043E\u0436\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_44
+      TermType: 0
+      Description: 
+      Languages:
+      - Bespalov
+      - "\u0411\u0435\u0441\u043F\u0430\u043B\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_45
+      TermType: 0
+      Description: 
+      Languages:
+      - Chudov
+      - "\u0427\u0443\u0434\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_46
+      TermType: 0
+      Description: 
+      Languages:
+      - Umnov
+      - "\u0423\u043C\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_47
+      TermType: 0
+      Description: 
+      Languages:
+      - Triodkin
+      - "\u0422\u0440\u0438\u043E\u0434\u043A\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_48
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhelanov
+      - "\u0416\u0435\u043B\u0430\u043D\u043E\u0432"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_49
+      TermType: 0
+      Description: 
+      Languages:
+      - Plenkovich
+      - "\u041F\u043B\u0435\u043D\u043A\u043E\u0432\u0438\u0447"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: MALE_NAMES/SURNAME_50
+      TermType: 0
+      Description: 
+      Languages:
+      - "Sokol\xEDn"
+      - "\u0421\u043E\u043A\u043E\u043B\u0438\u043D"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_01
+      TermType: 0
+      Description: 
+      Languages:
+      - Agafya
+      - "\u0410\u0433\u0430\u0444\u044C\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_02
+      TermType: 0
+      Description: 
+      Languages:
+      - Bazhena
+      - "\u0411\u0430\u0436\u0435\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_03
+      TermType: 0
+      Description: 
+      Languages:
+      - Belava
+      - "\u0411\u0435\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_04
+      TermType: 0
+      Description: 
+      Languages:
+      - Bogdana
+      - "\u0411\u043E\u0433\u0434\u0430\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_05
+      TermType: 0
+      Description: 
+      Languages:
+      - Bratislava
+      - "\u0411\u0440\u0430\u0442\u0438\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_06
+      TermType: 0
+      Description: 
+      Languages:
+      - Veselina
+      - "\u0412\u0435\u0441\u0435\u043B\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_07
+      TermType: 0
+      Description: 
+      Languages:
+      - Vera
+      - "\u0412\u0435\u0440\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_08
+      TermType: 0
+      Description: 
+      Languages:
+      - Vladislava
+      - "\u0412\u043B\u0430\u0434\u0438\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_09
+      TermType: 0
+      Description: 
+      Languages:
+      - Vsemila
+      - "\u0412\u0441\u0435\u043C\u0438\u043B\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Goluba
+      - "\u0413\u043E\u043B\u0443\u0431\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Gorislava
+      - "\u0413\u043E\u0440\u0438\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Darina
+      - "\u0414\u0430\u0440\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Dobrava
+      - "\u0414\u043E\u0431\u0440\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhdana
+      - "\u0416\u0434\u0430\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Zabava
+      - "\u0417\u0430\u0431\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Zvenislava
+      - "\u0417\u0432\u0435\u043D\u0438\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_17
+      TermType: 0
+      Description: 
+      Languages:
+      - Zlata
+      - "\u0417\u043B\u0430\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_18
+      TermType: 0
+      Description: 
+      Languages:
+      - Zoryana
+      - "\u0417\u043E\u0440\u044F\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_19
+      TermType: 0
+      Description: 
+      Languages:
+      - Kazimira
+      - "\u041A\u0430\u0437\u0438\u043C\u0438\u0440\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_20
+      TermType: 0
+      Description: 
+      Languages:
+      - Krasava
+      - "\u041A\u0440\u0430\u0441\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_21
+      TermType: 0
+      Description: 
+      Languages:
+      - Kupava
+      - "\u041A\u0443\u043F\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_22
+      TermType: 0
+      Description: 
+      Languages:
+      - Lada
+      - "\u041B\u0430\u0434\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_23
+      TermType: 0
+      Description: 
+      Languages:
+      - Lyubava
+      - "\u041B\u044E\u0431\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_24
+      TermType: 0
+      Description: 
+      Languages:
+      - Lyudmila
+      - "\u041B\u044E\u0434\u043C\u0438\u043B\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_25
+      TermType: 0
+      Description: 
+      Languages:
+      - Milava
+      - "\u041C\u0438\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_26
+      TermType: 0
+      Description: 
+      Languages:
+      - Miloslava
+      - "\u041C\u0438\u043B\u043E\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_27
+      TermType: 0
+      Description: 
+      Languages:
+      - Miroslava
+      - "\u041C\u0438\u0440\u043E\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_28
+      TermType: 0
+      Description: 
+      Languages:
+      - Nadezhda
+      - "\u041D\u0430\u0434\u0435\u0436\u0434\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_29
+      TermType: 0
+      Description: 
+      Languages:
+      - Nekrasa
+      - "\u041D\u0435\u043A\u0440\u0430\u0441\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_30
+      TermType: 0
+      Description: 
+      Languages:
+      - Nezhena
+      - "\u041D\u0435\u0436\u0435\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_31
+      TermType: 0
+      Description: 
+      Languages:
+      - Ogneya
+      - "\u041E\u0433\u043D\u0435\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_32
+      TermType: 0
+      Description: 
+      Languages:
+      - Peresveta
+      - "\u041F\u0435\u0440\u0435\u0441\u0432\u0435\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_33
+      TermType: 0
+      Description: 
+      Languages:
+      - Prekrasa
+      - "\u041F\u0440\u0435\u043A\u0440\u0430\u0441\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_34
+      TermType: 0
+      Description: 
+      Languages:
+      - Radosveta
+      - "\u0420\u0430\u0434\u043E\u0441\u0432\u0435\u0442\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_35
+      TermType: 0
+      Description: 
+      Languages:
+      - Radomira
+      - "\u0420\u0430\u0434\u043E\u043C\u0438\u0440\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_36
+      TermType: 0
+      Description: 
+      Languages:
+      - Rostislava
+      - "\u0420\u043E\u0441\u0442\u0438\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_37
+      TermType: 0
+      Description: 
+      Languages:
+      - Rusana
+      - "\u0420\u0443\u0441\u0430\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_38
+      TermType: 0
+      Description: 
+      Languages:
+      - Svetozara
+      - "\u0421\u0432\u0435\u0442\u043E\u0437\u0430\u0440\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_39
+      TermType: 0
+      Description: 
+      Languages:
+      - Snezhana
+      - "\u0421\u043D\u0435\u0436\u0430\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_40
+      TermType: 0
+      Description: 
+      Languages:
+      - Tverdislava
+      - "\u0422\u0432\u0435\u0440\u0434\u0438\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_41
+      TermType: 0
+      Description: 
+      Languages:
+      - Umila
+      - "\u0423\u043C\u0438\u043B\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_42
+      TermType: 0
+      Description: 
+      Languages:
+      - Chaslava
+      - "\u0427\u0430\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_43
+      TermType: 0
+      Description: 
+      Languages:
+      - Chernava
+      - "\u0427\u0435\u0440\u043D\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_44
+      TermType: 0
+      Description: 
+      Languages:
+      - Yarina
+      - "\u042F\u0440\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_45
+      TermType: 0
+      Description: 
+      Languages:
+      - Yaroslava
+      - "\u042F\u0440\u043E\u0441\u043B\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_46
+      TermType: 0
+      Description: 
+      Languages:
+      - Bereginya
+      - "\u0411\u0435\u0440\u0435\u0433\u0438\u043D\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_47
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhiva
+      - "\u0416\u0438\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_48
+      TermType: 0
+      Description: 
+      Languages:
+      - Lelya
+      - "\u041B\u0435\u043B\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_49
+      TermType: 0
+      Description: 
+      Languages:
+      - Malusha
+      - "\u041C\u0430\u043B\u0443\u0448\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/NAME_50
+      TermType: 0
+      Description: 
+      Languages:
+      - Polada
+      - "\u041F\u043E\u043B\u0430\u0434\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_01
+      TermType: 0
+      Description: 
+      Languages:
+      - Prekrasnaya
+      - "\u041F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u0430\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_02
+      TermType: 0
+      Description: 
+      Languages:
+      - Svetlova
+      - "\u0421\u0432\u0435\u0442\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_03
+      TermType: 0
+      Description: 
+      Languages:
+      - Lebedeva
+      - "\u041B\u0435\u0431\u0435\u0434\u0435\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_04
+      TermType: 0
+      Description: 
+      Languages:
+      - Ladova
+      - "\u041B\u0430\u0434\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_05
+      TermType: 0
+      Description: 
+      Languages:
+      - Radova
+      - "\u0420\u0430\u0434\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_06
+      TermType: 0
+      Description: 
+      Languages:
+      - Zabava
+      - "\u0417\u0430\u0431\u0430\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_07
+      TermType: 0
+      Description: 
+      Languages:
+      - Milova
+      - "\u041C\u0438\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_08
+      TermType: 0
+      Description: 
+      Languages:
+      - Luchina
+      - "\u041B\u0443\u0447\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_09
+      TermType: 0
+      Description: 
+      Languages:
+      - Yasnova
+      - "\u042F\u0441\u043D\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_10
+      TermType: 0
+      Description: 
+      Languages:
+      - Golubina
+      - "\u0413\u043E\u043B\u0443\u0431\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_11
+      TermType: 0
+      Description: 
+      Languages:
+      - Ogneva
+      - "\u041E\u0433\u043D\u0435\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_12
+      TermType: 0
+      Description: 
+      Languages:
+      - Darova
+      - "\u0414\u0430\u0440\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_13
+      TermType: 0
+      Description: 
+      Languages:
+      - Dobrova
+      - "\u0414\u043E\u0431\u0440\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_14
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhdanova
+      - "\u0416\u0434\u0430\u043D\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_15
+      TermType: 0
+      Description: 
+      Languages:
+      - Veselova
+      - "\u0412\u0435\u0441\u0435\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_16
+      TermType: 0
+      Description: 
+      Languages:
+      - Kolokolova
+      - "\u041A\u043E\u043B\u043E\u043A\u043E\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_17
+      TermType: 0
+      Description: 
+      Languages:
+      - Zlatoova
+      - "\u0417\u043B\u0430\u0442\u043E\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_18
+      TermType: 0
+      Description: 
+      Languages:
+      - Utrobina
+      - "\u0423\u0442\u0440\u043E\u0431\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_19
+      TermType: 0
+      Description: 
+      Languages:
+      - Mirnova
+      - "\u041C\u0438\u0440\u043D\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_20
+      TermType: 0
+      Description: 
+      Languages:
+      - Krasnova
+      - "\u041A\u0440\u0430\u0441\u043D\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_21
+      TermType: 0
+      Description: 
+      Languages:
+      - Kupalina
+      - "\u041A\u0443\u043F\u0430\u043B\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_22
+      TermType: 0
+      Description: 
+      Languages:
+      - Milova
+      - "\u041C\u0438\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_23
+      TermType: 0
+      Description: 
+      Languages:
+      - Lyubova
+      - "\u041B\u044E\u0431\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_24
+      TermType: 0
+      Description: 
+      Languages:
+      - Milaya
+      - "\u041C\u0438\u043B\u0430\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_25
+      TermType: 0
+      Description: 
+      Languages:
+      - Ladova
+      - "\u041B\u0430\u0434\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_26
+      TermType: 0
+      Description: 
+      Languages:
+      - Miloradova
+      - "\u041C\u0438\u043B\u043E\u0440\u0430\u0434\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_27
+      TermType: 0
+      Description: 
+      Languages:
+      - Slavova
+      - "\u0421\u043B\u0430\u0432\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_28
+      TermType: 0
+      Description: 
+      Languages:
+      - Nadezhina
+      - "\u041D\u0430\u0434\u0435\u0436\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_29
+      TermType: 0
+      Description: 
+      Languages:
+      - Nekrasova
+      - "\u041D\u0435\u043A\u0440\u0430\u0441\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_30
+      TermType: 0
+      Description: 
+      Languages:
+      - Nezhina
+      - "\u041D\u0435\u0436\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_31
+      TermType: 0
+      Description: 
+      Languages:
+      - Ogneva
+      - "\u041E\u0433\u043D\u0435\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_32
+      TermType: 0
+      Description: 
+      Languages:
+      - Svetlova
+      - "\u0421\u0432\u0435\u0442\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_33
+      TermType: 0
+      Description: 
+      Languages:
+      - Prekrasnaya
+      - "\u041F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u0430\u044F"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_34
+      TermType: 0
+      Description: 
+      Languages:
+      - Radova
+      - "\u0420\u0430\u0434\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_35
+      TermType: 0
+      Description: 
+      Languages:
+      - Mirnova
+      - "\u041C\u0438\u0440\u043D\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_36
+      TermType: 0
+      Description: 
+      Languages:
+      - Rostova
+      - "\u0420\u043E\u0441\u0442\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_37
+      TermType: 0
+      Description: 
+      Languages:
+      - Rusova
+      - "\u0420\u0443\u0441\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_38
+      TermType: 0
+      Description: 
+      Languages:
+      - Svetlova
+      - "\u0421\u0432\u0435\u0442\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_39
+      TermType: 0
+      Description: 
+      Languages:
+      - Belova
+      - "\u0411\u0435\u043B\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_40
+      TermType: 0
+      Description: 
+      Languages:
+      - Tverdova
+      - "\u0422\u0432\u0435\u0440\u0434\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_41
+      TermType: 0
+      Description: 
+      Languages:
+      - Umnova
+      - "\u0423\u043C\u043D\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_42
+      TermType: 0
+      Description: 
+      Languages:
+      - Chasovina
+      - "\u0427\u0430\u0441\u043E\u0432\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_43
+      TermType: 0
+      Description: 
+      Languages:
+      - Chernavkina
+      - "\u0427\u0435\u0440\u043D\u0430\u0432\u043A\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_44
+      TermType: 0
+      Description: 
+      Languages:
+      - Yarova
+      - "\u042F\u0440\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_45
+      TermType: 0
+      Description: 
+      Languages:
+      - Slavova
+      - "\u0421\u043B\u0430\u0432\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_46
+      TermType: 0
+      Description: 
+      Languages:
+      - Beregova
+      - "\u0411\u0435\u0440\u0435\u0433\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_47
+      TermType: 0
+      Description: 
+      Languages:
+      - Zhivina
+      - "\u0416\u0438\u0432\u0438\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_48
+      TermType: 0
+      Description: 
+      Languages:
+      - Lelekova
+      - "\u041B\u0435\u043B\u0435\u043A\u043E\u0432\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_49
+      TermType: 0
+      Description: 
+      Languages:
+      - Malovna
+      - "\u041C\u0430\u043B\u043E\u0432\u043D\u0430"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: FEMALE_NAMES/SURNAME_50
+      TermType: 0
+      Description: 
+      Languages:
+      - Ladova
+      - "\u041B\u0430\u0434\u043E\u0432\u0430"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -8830,7 +10746,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1756641972175
+    Google_LastUpdatedVersion: 1757247819382
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

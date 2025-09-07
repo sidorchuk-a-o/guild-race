@@ -1,4 +1,5 @@
 ﻿using AD.UI;
+using AD.Services.Audio;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using Game.UI;
@@ -21,6 +22,7 @@ namespace Game.Inventory
 
         [Header("Item Preview")]
         [SerializeField] private ItemPreviewContainer itemPreview;
+        [SerializeField] private AudioKey addSfxKey;
 
         [Header("Pickup Process")]
         [SerializeField] private UIStates pickupStates;
@@ -37,6 +39,7 @@ namespace Game.Inventory
 
         private readonly CompositeDisp itemDisp = new();
 
+        private IAudioService audioService;
         private InventoryVMFactory inventoryVMF;
 
         private ItemInSlotComponent item;
@@ -51,8 +54,9 @@ namespace Game.Inventory
         public ItemSlotVM ViewModel { get; private set; }
 
         [Inject]
-        public void Inject(InventoryVMFactory inventoryVMF)
+        public void Inject(IAudioService audioService, InventoryVMFactory inventoryVMF)
         {
+            this.audioService = audioService;
             this.inventoryVMF = inventoryVMF;
         }
 
@@ -67,11 +71,23 @@ namespace Game.Inventory
                     .AddTo(disp);
             }
 
+            slotVM.ItemVM
+                .SilentSubscribe(PlaySfxEffect)
+                .AddTo(disp);
+
             slotVM.PickupStateVM.Value
                 .Subscribe(pickupStates.SetState)
                 .AddTo(disp);
 
             onInited.OnNext(this);
+        }
+
+        private void PlaySfxEffect(ItemVM itemVM)
+        {
+            if (itemVM != null)
+            {
+                audioService?.UiModule.TryPlaySound(addSfxKey);
+            }
         }
 
         private async void ItemChangedCallback(ItemVM itemVM, CompositeDisp disp)

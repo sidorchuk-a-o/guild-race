@@ -102,6 +102,7 @@ MonoBehaviour:
   components:
   - {fileID: 8899384745522004460}
   - {fileID: 6361936051617499405}
+  - {fileID: 8300908351988132962}
   ignoreSelectedState: 1
   button: {fileID: 2773019056083178250}
 --- !u!114 &998393878980150669
@@ -149,6 +150,7 @@ GameObject:
   - component: {fileID: 1552891910259881990}
   - component: {fileID: 642981956859480678}
   - component: {fileID: 3292483350138389393}
+  - component: {fileID: 8300908351988132962}
   m_Layer: 5
   m_Name: ClickArea
   m_TagString: Untagged
@@ -199,6 +201,41 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8300908351988132962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153056663655212281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60018fb5b8c5b64688a08405226cb1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetComponent: {fileID: 1552891910259881990}
+  states:
+  - name: default
+    normal:
+      audioKey:
+        value: 
+      volume: 1
+    highlighted:
+      audioKey:
+        value: 
+      volume: 1
+    pressed:
+      audioKey:
+        value: 2de18b0ac2f74a9fa33b84b4e5beb240
+      volume: 1
+    selected:
+      audioKey:
+        value: 
+      volume: 1
+    disabled:
+      audioKey:
+        value: 
+      volume: 1
 --- !u!1 &6583649171242279641
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044427304550996517}
     m_Modifications:
+    - target: {fileID: 1748852607665226187, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.7777778
+      objectReference: {fileID: 0}
     - target: {fileID: 5493262659875233626, guid: e535094a88087c447a9d9e73af5473c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

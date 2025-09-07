@@ -3731,6 +3731,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8724320136506260810, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
+      propertyPath: states.Array.data[0].pressed.audioKey.value
+      value: 00d3d9ce7f084eaeaa3f53b036660852
+      objectReference: {fileID: 0}
     - target: {fileID: 8916353823698272335, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: m_SizeDelta.x
       value: -10
@@ -4372,6 +4376,10 @@ PrefabInstance:
     - target: {fileID: 7478344929841783300, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724320136506260810, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
+      propertyPath: states.Array.data[0].pressed.audioKey.value
+      value: 00d3d9ce7f084eaeaa3f53b036660852
       objectReference: {fileID: 0}
     - target: {fileID: 8916353823698272335, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: m_SizeDelta.x

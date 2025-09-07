@@ -844,9 +844,15 @@ MonoBehaviour:
   slot:
     value: 1447415678
   slotParams: {fileID: 0}
+  tooltipParams: {fileID: 0}
   itemPreview: {fileID: 0}
+  addSfxKey:
+    value: 3b4e54e88f1b4e1f8a52089ac084fd4c
   pickupStates: {fileID: 4886549652533327847}
   pickupPreviewImage: {fileID: 0}
+  errorState: slotError
+  readyState: slotReady
+  previewState: slotPreview
   isReadOnly: 0
   currencyContainer: {fileID: 5523465730793427751}
   currencyIconImage: {fileID: 8822695985584199530}

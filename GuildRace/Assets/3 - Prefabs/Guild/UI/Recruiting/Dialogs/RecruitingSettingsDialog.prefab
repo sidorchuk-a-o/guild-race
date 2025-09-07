@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197666177703566478}
   - component: {fileID: 835294056617729988}
+  - component: {fileID: 5153027420755209635}
   m_Layer: 5
   m_Name: RecruitingSettingsDialog
   m_TagString: Untagged
@@ -61,6 +62,22 @@ MonoBehaviour:
   startState: default
   stopState: stop
   switchStateButton: {fileID: 2686492865140168200}
+--- !u!114 &5153027420755209635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793457634446767181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b608203a61b13b49862fa910a83aa34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openSfxKey:
+    value: 
+  hideSfxKey:
+    value: 87b89b2c47744d50a47c555fce3cf40f
 --- !u!1 &5698599098971939489
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1357185203692302068, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: components.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1357185203692302068, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: 'stateKeys.Array.data[1]'
@@ -935,7 +952,7 @@ PrefabInstance:
     - target: {fileID: 1357185203692302068, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: 'components.Array.data[6]'
       value: 
-      objectReference: {fileID: 8684610462635756522}
+      objectReference: {fileID: 5660713804645647798}
     - target: {fileID: 1357185203692302068, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
       propertyPath: 'components.Array.data[7]'
       value: 
@@ -1203,6 +1220,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5660713804645647798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8724320136506260810, guid: 41b6cbdc65c47684da4633cde45b2314, type: 3}
+  m_PrefabInstance: {fileID: 4007614083136485628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60018fb5b8c5b64688a08405226cb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &5788687725416930040 stripped

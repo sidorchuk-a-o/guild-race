@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconImage: {fileID: 8462741176253836500}
+  showItemKey:
+    value: 1b54dde319a44e1ea44a80f25c8d03b8
 --- !u!1 &8465548259912875026
 GameObject:
   m_ObjectHideFlags: 0

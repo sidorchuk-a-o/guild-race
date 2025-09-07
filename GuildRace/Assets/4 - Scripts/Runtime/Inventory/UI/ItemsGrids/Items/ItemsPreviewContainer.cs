@@ -1,8 +1,9 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.Audio;
+using AD.Services.Router;
 using AD.ToolsCollection;
-using Cysharp.Threading.Tasks;
 using System.Linq;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -11,16 +12,20 @@ namespace Game.Inventory
 {
     public class ItemsPreviewContainer : MonoBehaviour
     {
+        [SerializeField] private AudioKey addSfxKey;
+
         private readonly List<ItemInGridComponent> items = new();
 
+        private IAudioService audioService;
         private ItemsGridUIParams gridParams;
 
         private InventoryVMFactory inventoryVMF;
         private ItemsVM itemsVM;
 
         [Inject]
-        public void Inject(InventoryVMFactory inventoryVMF)
+        public void Inject(IAudioService audioService, InventoryVMFactory inventoryVMF)
         {
+            this.audioService = audioService;
             this.inventoryVMF = inventoryVMF;
         }
 
@@ -57,6 +62,8 @@ namespace Game.Inventory
             var itemVM = itemsVM.ElementAtOrDefault(index);
 
             await UpdateItem(item: null, itemVM, disp);
+
+            audioService?.UiModule.TryPlaySound(addSfxKey);
         }
 
         private async void RemoveItemCallback(int index, CompositeDisp disp)
