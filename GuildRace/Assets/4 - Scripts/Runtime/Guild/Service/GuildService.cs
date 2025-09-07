@@ -42,7 +42,7 @@ namespace Game.Guild
             IObjectResolver resolver)
         {
             state = new(guildConfig, guildLevelsService, inventoryService, localization, resolver);
-            recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, time, resolver);
+            recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, localization, time, resolver);
             leaderboardModule = new(state, guildConfig, leaderboards, appEvents);
         }
 

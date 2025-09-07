@@ -1,4 +1,5 @@
 ﻿using AD.Services.Router;
+using AD.Services.Localization;
 using AD.ToolsCollection;
 using Game.Instances;
 using Game.Inventory;
@@ -16,7 +17,9 @@ namespace Game.Guild
         private readonly ReactiveProperty<ActiveInstanceVM> instanceVM = new();
 
         public string Id { get; }
-        public string Nickname { get; }
+        public LocalizeKey NameKey { get; }
+        public LocalizeKey SurnameKey { get; }
+        public GenderType Gender { get; }
 
         public ClassVM ClassVM { get; }
         public SpecializationVM SpecVM { get; }
@@ -36,7 +39,9 @@ namespace Game.Guild
             this.guildVMF = guildVMF;
 
             Id = info.Id;
-            Nickname = info.Nickname;
+            NameKey = info.NameKey;
+            SurnameKey = info.SurnameKey;
+            Gender = info.Gender;
             ItemsLevel = info.ItemsLevel;
 
             ClassVM = guildVMF.GetClass(info.ClassId);

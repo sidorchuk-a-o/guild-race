@@ -1,10 +1,10 @@
 ﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
+using AD.UI;
 using AD.Services.Router;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
 using System.Threading;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 
@@ -17,14 +17,14 @@ namespace Game.Guild
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [Space]
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private NicknameComponent nicknameComponent;
         [SerializeField] private UIText guildRankText;
         [Space]
         [SerializeField] private UIText instanceStateText;
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
-            nicknameText.SetTextParams(ViewModel.Nickname);
+            nicknameComponent.Init(ViewModel);
             classNameText.SetTextParams(ViewModel.ClassVM.NameKey);
             specNameText.SetTextParams(ViewModel.SpecVM.NameKey);
 

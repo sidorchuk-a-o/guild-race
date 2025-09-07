@@ -8,7 +8,9 @@ namespace Game.Guild
     public class CharacterSM
     {
         [ES3Serializable] private string id;
-        [ES3Serializable] private string nickname;
+        [ES3Serializable] private string name;
+        [ES3Serializable] private string surname;
+        [ES3Serializable] private GenderType gender;
         [ES3Serializable] private int classId;
         [ES3Serializable] private int specId;
         [ES3Serializable] private string instanceId;
@@ -18,7 +20,9 @@ namespace Game.Guild
         public CharacterSM(CharacterInfo info, IInventoryService inventoryService)
         {
             id = info.Id;
-            nickname = info.Nickname;
+            name = info.NameKey;
+            surname = info.SurnameKey;
+            gender = info.Gender;
             classId = info.ClassId;
             specId = info.SpecId;
             instanceId = info.InstanceId.Value;
@@ -32,7 +36,7 @@ namespace Game.Guild
                 .GetValues(inventoryService.Factory)
                 .Cast<EquipSlotInfo>();
 
-            var info = new CharacterInfo(id, nickname, classId, specId, equipSlots);
+            var info = new CharacterInfo(id, name, surname, gender, classId, specId, equipSlots);
 
             info.Init();
             info.SetGuildRank(guildRankId);

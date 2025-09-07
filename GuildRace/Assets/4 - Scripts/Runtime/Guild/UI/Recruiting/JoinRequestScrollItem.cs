@@ -1,11 +1,11 @@
 ﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
+using AD.UI;
 using AD.Services.Router;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -19,7 +19,7 @@ namespace Game.Guild
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [Space]
-        [SerializeField] private UIText nicknameText;
+        [SerializeField] private NicknameComponent nicknameComponent;
 
         [Header("Buttons")]
         [SerializeField] private UIButton acceptButton;
@@ -58,7 +58,7 @@ namespace Game.Guild
 
             var characterVM = ViewModel.CharacterVM;
 
-            nicknameText.SetTextParams(characterVM.Nickname);
+            nicknameComponent.Init(characterVM);
             itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);
             specNameText.SetTextParams(characterVM.SpecVM.NameKey);
