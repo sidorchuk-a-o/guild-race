@@ -471,12 +471,12 @@ namespace Game.Instances
 
             foreach (var rewardGroup in adsRewards.GroupBy(x => x.Data.MechanicId))
             {
-                var rewards = rewardGroup.Select(x => x.Data).ToListPool();
                 var rewardHandler = instancesService.GetRewardHandler(rewardGroup.Key);
 
-                var result = rewardHandler.ApplyRewards(rewards, activeInstance).ToListPool();
+                var result = rewardGroup
+                    .Select(x => rewardHandler.ApplyReward(x.Data, activeInstance))
+                    .ToListPool();
 
-                rewards.ReleaseListPool();
                 result.ReleaseListPool();
             }
 
