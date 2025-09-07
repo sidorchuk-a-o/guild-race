@@ -17,6 +17,7 @@ namespace Game.Instances
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
+        [SerializeField] private ClassPreviewComponent classPreviewComponent;
         [SerializeField] private UIText guildRankText;
         [Space]
         [SerializeField] private ThreatsContainer threatsContainer;
@@ -42,6 +43,10 @@ namespace Game.Instances
 
             // character 
             var characterVM = ViewModel.CharacterVM;
+
+            await classPreviewComponent.Init(characterVM, ct);
+
+            if (ct.IsCancellationRequested) return;
 
             nicknameComponent.Init(characterVM);
             classNameText.SetTextParams(characterVM.ClassVM.NameKey);

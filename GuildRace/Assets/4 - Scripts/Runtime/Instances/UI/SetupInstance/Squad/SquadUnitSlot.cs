@@ -19,6 +19,7 @@ namespace Game.Instances
         [SerializeField] private UIText itemsLevelText;
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
+        [SerializeField] private ClassPreviewComponent classPreviewComponent;
         [SerializeField] private ThreatsContainer threatsContainer;
         [SerializeField] private ChanceDiffContainer chanceDiffContainer;
         [SerializeField] private ItemsGridContainer bagContainer;
@@ -72,6 +73,7 @@ namespace Game.Instances
                 bagContainer.Init(squadUnitVM.BagVM, unitDisp);
                 chanceDiffContainer.Init(squadUnitVM, unitDisp);
 
+                await classPreviewComponent.Init(characterVM, token);
                 await threatsContainer.Init(squadUnitVM.ResolvedThreatsVM, unitDisp, token);
             }
 
