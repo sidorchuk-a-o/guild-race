@@ -112,3 +112,9 @@ MonoBehaviour:
           m_SubObjectType: 
           m_EditorAssetChanged: 0
         assetVolume: 1
+  rootMixerRef:
+    m_AssetGUID: cc3876b0f1004c7428540c95572455e7
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

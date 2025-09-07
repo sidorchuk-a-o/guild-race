@@ -26,6 +26,24 @@ MonoBehaviour:
       - 
       Flags: 000000
       Languages_Touch: []
+    - Term: SETTINGS/SETTINGS_TTL
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+      - 
+      Flags: 000000
+      Languages_Touch: []
+    - Term: SETTINGS/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      - 
+      Flags: 000000
+      Languages_Touch: []
     - Term: SETTINGS/UI_AUDIO_TTL
       TermType: 0
       Description: 
@@ -10728,7 +10746,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1757183566623
+    Google_LastUpdatedVersion: 1757247819382
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
