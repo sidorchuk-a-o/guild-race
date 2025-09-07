@@ -8,5 +8,6 @@ namespace Game.Tutorial
         bool ContainerIsShowed(string containerId);
         void MarkContainerAsShowed(string containerId);
         UniTask ShowContainer(AssetReference containerRef);
+        void ResetProgress();
     }
 }
