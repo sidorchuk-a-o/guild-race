@@ -69,6 +69,7 @@ namespace Game.Instances
             var reagentData = inventoryConfig.GetItem(reagentId) as IStackable;
             var itemsCount = Mathf.CeilToInt(totalReagentCount / (float)reagentData.Stack.Size);
             var itemIds = new List<string>(itemsCount);
+            var rewardCount = totalReagentCount;
 
             for (var i = 0; i < itemsCount; i++)
             {
@@ -91,7 +92,7 @@ namespace Game.Instances
             {
                 ItemIds = itemIds,
                 ItemDataId = reagentId,
-                Count = totalReagentCount,
+                Count = rewardCount,
                 RewardId = reward.Id
             };
         }
