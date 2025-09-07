@@ -109,6 +109,7 @@ MonoBehaviour:
   components:
   - {fileID: 6799592689579816193}
   - {fileID: 9104593946423359570}
+  - {fileID: 513483462986671931}
   ignoreSelectedState: 1
   button: {fileID: 6923440327628734172}
 --- !u!1 &3301915852774497496
@@ -278,6 +279,7 @@ GameObject:
   - component: {fileID: 7582296795539177097}
   - component: {fileID: 1990593623457505864}
   - component: {fileID: 3554584625276990150}
+  - component: {fileID: 513483462986671931}
   m_Layer: 0
   m_Name: ClickArea
   m_TagString: Untagged
@@ -328,3 +330,38 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &513483462986671931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287751195427140484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60018fb5b8c5b64688a08405226cb1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetComponent: {fileID: 7582296795539177097}
+  states:
+  - name: default
+    normal:
+      audioKey:
+        value: 
+      volume: 1
+    highlighted:
+      audioKey:
+        value: 
+      volume: 1
+    pressed:
+      audioKey:
+        value: 2de18b0ac2f74a9fa33b84b4e5beb240
+      volume: 1
+    selected:
+      audioKey:
+        value: 
+      volume: 1
+    disabled:
+      audioKey:
+        value: 
+      volume: 1

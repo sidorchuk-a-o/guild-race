@@ -1,16 +1,27 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.Audio;
+using AD.Services.Router;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
+using VContainer;
 
 namespace Game.Inventory
 {
     public class PickedItemPreview : MonoBehaviour
     {
         [SerializeField] private ItemIconImage iconImage;
+        [SerializeField] private AudioKey showItemKey;
 
         private readonly CompositeDisp disp = new();
+
+        private IAudioService audioService;
+
+        [Inject]
+        public void Inject(IAudioService audioService)
+        {
+            this.audioService = audioService;
+        }
 
         private void OnEnable()
         {
@@ -36,6 +47,8 @@ namespace Game.Inventory
             }
 
             iconImage.UpdateIcon(itemVM, iconStaticOn, disp);
+
+            audioService?.UiModule.TryPlaySound(showItemKey);
 
             this.SetActive(true);
         }

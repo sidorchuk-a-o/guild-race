@@ -885,6 +885,7 @@ GameObject:
   - component: {fileID: 5672537262592222053}
   - component: {fileID: 8076461105786396812}
   - component: {fileID: 1217328282152864246}
+  - component: {fileID: 2643645749756223845}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -935,6 +936,41 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2643645749756223845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187582607195377188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60018fb5b8c5b64688a08405226cb1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetComponent: {fileID: 5672537262592222053}
+  states:
+  - name: default
+    normal:
+      audioKey:
+        value: 
+      volume: 1
+    highlighted:
+      audioKey:
+        value: 
+      volume: 1
+    pressed:
+      audioKey:
+        value: 2de18b0ac2f74a9fa33b84b4e5beb240
+      volume: 1
+    selected:
+      audioKey:
+        value: 
+      volume: 1
+    disabled:
+      audioKey:
+        value: 
+      volume: 1
 --- !u!1 &3921261042695950302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2480,7 @@ MonoBehaviour:
   - {fileID: 4141221018421582041}
   - {fileID: 4406175088202978165}
   - {fileID: 8427142631360097000}
+  - {fileID: 2643645749756223845}
   ignoreSelectedState: 0
   dropdown: {fileID: 5973525784841261429}
 --- !u!1 &8004078966166014722

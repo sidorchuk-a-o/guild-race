@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4715cd531f9c97447b15461c094a4107, type: 3}
+  m_Name: AudioConfig
+  m_EditorClassIdentifier: 
+  uiParams:
+    parameterName: GlobalUI
+    sourceRef:
+      m_AssetGUID: bea4d70416b029148a3b8daf59e42099
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    presets:
+    - id: 2de18b0ac2f74a9fa33b84b4e5beb240
+      title: ButtonClick
+      assets:
+      - assetRef:
+          m_AssetGUID: 82c0ab9d087161d419685452faa46d09
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 0.75
+    - id: 291529567e5d462589bb21494ee7809d
+      title: StartInstance
+      assets:
+      - assetRef:
+          m_AssetGUID: 0a9c6718951ff44d19b70f4ebee78ba3
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 1
+    - id: 1b54dde319a44e1ea44a80f25c8d03b8
+      title: PickupItem
+      assets:
+      - assetRef:
+          m_AssetGUID: d4612823b6e49dc4682e268b3703c94c
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 0.2
+    - id: 38b6fa7f6d8248259cf7ae0652f67d27
+      title: ReleaseItem
+      assets:
+      - assetRef:
+          m_AssetGUID: 4876ea5c1b371e548b2753dd06a89e72
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 0.3
+    - id: 3b4e54e88f1b4e1f8a52089ac084fd4c
+      title: RecyclingItem
+      assets:
+      - assetRef:
+          m_AssetGUID: 6cffb20c47237ff448fda834467c199f
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 1
+    - id: 00d3d9ce7f084eaeaa3f53b036660852
+      title: PurchaseClick
+      assets:
+      - assetRef:
+          m_AssetGUID: 0922a83191fee49db8501a48a8a0f4d2
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 1
+    - id: 87b89b2c47744d50a47c555fce3cf40f
+      title: CloseDialog
+      assets:
+      - assetRef:
+          m_AssetGUID: 383c39e4327cec94bbe7b25ba4fa17bd
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 1
+  musicParams:
+    startKey:
+      value: 0384d1c4bb804789a48db4b032a733ec
+    parameterName: GlobalMusic
+    sourceRef:
+      m_AssetGUID: 10ce68503f4372c4f9da6682fceb4256
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    presets:
+    - id: 0384d1c4bb804789a48db4b032a733ec
+      title: Main
+      assets:
+      - assetRef:
+          m_AssetGUID: b72bff4919dcb4824b7ec4afb112295f
+          m_SubObjectName: 
+          m_SubObjectGUID: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        assetVolume: 1

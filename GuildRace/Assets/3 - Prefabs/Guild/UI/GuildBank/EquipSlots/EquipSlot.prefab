@@ -175,6 +175,8 @@ MonoBehaviour:
   slotParams: {fileID: 11400000, guid: 257c62fdc1f6dc648b03c877cd8a8941, type: 2}
   tooltipParams: {fileID: 11400000, guid: b3fa40c85e80bbd4d9e6d906a293611f, type: 2}
   itemPreview: {fileID: 3734784496841587830}
+  addSfxKey:
+    value: 38b6fa7f6d8248259cf7ae0652f67d27
   pickupStates: {fileID: 8559267385245833827}
   pickupPreviewImage: {fileID: 8605336127221818195}
   errorState: slotError
