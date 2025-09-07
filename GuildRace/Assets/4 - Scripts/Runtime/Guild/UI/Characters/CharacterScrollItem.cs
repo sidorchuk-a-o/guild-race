@@ -1,6 +1,4 @@
-﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-
-using AD.UI;
+﻿using AD.UI;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using System.Threading;
@@ -17,6 +15,7 @@ namespace Game.Guild
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [Space]
+        [SerializeField] private ClassPreviewComponent classPreviewComponent;
         [SerializeField] private NicknameComponent nicknameComponent;
         [SerializeField] private UIText guildRankText;
         [Space]
@@ -24,7 +23,12 @@ namespace Game.Guild
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
         {
+            await classPreviewComponent.Init(ViewModel, ct);
+
+            if (ct.IsCancellationRequested) return;
+
             nicknameComponent.Init(ViewModel);
+
             classNameText.SetTextParams(ViewModel.ClassVM.NameKey);
             specNameText.SetTextParams(ViewModel.SpecVM.NameKey);
 

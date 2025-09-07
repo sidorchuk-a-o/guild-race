@@ -19,6 +19,7 @@ namespace Game.Guild
         [SerializeField] private UIText classNameText;
         [SerializeField] private UIText specNameText;
         [Space]
+        [SerializeField] private ClassPreviewComponent classPreviewComponent;
         [SerializeField] private NicknameComponent nicknameComponent;
 
         [Header("Buttons")]
@@ -57,6 +58,10 @@ namespace Game.Guild
             guildVM.AddTo(disp);
 
             var characterVM = ViewModel.CharacterVM;
+
+            await classPreviewComponent.Init(characterVM, ct);
+
+            if (ct.IsCancellationRequested) return;
 
             nicknameComponent.Init(characterVM);
             itemsLevelText.SetTextParams(characterVM.ItemsLevel.Value);
