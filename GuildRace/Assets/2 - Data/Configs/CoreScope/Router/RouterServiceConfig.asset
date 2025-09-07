@@ -91,25 +91,6 @@ MonoBehaviour:
     contentLifetime:
       isOn: 1
       value: 120
-  - id: f934348f96d942ad84d26678cbcd0594
-    title: LoadingScreens
-    isRouteLayer: 0
-    hasAccessByKey: 1
-    layerAsset:
-      m_AssetGUID: cc34d107bd381bf4a96ddd6b51650ddb
-      m_SubObjectName: 
-      m_SubObjectGUID: 
-      m_SubObjectType: 
-      m_EditorAssetChanged: 0
-    canvasAsset:
-      m_AssetGUID: e28e866020022474aa6e5569e1071bad
-      m_SubObjectName: 
-      m_SubObjectGUID: 
-      m_SubObjectType: 
-      m_EditorAssetChanged: 0
-    contentLifetime:
-      isOn: 1
-      value: 120
   - id: 519cba7fe1594d369c11577befa78ae3
     title: Tutorial
     isRouteLayer: 0
@@ -129,6 +110,25 @@ MonoBehaviour:
     contentLifetime:
       isOn: 1
       value: 10
+  - id: f934348f96d942ad84d26678cbcd0594
+    title: LoadingScreens
+    isRouteLayer: 0
+    hasAccessByKey: 1
+    layerAsset:
+      m_AssetGUID: cc34d107bd381bf4a96ddd6b51650ddb
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    canvasAsset:
+      m_AssetGUID: e28e866020022474aa6e5569e1071bad
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    contentLifetime:
+      isOn: 1
+      value: 120
   routerContainerAsset:
     m_AssetGUID: 5a0444d8af829884b9f21a5547092437
     m_SubObjectName: 

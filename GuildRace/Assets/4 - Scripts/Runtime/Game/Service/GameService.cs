@@ -31,9 +31,13 @@ namespace Game
                 ? RouteKeys.Guild.CreateGuild
                 : RouteKeys.Hub.Roster;
 
+            var loadingKey = !guildService.GuildExists
+                ? LoadingScreenKeys.StartApp
+                : LoadingScreenKeys.Loading;
+
             await router.OpenScene(
                 sceneKey: SceneKeys.Game,
-                loadingKey: LoadingScreenKeys.StartApp,
+                loadingKey: loadingKey,
                 pathKey: pathKey,
                 parameters: RouteParams.FirstRoute);
         }
