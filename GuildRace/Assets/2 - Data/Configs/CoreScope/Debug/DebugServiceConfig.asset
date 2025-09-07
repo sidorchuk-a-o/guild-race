@@ -103,6 +103,8 @@ MonoBehaviour:
   - {fileID: 2560178410640002565}
   - {fileID: -2458127517864282526}
   - {fileID: -7985826406952809497}
+  - {fileID: 2938106072580216742}
+  - {fileID: 4498752551484534749}
   debugModeCanvas:
     m_AssetGUID: f889a18e3cf09ae44a38de601063d83c
     m_SubObjectName: 
@@ -138,6 +140,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e319bf5aac3d73e47b0e7ed467ca3fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2938106072580216742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6942580e1f0594bad89fbadd7e8f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4498752551484534749
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d74b5efa9a2cd40bfcd2d13492cee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5666878002872531588

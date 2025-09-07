@@ -7,7 +7,15 @@ namespace Game.GuildLevels
     {
         private readonly GuildLevelsVMFactory levelsVMF;
 
-        public int LastReadyToCompleteIndex => FindLastIndex(x => x.ReadyToUnlock.Value);
+        public int LastReadyToCompleteIndex
+        {
+            get
+            {
+                var index = FindLastIndex(x => x.ReadyToUnlock.Value);
+
+                return index != -1 ? index : Count - 1;
+            }
+        }
 
         public LevelsVM(IReadOnlyCollection<LevelInfo> values, GuildLevelsVMFactory levelsVMF) : base(values)
         {

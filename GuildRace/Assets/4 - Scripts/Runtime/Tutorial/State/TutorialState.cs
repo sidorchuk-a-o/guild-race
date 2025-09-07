@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using AD.States;
 using AD.Services.Save;
-using AD.States;
+using System.Collections.Generic;
 using VContainer;
 
 namespace Game.Tutorial
@@ -21,6 +21,13 @@ namespace Game.Tutorial
         public void AddComponent(string componentId)
         {
             showedComponents.Add(componentId);
+
+            MarkAsDirty(true);
+        }
+
+        public void ResetProgress()
+        {
+            showedComponents.Clear();
 
             MarkAsDirty(true);
         }

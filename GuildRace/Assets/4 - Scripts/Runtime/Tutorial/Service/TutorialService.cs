@@ -44,6 +44,11 @@ namespace Game.Tutorial
             await uiModule.ShowContainer(containerRef);
         }
 
+        public void ResetProgress()
+        {
+            state.ResetProgress();
+        }
+
         public override void Dispose()
         {
             base.Dispose();
