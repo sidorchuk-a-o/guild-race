@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading;
+using System.Collections.Generic;
 using AD.ToolsCollection;
 using UnityEngine;
 using VContainer;
@@ -55,6 +55,16 @@ namespace Game.Instances
 
                     itemRect.SetAsLastSibling();
                 }
+            }
+        }
+
+        public void ResetItems()
+        {
+            separator.SetActive(false);
+
+            foreach (var item in items)
+            {
+                item.SetActive(false);
             }
         }
     }

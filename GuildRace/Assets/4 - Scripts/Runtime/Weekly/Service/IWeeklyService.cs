@@ -1,8 +1,10 @@
-﻿namespace Game.Weekly
+﻿using UniRx;
+
+namespace Game.Weekly
 {
     public interface IWeeklyService
     {
-        int CurrentWeek { get; }
-        int CurrentDayOfWeek { get; }
+        IReadOnlyReactiveProperty<int> CurrentWeek { get; }
+        IReadOnlyReactiveProperty<int> CurrentDayOfWeek { get; }
     }
 }

@@ -17,11 +17,9 @@ namespace Game.Quests
 
             state = new DailyQuestsState(questsConfig, resolver);
             state.Init();
-
-            TryUpdateQuests();
         }
 
-        private void TryUpdateQuests()
+        protected override void TryUpdateQuests()
         {
             var currentDate = DateTime.Today;
             var lastResetData = state.LastResetDate;

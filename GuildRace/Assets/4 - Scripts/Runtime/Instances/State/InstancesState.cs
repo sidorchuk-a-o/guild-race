@@ -2,15 +2,15 @@
 using AD.Services.ProtectedTime;
 using AD.Services.Save;
 using AD.ToolsCollection;
-using Cysharp.Threading.Tasks;
 using Game.Guild;
-using Game.Inventory;
 using Game.Weekly;
+using Game.Inventory;
+using Game.GuildLevels;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using VContainer;
-using Game.GuildLevels;
 using UniRx;
 
 namespace Game.Instances
@@ -199,7 +199,7 @@ namespace Game.Instances
                 seasons.AddRange(CreateDefaultSeasons());
 
                 LastResetDay = DateTime.Now;
-                LastResetWeek = weeklyService.CurrentWeek;
+                LastResetWeek = weeklyService.CurrentWeek.Value;
 
                 //CreateDefaultConsumables();
 

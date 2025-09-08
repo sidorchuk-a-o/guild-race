@@ -1,16 +1,20 @@
 ﻿using AD.Services;
 using AD.Services.Save;
 using VContainer;
+using UniRx;
 
 namespace Game.Weekly
 {
     public class WeeklyState : ServiceState<WeeklyConfig, WeeklySM>
     {
+        private readonly ReactiveProperty<int> currentWeek = new();
+        private readonly ReactiveProperty<int> currentDayOfWeek = new();
+
         public override string SaveKey => WeeklySM.key;
         public override SaveSource SaveSource => SaveSource.app;
 
-        public int CurrentWeek { get; private set; }
-        public int CurrentDayOfWeek { get; private set; }
+        public IReadOnlyReactiveProperty<int> CurrentWeek => currentWeek;
+        public IReadOnlyReactiveProperty<int> CurrentDayOfWeek => currentDayOfWeek;
 
         public WeeklyState(WeeklyConfig config, IObjectResolver resolver) : base(config, resolver)
         {
@@ -18,14 +22,14 @@ namespace Game.Weekly
 
         public void SetWeek(int value)
         {
-            CurrentWeek = value;
+            currentWeek.Value = value;
 
             MarkAsDirty();
         }
 
         public void SetDayOfWeek(int value)
         {
-            CurrentDayOfWeek = value;
+            currentDayOfWeek.Value = value;
         }
 
         // == Save ==
@@ -34,7 +38,7 @@ namespace Game.Weekly
         {
             return new WeeklySM
             {
-                CurrentWeek = CurrentWeek
+                CurrentWeek = CurrentWeek.Value
             };
         }
 
@@ -45,7 +49,7 @@ namespace Game.Weekly
                 return;
             }
 
-            CurrentWeek = save.CurrentWeek;
+            currentWeek.Value = save.CurrentWeek;
         }
     }
 }
