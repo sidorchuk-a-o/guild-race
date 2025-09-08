@@ -25,13 +25,11 @@ namespace Game.Quests
 
             state = new WeeklyQuestsState(questsConfig, resolver);
             state.Init();
-
-            TryUpdateQuests();
         }
 
-        private void TryUpdateQuests()
+        protected override void TryUpdateQuests()
         {
-            var currentWeek = weeklyService.CurrentWeek;
+            var currentWeek = weeklyService.CurrentWeek.Value;
             var lastResetWeek = state.LastResetWeek;
 
             if (lastResetWeek == currentWeek)

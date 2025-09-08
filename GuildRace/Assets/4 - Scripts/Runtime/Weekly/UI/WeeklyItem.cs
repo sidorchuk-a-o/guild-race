@@ -1,8 +1,9 @@
-﻿using AD.ToolsCollection;
-using AD.UI;
+﻿using AD.UI;
+using AD.ToolsCollection;
 using Game.UI;
 using UnityEngine;
 using VContainer;
+using UniRx;
 
 namespace Game.Weekly
 {
@@ -13,14 +14,11 @@ namespace Game.Weekly
         [Header("Tooltip")]
         [SerializeField] private TooltipComponent tooltipComponent;
 
-        private WeeklyConfig weeklyConfig;
         private WeeklyVM weeklyVM;
 
         [Inject]
-        public void Inject(WeeklyConfig weeklyConfig, WeeklyVMFactory weeklyVMF)
+        public void Inject(WeeklyVMFactory weeklyVMF)
         {
-            this.weeklyConfig = weeklyConfig;
-
             weeklyVM = weeklyVMF.GetWeekly();
         }
 
@@ -28,7 +26,9 @@ namespace Game.Weekly
         {
             weeklyVM.AddTo(disp);
 
-            valueText.SetTextParams($"{weeklyVM.CurrentDayOfWeek} / {weeklyConfig.DaysCount}");
+            weeklyVM.CurrentDayOfWeek
+                .Subscribe(x => valueText.SetTextParams($"{x} / {weeklyVM.DaysCount}"))
+                .AddTo(disp);
 
             tooltipComponent.Init(weeklyVM);
         }

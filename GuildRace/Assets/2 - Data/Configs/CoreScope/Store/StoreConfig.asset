@@ -431,7 +431,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter:
     maxCount: 5
-    cooldownTime: 72000
 --- !u!114 &-5272792349407664658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -740,7 +739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter:
     maxCount: 5
-    cooldownTime: 72000
 --- !u!114 &-2375026289435498903
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -980,7 +978,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter:
     maxCount: 5
-    cooldownTime: 72000
 --- !u!114 &2848440973404050828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1453,4 +1450,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter:
     maxCount: 5
-    cooldownTime: 72000

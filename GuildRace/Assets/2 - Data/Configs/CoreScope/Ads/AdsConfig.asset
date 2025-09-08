@@ -35,14 +35,11 @@ MonoBehaviour:
     title: Skip Boss Timer
     counter:
       maxCount: 5
-      cooldownTime: 72000
   - id: 5dc450fb29864a19b24fc4bf308ea91c
     title: Add Boss Reward
     counter:
       maxCount: 5
-      cooldownTime: 72000
   - id: 0e2e5395817f4b3d9a614c6a8aaaf4d5
     title: Add Boss Try
     counter:
       maxCount: 5
-      cooldownTime: 72000

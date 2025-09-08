@@ -46,14 +46,19 @@ namespace Game.Instances
             instanceVM = instancesVMF.GetCompletedInstance();
             instanceVM.AddTo(disp);
 
-            rewardsContainer.Init(instanceVM.RewardsVM, ct);
-            adsRewardsContainer.Init(instanceVM.AdsRewardVM, disp, ct);
-
             adsRewardButton.Init(disp);
+            rewardsContainer.Init(instanceVM.RewardsVM, ct);
 
-            adsRewardButton.IsCompleted
-                .Subscribe(UpdateAdsRewardState)
-                .AddTo(disp);
+            if (adsRewardButton.IsCompleted.Value)
+            {
+                adsRewardButton.IsCompleted
+                    .Subscribe(x => UpdateAdsRewardState(disp, ct))
+                    .AddTo(disp);
+            }
+            else
+            {
+                UpdateAdsRewardState(disp, ct);
+            }
         }
 
         private void TakeRewardCallback()
@@ -61,12 +66,21 @@ namespace Game.Instances
             Router.Push(RouteKeys.Hub.ActiveInstances);
         }
 
-        private void UpdateAdsRewardState()
+        private void UpdateAdsRewardState(CompositeDisp disp, CancellationTokenSource ct)
         {
             var hasAdsRewards = instanceVM.AdsRewardVM.Count > 0;
             var adsIsCompleted = adsRewardButton.IsCompleted.Value;
 
             adsRewardButton.SetActive(!adsIsCompleted && hasAdsRewards);
+
+            if (adsIsCompleted)
+            {
+                adsRewardsContainer.ResetItems();
+            }
+            else
+            {
+                adsRewardsContainer.Init(instanceVM.AdsRewardVM, disp, ct);
+            }
         }
 
         private void TakeAdsRewardCallback()

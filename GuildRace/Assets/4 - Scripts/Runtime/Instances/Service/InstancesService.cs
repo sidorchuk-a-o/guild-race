@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AD.Services;
+﻿using AD.Services;
 using AD.Services.AppEvents;
 using AD.Services.Leaderboards;
 using AD.Services.ProtectedTime;
@@ -12,6 +9,10 @@ using Game.Guild;
 using Game.GuildLevels;
 using Game.Inventory;
 using Game.Weekly;
+using Mono.Cecil;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UniRx;
 using VContainer;
 
@@ -169,44 +170,45 @@ namespace Game.Instances
 
         private void TryResetUnitsCooldown()
         {
-            foreach (var cooldownParams in state.UnitCooldowns)
+            // weekly reset
+            var currentWeek = weeklyService.CurrentWeek.Value;
+            var lastResetWeek = state.LastResetWeek;
+
+            if (lastResetWeek != currentWeek)
             {
-                if (cooldownParams.IsWeeklyReset)
-                {
-                    var currentWeek = weeklyService.CurrentWeek;
-                    var lastResetWeek = state.LastResetWeek;
+                resetCooldowns(x => x.IsWeeklyReset);
 
-                    if (lastResetWeek == currentWeek)
+                state.SetResetWeek(currentWeek);
+            }
+
+            // daily reset
+            var currentDate = DateTime.Today;
+            var lastResetData = state.LastResetDay;
+            var daysDelta = (currentDate - lastResetData).TotalDays;
+
+            if (daysDelta > 0)
+            {
+                resetCooldowns(x => !x.IsWeeklyReset);
+
+                state.SetResetDay(currentDate);
+            }
+
+            // reset method
+            void resetCooldowns(Func<UnitCooldownInfo, bool> filter)
+            {
+                foreach (var cooldownParams in state.UnitCooldowns.Where(filter))
+                {
+                    var instanceType = cooldownParams.InstanceType;
+
+                    var bossUnits = state.Seasons
+                        .SelectMany(x => x.GetInstances())
+                        .Where(x => x.Type == instanceType)
+                        .SelectMany(x => x.BossUnits);
+
+                    foreach (var bossUnit in bossUnits)
                     {
-                        continue;
+                        bossUnit.ResetCompletedState();
                     }
-
-                    state.SetResetWeek(currentWeek);
-                }
-                else
-                {
-                    var currentDate = DateTime.Today;
-                    var lastResetData = state.LastResetDay;
-                    var daysDelta = (currentDate - lastResetData).TotalDays;
-
-                    if (daysDelta <= 0)
-                    {
-                        continue;
-                    }
-
-                    state.SetResetDay(currentDate);
-                }
-
-                var instanceType = cooldownParams.InstanceType;
-
-                var bossUnits = state.Seasons
-                    .SelectMany(x => x.GetInstances())
-                    .Where(x => x.Type == instanceType)
-                    .SelectMany(x => x.BossUnits);
-
-                foreach (var bossUnit in bossUnits)
-                {
-                    bossUnit.ResetCompletedState();
                 }
             }
         }

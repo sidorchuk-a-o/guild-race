@@ -1,14 +1,15 @@
-﻿using AD.Services.Localization;
-using AD.Services.Store;
+﻿using AD.Services.Store;
+using AD.Services.AppEvents;
+using AD.Services.Localization;
 using AD.ToolsCollection;
 using System.Linq;
-using UniRx;
 using UnityEngine;
 using VContainer;
+using UniRx;
 
 namespace Game.Quests
 {
-    public abstract class QuestsGroupModule : ScriptableEntity<int>
+    public abstract class QuestsGroupModule : ScriptableEntity<int>, IAppTickListener
     {
         [SerializeField] private LocalizeKey nameKey;
         [SerializeField] private int maxQuestsCount;
@@ -16,6 +17,7 @@ namespace Game.Quests
         private readonly ReactiveProperty<int> maxQuestsCountProp = new();
 
         private IStoreService store;
+        private IAppEventsService appEvents;
 
         protected QuestsConfig questsConfig;
         protected IObjectResolver resolver;
@@ -29,9 +31,15 @@ namespace Game.Quests
         public abstract IQuestsCollection Quests { get; }
 
         [Inject]
-        public void Inject(QuestsConfig questsConfig, IStoreService store, IObjectResolver resolver)
+        public void Inject(
+            QuestsConfig questsConfig,
+            IStoreService store,
+            IAppEventsService appEvents,
+            IObjectResolver resolver)
         {
             this.store = store;
+            this.appEvents = appEvents;
+
             this.questsConfig = questsConfig;
             this.resolver = resolver;
         }
@@ -39,7 +47,21 @@ namespace Game.Quests
         public virtual void Init()
         {
             maxQuestsCountProp.Value = maxQuestsCount;
+
+            appEvents.AddAppTickListener(this);
         }
+
+        void IAppTickListener.OnTick(float deltaTime)
+        {
+            TryUpdateQuests();
+        }
+
+        void IAppTickListener.OnLateTick(float deltaTime)
+        {
+        }
+
+        protected abstract void TryUpdateQuests();
+        protected abstract void AddQuests(int count);
 
         public void SetQuestsCount(int count)
         {
@@ -57,8 +79,6 @@ namespace Game.Quests
                 AddQuests(addCount);
             }
         }
-
-        protected abstract void AddQuests(int count);
 
         public virtual bool TakeQuestReward(TakeRewardArgs args, float bonusValue)
         {

@@ -6,16 +6,17 @@ namespace Game.Instances
     {
         private readonly ReactiveProperty<int> maxTriesCount = new();
 
+        public bool IsWeeklyReset { get; }
         public InstanceType InstanceType { get; }
+
         public int MaxCompletedCount { get; }
         public IReadOnlyReactiveProperty<int> MaxTriesCount => maxTriesCount;
-        public bool IsWeeklyReset { get; }
 
         public UnitCooldownInfo(UnitCooldownParams data)
         {
             InstanceType = data.InstanceType;
-            MaxCompletedCount = data.MaxCompletedCount;
             IsWeeklyReset = data.IsWeeklyReset;
+            MaxCompletedCount = data.MaxCompletedCount;
 
             maxTriesCount.Value = data.MaxTriesCount;
         }

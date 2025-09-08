@@ -1,18 +1,28 @@
 ﻿using AD.Services.Router;
+using UniRx;
 
 namespace Game.Weekly
 {
     public class WeeklyVM : ViewModel
     {
-        public int CurrentDayOfWeek { get; }
+        private readonly IWeeklyService weeklyService;
+        private readonly ReactiveProperty<int> currentDayOfWeek = new();
 
-        public WeeklyVM(IWeeklyService weeklyService)
+        public string DaysCount { get; }
+        public IReadOnlyReactiveProperty<int> CurrentDayOfWeek => currentDayOfWeek;
+
+        public WeeklyVM(WeeklyConfig weeklyConfig, IWeeklyService weeklyService)
         {
-            CurrentDayOfWeek = weeklyService.CurrentDayOfWeek + 1;
+            this.weeklyService = weeklyService;
+
+            DaysCount = weeklyConfig.DaysCount.ToString();
         }
 
         protected override void InitSubscribes()
         {
+            weeklyService.CurrentDayOfWeek
+                .Subscribe(x => currentDayOfWeek.Value = x + 1)
+                .AddTo(this);
         }
     }
 }
