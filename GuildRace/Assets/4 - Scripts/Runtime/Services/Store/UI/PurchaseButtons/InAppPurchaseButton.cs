@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Threading;
+using Cysharp.Threading.Tasks;
+using AD.UI;
 using AD.Services.Store;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game.Store
 {
     public class InAppPurchaseButton : PurchaseButton
     {
         [Header("In App")]
-        [SerializeField] private Image iconImage;
+        [SerializeField] private ImageContainer iconImage;
         [SerializeField] private UIText priceText;
 
         public override Type ViewModelType { get; } = typeof(InAppPriceVM);
@@ -26,7 +25,7 @@ namespace Game.Store
 
             if (ct.IsCancellationRequested) return;
 
-            iconImage.sprite = icon;
+            iconImage.SetImage(icon);
             priceText.SetTextParams(inAppPriceVM.ProductVM.LocalizedPrice);
         }
     }
