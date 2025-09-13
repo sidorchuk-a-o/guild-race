@@ -663,6 +663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916951944439047529}
   - component: {fileID: 6648678634621669017}
+  - component: {fileID: 9098242373289780660}
   m_Layer: 0
   m_Name: IconContainer
   m_TagString: Untagged
@@ -712,6 +713,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &9098242373289780660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498862071623777424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe4fe9b863769140b773b57409e1d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 6939654486482678588}
 --- !u!1 &2626303870202542845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,6 +2967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2368624859472750605}
   - component: {fileID: 1040412320549543163}
+  - component: {fileID: 6492319636047769324}
   m_Layer: 0
   m_Name: IconContainer
   m_TagString: Untagged
@@ -3002,6 +3017,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6492319636047769324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546681789233164574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe4fe9b863769140b773b57409e1d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 310986120337411222}
 --- !u!1001 &45560945426483817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4059,7 +4087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6544390778201367397}
   loadingIndicator: {fileID: 5964026249384072534}
-  iconImage: {fileID: 6939654486482678588}
+  iconImage: {fileID: 9098242373289780660}
   priceText: {fileID: 8893971515637133432}
   priceButton: {fileID: 6544390778201367397}
   defaultStateKey: default
@@ -4658,7 +4686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8578369270707783935}
   loadingIndicator: {fileID: 6912919847062827545}
-  iconImage: {fileID: 310986120337411222}
+  iconImage: {fileID: 6492319636047769324}
   priceText: {fileID: 6247510982954621922}
 --- !u!114 &6247510982954621922 stripped
 MonoBehaviour:

@@ -42,4 +42,22 @@ MonoBehaviour:
   - value: 0
     typeAssembly: Game.Input.UIInputModule, Game, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Quests.DailyQuestsModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Quests.WeeklyQuestsModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Guild.LeaderboardModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Weekly.WeeklyService, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Services.Store.AdsPriceHandler, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Services.Leaderboards.LeaderboardsService, AD.Core, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   exitByBackPress: 0
