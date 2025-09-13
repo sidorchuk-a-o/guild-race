@@ -527,32 +527,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 436ea74964fd426783fead672e28b0ae
   title: Ads
---- !u!114 &-4442716325778754451
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e93a2c5248c7f489bbea77e9068fb8, type: 3}
-  m_Name: Soul Crystal
-  m_EditorClassIdentifier: 
-  id: d55a8b05cf0142f588d84a31043d17c1
-  title: Crystal
-  initValue: 0
-  maxValue: 0
-  nameKey:
-    value: STORE/CRYSTAL_CURRENCY_TTL
-  descKey:
-    value: STORE/CRYSTAL_CURRENCY_DESC
-  iconRef:
-    m_AssetGUID: d33f5d3cc8910dc41ad26a6fdcbb59a6
-    m_SubObjectName: 
-    m_SubObjectGUID: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
 --- !u!114 &-4361706031274226063
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -850,7 +824,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencies:
   - {fileID: 7798648369359963485}
-  - {fileID: -4442716325778754451}
   storeShelves:
   - {fileID: 8942095726243882050}
   - {fileID: 2848440973404050828}

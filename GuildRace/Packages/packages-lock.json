@@ -266,6 +266,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.search.extensions": {
+      "version": "https://github.com/Unity-Technologies/com.unity.search.extensions.git?path=package",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a56e92836a0b9f1ead9407289c1893842a55f1f6"
+    },
     "com.unity.test-framework": {
       "version": "1.4.5",
       "depth": 1,
