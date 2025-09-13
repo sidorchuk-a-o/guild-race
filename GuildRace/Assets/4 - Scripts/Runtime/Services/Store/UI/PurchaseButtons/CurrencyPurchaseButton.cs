@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Threading;
+using Cysharp.Threading.Tasks;
+using AD.UI;
 using AD.Services.Store;
 using AD.ToolsCollection;
-using AD.UI;
-using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game.Store
 {
     public class CurrencyPurchaseButton : PurchaseButton
     {
         [Header("Currency")]
-        [SerializeField] private Image iconImage;
+        [SerializeField] private ImageContainer iconImage;
         [SerializeField] private UIText priceText;
         [Space]
         [SerializeField] private UIButton priceButton;
@@ -33,7 +32,7 @@ namespace Game.Store
 
             if (ct.IsCancellationRequested) return;
 
-            iconImage.sprite = icon;
+            iconImage.SetImage(icon);
             priceText.SetTextParams(currencyVM.Amount.Value);
 
             currencyPriceVM.CurrencyVM.IsAvailable

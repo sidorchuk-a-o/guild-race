@@ -136,7 +136,7 @@ MonoBehaviour:
   title: Web GL / Setup Scripting Settings
   compilerConfiguration: 2
   codeGeneration: 1
-  wasmOptimization: 4
+  wasmOptimization: 3
   strippingLevel: 4
   totalMemoty: 32
   compressionFormat: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3e1fd5c6496e4fad89431f0bcaa6e918
   title: Setup Player Build Options
-  options: 4100
+  options: 528388
   buildPath: Build/{name} {build} Debug
 --- !u!114 &8435994611861546833
 MonoBehaviour:
