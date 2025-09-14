@@ -1,17 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AD.Services;
-using AD.ToolsCollection;
+﻿using System.Linq;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using AD.Services;
+using AD.Services.Analytics;
+using AD.Services.Localization;
+using AD.ToolsCollection;
 using Game.GuildLevels;
-using UniRx;
 using VContainer;
+using UniRx;
 
 namespace Game.Quests
 {
     public class QuestsService : Service, IQuestsService
     {
         private readonly IGuildLevelsService guildLevelsService;
+        private readonly IAnalyticsService analytics;
         private readonly IObjectResolver resolver;
 
         private readonly IReadOnlyList<QuestsGroupModule> groupModules;
@@ -23,14 +26,22 @@ namespace Game.Quests
         public IEnumerable<QuestsGroupModule> Modules => groupModules;
         public IReadOnlyReactiveProperty<float> RewardBonus => levelContext.RewardBonus;
 
-        public QuestsService(QuestsConfig config, IGuildLevelsService guildLevelsService, IObjectResolver resolver)
+        public QuestsService(
+            QuestsConfig config,
+            IGuildLevelsService guildLevelsService,
+            IAnalyticsService analytics,
+            ILocalizationService localization,
+            IObjectResolver resolver)
         {
             this.resolver = resolver;
             this.guildLevelsService = guildLevelsService;
+            this.analytics = analytics;
 
             groupModules = config.GroupModules.ToList();
             mechanicHandlers = config.MechanicHandlers.ToList();
             levelContext = new(config);
+
+            QuestsAnalyticsExtensions.Init(this, localization);
         }
 
         public override async UniTask<bool> Init()
@@ -110,6 +121,8 @@ namespace Game.Quests
             }
 
             group.TakeQuestReward(args, bonusValue);
+
+            analytics.CompleteQuest(args.QuestId, group);
         }
     }
 }
