@@ -1,4 +1,5 @@
 ﻿using AD.Services;
+using AD.Services.Analytics;
 using AD.Services.Store;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace Game.Craft
         private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
         private readonly IStoreService storeService;
+        private readonly IAnalyticsService analytics;
 
         private readonly Subject<CraftingResult> onCraftingComplete = new();
 
@@ -40,6 +42,7 @@ namespace Game.Craft
             IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
             IStoreService storeService,
+            IAnalyticsService analytics,
             IObjectResolver resolver)
         {
             this.craftConfig = craftConfig;
@@ -48,6 +51,7 @@ namespace Game.Craft
             this.guildService = guildService;
             this.inventoryService = inventoryService;
             this.storeService = storeService;
+            this.analytics = analytics;
 
             state = new(craftConfig, guildService, guildLevelsService, inventoryService, resolver);
         }
@@ -124,6 +128,8 @@ namespace Game.Craft
                 ItemId = item.Id,
                 SlotId = state.RecycleSlot.Id
             });
+
+            analytics.RecycleItem(item);
         }
 
         public RecyclingResult GetRecyclingResult(string itemId)
@@ -350,6 +356,8 @@ namespace Game.Craft
                 var craftingResult = new CraftingResult(recipeData.ProductItemId, craftingResultCount);
 
                 onCraftingComplete.OnNext(craftingResult);
+
+                analytics.CreateItem(productData, craftingResultCount, recipeData.Price);
             }
         }
     }
