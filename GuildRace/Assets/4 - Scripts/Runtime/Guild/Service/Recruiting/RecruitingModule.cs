@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using VContainer;
 using Random = UnityEngine.Random;
 
@@ -98,16 +99,23 @@ namespace Game.Guild
             }
         }
 
-        public int AcceptJoinRequest(string requestId, out JoinRequestInfo info)
+        public int AcceptJoinRequest(string requestId, out JoinRequestInfo request)
         {
-            info = Requests.FirstOrDefault(x => x.Id == requestId);
-            info ??= recruitingState.GetRemovedRequest(requestId);
+            var index = RemoveRequest(requestId, out request);
 
-            return RemoveRequest(requestId);
+            if (request != null)
+            {
+                guildState.AddCharacter(request.Character);
+            }
+
+            return index;
         }
 
-        public int RemoveRequest(string requestId)
+        public int RemoveRequest(string requestId, out JoinRequestInfo request)
         {
+            request = Requests.FirstOrDefault(x => x.Id == requestId);
+            request ??= recruitingState.GetRemovedRequest(requestId);
+
             return recruitingState.RemoveRequest(requestId);
         }
 
