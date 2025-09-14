@@ -856,13 +856,13 @@ MonoBehaviour:
     minPrice: 0.1
     minDays: 0
   - type: 4
-    minPrice: 2
+    minPrice: 100
     minDays: 0
   - type: 5
-    minPrice: 10
+    minPrice: 250
     minDays: 0
   - type: 6
-    minPrice: 25
+    minPrice: 1000
     minDays: 0
   priceHandlers:
   - {fileID: -2082185298940011130}
