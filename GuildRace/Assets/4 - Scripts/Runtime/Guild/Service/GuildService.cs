@@ -1,19 +1,22 @@
 ﻿using AD.Services;
+using AD.Services.Analytics;
 using AD.Services.AppEvents;
 using AD.Services.Leaderboards;
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
-using Cysharp.Threading.Tasks;
 using Game.GuildLevels;
 using Game.Inventory;
-using UniRx;
+using System.Linq;
+using Cysharp.Threading.Tasks;
 using VContainer;
+using UniRx;
 
 namespace Game.Guild
 {
     public class GuildService : Service, IGuildService
     {
         private readonly GuildState state;
+        private readonly IAnalyticsService analytics;
 
         private readonly RecruitingModule recruitingModule;
         private readonly LeaderboardModule leaderboardModule;
@@ -35,15 +38,20 @@ namespace Game.Guild
             InventoryConfig inventoryConfig,
             IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
+            ILeaderboardsService leaderboards,
             ILocalizationService localization,
             ITimeService time,
             IAppEventsService appEvents,
-            ILeaderboardsService leaderboards,
+            IAnalyticsService analytics,
             IObjectResolver resolver)
         {
+            this.analytics = analytics;
+
             state = new(guildConfig, guildLevelsService, inventoryService, localization, resolver);
             recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, localization, time, resolver);
             leaderboardModule = new(state, guildConfig, leaderboards, appEvents);
+
+            GuildAnalyticsExtensions.Init(guildConfig, this, localization);
         }
 
         public override async UniTask<bool> Init()
@@ -88,16 +96,24 @@ namespace Game.Guild
 
         public int RemoveCharacter(string characterId)
         {
-            return state.RemoveCharacter(characterId);
+            var character = state.Characters.FirstOrDefault(x => x.Id == characterId);
+            var index = state.RemoveCharacter(characterId);
+
+            if (character != null)
+            {
+                analytics.RemoveCharacter(character);
+            }
+
+            return index;
         }
 
         public int AcceptJoinRequest(string requestId)
         {
-            var index = recruitingModule.AcceptJoinRequest(requestId, out var requestInfo);
+            var index = recruitingModule.AcceptJoinRequest(requestId, out var request);
 
-            if (requestInfo != null)
+            if (request != null)
             {
-                state.AddCharacter(requestInfo.Character);
+                analytics.AcceptJoinRequest(request.Character);
             }
 
             return index;
@@ -105,7 +121,14 @@ namespace Game.Guild
 
         public int DeclineJoinRequest(string requestId)
         {
-            return recruitingModule.RemoveRequest(requestId);
+            var index = recruitingModule.RemoveRequest(requestId, out var request);
+
+            if (request != null)
+            {
+                analytics.DeclineJoinRequest(request.Character);
+            }
+
+            return index;
         }
 
         public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
@@ -119,6 +142,8 @@ namespace Game.Guild
             var guildRank = state.GuildRanks[index: rankIndex];
 
             character.SetGuildRank(guildRank.Id);
+
+            analytics.GuildRankChanged(character);
         }
     }
 }

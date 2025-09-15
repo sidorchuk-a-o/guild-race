@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AD.Services;
+using AD.Services.Analytics;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using VContainer;
@@ -10,12 +11,16 @@ namespace Game.GuildLevels
     public class GuildLevelsService : Service, IGuildLevelsService
     {
         private readonly GuildLevelsState state;
+        private readonly IAnalyticsService analytics;
+
         private readonly List<LevelContext> contexts = new();
 
         public IReadOnlyList<LevelInfo> Levels => state.Levels;
 
-        public GuildLevelsService(GuildLevelsConfig config, IObjectResolver resolver)
+        public GuildLevelsService(GuildLevelsConfig config, IAnalyticsService analytics, IObjectResolver resolver)
         {
+            this.analytics = analytics;
+
             state = new(config, resolver);
         }
 
@@ -40,6 +45,8 @@ namespace Game.GuildLevels
             nextLevel?.MarkAsReadyUnlock();
 
             state.MarkAsDirty();
+
+            analytics.UnlockLevel(level);
         }
 
         public void RegisterContext(LevelContext context)

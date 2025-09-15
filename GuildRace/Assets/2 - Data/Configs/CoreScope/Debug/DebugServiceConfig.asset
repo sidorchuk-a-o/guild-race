@@ -105,6 +105,7 @@ MonoBehaviour:
   - {fileID: -7985826406952809497}
   - {fileID: 2938106072580216742}
   - {fileID: 4498752551484534749}
+  - {fileID: 8410270848622621941}
   debugModeCanvas:
     m_AssetGUID: f889a18e3cf09ae44a38de601063d83c
     m_SubObjectName: 
@@ -176,5 +177,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e61e396d71b4d2448884e1548909d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8410270848622621941
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b19d5db1667db41a297d2a6cd67e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

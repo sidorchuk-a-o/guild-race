@@ -22,6 +22,8 @@ namespace Game.Inventory
         {
             state = new(config, resolver);
             factory = new(state, config, resolver);
+
+            InventoryAnalyticsExtensions.Init(config);
         }
 
         public override async UniTask<bool> Init()
