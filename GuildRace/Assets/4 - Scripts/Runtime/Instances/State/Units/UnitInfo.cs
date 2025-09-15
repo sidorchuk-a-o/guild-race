@@ -17,6 +17,7 @@ namespace Game.Instances
         private readonly ReactiveProperty<int> totalCompletedCount = new();
 
         public int Id { get; }
+        public string Title { get; }
 
         public LocalizeKey NameKey { get; }
         public LocalizeKey DescKey { get; }
@@ -38,6 +39,7 @@ namespace Game.Instances
         public UnitInfo(UnitData data)
         {
             Id = data.Id;
+            Title = data.Title;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
             ImageRef = data.ImageRef;

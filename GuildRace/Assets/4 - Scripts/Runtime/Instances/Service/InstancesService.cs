@@ -1,10 +1,10 @@
 ﻿using AD.Services;
+using AD.Services.Router;
 using AD.Services.AppEvents;
+using AD.Services.Analytics;
 using AD.Services.Leaderboards;
 using AD.Services.ProtectedTime;
-using AD.Services.Router;
 using AD.ToolsCollection;
-using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.GuildLevels;
 using Game.Inventory;
@@ -12,6 +12,7 @@ using Game.Weekly;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using VContainer;
 
@@ -53,6 +54,7 @@ namespace Game.Instances
             IAppEventsService appEvents,
             ILeaderboardsService leaderboards,
             ITimeService time,
+            IAnalyticsService analytics,
             IObjectResolver resolver)
         {
             this.instancesConfig = instancesConfig;
@@ -61,8 +63,8 @@ namespace Game.Instances
             this.resolver = resolver;
 
             state = new(instancesConfig, time, guildService, guildLevelsService, inventoryService, weeklyService, resolver);
-            instanceModule = new(state, guildConfig, instancesConfig, router, guildService, inventoryService, this);
-            activeInstanceModule = new(this, state, time);
+            instanceModule = new(state, guildConfig, instancesConfig, router, analytics, guildService, inventoryService, this);
+            activeInstanceModule = new(state, this, analytics, time);
             leaderboardModule = new(state, instancesConfig, activeInstanceModule, guildService, leaderboards, appEvents);
 
             rewardHandlers = instancesConfig.RewardsParams.RewardHandlers.ToDictionary(x => x.Id, x => x);

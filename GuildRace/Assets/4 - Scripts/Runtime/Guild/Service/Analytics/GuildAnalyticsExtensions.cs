@@ -7,11 +7,13 @@ namespace Game.Guild
     public static class GuildAnalyticsExtensions
     {
         private static GuildConfig Config { get; set; }
+        private static IGuildService GuildService { get; set; }
         private static ILocalizationService Localization { get; set; }
 
-        public static void Init(GuildConfig config, ILocalizationService localization)
+        public static void Init(GuildConfig config, IGuildService guildService, ILocalizationService localization)
         {
             Config = config;
+            GuildService = guildService;
             Localization = localization;
         }
 
@@ -46,6 +48,13 @@ namespace Game.Guild
             parameters.AddGuildRank(character);
 
             analytics?.SendEvent("guild_rank_changed", parameters);
+        }
+
+        public static void AddCharacter(this AnalyticsParams parameters, string characterId)
+        {
+            var character = GuildService.Characters[characterId];
+
+            parameters.AddCharacter(character);
         }
 
         public static void AddCharacter(this AnalyticsParams parameters, CharacterInfo character)

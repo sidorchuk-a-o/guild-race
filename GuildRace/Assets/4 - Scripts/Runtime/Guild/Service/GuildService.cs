@@ -51,7 +51,7 @@ namespace Game.Guild
             recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, localization, time, resolver);
             leaderboardModule = new(state, guildConfig, leaderboards, appEvents);
 
-            GuildAnalyticsExtensions.Init(guildConfig, localization);
+            GuildAnalyticsExtensions.Init(guildConfig, this, localization);
         }
 
         public override async UniTask<bool> Init()

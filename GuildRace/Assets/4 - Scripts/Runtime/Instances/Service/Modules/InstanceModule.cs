@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AD.Services.Analytics;
 using AD.Services.Router;
 using AD.ToolsCollection;
-using Cysharp.Threading.Tasks;
 using Game.Guild;
 using Game.Inventory;
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 using CharacterInfo = Game.Guild.CharacterInfo;
@@ -20,6 +21,7 @@ namespace Game.Instances
         private readonly InstancesConfig instancesConfig;
 
         private readonly IRouterService router;
+        private readonly IAnalyticsService analytics;
         private readonly IGuildService guildService;
         private readonly IInventoryService inventoryService;
         private readonly IInstancesService instancesService;
@@ -34,6 +36,7 @@ namespace Game.Instances
             GuildConfig guildConfig,
             InstancesConfig instancesConfig,
             IRouterService router,
+            IAnalyticsService analytics,
             IGuildService guildService,
             IInventoryService inventoryService,
             IInstancesService instancesService)
@@ -42,6 +45,7 @@ namespace Game.Instances
             this.guildConfig = guildConfig;
             this.instancesConfig = instancesConfig;
             this.router = router;
+            this.analytics = analytics;
             this.guildService = guildService;
             this.inventoryService = inventoryService;
             this.instancesService = instancesService;
@@ -339,6 +343,8 @@ namespace Game.Instances
 
             // upd state
             state.CompleteSetupAndStartInstance();
+
+            analytics.StartInstance(setupInstance);
 
             // mark as dirty
             guildService.StateMarkAsDirty();

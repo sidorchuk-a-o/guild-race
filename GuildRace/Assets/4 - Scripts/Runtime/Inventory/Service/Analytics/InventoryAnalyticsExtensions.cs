@@ -11,6 +11,19 @@ namespace Game.Inventory
             InventoryConfig = inventoryConfig;
         }
 
+        public static void AddItems(this AnalyticsParams parameters, IItemsCollection items)
+        {
+            for (var i = 0; i < items.Count; i++)
+            {
+                var item = items[i];
+                var itemParams = AnalyticsParams.Empty;
+
+                itemParams.AddItem(item);
+
+                parameters[$"item_{i}"] = itemParams;
+            }
+        }
+
         public static void AddItem(this AnalyticsParams parameters, ItemInfo item)
         {
             var itemData = InventoryConfig.GetItem(item.DataId);

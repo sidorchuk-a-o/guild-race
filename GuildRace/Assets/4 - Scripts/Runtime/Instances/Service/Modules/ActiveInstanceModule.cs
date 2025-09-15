@@ -1,4 +1,5 @@
 ﻿using System;
+using AD.Services.Analytics;
 using AD.Services.AppEvents;
 using AD.Services.ProtectedTime;
 using AD.ToolsCollection;
@@ -8,8 +9,10 @@ namespace Game.Instances
 {
     public class ActiveInstanceModule : IAppTickListener
     {
-        private readonly IInstancesService instancesService;
         private readonly InstancesState state;
+
+        private readonly IInstancesService instancesService;
+        private readonly IAnalyticsService analytics;
         private readonly ITimeService time;
 
         private readonly Subject<ActiveInstanceInfo> onInstanceCompleted = new();
@@ -19,12 +22,14 @@ namespace Game.Instances
         public IObservable<ActiveInstanceInfo> OnInstanceCompleted => onInstanceCompleted;
 
         public ActiveInstanceModule(
-            IInstancesService instancesService,
             InstancesState state,
+            IInstancesService instancesService,
+            IAnalyticsService analytics,
             ITimeService time)
         {
-            this.instancesService = instancesService;
             this.state = state;
+            this.instancesService = instancesService;
+            this.analytics = analytics;
             this.time = time;
         }
 
@@ -85,6 +90,8 @@ namespace Game.Instances
 
                 onInstanceCompleted.OnNext(activeInstance);
             }
+
+            analytics.CompleteInstance(activeInstance);
         }
 
         private CompleteResult CalcResult(ActiveInstanceInfo instance)
