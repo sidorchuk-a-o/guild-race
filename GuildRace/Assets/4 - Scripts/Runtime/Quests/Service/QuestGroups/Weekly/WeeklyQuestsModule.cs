@@ -27,21 +27,21 @@ namespace Game.Quests
             state.Init();
         }
 
-        protected override void TryUpdateQuests()
+        protected override bool CheckForUpdate()
         {
             var currentWeek = weeklyService.CurrentWeek.Value;
             var lastResetWeek = state.LastResetWeek;
 
-            if (lastResetWeek == currentWeek)
-            {
-                return;
-            }
+            return lastResetWeek != currentWeek;
+        }
 
+        public override void UpdateQuests()
+        {
             state.ClearQuests();
 
             AddQuests(MaxQuestsCount.Value);
 
-            state.SetResetWeek(currentWeek);
+            state.SetResetWeek(weeklyService.CurrentWeek.Value);
         }
 
         protected override void AddQuests(int count)

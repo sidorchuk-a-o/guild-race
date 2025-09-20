@@ -19,22 +19,22 @@ namespace Game.Quests
             state.Init();
         }
 
-        protected override void TryUpdateQuests()
+        protected override bool CheckForUpdate()
         {
             var currentDate = DateTime.Today;
             var lastResetData = state.LastResetDate;
             var daysDelta = (currentDate - lastResetData).TotalDays;
 
-            if (daysDelta <= 0)
-            {
-                return;
-            }
+            return daysDelta > 0;
+        }
 
+        public override void UpdateQuests()
+        {
             state.ClearQuests();
 
             AddQuests(MaxQuestsCount.Value);
 
-            state.SetLastResetDate(currentDate);
+            state.SetLastResetDate(DateTime.Today);
         }
 
         protected override void AddQuests(int count)

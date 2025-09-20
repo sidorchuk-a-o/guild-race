@@ -11,7 +11,7 @@ namespace Game.Instances
 
         private IInstancesService instancesService;
 
-        public override string Name => "boss_reset";
+        public override string Name => "reset_boss";
         public override string Desc => "Сбросить счетчик прохождения всех боссов";
         public override Delegate Delegate => (ResetBoss)ResetBossCallback;
 
