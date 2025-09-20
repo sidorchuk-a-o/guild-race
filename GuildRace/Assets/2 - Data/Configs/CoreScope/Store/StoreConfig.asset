@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 500
+  value: 1450
 --- !u!114 &-8944890680548915326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 5000
+  value: 9750
 --- !u!114 &-7148349938891386449
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 100
+  value: 1000
 --- !u!114 &-5417735608595068156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 200
+  value: 350
 --- !u!114 &-4554924496286752214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 1000
+  value: 5000
 --- !u!114 &-3688815808440512353
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 100
+  value: 1000
 --- !u!114 &-2881808925669662444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 500
+  value: 2500
 --- !u!114 &-373933508734274394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 100
+  value: 1000
 --- !u!114 &2528928861441949859
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 100
+  value: 1000
 --- !u!114 &6659279242057502630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyKey:
     value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-  value: 5000
+  value: 10000
 --- !u!114 &7065293722966396465
 MonoBehaviour:
   m_ObjectHideFlags: 1

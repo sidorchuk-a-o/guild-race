@@ -625,7 +625,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &-7080529732421677225
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -932,7 +932,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &-6150907231377672594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -972,7 +972,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 48
+    power: 43
 --- !u!114 &-6133608900172429420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1042,16 +1042,16 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 40
+  level: 30
   type:
     value: 146
   group:
     value: 112
   rarity:
-    value: 122
+    value: 121
   characterParams:
     health: 0
-    power: 48
+    power: 35
 --- !u!114 &-6110813638385256761
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1130,7 +1130,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 43
+    power: 39
 --- !u!114 &-5950450103269691187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1500,7 +1500,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 34
+    power: 32
 --- !u!114 &-4187781191333709216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1852,7 +1852,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 34
+    power: 32
 --- !u!114 &-2984385885765960227
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2382,7 +2382,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &-1385969258091611105
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2804,7 +2804,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &-950174056014292139
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3523,7 +3523,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 43
+    power: 39
 --- !u!114 &331208564779327751
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3643,7 +3643,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &518433714357507813
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3740,7 +3740,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &841691043756883268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3811,15 +3811,15 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  level: 30
+  level: 40
   type:
     value: 141
   group:
     value: 111
   rarity:
-    value: 121
+    value: 122
   characterParams:
-    health: 340
+    health: 396
     power: 0
 --- !u!114 &1057532855618524533
 MonoBehaviour:
@@ -3859,7 +3859,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &1110932812422987802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4167,7 +4167,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 34
+    power: 32
 --- !u!114 &2382765222928833730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4207,7 +4207,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &2547879043090320572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4337,7 +4337,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 34
+    power: 32
 --- !u!114 &2889767576748943482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4415,7 +4415,7 @@ MonoBehaviour:
     value: 122
   characterParams:
     health: 0
-    power: 48
+    power: 43
 --- !u!114 &3092212957855857889
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4653,7 +4653,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &3698016436506853915
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4812,7 +4812,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &4300491796616334485
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4851,7 +4851,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &4300600863543967724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5008,7 +5008,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &4626130929355491073
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5834,7 +5834,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 38
+    power: 35
 --- !u!114 &8229471332804516462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5873,7 +5873,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &8516279873877236565
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6176,7 +6176,7 @@ MonoBehaviour:
     value: 121
   characterParams:
     health: 0
-    power: 30
+    power: 29
 --- !u!114 &9180415984051115598
 MonoBehaviour:
   m_ObjectHideFlags: 1

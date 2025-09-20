@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 701
-  title: "\u0412\u043E\u043B\u0445\u0432 \u0421\u0442\u0438\u0445\u0438\u0439\u043D\u044B\u0439"
+  title: "\u041F\u043E\u0432\u0435\u043B\u0438\u0442\u0435\u043B\u044C \u0441\u0442\u0438\u0445\u0438\u0439"
   nameKey:
     value: CHARACTERS/SPEC_701_TTL
   descKey:
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 601
-  title: "\u041A\u043E\u043B\u0434\u0443\u043D"
+  title: "\u0427\u0430\u0440\u043E\u0434\u0435\u0439"
   nameKey:
     value: CHARACTERS/CLASS_601_TTL
   descKey:
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 605
-  title: "\u0412\u0435\u0434\u0443\u043D\u044C\u044F"
+  title: "\u041E\u0440\u0430\u043A\u0443\u043B"
   nameKey:
     value: CHARACTERS/CLASS_605_TTL
   descKey:
@@ -1586,7 +1586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 702
-  title: "\u0417\u0430\u043F\u043E\u0432\u0435\u0434\u043D\u0438\u043A"
+  title: "\u0425\u0440\u0430\u043D\u0438\u0442\u0435\u043B\u044C \u0440\u0443\u043D"
   nameKey:
     value: CHARACTERS/SPEC_702_TTL
   descKey:
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 706
-  title: "\u0421\u0432\u044F\u0442\u043E\u0441\u0442\u0440\u0430\u0436"
+  title: "\u0421\u0432\u0435\u0442\u043E\u0441\u0442\u0440\u0430\u0436"
   nameKey:
     value: CHARACTERS/SPEC_706_TTL
   descKey:
