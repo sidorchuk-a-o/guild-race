@@ -22,7 +22,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 100
+    value: 6250
 --- !u!114 &-7939040675071538712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 200
+    value: 7250
 --- !u!114 &-4147466714398599452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 150
+    value: 5750
 --- !u!114 &-4119206308864635095
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 400
+    value: 6000
 --- !u!114 &-3512493835972850039
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 400
+    value: 8250
 --- !u!114 &-2405044317008441947
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +223,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 500
+    value: 8000
 --- !u!114 &-373345140191774381
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 500
+    value: 5250
 --- !u!114 &-305022649874919901
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,7 +269,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 100
+    value: 8500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 300
+    value: 6500
 --- !u!114 &1525925375985229080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,7 +369,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 100
+    value: 7750
 --- !u!114 &3122339219054323187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 100
+    value: 5500
 --- !u!114 &4474740784670954345
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,7 +495,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 100
+    value: 7000
 --- !u!114 &7949238533016191674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -518,7 +518,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 150
+    value: 6750
 --- !u!114 &8728969772936665077
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -554,7 +554,7 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 150
+    value: 5000
 --- !u!114 &9190566719232481550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -577,4 +577,4 @@ MonoBehaviour:
   unlockPrice:
     key:
       value: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
-    value: 250
+    value: 7500
