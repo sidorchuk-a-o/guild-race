@@ -53,14 +53,18 @@ namespace Game.Quests
 
         void IAppTickListener.OnTick(float deltaTime)
         {
-            TryUpdateQuests();
+            if (CheckForUpdate())
+            {
+                UpdateQuests();
+            }
         }
 
         void IAppTickListener.OnLateTick(float deltaTime)
         {
         }
 
-        protected abstract void TryUpdateQuests();
+        protected abstract bool CheckForUpdate();
+        public abstract void UpdateQuests();
         protected abstract void AddQuests(int count);
 
         public void SetQuestsCount(int count)
