@@ -136,7 +136,7 @@ MonoBehaviour:
   title: Web GL / Setup Scripting Settings
   compilerConfiguration: 2
   codeGeneration: 1
-  wasmOptimization: 3
+  wasmOptimization: 4
   strippingLevel: 4
   totalMemoty: 32
   compressionFormat: 0
