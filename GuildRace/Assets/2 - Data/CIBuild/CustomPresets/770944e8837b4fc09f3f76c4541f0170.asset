@@ -16,13 +16,13 @@ MonoBehaviour:
   title: Web GL / Setup Scripting Settings
   compilerConfiguration: 2
   codeGeneration: 1
-  wasmOptimization: 3
+  wasmOptimization: 1
   strippingLevel: 4
   totalMemoty: 32
   compressionFormat: 0
   decompressionFallback: 0
   debugSymbolsMode: 0
-  exceptionSupport: 0
+  exceptionSupport: 2
 --- !u!114 &-4800740225085778245
 MonoBehaviour:
   m_ObjectHideFlags: 1

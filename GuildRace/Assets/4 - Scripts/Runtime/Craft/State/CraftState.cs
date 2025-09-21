@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
+using System.Collections.Generic;
 using AD.Services;
 using AD.Services.Save;
 using Game.Guild;
 using Game.GuildLevels;
 using Game.Inventory;
-using UniRx;
 using VContainer;
+using UniRx;
 
 namespace Game.Craft
 {
@@ -71,10 +71,7 @@ namespace Game.Craft
 
         protected override CraftStateSM CreateSave()
         {
-            return new CraftStateSM
-            {
-                Vendors = Vendors
-            };
+            return new CraftStateSM();
         }
 
         protected override void ReadSave(CraftStateSM save)
@@ -88,7 +85,7 @@ namespace Game.Craft
                 return;
             }
 
-            vendors.AddRange(save.GetVendors(config));
+            vendors.AddRange(GetDefaultVendors());
         }
 
         private IEnumerable<VendorInfo> GetDefaultVendors()
