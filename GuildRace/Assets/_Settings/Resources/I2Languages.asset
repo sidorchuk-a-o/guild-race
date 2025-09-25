@@ -103,7 +103,7 @@ MonoBehaviour:
         \u0433\u0438\u043B\u044C\u0434\u0438\u0438. \u0418 \u0442\u043E\u043B\u044C\u043A\u043E
         \u043E\u0442 \u0442\u0435\u0431\u044F \u0437\u0430\u0432\u0438\u0441\u0438\u0442,
         \u043A\u0430\u043A \u043E\u043D\u0430 \u0441\u043B\u043E\u0436\u0438\u0442\u0441\u044F.
-        \n\n\u041F\u0440\u0438\u043D\u0438\u043C\u0430\u0439 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432,
+        \n\n\\t\u041F\u0440\u0438\u043D\u0438\u043C\u0430\u0439 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432,
         \u0441\u043D\u0430\u0440\u044F\u0436\u0430\u0439 \u0438\u0445 \u0432 \u043F\u043E\u0445\u043E\u0434\u044B,
         \u043F\u0440\u043E\u0445\u043E\u0434\u0438 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F
         \u0438 \u0440\u0435\u0439\u0434\u044B, \u0443\u0441\u0438\u043B\u0438\u0432\u0430\u0439
@@ -10765,7 +10765,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1758817283015
+    Google_LastUpdatedVersion: 1758818711930
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

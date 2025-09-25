@@ -55,6 +55,11 @@ namespace Game.Inventory
                     diffState.SetState(stateKey);
                 }
             }
+            else
+            {
+                diffText.SetTextParams(string.Empty);
+                diffState.SetActive(false);
+            }
         }
 
         public override void ResetPickupPreview()
