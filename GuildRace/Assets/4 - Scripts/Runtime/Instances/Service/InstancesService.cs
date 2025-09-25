@@ -65,7 +65,7 @@ namespace Game.Instances
             state = new(instancesConfig, time, guildService, guildLevelsService, inventoryService, weeklyService, resolver);
             instanceModule = new(state, guildConfig, instancesConfig, router, analytics, guildService, inventoryService, this);
             activeInstanceModule = new(state, this, analytics, time);
-            leaderboardModule = new(state, instancesConfig, activeInstanceModule, guildService, leaderboards, appEvents);
+            leaderboardModule = new(instancesConfig, activeInstanceModule, guildService, leaderboards);
 
             rewardHandlers = instancesConfig.RewardsParams.RewardHandlers.ToDictionary(x => x.Id, x => x);
             consumableHandlers = instancesConfig.ConsumablesParams.MechanicHandlers.ToDictionary(x => x.Id, x => x);

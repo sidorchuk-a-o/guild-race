@@ -113,12 +113,15 @@ namespace Game.Instances
             var handler = instancesService.GetRewardHandler(data.MechanicId);
             var factory = rewardFactoriesDict[handler.GetType()];
 
-            return factory.GetValue(data, handler, this);
+            return factory.GetMechanic(data, handler, this);
         }
 
         public InstanceRewardsVM GetRewards(int unitId)
         {
-            var rewards = InstancesConfig.GetUnitRewards(unitId);
+            var rewards = InstancesConfig
+                .GetUnitRewards(unitId)
+                .Select(x => new InstanceRewardInfo(x))
+                .ToList();
 
             return new InstanceRewardsVM(rewards, this);
         }
@@ -127,6 +130,7 @@ namespace Game.Instances
         {
             var rewards = InstancesConfig.RewardsParams.Rewards
                 .Where(x => x.MechanicParams.Contains(param))
+                .Select(x => new InstanceRewardInfo(x))
                 .ToList();
 
             return new InstanceRewardsVM(rewards, this);
@@ -134,25 +138,39 @@ namespace Game.Instances
 
         public InstanceRewardsVM GetRewards(IReadOnlyList<RewardResult> result)
         {
-            var rewardIds = result.Select(x => x.RewardId);
+            var rewards = result.Select(x =>
+            {
+                var data = InstancesConfig.GetReward(x.RewardId);
+                var info = new InstanceRewardInfo(data, x);
 
-            var rewards = InstancesConfig
-                .GetRewards(rewardIds)
-                .ToList();
+                return info;
+            });
 
-            return new InstanceRewardsVM(rewards, this);
+            return new InstanceRewardsVM(rewards.ToList(), this);
         }
 
         public InstanceRewardVM GetReward(int rewardId)
         {
-            var reward = InstancesConfig.GetReward(rewardId);
+            var data = InstancesConfig.GetReward(rewardId);
+            var info = new InstanceRewardInfo(data);
 
-            return new InstanceRewardVM(reward, this);
+            return new InstanceRewardVM(info, this);
         }
 
         public AdsInstanceRewardsVM GetAdsRewards(IReadOnlyList<AdsInstanceRewardInfo> adsRewards)
         {
             return new AdsInstanceRewardsVM(adsRewards, this);
+        }
+
+        public RewardResultVM GetRewardResult(RewardResult info)
+        {
+            if (info == null) return null;
+
+            var reward = InstancesConfig.GetReward(info.RewardId);
+            var handler = instancesService.GetRewardHandler(reward.MechanicId);
+            var factory = rewardFactoriesDict[handler.GetType()];
+
+            return factory.GetResult(info, this);
         }
 
         // == Threats ==

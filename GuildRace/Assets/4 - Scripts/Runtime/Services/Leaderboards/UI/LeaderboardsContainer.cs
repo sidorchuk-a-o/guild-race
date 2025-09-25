@@ -16,17 +16,19 @@ namespace Game.Leaderboards
         [SerializeField] private List<PlayersScrollView> playersScrolls;
 
         private LeaderboardsVM leaderboardsVM;
+        private LeaderboardsVMFactory leaderboardsVMF;
 
         [Inject]
         public void Inject(LeaderboardsVMFactory leaderboardsVMF)
         {
-            leaderboardsVM = leaderboardsVMF.GetLeaderboards(update: true);
+            this.leaderboardsVMF = leaderboardsVMF;
         }
 
         protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
         {
             await base.Init(parameters, disp, ct);
 
+            leaderboardsVM = leaderboardsVMF.GetLeaderboards(update: true);
             leaderboardsVM.AddTo(disp);
 
             for (var i = 0; i < leaderboardsVM.Count; i++)

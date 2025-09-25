@@ -19,21 +19,42 @@ namespace Game.Inventory
             var selectedSlotVM = result.Context.SelectedSlotVM;
 
             var prevItem = selectedSlotVM.ItemVM.Value;
-            var prevContainer = pickupResult.Context.SelectedGridVM;
-            var prevPosition = pickupResult.Bounds.position;
+            var prevItemExist = selectedSlotVM.HasItem;
+
+            if (prevItemExist)
+            {
+                selectedSlotVM.TryRemoveItem();
+            }
 
             result.Placed = selectedSlotVM.TryAddItem(selectedItemVM);
 
-            if (result.Placed && prevItem != null)
+            if (result.Placed && prevItemExist)
             {
-                var prevPlaced = prevContainer.TryPlaceItem(prevItem, prevPosition);
+                var prevPlaced = false;
+                var prevPosition = pickupResult.Bounds.position;
+                var prevContainer = pickupResult.Context.SelectedGridVM;
+                var prevSlot = pickupResult.Context.SelectedSlotVM;
 
-                if (prevPlaced == false)
+                if (prevContainer != null)
                 {
-                    prevPlaced = prevContainer.TryPlaceItem(prevItem);
+                    prevPlaced = prevContainer.TryPlaceItem(prevItem, prevPosition);
+
+                    if (prevPlaced == false)
+                    {
+                        prevPlaced = prevContainer.TryPlaceItem(prevItem);
+                    }
+                }
+
+                if (prevSlot != null)
+                {
+                    prevPlaced = prevSlot.TryAddItem(prevItem);
                 }
 
                 result.Placed = prevPlaced;
+            }
+            else if (!result.Placed && prevItemExist)
+            {
+                selectedSlotVM.TryAddItem(prevItem);
             }
         }
     }

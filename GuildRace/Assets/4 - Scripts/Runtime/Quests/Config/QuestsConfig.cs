@@ -1,6 +1,6 @@
 ﻿using AD.ToolsCollection;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Quests
@@ -13,6 +13,7 @@ namespace Game.Quests
         [SerializeField] private List<QuestMechanicHandler> mechanicHandlers;
 
         private Dictionary<int, QuestData> questsCache;
+        private Dictionary<QuestsGroup, List<QuestData>> questsByGroupCache;
 
         public IReadOnlyList<QuestData> Quests => quests;
         public IReadOnlyList<QuestsGroupModule> GroupModules => groupModules;
@@ -22,6 +23,17 @@ namespace Game.Quests
         {
             questsCache ??= quests.ToDictionary(x => x.Id, x => x);
             questsCache.TryGetValue(id, out var data);
+
+            return data;
+        }
+
+        public IReadOnlyList<QuestData> GetQuestsByGroup(QuestsGroup group)
+        {
+            questsByGroupCache ??= quests
+                .GroupBy(x => x.GroupId)
+                .ToDictionary(x => x.Key, x => x.ToList());
+
+            questsByGroupCache.TryGetValue(group, out var data);
 
             return data;
         }

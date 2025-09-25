@@ -27,6 +27,9 @@ namespace Game.Guild
         void SetClassRoleSelectorState(RoleId roleId, bool isEnabled);
         void UpdateGuildRank(string characterId, int rankIndex);
 
+        string CreateLeaderboeardExtraData();
+        GuildScoreData GetLeaderboeardExtraData(string json);
+
         void StateMarkAsDirty();
     }
 }

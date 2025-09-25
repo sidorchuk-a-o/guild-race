@@ -4,12 +4,12 @@ using AD.Services.AppEvents;
 using AD.Services.Leaderboards;
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
+using Cysharp.Threading.Tasks;
 using Game.GuildLevels;
 using Game.Inventory;
 using System.Linq;
-using Cysharp.Threading.Tasks;
-using VContainer;
 using UniRx;
+using VContainer;
 
 namespace Game.Guild
 {
@@ -19,7 +19,7 @@ namespace Game.Guild
         private readonly IAnalyticsService analytics;
 
         private readonly RecruitingModule recruitingModule;
-        private readonly LeaderboardModule leaderboardModule;
+        private readonly GuildLeaderboardModule leaderboardModule;
 
         public bool GuildExists => state.IsExists;
         public IReadOnlyReactiveProperty<string> GuildName => state.GuildName;
@@ -144,6 +144,18 @@ namespace Game.Guild
             character.SetGuildRank(guildRank.Id);
 
             analytics.GuildRankChanged(character);
+        }
+
+        // == Leaderboard ==
+
+        public string CreateLeaderboeardExtraData()
+        {
+            return state.CreateLeaderboeardExtraData();
+        }
+
+        public GuildScoreData GetLeaderboeardExtraData(string json)
+        {
+            return state.GetLeaderboeardExtraData(json);
         }
     }
 }

@@ -39,9 +39,10 @@ namespace Game.Quests
 
         protected override void AddQuests(int count)
         {
-            var questsDataPool = questsConfig.Quests
-                .Where(x => x.GroupId == Id)
-                .RandomValues(count);
+            var questsDataPool = questsConfig
+                .GetQuestsByGroup(Group)
+                .Shuffle()
+                .Take(count);
 
             var newQuests = questsDataPool.Select(data =>
             {

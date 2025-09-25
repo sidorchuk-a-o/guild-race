@@ -19,6 +19,7 @@ namespace Game.Instances
 
         public override async UniTask Init(InstanceRewardVM rewardVM, CancellationTokenSource ct)
         {
+            var resultVM = rewardVM.ResultVM as ReagentRewardResultVM;
             var mechanicVM = rewardVM.MechanicVM as ReagentRewardMechanicVM;
             var reagentVM = mechanicVM.ReagentVM;
 
@@ -28,7 +29,7 @@ namespace Game.Instances
 
             iconImage.sprite = icon;
             rarityImage.color = reagentVM.RarityVM.Color;
-            countText.SetTextParams(mechanicVM.Count);
+            countText.SetTextParams(resultVM?.Count ?? mechanicVM.Count);
 
             tooltipComponent.Init(reagentVM);
         }

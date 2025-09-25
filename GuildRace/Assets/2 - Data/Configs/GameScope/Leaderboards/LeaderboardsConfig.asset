@@ -31,13 +31,19 @@ MonoBehaviour:
   - {fileID: -26798013487599552}
   leaderboards:
   - id: 6721f541d7944a479fb4254d9b771bc5
-    title: GuildScore
+    title: GuildScoreSeason1
     titleKey:
       value: LEADERBOARDS/GUILD_SCORE_LB_TTL
+    convertParams:
+      type: 0
+      timeFormat: 0
   - id: bf79a9833c7f480987f53400a9d6fbc5
-    title: GuildPower
+    title: GuildPowerSeason1
     titleKey:
       value: LEADERBOARDS/GUILD_POWER_LB_TTL
+    convertParams:
+      type: 0
+      timeFormat: 0
   getCooldownTime: 300
   getMaxRequestCount: 20
   globalCooldownTime: 1.1

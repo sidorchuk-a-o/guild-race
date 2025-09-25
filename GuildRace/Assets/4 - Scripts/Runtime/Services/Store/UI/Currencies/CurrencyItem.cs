@@ -1,12 +1,14 @@
 ﻿using System.Threading;
-using AD.Services.Store;
-using AD.ToolsCollection;
-using AD.UI;
 using Cysharp.Threading.Tasks;
-using UniRx;
+using AD.UI;
+using AD.Services.Store;
+using AD.Services.Router;
+using AD.ToolsCollection;
+using Game.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using UniRx;
 
 namespace Game.Store
 {
@@ -17,6 +19,7 @@ namespace Game.Store
         [SerializeField] private Image iconImage;
         [SerializeField] private UIText amountText;
         [SerializeField] private CurrencyChangedContainer changedContainer;
+        [SerializeField] private TooltipComponent tooltipComponent;
 
         private CurrencyVM currencyVM;
 
@@ -36,6 +39,7 @@ namespace Game.Store
 
             iconImage.sprite = icon;
             changedContainer.Init(currencyVM, disp);
+            tooltipComponent.Init(currencyVM);
 
             currencyVM.AmountStr
                 .Subscribe(x => amountText.SetTextParams(x))

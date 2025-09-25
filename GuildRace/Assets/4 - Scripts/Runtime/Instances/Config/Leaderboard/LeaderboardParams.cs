@@ -12,7 +12,7 @@ namespace Game.Instances
         [SerializeField] private LeaderboardKey guildScoreKey;
         [SerializeField] private List<InstanceScoreData> instanceScores;
 
-        public LeaderboardKey GuildPowerKey => guildScoreKey;
+        public LeaderboardKey GuildScoreKey => guildScoreKey;
         public IReadOnlyList<InstanceScoreData> InstanceScores => instanceScores;
 
         public InstanceScoreData GetScoreParams(InstanceType instanceType)

@@ -1,6 +1,4 @@
-﻿#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-
-using AD.UI;
+﻿using AD.UI;
 using AD.Services.Router;
 using AD.ToolsCollection;
 using System;
@@ -24,6 +22,7 @@ namespace Game.Guild
 
         [Header("Buttons")]
         [SerializeField] private UIButton acceptButton;
+        [SerializeField] private GameObject acceptButtonTooltip;
         [SerializeField] private UIButton declineButton;
 
         private IRouterService router;
@@ -51,6 +50,8 @@ namespace Game.Guild
             declineButton.OnClick
                 .Subscribe(DeclineCallback)
                 .AddTo(this);
+
+            acceptButtonTooltip.SetActive(false);
         }
 
         protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
@@ -75,8 +76,14 @@ namespace Game.Guild
                 .AddTo(disp);
 
             guildVM.RosterIsFull
-                .Subscribe(x => acceptButton.SetInteractableState(x == false))
+                .Subscribe(RosterIsFullChangedCallback)
                 .AddTo(disp);
+        }
+
+        private void RosterIsFullChangedCallback(bool state)
+        {
+            acceptButton.SetInteractableState(state == false);
+            acceptButtonTooltip.SetActive(state);
         }
 
         private void AcceptCallback()
