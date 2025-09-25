@@ -4,6 +4,7 @@ using AD.Services.Save;
 using AD.ToolsCollection;
 using Game.GuildLevels;
 using Game.Inventory;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -138,6 +139,24 @@ namespace Game.Guild
             var count = config.MaxCharactersCount + upgradeValue;
 
             maxCharactersCount.Value = count;
+        }
+
+        // == Leaderboard ==
+
+        public string CreateLeaderboeardExtraData()
+        {
+            var data = new GuildScoreData
+            {
+                GuildName = guildName.Value,
+                Emblem = Emblem
+            };
+
+            return JsonConvert.SerializeObject(data);
+        }
+
+        public GuildScoreData GetLeaderboeardExtraData(string json)
+        {
+            return JsonConvert.DeserializeObject<GuildScoreData>(json);
         }
 
         // == Save ==

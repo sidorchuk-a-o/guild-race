@@ -190,7 +190,7 @@ MonoBehaviour:
       m_Bottom: 25
     _Gravity: 1
     _ContentSpacing: 10
-    _DefaultItemSize: 60
+    _DefaultItemSize: 75
     _ForwardDragToParents: 0
     _ForwardDragSameDirectionAtBoundary: 0
     _DragEnabled: 1

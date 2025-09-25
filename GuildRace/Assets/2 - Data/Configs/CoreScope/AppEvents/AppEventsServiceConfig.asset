@@ -49,9 +49,6 @@ MonoBehaviour:
     typeAssembly: Game.Quests.WeeklyQuestsModule, Game, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   - value: 0
-    typeAssembly: Game.Guild.LeaderboardModule, Game, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - value: 0
     typeAssembly: Game.Weekly.WeeklyService, Game, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   - value: 0
@@ -60,4 +57,7 @@ MonoBehaviour:
   - value: 0
     typeAssembly: AD.Services.Leaderboards.LeaderboardsService, AD.Core, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: Game.Guild.GuildLeaderboardModule, Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   exitByBackPress: 0

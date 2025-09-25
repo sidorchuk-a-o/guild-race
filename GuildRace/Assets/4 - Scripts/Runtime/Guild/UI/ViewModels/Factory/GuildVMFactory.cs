@@ -62,7 +62,12 @@ namespace Game.Guild
 
         public GuildVM GetGuild()
         {
-            return new GuildVM(guildConfig, guildService);
+            return new GuildVM(guildService, this);
+        }
+
+        public EmblemVM GetEmblem(EmblemInfo emblem)
+        {
+            return new(emblem, guildConfig.EmblemParams);
         }
 
         public CharacterVM GetCharacter(string characterId)
@@ -185,6 +190,15 @@ namespace Game.Guild
         public void SetClassRoleSelectorState(RoleId roleId, bool isEnabled)
         {
             guildService.SetClassRoleSelectorState(roleId, isEnabled);
+        }
+
+        // == Leaderboard ==
+
+        public GuildScoreVM GetLeaderboardExtra(string extraData)
+        {
+            var data = guildService.GetLeaderboeardExtraData(extraData);
+
+            return new GuildScoreVM(data, this);
         }
     }
 }

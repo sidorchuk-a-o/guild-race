@@ -17,12 +17,12 @@ namespace Game.Guild
 
         public IReadOnlyReactiveProperty<bool> RosterIsFull => rosterIsFull;
 
-        public GuildVM(GuildConfig guildConfig, IGuildService guildService)
+        public GuildVM(IGuildService guildService, GuildVMFactory guildVMF)
         {
             this.guildService = guildService;
 
             GuildName = guildService.GuildName;
-            EmblemVM = new(guildService.Emblem, guildConfig.EmblemParams);
+            EmblemVM = guildVMF.GetEmblem(guildService.Emblem);
 
             PlayerName = guildService.PlayerName;
             PlayerRank = guildService.GuildRanks.GuildMaster.Name;

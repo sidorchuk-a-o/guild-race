@@ -31,7 +31,7 @@ MonoBehaviour:
     enable: 1
     saveScoreAnonymousPlayers: 1
     listLBSim:
-    - technoName: GuildScore
+    - technoName: GuildScoreSeason1
       entries: '1. Max: 10
 
         2. Masha: 15
@@ -64,66 +64,56 @@ MonoBehaviour:
         score: 100
         photo: demo image
         uniqueID: 123
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 2
         name: Masha
         score: 90
         photo: demo image
         uniqueID: 321
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 3
         name: anonymous
         score: 80
         photo: anonymous
         uniqueID: 456
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 4
         name: Player 4
         score: 70
         photo: demo image
         uniqueID: 321
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 5
         name: Player current
         score: 60
         photo: demo image
         uniqueID: 000
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 6
         name: Player 6
         score: 50
         photo: demo image
         uniqueID: 326
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 7
         name: Player 7
         score: 40
         photo: demo image
         uniqueID: 327
-        extraData: 
-      - rank: 8
-        name: Player 8
-        score: 30
-        photo: demo image
-        uniqueID: 328
-        extraData: 
-      - rank: 9
-        name: Player 9
-        score: 20
-        photo: demo image
-        uniqueID: 329
-        extraData: 
-      - rank: 10
-        name: Player 10
-        score: 10
-        photo: demo image
-        uniqueID: 330
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       currentPlayer:
         rank: 5
         score: 60
-        extraData: 
-    - technoName: GuildPower
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
+    - technoName: GuildPowerSeason1
       entries: '1. Max: 7123
 
         2. Maria: 15321
@@ -147,41 +137,48 @@ MonoBehaviour:
         score: 7123
         photo: demo image
         uniqueID: 789
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 2
         name: Maria
         score: 15321
         photo: demo image
         uniqueID: 987
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 3
         name: anonymous
         score: 62000
         photo: anonymous
         uniqueID: 891
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 4
         name: Player 4
         score: 122000
         photo: demo image
         uniqueID: 321
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 5
         name: Player current
         score: 127000
         photo: demo image
         uniqueID: 000
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       - rank: 6
         name: Player 6
         score: 340000
         photo: demo image
         uniqueID: 321
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
       currentPlayer:
         rank: 5
         score: 127000
-        extraData: 
+        extraData: "{\"GuildName\":\"\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435
+          \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
   Metrica:
     enable: 1
     metricaCounterID: 103577709
