@@ -42,24 +42,14 @@ namespace Game.Instances
             ThreatsVM = new(info.Threats, instancesVMF);
             SquadVM = new(info.Instance.Type, info.Squad, instancesVMF);
             CompleteChance = info.CompleteChance;
-            RewardsVM = GetRewards(info, instancesVMF);
-            AdsRewardVM = GetAdsRewards(info, instancesVMF);
+            RewardsVM = instancesVMF.GetRewards(info.Rewards);
+            AdsRewardVM = instancesVMF.GetAdsRewards(info.AdsRewards);
             ResultStateVM = new();
 
             var startTime = info.StartTime;
             var timerTime = info.BossUnit.CompleteTime;
 
             TimerVM = new TimerVM(startTime, timerTime, instancesVMF.TimeService);
-        }
-
-        private InstanceRewardsVM GetRewards(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
-        {
-            return instancesVMF.GetRewards(info.Rewards);
-        }
-
-        private AdsInstanceRewardsVM GetAdsRewards(ActiveInstanceInfo info, InstancesVMFactory instancesVMF)
-        {
-            return instancesVMF.GetAdsRewards(info.AdsRewards);
         }
 
         protected override void InitSubscribes()

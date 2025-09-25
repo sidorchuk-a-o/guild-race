@@ -8,12 +8,14 @@ namespace Game.Instances
         public InstanceVM InstanceVM { get; }
 
         public RewardMechanicVM MechanicVM { get; }
+        public RewardResultVM ResultVM { get; }
 
-        public InstanceRewardVM(InstanceRewardData data, InstancesVMFactory instancesVMF)
+        public InstanceRewardVM(InstanceRewardInfo info, InstancesVMFactory instancesVMF)
         {
-            UnitVM = instancesVMF.GetBossUnit(data.UnitId);
-            InstanceVM = instancesVMF.GetBossInstance(data.UnitId);
-            MechanicVM = instancesVMF.GetRewardMechanic(data);
+            UnitVM = instancesVMF.GetBossUnit(info.Data.UnitId);
+            InstanceVM = instancesVMF.GetBossInstance(info.Data.UnitId);
+            MechanicVM = instancesVMF.GetRewardMechanic(info.Data);
+            ResultVM = instancesVMF.GetRewardResult(info.Result);
         }
 
         protected override void InitSubscribes()
@@ -21,6 +23,7 @@ namespace Game.Instances
             UnitVM.AddTo(this);
             InstanceVM.AddTo(this);
             MechanicVM.AddTo(this);
+            ResultVM?.AddTo(this);
         }
     }
 }

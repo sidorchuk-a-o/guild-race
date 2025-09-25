@@ -1,8 +1,8 @@
 ﻿using System.Threading;
-using AD.UI;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using AD.UI;
 
 namespace Game.Instances
 {
@@ -14,8 +14,9 @@ namespace Game.Instances
 
         public override async UniTask Init(InstanceRewardVM rewardVM, CancellationTokenSource ct)
         {
+            var resultVM = rewardVM.ResultVM as CurrencyRewardResultVM;
             var mechanicVM = rewardVM.MechanicVM as CurrencyRewardMechanicVM;
-            var currencyVM = mechanicVM.CurrencyVM;
+            var currencyVM = resultVM?.CurrencyVM ?? mechanicVM.CurrencyVM;
 
             var icon = await currencyVM.LoadIcon();
 

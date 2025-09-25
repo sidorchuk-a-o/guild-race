@@ -5,8 +5,8 @@ namespace Game.Instances
 {
     public class ReagentRewardMechanicVM : RewardMechanicVM
     {
-        public ReagentDataVM ReagentVM { get; }
         public int Count { get; }
+        public ReagentDataVM ReagentVM { get; }
 
         public ReagentRewardMechanicVM(InstanceRewardData data, ReagentRewardHandler handler, InstancesVMFactory instancesVMF)
             : base(data, handler, instancesVMF)
