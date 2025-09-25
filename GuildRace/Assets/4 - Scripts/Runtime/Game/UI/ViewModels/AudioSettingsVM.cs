@@ -8,6 +8,7 @@ namespace Game
     {
         private readonly IAudioService audioService;
 
+        public IReadOnlyReactiveProperty<float> MusicVolume { get; }
         public IReadOnlyReactiveProperty<bool> MusicEnabled { get; }
         public IReadOnlyReactiveProperty<bool> UiEnabled { get; }
 
@@ -15,6 +16,7 @@ namespace Game
         {
             this.audioService = audioService;
 
+            MusicVolume = audioService.MusicModule.Volume;
             MusicEnabled = audioService.MusicModule.Enabled;
             UiEnabled = audioService.UiModule.Enabled;
         }
@@ -31,6 +33,11 @@ namespace Game
         public void SetUiGlobalState(bool value)
         {
             audioService.UiModule.SetGlobalState(value);
+        }
+
+        public void SetMusicVolume(float value)
+        {
+            audioService.MusicModule.SetVolume(value);
         }
     }
 }
