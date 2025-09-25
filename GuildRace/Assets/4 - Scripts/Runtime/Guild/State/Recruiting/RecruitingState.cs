@@ -82,7 +82,7 @@ namespace Game.Guild
 
             if (isEnabled.Value == false)
             {
-                requests.Clear();
+                requests.RemoveAll(x => !x.IsDefault);
             }
 
             MarkAsDirty();

@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using VContainer;
 using Random = UnityEngine.Random;
 
