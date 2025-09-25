@@ -903,8 +903,16 @@ PrefabInstance:
       value: PlayerNameField
       objectReference: {fileID: 0}
     - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
+      propertyPath: m_ContentType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
+      propertyPath: m_CharacterValidation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
       propertyPath: m_Navigation.m_WrapAround
@@ -1924,8 +1932,16 @@ PrefabInstance:
       value: GuildNameField
       objectReference: {fileID: 0}
     - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
+      propertyPath: m_ContentType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878480137142672002, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
+      propertyPath: m_CharacterValidation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6637145592455100760, guid: ccfe431dce7e9ad4180b9726b152d4fb, type: 3}
       propertyPath: m_Pivot.x
