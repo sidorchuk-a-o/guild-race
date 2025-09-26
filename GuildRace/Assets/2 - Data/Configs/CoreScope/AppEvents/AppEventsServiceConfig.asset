@@ -60,4 +60,7 @@ MonoBehaviour:
   - value: 0
     typeAssembly: Game.Guild.GuildLeaderboardModule, Game, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Yandex.YandexGameAdsModule, AD.YandexGame, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   exitByBackPress: 0
