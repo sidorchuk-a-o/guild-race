@@ -237,11 +237,33 @@ namespace Game.Input
                 },
                 {
                     ""name"": """",
+                    ""id"": ""3d228e17-7832-4289-aaef-5a57f452dc6f"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""4faf7dc9-b979-4210-aa8c-e808e1ef89f5"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47e6a2dc-5fba-4ac4-88f1-369dc4f6ce75"",
+                    ""path"": ""<Touchscreen>/touch*/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -399,6 +421,17 @@ namespace Game.Input
                 },
                 {
                     ""name"": """",
+                    ""id"": ""e93cf351-95a0-402c-ac8c-383caeabbf7a"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Cursor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""b64ea097-212c-428d-8e27-639e4b1e9671"",
                     ""path"": ""<Keyboard>/ctrl"",
                     ""interactions"": """",
@@ -431,7 +464,18 @@ namespace Game.Input
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Mouse Drag"",
+                    ""name"": """",
+                    ""id"": ""aa0081c0-ee81-45ab-bf4a-f621b609e7f3"",
+                    ""path"": ""<Touchscreen>/touch*/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Mouse Drag (Mouse)"",
                     ""id"": ""d113090d-aa79-444d-8bd3-2bb60a18bbba"",
                     ""path"": ""MouseDrag"",
                     ""interactions"": ""MouseDrag(dragDistance=10)"",
@@ -459,6 +503,39 @@ namespace Game.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Mouse Drag (Touch)"",
+                    ""id"": ""9bc2811a-7bcd-4d94-9e03-df02e7776bd6"",
+                    ""path"": ""MouseDrag"",
+                    ""interactions"": ""MouseDrag(dragDistance=10)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Button"",
+                    ""id"": ""542dbc99-df37-42fa-9802-9afb490956fb"",
+                    ""path"": ""<Touchscreen>/touch*/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Touch"",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Position"",
+                    ""id"": ""82f685c9-dd69-4f43-a968-f2b133d26f0e"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Touch"",
                     ""action"": ""Pickup"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -672,6 +749,17 @@ namespace Game.Input
                 },
                 {
                     ""name"": """",
+                    ""id"": ""d309a09c-b2a5-475e-8835-097453dabe05"",
+                    ""path"": ""<Touchscreen>/touch*/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""8cfa75c3-b93c-4388-9f11-b460b323ea54"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
@@ -682,7 +770,7 @@ namespace Game.Input
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Mouse Drag"",
+                    ""name"": ""Mouse Drag (Mouse)"",
                     ""id"": ""70e4fdc1-4a1c-4176-b86d-f67aa38ea84f"",
                     ""path"": ""MouseDrag"",
                     ""interactions"": ""MouseDrag(dragDistance=10)"",
@@ -715,12 +803,56 @@ namespace Game.Input
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""Mouse Drag (Touch)"",
+                    ""id"": ""c4ac016c-4f79-467c-b088-58ced82f1f9a"",
+                    ""path"": ""MouseDrag"",
+                    ""interactions"": ""MouseDrag(dragDistance=10)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Button"",
+                    ""id"": ""ad406010-0ef9-49f0-8a9f-f17a8cbc704d"",
+                    ""path"": ""<Touchscreen>/touch*/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Touch"",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Position"",
+                    ""id"": ""8891abf3-56af-4811-96d4-d5119b87713f"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Touch"",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""c6fe2ab5-fc0d-4258-8d99-679ec4225e80"",
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Cursor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9848018e-9e7e-4bc5-8965-70e7b0568961"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
                     ""action"": ""Cursor"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
