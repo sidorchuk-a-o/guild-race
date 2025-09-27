@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customBuildPresets:
   - {fileID: 11400000, guid: 0c2311a0004a33140b02c93bbb25b8dc, type: 2}
+  - {fileID: 11400000, guid: 840e775f8c6edf642a145d4591ba765c, type: 2}
   - {fileID: 11400000, guid: e35f1b75065fa7b48b0c21324684f512, type: 2}
   defaultBuildPresets:
   - {fileID: 11400000, guid: 544b47adade46ec42b690f6bd14a7368, type: 2}
