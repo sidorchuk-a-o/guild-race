@@ -96,7 +96,7 @@ MonoBehaviour:
     value: 202
   mechanicId: 101
   mechanicParams:
-  - 36
+  - 50
 --- !u!114 &-6809558547493564753
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
     value: 203
   mechanicId: 104
   mechanicParams:
-  - 5
+  - 7
 --- !u!114 &-5270412850753509173
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,7 +405,7 @@ MonoBehaviour:
     value: 202
   mechanicId: 102
   mechanicParams:
-  - 200
+  - 220
 --- !u!114 &-3866559040373866136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3379,7 +3379,7 @@ MonoBehaviour:
     value: 202
   mechanicId: 102
   mechanicParams:
-  - 270
+  - 300
 --- !u!114 &3283174283311822006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3420,7 +3420,7 @@ MonoBehaviour:
     value: 202
   mechanicId: 101
   mechanicParams:
-  - 26
+  - 30
 --- !u!114 &4701231186855528148
 MonoBehaviour:
   m_ObjectHideFlags: 1
