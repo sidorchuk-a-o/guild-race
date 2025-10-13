@@ -22,7 +22,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Guild Race
-      - "\u0413\u0438\u043B\u044C\u0434\u0435\u0439\u0441\u043A\u0430\u044F \u0433\u043E\u043D\u043A\u0430"
+      - "\u0413\u043E\u043D\u043A\u0430 \u0413\u0438\u043B\u044C\u0434\u0438\u0439"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -30,7 +30,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Settings
       - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
       - 
       Flags: 000000
@@ -48,7 +48,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - UI sounds
       - "\u0417\u0432\u0443\u043A\u0438 UI"
       - 
       Flags: 000000
@@ -57,7 +57,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - Music
       - "\u041C\u0443\u0437\u044B\u043A\u0430"
       - 
       Flags: 000000
@@ -94,22 +94,38 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tWelcome in <b>Guild Race</b> Game! This is where Your guild's history starts.
-        And you're the only one who's responsible for where it'll lead to.
-      - "\\t\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u043C
-        \u0442\u0435\u0431\u044F \u0432 \u0438\u0433\u0440\u0435 <b>Guild Race</b>
-        - \u0437\u0434\u0435\u0441\u044C \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
-        \u0438\u0441\u0442\u043E\u0440\u0438\u044F \u0422\u0432\u043E\u0435\u0439
-        \u0433\u0438\u043B\u044C\u0434\u0438\u0438. \u0418 \u0442\u043E\u043B\u044C\u043A\u043E
-        \u043E\u0442 \u0442\u0435\u0431\u044F \u0437\u0430\u0432\u0438\u0441\u0438\u0442,
-        \u043A\u0430\u043A \u043E\u043D\u0430 \u0441\u043B\u043E\u0436\u0438\u0442\u0441\u044F.
-        \n\n\\t\u041F\u0440\u0438\u043D\u0438\u043C\u0430\u0439 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432,
-        \u0441\u043D\u0430\u0440\u044F\u0436\u0430\u0439 \u0438\u0445 \u0432 \u043F\u043E\u0445\u043E\u0434\u044B,
-        \u043F\u0440\u043E\u0445\u043E\u0434\u0438 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F
-        \u0438 \u0440\u0435\u0439\u0434\u044B, \u0443\u0441\u0438\u043B\u0438\u0432\u0430\u0439
-        \u0438\u0445 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0420\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432
-        - \u0441\u0434\u0435\u043B\u0430\u0439 \u0432\u0441\u0435, \u0447\u0442\u043E\u0431\u044B
-        \u0442\u0432\u043E\u044F \u0413\u0438\u043B\u044C\u0434\u0438\u044F \u0437\u0430\u043D\u044F\u043B\u0430
+      - '\tWelcome to <b>Guild Race</b> - the toolbox that helps you to administrate
+        your guild.
+
+        This is new to you, I understand. But I will gladly
+        help you with my advices and explanations.
+
+        Take a look around and
+        click at the any interesting section whenever you''re ready. I will help
+        you with them.
+
+
+        \tAccept new members, improve their equipment, run
+        through the dungeons and raid. Who knows, maybe it''s your Guild who will
+        become the major part in this story!'
+      - "\\t\u042D\u0442\u043E - <b>\u0413\u043E\u043D\u043A\u0430 \u0413\u0438\u043B\u044C\u0434\u0438\u0439</b>
+        - \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439
+        \u0434\u043B\u044F \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F
+        \u0442\u0432\u043E\u0435\u0439 \u0433\u0438\u043B\u044C\u0434\u0438\u0435\u0439.\n\u041F\u043E\u043D\u0438\u043C\u0430\u044E,
+        \u043F\u043E\u043A\u0430 \u043C\u043D\u043E\u0433\u043E\u0435 \u043D\u0435\u043F\u043E\u043D\u044F\u0442\u043D\u043E,
+        \u043D\u043E \u044F \u043F\u043E\u0441\u0442\u0430\u0440\u0430\u044E\u0441\u044C
+        \u0442\u0435\u0431\u0435 \u0432\u0441\u0435 \u043E\u0431\u044A\u044F\u0441\u043D\u0438\u0442\u044C.\n\u041F\u043E\u043A\u0430
+        \u043E\u0441\u043C\u043E\u0442\u0440\u0438\u0441\u044C, \u043A\u0430\u043A
+        \u0431\u0443\u0434\u0435\u0448\u044C \u0433\u043E\u0442\u043E\u0432 - \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0438
+        \u0432 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u0443\u044E\u0449\u0438\u0439
+        \u0442\u0435\u0431\u044F \u0440\u0430\u0437\u0434\u0435\u043B. \u0422\u0430\u043C
+        \u044F \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0443 \u043E \u043D\u0435\u043C
+        \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435.\n\n\n\\t\u041F\u0440\u0438\u043D\u0438\u043C\u0430\u0439
+        \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u043E\u0432, \u0441\u043D\u0430\u0440\u044F\u0436\u0430\u0439
+        \u0438\u0445 \u0432 \u043F\u043E\u0445\u043E\u0434\u044B, \u043F\u0440\u043E\u0445\u043E\u0434\u0438
+        \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B
+        - \u0438, \u0431\u044B\u0442\u044C \u043C\u043E\u0436\u0435\u0442, \u0438\u043C\u0435\u043D\u043D\u043E
+        \u0442\u0432\u043E\u044F \u0413\u0438\u043B\u044C\u0434\u0438\u044F \u0437\u0430\u0439\u043C\u0435\u0442
         \u0432\u0430\u0436\u043D\u0443\u044E \u0440\u043E\u043B\u044C \u0432 \u044D\u0442\u043E\u0439
         \u0438\u0441\u0442\u043E\u0440\u0438\u0438!"
       - 
@@ -128,20 +144,46 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tHere, in Guild Bank, you can store new obtained items and  currencies.
-      - "\\t\u0412 \u0433\u0438\u043B\u044C\u0434\u0435\u0439\u0441\u043A\u043E\u043C
-        \u0431\u0430\u043D\u043A\u0435 \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F:\n\n<space=1em>-
+      - "\\tThis is your guild's Bank. You can store some goods here:\n\n<space=1em>-
+        looted items (reagents, consumables, equipment)\n<space=1em>- items created
+        by Artisans(consumables, equipment)\n<space=1em>- gold\n\nAfter you finish
+        your first run in a dungeon you're gonna get some new equipment.\nHere, in
+        Bank, you can decide, which character is going to wear it. Also, you can
+        dispel some equipment you don't need anymore. But choose carefully. \nYou
+        can't undo dispel and restore items. When you will dispel an item you will
+        get some crafting resources. Spend them on creating new item.\nAnd you can
+        sell this resources, if you want.\n\nBut you don't need that right now. Let's
+        focus on the new equipment. "
+      - "\\t\u042D\u0442\u043E \u0431\u0430\u043D\u043A \u0413\u0438\u043B\u044C\u0434\u0438\u0438.
+        \u0412 \u043D\u0435\u043C \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F:\n\n<space=1em>-
         \u0434\u043E\u0431\u044B\u0442\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
-        (\u0440\u0435\u0430\u0433\u0435\u043D\u0442\u044B, \u0440\u0430\u0441\u0445\u043E\u0434\u043D\u0438\u043A\u0438,
-        \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430)\n<space=1em>-
+        (\u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440: \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u044B,
+        \u0440\u0430\u0441\u0445\u043E\u0434\u043D\u0438\u043A\u0438, \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430)\n<space=1em>-
         \u0441\u043E\u0437\u0434\u0430\u043D\u043D\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
         (\u0440\u0430\u0441\u0445\u043E\u0434\u043D\u0438\u043A\u0438, \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0430)\n<space=1em>-
-        \u0437\u043E\u043B\u043E\u0442\u043E\n\n\\t\u0412 \u0411\u0430\u043D\u043A\u0435
-        \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C
+        \u0437\u043E\u043B\u043E\u0442\u043E\n\n\u0417\u0434\u0435\u0441\u044C \u0442\u044B
+        \u043C\u043E\u0436\u0435\u0448\u044C \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C
+        \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u0443\u044E \u0441 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u0438\u0439
         \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0443 \u043C\u0435\u0436\u0434\u0443
         \u0447\u043B\u0435\u043D\u0430\u043C\u0438 \u0433\u0438\u043B\u044C\u0434\u0438\u0438,
         \u0440\u0430\u0441\u043F\u044B\u043B\u0438\u0442\u044C \u043D\u0435\u043D\u0443\u0436\u043D\u044B\u0435
-        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B."
+        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B, \u043F\u0440\u043E\u0434\u0430\u0442\u044C
+        \u043B\u0438\u0448\u043D\u0438\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044B.
+        \n\n\u041F\u0440\u0438 \u0440\u0430\u0441\u043F\u044B\u043B\u0435\u043D\u0438\u0438
+        \u0442\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0448\u044C \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0435
+        \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432,
+        \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0441\u043C\u043E\u0436\u0435\u0448\u044C
+        \u043F\u043E\u0437\u0436\u0435 \u043F\u043E\u0442\u0440\u0430\u0442\u0438\u0442\u044C
+        \u043D\u0430 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u043D\u043E\u0432\u044B\u0445.\n\u041D\u043E
+        \u0442\u0449\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u0443\u043C\u0430\u0439,
+        \u043F\u0440\u0435\u0436\u0434\u0435, \u0447\u0435\u043C \u0440\u0430\u0441\u043F\u044B\u043B\u044F\u0442\u044C.
+        \u0420\u0430\u0441\u043F\u044B\u043B\u0435\u043D\u043D\u044B\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B
+        \u0432\u0435\u0440\u043D\u0443\u0442\u044C \u0443\u0436\u0435 \u043D\u0435
+        \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F. \n\n\u041D\u043E
+        \u044D\u0442\u043E \u0442\u0435\u0431\u0435 \u043F\u043E\u043A\u0430 \u043D\u0435
+        \u043D\u0443\u0436\u043D\u043E, \u0434\u0430\u0432\u0430\u0439 \u0441\u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0438\u0440\u0443\u0435\u043C\u0441\u044F
+        \u043D\u0430 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u043E\u0439
+        \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0435. "
       - 
       Flags: 000000
       Languages_Touch: []
@@ -158,17 +200,23 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tReview new applications and make the decision if you want to accept them.
+      - "\\tThis section helps you to review new recruit applications. There's not
+        much of them right now. But this is only the beginning.\n\nImprove your guild
+        to increase your guild popularity.\nThe more popular your guild is, the more
+        applications you'll receive. \n\n\\tAccept first applications and lets begin
+        new chapter of this Story!"
       - "\\t\u0422\u0443\u0442 \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
         \u0440\u0430\u0441\u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044C
         \u0437\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432.
-        \u0421\u0435\u0439\u0447\u0430\u0441 \u0438\u0445 \u043D\u0435\u043C\u043D\u043E\u0433\u043E,
-        \u043D\u043E, \u0447\u0435\u043C \u043C\u043E\u0449\u043D\u0435\u0435 \u0438
-        \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0435\u0435 \u0431\u0443\u0434\u0435\u0442
-        \u0442\u0432\u043E\u044F \u0413\u0438\u043B\u044C\u0434\u0438\u044F, \u0442\u0435\u043C
-        \u0431\u043E\u043B\u044C\u0448\u0435 \u0437\u0430\u044F\u0432\u043E\u043A
+        \n\u0414\u0430, \u0441\u0435\u0439\u0447\u0430\u0441 \u0438\u0445 \u043D\u0435\u043C\u043D\u043E\u0433\u043E.
+        \u041D\u043E \u0438 \u0442\u044B \u0442\u043E\u043B\u044C\u043A\u043E \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0448\u044C.\n\u0420\u0430\u0437\u0432\u0438\u0432\u0430\u0439
+        \u0433\u0438\u043B\u044C\u0434\u0438\u044E \u0434\u043B\u044F \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u044F
+        \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0441\u0442\u0438.
+        \n\u0427\u0435\u043C \u043C\u043E\u0449\u043D\u0435\u0435 \u0438 \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u0435\u0435
+        \u0431\u0443\u0434\u0435\u0442 \u0442\u0432\u043E\u044F \u0413\u0438\u043B\u044C\u0434\u0438\u044F,
+        \u0442\u0435\u043C \u0431\u043E\u043B\u044C\u0448\u0435 \u0437\u0430\u044F\u0432\u043E\u043A
         \u0431\u0443\u0434\u0435\u0442 \u0432 \u043D\u0435\u0435 \u043F\u043E\u0441\u0442\u0443\u043F\u0430\u0442\u044C.
-        \n\n\\t\u041F\u0440\u0438\u043C\u0438 \u044D\u0442\u0438\u0445 \u043F\u0435\u0440\u0432\u044B\u0445
+        \n\n\\t\u041F\u0440\u0438\u043C\u0438 \u043F\u0435\u0440\u0432\u044B\u0445
         \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432 \u0432 \u0441\u0432\u043E\u0438
         \u0440\u044F\u0434\u044B \u0438 \u043D\u0430\u0447\u043D\u0438 \u043F\u0435\u0440\u0432\u0443\u044E
         \u0433\u043B\u0430\u0432\u0443 \u0438\u0441\u0442\u043E\u0440\u0438\u0438
@@ -189,23 +237,50 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tAdvanced guild members info.
-      - "\\t\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0430\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F
-        \u043E \u0447\u043B\u0435\u043D\u0430\u0445 \u0433\u0438\u043B\u044C\u0434\u0438\u0438.
-        \n\u0412 \u044D\u0442\u043E\u043C \u0440\u0430\u0437\u0434\u0435\u043B\u0435
-        \u0435\u0441\u0442\u044C \u0432\u0441\u044F \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430\u044F
-        \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E\u0431
-        \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u0445:\n<space=1em>-
-        \u043A\u043B\u0430\u0441\u0441\n<space=1em>- \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F\n<space=1em>-
+      - '\tThis is the section with advanced info about guild members:
+
+        <space=1em>-
+        class
+
+        <space=1em>- specialisation
+
+        <space=1em>- role
+
+        <space=1em>-
+        abilities description (with description of the Threat this ability will prevent)
+
+        <space=1em>-
+        current character equipment
+
+
+        Oh, by the way, you can check and change
+        character''s rank. Characters with high rank will be on top of the list of
+        characters.'
+      - "\\t\u0412 \u044D\u0442\u043E\u043C \u0440\u0430\u0437\u0434\u0435\u043B\u0435
+        \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
+        \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E
+        \u043E\u0431 \u0443\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0430\u0445
+        \u0433\u0438\u043B\u044C\u0434\u0438\u0438:\n<space=1em>- \u043A\u043B\u0430\u0441\u0441\n<space=1em>-
+        \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F\n<space=1em>-
         \u0440\u043E\u043B\u044C \n<space=1em>- \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435
         \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0435\u0439
-        (\u0441 \u0443\u043A\u0430\u0437\u0430\u043D\u0438\u0435\u043C \u0423\u0433\u0440\u043E\u0437\u044B,
+        (\u0441 \u0443\u043A\u0430\u0437\u0430\u043D\u0438\u0435\u043C <b>\u0423\u0433\u0440\u043E\u0437\u044B</b>,
         \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u0435\u0442
         \u044D\u0442\u0430 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C)\n<space=1em>-
         \u0441\u043F\u0438\u0441\u043E\u043A \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0438,
         \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u043D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439
         \u043C\u043E\u043C\u0435\u043D\u0442 \u043D\u0430\u0434\u0435\u0442\u0430
-        \u043D\u0430 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430"
+        \u043D\u0430 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430.\n\n\u0422\u0430\u043A\u0436\u0435,
+        \u0437\u0434\u0435\u0441\u044C \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
+        \u0438 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0437\u0432\u0430\u043D\u0438\u0435
+        \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430 \u0432 \u0433\u0438\u043B\u044C\u0434\u0438\u0438.
+        \u0427\u0435\u043C \u0432\u044B\u0448\u0435 \u0437\u0432\u0430\u043D\u0438\u0435,
+        \u0442\u0435\u043C \u0432\u044B\u0448\u0435 \u043E\u043D \u0431\u0443\u0434\u0435\u0442
+        \u0432 \u0441\u043F\u0438\u0441\u043A\u0435 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439
+        \u043F\u0440\u0438 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0435
+        \u043E\u0442\u0440\u044F\u0434\u0430 \u0432 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u0435.
+        \u041D\u043E \u043E\u0431 \u044D\u0442\u043E\u043C \u043D\u0435\u043C\u043D\u043E\u0433\u043E
+        \u043F\u043E\u0437\u0434\u043D\u0435\u0435."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -222,8 +297,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - '\tShows your Guild''s current level. Increase it and get access to extended
-        features of your Guild: cheaper craft, free items and even more!'
+      - "\\tShows your Guild's current level. \n\nIncrease it and get access to extended
+        features of your Guild: \n\n<space=1em>- cheaper craft\n<space=1em>- free
+        items \n<space=1em>- roster increase\n<space=1em>- and even more!"
       - "\\t\u0420\u0430\u0437\u0434\u0435\u043B, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C
         \u043C\u043E\u0436\u043D\u043E \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0442\u044C
         \u0442\u0432\u043E\u044E \u0413\u0438\u043B\u044C\u0434\u0438\u044E. \n\n\\t\u0412
@@ -231,15 +307,19 @@ MonoBehaviour:
         \u0443\u0440\u043E\u0432\u043D\u044F \u0433\u0438\u043B\u044C\u0434\u0438\u0438,
         \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C
         \u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u043D\u044B\u0435
-        \u0431\u043E\u043D\u0443\u0441\u044B. \u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u044C
-        \u0435\u0433\u043E \u0438 \u043F\u043E\u043B\u0443\u0447\u0438 \u0434\u043E\u0441\u0442\u0443\u043F
+        \u0431\u043E\u043D\u0443\u0441\u044B. \u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u0439
+        \u0435\u0433\u043E \u0438 \u043F\u043E\u043B\u0443\u0447\u0430\u0439 \u0434\u043E\u0441\u0442\u0443\u043F
         \u043A \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u043D\u044B\u043C
         \u0444\u0443\u043D\u043A\u0446\u0438\u044F\u043C \u0413\u0438\u043B\u044C\u0434\u0438\u0438:
         \n<space=1em>- \u0441\u043A\u0438\u0434\u043A\u0438 \u043D\u0430 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435
         \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432\n<space=1em>- \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0435
         \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B\n<space=1em>- \u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435
         \u0440\u043E\u0441\u0442\u0435\u0440\u0430 \u0433\u0438\u043B\u044C\u0434\u0438\u0438\n<space=1em>-
-        \u0438 \u0434\u0430\u0436\u0435 \u0431\u043E\u043B\u044C\u0448\u0435! "
+        \u0438 \u0434\u0430\u0436\u0435 \u0431\u043E\u043B\u044C\u0448\u0435! \n\n\u0423\u0440\u043E\u0432\u043D\u0435\u0439
+        \u043C\u043D\u043E\u0433\u043E, \u043F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u044F\u0442\u044C
+        \u0434\u043E\u043B\u0433\u043E. \u041E\u0441\u043C\u043E\u0442\u0440\u0438\u0441\u044C,
+        \u043C\u043E\u0436\u0435\u0442, \u0447\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435
+        \u0441\u0440\u0430\u0437\u0443 \u0443\u0432\u0438\u0434\u0438\u0448\u044C."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -256,15 +336,23 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tCome here to improve your players. Craft new items and let's make the strongest
-        Guild ever!
+      - "\\tCome here to improve your players. \n\nCraft new items, potions or runes.
+        All of this will help in a battle. \n\nTo create any of this you will need
+        some reagents. You can get them in the dungeons or at the Shopping Area"
       - "\\t\u0417\u0434\u0435\u0441\u044C \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
         \u0443\u0441\u0438\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438\u0445
-        \u0438\u0433\u0440\u043E\u043A\u043E\u0432. \u0421\u043E\u0437\u0434\u0430\u0432\u0430\u0439
-        \u0434\u043B\u044F \u043D\u0438\u0445 \u0431\u043E\u043B\u0435\u0435 \u0441\u0438\u043B\u044C\u043D\u044B\u0435
-        \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B, \u043F\u0443\u0441\u0442\u044C
-        \u0442\u0432\u043E\u044F \u0433\u0438\u043B\u044C\u0434\u0438\u044F \u0431\u0443\u0434\u0435\u0442
-        \u0441\u0430\u043C\u043E\u0439 \u0441\u0438\u043B\u044C\u043D\u043E\u0439!"
+        \u0438\u0433\u0440\u043E\u043A\u043E\u0432. \n\n\u0421\u043E\u0437\u0434\u0430\u0432\u0430\u0439
+        \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0443, \u0432\u0430\u0440\u0438
+        \u0437\u0435\u043B\u044C\u044F, \u0437\u0430\u0447\u0430\u0440\u043E\u0432\u044B\u0432\u0430\u0439
+        \u0440\u0443\u043D\u044B. \u0412\u0441\u0435 \u044D\u0442\u043E \u043F\u043E\u043C\u043E\u0436\u0435\u0442
+        \u0432 \u0431\u0438\u0442\u0432\u0435 \u0441 \u0431\u043E\u0441\u0441\u0430\u043C\u0438.\n\n\u0414\u043B\u044F
+        \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432
+        \u0442\u0435\u0431\u0435 \u043F\u043E\u0442\u0440\u0435\u0431\u0443\u044E\u0442\u0441\u044F
+        \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u044B. \u0420\u0435\u0430\u0433\u0435\u043D\u0442\u044B
+        \u043C\u043E\u0436\u043D\u043E \u0434\u043E\u0431\u044B\u0442\u044C \u0432
+        \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F\u0445, \u043B\u0438\u0431\u043E
+        \u043A\u0443\u043F\u0438\u0442\u044C \u043D\u0430 \u0422\u043E\u0440\u0433\u043E\u0432\u043E\u0439
+        \u043F\u043B\u043E\u0449\u0430\u0434\u0438. "
       - 
       Flags: 000000
       Languages_Touch: []
@@ -281,18 +369,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tAh, new task on the Board! Let's do this!
-      - "\\t\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0448\u0442\u0430\u0431 \u0433\u0438\u043B\u044C\u0434\u0438\u0438
-        \u0441\u0442\u0430\u0432\u0438\u0442 \u0437\u0430\u0434\u0430\u0447\u0438,
-        \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043D\u0430\u043C \u043D\u0430\u0434\u043E
-        \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C:\n\n<space=1em>- <b>\u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0435</b>
-        (\u043E\u0431\u043D\u043E\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0440\u0430\u0437
-        \u0432 \u0434\u0435\u043D\u044C)\n<space=1em>- <b>\u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0435</b>
+      - "\\tIn this section you can see Major Tasks from the leadership:\n\n<space=1em>-
+        <b>daily</b> (refreshes every day)\n<space=1em>- <b>weekly</b> (refreshes
+        every 3 days). \n\nCurrently you have 3 daily and 3 weekly quests. Check
+        them, maybe you can complete something easy and get your first reward?\nAh,
+        new task on the Board! Let's do this!"
+      - "\\t\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0448\u0442\u0430\u0431 \u0441\u0442\u0430\u0432\u0438\u0442
+        \u0437\u0430\u0434\u0430\u0447\u0438, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+        \u043D\u0430\u043C \u043D\u0430\u0434\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C:\n\n<space=1em>-
+        <b>\u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0435</b> (\u043E\u0431\u043D\u043E\u0432\u043B\u044F\u044E\u0442\u0441\u044F
+        \u0440\u0430\u0437 \u0432 \u0434\u0435\u043D\u044C)\n<space=1em>- <b>\u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0435</b>
         (\u043E\u0431\u043D\u043E\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0440\u0430\u0437
         \u0432 3 \u0434\u043D\u044F). \n\n\\t\u041D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439
         \u043C\u043E\u043C\u0435\u043D\u0442 \u0442\u0435\u0431\u0435 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E
         3 \u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0445 \u0438 3 \u0435\u0436\u0435\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u044B\u0445
-        \u0437\u0430\u0434\u0430\u043D\u0438\u044F. \u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438,
+        \u0437\u0430\u0434\u0430\u043D\u0438\u044F. \n\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438,
         \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C, \u0442\u0430\u043C
         \u0435\u0441\u0442\u044C \u0447\u0442\u043E-\u0442\u043E, \u0447\u0442\u043E
         \u0442\u044B \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u043B\u0435\u0433\u043A\u043E
@@ -313,19 +404,21 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tCreate group. Try different comps. Make the strongest one to get the job
-        done.
+      - "\\tWelcome to the <b>Season of Discoveries</b>.\n\n4 dungeons and 1 raid
+        with the most dangerous creatures available to you. This creatures are summoned
+        by the Dark powers. \n\nCreate group. Try different comps. Make the strongest
+        one to get the job done."
       - "\\t\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C
         \u0432 <b>\u0421\u0435\u0437\u043E\u043D \u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0439</b>.
-        \u0422\u0435\u0431\u0435 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B
-        4 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 1 \u0440\u0435\u0439\u0434
-        \u0441 \u0441\u0430\u043C\u044B\u043C\u0438 \u043E\u043F\u0430\u0441\u043D\u044B\u043C\u0438
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C\u0438,
+        \n\u0422\u0435\u0431\u0435 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B
+        <b>4 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F</b> \u0438
+        <b>1 \u0440\u0435\u0439\u0434</b> \u0441 \u0441\u0430\u043C\u044B\u043C\u0438
+        \u043E\u043F\u0430\u0441\u043D\u044B\u043C\u0438 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C\u0438,
         \u043F\u0440\u0438\u0437\u0432\u0430\u043D\u043D\u044B\u043C\u0438 \u0422\u0435\u043C\u043D\u044B\u043C\u0438
-        \u0441\u0438\u043B\u0430\u043C\u0438. \n\\t\u0421\u043E\u0431\u0438\u0440\u0430\u0439
+        \u0441\u0438\u043B\u0430\u043C\u0438. \n\u0421\u043E\u0431\u0438\u0440\u0430\u0439
         \u0433\u0440\u0443\u043F\u043F\u0443 \u0438 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439
         \u0438\u0445 \u043D\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 \u0432
-        \u043B\u043E\u0433\u043E\u0432\u043E \u0432\u0440\u0430\u0433\u0430. \n\\t\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438
+        \u043B\u043E\u0433\u043E\u0432\u043E \u0432\u0440\u0430\u0433\u0430. \n\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438
         \u0422\u0435\u043C\u043D\u044B\u0435 \u0441\u0438\u043B\u044B, \u043F\u043E\u043A\u0430
         \u043D\u0435 \u0441\u0442\u0430\u043B\u043E \u0441\u043B\u0438\u0448\u043A\u043E\u043C
         \u043F\u043E\u0437\u0434\u043D\u043E..."
@@ -345,12 +438,13 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tTrack current progress of your groups, check result and get some loot.
+      - \tTrack current progress of your groups, check them after the run and distribute
+        the loot. Oh, and don't forget to check bonus reward for the victory!
       - "\\t\u041E\u0442\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u0439 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0435
         \u0433\u0440\u0443\u043F\u043F\u044B, \u0432\u043E\u0432\u0440\u0435\u043C\u044F
         \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0439 \u0438\u0445 \u0438 \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0439
         \u0434\u043E\u0431\u044B\u0442\u044B\u0435 \u0441\u043E\u043A\u0440\u043E\u0432\u0438\u0449\u0430.
-        \u041D\u0435 \u0437\u0430\u0431\u0443\u0434\u044C \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C
+        \n\u041D\u0435 \u0437\u0430\u0431\u0443\u0434\u044C \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C
         \u0431\u043E\u043D\u0443\u0441\u043D\u0443\u044E \u043D\u0430\u0433\u0440\u0430\u0434\u0443
         \u0437\u0430 \u043F\u043E\u0431\u0435\u0434\u0443 \u043D\u0430\u0434 \u0431\u043E\u0441\u0441\u043E\u043C."
       - 
@@ -369,10 +463,32 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Increase your guild's rating for each successful dungeon or raid expedition.
-      - "\\t\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u0434\u0432\u0430
-        \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0445 \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0430:\n\n\\t<size=+4><b>1.
-        \u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0433\u0438\u043B\u044C\u0434\u0438\u0438</b></size>\n\n\\t\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442\u0441\u044F
+      - '\tEverything in this world is subject to competition and testing. Guild
+        are competiting in ratings.
+
+
+        There are 2 main ratings:
+
+
+        \t<size=+4><b>1.
+        Guild Progress</b></size>
+
+        \tIncreases for the every victory over
+        dungeon or raid boss. In the boss section in "Dungeons and Raids" you can
+        check if the rating reward available.
+
+
+        \t<size=+4><b>2. Guild Power</b></size>
+
+        \tDepends
+        on the current equipment of every guild member. This rating counts for every
+        possible member of the guild. The better they geared, the higher your rating.'
+      - "\\t\u0412 \u044D\u0442\u043E\u043C \u043C\u0438\u0440\u0435 \u0432\u0441\u0435
+        \u0441\u043E\u0440\u0435\u0432\u043D\u0443\u044E\u0442\u0441\u044F. \u0413\u0438\u043B\u044C\u0434\u0438\u0438
+        \u0441\u043E\u0440\u0435\u0432\u043D\u0443\u044E\u0442\u0441\u044F \u0432
+        \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0435.\n\n\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442
+        \u0434\u0432\u0430 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0445 \u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0430:\n\n\\t<size=+4><b>1.
+        \u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u0433\u0438\u043B\u044C\u0434\u0438\u0438</b></size>\n\\t\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442\u0441\u044F
         \u0437\u0430 \u0443\u0441\u043F\u0435\u0448\u043D\u044B\u0435 \u043F\u043E\u0431\u0435\u0434\u044B
         \u043D\u0430\u0434 \u0431\u043E\u0441\u0441\u0430\u043C\u0438 \u043F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u0438\u0439
         \u0438 \u0440\u0435\u0439\u0434\u043E\u0432. \u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
@@ -381,7 +497,7 @@ MonoBehaviour:
         \u043F\u0440\u0438 \u0432\u044B\u0431\u043E\u0440\u0435 \u0431\u043E\u0441\u0441\u0430
         \u0432 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 \"\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F
         \u0438 \u0440\u0435\u0439\u0434\u044B\".\n\n\\t<size=+4><b>2. \u0421\u0438\u043B\u0430
-        \u0433\u0438\u043B\u044C\u0434\u0438\u0438</b></size>\n\n\\t\u041D\u0430\u043F\u0440\u044F\u043C\u0443\u044E
+        \u0433\u0438\u043B\u044C\u0434\u0438\u0438</b></size>\n\\t\u041D\u0430\u043F\u0440\u044F\u043C\u0443\u044E
         \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043E\u0442 \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u043A\u0438
         \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439 \u0433\u0438\u043B\u044C\u0434\u0438\u0438.
         \u0427\u0435\u043C \u043B\u0443\u0447\u0448\u0435 \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u043D
@@ -390,8 +506,7 @@ MonoBehaviour:
         \u0421\u0438\u043B\u044B. (\u0434\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0439\u0442\u0438\u043D\u0433
         \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044F \u0437\u0430 \u043A\u0430\u0436\u0434\u043E\u0433\u043E
         \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0433\u043E \u0447\u043B\u0435\u043D\u0430
-        \u0433\u0438\u043B\u044C\u0434\u0438\u0438, \u0434\u043E 25 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0435\u0439
-        \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E)"
+        \u0433\u0438\u043B\u044C\u0434\u0438\u0438)"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -918,9 +1033,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
+      - \tThe application limit has been reached. Increase the Guild level or make
+        a room for the new recruit by kicking some old members.
       - "\\t\u0414\u043E\u0441\u0442\u0438\u0433\u043D\u0443\u0442 \u043B\u0438\u043C\u0438\u0442
-        \u0437\u0430\u044F\u0432\u043E\u043A. \u041F\u043E\u0432\u044B\u0441\u0442\u0435
+        \u0437\u0430\u044F\u0432\u043E\u043A. \u041F\u043E\u0432\u044B\u0441\u044C\u0442\u0435
         \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u0433\u0438\u043B\u044C\u0434\u0438\u0438
         \u0438\u043B\u0438 \u043E\u0441\u0432\u043E\u0431\u043E\u0434\u0438\u0442\u0435
         \u043C\u0435\u0441\u0442\u043E \u0434\u043B\u044F \u043D\u043E\u0432\u043E\u0433\u043E
@@ -1217,9 +1333,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tA bridge between chaos and order. He can be furious as a wildfire or unshakable
-        as a mountain. His magic doesn't just attack or defend - it rewrites the
-        rules, forcing enemies to play by his rules.
+      - \tA bridge between chaos and order. And this bridge can be as furious as
+        a wildfire or as unshakable as a mountain. Magic perfected over centuries
+        doesn't just attack or defend - it changes the rules of the game, forcing
+        enemies to play by them.
       - "\\t\u041C\u043E\u0441\u0442 \u043C\u0435\u0436\u0434\u0443 \u0445\u0430\u043E\u0441\u043E\u043C
         \u0438 \u043F\u043E\u0440\u044F\u0434\u043A\u043E\u043C. \u0418 \u044D\u0442\u043E\u0442
         \u043C\u043E\u0441\u0442 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
@@ -1240,9 +1357,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - '\tHe doesn''t beg for mercy - he wields raw power, blending the purifying
-        wrath of the sun with shadowy bargains. To him, true holiness is born in
-        struggle: light without dark blinds, dark without light suffocates.'
+      - '\tDoes not beg for mercy but "persuades" opponents with immense force, blending
+        the purifying wrath of the sun with shadowy pacts. Believes true sanctity
+        is born in struggle: light without darkness blinds, darkness without light
+        suffocates.'
       - "\\t\u041D\u0435 \u043C\u043E\u043B\u0438\u0442 \u043E \u043C\u0438\u043B\u043E\u0441\u0442\u0438,
         \u0430 \"\u0443\u0431\u0435\u0436\u0434\u0430\u0435\u0442\" \u043E\u043F\u043F\u043E\u043D\u0435\u043D\u0442\u043E\u0432
         \u043E\u0433\u0440\u043E\u043C\u043D\u043E\u0439 \u0441\u0438\u043B\u043E\u0439,
@@ -1261,9 +1379,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tHe doesn't defend faith - he hammeres it into the skulls of the wicked.
-        His armor is etched with sacred verses, but there's no time to read it -
-        enemies fall in a single strike.
+      - \tIn defending the faith, they drive it into the skulls of the unholy. Their
+        armor is adorned with quotes from sacred texts, but there's no time to read
+        them - foes fall after the first strike.
       - "\\t\u0417\u0430\u0449\u0438\u0449\u0430\u044F \u0432\u0435\u0440\u0443 \u0432\u043A\u043E\u043B\u0430\u0447\u0438\u0432\u0430\u0435\u0442
         \u0435\u0451 \u0432 \u0447\u0435\u0440\u0435\u043F\u0430 \u043D\u0435\u0447\u0435\u0441\u0442\u0438\u0432\u044B\u0445.
         \u0414\u043E\u0441\u043F\u0435\u0445\u0438 \u0414\u043B\u0430\u043D\u043D\u0438\u043A\u043E\u0432
@@ -1280,9 +1398,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tThe walking fortress with style. He doesn't just block attacks - he does
-        it with such grace that even foes sometimes applaud. Lets himself get hot
-        twice to "warm up the crowd" then disarms an enemy with on fluid motion.
+      - \tA walking fortress with a sense of style. They block blows with such grace
+        that even enemies sometimes applaud. Allows a couple of hits to land to "warm
+        up the crowd," then, with a single motion, knocks the weapon from the enemy's
+        hands.
       - "\\t\u0425\u043E\u0434\u044F\u0447\u0430\u044F \u043A\u0440\u0435\u043F\u043E\u0441\u0442\u044C
         \u0441 \u0447\u0443\u0432\u0441\u0442\u0432\u043E\u043C \u0441\u0442\u0438\u043B\u044F.
         \u0411\u043B\u043E\u043A\u0438\u0440\u0443\u0435\u0442 \u0443\u0434\u0430\u0440\u044B
@@ -1302,8 +1421,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tShe doesn't predict the future - she edits it. A mix of shamanic rites,
-        druidic botany and outright blackmail.
+      - \tAdjusts the future of those around them to suit their own needs, using
+        a mix of shamanic rituals, druidic botany, and outright blackmail.
       - "\\t\u041F\u043E\u0434\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u0442
         \u0431\u0443\u0434\u0443\u0449\u0435\u0435 \u043E\u043A\u0440\u0443\u0436\u0430\u044E\u0449\u0438\u0445
         \u043F\u043E\u0434 \u0441\u0435\u0431\u044F, \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F
@@ -1318,8 +1437,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tHis blood is a blueprint. His mutations are his tools. And your corpse?
-        His next experiment.
+      - \tInk for blueprints flows in their veins instead of blood. Mutations serve
+        as their tools. And your corpse? That's the next experiment. Will it be a
+        successful one?
       - "\\t\u0427\u0435\u0440\u043D\u0438\u043B\u0430 \u0434\u043B\u044F \u0447\u0435\u0440\u0442\u0435\u0436\u0435\u0439
         - \u0432\u043C\u0435\u0441\u0442\u043E \u043A\u0440\u043E\u0432\u0438. \u041C\u0443\u0442\u0430\u0446\u0438\u0438
         - \u0432\u043C\u0435\u0441\u0442\u043E \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u043E\u0432.
@@ -1333,8 +1453,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tHis creations shield, shoot, slice and explode. Sometimes all at once.
-        "Safety" is when everyone around him are already dead.
+      - \tCarries an entire arsenal of mechanisms that protect, shoot, slice, and
+        explode. Sometimes all at once. Safety? That's when everything around has
+        already blown up.
       - "\\t\u041D\u043E\u0441\u0438\u0442 \u0441 \u0441\u043E\u0431\u043E\u0439
         \u0446\u0435\u043B\u044B\u0439 \u043F\u0430\u0440\u043A \u043C\u0435\u0445\u0430\u043D\u0438\u0437\u043C\u043E\u0432,
         \u043A\u043E\u0442\u043E\u044B\u0440\u0435 \u0437\u0430\u0449\u0438\u0449\u0430\u044E\u0442,
@@ -1350,9 +1471,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - \tHe doesn't just prey - he weaves a web of their own fears. His daggers
-        are fangs of the night, tempered in black flame. Every step is silent, every
-        strike is a ritual, turning blood into ink for new shadow marks.
+      - \tDoesn't just track prey - weaves a web from their very fears. Their loyal
+        blades are the fangs of night, tempered in black flame. Every step is silent,
+        every strike is a ritual, turning blood into ink for new shadowy sigils.
       - "\\t\u041D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0432\u044B\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u0435\u0442
         \u0436\u0435\u0440\u0442\u0432 - \u043F\u043B\u0435\u0442\u0451\u0442 \u0434\u043B\u044F
         \u043D\u0438\u0445 \u043F\u0430\u0443\u0442\u0438\u043D\u0443 \u0438\u0437
@@ -1517,9 +1638,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - An ancient sorcerer who knows where the wind blows - literally. His enemies
-        are roasted, frozen or crushed with fallen boulders. And his allies are lifted
-        by tailwinds and warmed by embers.
+      - An ancient sorcerer who knows where the wind blows - literally. Enemies are
+        roasted, frozen or crushed with fallen boulders. And allies are lifted by
+        tailwinds and warmed by embers.
       - "\u0414\u0440\u0435\u0432\u043D\u044F\u044F \u043C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F
         \u0441\u0443\u0449\u043D\u043E\u0441\u0442\u044C, \u043A\u043E\u0442\u043E\u0440\u0430\u044F
         \u0437\u043D\u0430\u0435\u0442, \u043A\u0443\u0434\u0430 \u0434\u0443\u0435\u0442
@@ -1538,8 +1659,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - No one enters his magic uninvited. Or leaves. Those who dare learn the meaning
-        of "sanction" carved into their flesh and blood.
+      - No one enters the ritual magic uninvited. Or leaves. Those who dare learn
+        the meaning of "sanction" carved into their flesh and blood.
       - "\u0412 \u0440\u0438\u0442\u0443\u0430\u043B\u044C\u043D\u0443\u044E \u043C\u0430\u0433\u0438\u044E
         \u043D\u0435 \u0432\u0445\u043E\u0434\u044F\u0442 \u0431\u0435\u0437 \u0441\u043F\u0440\u043E\u0441\u0430.
         \u0412\u044B\u0445\u043E\u0434\u044F\u0442 \u2014 \u0442\u043E\u0436\u0435.
@@ -1556,7 +1677,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - The sun in his hands isn't just light - it's a weapon. But allies recieve
+      - The sun in the hands isn't just light - it's a weapon. But allies recieve
         its warmth... assuming they're punctual for the ritual.
       - "\u0412 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435 \u043E\u0440\u0443\u0436\u0438\u044F
         \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442 \u043C\u043E\u0449\u044C
@@ -1572,8 +1693,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - A broker of dark bargains. He doesn't heal - he renegotiates. Your pain vanishes...
-        only to be gifted to another. And yes, he's already chosen who.
+      - A broker of dark bargains. They doesn't heal - renegotiates. Your pain vanishes...
+        only to be gifted to another. And yes, it's already decided, who's gonna
+        get it.
       - "\u041F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A \u0442\u0435\u043C\u043D\u044B\u0445
         \u0441\u0438\u043B. \u041D\u0435 \u0438\u0441\u0446\u0435\u043B\u044F\u0435\u0442
         \u2014 \u043F\u0435\u0440\u0435\u0437\u0430\u043A\u043B\u044E\u0447\u0430\u0435\u0442
@@ -1581,7 +1703,8 @@ MonoBehaviour:
         \u0431\u043E\u043B\u044C \u0443\u0439\u0434\u0451\u0442\u2026 \u043D\u043E
         \u043A\u043E\u043C\u0443-\u0442\u043E \u0434\u0440\u0443\u0433\u043E\u043C\u0443
         \u0434\u043E\u0441\u0442\u0430\u043D\u0435\u0442\u0441\u044F. \u0418 \u0434\u0430,
-        \u043E\u043D \u0443\u0436\u0435 \u0440\u0435\u0448\u0438\u043B, \u043A\u043E\u043C\u0443."
+        \u044D\u0442\u043E \u0443\u0436\u0435 \u0440\u0435\u0448\u0435\u043D\u043D\u044B\u0439
+        \u0432\u043E\u043F\u0440\u043E\u0441, \u043A\u043E\u043C\u0443."
       - 
       Flags: 000000
       Languages_Touch: []
@@ -1605,8 +1728,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - He stands on the frontline, but his weapon isn't just steel. He doesn't shout
-        "Charge!" - he says "Hold the line". Those who listen survive.
+      - A pivotal figure on the front line. Their weapons are not just steel, but
+        words of encouragement. Instead of shouting 'Charge!', you'll hear 'Hold
+        the line!'. And those who listen, survive.
       - "\u041A\u043B\u044E\u0447\u0435\u0432\u0430\u044F \u0444\u0438\u0433\u0443\u0440\u0430
         \u043D\u0430 \u043F\u0435\u0440\u0435\u0434\u043E\u0432\u043E\u0439. \u0412
         \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435 \u043E\u0440\u0443\u0436\u0438\u044F
@@ -1623,8 +1747,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - He doesn't strike from shadows - he offers a fair chance. Underestimate him,
-        and his "honorable duel" end in one blow.
+      - Why kill from the shadows when you can give your foe a chance? It's this
+        very confidence that proves their undoing. Underestimate the Duelist, and
+        you'll learn that an 'honest fight' ends with a single, decisive strike.
       - "\u0417\u0430\u0447\u0435\u043C \u0443\u0431\u0438\u0432\u0430\u0442\u044C
         \u0438\u0441\u043F\u043E\u0434\u0442\u0438\u0448\u043A\u0430, \u0435\u0441\u043B\u0438
         \u043C\u043E\u0436\u043D\u043E \u0434\u0430\u0442\u044C \u0448\u0430\u043D\u0441,
@@ -1643,8 +1768,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - He stood here a century ago; he'll stand a century more. His shield is the
-        border between life and death - and he decides who crosses.
+      - None know how long this vigil has lasted - a hundred years, perhaps a hundred
+        more. But all know the meaning of their blade. It is the border between life
+        and death, and the Sentinel alone decides who may cross.
       - "\u041D\u0438\u043A\u0442\u043E \u043D\u0435 \u0437\u043D\u0430\u0435\u0442,
         \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0434\u043B\u0438\u0442\u0441\u044F
         \u044D\u0442\u043E\u0442 \u0434\u043E\u0437\u043E\u0440, \u043C\u043E\u0436\u0435\u0442
@@ -1663,8 +1789,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'Enemies laugh until they realize: the forest is his ally... and it''s already
-        inside their armor.'
+      - Enemies laugh, until they realize the forest itself bends to a single will...
+        and it is already inside their armor.
       - "\u0412\u0440\u0430\u0433\u0438 \u0441\u043C\u0435\u044E\u0442\u0441\u044F,
         \u043F\u043E\u043A\u0430 \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E\u0442:
         \u043B\u0435\u0441 \u0432\u043E\u043A\u0440\u0443\u0433 \u0432 \u0447\u044C\u0435\u0439-\u0442\u043E
@@ -1677,8 +1803,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Spirits are his eyes and ears. They whisper of ambushes, draw enemy attacks
-        onto himself, and shriek like owls if foes creep too close.
+      - The elders say that spirits are the eyes and ears. They whisper of ambushes,
+        shield allies by drawing enemy attacks onto themselves, and if a foe sneaks
+        too close - they shriek into the night like owls.
       - "\u0421\u0442\u0430\u0440\u0446\u044B \u043F\u043E\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u044E\u0442,
         \u0447\u0442\u043E \u0434\u0443\u0445\u0438 - \u044D\u0442\u043E \u0433\u043B\u0430\u0437\u0430
         \u0438 \u0443\u0448\u0438. \u041E\u043D\u0438 \u0448\u0435\u043F\u0447\u0443\u0442
@@ -1697,9 +1824,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'The Abyss screams in his ears - the fiercer he fights, the louder it grows.
-        Every time he taps into his power, he gambles: can he control it before it
-        controls him?'
+      - 'Surrounded by the voices of the Abyss, the fiercer they fight, the louder
+        the voices become. Using this power is a constant calculation: can they handle
+        the consequences if they let the voices have their way?'
       - "\u041E\u043A\u0440\u0443\u0436\u0435\u043D \u0433\u043E\u043B\u043E\u0441\u0430\u043C\u0438
         \u0411\u0435\u0437\u0434\u043D\u044B, \u0438 \u0447\u0435\u043C \u044F\u0440\u043E\u0441\u0442\u043D\u0435\u0435
         \u0441\u0440\u0430\u0436\u0430\u0435\u0442\u0441\u044F, \u0442\u0435\u043C
@@ -1717,8 +1844,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'He doesn''t bury the dead - he reads them. Each corpse is a page: lungs
-        as parchment, blood as ink, decay as marginalia.'
+      - 'Before burying the dead, one can ''read'' them. Every corpse is a page:
+        the lungs are parchment, the blood is ink, and decay - the priceless notes
+        in the margins.'
       - "\u041F\u0435\u0440\u0435\u0434 \u0442\u0435\u043C \u043A\u0430\u043A \u0445\u043E\u0440\u043E\u043D\u0438\u0442\u044C
         \u043C\u0451\u0440\u0442\u0432\u044B\u0445, \u0438\u0445 \u043C\u043E\u0436\u043D\u043E
         \"\u043F\u0440\u043E\u0447\u0438\u0442\u0430\u0442\u044C\". \u041A\u0430\u0436\u0434\u044B\u0439
@@ -1734,8 +1862,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - His workshop is a shed of "this'll be useful someday". A shield made of spoons?
-        A grenade from honey and nails? If it smokes, it's working.
+      - Their life's work is a shed full of things that 'might still be useful'.
+        They can forge a shield from spoons and a grenade from a pot of honey and
+        nails. If a device is smoking, that means it's working.
       - "\u0417\u0430 \u0436\u0438\u0437\u043D\u044C \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C
         \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u0441\u0430\u0440\u0430\u0439,
         \u043F\u043E\u043B\u043D\u044B\u0439 \u0432\u0435\u0449\u0435\u0439, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
@@ -1753,8 +1882,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - A self-taught genius who believes "if you don't have the right tool, make
-        it explode". Equal parts alchemist, pyromaniac and town fool.
+      - A self-taught genius, convinced that 'if you don't have what you need, you
+        must blow something up to get it'. A mix of an alchemist, a pyrotechnician,
+        and the local madperson.
       - "\u0413\u0435\u043D\u0438\u0439-\u0441\u0430\u043C\u043E\u0443\u0447\u043A\u0430,
         \u0443\u0431\u0435\u0436\u0434\u0435\u043D\u043D\u044B\u0439, \u0447\u0442\u043E
         \xAB\u0435\u0441\u043B\u0438 \u0447\u0435\u0433\u043E-\u0442\u043E \u043D\u0435\u0442
@@ -1771,8 +1901,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 'His backpack is a museum of pain: serrated snares, spiked caltrons, "surprise"
-        boxes. Favourite question: "Did you step on it? No? You''re about to."'
+      - 'A cunning curator of a ''museum of pain'': serrated traps, spiked snares,
+        little boxes with a ''surprise'' inside. They love to ask: ''Did you step
+        on it? No? You''re about to.'''
       - "\u0418\u0441\u043A\u0443\u0441\u043D\u044B\u0439 \u0432\u043B\u0430\u0434\u0435\u043B\u0435\u0446
         \"\u043C\u0443\u0437\u0435\u044F \u0431\u043E\u043B\u0438\": \u0437\u0443\u0431\u0447\u0430\u0442\u044B\u0435
         \u043B\u043E\u0432\u0443\u0448\u043A\u0438, \u0448\u0438\u043F\u043E\u0432\u0430\u043D\u043D\u044B\u0435
@@ -1788,8 +1919,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - His strikes don't just wound - it haunt. Blades force foes to battle their
-        own shosts, leaving hollow shells whispering, "I used to me... something".
+      - 'The hidden attacks of their dark blades torment foes with every movement,
+        forcing them to fight their own fading strength. All that remains is an empty
+        shell, whispering: ''I... I was'
       - "\u0421\u043A\u0440\u044B\u0442\u044B\u0435 \u0430\u0442\u0430\u043A\u0438
         \u0442\u0435\u043C\u043D\u044B\u0445 \u043A\u043B\u0438\u043D\u043A\u043E\u0432
         \u0442\u0435\u0440\u0437\u0430\u044E\u0442 \u0432\u0440\u0430\u0433\u043E\u0432
@@ -10779,7 +10911,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1758819958522
+    Google_LastUpdatedVersion: 1760382646005
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
