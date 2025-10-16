@@ -18,7 +18,7 @@ MonoBehaviour:
     interAdvInterval: 60
     postponeCallByFail: 0
     useYandexMetrica: 1
-    metricaCounterID: 103577709
+    metricaCounterID: 104671808
     skipInterAdvAfterReward: 0
     saveLocal: 1
     saveCloud: 1

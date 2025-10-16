@@ -1,4 +1,5 @@
 ﻿using AD.Services.Analytics;
+using AD.ToolsCollection;
 using Game.Guild;
 using Game.Inventory;
 using UnityEngine;
@@ -26,11 +27,7 @@ namespace Game.Instances
 
         public static void AddInstance(this AnalyticsParams parameters, ActiveInstanceInfo instance)
         {
-            var bossParams = AnalyticsParams.Empty;
             var squadParams = AnalyticsParams.Empty;
-
-            // boss
-            bossParams.AddKey(instance.BossUnit.Title);
 
             // squad
             for (var i = 0; i < instance.Squad.Count; i++)
@@ -40,14 +37,13 @@ namespace Game.Instances
                 var consumsParams = AnalyticsParams.Empty;
 
                 unitParams.AddCharacter(unit.CharactedId);
-                unitParams["consums"] = consumsParams;
-
                 consumsParams.AddItems(unit.Bag.Items);
 
                 squadParams[$"unit_{i}"] = unitParams;
+                unitParams["consums"] = unit.Bag.Items.IsNullOrEmpty() ? null : consumsParams;
             }
 
-            parameters["boss"] = bossParams;
+            parameters["boss"] = instance.BossUnit.Title;
             parameters["squad"] = squadParams;
             parameters["chance"] = Mathf.RoundToInt(instance.CompleteChance.Value * 100f);
         }
