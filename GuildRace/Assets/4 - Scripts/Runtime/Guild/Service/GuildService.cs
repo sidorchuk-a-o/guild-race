@@ -143,6 +143,8 @@ namespace Game.Guild
 
             character.SetGuildRank(guildRank.Id);
 
+            state.UpdateOrderByRank(character);
+
             analytics.GuildRankChanged(character);
         }
 

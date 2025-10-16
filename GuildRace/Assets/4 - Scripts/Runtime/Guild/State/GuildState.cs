@@ -117,6 +117,47 @@ namespace Game.Guild
             return index;
         }
 
+        public void UpdateOrderByRank(CharacterInfo character)
+        {
+            var skipIndex = false;
+            var newIndex = -1;
+            var prevIndex = characters.IndexOf(character);
+
+            var rankId = character.GuildRankId.Value;
+            var rankIndex = guildRanks.IndexOf(rankId);
+
+            for (var i = 0; i < characters.Count; i++)
+            {
+                if (characters[i] == character)
+                {
+                    skipIndex = true;
+                    continue;
+                }
+
+                var cRankIndex = guildRanks.IndexOf(characters[i].GuildRankId.Value);
+
+                if (cRankIndex >= rankIndex)
+                {
+                    newIndex = i;
+                    break;
+                }
+            }
+
+            if (newIndex == -1)
+            {
+                newIndex = characters.Count - 1;
+            }
+            else if (skipIndex)
+            {
+                newIndex--;
+            }
+
+            if (newIndex != -1 && newIndex != prevIndex)
+            {
+                characters.Move(character, newIndex);
+            }
+        }
+
         // == Guild Levels ==
 
         private void UpgradeBankRowCountCallback(int upgradeValue)
