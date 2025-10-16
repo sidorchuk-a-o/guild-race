@@ -20,7 +20,7 @@ namespace Game.Guild
         public static void AcceptJoinRequest(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character);
+            parameters.AddCharacter(character.Id);
 
             analytics?.SendEvent("accept_join_request", parameters);
         }
@@ -28,7 +28,7 @@ namespace Game.Guild
         public static void DeclineJoinRequest(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character);
+            parameters.AddCharacter(character.Id);
 
             analytics?.SendEvent("decline_join_request", parameters);
         }
@@ -36,45 +36,37 @@ namespace Game.Guild
         public static void RemoveCharacter(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character);
+            parameters.AddCharacter(character.Id);
 
             analytics?.SendEvent("remove_character", parameters);
         }
 
         public static void GuildRankChanged(this IAnalyticsService analytics, CharacterInfo character)
         {
-            var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character);
-            parameters.AddGuildRank(character);
+            var rankParams = AnalyticsParams.Default;
+            var characterParams = AnalyticsParams.Default;
 
-            analytics?.SendEvent("guild_rank_changed", parameters);
+            characterParams.AddCharacter(character.Id);
+
+            var guildRankId = character.GuildRankId.Value;
+            var guildRanks = Config.DefaultGuildRanks;
+            var rankData = guildRanks.FirstOrDefault(x => x.Id == guildRankId);
+            var rankName = Localization.Get(rankData.DefaultNameKey, languageCode: "ru");
+
+            rankParams[rankName] = characterParams;
+
+            analytics?.SendEvent("guild_rank_changed", rankParams);
         }
 
         public static void AddCharacter(this AnalyticsParams parameters, string characterId)
         {
+            var charactersParams = Config.CharactersParams;
             var character = GuildService.Characters[characterId];
 
-            parameters.AddCharacter(character);
-        }
+            var classTitle = charactersParams.GetClass(character.ClassId).Title;
+            var specTitle = charactersParams.GetSpecialization(character.SpecId).Title;
 
-        public static void AddCharacter(this AnalyticsParams parameters, CharacterInfo character)
-        {
-            var charactersParams = Config.CharactersParams;
-
-            parameters["character_class"] = charactersParams.GetClass(character.ClassId).Title;
-            parameters["character_spec"] = charactersParams.GetSpecialization(character.SpecId).Title;
-            parameters["items_level"] = character.ItemsLevel.Value;
-        }
-
-        public static void AddGuildRank(this AnalyticsParams parameters, CharacterInfo character)
-        {
-            var guildRank = character.GuildRankId.Value;
-            var guildRanks = Config.DefaultGuildRanks;
-
-            var rankData = guildRanks.FirstOrDefault(x => x.Id == guildRank);
-            var rankName = Localization.Get(rankData.DefaultNameKey, languageCode: "ru");
-
-            parameters["guild_rank"] = rankName;
+            parameters[$"{classTitle} - {specTitle}"] = character.ItemsLevel.Value;
         }
     }
 }

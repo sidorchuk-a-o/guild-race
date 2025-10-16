@@ -27,24 +27,20 @@ namespace Game.Instances
 
         public static void AddInstance(this AnalyticsParams parameters, ActiveInstanceInfo instance)
         {
-            var squadParams = AnalyticsParams.Empty;
+            var classesParams = AnalyticsParams.Empty;
+            var consumsParams = AnalyticsParams.Empty;
 
-            // squad
             for (var i = 0; i < instance.Squad.Count; i++)
             {
                 var unit = instance.Squad[i];
-                var unitParams = AnalyticsParams.Empty;
-                var consumsParams = AnalyticsParams.Empty;
 
-                unitParams.AddCharacter(unit.CharactedId);
+                classesParams.AddCharacter(unit.CharactedId);
                 consumsParams.AddItems(unit.Bag.Items);
-
-                squadParams[$"unit_{i}"] = unitParams;
-                unitParams["consums"] = unit.Bag.Items.IsNullOrEmpty() ? null : consumsParams;
             }
 
             parameters["boss"] = instance.BossUnit.Title;
-            parameters["squad"] = squadParams;
+            parameters["squad_classes"] = classesParams;
+            parameters["squad_consums"] = consumsParams.IsNullOrEmpty() ? null : consumsParams;
             parameters["chance"] = Mathf.RoundToInt(instance.CompleteChance.Value * 100f);
         }
     }

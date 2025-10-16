@@ -1,18 +1,14 @@
 ﻿using AD.Services.Analytics;
-using AD.Services.Store;
 using Game.Inventory;
 
 namespace Game.Craft
 {
     public static class CraftAnalyticsExtensions
     {
-        public static void CreateItem(this IAnalyticsService analytics, ItemData item, int count, CurrencyAmount price)
+        public static void CreateItem(this IAnalyticsService analytics, ItemData item, int count)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddItem(item);
-            parameters.AddCurrencyAmount(price.Key);
-            parameters["price"] = price.Value.ToString();
-            parameters["count"] = count;
+            parameters.AddItem(item, count);
 
             analytics?.SendEvent("craft_item", parameters);
         }

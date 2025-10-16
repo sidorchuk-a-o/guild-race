@@ -15,12 +15,7 @@ namespace Game.Inventory
         {
             for (var i = 0; i < items.Count; i++)
             {
-                var item = items[i];
-                var itemParams = AnalyticsParams.Empty;
-
-                itemParams.AddItem(item);
-
-                parameters[$"item_{i}"] = itemParams;
+                parameters.AddItem(items[i]);
             }
         }
 
@@ -31,10 +26,9 @@ namespace Game.Inventory
             parameters.AddItem(itemData);
         }
 
-        public static void AddItem(this AnalyticsParams parameters, ItemData item)
+        public static void AddItem(this AnalyticsParams parameters, ItemData item, object value = null)
         {
-            parameters["item_id"] = item.Id;
-            parameters["item_name"] = item.Title;
+            parameters[item.Title] = value ?? string.Empty;
         }
     }
 }
