@@ -1,4 +1,5 @@
-﻿using AD.Services.Router;
+﻿using AD.Services.Localization;
+using AD.Services.Router;
 using AD.ToolsCollection;
 using UniRx;
 
@@ -13,7 +14,7 @@ namespace Game.Guild
         public EmblemVM EmblemVM { get; }
 
         public IReadOnlyReactiveProperty<string> PlayerName { get; }
-        public IReadOnlyReactiveProperty<string> PlayerRank { get; }
+        public LocalizeKey PlayerRank { get; }
 
         public IReadOnlyReactiveProperty<bool> RosterIsFull => rosterIsFull;
 
@@ -25,7 +26,7 @@ namespace Game.Guild
             EmblemVM = guildVMF.GetEmblem(guildService.Emblem);
 
             PlayerName = guildService.PlayerName;
-            PlayerRank = guildService.GuildRanks.GuildMaster.Name;
+            PlayerRank = guildService.GuildRanks.GuildMaster.NameKey;
         }
 
         protected override void InitSubscribes()

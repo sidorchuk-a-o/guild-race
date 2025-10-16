@@ -13,7 +13,7 @@ namespace Game.Guild
         private readonly GuildVMFactory guildVMF;
 
         private readonly ReactiveProperty<GuildRankVM> guildRankVM = new();
-        private readonly ReactiveProperty<string> guildRankName = new();
+        private readonly ReactiveProperty<LocalizeKey> guildRankName = new();
         private readonly ReactiveProperty<ActiveInstanceVM> instanceVM = new();
 
         public string Id { get; }
@@ -24,7 +24,7 @@ namespace Game.Guild
         public ClassVM ClassVM { get; }
         public SpecializationVM SpecVM { get; }
 
-        public IReadOnlyReactiveProperty<string> GuildRankName => guildRankName;
+        public IReadOnlyReactiveProperty<LocalizeKey> GuildRankName => guildRankName;
         public IReadOnlyReactiveProperty<GuildRankVM> GuildRankVM => guildRankVM;
 
         public IReadOnlyReactiveProperty<int> ItemsLevel { get; }
@@ -71,9 +71,7 @@ namespace Game.Guild
             guildRankVM.Value = guildVMF.GetGuildRank(guildRankId);
             guildRankVM.Value.AddTo(this);
 
-            guildRankVM.Value.Name
-                .Subscribe(x => guildRankName.Value = x)
-                .AddTo(guildRankVM.Value);
+            guildRankName.Value = guildRankVM.Value.NameKey;
         }
 
         private void InstanceChangedCallback(string activeInstanceId)

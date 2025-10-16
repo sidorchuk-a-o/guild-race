@@ -1,14 +1,13 @@
 ﻿using AD.Services;
-using AD.Services.Localization;
 using AD.Services.Save;
 using AD.ToolsCollection;
 using Game.GuildLevels;
 using Game.Inventory;
-using Newtonsoft.Json;
-using System.Collections.Generic;
 using System.Linq;
-using UniRx;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using VContainer;
+using UniRx;
 
 namespace Game.Guild
 {
@@ -28,7 +27,6 @@ namespace Game.Guild
 
         private readonly IGuildLevelsService guildLevelsService;
         private readonly IInventoryService inventoryService;
-        private readonly ILocalizationService localization;
 
         public override string SaveKey => GuildSM.key;
         public override SaveSource SaveSource => SaveSource.app;
@@ -49,13 +47,11 @@ namespace Game.Guild
             GuildConfig config,
             IGuildLevelsService guildLevelsService,
             IInventoryService inventoryService,
-            ILocalizationService localization,
             IObjectResolver resolver)
             : base(config, resolver)
         {
             this.guildLevelsService = guildLevelsService;
             this.inventoryService = inventoryService;
-            this.localization = localization;
         }
 
         public override void Init()
@@ -167,7 +163,6 @@ namespace Game.Guild
             {
                 GuildName = GuildName.Value,
                 PlayerName = PlayerName.Value,
-                GuildRanks = GuildRanks,
                 Emblem = Emblem
             };
 
@@ -179,11 +174,12 @@ namespace Game.Guild
 
         protected override void ReadSave(GuildSM save)
         {
+            guildRanks.AddRange(CreateDefaultGuildRanks());
+
             if (save == null)
             {
                 Emblem = new();
                 bankTabs.AddRange(CreateDefaultBankTabs());
-                guildRanks.AddRange(CreateDefaultGuildRanks());
 
                 return;
             }
@@ -192,7 +188,6 @@ namespace Game.Guild
             playerName.Value = save.PlayerName;
             Emblem = save.Emblem;
 
-            guildRanks.AddRange(save.GuildRanks);
             characters.AddRange(save.GetCharacters(inventoryService));
             bankTabs.AddRange(save.GetBankTabs(config, inventoryService));
         }
@@ -201,9 +196,7 @@ namespace Game.Guild
         {
             return config.DefaultGuildRanks.Select(x =>
             {
-                var name = localization.Get(x.DefaultNameKey);
-
-                return new GuildRankInfo(x.Id, name);
+                return new GuildRankInfo(x);
             });
         }
 
