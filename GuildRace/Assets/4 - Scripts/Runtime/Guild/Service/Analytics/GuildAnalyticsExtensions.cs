@@ -20,7 +20,7 @@ namespace Game.Guild
         public static void AcceptJoinRequest(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character.Id);
+            parameters.AddCharacter(character);
 
             analytics?.SendEvent("accept_join_request", parameters);
         }
@@ -28,7 +28,7 @@ namespace Game.Guild
         public static void DeclineJoinRequest(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character.Id);
+            parameters.AddCharacter(character);
 
             analytics?.SendEvent("decline_join_request", parameters);
         }
@@ -36,7 +36,7 @@ namespace Game.Guild
         public static void RemoveCharacter(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddCharacter(character.Id);
+            parameters.AddCharacter(character);
 
             analytics?.SendEvent("remove_character", parameters);
         }
@@ -60,8 +60,14 @@ namespace Game.Guild
 
         public static void AddCharacter(this AnalyticsParams parameters, string characterId)
         {
-            var charactersParams = Config.CharactersParams;
             var character = GuildService.Characters[characterId];
+
+            parameters.AddCharacter(character);
+        }
+
+        private static void AddCharacter(this AnalyticsParams parameters, CharacterInfo character)
+        {
+            var charactersParams = Config.CharactersParams;
 
             var classTitle = charactersParams.GetClass(character.ClassId).Title;
             var specTitle = charactersParams.GetSpecialization(character.SpecId).Title;

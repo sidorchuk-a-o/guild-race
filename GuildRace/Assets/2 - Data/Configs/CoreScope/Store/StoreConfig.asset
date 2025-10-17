@@ -1267,7 +1267,7 @@ MonoBehaviour:
   title: Gold
   initValue: 100
   maxValue: 0
-  analyticsOn: 0
+  analyticsOn: 1
   nameKey:
     value: STORE/GOLD_CURRENCY_TTL
   descKey:

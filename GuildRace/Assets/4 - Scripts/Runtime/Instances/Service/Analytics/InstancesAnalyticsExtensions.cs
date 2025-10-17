@@ -19,14 +19,18 @@ namespace Game.Instances
         public static void CompleteInstance(this IAnalyticsService analytics, ActiveInstanceInfo instance)
         {
             var parameters = AnalyticsParams.Default;
-            parameters.AddInstance(instance);
-            parameters.AddKey(instance.Result.Value);
+            var instanceParams = AnalyticsParams.Empty;
+
+            instanceParams.AddInstance(instance);
+            parameters[instance.Result.Value] = instanceParams;
 
             analytics?.SendEvent("complete_instance", parameters);
         }
 
         public static void AddInstance(this AnalyticsParams parameters, ActiveInstanceInfo instance)
         {
+            var instanceParams = AnalyticsParams.Empty;
+            var bossParams = AnalyticsParams.Empty;
             var classesParams = AnalyticsParams.Empty;
             var consumsParams = AnalyticsParams.Empty;
 
@@ -38,10 +42,12 @@ namespace Game.Instances
                 consumsParams.AddItems(unit.Bag.Items);
             }
 
-            parameters["boss"] = instance.BossUnit.Title;
-            parameters["squad_classes"] = classesParams;
-            parameters["squad_consums"] = consumsParams.IsNullOrEmpty() ? null : consumsParams;
-            parameters["chance"] = Mathf.RoundToInt(instance.CompleteChance.Value * 100f);
+            bossParams["squad_classes"] = classesParams;
+            bossParams["squad_consums"] = consumsParams.IsNullOrEmpty() ? string.Empty : consumsParams;
+            bossParams["chance"] = Mathf.RoundToInt(instance.CompleteChance.Value * 100f);
+
+            instanceParams[instance.BossUnit.Title] = bossParams;
+            parameters[instance.Instance.Title] = instanceParams;
         }
     }
 }

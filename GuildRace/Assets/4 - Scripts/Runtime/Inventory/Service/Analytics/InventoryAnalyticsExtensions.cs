@@ -19,11 +19,11 @@ namespace Game.Inventory
             }
         }
 
-        public static void AddItem(this AnalyticsParams parameters, ItemInfo item)
+        public static void AddItem(this AnalyticsParams parameters, ItemInfo item, object value = null)
         {
             var itemData = InventoryConfig.GetItem(item.DataId);
 
-            parameters.AddItem(itemData);
+            parameters.AddItem(itemData, value);
         }
 
         public static void AddItem(this AnalyticsParams parameters, ItemData item, object value = null)
