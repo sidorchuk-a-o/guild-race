@@ -181,7 +181,7 @@ MonoBehaviour:
           \u0413\u0438\u043B\u044C\u0434\u0438\u0438\",\"Emblem\":{\"symbol\":8,\"symbolColor\":1,\"background\":1,\"backgroundColors\":[3,5]}}"
   Metrica:
     enable: 1
-    metricaCounterID: 103577709
+    metricaCounterID: 104671808
     log: 1
     useYandexMetrica: 1
   Payments:
@@ -296,7 +296,7 @@ MonoBehaviour:
     interAdvInterval: 0
     postponeCallByFail: 0
     useYandexMetrica: 0
-    metricaCounterID: 1
+    metricaCounterID: 0
     skipInterAdvAfterReward: 0
     saveLocal: 0
     saveCloud: 0

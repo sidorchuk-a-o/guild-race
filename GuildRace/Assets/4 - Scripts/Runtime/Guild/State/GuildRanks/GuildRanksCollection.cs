@@ -13,5 +13,10 @@ namespace Game.Guild
         public GuildRanksCollection(IEnumerable<GuildRankInfo> values) : base(values)
         {
         }
+
+        public int IndexOf(GuildRankId rankId)
+        {
+            return FindIndex(x => x.Id == rankId);
+        }
     }
 }

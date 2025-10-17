@@ -357,7 +357,7 @@ namespace Game.Craft
 
                 onCraftingComplete.OnNext(craftingResult);
 
-                analytics.CreateItem(productData, craftingResultCount, recipeData.Price);
+                analytics.CreateItem(productData, craftingResultCount);
             }
         }
     }

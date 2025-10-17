@@ -8,6 +8,7 @@ namespace Game.Instances
     public class InstanceInfo
     {
         public int Id { get; }
+        public string Title { get; }
 
         public InstanceType Type { get; }
         public LocalizeKey NameKey { get; }
@@ -21,6 +22,7 @@ namespace Game.Instances
         {
             Id = data.Id;
             Type = data.Type;
+            Title = data.Title;
             NameKey = data.NameKey;
             DescKey = data.DescKey;
             ImageRef = data.ImageRef;

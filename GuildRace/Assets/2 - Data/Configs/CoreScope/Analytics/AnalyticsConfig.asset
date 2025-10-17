@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6253564898237778943
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a844b31b522b03749bfc544961c640f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: cd59614ea9654a19b0fdcd317af3c85a
+  title: Yandex Game
 --- !u!114 &-3106042694666096364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26,5 +40,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df862a44d7edea4479d52fe1d3af5712, type: 3}
   m_Name: AnalyticsConfig
   m_EditorClassIdentifier: 
-  modules: []
+  modules:
+  - {fileID: -6253564898237778943}
   daysToReport: 010000000200000003000000070000000e0000001c000000

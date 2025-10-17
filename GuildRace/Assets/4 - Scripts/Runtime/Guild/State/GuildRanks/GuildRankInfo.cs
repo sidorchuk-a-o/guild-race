@@ -1,24 +1,16 @@
-﻿using UniRx;
+﻿using AD.Services.Localization;
 
 namespace Game.Guild
 {
     public class GuildRankInfo
     {
-        private readonly ReactiveProperty<string> name = new();
-
         public GuildRankId Id { get; }
-        public IReadOnlyReactiveProperty<string> Name => name;
+        public LocalizeKey NameKey {  get; }
 
-        public GuildRankInfo(GuildRankId id, string name)
+        public GuildRankInfo(GuildRankData data)
         {
-            Id = id;
-
-            this.name.Value = name;
-        }
-
-        public void SetName(string value)
-        {
-            name.Value = value;
+            Id = data.Id;
+            NameKey = data.DefaultNameKey;
         }
     }
 }
