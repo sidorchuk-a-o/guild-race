@@ -80,7 +80,7 @@ namespace Game.Craft
             {
                 vendors.AddRange(GetDefaultVendors());
 
-                //CreateDefaultReagents();
+                CreateDefaultReagents();
 
                 return;
             }
@@ -111,7 +111,7 @@ namespace Game.Craft
 
             foreach (var reagent in reagents)
             {
-                reagent.Stack.SetValue(50);
+                reagent.Stack.SetValue(20);
 
                 var placementArgs = new PlaceInPlacementArgs
                 {

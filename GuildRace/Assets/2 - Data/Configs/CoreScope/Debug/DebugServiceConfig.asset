@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: DebugServiceConfig
   m_EditorClassIdentifier: 
   activationType: 1
-  fallbackToManualAfterRelease: 1
+  fallbackToManualAfterRelease: 0
   enableInGameConsole: 1
   inGameConsole:
     m_AssetGUID: fb6dae07f19ca2946a06979db6b5c2fc

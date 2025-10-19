@@ -1,4 +1,4 @@
-{
+﻿{
     "name": "Game.Editor",
     "rootNamespace": "Game",
     "references": [
@@ -7,13 +7,14 @@
         "AD.Core.Editor",
         "AD.ToolsCollection",
         "AD.ToolsCollection.Editor",
-        "ACTk.Runtime",
-        "I2Localization",
         "Unity.ResourceManager",
         "Unity.Addressables",
         "Unity.Addressables.Editor",
-        "UniRx",
-        "UniTask"
+        "PluginYourGames",
+        "I2Localization",
+        "ACTk.Runtime",
+        "UniTask",
+        "UniRx"
     ],
     "includePlatforms": [
         "Editor"

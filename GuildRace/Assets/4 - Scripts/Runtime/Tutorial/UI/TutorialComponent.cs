@@ -30,7 +30,7 @@ namespace Game.Tutorial
                 return;
             }
 
-            await tutorialService.ShowContainer(containerRef);
+            //await tutorialService.ShowContainer(containerRef);
         }
     }
 }

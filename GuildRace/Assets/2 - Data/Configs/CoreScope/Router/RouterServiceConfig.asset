@@ -129,6 +129,25 @@ MonoBehaviour:
     contentLifetime:
       isOn: 1
       value: 120
+  - id: 52247d4a51364f91bab50832ded149f9
+    title: Cursor
+    isRouteLayer: 0
+    hasAccessByKey: 0
+    layerAsset:
+      m_AssetGUID: 255295a44675d0142a718d655e3ea015
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    canvasAsset:
+      m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    contentLifetime:
+      isOn: 0
+      value: 120
   routerContainerAsset:
     m_AssetGUID: 5a0444d8af829884b9f21a5547092437
     m_SubObjectName: 
