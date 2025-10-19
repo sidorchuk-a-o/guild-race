@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0d5e5c4bcdd44f5ab90a61b700c7bb7c
   title: Gold
-  initValue: 100
+  initValue: 1000
   maxValue: 0
   analyticsOn: 1
   nameKey:
