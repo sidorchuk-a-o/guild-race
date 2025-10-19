@@ -1,6 +1,7 @@
 ﻿using AD.Services.Store;
 using AD.Services.Pools;
 using AD.Services.Router;
+using AD.Services.Localization;
 using Game.Instances;
 using Game.Inventory;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace Game.Guild
         private readonly PoolContainer<Sprite> imagesPool;
 
         private readonly IGuildService guildService;
+        private readonly ILocalizationService localization;
         private readonly IObjectResolver resolver;
 
         private InventoryVMFactory inventoryVMF;
@@ -37,10 +39,12 @@ namespace Game.Guild
             GuildConfig guildConfig,
             IGuildService guildService,
             IPoolsService poolsService,
+            ILocalizationService localization,
             IObjectResolver resolver)
         {
             this.guildConfig = guildConfig;
             this.guildService = guildService;
+            this.localization = localization;
             this.resolver = resolver;
 
             imagesPool = poolsService.CreateAssetPool<Sprite>();
@@ -144,7 +148,7 @@ namespace Game.Guild
         public List<OptionData> GetGuildRanksOptions()
         {
             return guildService.GuildRanks.Skip(1)
-                .Select(x => new OptionData(x.Name.Value))
+                .Select(x => new OptionData(localization.Get(x.NameKey)))
                 .ToList();
         }
 

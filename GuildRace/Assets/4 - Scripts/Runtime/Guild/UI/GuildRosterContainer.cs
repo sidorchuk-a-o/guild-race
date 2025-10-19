@@ -186,8 +186,19 @@ namespace Game.Guild
                 guildRankDropdown.SetValue(guildRankIndex - 1);
 
                 guildRankDropdown.Value
-                    .SilentSubscribe(index => guildVMF.UpdateGuildRank(characterVM.Id, index + 1))
+                    .SilentSubscribe(guildRankChangedCallback)
                     .AddTo(characterDisp);
+
+                void guildRankChangedCallback(int index)
+                {
+                    var characterId = characterVM.Id;
+
+                    guildVMF.UpdateGuildRank(characterId, index + 1);
+
+                    var newCharacterVM = charactersVM.FirstOrDefault(x => x.Id == characterVM.Id);
+
+                    SelectCharacter(newCharacterVM);
+                }
             }
         }
 

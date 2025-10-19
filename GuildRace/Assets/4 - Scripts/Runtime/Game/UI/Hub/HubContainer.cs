@@ -50,16 +50,14 @@ namespace Game
 
             await emblemContainer.Init(guildVM.EmblemVM);
 
+            playerGuildRankText.SetTextParams(guildVM.PlayerRank);
+
             guildVM.GuildName
                 .Subscribe(x => guildNameText.SetTextParams(x))
                 .AddTo(disp);
 
             guildVM.PlayerName
                 .Subscribe(x => playerNameText.SetTextParams(x))
-                .AddTo(disp);
-
-            guildVM.PlayerRank
-                .Subscribe(x => playerGuildRankText.SetTextParams(x))
                 .AddTo(disp);
 
             storeService.OnPurchaseResult

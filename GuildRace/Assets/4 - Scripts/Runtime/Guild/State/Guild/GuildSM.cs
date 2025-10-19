@@ -12,7 +12,6 @@ namespace Game.Guild
         [ES3Serializable] private string guildName;
         [ES3Serializable] private string playerName;
         [ES3Serializable] private CharactersSM charactersSM;
-        [ES3Serializable] private GuildRanksSM guildRanksSM;
         [ES3Serializable] private GuildBankTabsSM guildBankTabsSM;
         [ES3Serializable] private EmblemSM emblemSM;
 
@@ -32,12 +31,6 @@ namespace Game.Guild
         {
             get => emblemSM.GetValue();
             set => emblemSM = new(value);
-        }
-
-        public IEnumerable<GuildRankInfo> GuildRanks
-        {
-            get => guildRanksSM.GetValues();
-            set => guildRanksSM = new(value);
         }
 
         public void SetCharacters(IEnumerable<CharacterInfo> value, IInventoryService inventoryService)

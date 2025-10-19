@@ -27,11 +27,16 @@ namespace Game.Quests
                 languageCode: "ru",
                 parameters: mechanicNameData.Data);
 
+            // params
+            var questParams = AnalyticsParams.Empty;
+            questParams["quest_id"] = quest.DataId;
+
+            var groupParams = AnalyticsParams.Empty;
+            groupParams["group_id"] = questGroup.Id;
+            groupParams[questName] = questParams;
+
             var parameters = AnalyticsParams.Default;
-            parameters["quest_group_id"] = questGroup.Id;
-            parameters["quest_group"] = questGroup.Title;
-            parameters["quest_id"] = quest.DataId;
-            parameters["quest"] = questName;
+            parameters[questGroup.Title] = groupParams;
 
             analytics?.SendEvent("complete_quest", parameters);
         }

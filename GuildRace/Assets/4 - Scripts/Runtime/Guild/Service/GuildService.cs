@@ -4,12 +4,12 @@ using AD.Services.AppEvents;
 using AD.Services.Leaderboards;
 using AD.Services.Localization;
 using AD.Services.ProtectedTime;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using Game.GuildLevels;
 using Game.Inventory;
-using System.Linq;
-using UniRx;
 using VContainer;
+using UniRx;
 
 namespace Game.Guild
 {
@@ -47,7 +47,7 @@ namespace Game.Guild
         {
             this.analytics = analytics;
 
-            state = new(guildConfig, guildLevelsService, inventoryService, localization, resolver);
+            state = new(guildConfig, guildLevelsService, inventoryService, resolver);
             recruitingModule = new(state, guildConfig, inventoryConfig, inventoryService, localization, time, resolver);
             leaderboardModule = new(state, guildConfig, leaderboards, appEvents);
 
@@ -142,6 +142,8 @@ namespace Game.Guild
             var guildRank = state.GuildRanks[index: rankIndex];
 
             character.SetGuildRank(guildRank.Id);
+
+            state.UpdateOrderByRank(character);
 
             analytics.GuildRankChanged(character);
         }
