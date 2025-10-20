@@ -74,13 +74,7 @@ namespace Game.Guild
         {
             await base.Init(parameters, disp, ct);
 
-            var emblemEM = new EmblemEM
-            {
-                Symbol = 8,
-                Background = 1,
-                SymbolColor = 1,
-                BackgroundColors = new() { 3, 5, 10, 15, 20 }
-            };
+            var emblemEM = guildConfig.DefaultEmblemEM;
 
             InitSwitches(emblemEM);
 
