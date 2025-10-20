@@ -23,5 +23,13 @@ namespace Game.Guild
         public GuildBankParams GuildBankParams => guildBankParams;
         public EmblemParams EmblemParams => emblemParams;
         public LeaderboardParams LeaderboardParams => leaderboardParams;
+
+        public EmblemEM DefaultEmblemEM { get; } = new EmblemEM
+        {
+            Symbol = 8,
+            Background = 1,
+            SymbolColor = 1,
+            BackgroundColors = new() { 3, 5, 10, 15, 20 }
+        };
     }
 }

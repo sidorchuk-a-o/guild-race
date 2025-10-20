@@ -75,6 +75,8 @@ namespace Game.Guild
             if (GuildExists == false)
             {
                 recruitingModule.SwitchRecruitingState();
+
+                analytics.CreateGuild(guildEM);
             }
 
             state.CreateOrUpdateGuild(guildEM);
