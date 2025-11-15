@@ -3647,7 +3647,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Comblete Expedition
+      - Complete Expedition
       - "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C \u043F\u043E\u0445\u043E\u0434"
       - 
       Flags: 000000
@@ -10919,7 +10919,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1760979698982
+    Google_LastUpdatedVersion: 1763218633070
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
