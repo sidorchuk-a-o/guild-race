@@ -1,14 +1,15 @@
-﻿using System.Threading;
-using Cysharp.Threading.Tasks;
-using AD.UI;
-using AD.ToolsCollection;
+﻿using AD.UI;
 using AD.Services.Pools;
 using AD.Services.Router;
+using AD.ToolsCollection;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using Game.Input;
 using Game.Inventory;
-using UniRx;
-using VContainer;
 using UnityEngine;
+using VContainer;
+using UniRx;
+using YG;
 
 namespace Game.UI
 {
@@ -66,7 +67,7 @@ namespace Game.UI
             tooltipToken = token;
 
             // wait
-            await UniTask.Delay(250);
+            await UniTask.Delay(YG2.envir.isMobile ? 30 : 250);
 
             if (token.IsCancellationRequested)
             {

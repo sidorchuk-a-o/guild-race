@@ -17,6 +17,19 @@ namespace Game.Guild
             Localization = localization;
         }
 
+        public static void CreateGuild(this IAnalyticsService analytics, GuildEM guildEM)
+        {
+            var parameters = AnalyticsParams.Default;
+            parameters.DayIsEnabled = false;
+
+            parameters["guild_name"] = guildEM.GuildName;
+            parameters["emblem"] = !guildEM.Emblem.Equals(Config.DefaultEmblemEM)
+                ? guildEM.Emblem.ToString()
+                : string.Empty;
+
+            analytics?.SendEvent("create_guild", parameters);
+        }
+
         public static void AcceptJoinRequest(this IAnalyticsService analytics, CharacterInfo character)
         {
             var parameters = AnalyticsParams.Default;
