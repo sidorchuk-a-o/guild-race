@@ -48,7 +48,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - UI sounds
+      - UI Sounds
       - "\u0417\u0432\u0443\u043A\u0438 UI"
       - 
       Flags: 000000
@@ -98,15 +98,14 @@ MonoBehaviour:
         your guild.
 
 
-        \tThis is new to you, I understand. But I will gladly
-        help you with my advices and explanations. Take a look around and click at
-        the any interesting section whenever you''re ready. I will help you with
-        them.
+        \tThis is new to you. I understand. I will gladly help
+        you with my advices and explanations. Take a look around and click at any
+        interesting section whenever you''re ready. I will help you with them.
 
 
-        \tAccept new members, improve their equipment, run through
-        the dungeons and raid. Who knows, maybe it''s your Guild who will become
-        the major part in this story!'
+        \tAccept
+        new members. Improve their equipment. Run through the dungeons and raid.
+        Who knows maybe it''s your Guild who will become the major part in this story!'
       - "\\t\u042D\u0442\u043E - <b>\u0413\u043E\u043D\u043A\u0430 \u0413\u0438\u043B\u044C\u0434\u0438\u0439</b>
         - \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439
         \u0434\u043B\u044F \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F
@@ -144,11 +143,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "\\tThis is your guild's Bank. You can store some goods here:\n\n<space=1em>-
+      - "\\tThis is your Guild's Bank. You can store some goods here:\n\n<space=1em>-
         looted items (reagents, consumables, equipment)\n<space=1em>- items created
         by Artisans(consumables, equipment)\n<space=1em>- gold\n\n\\tAfter you finish
-        your first run in a dungeon you're gonna get some new equipment. Here, in
-        Bank, you can decide, which character is going to wear it, dispel some equipment
+        your first run in a dungeon you're gonna get some new equipment. In Bank
+        you can decide which character is going to wear it or dispel some equipment
         or sell resources you don't need at this moment. \n\n\\tWhen you will dispel
         an item you will get some crafting resources. You can spend them on creating
         new item. But choose carefully. You can't undo dispel and restore items.
@@ -191,7 +190,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Recruit Applications
-      - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
+      - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0420\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -201,7 +200,7 @@ MonoBehaviour:
       Languages:
       - "\\tThis section helps you to review new recruit applications. There's not
         much of them right now. But this is only the beginning.\n\nImprove your guild
-        to increase your guild popularity.\nThe more popular your guild is, the more
+        to increase your guild popularity.\nThe more popular your guild is the more
         applications you'll receive. \n\n\\tAccept first applications and lets begin
         new chapter of this Story!"
       - "\\t\u0422\u0443\u0442 \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
@@ -252,8 +251,8 @@ MonoBehaviour:
         <space=1em>- current character equipment
 
 
-        \tOh,
-        by the way, you can check and change character''s rank. Characters with high
+        \tBy
+        the way. You can check and change character''s rank. Characters with high
         rank will be on top of the list of characters.'
       - "\\t\u0412 \u044D\u0442\u043E\u043C \u0440\u0430\u0437\u0434\u0435\u043B\u0435
         \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
@@ -288,7 +287,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Guild Level
-      - "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
+      - "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -326,8 +325,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - the Artisans Quarter
-      - "\u0423\u043B\u0438\u0446\u0430 \u0440\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
+      - The Artisans Quarter
+      - "\u0423\u043B\u0438\u0446\u0430 \u0420\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -361,7 +360,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Task Board
-      - "\u0414\u043E\u0441\u043A\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+      - "\u0414\u043E\u0441\u043A\u0430 \u0417\u0430\u0434\u0430\u043D\u0438\u0439"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -372,7 +371,7 @@ MonoBehaviour:
       - "\\tIn this section you can see Major Tasks from the leadership:\n\n<space=1em>-
         <b>daily</b> (refreshes every day)\n<space=1em>- <b>weekly</b> (refreshes
         every 3 days). \n\n\\tCurrently you have 3 daily and 3 weekly quests. Check
-        them, maybe you can complete something easy and get your first reward?\n\n\\tAh,
+        them. Maybe you can complete something easy and get your first reward?\n\n\\tAh,
         new task on the Board! Let's do this!"
       - "\\t\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0448\u0442\u0430\u0431 \u0441\u0442\u0430\u0432\u0438\u0442
         \u0437\u0430\u0434\u0430\u0447\u0438, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
@@ -396,7 +395,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Dungeons & Raids
-      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B"
+      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0420\u0435\u0439\u0434\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -434,7 +433,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Active Expeditions
-      - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0445\u043E\u0434\u044B"
+      - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u041F\u043E\u0445\u043E\u0434\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -442,11 +441,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - '\tTrack current progress of your groups, check them after the run and distribute
+      - '\tTrack current progress of your groups. Check them after the run and distribute
         the loot.
 
-        \tOh, and don''t forget to check bonus reward for the
-        victory!'
+        \tAnd don''t forget to check bonus reward for the victory!'
       - "\\t\u041E\u0442\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u0439 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0435
         \u0433\u0440\u0443\u043F\u043F\u044B, \u0432\u043E\u0432\u0440\u0435\u043C\u044F
         \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0439 \u0438\u0445 \u0438 \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0439
@@ -461,8 +459,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Guild rating
-      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433 \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
+      - Guild Rating
+      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433 \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -490,7 +488,7 @@ MonoBehaviour:
 
         \tDepends on the current equipment of every
         guild member. This rating counts for every possible member of the guild.
-        The better they geared, the higher your rating.'
+        The better they geared the higher your rating.'
       - "\\t\u0412 \u044D\u0442\u043E\u043C \u043C\u0438\u0440\u0435 \u0432\u0441\u0435
         \u0441\u043E\u0440\u0435\u0432\u043D\u0443\u044E\u0442\u0441\u044F. \u0413\u0438\u043B\u044C\u0434\u0438\u0438
         \u0441\u043E\u0440\u0435\u0432\u043D\u0443\u044E\u0442\u0441\u044F \u0432
@@ -523,7 +521,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Guild Roster
-      - "\u0421\u043E\u0441\u0442\u0430\u0432 \u0433\u0438\u043B\u044C\u0434\u0438\u0438"
+      - "\u0421\u043E\u0441\u0442\u0430\u0432 \u0413\u0438\u043B\u044C\u0434\u0438\u0438"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -532,7 +530,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Recruit Applications
-      - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0440\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
+      - "\u0417\u0430\u044F\u0432\u043A\u0438 \u0420\u0435\u043A\u0440\u0443\u0442\u043E\u0432"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -541,7 +539,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Dungeons & Raids
-      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0440\u0435\u0439\u0434\u044B"
+      - "\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u044F \u0438 \u0420\u0435\u0439\u0434\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -550,7 +548,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Active Expeditions
-      - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0445\u043E\u0434\u044B"
+      - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u041F\u043E\u0445\u043E\u0434\u044B"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -576,8 +574,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - the Artisans Quarter
-      - "\u0423\u043B\u0438\u0446\u0430 \u0440\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
+      - The Artisans Quarter
+      - "\u0423\u043B\u0438\u0446\u0430 \u0420\u0435\u043C\u0435\u0441\u043B\u0435\u043D\u043D\u0438\u043A\u043E\u0432"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -586,7 +584,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Task Board
-      - "\u0414\u043E\u0441\u043A\u0430 \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+      - "\u0414\u043E\u0441\u043A\u0430 \u0417\u0430\u0434\u0430\u043D\u0438\u0439"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -595,7 +593,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Shopping Area
-      - "\u0422\u043E\u0440\u0433\u043E\u0432\u0430\u044F \u043F\u043B\u043E\u0449\u0430\u0434\u044C"
+      - "\u0422\u043E\u0440\u0433\u043E\u0432\u0430\u044F \u041F\u043B\u043E\u0449\u0430\u0434\u044C"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -603,8 +601,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Guild rankings
-      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433 \u0433\u0438\u043B\u044C\u0434\u0438\u0439"
+      - Guild Rankings
+      - "\u0420\u0435\u0439\u0442\u0438\u043D\u0433 \u0413\u0438\u043B\u044C\u0434\u0438\u0439"
       - 
       Flags: 000000
       Languages_Touch: []
@@ -3618,9 +3616,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "Probability of winning with the current composition. Changes when: \n\\t-
-        Closing the boss mechanic (with a character or potion)\n\\t- Adding a rune
-        for attack power or health\n\\t- Adding a Soulstone"
+      - "Chances of winning with the current composition. Changes when: \n\\t- Closing
+        the boss mechanic (with a character or potion)\n\\t- Adding a rune for attack
+        power or health\n\\t- Adding a Soulstone"
       - "\u0412\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C \u043F\u043E\u0431\u0435\u0434\u044B
         \u0442\u0435\u043A\u0443\u0449\u0435\u0433\u043E \u0441\u043E\u0441\u0442\u0430\u0432\u0430.
         \u0418\u0437\u043C\u0435\u043D\u044F\u0435\u0442\u0441\u044F \u043F\u0440\u0438:
@@ -3980,7 +3978,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Captain of the guard
+      - Captain of the Guard
       - "\u041A\u0430\u043F\u0438\u0442\u0430\u043D \u0441\u0442\u0440\u0430\u0436\u0438"
       - 
       Flags: 000000
@@ -4007,7 +4005,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Zavetha, the Dark Archer
+      - Zavetha the Dark Archer
       - "\u0422\u0435\u043C\u043D\u0430\u044F \u043B\u0443\u0447\u043D\u0438\u0446\u0430
         \u0417\u0430\u0432\u0435\u0442\u0430"
       - 
@@ -4026,7 +4024,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ogre guardian
+      - Ogre Guardian
       - "\u041E\u0433\u0440-\u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -4053,7 +4051,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Ogre smasher
+      - Ogre Smasher
       - "\u041E\u0433\u0440-\u0433\u0440\u043E\u043C\u0438\u043B\u0430"
       - 
       Flags: 000000
@@ -4098,7 +4096,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Loony herbalist
+      - Loony Herbalist
       - "\u0427\u043E\u043A\u043D\u0443\u0442\u044B\u0439 \u0442\u0440\u0430\u0432\u043D\u0438\u043A"
       - 
       Flags: 000000
@@ -10919,7 +10917,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby3h5G0A3bRM42VZPbHK7SbuZY5n-KgCSQQTeQdw6SHCfxpkjDzJF2oWg9dYcquXEIbFg/exec
     Google_SpreadsheetKey: 1RQTo9vwklJBhYO44E6sYkciYwv_WGi5vJPrDQIXPmZY
     Google_SpreadsheetName: I2Loc Guild Race Localization
-    Google_LastUpdatedVersion: 1763218633070
+    Google_LastUpdatedVersion: 1763386849327
     Google_Password: change_this
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1
