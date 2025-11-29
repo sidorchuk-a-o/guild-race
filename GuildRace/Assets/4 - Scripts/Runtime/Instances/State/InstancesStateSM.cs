@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using AD.ToolsCollection;
 using Newtonsoft.Json;
@@ -13,9 +13,16 @@ namespace Game.Instances
 
         [ES3Serializable] private SeasonsSM seasonsSM;
         [ES3Serializable] private ActiveInstancesSM activeInstancesSM;
+        [ES3Serializable] private int totalCompletedCount;
         [ES3Serializable] private int guaranteedCompletedCount;
         [ES3Serializable] private long lastResetDay;
         [ES3Serializable] private int lastResetWeek;
+
+        public int TotalCompletedCount
+        {
+            get => totalCompletedCount;
+            set => totalCompletedCount = value;
+        }
 
         public int GuaranteedCompletedCount
         {

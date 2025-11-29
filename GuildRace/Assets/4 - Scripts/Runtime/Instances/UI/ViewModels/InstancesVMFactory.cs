@@ -1,4 +1,4 @@
-﻿using AD.Services.Pools;
+using AD.Services.Pools;
 using AD.Services.ProtectedTime;
 using AD.Services.Router;
 using AD.Services.Store;

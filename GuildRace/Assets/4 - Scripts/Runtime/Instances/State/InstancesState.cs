@@ -1,4 +1,4 @@
-﻿using AD.Services;
+using AD.Services;
 using AD.Services.Save;
 using AD.Services.ProtectedTime;
 using AD.ToolsCollection;
@@ -38,6 +38,7 @@ namespace Game.Instances
         public IActiveInstancesCollection ActiveInstances => activeInstances;
         public IReadOnlyList<UnitCooldownInfo> UnitCooldowns => unitCooldowns;
         public bool HasGuaranteedCompleted => guaranteedCompletedCount > 0;
+        public int TotalCompletedCount { get; private set; }
 
         public ActiveInstanceInfo SetupInstance { get; private set; }
         public ActiveInstanceInfo CompletedInstance { get; private set; }
@@ -132,6 +133,11 @@ namespace Game.Instances
             return index;
         }
 
+        public void IncreaseCompletedCount()
+        {
+            TotalCompletedCount++;
+        }
+
         public void DecrementGuaranteedCompleted()
         {
             guaranteedCompletedCount--;
@@ -180,7 +186,8 @@ namespace Game.Instances
             {
                 LastResetDay = LastResetDay,
                 LastResetWeek = LastResetWeek,
-                GuaranteedCompletedCount = guaranteedCompletedCount
+                TotalCompletedCount = TotalCompletedCount,
+                GuaranteedCompletedCount = guaranteedCompletedCount,
             };
 
             instancesStateSM.SetSeasons(seasons);
@@ -208,6 +215,7 @@ namespace Game.Instances
 
             LastResetDay = save.LastResetDay;
             LastResetWeek = save.LastResetWeek;
+            TotalCompletedCount = save.TotalCompletedCount;
             guaranteedCompletedCount = save.GuaranteedCompletedCount;
 
             seasons.AddRange(save.GetSeasons(config));
