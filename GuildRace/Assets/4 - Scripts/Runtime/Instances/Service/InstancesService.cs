@@ -1,5 +1,6 @@
-﻿using AD.Services;
+using AD.Services;
 using AD.Services.Router;
+using AD.Services.Review;
 using AD.Services.AppEvents;
 using AD.Services.Analytics;
 using AD.Services.Leaderboards;
@@ -32,6 +33,7 @@ namespace Game.Instances
         private readonly InstancesConfig instancesConfig;
         private readonly IWeeklyService weeklyService;
         private readonly IAppEventsService appEvents;
+        private readonly IReviewService review;
         private readonly IObjectResolver resolver;
 
         public ISeasonsCollection Seasons => state.Seasons;
@@ -55,11 +57,13 @@ namespace Game.Instances
             ILeaderboardsService leaderboards,
             ITimeService time,
             IAnalyticsService analytics,
+            IReviewService review,
             IObjectResolver resolver)
         {
             this.instancesConfig = instancesConfig;
             this.weeklyService = weeklyService;
             this.appEvents = appEvents;
+            this.review = review;
             this.resolver = resolver;
 
             state = new(instancesConfig, time, guildService, guildLevelsService, inventoryService, weeklyService, resolver);
@@ -154,7 +158,22 @@ namespace Game.Instances
 
         public int CompleteActiveInstance(string activeInstanceId)
         {
-            return instanceModule.CompleteActiveInstance(activeInstanceId);
+            // instance
+            var instance = state.ActiveInstances.GetInstance(activeInstanceId);
+            var instanceResult = instance.Result.Value;
+
+            // complete
+            var index = instanceModule.CompleteActiveInstance(activeInstanceId);
+
+            // review
+            var completedCount = state.TotalCompletedCount;
+
+            if (completedCount is 7 or 14 or 28 && instanceResult is CompleteResult.Completed)
+            {
+                review.ReviewShow();
+            }
+
+            return index;
         }
 
         public void ReceiveAdsRewards()

@@ -1,4 +1,4 @@
-﻿using AD.UI;
+using AD.UI;
 using AD.Services.Router;
 using AD.Services.Leaderboards;
 using AD.ToolsCollection;
@@ -28,7 +28,7 @@ namespace Game.Leaderboards
         {
             await base.Init(parameters, disp, ct);
 
-            leaderboardsVM = leaderboardsVMF.GetLeaderboards(update: true);
+            leaderboardsVM = leaderboardsVMF.GetLeaderboards(update: true, quantityTop: 10, quantityAround: 10);
             leaderboardsVM.AddTo(disp);
 
             for (var i = 0; i < leaderboardsVM.Count; i++)

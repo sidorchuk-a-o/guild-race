@@ -1,4 +1,4 @@
-﻿using AD.UI;
+using AD.UI;
 using AD.Services.Store;
 using AD.Services.Router;
 using AD.ToolsCollection;
@@ -46,7 +46,7 @@ namespace Game
 
             weeklyItem.Init(disp);
             currenciesContainer.Init(disp, ct);
-            leaderboardComponent.Init(disp, ct);
+            leaderboardComponent.Init(disp);
 
             await emblemContainer.Init(guildVM.EmblemVM);
 

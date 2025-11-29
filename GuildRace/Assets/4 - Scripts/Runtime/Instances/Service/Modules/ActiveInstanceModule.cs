@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using AD.Services.Analytics;
 using AD.Services.AppEvents;
 using AD.Services.ProtectedTime;
@@ -86,6 +86,7 @@ namespace Game.Instances
 
             if (result == CompleteResult.Completed)
             {
+                state.IncreaseCompletedCount();
                 activeInstance.BossUnit.IncreaseCompletedCount();
 
                 onInstanceCompleted.OnNext(activeInstance);

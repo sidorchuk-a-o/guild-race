@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851a47045c18c684f8bd526773cbcf4d, type: 3}
+  m_Name: ReviewServiceInstaller
+  m_EditorClassIdentifier: 
+  id: 1fe19ee7574b460e8e088d8ea496a4d3
+  title: Review  Service
+  enabled: 1
+  order: 0
+  configRef:
+    m_AssetGUID: c5f3200bb283b5c4d9606de2a4c49889
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
