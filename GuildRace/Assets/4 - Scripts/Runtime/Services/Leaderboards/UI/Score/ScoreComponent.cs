@@ -1,8 +1,7 @@
-﻿using System.Threading;
-using AD.Services.Leaderboards;
-using AD.Services.Router;
-using AD.ToolsCollection;
 using AD.UI;
+using AD.Services.Router;
+using AD.Services.Leaderboards;
+using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
 using Game.UI;
 using UniRx;
@@ -25,10 +24,10 @@ namespace Game.Leaderboards
         [Inject]
         public void Inject(LeaderboardsVMFactory leaderboardsVMF)
         {
-            leaderboardVM = leaderboardsVMF.GetLeaderboard(leaderboardKey);
+            leaderboardVM = leaderboardsVMF.GetLeaderboard(leaderboardKey, quantityTop: 10, quantityAround: 10);
         }
 
-        public void Init(CompositeDisp disp, CancellationTokenSource ct)
+        public void Init(CompositeDisp disp)
         {
             leaderboardVM.AddTo(disp);
 
