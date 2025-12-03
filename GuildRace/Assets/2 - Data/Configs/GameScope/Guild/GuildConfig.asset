@@ -858,7 +858,7 @@ MonoBehaviour:
   recruitingParams:
     minRequestCount: 2
     maxRequestCount: 5
-    requestLifetime: 600
+    requestLifetime: 3600
     minNextRequestTime: 300
     maxNextRequestTime: 900
     weightSelectedRole: 60
