@@ -1,4 +1,4 @@
-﻿using AD.Services;
+using AD.Services;
 using AD.Services.AppEvents;
 using System;
 using Cysharp.Threading.Tasks;
@@ -27,6 +27,8 @@ namespace Game.Weekly
         public override async UniTask<bool> Init()
         {
             state.Init();
+
+            TryResetWeek();
 
             appEvents.AddAppTickListener(this);
 
