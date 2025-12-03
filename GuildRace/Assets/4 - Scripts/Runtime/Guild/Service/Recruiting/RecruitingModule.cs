@@ -1,4 +1,4 @@
-﻿using AD.Services.Localization;
+using AD.Services.Localization;
 using AD.Services.ProtectedTime;
 using AD.ToolsCollection;
 using Cysharp.Threading.Tasks;
@@ -156,8 +156,9 @@ namespace Game.Guild
             var deltaTime = (int)(currentTime - recruitingState.NextRequestTime).TotalSeconds;
             var midRequestTime = (data.MaxNextRequestTime - data.MinNextRequestTime) / 2f;
             var possibleRequestCount = Mathf.RoundToInt(deltaTime / midRequestTime);
+            var minRequestCount = Mathf.Max(requestCount, 1);
 
-            maxRequestCount = Random.Range(requestCount, maxRequestCount + 1);
+            maxRequestCount = Random.Range(minRequestCount, maxRequestCount + 1);
 
             var newRequestCount = Mathf.Min(maxRequestCount - requestCount, possibleRequestCount);
 
