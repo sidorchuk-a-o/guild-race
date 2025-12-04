@@ -154,18 +154,17 @@ namespace Game.Guild
             }
 
             var deltaTime = (int)(currentTime - recruitingState.NextRequestTime).TotalSeconds;
-            var midRequestTime = (data.MaxNextRequestTime - data.MinNextRequestTime) / 2f;
+            var midRequestTime = data.MinNextRequestTime + (data.MaxNextRequestTime - data.MinNextRequestTime) / 2f;
+
             var possibleRequestCount = Mathf.RoundToInt(deltaTime / midRequestTime);
-            var minRequestCount = Mathf.Max(requestCount, 1);
+            var availableRequestCount = Random.Range(1, maxRequestCount - requestCount + 1);
 
-            maxRequestCount = Random.Range(minRequestCount, maxRequestCount + 1);
-
-            var newRequestCount = Mathf.Min(maxRequestCount - requestCount, possibleRequestCount);
+            var newRequestCount = Mathf.Min(availableRequestCount, possibleRequestCount);
 
             for (var i = 0; i < newRequestCount; i++)
             {
-                var seconds = Random.Range(0, deltaTime);
-                var createTime = recruitingState.NextRequestTime.AddSeconds(seconds);
+                var seconds = Random.Range(0, data.RequestLifetime);
+                var createTime = currentTime.AddSeconds(-seconds);
 
                 var request = CreateRequest(createTime);
 
