@@ -1,0 +1,115 @@
+﻿using System;
+using System.Threading;
+using AD.Router;
+using AD.ToolsCollection;
+using AD.UI;
+using Cysharp.Threading.Tasks;
+using R3;
+using UnityEngine;
+using VContainer;
+
+namespace AD.Game.Guild
+{
+    public class JoinRequestScrollItem : VMScrollItem<JoinRequestVM>
+    {
+        [Header("Character")]
+        [SerializeField] private UIText itemsLevelText;
+        [SerializeField] private UIText classNameText;
+        [SerializeField] private UIText specNameText;
+        [Space]
+        [SerializeField] private ClassPreviewComponent classPreviewComponent;
+        [SerializeField] private NicknameComponent nicknameComponent;
+
+        [Header("Buttons")]
+        [SerializeField] private UIButton acceptButton;
+        [SerializeField] private GameObject acceptButtonTooltip;
+        [SerializeField] private UIButton declineButton;
+
+        private IRouterService router;
+
+        private GuildVM guildVM;
+        private GuildVMFactory guildVMF;
+
+        [Inject]
+        public void Inject(IRouterService router, GuildVMFactory guildVMF)
+        {
+            this.router = router;
+            this.guildVMF = guildVMF;
+
+            guildVM = guildVMF.GetGuild();
+        }
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            acceptButton.OnClick
+                .Subscribe(AcceptCallback)
+                .AddTo(this);
+
+            declineButton.OnClick
+                .Subscribe(DeclineCallback)
+                .AddTo(this);
+
+            acceptButtonTooltip.SetActive(false);
+        }
+
+        protected override async UniTask Init(CompositeDisp disp, CancellationTokenSource ct)
+        {
+            guildVM.AddTo(disp);
+
+            var characterVM = ViewModel.CharacterVM;
+
+            await classPreviewComponent.Init(characterVM, ct);
+
+            if (ct.IsCancellationRequested) return;
+
+            nicknameComponent.Init(characterVM);
+            itemsLevelText.SetTextParams(characterVM.ItemsLevel.CurrentValue);
+            classNameText.SetTextParams(characterVM.ClassVM.NameKey);
+            specNameText.SetTextParams(characterVM.SpecVM.NameKey);
+
+            declineButton.SetInteractableState(!ViewModel.IsDefault);
+
+            characterVM.ItemsLevel
+                .Subscribe(x => itemsLevelText.SetTextParams(x))
+                .AddTo(disp);
+
+            guildVM.RosterIsFull
+                .Subscribe(RosterIsFullChangedCallback)
+                .AddTo(disp);
+        }
+
+        private void RosterIsFullChangedCallback(bool state)
+        {
+            acceptButton.SetInteractableState(!state);
+            acceptButtonTooltip.SetActive(state);
+        }
+
+        private void AcceptCallback()
+        {
+            var requestId = ViewModel.Id;
+            var parameters = RouteParams.Default;
+
+            parameters[BaseDialog.OkKey] = (Action)(() =>
+            {
+                guildVMF.AcceptJoinRequest(requestId);
+            });
+
+            router.Push(RouteKeys.Guild.AcceptJointRequest, parameters: parameters);
+        }
+
+        private void DeclineCallback()
+        {
+            var requestId = ViewModel.Id;
+            var parameters = RouteParams.Default;
+
+            parameters[BaseDialog.OkKey] = (Action)(() =>
+            {
+                guildVMF.DeclineJoinRequest(requestId);
+            });
+
+            router.Push(RouteKeys.Guild.DeclineJointRequest, parameters: parameters);
+        }
+    }
+}

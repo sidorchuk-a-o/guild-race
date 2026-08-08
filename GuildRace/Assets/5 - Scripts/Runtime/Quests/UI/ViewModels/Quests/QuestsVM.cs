@@ -1,0 +1,19 @@
+﻿using AD.Router;
+
+namespace AD.Game.Quests
+{
+    public class QuestsVM : VMReactiveCollection<QuestInfo, QuestVM>
+    {
+        private readonly QuestsVMFactory questsVMF;
+
+        public QuestsVM(IQuestsCollection values, QuestsVMFactory questsVMF) : base(values)
+        {
+            this.questsVMF = questsVMF;
+        }
+
+        protected override QuestVM Create(QuestInfo value)
+        {
+            return new(value, questsVMF);
+        }
+    }
+}

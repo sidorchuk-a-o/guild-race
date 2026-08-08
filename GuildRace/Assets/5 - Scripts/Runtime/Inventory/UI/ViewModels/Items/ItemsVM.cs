@@ -1,0 +1,25 @@
+﻿using AD.Router;
+using UnityEngine;
+
+namespace AD.Game.Inventory
+{
+    public class ItemsVM : VMReactiveCollection<ItemInfo, ItemVM>
+    {
+        private readonly InventoryVMFactory inventoryVMF;
+
+        public ItemsVM(IItemsCollection values, InventoryVMFactory inventoryVMF) : base(values)
+        {
+            this.inventoryVMF = inventoryVMF;
+        }
+
+        protected override ItemVM Create(ItemInfo value)
+        {
+            return inventoryVMF.CreateItem(value);
+        }
+
+        public ItemVM ElementAtOrDefault(Vector3Int positionOnGrid)
+        {
+            return GetOrCreate(x => x.Bounds.Value.Contains2D(positionOnGrid));
+        }
+    }
+}

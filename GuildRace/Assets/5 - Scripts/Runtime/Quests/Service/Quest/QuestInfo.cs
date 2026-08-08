@@ -1,0 +1,69 @@
+﻿using System.Collections.Generic;
+using AD.Store;
+using R3;
+using UnityEngine;
+
+namespace AD.Game.Quests
+{
+    public class QuestInfo
+    {
+        private readonly ReactiveProperty<int> progress = new();
+        private readonly ReactiveProperty<bool> isCompleted = new();
+        private readonly ReactiveProperty<bool> isRewarded = new();
+        private readonly Dictionary<string, string> data = new();
+
+        public string Id { get; }
+        public int DataId { get; }
+
+        public QuestsGroup GroupId { get; }
+        public int MechanicId { get; }
+        public IReadOnlyList<string> MechanicParams { get; }
+        public CurrencyAmount Reward { get; }
+
+        public int RequiredProgress { get; }
+        public ReadOnlyReactiveProperty<int> ProgressCounter => progress;
+        public IReadOnlyDictionary<string, string> Data => data;
+
+        public ReadOnlyReactiveProperty<bool> IsCompleted => isCompleted;
+        public ReadOnlyReactiveProperty<bool> IsRewarded => isRewarded;
+
+        public QuestInfo(string id, QuestData data)
+        {
+            Id = id;
+            DataId = data.Id;
+            GroupId = data.GroupId;
+            MechanicId = data.MechanicId;
+            MechanicParams = data.MechanicParams;
+            RequiredProgress = data.RequiredProgress;
+            Reward = data.Reward;
+        }
+
+        public void AddProgress(int value)
+        {
+            SetProgress(progress.Value + value);
+        }
+
+        public void SetProgress(int value)
+        {
+            var newProgress = Mathf.Clamp(value, 0, RequiredProgress);
+
+            progress.Value = newProgress;
+            isCompleted.Value = newProgress >= RequiredProgress;
+        }
+
+        public void AddData(string key, string value)
+        {
+            data[key] = value;
+        }
+
+        public void RemoveData(string key)
+        {
+            data.Remove(key);
+        }
+
+        public void MarkAsRewarded()
+        {
+            isRewarded.Value = true;
+        }
+    }
+}

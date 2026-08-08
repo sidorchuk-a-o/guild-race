@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using AD.Game.Inventory;
+using AD.ToolsCollection;
+using Newtonsoft.Json;
+
+namespace AD.Game.Instances
+{
+    [JsonObject(MemberSerialization.Fields)]
+    public class InstancesStateSM
+    {
+        [ES3Serializable] private SeasonsSM seasonsSM;
+        [ES3Serializable] private ActiveInstancesSM activeInstancesSM;
+        [ES3Serializable] private int totalCompletedCount;
+        [ES3Serializable] private int guaranteedCompletedCount;
+        [ES3Serializable] private long lastResetDay;
+        [ES3Serializable] private int lastResetWeek;
+
+        public int TotalCompletedCount
+        {
+            get => totalCompletedCount;
+            set => totalCompletedCount = value;
+        }
+
+        public int GuaranteedCompletedCount
+        {
+            get => guaranteedCompletedCount;
+            set => guaranteedCompletedCount = value;
+        }
+
+        public DateTime LastResetDay
+        {
+            get => lastResetDay.FromUnixTimestamp();
+            set => lastResetDay = value.ToUnixTimestamp();
+        }
+
+        public int LastResetWeek
+        {
+            get => lastResetWeek;
+            set => lastResetWeek = value;
+        }
+
+        public void SetSeasons(IEnumerable<SeasonInfo> value)
+        {
+            seasonsSM = new(value);
+        }
+
+        public IEnumerable<SeasonInfo> GetSeasons(InstancesConfig config)
+        {
+            return seasonsSM.GetValues(config);
+        }
+
+        public void SetActiveInstances(IEnumerable<ActiveInstanceInfo> value, IInventoryService inventoryService)
+        {
+            activeInstancesSM = new(value, inventoryService);
+        }
+
+        public IEnumerable<ActiveInstanceInfo> GetActiveInstances(IInventoryService inventoryService, SeasonsCollection seasons)
+        {
+            return activeInstancesSM.GetValues(inventoryService, seasons);
+        }
+    }
+}

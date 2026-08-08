@@ -1,0 +1,46 @@
+using System.Collections.Generic;
+using System.Threading;
+using AD.Leaderboards;
+using AD.Router;
+using AD.ToolsCollection;
+using AD.UI;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using VContainer;
+
+namespace AD.Game.Leaderboards
+{
+    public class LeaderboardsContainer : UIContainer
+    {
+        [SerializeField] private List<UIText> headers;
+        [SerializeField] private List<PlayersScrollView> playersScrolls;
+
+        private LeaderboardsVM leaderboardsVM;
+        private LeaderboardsVMFactory leaderboardsVMF;
+
+        [Inject]
+        public void Inject(LeaderboardsVMFactory leaderboardsVMF)
+        {
+            this.leaderboardsVMF = leaderboardsVMF;
+        }
+
+        protected override async UniTask Init(RouteParams parameters, CompositeDisp disp, CancellationTokenSource ct)
+        {
+            await base.Init(parameters, disp, ct);
+
+            leaderboardsVM = leaderboardsVMF.GetLeaderboards(update: true, quantityTop: 10, quantityAround: 10);
+            leaderboardsVM.AddTo(disp);
+
+            for (var i = 0; i < leaderboardsVM.Count; i++)
+            {
+                var leaderboardVM = leaderboardsVM[i];
+
+                var header = headers[i];
+                var playerScroll = playersScrolls[i];
+
+                header.SetTextParams(leaderboardVM.TitleKey);
+                playerScroll.Init(leaderboardVM.PlayersVM, true);
+            }
+        }
+    }
+}

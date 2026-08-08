@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: a375ad63554e45b4bb53fe2b0bd243d4
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: a5693dd80591ca1888172b4cbfbf30f5
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -33,6 +33,7 @@ MonoBehaviour:
   m_UniqueBundleIds: 0
   m_EnableJsonCatalog: 0
   m_NonRecursiveBuilding: 1
+  m_AllowNestedBundleFolders: 0
   m_CCDEnabled: 0
   m_maxConcurrentWebRequests: 3
   m_UseUWRForLocalBundles: 1
@@ -64,6 +65,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9de70b474435c941a417e1f302072c3, type: 2}
   - {fileID: 11400000, guid: a9be2a9f8b9e0b04f9e393aa890a1076, type: 2}
   - {fileID: 11400000, guid: 608cea4c4b500aa4d90217cadb122d33, type: 2}
+  - {fileID: 11400000, guid: 38d988daf713e884d9989ea552955932, type: 2}
   - {fileID: 11400000, guid: 02f6fc586fb892c4898df0da01570062, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1

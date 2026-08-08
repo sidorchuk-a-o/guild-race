@@ -1,0 +1,23 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using AD.ToolsCollection;
+using UnityEngine;
+
+namespace AD.Game.Inventory
+{
+    [CreateAssetMenu(fileName = "ItemSlotUIParams", menuName = "Inventory/UI/Item Slot Params", order = 100)]
+    public class ItemSlotsUIParams : ScriptableData
+    {
+        [SerializeField] private List<ItemSlotUIParams> parameters;
+
+        private Dictionary<ItemType, ItemSlotUIParams> paramsCache;
+
+        public ItemSlotUIParams GetParams(ItemType itemType)
+        {
+            paramsCache ??= parameters.ToDictionary(x => x.ItemType, x => x);
+            paramsCache.TryGetValue(itemType, out var data);
+
+            return data;
+        }
+    }
+}
