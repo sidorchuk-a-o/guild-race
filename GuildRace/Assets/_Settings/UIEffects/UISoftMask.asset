@@ -14,9 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SoftMaskEnabled: 1
   m_StereoEnabled: 1
-  m_FallbackBehavior: 0
   m_TransformSensitivity: 1
-  m_UseStencilOutsideScreen: 1
   m_HideGeneratedComponents: 1
-  m_AutoIncludeShaders: 1
-  m_StripShaderVariants: 1
+  m_ShaderVariantRegistry:
+    m_OptionalShaders:
+    - key: Hidden/UI/Default (UIEffect)
+      value: Hidden/UI/Default (UIEffect)
+    m_Asset: {fileID: 1538210556507985410}
+    m_ErrorOnUnregisteredVariant: 0
+    m_UnregisteredVariants: []
+--- !u!200 &1538210556507985410
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderVariants
+  m_Shaders: {}

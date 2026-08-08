@@ -25,16 +25,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b0b453062203f7f4781d8e093642a219
-    m_Address: Data/Configs/GameScope
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f70eecff7e71cbb4dbb9c7cab00a2fd7
-    m_Address: Data/Configs/CoreScope
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 26a74ff78f0b7e7498417309e8305e4f, type: 2}
   m_SchemaSet:

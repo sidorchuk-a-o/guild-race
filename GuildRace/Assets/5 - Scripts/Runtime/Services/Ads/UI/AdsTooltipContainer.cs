@@ -1,0 +1,16 @@
+﻿using System.Threading;
+using AD.Game.UI;
+using AD.Router;
+using AD.ToolsCollection;
+using Cysharp.Threading.Tasks;
+
+namespace AD.Game.Ads
+{
+    public class AdsTooltipContainer : TooltipContainer
+    {
+        public override UniTask Init(ViewModel viewModel, CompositeDisp disp, CancellationTokenSource ct)
+        {
+            return UniTask.CompletedTask;
+        }
+    }
+}

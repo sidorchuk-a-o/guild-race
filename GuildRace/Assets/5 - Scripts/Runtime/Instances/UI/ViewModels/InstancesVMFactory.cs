@@ -1,0 +1,336 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using AD.Game.Guild;
+using AD.Game.Inventory;
+using AD.Pools;
+using AD.ProtectedTime;
+using AD.Router;
+using AD.Store;
+using AD.ToolsCollection;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
+using VContainer;
+
+namespace AD.Game.Instances
+{
+    public class InstancesVMFactory : VMFactory
+    {
+        private readonly IInstancesService instancesService;
+        private readonly IObjectResolver resolver;
+
+        private readonly PoolContainer<Sprite> imagesPool;
+        private readonly PoolContainer<GameObject> objectsPool;
+
+        private GuildVMFactory guildVMF;
+        private StoreVMFactory storeVMF;
+        private InventoryVMFactory inventoryVMF;
+
+        private Dictionary<Type, IConsumableMechanicVMFactory> mechanicFactoriesDict;
+        private Dictionary<Type, IRewardVMFactory> rewardFactoriesDict;
+
+        public ITimeService TimeService { get; }
+        public InstancesConfig InstancesConfig { get; }
+
+        public GuildVMFactory GuildVMF => guildVMF ??= resolver.Resolve<GuildVMFactory>();
+        public StoreVMFactory StoreVMF => storeVMF ??= resolver.Resolve<StoreVMFactory>();
+        public InventoryVMFactory InventoryVMF => inventoryVMF ??= resolver.Resolve<InventoryVMFactory>();
+
+        public InstancesVMFactory(
+            InstancesConfig instancesConfig,
+            IInstancesService instancesService,
+            IPoolsService poolsService,
+            ITimeService timeService,
+            IObjectResolver resolver)
+        {
+            this.instancesService = instancesService;
+            this.resolver = resolver;
+
+            TimeService = timeService;
+            InstancesConfig = instancesConfig;
+
+            var poolsContainer = new GameObject("--- Instances Pools ---");
+            poolsContainer.DontDestroyOnLoad();
+
+            imagesPool = poolsService.CreateAssetPool<Sprite>();
+            objectsPool = poolsService.CreatePrefabPool<GameObject>(poolsContainer.transform);
+
+            mechanicFactoriesDict = resolver
+                .Resolve<IEnumerable<IConsumableMechanicVMFactory>>()
+                .ToDictionary(x => x.Type, x => x);
+
+            rewardFactoriesDict = resolver
+                .Resolve<IEnumerable<IRewardVMFactory>>()
+                .ToDictionary(x => x.Type, x => x);
+        }
+
+        // == Pools ==
+
+        public UniTask<Sprite> LoadImage(AssetReference imageRef, CancellationTokenSource ct)
+        {
+            return imagesPool.RentAsync(imageRef, token: ct.Token);
+        }
+
+        public UniTask<GameObject> RentObjectAsync(AssetReference objectRef, CancellationToken token = default)
+        {
+            return objectsPool.RentAsync(objectRef, token: token);
+        }
+
+        public void ReturnObject<TComponent>(TComponent instance) where TComponent : Component
+        {
+            ReturnObject(instance.gameObject);
+        }
+
+        public void ReturnObject(GameObject instance)
+        {
+            objectsPool.Return(instance);
+        }
+
+        // == Consumables ==
+
+        public ConsumableMechanicVM GetConsumableMechanic(ConsumablesItemData data)
+        {
+            var handler = instancesService.GetConsumableHandler(data.MechanicId);
+            var factory = mechanicFactoriesDict[handler.GetType()];
+
+            return factory.GetValue(data, handler, this);
+        }
+
+        // == Rewards ==
+
+        public RewardMechanicVM GetRewardMechanic(InstanceRewardData data)
+        {
+            var handler = instancesService.GetRewardHandler(data.MechanicId);
+            var factory = rewardFactoriesDict[handler.GetType()];
+
+            return factory.GetMechanic(data, handler, this);
+        }
+
+        public InstanceRewardsVM GetRewards(int unitId)
+        {
+            var rewards = InstancesConfig
+                .GetUnitRewards(unitId)
+                .Select(x => new InstanceRewardInfo(x))
+                .ToList();
+
+            return new(rewards, this);
+        }
+
+        public InstanceRewardsVM GetRewardsByParam(string param)
+        {
+            var rewards = InstancesConfig.RewardsParams.Rewards
+                .Where(x => x.MechanicParams.Contains(param))
+                .Select(x => new InstanceRewardInfo(x))
+                .ToList();
+
+            return new(rewards, this);
+        }
+
+        public InstanceRewardsVM GetRewards(IReadOnlyList<RewardResult> result)
+        {
+            var rewards = result.Select(x =>
+            {
+                var data = InstancesConfig.GetReward(x.RewardId);
+                var info = new InstanceRewardInfo(data, x);
+
+                return info;
+            });
+
+            return new(rewards.ToList(), this);
+        }
+
+        public InstanceRewardVM GetReward(int rewardId)
+        {
+            var data = InstancesConfig.GetReward(rewardId);
+            var info = new InstanceRewardInfo(data);
+
+            return new(info, this);
+        }
+
+        public AdsInstanceRewardsVM GetAdsRewards(IReadOnlyList<AdsInstanceRewardInfo> adsRewards)
+        {
+            return new(adsRewards, this);
+        }
+
+        public RewardResultVM GetRewardResult(RewardResult info)
+        {
+            if (info == null) return null;
+
+            var reward = InstancesConfig.GetReward(info.RewardId);
+            var handler = instancesService.GetRewardHandler(reward.MechanicId);
+            var factory = rewardFactoriesDict[handler.GetType()];
+
+            return factory.GetResult(info, this);
+        }
+
+        // == Threats ==
+
+        public ThreatDataVM GetThreat(ThreatId threatId)
+        {
+            return new(InstancesConfig.GetThreat(threatId), this);
+        }
+
+        // == Season ==
+
+        public SeasonVM GetFirstSeason()
+        {
+            var firstSeason = instancesService.Seasons.FirstOrDefault();
+
+            return new(firstSeason, this);
+        }
+
+        // == Instance ==
+
+        public InstanceVM GetInstance(int instanceId)
+        {
+            var instance = instancesService.Seasons.GetInstance(instanceId);
+
+            return GetInstance(instance);
+        }
+
+        public InstanceVM GetInstance(InstanceInfo instance)
+        {
+            return new(instance, this);
+        }
+
+        public ActiveInstanceVM GetActiveInstance(string activeInstanceId)
+        {
+            if (activeInstanceId.IsNullOrEmpty())
+            {
+                return null;
+            }
+
+            var activeInstance = FindActiveInstance(activeInstanceId);
+
+            return activeInstance != null
+                ? new ActiveInstanceVM(activeInstance, this)
+                : null;
+        }
+
+        public ActiveInstancesVM GetActiveInstances()
+        {
+            return new(instancesService.ActiveInstances, this);
+        }
+
+        private ActiveInstanceInfo FindActiveInstance(string activeInstanceId)
+        {
+            var setupInstance = instancesService.SetupInstance;
+
+            if (setupInstance != null && activeInstanceId == setupInstance.Id)
+            {
+                return setupInstance;
+            }
+
+            return instancesService.ActiveInstances.GetInstance(activeInstanceId);
+        }
+
+        // == Setup Instance ==
+
+        public async UniTask StartSetupInstance(SetupInstanceArgs args)
+        {
+            await instancesService.StartSetupInstance(args);
+        }
+
+        public void TryAddCharacterToSquad(string characterId)
+        {
+            instancesService.TryAddCharacterToSquad(characterId);
+        }
+
+        public void TryRemoveCharacterFromSquad(string characterId)
+        {
+            instancesService.TryRemoveCharacterFromSquad(characterId);
+        }
+
+        public async UniTask CompleteSetupAndStartInstance()
+        {
+            await instancesService.CompleteSetupAndStartInstance();
+        }
+
+        public void CancelSetupInstance()
+        {
+            instancesService.CancelSetupInstance();
+        }
+
+        public void ForceReadyToCompleteActiveInstance(string activeInstanceId)
+        {
+            instancesService.ForceReadyToCompleteActiveInstance(activeInstanceId);
+        }
+
+        public int CompleteActiveInstance(string activeInstanceId)
+        {
+            return instancesService.CompleteActiveInstance(activeInstanceId);
+        }
+
+        public void ReceiveAdsRewards()
+        {
+            instancesService.ReceiveAdsRewards();
+        }
+
+        public ActiveInstanceVM GetSetupInstance()
+        {
+            var activeInstance = instancesService.SetupInstance;
+
+            return new(activeInstance, this);
+        }
+
+        public ActiveInstanceVM GetCompletedInstance()
+        {
+            var activeInstance = instancesService.CompletedInstance;
+
+            return new(activeInstance, this);
+        }
+
+        public SquadCandidatesVM GetSquadCandidates()
+        {
+            var candidates = instancesService.GetSquadCandidates();
+
+            return new(candidates, this);
+        }
+
+        public UnitCooldownInfo GetUnitCooldown(int bossId)
+        {
+            var instance = InstancesConfig.GetBossInstance(bossId);
+
+            return instancesService.GetUnitCooldown(instance.Type);
+        }
+
+        public UnitVM GetBossUnit(int unitId)
+        {
+            var unit = instancesService.Seasons.GetBossUnit(unitId);
+
+            return new(unit, this);
+        }
+
+        public InstanceVM GetBossInstance(int unitId)
+        {
+            var instanceData = InstancesConfig.GetBossInstance(unitId);
+            var instance = instancesService.Seasons.GetInstance(instanceData.Id);
+
+            return new(instance, this);
+        }
+
+        public bool HasBossTries(int unitId)
+        {
+            return instancesService.HasBossTries(unitId);
+        }
+
+        public bool HasBossComplete(int unitId)
+        {
+            return instancesService.HasBossComplete(unitId);
+        }
+
+        public int CalcChanceDiff(AddItemArgs args)
+        {
+            var diff = instancesService.CalcChanceDiff(args);
+
+            return Mathf.RoundToInt(Mathf.Max(0, diff * 100f));
+        }
+
+        public void AddTries(int unitId)
+        {
+            instancesService.AddTries(unitId);
+        }
+    }
+}

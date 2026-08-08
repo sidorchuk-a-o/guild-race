@@ -1,0 +1,54 @@
+﻿using System.Collections.Generic;
+using AD.Game.Inventory;
+using Newtonsoft.Json;
+
+namespace AD.Game.Guild
+{
+    [JsonObject(MemberSerialization.Fields)]
+    public class GuildSM
+    {
+        [ES3Serializable] private string guildName;
+        [ES3Serializable] private string playerName;
+        [ES3Serializable] private CharactersSM charactersSM;
+        [ES3Serializable] private GuildBankTabsSM guildBankTabsSM;
+        [ES3Serializable] private EmblemSM emblemSM;
+
+        public string GuildName
+        {
+            get => guildName;
+            set => guildName = value;
+        }
+
+        public string PlayerName
+        {
+            get => playerName;
+            set => playerName = value;
+        }
+
+        public EmblemInfo Emblem
+        {
+            get => emblemSM.GetValue();
+            set => emblemSM = new(value);
+        }
+
+        public void SetCharacters(IEnumerable<CharacterInfo> value, IInventoryService inventoryService)
+        {
+            charactersSM = new(value, inventoryService);
+        }
+
+        public IEnumerable<CharacterInfo> GetCharacters(IInventoryService inventoryService)
+        {
+            return charactersSM.GetValues(inventoryService);
+        }
+
+        public void SetBankTabs(IEnumerable<GuildBankTabInfo> values, IInventoryService inventoryService)
+        {
+            guildBankTabsSM = new(values, inventoryService);
+        }
+
+        public IEnumerable<GuildBankTabInfo> GetBankTabs(GuildConfig config, IInventoryService inventoryService)
+        {
+            return guildBankTabsSM.GetCollection(config, inventoryService);
+        }
+    }
+}

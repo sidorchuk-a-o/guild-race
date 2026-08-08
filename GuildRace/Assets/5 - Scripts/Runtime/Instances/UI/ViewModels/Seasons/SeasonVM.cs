@@ -1,0 +1,32 @@
+﻿using AD.Localization;
+using AD.Router;
+
+namespace AD.Game.Instances
+{
+    public class SeasonVM : ViewModel
+    {
+        public int Id { get; }
+        public LocalizeKey NameKey { get; }
+        public LocalizeKey DescKey { get; }
+
+        public InstanceVM RaidVM { get; }
+        public InstancesVM DungeonsVM { get; }
+
+        public SeasonVM(SeasonInfo info, InstancesVMFactory instancesVMF)
+        {
+            Id = info.Id;
+
+            NameKey = info.NameKey;
+            DescKey = info.DescKey;
+
+            RaidVM = new(info.Raid, instancesVMF);
+            DungeonsVM = new(info.Dungeons, instancesVMF);
+        }
+
+        protected override void InitSubscribes()
+        {
+            RaidVM.AddTo(this);
+            DungeonsVM.AddTo(this);
+        }
+    }
+}

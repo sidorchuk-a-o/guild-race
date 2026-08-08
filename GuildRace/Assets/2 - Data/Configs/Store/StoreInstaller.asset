@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dde60c0e1d546949b57b8b4eb859c2d, type: 3}
+  m_Name: StoreInstaller
+  m_EditorClassIdentifier: AD.Core::AD.Management.ServiceInstallerData
+  isEnabled: 1
+  order: -1000
+  typeName: AD.Store.StoreService, AD.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  config:
+    instanceRef:
+      m_AssetGUID: 731b918d9782fb247a4497e5953d3167
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 1
+  states:
+  - typeName: AD.Store.CurrenciesModuleState, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.InAppModuleState, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.StoreShelvesModuleState, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.StoreState, AD.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  modules:
+  - typeName: AD.Store.CurrenciesModule, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.InAppModule, AD.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - typeName: AD.Store.StoreShelvesModule, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  factories:
+  - typeName: AD.Store.CurrencyRewardVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.AdsChestsShelfVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.AdsPriceVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.FreePriceVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.CurrencyPriceVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.InAppPriceVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.PacksShelfVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.StoreShelfFactories, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - typeName: AD.Store.StoreVMFactory, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null

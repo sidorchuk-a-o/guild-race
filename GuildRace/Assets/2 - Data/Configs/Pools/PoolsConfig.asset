@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8620856750678447062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4a0b19e7754113b5f6999876c53f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Vue.VisualTreePoolsFactory
+--- !u!114 &-6090350348181014157
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d38d1b53e541feaac7e95356e864da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.MeshAssetPoolsFactory
+--- !u!114 &-2079424846209708462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf55d226ed33428bbee73d9dd2adc1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.VectorImageAssetPoolsFactory
+--- !u!114 &-1967997541269905235
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db54fd5af8590469b4c5fa11e9ca89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Router.UIContainersPoolsFactory
+--- !u!114 &-590476725918331466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99871e6f17f919845b51ad0b48975e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.GameObjectPoolsFactory
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72fd3ea842db8f0438491ca9d5a37fe8, type: 3}
+  m_Name: PoolsConfig
+  m_EditorClassIdentifier: 
+  poolsFactories:
+  - {fileID: 6101986625920069240}
+  - {fileID: 5591481630316269694}
+  - {fileID: -8620856750678447062}
+  - {fileID: -2079424846209708462}
+  - {fileID: -590476725918331466}
+  - {fileID: 5768281455848923875}
+  - {fileID: -1967997541269905235}
+  - {fileID: 1644790808314686284}
+  - {fileID: 3881017231031663270}
+  - {fileID: -6090350348181014157}
+--- !u!114 &521349800542138665
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7744aad4c079f4d4d9c17457d6bb546b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1644790808314686284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8067f54d45e3b7f4a8e221772446ce18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.AudioAssetPoolsFactory
+--- !u!114 &1706265491268713895
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db54fd5af8590469b4c5fa11e9ca89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3881017231031663270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298727741f8193d4aab52712bcaa1096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.SpriteAssetPoolsFactory
+--- !u!114 &5128579174644463104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8067f54d45e3b7f4a8e221772446ce18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5487655310411194313
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf5eb22690ade141bada9a689c6476d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5591481630316269694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f3d9bac93b98c44a372ba2eeaf983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.ParticleEffectPoolsFactory
+--- !u!114 &5768281455848923875
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7744aad4c079f4d4d9c17457d6bb546b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.MaterialAssetPoolsFactory
+--- !u!114 &6101986625920069240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf5eb22690ade141bada9a689c6476d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AD.Core::AD.Pools.AudioSourcePoolsFactory
+--- !u!114 &6423315347795307317
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f3d9bac93b98c44a372ba2eeaf983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6898037358196196923
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99871e6f17f919845b51ad0b48975e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6910678221014707312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298727741f8193d4aab52712bcaa1096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

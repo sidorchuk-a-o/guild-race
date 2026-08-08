@@ -24,22 +24,31 @@ MonoBehaviour:
     bufferSize: 2048
     saveChildren: 1
     postprocessRawCachedData: 0
+    storeCacheAtEndOfEveryFrame: 1
+    storeCacheOnApplicationQuit: 1
+    storeCacheOnApplicationPause: 1
+    autoCacheDefaultFile: 1
+    autoCacheFileOnLoad: 1
     typeChecking: 1
     safeReflection: 1
     memberReferenceMode: 0
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
+    - ACTk.DOTS.Examples.Runtime
+    - ACTk.Examples.Genuine.Runtime
+    - ACTk.Examples.Runtime
     - ACTk.Runtime
     - AD.Core
+    - AD.Game
     - AD.ToolsCollection
     - AD.YandexGame
     - Coffee.SoftMaskForUGUI
+    - Coffee.UIEffect
     - Coffee.UIParticle
     - DOTween.Modules
     - EasySave3
     - ES3.PlayMaker
-    - Game
     - I2Localization
     - IngameDebugConsole.Runtime
     - LeTai.TrueShadow
@@ -49,8 +58,9 @@ MonoBehaviour:
     - OSA.Core
     - OSA.Utilities
     - PluginYourGames
-    - UIEffect
-    - UniRx
+    - R3.Unity
+    - R3.Unity.TextMeshPro
+    - R3.Unity.XRInteractionToolkit
     - UniTask
     - UniTask.Addressables
     - UniTask.DOTween

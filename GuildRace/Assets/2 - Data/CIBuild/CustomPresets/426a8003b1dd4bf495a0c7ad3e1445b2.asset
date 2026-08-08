@@ -138,7 +138,7 @@ MonoBehaviour:
   codeGeneration: 1
   wasmOptimization: 4
   strippingLevel: 4
-  totalMemoty: 32
+  totalMemory: 32
   compressionFormat: 0
   decompressionFallback: 0
   debugSymbolsMode: 2

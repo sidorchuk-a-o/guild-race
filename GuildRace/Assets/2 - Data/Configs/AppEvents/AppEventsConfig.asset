@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74afab19952adb1469ca1b9650b7ceb6, type: 3}
+  m_Name: AppEventsConfig
+  m_EditorClassIdentifier: 
+  exitByBackPress: 0
+  handlerPriorities:
+  - value: -1000
+    typeAssembly: AD.ProtectedTime.TimeService, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: -900
+    typeAssembly: AD.Save.SaveService, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Yandex.YandexGameAdsModule, AD.YandexGame, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Management.AppController, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Ads.AdsService, AD.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Vue.RouterModule, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Leaderboards.LeaderboardsService, AD.Core, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Router.RouterService, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Store.AdsPriceHandler, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Analytics.AnalyticsService, AD.Core, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Weekly.WeeklyService, AD.Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Input.InventoryInputModule, AD.Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Guild.GuildLeaderboardModule, AD.Game, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Input.InstancesInputModule, AD.Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Input.UIInputModule, AD.Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Instances.ActiveInstanceModule, AD.Game, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Quests.DailyQuestsModule, AD.Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - value: 0
+    typeAssembly: AD.Game.Quests.WeeklyQuestsModule, AD.Game, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
